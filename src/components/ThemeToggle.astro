@@ -1,0 +1,73 @@
+---
+---
+
+<button
+  id="theme-toggle"
+  aria-label="Toggle dark mode"
+  class="p-2 rounded-lg transition-colors cursor-pointer"
+  style="background: var(--color-accent-soft);"
+>
+  <!-- Sun icon (shown in dark mode) -->
+  <svg
+    class="theme-icon-sun w-[18px] h-[18px]"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    style="color: var(--color-text-primary);"
+  >
+    <circle cx="12" cy="12" r="5" />
+    <line x1="12" y1="1" x2="12" y2="3" />
+    <line x1="12" y1="21" x2="12" y2="23" />
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+    <line x1="1" y1="12" x2="3" y2="12" />
+    <line x1="21" y1="12" x2="23" y2="12" />
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+  </svg>
+  <!-- Moon icon (shown in light mode) -->
+  <svg
+    class="theme-icon-moon w-[18px] h-[18px] hidden"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    style="color: var(--color-text-primary);"
+  >
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+  </svg>
+</button>
+
+<script is:inline>
+  (function() {
+    function updateIcons() {
+      var isLight = document.documentElement.classList.contains('light');
+      var suns = document.querySelectorAll('.theme-icon-sun');
+      var moons = document.querySelectorAll('.theme-icon-moon');
+      suns.forEach(function(el) { el.style.display = isLight ? 'none' : 'block'; });
+      moons.forEach(function(el) { el.style.display = isLight ? 'block' : 'none'; });
+    }
+
+    updateIcons();
+
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+      var html = document.documentElement;
+      var isCurrentlyLight = html.classList.contains('light');
+      if (isCurrentlyLight) {
+        html.classList.remove('light');
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        html.classList.remove('dark');
+        html.classList.add('light');
+        localStorage.setItem('theme', 'light');
+      }
+      updateIcons();
+    });
+  })();
+</script>

@@ -1,0 +1,105 @@
+---
+import AppStoreBadge from './AppStoreBadge.astro';
+---
+
+<section class="max-w-[1100px] mx-auto px-6 pt-20 pb-16 md:pt-24 md:pb-20 flex flex-col md:flex-row items-center gap-12 md:gap-16 justify-center">
+  <div class="flex-1 min-w-0 max-w-[540px]">
+    <h1 class="text-4xl sm:text-5xl md:text-[52px] font-extrabold leading-[1.08] tracking-tight mb-5">
+      Your partner<br />holds the <span class="bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] bg-clip-text text-transparent">key</span>.
+    </h1>
+    <p class="text-lg leading-relaxed mb-8 max-w-[460px]" style="color: var(--color-text-secondary);">
+      LockPact pairs you with someone for mutual screen time
+      accountability. Block your apps. Only your partner can unlock them.
+      Free.
+    </p>
+    <AppStoreBadge />
+    <p class="text-[13px] mt-4" style="color: var(--color-text-tertiary);">
+      iOS 17+ &middot; No subscription &middot; Privacy-first
+    </p>
+  </div>
+
+  <!-- iPhone Device Mockup Placeholder -->
+  <!--
+    PRODUCTION NOTE: This is a CSS approximation of the iPhone 15/16 frame.
+    Before launch, replace with official Apple device frames from
+    developer.apple.com/design/resources/ or a real photograph.
+    Apple requires accurate color, shape, size, and form.
+    See: https://developer.apple.com/app-store/marketing/guidelines/
+
+    Specs: 390x844pt aspect ratio, corner radius = width x 0.12,
+    Dynamic Island = ~78x24pt centered at top.
+  -->
+  <div class="flex-shrink-0 hidden sm:block" style="width: 248px;">
+    <div
+      class="relative"
+      style="
+        width: 248px;
+        height: 536px;
+        border-radius: 30px;
+        background: #1C1C1E;
+        padding: 4px;
+        box-shadow: 0 24px 48px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.08);
+      "
+    >
+      <!-- Screen -->
+      <div
+        class="w-full h-full relative overflow-hidden"
+        style="border-radius: 26px; background: var(--color-bg-secondary);"
+      >
+        <!-- Dynamic Island -->
+        <div
+          class="absolute top-2.5 left-1/2 -translate-x-1/2 z-10"
+          style="width: 78px; height: 24px; border-radius: 12px; background: #000;"
+        ></div>
+        <!-- Status bar -->
+        <div class="flex justify-between items-center px-4 pt-2 relative z-[5] h-10">
+          <span class="text-[11px] font-semibold" style="color: var(--color-text-primary);">9:41</span>
+          <div class="flex gap-1 items-center">
+            <svg width="14" height="10" viewBox="0 0 14 10"><rect x="0" y="7" width="2.5" height="3" rx="0.5" fill="currentColor" style="color: var(--color-text-primary);" /><rect x="3.5" y="5" width="2.5" height="5" rx="0.5" fill="currentColor" style="color: var(--color-text-primary);" /><rect x="7" y="2.5" width="2.5" height="7.5" rx="0.5" fill="currentColor" style="color: var(--color-text-primary);" /><rect x="10.5" y="0" width="2.5" height="10" rx="0.5" fill="currentColor" style="color: var(--color-text-primary);" /></svg>
+            <svg width="20" height="10" viewBox="0 0 20 10" fill="none"><rect x="0.5" y="0.5" width="17" height="9" rx="1.5" stroke="currentColor" stroke-width="0.8" style="color: var(--color-text-primary);" /><rect x="18" y="3" width="1.5" height="4" rx="0.5" fill="currentColor" style="color: var(--color-text-primary);" /><rect x="1.5" y="1.5" width="15" height="7" rx="1" fill="currentColor" style="color: var(--color-text-primary);" /></svg>
+          </div>
+        </div>
+        <!-- Screen content -->
+        <div class="px-2 pt-1">
+          <!-- App title bar -->
+          <div class="flex justify-between items-center mb-5">
+            <span class="font-bold text-[16px]" style="color: var(--color-text-primary);">LockPact</span>
+            <span class="text-sm" style="color: var(--color-text-tertiary);">&#9881;</span>
+          </div>
+          <!-- Status card -->
+          <div class="text-center p-5 rounded-2xl mb-4" style="background: var(--color-card); border: 1px solid var(--color-card-border);">
+            <div class="w-[60px] h-[60px] rounded-full mx-auto mb-3 flex items-center justify-center" style="background: rgba(239,68,68,0.15);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+            </div>
+            <div class="font-bold text-lg" style="color: var(--color-text-primary);">Locked</div>
+            <div class="text-[13px] mt-1" style="color: var(--color-text-secondary);">by Alex</div>
+            <span class="inline-block text-xs font-semibold px-3 py-1 rounded-full mt-2" style="background: rgba(239,68,68,0.15); color: #EF4444;">Locked</span>
+          </div>
+          <!-- Quick actions -->
+          <div class="flex gap-2 mb-4">
+            <div class="flex-1 text-center py-3 px-1 rounded-xl" style="background: var(--color-card); border: 1px solid var(--color-card-border);">
+              <svg class="mx-auto mb-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+              <div class="text-[11px] font-medium" style="color: var(--color-accent);">Apps</div>
+            </div>
+            <div class="flex-1 text-center py-3 px-1 rounded-xl" style="background: var(--color-card); border: 1px solid var(--color-card-border);">
+              <svg class="mx-auto mb-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M13.8 12H3" /></svg>
+              <div class="text-[11px] font-medium" style="color: var(--color-accent);">Request</div>
+            </div>
+          </div>
+          <!-- Partner card -->
+          <div class="p-3.5 rounded-xl" style="background: var(--color-card); border: 1px solid var(--color-card-border);">
+            <div class="flex justify-between items-center">
+              <div>
+                <div class="text-sm font-semibold" style="color: var(--color-text-primary);">Alex</div>
+                <div class="text-[11px] mt-0.5" style="color: var(--color-text-secondary);">Your Partner</div>
+              </div>
+              <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full" style="background: rgba(16,185,129,0.15); color: #10B981;">Unlocked</span>
+            </div>
+          </div>
+        </div>
+        <!-- Home indicator -->
+        <div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-[100px] h-1 rounded-full opacity-40" style="background: var(--color-text-tertiary);"></div>
+      </div>
+    </div>
+  </div>
+</section>

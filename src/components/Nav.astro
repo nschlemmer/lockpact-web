@@ -1,0 +1,33 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+---
+
+<nav
+  class="sticky top-0 z-50 backdrop-blur-xl"
+  style="background: var(--color-nav-bg);"
+>
+  <div class="max-w-[1100px] mx-auto flex items-center justify-between px-6 py-4">
+    <a href="/" class="font-extrabold text-xl tracking-tight" style="color: var(--color-text-primary);">
+      <span style="color: var(--color-accent);">Lock</span>Pact
+    </a>
+    <div class="flex items-center gap-4">
+      <a
+        href="/blog"
+        class="hidden sm:inline-block text-sm font-medium transition-colors hover:opacity-80"
+        style="color: var(--color-text-secondary);"
+      >
+        Blog
+      </a>
+      <ThemeToggle />
+      <a
+        href="https://apps.apple.com/app/lockpact/id000000000"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-white text-sm font-semibold px-4 py-2 rounded-lg transition-opacity hover:opacity-90"
+        style="background: var(--color-accent);"
+      >
+        Download
+      </a>
+    </div>
+  </div>
+</nav>

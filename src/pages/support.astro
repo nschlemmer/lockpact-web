@@ -1,0 +1,119 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import FAQ from '../components/FAQ.astro';
+---
+
+<PageLayout
+  title="Support | LockPact"
+  description="Frequently asked questions and support for LockPact. Get help with pairing, Screen Time permissions, partnerships, and more."
+>
+  <section class="max-w-[720px] mx-auto px-6 py-16 md:py-24">
+    <h1 class="text-3xl font-extrabold tracking-tight mb-4 text-center" style="color: var(--color-text-primary);">Support</h1>
+    <p class="text-center mb-12" style="color: var(--color-text-secondary);">
+      Find answers to common questions below. If you need more help, reach out directly.
+    </p>
+  </section>
+
+  <!-- Reuse landing page FAQ -->
+  <FAQ />
+
+  <!-- Additional support questions -->
+  <section class="py-10 px-6 transition-colors" style="background: var(--color-bg-secondary);">
+    <div class="max-w-[680px] mx-auto">
+      <h2 class="text-[13px] font-bold uppercase tracking-widest text-center mb-8" style="color: var(--color-accent);">
+        Technical Support
+      </h2>
+      <div id="support-faq-list">
+        <div class="faq-item" style="border-bottom: 1px solid var(--color-card-border); padding: 20px 0;">
+          <button class="faq-toggle w-full text-left flex justify-between items-center bg-transparent border-none cursor-pointer p-0" style="color: var(--color-text-primary);" aria-expanded="false">
+            <span class="text-[17px] font-semibold pr-4">How do I re-enable Screen Time access if I revoked it?</span>
+            <span class="faq-icon text-xl transition-transform flex-shrink-0" style="color: var(--color-accent);">+</span>
+          </button>
+          <div class="faq-answer hidden mt-3 pr-10">
+            <p class="text-[15px] leading-relaxed m-0" style="color: var(--color-text-secondary);">
+              Open iPhone Settings &rarr; Screen Time &rarr; App &amp; Website Activity &rarr; Turn On. Then open LockPact &mdash; it will detect the restored permission automatically.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item" style="border-bottom: 1px solid var(--color-card-border); padding: 20px 0;">
+          <button class="faq-toggle w-full text-left flex justify-between items-center bg-transparent border-none cursor-pointer p-0" style="color: var(--color-text-primary);" aria-expanded="false">
+            <span class="text-[17px] font-semibold pr-4">My shields disappeared after a restart. What happened?</span>
+            <span class="faq-icon text-xl transition-transform flex-shrink-0" style="color: var(--color-accent);">+</span>
+          </button>
+          <div class="faq-answer hidden mt-3 pr-10">
+            <p class="text-[15px] leading-relaxed m-0" style="color: var(--color-text-secondary);">
+              LockPact reapplies shields when the app enters the foreground. Open LockPact after a restart and your shields will be restored within seconds.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item" style="border-bottom: 1px solid var(--color-card-border); padding: 20px 0;">
+          <button class="faq-toggle w-full text-left flex justify-between items-center bg-transparent border-none cursor-pointer p-0" style="color: var(--color-text-primary);" aria-expanded="false">
+            <span class="text-[17px] font-semibold pr-4">How do I dissolve my partnership?</span>
+            <span class="faq-icon text-xl transition-transform flex-shrink-0" style="color: var(--color-accent);">+</span>
+          </button>
+          <div class="faq-answer hidden mt-3 pr-10">
+            <p class="text-[15px] leading-relaxed m-0" style="color: var(--color-text-secondary);">
+              Go to Settings &rarr; Partnership &rarr; Dissolve Pact. Both partners' locks will be removed. This cannot be undone &mdash; you'd need to pair again with a new invite code.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item" style="border-bottom: 1px solid var(--color-card-border); padding: 20px 0;">
+          <button class="faq-toggle w-full text-left flex justify-between items-center bg-transparent border-none cursor-pointer p-0" style="color: var(--color-text-primary);" aria-expanded="false">
+            <span class="text-[17px] font-semibold pr-4">How do I delete my account?</span>
+            <span class="faq-icon text-xl transition-transform flex-shrink-0" style="color: var(--color-accent);">+</span>
+          </button>
+          <div class="faq-answer hidden mt-3 pr-10">
+            <p class="text-[15px] leading-relaxed m-0" style="color: var(--color-text-secondary);">
+              Go to Settings &rarr; Account &rarr; Delete Account. This permanently removes your account, partnership, and all associated data. Your partner will be notified.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item" style="border-bottom: 1px solid var(--color-card-border); padding: 20px 0;">
+          <button class="faq-toggle w-full text-left flex justify-between items-center bg-transparent border-none cursor-pointer p-0" style="color: var(--color-text-primary);" aria-expanded="false">
+            <span class="text-[17px] font-semibold pr-4">I purchased the ad removal but it's not working.</span>
+            <span class="faq-icon text-xl transition-transform flex-shrink-0" style="color: var(--color-accent);">+</span>
+          </button>
+          <div class="faq-answer hidden mt-3 pr-10">
+            <p class="text-[15px] leading-relaxed m-0" style="color: var(--color-text-secondary);">
+              Try restoring purchases: Settings &rarr; Purchases &rarr; Restore. If that doesn't work, contact us at <a href="mailto:support@lockpact.app" style="color: var(--color-accent);">support@lockpact.app</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="py-20 px-6 text-center">
+    <h2 class="text-[13px] font-bold uppercase tracking-widest mb-4" style="color: var(--color-accent);">
+      Still Need Help?
+    </h2>
+    <p class="text-lg mb-2" style="color: var(--color-text-primary);">
+      Email us at <a href="mailto:support@lockpact.app" class="underline underline-offset-2" style="color: var(--color-accent);">support@lockpact.app</a>
+    </p>
+    <p class="text-sm" style="color: var(--color-text-secondary);">
+      We typically respond within 24 hours.
+    </p>
+  </section>
+</PageLayout>
+
+<script is:inline>
+  document.querySelectorAll('#support-faq-list .faq-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.closest('.faq-item');
+      var answer = item.querySelector('.faq-answer');
+      var icon = item.querySelector('.faq-icon');
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      if (isOpen) {
+        answer.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        answer.classList.remove('hidden');
+        icon.style.transform = 'rotate(45deg)';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>

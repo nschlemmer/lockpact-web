@@ -1,0 +1,100 @@
+---
+interface Props {
+  items?: { question: string; answer: string }[];
+}
+
+const defaultItems = [
+  {
+    question: 'Can my partner see which apps I blocked?',
+    answer: "Your partner can see how many apps and categories you've blocked, but not the specific app names. Apple's Screen Time API uses opaque tokens \u2014 LockPact cannot access your app names or usage data.",
+  },
+  {
+    question: 'What if someone tries to get around the lock?',
+    answer: "LockPact has built-in bypass detection. If your partner's lock is tampered with, you get a notification. The goal is mutual trust \u2014 and knowing your partner will find out is the strongest deterrent there is.",
+  },
+  {
+    question: 'Is LockPact really free?',
+    answer: "The core product is free \u2014 pairing, locking, bypass detection, unlock requests. You'll see a short video when you request an unlock (think of it as a moment to reconsider). You can remove that with a one-time $9.99 purchase. That's it. No subscription.",
+  },
+  {
+    question: 'Do we both need iPhones?',
+    answer: "Yes \u2014 for now. LockPact uses Apple's Screen Time API, so both partners need an iPhone running iOS 17 or later. iPad and other platforms are being explored.",
+  },
+  {
+    question: "What if my partner doesn't respond to my unlock request?",
+    answer: "Requests don't expire. Your partner will see it the next time they open LockPact or check their notifications. In the meantime, your apps stay locked.",
+  },
+  {
+    question: 'Can I have more than one partner?',
+    answer: "Not yet. LockPact currently supports one partner at a time. Multi-partner mode is something we're exploring.",
+  },
+  {
+    question: "How is this different from Apple's Screen Time?",
+    answer: 'Apple Screen Time lets you set a passcode. You also know the passcode. LockPact gives the key to your partner \u2014 and tells them if you bypass.',
+  },
+];
+
+const { items = defaultItems } = Astro.props;
+
+const faqStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: items.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+---
+
+<section class="py-20 px-6 transition-colors" style="background: var(--color-bg-secondary);">
+  <div class="max-w-[680px] mx-auto">
+    <h2 class="text-[13px] font-bold uppercase tracking-widest text-center mb-8" style="color: var(--color-accent);">
+      Questions
+    </h2>
+    <div id="faq-list">
+      {items.map((item, i) => (
+        <div class="faq-item" style="border-bottom: 1px solid var(--color-card-border); padding: 20px 0;">
+          <button
+            class="faq-toggle w-full text-left flex justify-between items-center bg-transparent border-none cursor-pointer p-0"
+            style="color: var(--color-text-primary);"
+            aria-expanded="false"
+          >
+            <span class="text-[17px] font-semibold pr-4">{item.question}</span>
+            <span class="faq-icon text-xl transition-transform flex-shrink-0" style="color: var(--color-accent);">+</span>
+          </button>
+          <div class="faq-answer hidden mt-3 pr-10">
+            <p class="text-[15px] leading-relaxed m-0" style="color: var(--color-text-secondary);">
+              {item.answer}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+  <script type="application/ld+json" set:html={JSON.stringify(faqStructuredData)} />
+</section>
+
+<script is:inline>
+  document.querySelectorAll('.faq-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.closest('.faq-item');
+      var answer = item.querySelector('.faq-answer');
+      var icon = item.querySelector('.faq-icon');
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      if (isOpen) {
+        answer.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        answer.classList.remove('hidden');
+        icon.style.transform = 'rotate(45deg)';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>

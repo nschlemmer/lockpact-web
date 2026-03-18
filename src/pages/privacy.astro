@@ -1,0 +1,81 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Privacy Policy | LockPact"
+  description="LockPact privacy policy. Learn what data we collect, how we use it, and your rights."
+>
+  <section class="max-w-[720px] mx-auto px-6 py-16 md:py-24">
+    <h1 class="text-3xl font-extrabold tracking-tight mb-8" style="color: var(--color-text-primary);">Privacy Policy</h1>
+    <div class="prose max-w-none" style="color: var(--color-text-secondary);">
+      <p><strong>Effective Date:</strong> March 18, 2026</p>
+      <p><strong>Last Updated:</strong> March 18, 2026</p>
+
+      <p>LockPact is built by Rotate LLC ("we," "us," "our"). This privacy policy explains what data we collect, how we use it, and your rights.</p>
+
+      <h2>What We Collect</h2>
+      <p>When you use LockPact, we collect:</p>
+      <ul>
+        <li><strong>Apple ID information:</strong> Your Apple ID identifier (via Sign in with Apple). We receive a unique, app-scoped user ID. We may receive your name and email address if you choose to share them.</li>
+        <li><strong>Lock metadata:</strong> When a lock is activated or deactivated, we store who locked, when, and the current status. This lets your partner see your lock state.</li>
+        <li><strong>Partnership data:</strong> Partner pairing information, invite codes, and partnership status.</li>
+        <li><strong>Unlock request text:</strong> If you send a reason with your unlock request, that text is stored so your partner can read it.</li>
+        <li><strong>Bypass events:</strong> If a bypass is detected, we record the event so your partner can be notified.</li>
+      </ul>
+
+      <h2>What We Do Not Collect</h2>
+      <p><strong>LockPact cannot see which apps you block.</strong> Apple's Screen Time API uses opaque tokens. We never receive app names, bundle identifiers, browsing history, or screen time statistics.</p>
+      <p><strong>Your screen time data never leaves your device.</strong> The <code>FamilyActivitySelection</code> object (which contains your selected apps) is stored locally on your device and is never transmitted to our servers or any third party.</p>
+      <p>We do not collect location data, contacts, photos, health data, or any other sensitive personal information.</p>
+
+      <h2>How We Use Your Data</h2>
+      <p>We use the data we collect to:</p>
+      <ul>
+        <li>Authenticate your account</li>
+        <li>Enable partner pairing and partnership features</li>
+        <li>Send push notifications for unlock requests, approvals, denials, and bypass alerts</li>
+        <li>Display lock status to your partner</li>
+        <li>Maintain streak and lock history data</li>
+      </ul>
+
+      <h2>Advertising</h2>
+      <p>LockPact uses AppLovin MAX to display a brief rewarded video ad when you submit an unlock request. This ad network may collect device identifiers for ad targeting purposes. You can remove ads entirely with a one-time in-app purchase.</p>
+      <p>We do not sell your personal data to advertisers or any other third parties.</p>
+
+      <h2>Data Storage</h2>
+      <p>Your data is stored in Google Firebase (Firestore and Firebase Authentication), hosted in the United States. Data is encrypted in transit and at rest.</p>
+
+      <h2>Data Sharing</h2>
+      <p>We do not sell your data. We share data only with:</p>
+      <ul>
+        <li><strong>Your partner:</strong> Lock status, bypass events, and unlock request text are visible to your paired partner.</li>
+        <li><strong>Firebase (Google):</strong> For authentication and data storage.</li>
+        <li><strong>AppLovin:</strong> For serving rewarded video ads (device identifiers only).</li>
+        <li><strong>Apple:</strong> Push notification delivery via APNs.</li>
+      </ul>
+
+      <h2>Your Rights (GDPR / CCPA)</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li><strong>Access:</strong> Request a copy of your data.</li>
+        <li><strong>Correct:</strong> Request correction of inaccurate data.</li>
+        <li><strong>Delete:</strong> Request deletion of your account and all associated data. Use Settings &rarr; Account &rarr; Delete Account in the app, or email us.</li>
+        <li><strong>Portability:</strong> Request your data in a portable format.</li>
+        <li><strong>Opt out of sale:</strong> We do not sell your data. There is nothing to opt out of.</li>
+      </ul>
+      <p>California residents have additional rights under the CCPA. We do not sell personal information as defined by CCPA.</p>
+
+      <h2>Children</h2>
+      <p>LockPact is not designed for or directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided us with personal information, please contact us and we will delete it.</p>
+
+      <h2>Changes to This Policy</h2>
+      <p>We may update this policy from time to time. We will notify you of significant changes through the app or by email.</p>
+
+      <h2>Contact</h2>
+      <p>For privacy questions, data requests, or concerns:</p>
+      <p><strong>Email:</strong> <a href="mailto:support@lockpact.app">support@lockpact.app</a></p>
+      <p>Rotate LLC<br />Indianapolis, IN</p>
+    </div>
+  </section>
+</PageLayout>

@@ -1,0 +1,43 @@
+---
+const items = [
+  {
+    title: 'Not Another Solo Blocker',
+    desc: "Every screen time app lets you disable your own blocks. LockPact puts the key in someone else's hands. You hold theirs. Accountability goes both ways.",
+    iconPath: 'M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z',
+  },
+  {
+    title: 'Bypass Detected',
+    desc: "Try to get around the lock? Your partner gets a notification instantly. LockPact's bypass detection means there are no secrets between partners.",
+    iconPath: 'M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9',
+  },
+  {
+    title: 'Actually Free',
+    desc: 'Pairing, locking, bypass detection, unlock requests \u2014 all free. No subscription. No trial period. No "upgrade to unlock."',
+    iconPath: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+  },
+];
+---
+
+<section class="py-20 px-6 transition-colors" style="background: var(--color-bg-secondary);">
+  <div class="max-w-[1100px] mx-auto">
+    <h2 class="text-[13px] font-bold uppercase tracking-widest text-center mb-10" style="color: var(--color-accent);">
+      Why LockPact Is Different
+    </h2>
+    <div class="flex flex-wrap gap-6 justify-center">
+      {items.map((item) => (
+        <div
+          class="flex-1 min-w-[280px] max-w-[340px] rounded-2xl p-7"
+          style="background: var(--color-card); border: 1px solid var(--color-card-border);"
+        >
+          <div class="mb-3">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d={item.iconPath} />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2" style="color: var(--color-text-primary);">{item.title}</h3>
+          <p class="text-[15px] leading-snug m-0" style="color: var(--color-text-secondary);">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
