@@ -198,10 +198,120 @@
 
 @layer components {
   .lp-card {
-    background: var(--color-card);
-    border: 1px solid var(--color-card-border);
-    box-shadow: var(--color-card-shadow);
+    background: rgba(28, 28, 46, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 1rem;
-    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    transition: all 0.2s ease;
   }
+
+  .lp-card:hover {
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+  }
+
+  .light .lp-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  }
+
+  .light .lp-card:hover {
+    border-color: rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .lp-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-accent-soft);
+  }
+}
+
+/* Keyframes */
+@keyframes fade-up {
+  0% { opacity: 0; transform: translateY(1.5rem); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes hero-fade-up {
+  0% { opacity: 0; transform: translateY(24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll-driven fade-up (progressive enhancement) */
+.scroll-fade-up {
+  opacity: 1;
+}
+
+@supports (animation-timeline: view()) {
+  .scroll-fade-up {
+    animation: fade-up linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 25%;
+  }
+}
+
+/* Hero entrance animations */
+.hero-animate {
+  animation: hero-fade-up 0.8s ease-out both;
+}
+
+.hero-animate-delay-1 {
+  animation: hero-fade-up 0.8s ease-out 0.1s both;
+}
+
+.hero-animate-delay-2 {
+  animation: hero-fade-up 0.8s ease-out 0.2s both;
+}
+
+.hero-animate-delay-3 {
+  animation: hero-fade-up 0.8s ease-out 0.3s both;
+}
+
+/* Hero glow background */
+.hero-glow {
+  background: radial-gradient(80% 50% at 50% -20%, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+}
+
+.light .hero-glow {
+  background: radial-gradient(80% 50% at 50% -20%, rgba(79, 70, 229, 0.06) 0%, transparent 70%);
+}
+
+/* Background utilities */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(99, 102, 241, 0.15) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.light .dot-grid {
+  background-image: radial-gradient(circle, rgba(79, 70, 229, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.gradient-mesh {
+  background: radial-gradient(at 20% 50%, rgba(99, 102, 241, 0.06) 0%, transparent 50%), radial-gradient(at 80% 20%, rgba(99, 102, 241, 0.04) 0%, transparent 50%);
+}
+
+.light .gradient-mesh {
+  background: radial-gradient(at 20% 50%, rgba(79, 70, 229, 0.04) 0%, transparent 50%), radial-gradient(at 80% 20%, rgba(79, 70, 229, 0.03) 0%, transparent 50%);
+}
+
+/* Phone mockup glow */
+.screenshot-glow {
+  box-shadow: rgba(99, 102, 241, 0.15) 0 0 80px -20px, rgba(0, 0, 0, 0.5) 0 25px 50px -12px;
+}
+
+/* Nav scroll border */
+nav.scrolled {
+  border-bottom: 1px solid var(--color-card-border);
 }

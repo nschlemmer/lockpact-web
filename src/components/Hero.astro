@@ -2,18 +2,26 @@
 import AppStoreBadge from './AppStoreBadge.astro';
 ---
 
-<section class="max-w-[1100px] mx-auto px-6 pt-16 pb-10 md:pt-20 md:pb-16 flex flex-col md:flex-row items-center gap-12 md:gap-16 justify-center">
+<section class="hero-glow max-w-[1100px] mx-auto px-6 pt-32 pb-16 sm:pt-40 sm:pb-24 flex flex-col md:flex-row items-center gap-12 md:gap-16 justify-center">
   <div class="flex-1 min-w-0 max-w-[540px]">
-    <h1 class="text-4xl sm:text-5xl md:text-[52px] font-extrabold leading-[1.08] tracking-tight mb-5">
+    <span
+      class="hero-animate inline-flex items-center gap-2 text-sm px-4 py-1.5 rounded-full border mb-6"
+      style="border-color: var(--color-card-border); color: var(--color-text-secondary);"
+    >
+      Free on the App Store
+    </span>
+    <h1 class="hero-animate-delay-1 text-4xl sm:text-5xl md:text-[52px] font-extrabold leading-[1.08] tracking-tight mb-5" style="letter-spacing: -0.025em;">
       Your partner<br />holds the <span class="bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] bg-clip-text text-transparent">key</span>.
     </h1>
-    <p class="text-lg leading-relaxed mb-8 max-w-[460px]" style="color: var(--color-text-secondary);">
+    <p class="hero-animate-delay-2 text-lg leading-relaxed mb-8 max-w-[460px]" style="color: var(--color-text-secondary);">
       LockPact pairs you with someone for mutual screen time
       accountability. Block your apps. Only your partner can unlock them.
       Free.
     </p>
-    <AppStoreBadge />
-    <p class="text-[13px] mt-4" style="color: var(--color-text-tertiary);">
+    <div class="hero-animate-delay-2">
+      <AppStoreBadge />
+    </div>
+    <p class="hero-animate-delay-3 text-[13px] mt-4" style="color: var(--color-text-tertiary);">
       iOS 17+ &middot; No subscription &middot; Privacy-first
     </p>
   </div>
@@ -29,14 +37,13 @@ import AppStoreBadge from './AppStoreBadge.astro';
     Specs: 390x844pt aspect ratio, corner radius = width x 0.12,
     Dynamic Island = ~78x24pt centered at top.
   -->
-  <div class="flex-shrink-0 w-[180px] sm:w-[248px]">
+  <div class="hero-animate-delay-3 flex-shrink-0 w-[180px] sm:w-[248px]">
     <div
-      class="relative w-full aspect-[248/536]"
+      class="relative w-full aspect-[248/536] screenshot-glow"
       style="
         border-radius: 30px;
         background: #1C1C1E;
         padding: 4px;
-        box-shadow: 0 24px 48px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.08);
       "
     >
       <!-- Screen -->

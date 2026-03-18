@@ -16,7 +16,10 @@ const formattedDate = pubDate
 
 <a
   href={`/blog/${slug}/`}
-  class="lp-card block rounded-2xl p-6 transition-all hover:border-opacity-40 group"
+  class="lp-card block rounded-2xl p-6 transition-all group"
+  style="border-left: 3px solid transparent;"
+  onmouseover="this.style.borderLeftColor='var(--color-accent)'"
+  onmouseout="this.style.borderLeftColor='transparent'"
 >
   {(readTime || formattedDate) && (
     <div class="text-[11px] font-semibold mb-2.5" style="color: var(--color-accent);">
