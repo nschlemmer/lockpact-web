@@ -7,7 +7,7 @@ export default defineConfig({
   site: 'https://lockpact.app',
   output: 'static',
   integrations: [
-    tailwind(),
+    tailwind({ applyBaseStyles: false }),
     mdx(),
     sitemap(),
   ],
