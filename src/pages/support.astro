@@ -96,24 +96,3 @@ import FAQ from '../components/FAQ.astro';
     </p>
   </section>
 </PageLayout>
-
-<script is:inline>
-  document.querySelectorAll('#support-faq-list .faq-toggle').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var item = btn.closest('.faq-item');
-      var answer = item.querySelector('.faq-answer');
-      var icon = item.querySelector('.faq-icon');
-      var isOpen = btn.getAttribute('aria-expanded') === 'true';
-
-      if (isOpen) {
-        answer.classList.add('hidden');
-        icon.style.transform = 'rotate(0deg)';
-        btn.setAttribute('aria-expanded', 'false');
-      } else {
-        answer.classList.remove('hidden');
-        icon.style.transform = 'rotate(45deg)';
-        btn.setAttribute('aria-expanded', 'true');
-      }
-    });
-  });
-</script>

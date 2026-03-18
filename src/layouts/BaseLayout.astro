@@ -59,17 +59,12 @@ const twitterHandle = '@lockpact';
     <!-- Theme initialization (prevent flash) -->
     <script is:inline>
       (function() {
-        const stored = localStorage.getItem('theme');
+        var stored = localStorage.getItem('theme');
         if (stored === 'light') {
           document.documentElement.classList.remove('dark');
           document.documentElement.classList.add('light');
-        } else if (stored === 'dark') {
-          document.documentElement.classList.remove('light');
-          document.documentElement.classList.add('dark');
-        } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-          document.documentElement.classList.remove('dark');
-          document.documentElement.classList.add('light');
         }
+        // No stored preference = stay dark (the default class on <html>)
       })();
     </script>
   </head>

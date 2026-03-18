@@ -2,7 +2,7 @@
 import AppStoreBadge from './AppStoreBadge.astro';
 ---
 
-<section class="max-w-[1100px] mx-auto px-6 pt-20 pb-16 md:pt-24 md:pb-20 flex flex-col md:flex-row items-center gap-12 md:gap-16 justify-center">
+<section class="max-w-[1100px] mx-auto px-6 pt-16 pb-10 md:pt-20 md:pb-16 flex flex-col md:flex-row items-center gap-12 md:gap-16 justify-center">
   <div class="flex-1 min-w-0 max-w-[540px]">
     <h1 class="text-4xl sm:text-5xl md:text-[52px] font-extrabold leading-[1.08] tracking-tight mb-5">
       Your partner<br />holds the <span class="bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] bg-clip-text text-transparent">key</span>.
@@ -29,12 +29,10 @@ import AppStoreBadge from './AppStoreBadge.astro';
     Specs: 390x844pt aspect ratio, corner radius = width x 0.12,
     Dynamic Island = ~78x24pt centered at top.
   -->
-  <div class="flex-shrink-0 hidden sm:block" style="width: 248px;">
+  <div class="flex-shrink-0 w-[180px] sm:w-[248px]">
     <div
-      class="relative"
+      class="relative w-full aspect-[248/536]"
       style="
-        width: 248px;
-        height: 536px;
         border-radius: 30px;
         background: #1C1C1E;
         padding: 4px;
