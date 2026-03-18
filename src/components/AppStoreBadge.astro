@@ -5,7 +5,6 @@ interface Props {
 
 const { size = 'normal' } = Astro.props;
 const padding = size === 'large' ? 'px-7 py-3' : 'px-6 py-2.5';
-const fontSize = size === 'large' ? 'text-lg' : 'text-lg';
 ---
 
 <a
@@ -22,10 +21,10 @@ const fontSize = size === 'large' ? 'text-lg' : 'text-lg';
     <path d="M13.545 11.526c-.326.75-.482 1.085-.901 1.749-.586.927-1.412 2.082-2.436 2.091-.912.009-1.147-.594-2.384-.586-1.237.007-1.496.598-2.408.589-1.024-.01-1.804-1.042-2.39-1.969C1.402 10.766.923 7.766 2.28 6.168c.962-1.133 2.39-1.757 3.556-1.757 1.142 0 1.86.597 2.804.597.917 0 1.476-.598 2.798-.598 1.04 0 2.307.565 3.264 1.541-2.867 1.572-2.402 5.666.843 6.575zM9.545 2.862C10.03 2.27 10.393 1.428 10.267.5c-.755.05-1.637.529-2.157 1.148-.47.562-.876 1.413-.722 2.232.826.026 1.682-.455 2.157-1.018z" />
   </svg>
   <div class="text-left">
-    <div class="text-[9px] leading-none" style="color: rgba(255,255,255,0.8);">
+    <div class="text-label leading-none" style="color: rgba(255,255,255,0.8);">
       Download on the
     </div>
-    <div class:list={['font-semibold leading-snug tracking-tight text-white', fontSize]}>
+    <div class="font-semibold leading-snug tracking-tight text-white text-body">
       App Store
     </div>
   </div>

@@ -3,8 +3,11 @@
     "apps": [],
     "details": [
       {
-        "appID": "TEAMID.com.rotate.lockpact",
-        "paths": ["/invite/*"]
+        "appIDs": ["UKKY9V7T7K.com.rotate.lockpact"],
+        "paths": ["/invite/*"],
+        "components": [
+          { "/": "/invite/*" }
+        ]
       }
     ]
   }

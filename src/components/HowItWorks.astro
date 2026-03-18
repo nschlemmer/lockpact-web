@@ -21,14 +21,17 @@ const steps = [
 ];
 ---
 
-<section class="scroll-fade-up max-w-[1100px] mx-auto px-6 py-16 sm:py-24">
-  <h2 class="text-[13px] font-bold uppercase tracking-widest text-center mb-10" style="color: var(--color-accent);">
+<section class="scroll-fade-up max-w-[1100px] mx-auto px-6 section-md">
+  <p class="text-label uppercase text-center mb-3" style="color: var(--color-accent);">
     How It Works
+  </p>
+  <h2 class="text-section-title text-center mb-12" style="color: var(--color-text-primary);">
+    Three steps. One partner.
   </h2>
-  <div class="flex flex-wrap gap-6 justify-center">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     {steps.map((step) => (
       <div
-        class="lp-card flex-1 min-w-[280px] max-w-[340px] rounded-2xl p-7 relative"
+        class="lp-card rounded-2xl p-7 relative"
       >
         <div
           class="absolute -top-3 left-6 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold text-white"
@@ -41,8 +44,8 @@ const steps = [
             <path d={step.iconPath} />
           </svg>
         </div>
-        <h3 class="text-lg font-bold mb-2" style="color: var(--color-text-primary);">{step.title}</h3>
-        <p class="text-[15px] leading-snug m-0" style="color: var(--color-text-secondary);">{step.desc}</p>
+        <h3 class="text-card-title mb-2" style="color: var(--color-text-primary);">{step.title}</h3>
+        <p class="text-sm leading-relaxed m-0" style="color: var(--color-text-secondary);">{step.desc}</p>
       </div>
     ))}
   </div>

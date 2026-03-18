@@ -50,10 +50,13 @@ const faqStructuredData = {
 };
 ---
 
-<section class="scroll-fade-up py-16 sm:py-24 px-6 transition-colors" style="background: var(--color-bg-secondary);">
+<section class="scroll-fade-up section-sm px-6 transition-colors" style="background: var(--color-bg-secondary);">
   <div class="max-w-[680px] mx-auto">
-    <h2 class="text-[13px] font-bold uppercase tracking-widest text-center mb-8" style="color: var(--color-accent);">
+    <p class="text-label uppercase text-center mb-3" style="color: var(--color-accent);">
       Questions
+    </p>
+    <h2 class="text-section-title text-center mb-12" style="color: var(--color-text-primary);">
+      Common questions
     </h2>
     <div id="faq-list">
       {items.map((item, i) => (
@@ -63,11 +66,11 @@ const faqStructuredData = {
             style="color: var(--color-text-primary);"
             aria-expanded="false"
           >
-            <span class="text-[17px] font-semibold pr-4">{item.question}</span>
+            <span class="text-body font-semibold pr-4">{item.question}</span>
             <span class="faq-icon text-xl transition-transform flex-shrink-0" style="color: var(--color-accent);">+</span>
           </button>
           <div class="faq-answer hidden mt-3 pr-10">
-            <p class="text-[15px] leading-relaxed m-0" style="color: var(--color-text-secondary);">
+            <p class="text-sm leading-relaxed m-0" style="color: var(--color-text-secondary);">
               {item.answer}
             </p>
           </div>

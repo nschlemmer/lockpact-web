@@ -7,9 +7,12 @@ const posts = (await getCollection('blog')).sort(
 );
 ---
 
-<section class="scroll-fade-up max-w-[1100px] mx-auto px-6 py-16 sm:py-24" id="blog-section">
-  <h2 class="text-[13px] font-bold uppercase tracking-widest text-center mb-10" style="color: var(--color-accent);">
+<section class="scroll-fade-up max-w-[1100px] mx-auto px-6 section-sm" id="blog-section">
+  <p class="text-label uppercase text-center mb-3" style="color: var(--color-accent);">
     From the Blog
+  </p>
+  <h2 class="text-section-title text-center mb-12" style="color: var(--color-text-primary);">
+    Latest from LockPact
   </h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     {posts.map((post) => (

@@ -22,12 +22,12 @@ const formattedDate = pubDate
   onmouseout="this.style.borderLeftColor='transparent'"
 >
   {(readTime || formattedDate) && (
-    <div class="text-[11px] font-semibold mb-2.5" style="color: var(--color-accent);">
+    <div class="text-label mb-2.5" style="color: var(--color-accent);">
       {formattedDate}{formattedDate && readTime ? ' \u00B7 ' : ''}{readTime}
     </div>
   )}
   <h3
-    class="text-base font-bold leading-snug mb-2 group-hover:opacity-80 transition-opacity"
+    class="text-card-title leading-snug mb-2 group-hover:opacity-80 transition-opacity"
     style="color: var(--color-text-primary);"
   >
     {title}

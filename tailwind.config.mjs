@@ -29,6 +29,16 @@ export default {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
         mono: ['JetBrains Mono', 'SF Mono', 'monospace'],
       },
+      fontSize: {
+        'hero': ['clamp(2.5rem, 5vw + 1rem, 3.75rem)', { lineHeight: '1.08', letterSpacing: '-0.025em', fontWeight: '800' }],
+        'section-title': ['clamp(1.75rem, 2vw + 1rem, 2.25rem)', { lineHeight: '1.2', letterSpacing: '-0.015em', fontWeight: '700' }],
+        'card-title': ['1.125rem', { lineHeight: '1.35', fontWeight: '700' }],
+        'body-lg': ['1.125rem', { lineHeight: '1.6' }],
+        'body': ['1rem', { lineHeight: '1.6' }],
+        'sm': ['0.875rem', { lineHeight: '1.5' }],
+        'caption': ['0.8125rem', { lineHeight: '1.5', letterSpacing: '0.01em' }],
+        'label': ['0.75rem', { lineHeight: '1.5', letterSpacing: '0.06em', fontWeight: '600' }],
+      },
       borderColor: {
         card: 'var(--color-card-border)',
       },

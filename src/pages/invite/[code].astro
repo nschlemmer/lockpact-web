@@ -1,0 +1,120 @@
+---
+export const prerender = false;
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const { code } = Astro.params;
+const isValid = /^\d{6}$/.test(code ?? '');
+const digits = isValid ? (code as string).split('') : [];
+const appStoreUrl = 'https://apps.apple.com/app/lockpact/id000000000';
+---
+
+<BaseLayout
+  title={isValid ? 'Join me on LockPact' : 'Invalid Invite Link — LockPact'}
+  description={isValid
+    ? 'Your partner wants to hold each other accountable for screen time. Download LockPact and enter the invite code to get started.'
+    : 'This invite link is invalid.'}
+>
+  <main class="min-h-screen flex items-center justify-center px-4 py-12" style="background: var(--color-bg);">
+    <div class="lp-card max-w-md w-full p-8 text-center" style="cursor: default;">
+      {isValid ? (
+        <>
+          {/* LockPact Icon */}
+          <div class="flex justify-center mb-6">
+            <div class="w-16 h-16 rounded-2xl flex items-center justify-center" style="background: var(--color-accent-soft);">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent);">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+          </div>
+
+          {/* Heading */}
+          <h1 class="text-2xl font-bold tracking-tight mb-2" style="color: var(--color-text-primary);">
+            You've been invited to LockPact
+          </h1>
+          <p class="text-base mb-8" style="color: var(--color-text-secondary);">
+            Your partner wants to hold each other accountable for screen time.
+          </p>
+
+          {/* Code Display */}
+          <div class="flex justify-center gap-2 mb-3">
+            {digits.map((digit) => (
+              <div
+                class="w-12 h-14 flex items-center justify-center rounded-lg text-2xl font-mono font-bold"
+                style="background: var(--color-bg-secondary); border: 1px solid var(--color-card-border); color: var(--color-text-primary);"
+              >
+                {digit}
+              </div>
+            ))}
+          </div>
+          <p class="text-sm mb-8" style="color: var(--color-text-tertiary);">
+            Enter this code after installing the app
+          </p>
+
+          {/* App Store Button */}
+          <div class="flex justify-center mb-8">
+            <a
+              href={appStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2.5 rounded-[10px] border px-7 py-3 transition-opacity hover:opacity-90"
+              style="background: var(--color-badge-bg, #000000); border-color: var(--color-badge-border, rgba(255,255,255,0.2));"
+            >
+              <svg width="20" height="24" viewBox="0 0 14 17" fill="white">
+                <path d="M13.545 11.526c-.326.75-.482 1.085-.901 1.749-.586.927-1.412 2.082-2.436 2.091-.912.009-1.147-.594-2.384-.586-1.237.007-1.496.598-2.408.589-1.024-.01-1.804-1.042-2.39-1.969C1.402 10.766.923 7.766 2.28 6.168c.962-1.133 2.39-1.757 3.556-1.757 1.142 0 1.86.597 2.804.597.917 0 1.476-.598 2.798-.598 1.04 0 2.307.565 3.264 1.541-2.867 1.572-2.402 5.666.843 6.575zM9.545 2.862C10.03 2.27 10.393 1.428 10.267.5c-.755.05-1.637.529-2.157 1.148-.47.562-.876 1.413-.722 2.232.826.026 1.682-.455 2.157-1.018z" />
+              </svg>
+              <div class="text-left">
+                <div class="text-[9px] leading-none" style="color: rgba(255,255,255,0.8);">
+                  Download on the
+                </div>
+                <div class="text-lg font-semibold leading-snug tracking-tight text-white">
+                  App Store
+                </div>
+              </div>
+            </a>
+          </div>
+
+          {/* Already have the app note */}
+          <p class="text-sm leading-relaxed" style="color: var(--color-text-tertiary);">
+            Already have LockPact? This link should open the app automatically.
+            If it didn't, open LockPact and enter the code above.
+          </p>
+        </>
+      ) : (
+        <>
+          {/* Invalid Code */}
+          <div class="flex justify-center mb-6">
+            <div class="w-16 h-16 rounded-2xl flex items-center justify-center" style="background: rgba(239, 68, 68, 0.15);">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="15" y1="9" x2="9" y2="15"></line>
+                <line x1="9" y1="9" x2="15" y2="15"></line>
+              </svg>
+            </div>
+          </div>
+
+          <h1 class="text-2xl font-bold tracking-tight mb-2" style="color: var(--color-text-primary);">
+            Invalid invite link
+          </h1>
+          <p class="text-base mb-8" style="color: var(--color-text-secondary);">
+            This invite link doesn't look right. Invite codes are 6 digits long.
+          </p>
+          <a
+            href="/"
+            class="inline-flex items-center gap-2 rounded-xl px-6 py-3 font-medium transition-colors"
+            style="background: var(--color-accent); color: white;"
+          >
+            Go to homepage
+          </a>
+        </>
+      )}
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .lp-card:hover {
+    transform: none;
+  }
+</style>
