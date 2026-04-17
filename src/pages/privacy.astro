@@ -10,7 +10,7 @@ import PageLayout from '../layouts/PageLayout.astro';
     <h1 class="text-3xl font-extrabold tracking-tight mb-8" style="color: var(--color-text-primary);">Privacy Policy</h1>
     <div class="prose max-w-none" style="color: var(--color-text-secondary);">
       <p><strong>Effective Date:</strong> April 7, 2026</p>
-      <p><strong>Last Updated:</strong> April 7, 2026</p>
+      <p><strong>Last Updated:</strong> April 17, 2026</p>
       <p><strong>Developer:</strong> Rotate LLC &middot; Indianapolis, IN</p>
       <p><strong>Contact:</strong> <a href="mailto:privacy@lockpact.app">privacy@lockpact.app</a></p>
 
@@ -47,7 +47,7 @@ import PageLayout from '../layouts/PageLayout.astro';
         <li>Photos or camera</li>
         <li>Health or financial data</li>
         <li>Browsing history or data from the apps you use</li>
-        <li>Advertising identifiers (we do not use ATT / IDFA outside of the ad network below)</li>
+        <li>Advertising identifiers (we do not use ATT / IDFA outside of the ad networks below)</li>
       </ul>
 
       <h2>How We Use Your Data</h2>
@@ -60,7 +60,7 @@ import PageLayout from '../layouts/PageLayout.astro';
       </ul>
 
       <h2>Advertising</h2>
-      <p>LockPact shows a brief rewarded video ad when you submit certain unlock requests or end a lock early. This is handled by AppLovin MAX, which may collect device identifiers for ad delivery purposes. You can permanently remove accountability ads with a one-time in-app purchase (Willpower Waiver).</p>
+      <p>LockPact uses two advertising networks to display a brief rewarded video ad when you submit an unlock request or end a solo lock early: <strong>AppLovin MAX</strong> (primary) and <strong>Google AdMob</strong> (fallback). These networks may collect device identifiers for ad targeting and frequency capping. You can permanently remove these ads with a one-time Willpower Waiver in-app purchase ($9.99).</p>
       <p>We do not sell your personal data to advertisers or any other third parties.</p>
 
       <h2>Data Storage and Security</h2>
@@ -80,6 +80,7 @@ import PageLayout from '../layouts/PageLayout.astro';
         <li><strong>Your partner:</strong> Your display name, lock status, lock events, bypass events, and unlock request text are visible to your paired partner within the app.</li>
         <li><strong>Google (Firebase):</strong> For authentication, database, and push notification infrastructure. Google acts as a data processor under our instructions.</li>
         <li><strong>AppLovin:</strong> For serving rewarded video ads. Subject to AppLovin's privacy policy.</li>
+        <li><strong>Google AdMob:</strong> Fallback ad network. Collects device identifiers only.</li>
         <li><strong>Apple:</strong> Sign in with Apple authentication and push notification delivery via APNs.</li>
         <li><strong>Law enforcement:</strong> If required by valid legal process or to prevent imminent harm, to the extent legally permitted.</li>
       </ul>
