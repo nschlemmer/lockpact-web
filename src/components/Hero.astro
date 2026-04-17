@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import AppStoreBadge from './AppStoreBadge.astro';
+import heroImage from '../assets/app-screenshot.png';
 ---
 
 <section class="hero-glow max-w-[1200px] mx-auto px-6 section-lg pt-24 sm:pt-28 flex flex-col md:flex-row items-start md:items-center gap-12 md:gap-16 justify-center">
@@ -31,14 +33,14 @@ import AppStoreBadge from './AppStoreBadge.astro';
       class="relative w-full screenshot-glow"
       style="border-radius: 32px; background: #000; padding: 6px;"
     >
-      <img
-        src="/app-screenshot.png"
+      <Image
+        src={heroImage}
         alt="LockPact app showing an active two-hour pact with a partner — six apps locked, partner status, Request Unlock action"
         class="w-full h-auto block"
         style="border-radius: 26px;"
         loading="eager"
-        width="390"
-        height="844"
+        widths={[220, 280, 560]}
+        sizes="(min-width: 640px) 280px, 220px"
       />
     </div>
   </div>
