@@ -1,43 +1,138 @@
 ---
-const panels = [
-  { num: '1', title: 'Pair with someone you trust',  desc: 'Share a 6-digit code. One minute to pair.',                                       src: '/screenshots/pair-up.png',            alt: 'LockPact pairing screen showing a shared six-digit code' },
-  { num: '2', title: 'Pick what to lock',            desc: 'Choose the apps. Your selection never leaves the device.',                         src: '/screenshots/pick-apps.png',          alt: 'iOS Family Activity Picker showing selected apps to block' },
-  { num: '3', title: 'Propose a pact',               desc: 'Pick a duration. Send it to your partner.',                                        src: '/screenshots/propose-pact.png',       alt: 'LockPact propose-pact screen with duration options' },
-  { num: '4', title: 'Your partner accepts',         desc: 'Only they can approve. Only they can unlock.',                                     src: '/screenshots/accept-pact.png',        alt: 'LockPact pact proposal received by the partner' },
-  { num: '5', title: 'See every move',               desc: 'Pacts, locks, and requests all show up in the Activity feed.',                     src: '/screenshots/activity.png',           alt: 'LockPact activity feed with pact and lock events' },
-  { num: '6', title: 'Unlocking costs something',    desc: 'A brief accountability ad — or a one-time Willpower Waiver to skip ads forever.', src: '/screenshots/accountability-ad.png',  alt: 'LockPact accountability ad with Willpower Waiver upsell' },
+const steps = [
+  { num: 1, title: 'Pair with someone you trust', desc: 'Share a 6-digit code. One minute to pair.',                                       src: '/screenshots/pair-up.png',           alt: 'LockPact pairing screen showing a shared six-digit code' },
+  { num: 2, title: 'Pick what to lock',            desc: 'Choose the apps. Your selection never leaves the device.',                         src: '/screenshots/pick-apps.png',         alt: 'iOS Family Activity Picker showing selected apps to block' },
+  { num: 3, title: 'Propose a pact',               desc: 'Pick a duration. Send it to your partner.',                                        src: '/screenshots/propose-pact.png',      alt: 'LockPact propose-pact screen with duration options' },
+  { num: 4, title: 'Your partner accepts',         desc: 'Only they can approve. Only they can unlock.',                                     src: '/screenshots/accept-pact.png',       alt: 'LockPact pact proposal received by the partner' },
+  { num: 5, title: 'See every move',               desc: 'Pacts, locks, and requests all show up in the Activity feed.',                     src: '/screenshots/activity.png',          alt: 'LockPact activity feed with pact and lock events' },
+  { num: 6, title: 'Unlocking costs something',    desc: 'A brief accountability ad — or a one-time Willpower Waiver to skip ads forever.', src: '/screenshots/accountability-ad.png', alt: 'LockPact accountability ad with Willpower Waiver upsell' },
 ];
 ---
 
-<section class="scroll-fade-up max-w-[1200px] mx-auto px-6 section-md">
+<section class="scroll-fade-up max-w-[1200px] mx-auto px-6 section-md" id="pact-showcase">
   <p class="text-label uppercase text-center mb-3" style="color: var(--color-accent);">
     The Pact Flow
   </p>
   <h2 class="text-section-title text-center mb-10" style="color: var(--color-text-primary);">
     From pair to pact in under a minute.
   </h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
-    {panels.map((p) => (
-      <div class="flex flex-col items-center text-center">
-        <span class="text-caption font-bold mb-2" style="color: var(--color-accent);">Step {p.num}</span>
-        <h3 class="text-card-title mb-3" style="color: var(--color-text-primary);">{p.title}</h3>
-        <div
-          class="relative w-full max-w-[220px] screenshot-glow mb-4"
-          style="border-radius: 32px; background: #000; padding: 6px;"
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+    {/* LEFT (desktop) / BOTTOM (mobile): step list */}
+    <div
+      class="flex md:flex-col gap-2 md:gap-3 overflow-x-auto md:overflow-visible order-2 md:order-1 snap-x snap-mandatory md:snap-none pb-2 md:pb-0"
+      role="tablist"
+      aria-label="Pact flow steps"
+      id="showcase-tablist"
+    >
+      {steps.map((s, i) => (
+        <button
+          type="button"
+          role="tab"
+          id={`showcase-tab-${s.num}`}
+          aria-controls={`showcase-panel-${s.num}`}
+          aria-selected={i === 0 ? 'true' : 'false'}
+          tabindex={i === 0 ? 0 : -1}
+          data-step={s.num}
+          class="showcase-tab flex-shrink-0 snap-start md:snap-align-none text-left lp-card rounded-2xl p-4 md:p-5 cursor-pointer transition-colors border"
+          style="border-color: var(--color-card-border);"
         >
-          <img
-            src={p.src}
-            alt={p.alt}
-            class="w-full h-auto block"
-            style="border-radius: 26px;"
-            loading="lazy"
-            decoding="async"
-            width="390"
-            height="844"
-          />
-        </div>
-        <p class="text-sm leading-relaxed m-0 max-w-[260px]" style="color: var(--color-text-secondary);">{p.desc}</p>
+          <span class="text-caption font-bold block mb-1" style="color: var(--color-accent);">Step {s.num}</span>
+          <span class="text-card-title block mb-1 md:mb-2" style="color: var(--color-text-primary);">{s.title}</span>
+          <span class="hidden md:block text-sm leading-relaxed" style="color: var(--color-text-secondary);">{s.desc}</span>
+        </button>
+      ))}
+    </div>
+
+    {/* RIGHT (desktop) / TOP (mobile): persistent phone frame */}
+    <div class="order-1 md:order-2 flex flex-col items-center">
+      {/* Mobile-only caption above the phone so the active step's copy is adjacent to tap targets */}
+      <div class="md:hidden mb-4 text-center" id="showcase-mobile-caption">
+        <span class="text-caption font-bold block" style="color: var(--color-accent);">Step <span data-active-num>1</span></span>
+        <span class="text-card-title block" style="color: var(--color-text-primary);" data-active-title>{steps[0].title}</span>
+        <span class="text-sm leading-relaxed block mt-1 max-w-[280px] mx-auto" style="color: var(--color-text-secondary);" data-active-desc>{steps[0].desc}</span>
       </div>
-    ))}
+
+      <div class="relative w-[240px] sm:w-[280px] screenshot-glow" style="border-radius: 32px; background: #000; padding: 6px;">
+        {steps.map((s, i) => (
+          <div
+            role="tabpanel"
+            id={`showcase-panel-${s.num}`}
+            aria-labelledby={`showcase-tab-${s.num}`}
+            data-step={s.num}
+            class="showcase-panel"
+            hidden={i !== 0}
+          >
+            <img
+              src={s.src}
+              alt={s.alt}
+              class="w-full h-auto block"
+              style="border-radius: 26px;"
+              loading={i === 0 ? 'eager' : 'lazy'}
+              decoding="async"
+              width="390"
+              height="844"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tablist = document.getElementById('showcase-tablist');
+    if (!tablist) return;
+    const tabs = Array.from(tablist.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
+    const panels = Array.from(document.querySelectorAll<HTMLElement>('#pact-showcase [role="tabpanel"]'));
+    const captionNum = document.querySelector<HTMLElement>('[data-active-num]');
+    const captionTitle = document.querySelector<HTMLElement>('[data-active-title]');
+    const captionDesc = document.querySelector<HTMLElement>('[data-active-desc]');
+
+    // Cache titles + descriptions from the tabs so we stay in sync with the Astro data.
+    const titles = tabs.map(t => t.querySelector('.text-card-title')?.textContent || '');
+    const descs = tabs.map(t => t.querySelector('.text-sm')?.textContent || '');
+
+    function activate(step: number, focus = false) {
+      tabs.forEach((t) => {
+        const match = t.dataset.step === String(step);
+        t.setAttribute('aria-selected', match ? 'true' : 'false');
+        t.setAttribute('tabindex', match ? '0' : '-1');
+        if (match && focus) t.focus();
+      });
+      panels.forEach((p) => { p.hidden = p.dataset.step !== String(step); });
+      if (captionNum) captionNum.textContent = String(step);
+      if (captionTitle) captionTitle.textContent = titles[step - 1] || '';
+      if (captionDesc) captionDesc.textContent = descs[step - 1] || '';
+    }
+
+    tabs.forEach(t => t.addEventListener('click', () => activate(Number(t.dataset.step))));
+
+    tablist.addEventListener('keydown', (e: KeyboardEvent) => {
+      const current = tabs.findIndex(t => t.getAttribute('aria-selected') === 'true');
+      let next = current;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next = (current + 1) % tabs.length;
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') next = (current - 1 + tabs.length) % tabs.length;
+      else if (e.key === 'Home') next = 0;
+      else if (e.key === 'End') next = tabs.length - 1;
+      else return;
+      e.preventDefault();
+      activate(Number(tabs[next].dataset.step), true);
+    });
+  });
+</script>
+
+<style>
+  .showcase-tab[aria-selected="true"] {
+    border-color: var(--color-accent) !important;
+    background-color: var(--color-accent-soft);
+  }
+  .showcase-tab:hover:not([aria-selected="true"]) {
+    border-color: var(--color-text-tertiary) !important;
+  }
+  .showcase-tab:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+</style>
