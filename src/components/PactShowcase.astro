@@ -1,0 +1,43 @@
+---
+const panels = [
+  { num: '1', title: 'Pair with someone you trust',  desc: 'Share a 6-digit code. One minute to pair.',                                       src: '/screenshots/pair-up.png',            alt: 'LockPact pairing screen showing a shared six-digit code' },
+  { num: '2', title: 'Pick what to lock',            desc: 'Choose the apps. Your selection never leaves the device.',                         src: '/screenshots/pick-apps.png',          alt: 'iOS Family Activity Picker showing selected apps to block' },
+  { num: '3', title: 'Propose a pact',               desc: 'Pick a duration. Send it to your partner.',                                        src: '/screenshots/propose-pact.png',       alt: 'LockPact propose-pact screen with duration options' },
+  { num: '4', title: 'Your partner accepts',         desc: 'Only they can approve. Only they can unlock.',                                     src: '/screenshots/accept-pact.png',        alt: 'LockPact pact proposal received by the partner' },
+  { num: '5', title: 'See every move',               desc: 'Pacts, locks, and requests all show up in the Activity feed.',                     src: '/screenshots/activity.png',           alt: 'LockPact activity feed with pact and lock events' },
+  { num: '6', title: 'Unlocking costs something',    desc: 'A brief accountability ad — or a one-time Willpower Waiver to skip ads forever.', src: '/screenshots/accountability-ad.png',  alt: 'LockPact accountability ad with Willpower Waiver upsell' },
+];
+---
+
+<section class="scroll-fade-up max-w-[1200px] mx-auto px-6 section-md">
+  <p class="text-label uppercase text-center mb-3" style="color: var(--color-accent);">
+    The Pact Flow
+  </p>
+  <h2 class="text-section-title text-center mb-10" style="color: var(--color-text-primary);">
+    From pair to pact in under a minute.
+  </h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
+    {panels.map((p) => (
+      <div class="flex flex-col items-center text-center">
+        <span class="text-caption font-bold mb-2" style="color: var(--color-accent);">Step {p.num}</span>
+        <h3 class="text-card-title mb-3" style="color: var(--color-text-primary);">{p.title}</h3>
+        <div
+          class="relative w-full max-w-[220px] screenshot-glow mb-4"
+          style="border-radius: 32px; background: #000; padding: 6px;"
+        >
+          <img
+            src={p.src}
+            alt={p.alt}
+            class="w-full h-auto block"
+            style="border-radius: 26px;"
+            loading="lazy"
+            decoding="async"
+            width="390"
+            height="844"
+          />
+        </div>
+        <p class="text-sm leading-relaxed m-0 max-w-[260px]" style="color: var(--color-text-secondary);">{p.desc}</p>
+      </div>
+    ))}
+  </div>
+</section>
