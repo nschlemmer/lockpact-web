@@ -76,39 +76,38 @@ const steps = [
     </p>
   </div>
 
-  {/* Embla carousel — single sliding phone */}
-  <div
-    class="embla overflow-hidden mx-auto"
-    style="max-width: 300px;"
-    id="showcase-embla"
-    role="region"
-    aria-roledescription="carousel"
-    aria-label="Pact flow steps"
-  >
-    <div class="embla__container flex touch-pan-y">
-      {steps.map((s, i) => (
-        <div
-          class="embla__slide flex-shrink-0 flex justify-center"
-          style="flex: 0 0 100%; min-width: 0;"
-          role="group"
-          aria-roledescription="slide"
-          aria-label={`Step ${s.num} of 6: ${s.title}`}
-          id={`showcase-slide-${s.num}`}
-          data-step={i}
-        >
-          <div class="relative w-[240px] sm:w-[280px] screenshot-glow" style="border-radius: 32px; background: #000; padding: 6px;">
+  {/* Persistent phone frame — bezel + glow do NOT move. Only the screenshot inside slides. */}
+  <div class="relative mx-auto screenshot-glow" style="width: 280px; max-width: 100%; border-radius: 38px; background: #000; padding: 8px;">
+    <div
+      class="embla overflow-hidden"
+      id="showcase-embla"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Pact flow steps"
+      style="border-radius: 30px; background: #000;"
+    >
+      <div class="embla__container flex touch-pan-y">
+        {steps.map((s, i) => (
+          <div
+            class="embla__slide"
+            style="flex: 0 0 100%; min-width: 0;"
+            role="group"
+            aria-roledescription="slide"
+            aria-label={`Step ${s.num} of 6: ${s.title}`}
+            id={`showcase-slide-${s.num}`}
+            data-step={i}
+          >
             <Image
               src={s.img}
               alt={s.alt}
               class="w-full h-auto block showcase-image"
-              style="border-radius: 26px;"
               loading={i === 0 ? 'eager' : 'lazy'}
-              widths={[240, 280, 560]}
-              sizes="(min-width: 640px) 280px, 240px"
+              widths={[264, 528]}
+              sizes="264px"
             />
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   </div>
 </section>
