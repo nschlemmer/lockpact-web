@@ -1,5 +1,6 @@
 ---
 import ThemeToggle from './ThemeToggle.astro';
+import LogoMark from './LogoMark.astro';
 ---
 
 <nav
@@ -8,8 +9,9 @@ import ThemeToggle from './ThemeToggle.astro';
   style="background: var(--color-nav-bg); border-bottom: 1px solid transparent; transition: border-color 0.3s;"
 >
   <div class="max-w-[1200px] mx-auto flex items-center justify-between px-6 py-4">
-    <a href="/" class="font-extrabold text-card-title tracking-tight" style="color: var(--color-text-primary);">
-      <span style="color: var(--color-accent);">Lock</span>Pact
+    <a href="/" class="flex items-center gap-2 font-extrabold text-card-title tracking-tight" style="color: var(--color-text-primary);">
+      <LogoMark size={28} />
+      <span>Lock<span style="color: var(--color-accent);">Pact</span></span>
     </a>
     <div class="flex items-center gap-4">
       <a
