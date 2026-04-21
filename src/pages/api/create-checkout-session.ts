@@ -56,8 +56,8 @@ export const POST: APIRoute = async ({ request }) => {
           },
         },
       }],
-      success_url: 'https://lockpact.app/tip/thanks?session_id={CHECKOUT_SESSION_ID}',
-      cancel_url:  'https://lockpact.app/tip',
+      success_url: 'https://lockpact.app/support-lockpact/thanks?session_id={CHECKOUT_SESSION_ID}',
+      cancel_url:  'https://lockpact.app/support-lockpact',
     });
 
     return new Response(null, {
