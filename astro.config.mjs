@@ -7,7 +7,11 @@ import vercel from '@astrojs/vercel';
 export default defineConfig({
   site: 'https://lockpact.app',
   output: 'server',
-  adapter: vercel(),
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
   integrations: [
     tailwind({ applyBaseStyles: false }),
     mdx(),
