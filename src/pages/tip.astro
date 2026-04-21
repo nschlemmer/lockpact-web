@@ -1,0 +1,116 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+
+const tiers = [
+  { id: 'small',  price: '$2.99',  name: 'Spark',  desc: 'A small flame of support' },
+  { id: 'medium', price: '$6.99',  name: 'Steady', desc: 'Keep the fire burning' },
+  { id: 'large',  price: '$14.99', name: 'Torch',  desc: 'Light the way forward' },
+];
+---
+<PageLayout
+  title="Tip Jar | LockPact"
+  description="Support LockPact development. Tips go directly to Rotate LLC and help keep the app free."
+>
+  {/* HERO */}
+  <section class="max-w-[720px] mx-auto px-6 pt-16 pb-8 text-center">
+    <svg class="w-16 h-16 mx-auto mb-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="flameHero" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#F59E0B"/>
+          <stop offset="100%" stop-color="#EF4444"/>
+        </linearGradient>
+      </defs>
+      <path
+        fill="url(#flameHero)"
+        d="M12.963 2.286a.75.75 0 00-1.071-.136 9.742 9.742 0 00-3.539 6.177A7.547 7.547 0 016.648 6.61a.75.75 0 00-1.152-.082A9 9 0 1015.68 4.534a7.46 7.46 0 01-2.717-2.248zM15.75 14.25a3.75 3.75 0 11-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 011.925-3.546 3.75 3.75 0 013.255 3.718z"
+      />
+    </svg>
+    <h1 class="text-3xl font-extrabold tracking-tight mb-3" style="color: var(--color-text-primary);">
+      Keep the fire going
+    </h1>
+    <p class="text-base" style="color: var(--color-text-secondary);">
+      LockPact is free because accountability should be. Tips help us keep building.
+    </p>
+  </section>
+
+  {/* THREE TIERS */}
+  <section class="max-w-[920px] mx-auto px-6 grid gap-5 md:grid-cols-3">
+    {tiers.map((tier) => (
+      <form method="POST" action="/api/create-checkout-session" class="flex">
+        <input type="hidden" name="tier" value={tier.id} />
+        <button
+          type="submit"
+          class="flex-1 flex flex-col items-start text-left rounded-2xl p-6 border transition-opacity hover:opacity-90 cursor-pointer"
+          style="background: var(--color-card-bg); border-color: var(--color-card-border);"
+        >
+          <div class="flex items-start justify-between w-full mb-4">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                fill={`url(#flameHero)`}
+                d="M12.963 2.286a.75.75 0 00-1.071-.136 9.742 9.742 0 00-3.539 6.177A7.547 7.547 0 016.648 6.61a.75.75 0 00-1.152-.082A9 9 0 1015.68 4.534a7.46 7.46 0 01-2.717-2.248zM15.75 14.25a3.75 3.75 0 11-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 011.925-3.546 3.75 3.75 0 013.255 3.718z"
+              />
+            </svg>
+            <span
+              class="text-sm font-bold px-3 py-1 rounded-full text-white"
+              style="background: linear-gradient(135deg, #F59E0B, #EF4444);"
+            >
+              {tier.price}
+            </span>
+          </div>
+          <h2 class="text-lg font-bold mb-1" style="color: var(--color-text-primary);">
+            {tier.name}
+          </h2>
+          <p class="text-sm mb-5" style="color: var(--color-text-secondary);">
+            {tier.desc}
+          </p>
+          <span
+            class="w-full text-center font-semibold text-white py-2.5 rounded-lg"
+            style="background: linear-gradient(135deg, #F59E0B, #EF4444);"
+          >
+            Tip {tier.price}
+          </span>
+        </button>
+      </form>
+    ))}
+  </section>
+
+  {/* CUSTOM AMOUNT */}
+  <section class="max-w-[560px] mx-auto px-6 py-10">
+    <form method="POST" action="/api/create-checkout-session" class="flex flex-col gap-2">
+      <label for="custom-amount" class="text-sm font-semibold" style="color: var(--color-text-primary);">
+        Name your own amount
+      </label>
+      <div class="flex gap-2 items-center">
+        <span class="text-lg font-semibold" style="color: var(--color-text-secondary);">$</span>
+        <input
+          id="custom-amount"
+          name="amount"
+          type="number"
+          min="5"
+          max="500"
+          step="0.01"
+          placeholder="25.00"
+          required
+          class="flex-1 px-3 py-2 rounded-lg border"
+          style="background: var(--color-card-bg); border-color: var(--color-card-border); color: var(--color-text-primary);"
+        />
+        <input type="hidden" name="tier" value="custom" />
+        <button
+          type="submit"
+          class="px-4 py-2 rounded-lg font-semibold text-white"
+          style="background: linear-gradient(135deg, #F59E0B, #EF4444);"
+        >
+          Tip
+        </button>
+      </div>
+      <p class="text-caption" style="color: var(--color-text-tertiary);">
+        Between $5 and $500 — for smaller tips, use Spark above.
+      </p>
+    </form>
+  </section>
+
+  {/* FOOTER LEGAL LINE */}
+  <p class="max-w-[600px] mx-auto px-6 pb-16 text-center text-caption" style="color: var(--color-text-tertiary);">
+    Tips unlock no features — they're pure support. Thank you.
+  </p>
+</PageLayout>

@@ -1,0 +1,29 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+---
+<PageLayout
+  title="Thanks for tipping | LockPact"
+  description="Your tip supports LockPact development."
+>
+  <section class="max-w-[560px] mx-auto px-6 py-24 text-center">
+    <svg class="w-24 h-24 mx-auto mb-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="flameThanks" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#F59E0B"/>
+          <stop offset="100%" stop-color="#EF4444"/>
+        </linearGradient>
+      </defs>
+      <path
+        fill="url(#flameThanks)"
+        d="M12.963 2.286a.75.75 0 00-1.071-.136 9.742 9.742 0 00-3.539 6.177A7.547 7.547 0 016.648 6.61a.75.75 0 00-1.152-.082A9 9 0 1015.68 4.534a7.46 7.46 0 01-2.717-2.248zM15.75 14.25a3.75 3.75 0 11-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 011.925-3.546 3.75 3.75 0 013.255 3.718z"
+      />
+    </svg>
+    <h1 class="text-3xl font-extrabold tracking-tight mb-4" style="color: var(--color-text-primary);">
+      Thank you.
+    </h1>
+    <p class="text-base mb-8" style="color: var(--color-text-secondary);">
+      Your tip keeps the fire going. A receipt is on its way from Stripe.
+    </p>
+    <a href="/" class="text-sm font-semibold" style="color: var(--color-accent);">← Back to LockPact</a>
+  </section>
+</PageLayout>
