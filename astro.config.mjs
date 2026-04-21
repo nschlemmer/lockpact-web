@@ -6,6 +6,7 @@ import vercel from '@astrojs/vercel';
 
 export default defineConfig({
   site: 'https://lockpact.app',
+  output: 'server',
   adapter: vercel(),
   integrations: [
     tailwind({ applyBaseStyles: false }),

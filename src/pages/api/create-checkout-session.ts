@@ -3,7 +3,15 @@ import Stripe from 'stripe';
 
 export const prerender = false;
 
-const stripe = new Stripe(import.meta.env.STRIPE_SECRET_KEY);
+// Use process.env rather than import.meta.env because Vite would inline
+// import.meta.env at build time — if the var isn't in the build env it
+// becomes `undefined` in the bundle even when set at runtime. process.env
+// reads from the serverless function's runtime env directly.
+const secretKey = process.env.STRIPE_SECRET_KEY;
+if (!secretKey) {
+  throw new Error('STRIPE_SECRET_KEY is not set in the runtime environment.');
+}
+const stripe = new Stripe(secretKey);
 
 const TIERS: Record<string, { cents: number; name: string }> = {
   small:  { cents: 299,  name: 'LockPact — Spark' },
