@@ -1,11 +1,12 @@
 ---
 export const prerender = true;
 import PageLayout from '../layouts/PageLayout.astro';
+import TipIcon from '../components/TipIcon.astro';
 
 const tiers = [
-  { id: 'small',  price: '$2.99',  name: 'Spark',  desc: 'A small flame of support' },
-  { id: 'medium', price: '$6.99',  name: 'Steady', desc: 'Keep the fire burning' },
-  { id: 'large',  price: '$14.99', name: 'Torch',  desc: 'Light the way forward' },
+  { id: 'small',  price: '$2.99',  name: 'Spark',  desc: 'A small flame of support', icon: 'flame' },
+  { id: 'medium', price: '$6.99',  name: 'Steady', desc: 'Keep the fire burning',   icon: 'flame-fill' },
+  { id: 'large',  price: '$14.99', name: 'Torch',  desc: 'Light the way forward',   icon: 'sparkles' },
 ];
 ---
 <PageLayout
@@ -14,18 +15,15 @@ const tiers = [
 >
   {/* HERO */}
   <section class="max-w-[720px] mx-auto px-6 pt-16 pb-8 text-center">
-    <svg class="w-16 h-16 mx-auto mb-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg class="w-0 h-0 absolute" aria-hidden="true">
       <defs>
         <linearGradient id="flameHero" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stop-color="#F59E0B"/>
           <stop offset="100%" stop-color="#EF4444"/>
         </linearGradient>
       </defs>
-      <path
-        fill="url(#flameHero)"
-        d="M12.963 2.286a.75.75 0 00-1.071-.136 9.742 9.742 0 00-3.539 6.177A7.547 7.547 0 016.648 6.61a.75.75 0 00-1.152-.082A9 9 0 1015.68 4.534a7.46 7.46 0 01-2.717-2.248zM15.75 14.25a3.75 3.75 0 11-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 011.925-3.546 3.75 3.75 0 013.255 3.718z"
-      />
     </svg>
+    <TipIcon name="sparkles" class="w-16 h-16 mx-auto mb-4" />
     <h1 class="text-3xl font-extrabold tracking-tight mb-3" style="color: var(--color-text-primary);">
       Keep the fire going
     </h1>
@@ -45,12 +43,7 @@ const tiers = [
           style="background: var(--color-card-bg); border-color: var(--color-card-border);"
         >
           <div class="flex items-start justify-between w-full mb-4">
-            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path
-                fill={`url(#flameHero)`}
-                d="M12.963 2.286a.75.75 0 00-1.071-.136 9.742 9.742 0 00-3.539 6.177A7.547 7.547 0 016.648 6.61a.75.75 0 00-1.152-.082A9 9 0 1015.68 4.534a7.46 7.46 0 01-2.717-2.248zM15.75 14.25a3.75 3.75 0 11-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 011.925-3.546 3.75 3.75 0 013.255 3.718z"
-              />
-            </svg>
+            <TipIcon name={tier.icon} class="w-8 h-8" />
             <span
               class="text-sm font-bold px-3 py-1 rounded-full text-white"
               style="background: linear-gradient(135deg, #F59E0B, #EF4444);"
