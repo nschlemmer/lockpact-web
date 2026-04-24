@@ -1,0 +1,156 @@
+---
+export const prerender = true;
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Terms of Service | LockPact"
+  description="LockPact Terms of Service. Learn about our usage policies, responsibilities, and legal terms."
+>
+  <section class="max-w-[720px] mx-auto px-6 py-16 md:py-24">
+    <h1 class="text-3xl font-extrabold tracking-tight mb-8" style="color: var(--color-text-primary);">Terms of Service</h1>
+    <div class="prose max-w-none" style="color: var(--color-text-secondary);">
+      <p><strong>Effective Date:</strong> April 24, 2026</p>
+
+      <p>LockPact is operated by Rotate LLC ("we," "us," "our," "Rotate," or "Company"). By downloading, installing, or using the LockPact app or website, you ("you," "your," "user," or "account holder") agree to be bound by these Terms of Service. If you do not agree to these terms, do not use LockPact.</p>
+
+      <h2>Eligibility</h2>
+      <p>To use LockPact, you must:</p>
+      <ul>
+        <li>Be at least 13 years old (or the legal age of majority in your jurisdiction)</li>
+        <li>Have a valid Apple ID</li>
+        <li>Own or have authorized access to the iOS device on which you install LockPact</li>
+        <li>Have the legal authority to agree to these terms on your own behalf or on behalf of a minor with parental consent</li>
+      </ul>
+
+      <h2>Account and Sign In</h2>
+      <p>You authenticate with LockPact using Sign in with Apple. You are responsible for:</p>
+      <ul>
+        <li>Maintaining the confidentiality of your Apple ID and password</li>
+        <li>All activities and transactions that occur under your account</li>
+        <li>Notifying us immediately if you believe your account has been compromised</li>
+      </ul>
+      <p>We are not liable for unauthorized access resulting from your failure to safeguard your credentials.</p>
+
+      <h2>The Service</h2>
+      <p>LockPact provides mutual screen time accountability between two people. Here's what LockPact does:</p>
+      <ul>
+        <li>Allows you to select apps on your device that you want to block during certain times</li>
+        <li>Uses Apple's Screen Time API to enforce these blocks</li>
+        <li>Shares lock status and bypass events with your paired partner via push notifications</li>
+        <li>Enables you to request unlocks from your partner, who can approve or deny the request</li>
+        <li>Detects when you bypass Screen Time restrictions on your own device and notifies your partner</li>
+      </ul>
+      <p><strong>Important: The device owner can always bypass Screen Time restrictions by going to Settings &gt; Screen Time &gt; App Limits, entering Face ID or passcode, and disabling the restriction. LockPact cannot prevent this—it can only detect and report it to your partner.</strong> The value of LockPact is social accountability, not technical enforcement.</p>
+
+      <h2>User Conduct</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use LockPact to harass, threaten, intimidate, or abuse another person</li>
+        <li>Use LockPact as a tool for coercion, control, or non-consensual monitoring</li>
+        <li>Impersonate another person or misrepresent your identity</li>
+        <li>Attempt to gain unauthorized access to LockPact servers, databases, or systems</li>
+        <li>Reverse-engineer, decompile, or attempt to derive the source code of LockPact</li>
+        <li>Remove, obscure, or alter any proprietary notices or labels in LockPact</li>
+        <li>Use LockPact to distribute malware, viruses, or other harmful code</li>
+        <li>Violate any applicable laws, regulations, or third-party rights</li>
+      </ul>
+
+      <h2>Partnership and Pairing</h2>
+      <p>LockPact partnerships are based on voluntary, active consent from both users. To pair:</p>
+      <ul>
+        <li>One user generates a unique 6-digit invite code in the app</li>
+        <li>The other user enters this code within the designated time window</li>
+        <li>Both users are shown confirmation that the partnership is active</li>
+      </ul>
+      <p><strong>Both partners must actively consent to pairing. Do not use invite codes to pair with someone without their knowledge or consent.</strong></p>
+      <p>Either partner can dissolve the partnership at any time via Settings &gt; Partnership &gt; End Partnership. When a partnership is dissolved, lock status synchronization stops immediately, but historical data remains in your account for 30 days before deletion.</p>
+      <p>When you are paired with a partner, the following information is shared:</p>
+      <ul>
+        <li>Your lock status (locked or unlocked)</li>
+        <li>Bypass events (when you bypass a lock)</li>
+        <li>Unlock request text (the reason you provided when requesting an unlock)</li>
+        <li>Unlock approvals and denials</li>
+        <li>Streak information (consecutive days of locked status)</li>
+      </ul>
+      <p><strong>Do not share private information in unlock request reasons if you do not want your partner to see it.</strong></p>
+
+      <h2>Unlock Requests</h2>
+      <p>You may request an unlock from your partner at any time. When you submit an unlock request:</p>
+      <ul>
+        <li>You can optionally provide a reason (text) for the unlock request</li>
+        <li>Your partner receives a push notification and can approve or deny your request within the app</li>
+        <li>If approved, the lock is released for a time period you choose during the request</li>
+      </ul>
+      <p>Before an unlock request is sent, you are presented with a confirmation dialog offering two equal options:</p>
+      <ul>
+        <li><strong>Watch &amp; Request:</strong> View a 30–60 second rewarded video advertisement, after which your unlock request is sent to your partner.</li>
+        <li><strong>Willpower Waiver:</strong> Skip the advertisement by purchasing the Willpower Waiver, a one-time non-consumable in-app purchase. After purchase, subsequent unlock requests can be sent without watching an ad. When you use the Waiver, your partner sees a "Used Willpower Waiver" label on the unlock request, and your solo lock history will note when a Waiver was used.</li>
+      </ul>
+      <p>The same two-option dialog is presented if you end a solo lock early.</p>
+
+      <h2>In-App Purchases and Tips</h2>
+      <p>LockPact offers the following paid transactions:</p>
+      <ul>
+        <li><strong>Willpower Waiver</strong> (iOS in-app purchase, one-time non-consumable) — described above.</li>
+        <li><strong>Tip Jar</strong> (iOS in-app purchases, consumable; available in three tiers) — voluntary support that unlocks no features. Tips are non-refundable purchases that contribute to operating costs and continued development.</li>
+        <li><strong>Tip Jar (web)</strong> — voluntary tips may also be made through Stripe Checkout at <a href="/support-lockpact">lockpact.app/support-lockpact</a>. Web payments are processed by Stripe, Inc.; iOS purchases are processed by Apple Inc. through the App Store.</li>
+      </ul>
+
+      <h2>Advertising</h2>
+      <p>LockPact displays rewarded video advertisements only at the friction points described above (unlock requests and solo lock early-end). Users who maintain their lock commitments do not see advertisements. Ads are served by AppLovin MAX (primary) with Google AdMob as fallback.</p>
+
+      <h2>Intellectual Property</h2>
+      <p>LockPact, including the shield logo, the "LockPact" name, all designs, content, features, and functionality, are the exclusive property of Rotate LLC and are protected by copyright, trademark, and other intellectual property laws. You are granted a limited, non-exclusive, non-transferable license to use LockPact for personal, non-commercial purposes only. You may not:</p>
+      <ul>
+        <li>Copy, modify, or distribute LockPact or its content</li>
+        <li>Create derivative works based on LockPact</li>
+        <li>Use LockPact's name, logo, or branding without written permission</li>
+        <li>Resell or sublicense LockPact</li>
+      </ul>
+
+      <h2>Privacy</h2>
+      <p>Your use of LockPact is governed by our <a href="/privacy">Privacy Policy</a>, which is incorporated by reference into these Terms. Please review the Privacy Policy to understand our data practices.</p>
+
+      <h2>Disclaimers</h2>
+      <p>LockPact is provided "as is" and "as available" without warranties of any kind, either express or implied. We disclaim all warranties, including any implied warranties of merchantability, fitness for a particular purpose, title, and non-infringement.</p>
+      <p><strong>You use LockPact at your own risk.</strong> We do not guarantee:</p>
+      <ul>
+        <li>That LockPact will be uninterrupted, error-free, or secure</li>
+        <li>That bypass detection will always succeed or that all bypasses will be reported</li>
+        <li>That push notifications will be delivered immediately or at all</li>
+        <li>The behavior or availability of Apple's Screen Time API (Apple may change or discontinue this API)</li>
+        <li>That the app will work with all iOS devices or future iOS versions</li>
+      </ul>
+      <p>We are not responsible for relationship outcomes, conflicts, or breakups resulting from LockPact use or data sharing.</p>
+
+      <h2>Limitation of Liability</h2>
+      <p>To the fullest extent permitted by law, in no event shall Rotate LLC be liable for any:</p>
+      <ul>
+        <li>Indirect, incidental, special, consequential, or punitive damages</li>
+        <li>Lost profits, lost revenue, or lost data</li>
+        <li>Damages arising from unauthorized access to your account</li>
+        <li>Damages arising from third-party services (including Apple, Firebase, or AppLovin)</li>
+      </ul>
+      <p>Our total liability for any claim arising from or related to LockPact shall not exceed the amount you paid to us in the 12 months preceding the claim. If you have paid nothing, our liability is limited to $100.</p>
+      <p>Some jurisdictions do not allow limitation of liability, so this limitation may not apply to you in full.</p>
+
+      <h2>Termination</h2>
+      <p>We may suspend or terminate your account at any time, with or without cause, if we believe you have violated these Terms or engaged in harmful, abusive, or illegal conduct. Upon termination, your partnership is automatically dissolved, and you lose access to all LockPact features.</p>
+      <p>You may delete your account at any time via Settings &gt; Account &gt; Delete Account. Account deletion is permanent and cannot be undone. Historical data is retained for 30 days for security purposes, then permanently deleted.</p>
+
+      <h2>Modifications to These Terms</h2>
+      <p>We may update these Terms from time to time. If we make material changes, we will notify you via the app or email at least 30 days before the change takes effect. Your continued use of LockPact after such notification constitutes acceptance of the updated terms. If you do not accept the changes, you must delete your account.</p>
+
+      <h2>Governing Law</h2>
+      <p>These Terms are governed by and construed in accordance with the laws of the State of Indiana, United States, without regard to its conflict of law principles. You consent to the exclusive jurisdiction of the state and federal courts in Marion County, Indiana for any dispute arising from or relating to these Terms or LockPact.</p>
+
+      <h2>Contact</h2>
+      <p>For questions about these Terms of Service, disputes, or to exercise your rights:</p>
+      <p><strong>Email:</strong> <a href="mailto:support@lockpact.app">support@lockpact.app</a></p>
+      <p>Rotate LLC<br />Indianapolis, IN</p>
+
+      <p style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--color-card-border);"><em>Last updated: April 24, 2026</em></p>
+    </div>
+  </section>
+</PageLayout>
