@@ -15,27 +15,28 @@ import LogoMark from './LogoMark.astro';
       <span>Lock<span style="color: var(--color-accent);">Pact</span></span>
     </a>
 
-    <!-- Desktop nav links — hidden on mobile -->
-    <div class="hidden md:flex items-center gap-4">
-      <a
-        href="/blog"
-        class="text-sm font-medium transition-colors hover:opacity-80"
-        style="color: var(--color-text-secondary);"
-      >
-        Blog
-      </a>
-      <a
-        href="/support-lockpact"
-        class="text-sm font-medium transition-colors hover:opacity-80"
-        style="color: var(--color-text-secondary);"
-      >
-        Support LockPact
-      </a>
-      <ThemeToggle />
-    </div>
+    <!-- Single right-side group: desktop links + hamburger + Download -->
+    <div class="flex items-center gap-4">
+      <!-- Desktop nav links — hidden on mobile -->
+      <div class="hidden md:flex items-center gap-4">
+        <a
+          href="/blog"
+          class="text-sm font-medium transition-colors hover:opacity-80"
+          style="color: var(--color-text-secondary);"
+        >
+          Blog
+        </a>
+        <a
+          href="/support-lockpact"
+          class="text-sm font-medium transition-colors hover:opacity-80"
+          style="color: var(--color-text-secondary);"
+        >
+          Support LockPact
+        </a>
+        <ThemeToggle />
+      </div>
 
-    <!-- Right slot: hamburger (mobile only) + Download (always) -->
-    <div class="flex items-center gap-3">
+      <!-- Hamburger — mobile only -->
       <button
         id="nav-hamburger"
         class="md:hidden p-2 rounded-lg transition-opacity hover:opacity-70"
@@ -51,6 +52,7 @@ import LogoMark from './LogoMark.astro';
         </svg>
       </button>
 
+      <!-- Download — always visible -->
       <a
         href="https://apps.apple.com/app/lockpact/id6759302382"
         target="_blank"
