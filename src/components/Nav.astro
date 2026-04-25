@@ -9,11 +9,14 @@ import LogoMark from './LogoMark.astro';
   style="background: var(--color-nav-bg); border-bottom: 1px solid transparent; transition: border-color 0.3s;"
 >
   <div class="max-w-[1200px] mx-auto flex items-center justify-between px-6 py-4">
+    <!-- Logo — always visible -->
     <a href="/" class="flex items-center gap-2 font-extrabold text-card-title tracking-tight" style="color: var(--color-text-primary);">
       <LogoMark size={28} />
       <span>Lock<span style="color: var(--color-accent);">Pact</span></span>
     </a>
-    <div class="flex items-center gap-4">
+
+    <!-- Desktop nav links — hidden on mobile -->
+    <div class="hidden md:flex items-center gap-4">
       <a
         href="/blog"
         class="text-sm font-medium transition-colors hover:opacity-80"
@@ -29,6 +32,25 @@ import LogoMark from './LogoMark.astro';
         Support LockPact
       </a>
       <ThemeToggle />
+    </div>
+
+    <!-- Right slot: hamburger (mobile only) + Download (always) -->
+    <div class="flex items-center gap-3">
+      <button
+        id="nav-hamburger"
+        class="md:hidden p-2 rounded-lg transition-opacity hover:opacity-70"
+        style="color: var(--color-text-primary);"
+        aria-label="Menu"
+        aria-expanded="false"
+        aria-controls="nav-mobile-menu"
+      >
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <rect y="3" width="20" height="2" rx="1"/>
+          <rect y="9" width="20" height="2" rx="1"/>
+          <rect y="15" width="20" height="2" rx="1"/>
+        </svg>
+      </button>
+
       <a
         href="https://apps.apple.com/app/lockpact/id6759302382"
         target="_blank"
@@ -40,12 +62,45 @@ import LogoMark from './LogoMark.astro';
       </a>
     </div>
   </div>
+
+  <!-- Mobile dropdown menu -->
+  <div
+    id="nav-mobile-menu"
+    class="md:hidden hidden"
+    role="menu"
+    style="background: var(--color-nav-bg); border-top: 1px solid var(--color-card-border);"
+  >
+    <div class="max-w-[1200px] mx-auto px-6 py-4 flex flex-col gap-4">
+      <a
+        href="/blog"
+        class="text-sm font-medium transition-opacity hover:opacity-80"
+        style="color: var(--color-text-secondary);"
+        role="menuitem"
+      >
+        Blog
+      </a>
+      <a
+        href="/support-lockpact"
+        class="text-sm font-medium transition-opacity hover:opacity-80"
+        style="color: var(--color-text-secondary);"
+        role="menuitem"
+      >
+        Support LockPact
+      </a>
+      <div class="flex items-center gap-2">
+        <span class="text-sm font-medium" style="color: var(--color-text-secondary);">Theme</span>
+        <ThemeToggle />
+      </div>
+    </div>
+  </div>
 </nav>
 
 <script is:inline>
   (function() {
     var nav = document.getElementById('main-nav');
     if (!nav) return;
+
+    // Scroll border
     window.addEventListener('scroll', function() {
       if (window.scrollY > 10) {
         nav.classList.add('scrolled');
@@ -53,5 +108,33 @@ import LogoMark from './LogoMark.astro';
         nav.classList.remove('scrolled');
       }
     }, { passive: true });
+
+    // Hamburger toggle
+    var hamburger = document.getElementById('nav-hamburger');
+    var menu = document.getElementById('nav-mobile-menu');
+    if (!hamburger || !menu) return;
+
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = !menu.classList.contains('hidden');
+      menu.classList.toggle('hidden', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+    });
+
+    // Close on link tap inside menu
+    menu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        menu.classList.add('hidden');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function(e) {
+      if (!nav.contains(e.target)) {
+        menu.classList.add('hidden');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
   })();
 </script>
