@@ -1,7 +1,7 @@
 ---
 title: "Apple Screen Time Doesn't Work — Here's What to Try Instead"
 description: "Why Apple's built-in Screen Time fails for adults, what it's actually good for, and what tools actually work instead."
-pubDate: 2026-03-18
+pubDate: 2026-04-09
 author: "LockPact"
 tags: ["Apple", "Screen Time", "alternatives"]
 ---

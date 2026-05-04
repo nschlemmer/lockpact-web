@@ -1,7 +1,7 @@
 ---
 title: "Best Free App Blockers for iPhone (2026)"
 description: "Honest review of free and freemium screen time apps for iOS. Which ones actually work, which are just paywalls, and how to choose."
-pubDate: 2026-03-18
+pubDate: 2026-04-17
 author: "LockPact"
 tags: ["guide", "app blockers", "free apps"]
 ---
@@ -81,7 +81,7 @@ A free friction tool is better than nothing. But it's weaker than a locked syste
 
 So if your goal is to *actually change* your phone habits, free isn't the right variable. Free doesn't matter. What matters is accountability.
 
-That's why LockPact works for free. It's not free because we're generous. It's free because it doesn't need to charge you. The real enforcement mechanism is your partner.
+That's why LockPact works for free. It's not free as a gimmick. It's free because it doesn't need to charge you. The real enforcement mechanism is your partner.
 
 And that's why Opal charges money. Not because blocking is expensive to build. But because the app is trying to replace something that can't be replaced: another person's accountability.
 
@@ -94,4 +94,4 @@ If you have someone you trust, LockPact is free on the App Store right now.
 
 No free trial. No paywall. Just you, your partner, and the social cost of letting them down.
 
-[Get LockPact on the App Store →](https://apps.apple.com/app/lockpact)
+[Get LockPact on the App Store →](https://apps.apple.com/app/lockpact/id6759302382)

@@ -1,7 +1,7 @@
 ---
 title: "ScreenZen vs. LockPact: Friction vs. Accountability"
 description: "Compare ScreenZen (friction-based delays) and LockPact (partner accountability). Two different approaches to breaking phone habits."
-pubDate: 2026-03-18
+pubDate: 2026-04-25
 author: "LockPact"
 tags: ["comparison", "ScreenZen", "accountability"]
 ---
@@ -89,6 +89,6 @@ Most people who break their phone habits use more than one tool.
 
 ScreenZen is smart. But if friction doesn't work and you need someone else holding the key, LockPact is free.
 
-**[Get LockPact on the App Store](https://apps.apple.com/app/lockpact/id6738291234)**
+**[Get LockPact on the App Store](https://apps.apple.com/app/lockpact/id6759302382)**
 
 Start solo. Test your willpower. When you're ready, invite your partner and lock together.

@@ -1,7 +1,7 @@
 ---
 title: "AppBlock vs. LockPact: Feature Comparison"
 description: "Detailed comparison between AppBlock and LockPact. Learn the differences in partner features, pricing, notifications, and mutual accountability."
-pubDate: 2026-03-18
+pubDate: 2026-04-29
 author: "LockPact"
 tags: ["comparison", "AppBlock", "app blockers"]
 ---
@@ -91,6 +91,6 @@ If you want automation and sophistication, AppBlock wins. If you want mutual acc
 
 AppBlock is powerful. But if you want someone else holding the key—not algorithms, not schedules, but a real person who cares—LockPact is free.
 
-**[Get LockPact on the App Store](https://apps.apple.com/app/lockpact/id6738291234)**
+**[Get LockPact on the App Store](https://apps.apple.com/app/lockpact/id6759302382)**
 
 Start with solo mode. Test your discipline. When you're ready, invite your partner and lock together.

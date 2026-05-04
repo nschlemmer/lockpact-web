@@ -1,7 +1,7 @@
 ---
 title: "Opal vs. LockPact: Which Screen Time App Is Right for You?"
 description: "A fair comparison of Opal and LockPact. What Opal does best, where each falls short, and how to choose based on your needs."
-pubDate: 2026-03-18
+pubDate: 2026-04-21
 author: "LockPact"
 tags: ["comparison", "Opal", "screen time"]
 ---

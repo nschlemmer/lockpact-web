@@ -1,7 +1,7 @@
 ---
 title: "Why Screen Time Apps Don't Work (And What Does)"
 description: "Most screen time apps fail because they treat a social problem as a technical one. Learn why solo blockers fail, and what actually works: accountability partners."
-pubDate: 2026-03-18
+pubDate: 2026-04-13
 author: "LockPact"
 tags: ["screen time", "accountability", "behavior change"]
 ---
@@ -167,4 +167,4 @@ Download LockPact free on the App Store. Pair with someone you trust. Get your p
 
 No trials. No upsells. No "premium features." Just you, your partner, and the social cost of letting them down.
 
-[Get LockPact on the App Store](https://apps.apple.com/app/lockpact)
+[Get LockPact on the App Store](https://apps.apple.com/app/lockpact/id6759302382)
