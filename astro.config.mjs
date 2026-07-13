@@ -23,6 +23,8 @@ export default defineConfig({
   integrations: [
     tailwind({ applyBaseStyles: false }),
     mdx(),
-    sitemap(),
+    sitemap({
+      filter: (page) => !page.includes('/admin'),
+    }),
   ],
 });
