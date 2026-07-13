@@ -65,18 +65,32 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </section>
 
       <section>
-        <div class="sec-head"><h2>Engagement &amp; retention</h2><span class="src">connects in Round 2 — GA4</span></div>
-        <div class="card"><div class="row"><span class="k muted">DAU/MAU, retention cohorts, and onboarding funnel connect in Round 2.</span></div></div>
+        <div class="sec-head"><h2>Engagement &amp; retention</h2><span class="src">source: <b>GA4</b></span></div>
+        <div class="grid g3" style="margin-bottom: 12px;" id="eng-cards"></div>
+        <div class="grid g2">
+          <div class="card">
+            <div class="kpi-label" style="margin-bottom: 10px;">First-run journey — where new users drop</div>
+            <div id="onb-bars"></div>
+          </div>
+          <div class="card">
+            <div class="kpi-label" style="margin-bottom: 10px;">Invite loop — does the product spread itself</div>
+            <div id="inv-bars"></div>
+          </div>
+        </div>
       </section>
 
       <section>
-        <div class="sec-head"><h2>Revenue</h2><span class="src">connects in Round 2 — AdMob API · GA4 purchases</span></div>
-        <div class="card"><div class="row"><span class="k muted">Ad earnings and purchase breakdowns connect in Round 2.</span></div></div>
+        <div class="sec-head"><h2>Revenue</h2><span class="src">sources: <b>GA4 purchases</b> · AdMob blocked</span></div>
+        <div class="grid g4" id="rev-cards"></div>
       </section>
 
       <section>
-        <div class="sec-head"><h2>Quality &amp; sentiment</h2><span class="src">connects in Round 2 — App Store Connect</span></div>
-        <div class="card"><div class="row"><span class="k muted">Ratings and review excerpts connect in Round 2.</span></div></div>
+        <div class="sec-head"><h2>Quality &amp; sentiment</h2><span class="src">source: <b>App Store Connect</b> (public feeds)</span></div>
+        <div class="grid g3" style="margin-bottom: 12px;" id="qual-cards"></div>
+        <div class="card">
+          <div class="kpi-label" style="margin-bottom: 4px;">Recent reviews</div>
+          <div id="qual-reviews"></div>
+        </div>
       </section>
 
       <section>
@@ -177,6 +191,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   #admin-page .signal { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--color-card-border); font-size: 13px; }
   #admin-page .signal:last-child { border-bottom: 0; }
   #admin-page .signal .sev { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+  #admin-page .review { padding: 8px 0; border-bottom: 1px solid var(--color-card-border); font-size: 12.5px; }
+  #admin-page .review:last-child { border-bottom: 0; }
+  #admin-page .stars { color: #F59E0B; font-size: 12px; letter-spacing: 1px; }
 
   #admin-page .snap-btn { background: var(--color-accent); border: 0; border-radius: 10px; color: #fff; padding: 10px 18px; font-size: 13.5px; font-weight: 600; cursor: pointer; font-family: inherit; }
   #admin-page pre.snap { background: var(--color-bg); border: 1px solid var(--color-card-border); border-radius: 10px; padding: 12px 14px; font-size: 11.5px; color: var(--color-text-secondary); font-family: 'JetBrains Mono', monospace; overflow-x: auto; margin-top: 12px; line-height: 1.55; white-space: pre-wrap; }
@@ -479,6 +497,111 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         return `<div class="bar-row"><span class="lbl">${REASON_LABELS[reason] ?? reason}<span class="tech">${reason}</span></span><div class="bar-track"><div class="bar-fill ${reason === 'timer_expired' ? 'g' : ''}" style="width:${pct}%"></div></div><span class="pct">${pct}%</span></div>`;
       });
     pactBarsEl.innerHTML = bars.length > 0 ? bars.join('') : '<div class="row"><span class="k muted">No pacts ended this period.</span></div>';
+
+    renderEngagement(m);
+    renderRevenue(m);
+    renderQuality(m);
+  }
+
+  function funnelBars(stages: [string, string, number][], total: number, emptyMsg: string): string {
+    if (total <= 0) return `<div class="row"><span class="k muted">${emptyMsg}</span></div>`;
+    return stages
+      .map(([label, tech, count]) => {
+        const pct = Math.round((count / total) * 100);
+        return `<div class="bar-row"><span class="lbl">${label}<span class="tech">${tech}</span></span><div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div><span class="pct">${pct}%</span></div>`;
+      })
+      .join('');
+  }
+
+  function renderEngagement(m: any) {
+    const eng = m.engagement;
+    const cardsEl = document.getElementById('eng-cards') as HTMLElement;
+    const onbEl = document.getElementById('onb-bars') as HTMLElement;
+    const invEl = document.getElementById('inv-bars') as HTMLElement;
+
+    if (!eng?.available) {
+      cardsEl.innerHTML = '<div class="card" style="grid-column: 1 / -1;"><div class="kpi-label muted">Connects once GA4 access is granted (keys-guide step 4) — not yet flowing.</div></div>';
+      onbEl.innerHTML = '';
+      invEl.innerHTML = '';
+      return;
+    }
+
+    const cards: [string, string, string][] = [
+      ['Daily active users', fmtNum(eng.dailyActiveUsers), 'latest day with GA4 data'],
+      ['New users (period)', fmtNum(eng.newUsers), ''],
+      ['Screen Time permission denial rate', `${(eng.permissionDenialPct || 0).toFixed(0)}%`, 'watch if rising'],
+    ];
+    cardsEl.innerHTML = cards
+      .map(([label, value, sub]) => `<div class="card"><div class="kpi-label">${label}</div><div class="kpi-value">${value}</div><div class="kpi-sub">${sub}</div></div>`)
+      .join('');
+
+    const ob = eng.onboarding;
+    onbEl.innerHTML = funnelBars(
+      [
+        ['Opened app first time', 'onboarding_start', ob.onboardingStart],
+        ['Signed in with Apple', 'auth_complete', ob.authComplete],
+        ['Granted Screen Time access', 'permission_granted', ob.permissionGranted],
+        ['Chose apps to block', 'apps_selected', ob.appsSelected],
+        ['Reached dashboard', 'onboarding_complete', ob.onboardingComplete],
+      ],
+      ob.onboardingStart || 0,
+      'No onboarding events this period.'
+    );
+
+    const inv = eng.invite;
+    invEl.innerHTML = funnelBars(
+      [
+        ['Invite codes created', 'invite_created', inv.inviteCreated],
+        ['Shared to partner', 'invite_shared', inv.inviteShared],
+        ['Partner entered code', 'invite_entered', inv.inviteEntered],
+      ],
+      inv.inviteCreated || 0,
+      'No invite events this period.'
+    );
+  }
+
+  function renderRevenue(m: any) {
+    const rev = m.revenue;
+    const el = document.getElementById('rev-cards') as HTMLElement;
+    const cards: [string, string, string][] = [
+      ['Willpower Waivers', rev?.available ? fmtNum(rev.purchaseComplete) : '—', rev?.available ? '$ pending — no verified price constant' : 'connects once GA4 access is granted'],
+      ['Support LockPact', rev?.available ? fmtNum(rev.tipSent) : '—', rev?.available ? '$ pending, same reason' : 'connects once GA4 access is granted'],
+      ['Ad earnings', '—', 'connects once AdMob credentials are set up'],
+      ['Impressions / eCPM', '—', 'connects once AdMob credentials are set up'],
+    ];
+    el.innerHTML = cards
+      .map(([label, value, sub]) => `<div class="card"><div class="kpi-label">${label}</div><div class="kpi-value">${value}</div><div class="kpi-sub">${sub}</div></div>`)
+      .join('');
+  }
+
+  function starString(rating: number): string {
+    const clamped = Math.max(0, Math.min(5, Math.round(rating)));
+    return '★★★★★☆☆☆☆☆'.slice(5 - clamped, 10 - clamped);
+  }
+
+  function renderQuality(m: any) {
+    const rv = m.reviews;
+    const cardsEl = document.getElementById('qual-cards') as HTMLElement;
+    const cards: [string, string, string][] = [
+      ['App Store rating', rv?.available ? `${rv.averageRating.toFixed(1)} (${fmtNum(rv.ratingCount)})` : '—', rv?.available ? '' : 'connects once the reviews source has run'],
+      ['Crash-free sessions', '—', 'not instrumented — gap (no Crashlytics)'],
+      ['iOS 18+ share', '—', 'connects in a follow-up (GA4 device dims not fetched yet)'],
+    ];
+    cardsEl.innerHTML = cards
+      .map(([label, value, sub]) => `<div class="card"><div class="kpi-label">${label}</div><div class="kpi-value">${value}</div><div class="kpi-sub">${sub}</div></div>`)
+      .join('');
+
+    const reviewsEl = document.getElementById('qual-reviews') as HTMLElement;
+    if (rv?.available && rv.recentReviews?.length > 0) {
+      reviewsEl.innerHTML = rv.recentReviews
+        .map(
+          (r: any) =>
+            `<div class="review"><span class="stars">${starString(r.rating)}</span> <b style="font-size:12px;">"${r.title}"</b> — <span style="color:var(--color-text-secondary);">${r.excerpt}</span> <span class="tech">${r.date}</span></div>`
+        )
+        .join('');
+    } else {
+      reviewsEl.innerHTML = '<div class="row"><span class="k muted">No reviews yet, or the reviews source hasn’t run.</span></div>';
+    }
   }
 
   function renderPeriodMetricsError(status: number) {
@@ -487,6 +610,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     (document.getElementById('signals') as HTMLElement).innerHTML = errMsg;
     (document.getElementById('pact-bars') as HTMLElement).innerHTML = errMsg;
     (document.getElementById('unlock-response-row') as HTMLElement).innerHTML = errMsg;
+    (document.getElementById('eng-cards') as HTMLElement).innerHTML = errMsg;
+    (document.getElementById('onb-bars') as HTMLElement).innerHTML = '';
+    (document.getElementById('inv-bars') as HTMLElement).innerHTML = '';
+    (document.getElementById('rev-cards') as HTMLElement).innerHTML = errMsg;
+    (document.getElementById('qual-cards') as HTMLElement).innerHTML = errMsg;
+    (document.getElementById('qual-reviews') as HTMLElement).innerHTML = '';
   }
 
   document.getElementById('snap-btn')?.addEventListener('click', async () => {

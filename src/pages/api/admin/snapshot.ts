@@ -76,8 +76,42 @@ function buildSnapshotMarkdown(
     lines.push(`- streak distribution: 0: ${sh['0']} · 1-3: ${sh['1-3']} · 4-7: ${sh['4-7']} · 8+: ${sh['8+']}`);
   }
   lines.push('');
-  lines.push('## Acquisition / Engagement / Revenue / Quality');
-  lines.push('- connects in Round 2 (Vercel Analytics, GA4, AdMob, App Store Connect)');
+  lines.push('## Acquisition');
+  lines.push('- connects once Vercel Analytics + App Store Connect credentials are set up (blocked — see agent-log)');
+  lines.push('');
+  lines.push('## Engagement & retention (GA4)');
+  if (metrics.engagement.available) {
+    lines.push(
+      `- daily active users: ${metrics.engagement.dailyActiveUsers} · new users this period: ${metrics.engagement.newUsers} · permission denial rate: ${fmtPct(metrics.engagement.permissionDenialPct)}`
+    );
+    const ob = metrics.engagement.onboarding;
+    lines.push(
+      `- onboarding funnel: start ${ob.onboardingStart} → auth ${ob.authComplete} → permission ${ob.permissionGranted} → apps selected ${ob.appsSelected} → complete ${ob.onboardingComplete}`
+    );
+    const inv = metrics.engagement.invite;
+    lines.push(`- invite loop: created ${inv.inviteCreated} → shared ${inv.inviteShared} → entered ${inv.inviteEntered}`);
+    lines.push('- retention (D1/D7/D30 cohorts): connects in a follow-up (deferred — heavier GA4 report shape)');
+  } else {
+    lines.push('- connects once GA4 access is granted (keys-guide step 4) — not yet flowing');
+  }
+  lines.push('');
+  lines.push('## Revenue');
+  if (metrics.revenue.available) {
+    lines.push(
+      `- Willpower Waivers: ${metrics.revenue.purchaseComplete} this period ($ pending — no verified in-app price constant) · Support LockPact: ${metrics.revenue.tipSent} this period ($ pending, same reason)`
+    );
+  } else {
+    lines.push('- connects once GA4 access is granted — not yet flowing');
+  }
+  lines.push('- ad earnings/impressions/eCPM: connects once AdMob credentials are set up (blocked — see agent-log)');
+  lines.push('');
+  lines.push('## Quality & sentiment');
+  if (metrics.reviews.available) {
+    lines.push(`- App Store rating: ${metrics.reviews.averageRating.toFixed(1)} (${metrics.reviews.ratingCount} ratings)`);
+    lines.push('- crash-free sessions: not instrumented (no Crashlytics — permanent gap, unrelated to Round 2)');
+  } else {
+    lines.push('- connects once the reviews source has run at least once — not yet flowing');
+  }
   lines.push('');
   lines.push('## Focus signals');
   if (metrics.focusSignals.length === 0) {

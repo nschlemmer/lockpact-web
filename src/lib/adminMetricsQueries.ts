@@ -272,6 +272,8 @@ function validateRange(start: string, end: string, allDays: DayDoc[]): { start: 
 interface DayDoc {
   date: string;
   firestore: Record<string, any>;
+  ga4?: Record<string, any>;
+  reviews?: Record<string, any>;
 }
 
 function median(values: number[]): number {
@@ -314,6 +316,34 @@ function pairedPctSnapshot(days: DayDoc[]): number {
 function engagedPairsSnapshot(days: DayDoc[]): number {
   if (days.length === 0) return 0;
   return Number(days[days.length - 1].firestore?.partnershipsEngaged14d) || 0;
+}
+
+// ---------------------------------------------------------------------------
+// GA4 + reviews readers — Round B (agent-2/metrics-collector-round-b). Only
+// these two external sources are implemented; AdMob/Vercel/ASC blocks simply
+// don't exist on any adminMetrics doc yet (see that PR's description) — no
+// separate "blocked" handling needed here, `ga4`/`reviews` are just absent
+// until a day actually has them, same as any other not-yet-populated field.
+// ---------------------------------------------------------------------------
+
+function sumGA4Window(days: DayDoc[], field: string): number {
+  return days.reduce((acc, d) => acc + (Number(d.ga4?.[field]) || 0), 0);
+}
+
+/** Most recent day in the window that actually has a ga4 block, or null. */
+function latestGA4Day(days: DayDoc[]): Record<string, any> | null {
+  for (let i = days.length - 1; i >= 0; i--) {
+    if (days[i].ga4) return days[i].ga4 as Record<string, any>;
+  }
+  return null;
+}
+
+/** Reviews has no historical concept — only the most recent day in the window ever carries it. */
+function latestReviewsBlock(days: DayDoc[]): Record<string, any> | null {
+  for (let i = days.length - 1; i >= 0; i--) {
+    if (days[i].reviews) return days[i].reviews as Record<string, any>;
+  }
+  return null;
 }
 
 /**
@@ -360,6 +390,35 @@ export interface PeriodMetrics {
     invitesCreated: number;
     streakHistogram: Record<StreakBucket, number> | null;
   };
+  engagement: {
+    available: boolean; // false until metricsCollector's GA4 pull has landed at least once
+    dailyActiveUsers: number; // latest day in window with a ga4 block
+    newUsers: number; // summed over window
+    permissionDenialPct: number;
+    onboarding: {
+      onboardingStart: number;
+      authComplete: number;
+      permissionGranted: number;
+      appsSelected: number;
+      onboardingComplete: number;
+    };
+    invite: {
+      inviteCreated: number;
+      inviteShared: number;
+      inviteEntered: number;
+    };
+  };
+  revenue: {
+    available: boolean;
+    purchaseComplete: number; // GA4 purchase_complete count -- Willpower Waivers. No $ amount (no verified price constant).
+    tipSent: number; // GA4 tip_sent count -- Support LockPact. No $ amount, same reason.
+  };
+  reviews: {
+    available: boolean;
+    averageRating: number;
+    ratingCount: number;
+    recentReviews: Array<{ title: string; rating: number; excerpt: string; date: string }>;
+  };
   focusSignals: FocusSignal[];
 }
 
@@ -391,6 +450,25 @@ function emptyProductHealth(): PeriodMetrics['productHealth'] {
   };
 }
 
+function emptyEngagement(): PeriodMetrics['engagement'] {
+  return {
+    available: false,
+    dailyActiveUsers: 0,
+    newUsers: 0,
+    permissionDenialPct: 0,
+    onboarding: { onboardingStart: 0, authComplete: 0, permissionGranted: 0, appsSelected: 0, onboardingComplete: 0 },
+    invite: { inviteCreated: 0, inviteShared: 0, inviteEntered: 0 },
+  };
+}
+
+function emptyRevenue(): PeriodMetrics['revenue'] {
+  return { available: false, purchaseComplete: 0, tipSent: 0 };
+}
+
+function emptyReviews(): PeriodMetrics['reviews'] {
+  return { available: false, averageRating: 0, ratingCount: 0, recentReviews: [] };
+}
+
 export async function computePeriodMetrics(window: MetricsWindow): Promise<PeriodMetrics> {
   const allDays = await fetchAllDayDocs();
 
@@ -402,6 +480,9 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
       windowEnd: null,
       compareNote: 'Collecting — first rollup pending',
       productHealth: emptyProductHealth(),
+      engagement: emptyEngagement(),
+      revenue: emptyRevenue(),
+      reviews: emptyReviews(),
       focusSignals: [],
     };
   }
@@ -476,6 +557,45 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
       ? computeFocusSignals(comparableMetrics(windowDays), comparableMetrics(prevWindowDays))
       : [];
 
+  const ga4Latest = latestGA4Day(windowDays);
+  const permissionGrantedSum = sumGA4Window(windowDays, 'permissionGranted');
+  const permissionDeniedSum = sumGA4Window(windowDays, 'permissionDenied');
+  const engagement: PeriodMetrics['engagement'] = {
+    available: ga4Latest !== null,
+    dailyActiveUsers: Number(ga4Latest?.activeUsers) || 0,
+    newUsers: sumGA4Window(windowDays, 'newUsers'),
+    permissionDenialPct:
+      permissionGrantedSum + permissionDeniedSum > 0
+        ? (permissionDeniedSum / (permissionGrantedSum + permissionDeniedSum)) * 100
+        : 0,
+    onboarding: {
+      onboardingStart: sumGA4Window(windowDays, 'onboardingStart'),
+      authComplete: sumGA4Window(windowDays, 'authComplete'),
+      permissionGranted: permissionGrantedSum,
+      appsSelected: sumGA4Window(windowDays, 'appsSelected'),
+      onboardingComplete: sumGA4Window(windowDays, 'onboardingComplete'),
+    },
+    invite: {
+      inviteCreated: sumGA4Window(windowDays, 'inviteCreated'),
+      inviteShared: sumGA4Window(windowDays, 'inviteShared'),
+      inviteEntered: sumGA4Window(windowDays, 'inviteEntered'),
+    },
+  };
+
+  const revenue: PeriodMetrics['revenue'] = {
+    available: ga4Latest !== null,
+    purchaseComplete: sumGA4Window(windowDays, 'purchaseComplete'),
+    tipSent: sumGA4Window(windowDays, 'tipSent'),
+  };
+
+  const reviewsLatest = latestReviewsBlock(windowDays);
+  const reviews: PeriodMetrics['reviews'] = {
+    available: reviewsLatest !== null,
+    averageRating: Number(reviewsLatest?.averageRating) || 0,
+    ratingCount: Number(reviewsLatest?.ratingCount) || 0,
+    recentReviews: Array.isArray(reviewsLatest?.recentReviews) ? reviewsLatest!.recentReviews : [],
+  };
+
   return {
     window,
     hasData: true,
@@ -483,6 +603,9 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
     windowEnd: windowDays[windowDays.length - 1]?.date ?? null,
     compareNote,
     productHealth,
+    engagement,
+    revenue,
+    reviews,
     focusSignals,
   };
 }
