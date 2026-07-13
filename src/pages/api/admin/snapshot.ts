@@ -1,26 +1,32 @@
 import type { APIRoute } from 'astro';
 import { requireAdmin, adminAuthErrorResponse } from '../../../lib/adminAuth';
-import { computeLiveMetrics, computePeriodMetrics, type Period } from '../../../lib/adminMetricsQueries';
+import {
+  computeLiveMetrics,
+  computePeriodMetrics,
+  parseWindowParams,
+  InvalidRangeError,
+  type MetricsWindow,
+} from '../../../lib/adminMetricsQueries';
+import { formatMinutes } from '../../../lib/format';
 
 export const prerender = false;
-
-const VALID_PERIODS: Period[] = ['7d', '30d', '90d', 'all'];
 
 function fmtPct(n: number): string {
   return `${n.toFixed(1)}%`;
 }
-function fmtMin(n: number): string {
-  return `${n.toFixed(0)}min`;
+
+function windowLabel(window: MetricsWindow): string {
+  return window.kind === 'preset' ? window.period : `${window.start} to ${window.end}`;
 }
 
 function buildSnapshotMarkdown(
-  period: Period,
+  window: MetricsWindow,
   live: Awaited<ReturnType<typeof computeLiveMetrics>>,
   metrics: Awaited<ReturnType<typeof computePeriodMetrics>>
 ): string {
   const lines: string[] = [];
   lines.push(`snapshot_v: 1`);
-  lines.push(`# LockPact metrics snapshot — period: ${period}`);
+  lines.push(`# LockPact metrics snapshot — period: ${windowLabel(window)}`);
   lines.push(
     metrics.hasData
       ? `${metrics.compareNote} (window ${metrics.windowStart} → ${metrics.windowEnd})`
@@ -50,6 +56,7 @@ function buildSnapshotMarkdown(
   lines.push(
     `- engaged pairs (14d): ${live.current.partnershipsEngaged14d} · currently locked pairs: ${live.current.currentlyLockedPairs} · active pacts: ${live.current.activePacts} · pending unlock requests: ${live.current.pendingUnlockRequests}`
   );
+  lines.push(`- bypass rate: ${fmtPct(live.current.bypassRatePct)} of active pairs (live, doc #07 formula)`);
   lines.push(
     `- pacts ended this period: ${metrics.productHealth.pactsEnded} · kept to the end: ${fmtPct(metrics.productHealth.pactCompletionPct)}`
   );
@@ -58,12 +65,12 @@ function buildSnapshotMarkdown(
     lines.push(`  - by reason: ${reasonEntries.map(([k, v]) => `${k}=${v}`).join(', ')}`);
   }
   lines.push(
-    `- unlock requests this period: ${metrics.productHealth.unlockRequestsCreated} (approved ${fmtPct(metrics.productHealth.unlockApprovalPct)}, median response ${fmtMin(metrics.productHealth.unlockResponseMinutesMedian)})`
+    `- unlock requests this period: ${metrics.productHealth.unlockRequestsCreated} (approved ${fmtPct(metrics.productHealth.unlockApprovalPct)}, median response ${formatMinutes(metrics.productHealth.unlockResponseMinutesMedian)})`
   );
   lines.push(
     `- lock sessions this period: started ${metrics.productHealth.lockSessionsStarted}, ended ${metrics.productHealth.lockSessionsEnded} (${metrics.productHealth.lockHoursEnded.toFixed(1)} hours)`
   );
-  lines.push(`- bypasses this period: ${metrics.productHealth.bypassesDetected} (rate proxy ${fmtPct(metrics.productHealth.bypassRatePct)})`);
+  lines.push(`- bypasses detected this period: ${metrics.productHealth.bypassesDetected}`);
   if (metrics.productHealth.streakHistogram) {
     const sh = metrics.productHealth.streakHistogram;
     lines.push(`- streak distribution: 0: ${sh['0']} · 1-3: ${sh['1-3']} · 4-7: ${sh['4-7']} · 8+: ${sh['8+']}`);
@@ -90,19 +97,19 @@ export const GET: APIRoute = async ({ request, url }) => {
     return adminAuthErrorResponse(err);
   }
 
-  const periodParam = url.searchParams.get('period');
-  const period = (VALID_PERIODS as string[]).includes(periodParam ?? '')
-    ? (periodParam as Period)
-    : '30d';
+  const window = parseWindowParams(url.searchParams);
 
   try {
-    const [live, metrics] = await Promise.all([computeLiveMetrics(), computePeriodMetrics(period)]);
-    const markdown = buildSnapshotMarkdown(period, live, metrics);
+    const [live, metrics] = await Promise.all([computeLiveMetrics(), computePeriodMetrics(window)]);
+    const markdown = buildSnapshotMarkdown(window, live, metrics);
     return new Response(markdown, {
       status: 200,
       headers: { 'content-type': 'text/markdown; charset=utf-8' },
     });
   } catch (err) {
+    if (err instanceof InvalidRangeError) {
+      return new Response(`Invalid range: ${err.message}`, { status: 400 });
+    }
     console.error('[api/admin/snapshot] Failed to build snapshot:', err);
     return new Response('Failed to build snapshot', { status: 500 });
   }

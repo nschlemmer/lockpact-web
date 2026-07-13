@@ -31,17 +31,14 @@ export const FOCUS_SIGNAL_METRICS: FocusSignalMetricConfig[] = [
     key: 'unlockResponseMinutesMedian',
     label: 'Median unlock response time',
     tag: 'dev',
+    // Both must be exceeded (see computeFocusSignals) — percent-only was
+    // firing on noise for a metric with a small base value (e.g. a 2min ->
+    // 2.5min swing is +25%, past the old 20% threshold, on a half-minute
+    // change nobody should get paged for).
+    thresholdAbs: 5,
     thresholdPct: 20,
     goodDirection: 'down',
     format: (v) => `${v.toFixed(0)} min`,
-  },
-  {
-    key: 'bypassRatePct',
-    label: 'Bypass rate',
-    tag: 'dev',
-    thresholdAbs: 3,
-    goodDirection: 'down',
-    format: (v) => `${v.toFixed(0)}%`,
   },
   {
     key: 'pairedPct',
@@ -89,7 +86,13 @@ export function computeFocusSignals(
     const pctDelta = prevVal !== 0 ? (absDelta / prevVal) * 100 : 0;
     const exceedsAbs = cfg.thresholdAbs !== undefined && Math.abs(absDelta) >= cfg.thresholdAbs;
     const exceedsPct = cfg.thresholdPct !== undefined && Math.abs(pctDelta) >= cfg.thresholdPct;
-    if (!exceedsAbs && !exceedsPct) continue;
+    // When a metric defines BOTH threshold kinds, require both to be crossed
+    // (AND) — e.g. a metric with a small base value can cross a % threshold
+    // on a tiny, meaningless absolute move. A metric with only one threshold
+    // kind defined keeps firing on that one alone, as before.
+    const bothDefined = cfg.thresholdAbs !== undefined && cfg.thresholdPct !== undefined;
+    const crossed = bothDefined ? exceedsAbs && exceedsPct : exceedsAbs || exceedsPct;
+    if (!crossed) continue;
 
     const improved = cfg.goodDirection === 'up' ? absDelta > 0 : absDelta < 0;
     const doubleThreshold =

@@ -124,6 +124,7 @@ export async function computeLiveMetrics(): Promise<LiveMetrics> {
 
   let partnershipsActive = 0;
   let currentlyLockedPairs = 0;
+  let activePartnershipsWithBypass = 0;
   const streakHistogram: Record<StreakBucket, number> = { '0': 0, '1-3': 0, '4-7': 0, '8+': 0 };
   for (const doc of partnerships.docs) {
     const data = doc.data();
@@ -131,6 +132,7 @@ export async function computeLiveMetrics(): Promise<LiveMetrics> {
     partnershipsActive++;
     const streak = typeof data.currentStreak === 'number' ? data.currentStreak : 0;
     streakHistogram[streakBucket(streak)]++;
+    if (typeof data.bypassCount === 'number' && data.bypassCount > 0) activePartnershipsWithBypass++;
     const user1 = usersById.get(data.user1Uid);
     const user2 = usersById.get(data.user2Uid);
     if (user1?.isLocked === true || user2?.isLocked === true) currentlyLockedPairs++;
@@ -157,10 +159,12 @@ export async function computeLiveMetrics(): Promise<LiveMetrics> {
     if (doc.data().status === 'pending') pendingUnlockRequests++;
   }
 
+  // Doc #07 KPI 8's exact formula: pairs with bypassCount > 0 / active pairs.
+  // A live/current-state snapshot only (bypassCount has no history) — same
+  // category of metric as partnershipsActive/streakHistogram above, which
+  // have the identical limitation for the identical reason.
   const bypassRatePct =
-    partnershipsEngaged14d > 0
-      ? (bypassAffectedPartnershipIds.size / partnershipsEngaged14d) * 100
-      : 0;
+    partnershipsActive > 0 ? (activePartnershipsWithBypass / partnershipsActive) * 100 : 0;
 
   return {
     lifetime: {
@@ -199,7 +203,71 @@ export async function computeLiveMetrics(): Promise<LiveMetrics> {
 
 export type Period = '7d' | '30d' | '90d' | 'all';
 
+export type MetricsWindow =
+  | { kind: 'preset'; period: Period }
+  | { kind: 'range'; start: string; end: string };
+
 const PERIOD_DAYS: Record<Exclude<Period, 'all'>, number> = { '7d': 7, '30d': 30, '90d': 90 };
+
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+
+/** Whole-day difference between two YYYY-MM-DD date strings (UTC, DST-safe). */
+function daysBetween(startDate: string, endDate: string): number {
+  const start = new Date(`${startDate}T00:00:00.000Z`).getTime();
+  const end = new Date(`${endDate}T00:00:00.000Z`).getTime();
+  return Math.round((end - start) / 86400000);
+}
+
+function addDaysToDateString(dateStr: string, days: number): string {
+  const d = new Date(`${dateStr}T00:00:00.000Z`);
+  d.setUTCDate(d.getUTCDate() + days);
+  return d.toISOString().slice(0, 10);
+}
+
+export class InvalidRangeError extends Error {}
+
+const VALID_PERIODS: Period[] = ['7d', '30d', '90d', 'all'];
+
+/**
+ * Parses `?start=YYYY-MM-DD&end=YYYY-MM-DD` (takes precedence when both are
+ * present) or `?period=7d|30d|90d|all` (default `30d`) from a request URL's
+ * search params into a MetricsWindow. Shared by /api/admin/metrics and
+ * /api/admin/snapshot so the two routes can't drift on parsing rules.
+ */
+export function parseWindowParams(searchParams: URLSearchParams): MetricsWindow {
+  const start = searchParams.get('start');
+  const end = searchParams.get('end');
+  if (start && end) {
+    return { kind: 'range', start, end };
+  }
+  const periodParam = searchParams.get('period');
+  const period = (VALID_PERIODS as string[]).includes(periodParam ?? '') ? (periodParam as Period) : '30d';
+  return { kind: 'preset', period };
+}
+
+/**
+ * Validates a custom start/end range: well-formed dates, start <= end, end
+ * not in the future, start clamped forward to the earliest available
+ * `adminMetrics` doc (if any exist). Throws InvalidRangeError with a
+ * user-facing message on anything malformed.
+ */
+function validateRange(start: string, end: string, allDays: DayDoc[]): { start: string; end: string } {
+  if (!DATE_RE.test(start) || !DATE_RE.test(end)) {
+    throw new InvalidRangeError('start/end must be YYYY-MM-DD');
+  }
+  if (start > end) {
+    throw new InvalidRangeError('start must be on or before end');
+  }
+  const todayStr = new Date().toISOString().slice(0, 10);
+  if (end > todayStr) {
+    throw new InvalidRangeError('end cannot be in the future');
+  }
+  let clampedStart = start;
+  if (allDays.length > 0 && clampedStart < allDays[0].date) {
+    clampedStart = allDays[0].date;
+  }
+  return { start: clampedStart, end };
+}
 
 interface DayDoc {
   date: string;
@@ -235,12 +303,6 @@ function pactCompletionPct(days: DayDoc[]): number {
   return (keptToEnd / ended) * 100;
 }
 
-function bypassRatePctProxy(days: DayDoc[]): number {
-  const bypasses = sumWindow(days, 'bypassesDetected');
-  const engaged = days.length > 0 ? Number(days[days.length - 1].firestore?.partnershipsEngaged14d) || 0 : 0;
-  return engaged > 0 ? (bypasses / engaged) * 100 : 0;
-}
-
 function pairedPctSnapshot(days: DayDoc[]): number {
   if (days.length === 0) return 0;
   const last = days[days.length - 1].firestore;
@@ -254,19 +316,26 @@ function engagedPairsSnapshot(days: DayDoc[]): number {
   return Number(days[days.length - 1].firestore?.partnershipsEngaged14d) || 0;
 }
 
-/** The comparable-metrics view used for focus-signal deltas. */
+/**
+ * The comparable-metrics view used for focus-signal deltas. Deliberately no
+ * `bypassRatePct` here — doc #07's bypass-rate formula (partnerships.bypassCount
+ * > 0 / active pairs, see computeLiveMetrics) is a live/current-state-only
+ * value with no historical field to reconstruct a true "previous period"
+ * comparison from, and fabricating a differently-defined proxy just to have
+ * a delta reintroduces the exact two-different-numbers bug this was meant
+ * to fix. The single correct value lives only in computeLiveMetrics().
+ */
 function comparableMetrics(days: DayDoc[]): Record<string, number> {
   return {
     pactCompletionPct: pactCompletionPct(days),
     unlockResponseMinutesMedian: medianOfDailyMedians(days),
-    bypassRatePct: bypassRatePctProxy(days),
     pairedPct: pairedPctSnapshot(days),
     engagedPairs: engagedPairsSnapshot(days),
   };
 }
 
 export interface PeriodMetrics {
-  period: Period;
+  window: MetricsWindow;
   hasData: boolean;
   windowStart: string | null;
   windowEnd: string | null;
@@ -288,7 +357,6 @@ export interface PeriodMetrics {
     unlockApprovalPct: number;
     unlockResponseMinutesMedian: number;
     bypassesDetected: number;
-    bypassRatePct: number;
     invitesCreated: number;
     streakHistogram: Record<StreakBucket, number> | null;
   };
@@ -318,18 +386,17 @@ function emptyProductHealth(): PeriodMetrics['productHealth'] {
     unlockApprovalPct: 0,
     unlockResponseMinutesMedian: 0,
     bypassesDetected: 0,
-    bypassRatePct: 0,
     invitesCreated: 0,
     streakHistogram: null,
   };
 }
 
-export async function computePeriodMetrics(period: Period): Promise<PeriodMetrics> {
+export async function computePeriodMetrics(window: MetricsWindow): Promise<PeriodMetrics> {
   const allDays = await fetchAllDayDocs();
 
   if (allDays.length === 0) {
     return {
-      period,
+      window,
       hasData: false,
       windowStart: null,
       windowEnd: null,
@@ -343,15 +410,27 @@ export async function computePeriodMetrics(period: Period): Promise<PeriodMetric
   let prevWindowDays: DayDoc[];
   let compareNote: string;
 
-  if (period === 'all') {
+  if (window.kind === 'range') {
+    const { start, end } = validateRange(window.start, window.end, allDays);
+    windowDays = allDays.filter((d) => d.date >= start && d.date <= end);
+    const spanDays = daysBetween(start, end) + 1;
+    const prevEnd = addDaysToDateString(start, -1);
+    const prevStart = addDaysToDateString(start, -spanDays);
+    prevWindowDays = allDays.filter((d) => d.date >= prevStart && d.date <= prevEnd);
+    const clampedNote = start !== window.start ? ` (clamped to earliest available data, ${start})` : '';
+    compareNote =
+      prevWindowDays.length > 0
+        ? `Showing ${start} → ${end}${clampedNote} · deltas vs the preceding ${spanDays}-day window`
+        : `Showing ${start} → ${end}${clampedNote} · not enough history yet for a comparison period`;
+  } else if (window.period === 'all') {
     windowDays = allDays;
     prevWindowDays = [];
     compareNote = `Showing all time (since ${allDays[0].date}) · no comparison period`;
   } else {
-    const n = PERIOD_DAYS[period];
+    const n = PERIOD_DAYS[window.period];
     windowDays = allDays.slice(-n);
     prevWindowDays = allDays.slice(-2 * n, -n);
-    const label = period === '7d' ? 'last 7 days' : period === '30d' ? 'last 30 days' : 'last 90 days';
+    const label = window.period === '7d' ? 'last 7 days' : window.period === '30d' ? 'last 30 days' : 'last 90 days';
     compareNote =
       prevWindowDays.length > 0
         ? `Showing ${label} · deltas vs previous ${label.replace('last ', '')}`
@@ -388,7 +467,6 @@ export async function computePeriodMetrics(period: Period): Promise<PeriodMetric
     unlockApprovalPct: unlockApproved + unlockDenied > 0 ? (unlockApproved / (unlockApproved + unlockDenied)) * 100 : 0,
     unlockResponseMinutesMedian: medianOfDailyMedians(windowDays),
     bypassesDetected: sumWindow(windowDays, 'bypassesDetected'),
-    bypassRatePct: bypassRatePctProxy(windowDays),
     invitesCreated: sumWindow(windowDays, 'invitesCreated'),
     streakHistogram: lastDayStreak ?? null,
   };
@@ -399,7 +477,7 @@ export async function computePeriodMetrics(period: Period): Promise<PeriodMetric
       : [];
 
   return {
-    period,
+    window,
     hasData: true,
     windowStart: windowDays[0]?.date ?? null,
     windowEnd: windowDays[windowDays.length - 1]?.date ?? null,

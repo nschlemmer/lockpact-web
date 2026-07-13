@@ -8,7 +8,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   description="Internal analytics dashboard."
   noindex={true}
 >
-  <div class="wrap">
+  <div class="wrap" id="admin-page">
     <div id="signin-gate" class="signin-gate">
       <h1 class="signin-title">Lock<span>Pact</span> <span class="muted">/ admin</span></h1>
       <p id="signin-status" class="signin-status">Sign in with the Apple ID you use for the LockPact app.</p>
@@ -21,6 +21,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <div class="header-right">
           <div class="range" id="range-toggle">
             <button data-p="7d">7d</button><button data-p="30d" class="active">30d</button><button data-p="90d">90d</button><button data-p="all">All time</button>
+          </div>
+          <div class="date-range">
+            <input type="date" id="range-start" aria-label="Custom range start" />
+            <span>–</span>
+            <input type="date" id="range-end" aria-label="Custom range end" />
           </div>
           <span class="pill" id="whoami">···</span>
           <button id="signout-btn" class="text-btn">Sign out</button>
@@ -48,6 +53,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </div>
           <div class="card">
             <div class="kpi-label" style="margin-bottom: 6px;">Unlock requests &amp; locking activity</div>
+            <div id="unlock-response-row"></div>
             <div id="unlock-rows"></div>
           </div>
         </div>
@@ -87,91 +93,106 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   </div>
 </BaseLayout>
 
-<style>
+<style is:global>
   /* Adapted from docs/phase-1.5/mockups/admin-dashboard-mockup.html, using
      this site's existing CSS custom properties instead of the mockup's
-     standalone palette. */
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 24px 20px 64px; }
+     standalone palette.
 
-  .signin-gate { min-height: 60vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; text-align: center; }
-  .signin-title { font-size: 20px; font-weight: 700; color: var(--color-text-primary); }
-  .signin-title span:not(.muted) { color: var(--color-accent); }
-  .signin-title span.muted { color: var(--color-text-tertiary); font-weight: 400; }
-  .signin-status { color: var(--color-text-secondary); font-size: 14px; max-width: 420px; }
-  .signin-btn { background: #000; color: #fff; border-radius: 10px; padding: 12px 22px; font-size: 14px; font-weight: 600; cursor: pointer; border: 0; }
+     is:global + a leading #admin-page selector prefix on every rule (rather
+     than Astro's default per-component scoping): the dashboard's content is
+     built as HTML strings and injected via .innerHTML from the script
+     block below, entirely outside Astro's compiler pass, so those nodes
+     never receive the data-astro-cid-* attribute scoped CSS depends on —
+     every scoped rule silently failed to match anything injected after
+     load (confirmed via the compiled build output). #admin-page is a real,
+     unique DOM id that exists only on this route, so prefixing with it
+     keeps every rule exactly as collision-safe as Astro's own scoping
+     would have been, without depending on the compiler ever seeing the
+     elements these rules need to match. */
+  #admin-page.wrap { max-width: 1120px; margin: 0 auto; padding: 24px 20px 64px; }
 
-  .admin-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid var(--color-card-border); margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
-  .logo { font-weight: 700; font-size: 17px; color: var(--color-text-primary); }
-  .logo span.muted { color: var(--color-text-tertiary); font-weight: 400; }
-  .logo span:not(.muted) { color: var(--color-accent); }
-  .header-right { display: flex; gap: 10px; align-items: center; font-size: 13px; color: var(--color-text-secondary); }
-  .range { display: flex; border: 1px solid var(--color-card-border); border-radius: 8px; overflow: hidden; }
-  .range button { background: transparent; border: 0; color: var(--color-text-secondary); padding: 6px 14px; font-size: 13px; cursor: pointer; font-family: inherit; }
-  .range button.active { background: var(--color-accent); color: #fff; }
-  .pill { border: 1px solid var(--color-card-border); border-radius: 999px; padding: 4px 12px; }
-  .text-btn { background: transparent; border: 0; color: var(--color-text-tertiary); font-size: 12.5px; cursor: pointer; text-decoration: underline; font-family: inherit; }
-  .compare-note { font-size: 12px; color: var(--color-text-tertiary); margin-bottom: 20px; }
+  #admin-page .signin-gate { min-height: 60vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; text-align: center; }
+  #admin-page .signin-title { font-size: 20px; font-weight: 700; color: var(--color-text-primary); }
+  #admin-page .signin-title span:not(.muted) { color: var(--color-accent); }
+  #admin-page .signin-title span.muted { color: var(--color-text-tertiary); font-weight: 400; }
+  #admin-page .signin-status { color: var(--color-text-secondary); font-size: 14px; max-width: 420px; }
+  #admin-page .signin-btn { background: #000; color: #fff; border-radius: 10px; padding: 12px 22px; font-size: 14px; font-weight: 600; cursor: pointer; border: 0; }
 
-  section { margin-bottom: 30px; }
-  .sec-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
-  .sec-head h2 { font-size: 15px; font-weight: 600; color: var(--color-text-primary); }
-  .src { font-size: 11px; color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: 0.06em; }
-  .src b { color: var(--color-text-secondary); font-weight: 500; }
-  .cache { margin-left: auto; font-size: 11.5px; color: var(--color-text-tertiary); }
+  #admin-page .admin-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid var(--color-card-border); margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
+  #admin-page .logo { font-weight: 700; font-size: 17px; color: var(--color-text-primary); }
+  #admin-page .logo span.muted { color: var(--color-text-tertiary); font-weight: 400; }
+  #admin-page .logo span:not(.muted) { color: var(--color-accent); }
+  #admin-page .header-right { display: flex; gap: 10px; align-items: center; font-size: 13px; color: var(--color-text-secondary); flex-wrap: wrap; }
+  #admin-page .range { display: flex; border: 1px solid var(--color-card-border); border-radius: 8px; overflow: hidden; }
+  #admin-page .range button { background: transparent; border: 0; color: var(--color-text-secondary); padding: 6px 14px; font-size: 13px; cursor: pointer; font-family: inherit; }
+  #admin-page .range button.active { background: var(--color-accent); color: #fff; }
+  #admin-page .date-range { display: flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--color-text-secondary); }
+  #admin-page .date-range input[type="date"] { background: transparent; border: 1px solid var(--color-card-border); border-radius: 6px; padding: 4px 6px; color: var(--color-text-primary); font-size: 12.5px; font-family: inherit; }
+  #admin-page .pill { border: 1px solid var(--color-card-border); border-radius: 999px; padding: 4px 12px; }
+  #admin-page .text-btn { background: transparent; border: 0; color: var(--color-text-tertiary); font-size: 12.5px; cursor: pointer; text-decoration: underline; font-family: inherit; }
+  #admin-page .compare-note { font-size: 12px; color: var(--color-text-tertiary); margin-bottom: 20px; }
 
-  .grid { display: grid; gap: 12px; }
-  .g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #admin-page section { margin-bottom: 30px; }
+  #admin-page .sec-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+  #admin-page .sec-head h2 { font-size: 15px; font-weight: 600; color: var(--color-text-primary); }
+  #admin-page .src { font-size: 11px; color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: 0.06em; }
+  #admin-page .src b { color: var(--color-text-secondary); font-weight: 500; }
+  #admin-page .cache { margin-left: auto; font-size: 11.5px; color: var(--color-text-tertiary); }
+
+  #admin-page .grid { display: grid; gap: 12px; }
+  #admin-page .g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  #admin-page .g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   @media (max-width: 800px) {
-    .g4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .g2 { grid-template-columns: 1fr; }
+    #admin-page .g4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #admin-page .g2 { grid-template-columns: 1fr; }
   }
-  .card { background: var(--color-card); border: 1px solid var(--color-card-border); border-radius: 14px; padding: 16px 18px; }
-  .kpi-label { font-size: 12.5px; color: var(--color-text-secondary); margin-bottom: 6px; }
-  .kpi-value { font-size: 25px; font-weight: 700; letter-spacing: -0.02em; color: var(--color-text-primary); }
-  .kpi-sub { font-size: 11.5px; color: var(--color-text-tertiary); margin-top: 4px; }
-  .delta { font-size: 12px; font-weight: 600; margin-left: 6px; }
-  .up { color: var(--color-unlocked); }
-  .down { color: var(--color-locked); }
-  .warn { color: #F59E0B; }
-  .flat { color: var(--color-text-tertiary); }
+  #admin-page .card { background: var(--color-card); border: 1px solid var(--color-card-border); border-radius: 14px; padding: 16px 18px; }
+  #admin-page .kpi-label { font-size: 12.5px; color: var(--color-text-secondary); margin-bottom: 6px; }
+  #admin-page .kpi-value { font-size: 25px; font-weight: 700; letter-spacing: -0.02em; color: var(--color-text-primary); }
+  #admin-page .kpi-sub { font-size: 11.5px; color: var(--color-text-tertiary); margin-top: 4px; }
+  #admin-page .delta { font-size: 12px; font-weight: 600; margin-left: 6px; }
+  #admin-page .up { color: var(--color-unlocked); }
+  #admin-page .down { color: var(--color-locked); }
+  #admin-page .warn { color: #F59E0B; }
+  #admin-page .flat { color: var(--color-text-tertiary); }
 
-  .row { display: flex; justify-content: space-between; font-size: 13px; padding: 5px 0; border-bottom: 1px solid var(--color-card-border); gap: 8px; }
-  .row:last-child { border-bottom: 0; }
-  .row .k { color: var(--color-text-secondary); }
-  .row .v { font-weight: 600; white-space: nowrap; color: var(--color-text-primary); }
-  .muted { color: var(--color-text-tertiary); font-weight: 400; }
-  .tech { font-size: 10.5px; color: var(--color-text-tertiary); font-family: 'JetBrains Mono', monospace; }
+  #admin-page .row { display: flex; justify-content: space-between; font-size: 13px; padding: 5px 0; border-bottom: 1px solid var(--color-card-border); gap: 8px; }
+  #admin-page .row:last-child { border-bottom: 0; }
+  #admin-page .row .k { color: var(--color-text-secondary); }
+  #admin-page .row .v { font-weight: 600; white-space: nowrap; color: var(--color-text-primary); }
+  #admin-page .muted { color: var(--color-text-tertiary); font-weight: 400; }
+  #admin-page .tech { font-size: 10.5px; color: var(--color-text-tertiary); font-family: 'JetBrains Mono', monospace; }
 
-  .bar-row { display: flex; align-items: center; gap: 10px; font-size: 12.5px; padding: 4px 0; }
-  .bar-row .lbl { width: 190px; color: var(--color-text-secondary); }
-  .bar-row .lbl .tech { display: block; }
-  .bar-track { flex: 1; background: var(--color-bg); border-radius: 4px; height: 15px; overflow: hidden; }
-  .bar-fill { background: var(--color-accent); height: 100%; border-radius: 4px; }
-  .bar-fill.g { background: var(--color-unlocked); }
-  .bar-row .pct { width: 56px; text-align: right; font-weight: 600; font-size: 12px; color: var(--color-text-primary); }
+  #admin-page .bar-row { display: flex; align-items: center; gap: 10px; font-size: 12.5px; padding: 4px 0; }
+  #admin-page .bar-row .lbl { width: 190px; color: var(--color-text-secondary); }
+  #admin-page .bar-row .lbl .tech { display: block; }
+  #admin-page .bar-track { flex: 1; background: var(--color-bg); border-radius: 4px; height: 15px; overflow: hidden; }
+  #admin-page .bar-fill { background: var(--color-accent); height: 100%; border-radius: 4px; }
+  #admin-page .bar-fill.g { background: var(--color-unlocked); }
+  #admin-page .bar-row .pct { width: 56px; text-align: right; font-weight: 600; font-size: 12px; color: var(--color-text-primary); }
 
-  .badge { display: inline-block; font-size: 10.5px; padding: 2px 8px; border-radius: 999px; font-weight: 600; letter-spacing: 0.03em; }
-  .badge.dev { background: rgba(99, 102, 241, 0.18); color: var(--color-accent-hover); }
-  .badge.mkt { background: rgba(16, 185, 129, 0.15); color: var(--color-unlocked); }
-  .signal { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--color-card-border); font-size: 13px; }
-  .signal:last-child { border-bottom: 0; }
-  .signal .sev { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  #admin-page .badge { display: inline-block; font-size: 10.5px; padding: 2px 8px; border-radius: 999px; font-weight: 600; letter-spacing: 0.03em; }
+  #admin-page .badge.dev { background: rgba(99, 102, 241, 0.18); color: var(--color-accent-hover); }
+  #admin-page .badge.mkt { background: rgba(16, 185, 129, 0.15); color: var(--color-unlocked); }
+  #admin-page .signal { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--color-card-border); font-size: 13px; }
+  #admin-page .signal:last-child { border-bottom: 0; }
+  #admin-page .signal .sev { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
-  .snap-btn { background: var(--color-accent); border: 0; border-radius: 10px; color: #fff; padding: 10px 18px; font-size: 13.5px; font-weight: 600; cursor: pointer; font-family: inherit; }
-  pre.snap { background: var(--color-bg); border: 1px solid var(--color-card-border); border-radius: 10px; padding: 12px 14px; font-size: 11.5px; color: var(--color-text-secondary); font-family: 'JetBrains Mono', monospace; overflow-x: auto; margin-top: 12px; line-height: 1.55; white-space: pre-wrap; }
+  #admin-page .snap-btn { background: var(--color-accent); border: 0; border-radius: 10px; color: #fff; padding: 10px 18px; font-size: 13.5px; font-weight: 600; cursor: pointer; font-family: inherit; }
+  #admin-page pre.snap { background: var(--color-bg); border: 1px solid var(--color-card-border); border-radius: 10px; padding: 12px 14px; font-size: 11.5px; color: var(--color-text-secondary); font-family: 'JetBrains Mono', monospace; overflow-x: auto; margin-top: 12px; line-height: 1.55; white-space: pre-wrap; }
 
-  .totals { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
-  @media (max-width: 800px) { .totals { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-  .tot { background: var(--color-card); border: 1px solid var(--color-card-border); border-radius: 12px; padding: 12px 14px; }
-  .tot .n { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: var(--color-text-primary); }
-  .tot .l { font-size: 11.5px; color: var(--color-text-secondary); margin-top: 2px; }
-  .tot .s { font-size: 10.5px; color: var(--color-text-tertiary); margin-top: 2px; }
+  #admin-page .totals { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
+  @media (max-width: 800px) { #admin-page .totals { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  #admin-page .tot { background: var(--color-card); border: 1px solid var(--color-card-border); border-radius: 12px; padding: 12px 14px; }
+  #admin-page .tot .n { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: var(--color-text-primary); }
+  #admin-page .tot .l { font-size: 11.5px; color: var(--color-text-secondary); margin-top: 2px; }
+  #admin-page .tot .s { font-size: 10.5px; color: var(--color-text-tertiary); margin-top: 2px; }
 </style>
 
 <script>
   import { initializeApp } from 'firebase/app';
   import { getAuth, OAuthProvider, signInWithPopup, onAuthStateChanged, signOut, type User } from 'firebase/auth';
+  import { formatMinutes } from '../../lib/format';
 
   const firebaseConfig = {
     apiKey: import.meta.env.PUBLIC_FIREBASE_API_KEY,
@@ -191,8 +212,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   const signoutBtn = document.getElementById('signout-btn') as HTMLButtonElement;
   const whoami = document.getElementById('whoami') as HTMLElement;
 
+  type WindowSelection =
+    | { kind: 'preset'; period: string }
+    | { kind: 'range'; start: string; end: string };
+
   let idToken: string | null = null;
-  let currentPeriod = '30d';
+  let currentWindow: WindowSelection = { kind: 'preset', period: '30d' };
+
+  function windowQueryParams(w: WindowSelection): string {
+    return w.kind === 'preset' ? `period=${w.period}` : `start=${w.start}&end=${w.end}`;
+  }
 
   signinBtn.addEventListener('click', async () => {
     signinStatus.textContent = 'Opening sign-in…';
@@ -300,13 +329,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     // A generic server error still shows the dashboard shell (per-section
     // failure states) rather than freezing on the sign-in gate — only an
     // auth-specific outcome (401/403) does that.
-    await loadPeriod(currentPeriod);
+    await loadWindow(currentWindow);
     return 'show-dashboard';
   }
 
-  async function loadPeriod(period: string) {
-    currentPeriod = period;
-    const outcome = await authedFetchJson<any>(`/api/admin/metrics?period=${period}`);
+  async function loadWindow(w: WindowSelection) {
+    currentWindow = w;
+    const outcome = await authedFetchJson<any>(`/api/admin/metrics?${windowQueryParams(w)}`);
     if (outcome.kind === 'ok') {
       renderPeriodMetrics(outcome.data);
     } else if (outcome.kind === 'unauthorized' || outcome.kind === 'forbidden') {
@@ -324,13 +353,29 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     }
   }
 
+  const rangeStartInput = document.getElementById('range-start') as HTMLInputElement;
+  const rangeEndInput = document.getElementById('range-end') as HTMLInputElement;
+
   document.querySelectorAll<HTMLButtonElement>('#range-toggle button').forEach((btn) => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('#range-toggle button').forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
-      void loadPeriod(btn.dataset.p as string);
+      // Presets and the custom range are mutually exclusive — picking one clears the other.
+      rangeStartInput.value = '';
+      rangeEndInput.value = '';
+      void loadWindow({ kind: 'preset', period: btn.dataset.p as string });
     });
   });
+
+  function tryApplyCustomRange() {
+    const start = rangeStartInput.value;
+    const end = rangeEndInput.value;
+    if (!start || !end) return;
+    document.querySelectorAll('#range-toggle button').forEach((b) => b.classList.remove('active'));
+    void loadWindow({ kind: 'range', start, end });
+  }
+  rangeStartInput.addEventListener('change', tryApplyCustomRange);
+  rangeEndInput.addEventListener('change', tryApplyCustomRange);
 
   function fmtNum(n: number): string {
     return Math.round(n || 0).toLocaleString();
@@ -369,7 +414,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       ['New + total users', `${fmtNum(c.usersTotal)}`, `${fmtNum(c.usersPaired)} paired (${(c.pairedPct || 0).toFixed(0)}%)`],
       ['Paired users', `${fmtNum(c.usersPaired)} · ${(c.pairedPct || 0).toFixed(0)}%`, ''],
       ['Engaged pairs (14d)', `${fmtNum(c.partnershipsEngaged14d)}`, 'had a lock or pact recently'],
-      ['Bypass rate', `${(c.bypassRatePct || 0).toFixed(0)}%`, 'of engaged pairs'],
+      ['Bypass rate', `${(c.bypassRatePct || 0).toFixed(0)}%`, 'of active pairs'],
     ];
     el.innerHTML = cards
       .map(([label, value, sub]) => `<div class="card"><div class="kpi-label">${label}</div><div class="kpi-value">${value}</div><div class="kpi-sub">${sub}</div></div>`)
@@ -421,6 +466,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     }
 
     const ph = m.productHealth;
+
+    const responseEl = document.getElementById('unlock-response-row') as HTMLElement;
+    responseEl.innerHTML = `<div class="row"><span class="k">Median partner response</span><span class="v">${formatMinutes(ph.unlockResponseMinutesMedian || 0)}</span></div>`;
+
     const pactBarsEl = document.getElementById('pact-bars') as HTMLElement;
     const total = ph.pactsEnded || 0;
     const bars = Object.entries(ph.pactsEndedByReason || {})
@@ -437,6 +486,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     (document.getElementById('cmp') as HTMLElement).textContent = `Server error (HTTP ${status}) — could not load period metrics.`;
     (document.getElementById('signals') as HTMLElement).innerHTML = errMsg;
     (document.getElementById('pact-bars') as HTMLElement).innerHTML = errMsg;
+    (document.getElementById('unlock-response-row') as HTMLElement).innerHTML = errMsg;
   }
 
   document.getElementById('snap-btn')?.addEventListener('click', async () => {
@@ -447,7 +497,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     }
     if (!idToken) return;
     try {
-      const res = await fetch(`/api/admin/snapshot?period=${currentPeriod}`, {
+      const res = await fetch(`/api/admin/snapshot?${windowQueryParams(currentWindow)}`, {
         headers: { Authorization: `Bearer ${idToken}` },
       });
       pre.textContent = res.ok
