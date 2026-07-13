@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { requireAdmin, adminAuthErrorResponse } from '../../../lib/adminAuth';
-import { computeLiveMetrics } from '../../../lib/adminMetricsQueries';
+import { computeLiveMetrics, computeLifetimeExternalTotals } from '../../../lib/adminMetricsQueries';
 
 export const prerender = false;
 
@@ -12,8 +12,8 @@ export const GET: APIRoute = async ({ request }) => {
   }
 
   try {
-    const live = await computeLiveMetrics();
-    return new Response(JSON.stringify(live), {
+    const [live, lifetimeExternal] = await Promise.all([computeLiveMetrics(), computeLifetimeExternalTotals()]);
+    return new Response(JSON.stringify({ ...live, lifetimeExternal }), {
       status: 200,
       headers: { 'content-type': 'application/json' },
     });

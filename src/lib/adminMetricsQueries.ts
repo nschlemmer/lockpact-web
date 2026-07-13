@@ -1,6 +1,7 @@
 import { Timestamp } from 'firebase-admin/firestore';
 import { adminDb } from './adminAuth';
 import { computeFocusSignals, type FocusSignal } from './adminFocusSignals';
+import { WAIVER_PRICE_USD, TIP_ESTIMATED_PRICE_USD } from './iapPrices';
 
 // pacts.endReason — code-verified set (docs/agent-log.md 2026-07-13 entry has
 // the full grep evidence). Only 5 of these 8 are ever actually written to a
@@ -274,6 +275,10 @@ interface DayDoc {
   firestore: Record<string, any>;
   ga4?: Record<string, any>;
   reviews?: Record<string, any>;
+  admob?: Record<string, any>;
+  vercel?: Record<string, any>;
+  vercelSummary?: Record<string, any>;
+  asc?: Record<string, any>;
 }
 
 function median(values: number[]): number {
@@ -346,6 +351,51 @@ function latestReviewsBlock(days: DayDoc[]): Record<string, any> | null {
   return null;
 }
 
+// ---------------------------------------------------------------------------
+// AdMob / Vercel / ASC readers — Round B2 (agent-2/metrics-collector-round-b2).
+// Same "field simply absent until a day has it" convention as ga4/reviews —
+// no separate blocked-state handling needed here.
+// ---------------------------------------------------------------------------
+
+function sumAdMobWindow(days: DayDoc[], field: string): number {
+  return days.reduce((acc, d) => acc + (Number(d.admob?.[field]) || 0), 0);
+}
+
+function sumVercelWindow(days: DayDoc[], field: string): number {
+  return days.reduce((acc, d) => acc + (Number(d.vercel?.[field]) || 0), 0);
+}
+
+function sumASCWindow(days: DayDoc[], field: string): number {
+  return days.reduce((acc, d) => acc + (Number(d.asc?.[field]) || 0), 0);
+}
+
+function anyAdMobDay(days: DayDoc[]): boolean {
+  return days.some((d) => d.admob);
+}
+
+function anyVercelDay(days: DayDoc[]): boolean {
+  return days.some((d) => d.vercel);
+}
+
+function anyASCDay(days: DayDoc[]): boolean {
+  return days.some((d) => d.asc);
+}
+
+/** Vercel's referrer/invite summary is a whole-window aggregate, not per-day — only the most recent day in a run ever carries it, same convention as reviews. */
+function latestVercelSummary(days: DayDoc[]): Record<string, any> | null {
+  for (let i = days.length - 1; i >= 0; i--) {
+    if (days[i].vercelSummary) return days[i].vercelSummary as Record<string, any>;
+  }
+  return null;
+}
+
+/** AdMob's eCPM/match-rate are per-day rates, not additive — average them across days that actually reported. */
+function averageAdMobRate(days: DayDoc[], field: string): number {
+  const values = days.filter((d) => d.admob).map((d) => Number(d.admob![field]) || 0);
+  if (values.length === 0) return 0;
+  return values.reduce((a, b) => a + b, 0) / values.length;
+}
+
 /**
  * The comparable-metrics view used for focus-signal deltas. Deliberately no
  * `bypassRatePct` here — doc #07's bypass-rate formula (partnerships.bypassCount
@@ -409,9 +459,25 @@ export interface PeriodMetrics {
     };
   };
   revenue: {
-    available: boolean;
-    purchaseComplete: number; // GA4 purchase_complete count -- Willpower Waivers. No $ amount (no verified price constant).
-    tipSent: number; // GA4 tip_sent count -- Support LockPact. No $ amount, same reason.
+    available: boolean; // true once GA4 has landed at least once
+    purchaseComplete: number; // GA4 purchase_complete count -- Willpower Waivers
+    purchaseCompleteUsd: number; // exact -- single price point ($9.99)
+    tipSent: number; // GA4 tip_sent count -- Support LockPact
+    tipSentUsdEstimate: number; // ESTIMATE -- count only, no per-tier breakdown; uses the median tier price
+    admobAvailable: boolean;
+    adEarningsUsd: number;
+    adImpressions: number;
+    adEcpmUsd: number; // averaged across days that reported (not additive)
+    adMatchRatePct: number; // averaged across days that reported, as a percent
+  };
+  acquisition: {
+    vercelAvailable: boolean;
+    siteVisits: number; // summed over window
+    ascAvailable: boolean;
+    downloads: number; // ASC sales units, summed over window
+    signedIn: number; // Firestore new users, same value as productHealth.newUsers
+    topReferrers: Array<{ referrer: string; visits: number }>;
+    inviteVisitsWindowTotal: number;
   };
   reviews: {
     available: boolean;
@@ -462,7 +528,30 @@ function emptyEngagement(): PeriodMetrics['engagement'] {
 }
 
 function emptyRevenue(): PeriodMetrics['revenue'] {
-  return { available: false, purchaseComplete: 0, tipSent: 0 };
+  return {
+    available: false,
+    purchaseComplete: 0,
+    purchaseCompleteUsd: 0,
+    tipSent: 0,
+    tipSentUsdEstimate: 0,
+    admobAvailable: false,
+    adEarningsUsd: 0,
+    adImpressions: 0,
+    adEcpmUsd: 0,
+    adMatchRatePct: 0,
+  };
+}
+
+function emptyAcquisition(): PeriodMetrics['acquisition'] {
+  return {
+    vercelAvailable: false,
+    siteVisits: 0,
+    ascAvailable: false,
+    downloads: 0,
+    signedIn: 0,
+    topReferrers: [],
+    inviteVisitsWindowTotal: 0,
+  };
 }
 
 function emptyReviews(): PeriodMetrics['reviews'] {
@@ -482,6 +571,7 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
       productHealth: emptyProductHealth(),
       engagement: emptyEngagement(),
       revenue: emptyRevenue(),
+      acquisition: emptyAcquisition(),
       reviews: emptyReviews(),
       focusSignals: [],
     };
@@ -582,10 +672,30 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
     },
   };
 
+  const purchaseComplete = sumGA4Window(windowDays, 'purchaseComplete');
+  const tipSent = sumGA4Window(windowDays, 'tipSent');
   const revenue: PeriodMetrics['revenue'] = {
     available: ga4Latest !== null,
-    purchaseComplete: sumGA4Window(windowDays, 'purchaseComplete'),
-    tipSent: sumGA4Window(windowDays, 'tipSent'),
+    purchaseComplete,
+    purchaseCompleteUsd: purchaseComplete * WAIVER_PRICE_USD,
+    tipSent,
+    tipSentUsdEstimate: tipSent * TIP_ESTIMATED_PRICE_USD,
+    admobAvailable: anyAdMobDay(windowDays),
+    adEarningsUsd: sumAdMobWindow(windowDays, 'earningsUsd'),
+    adImpressions: sumAdMobWindow(windowDays, 'impressions'),
+    adEcpmUsd: averageAdMobRate(windowDays, 'ecpmUsd'),
+    adMatchRatePct: averageAdMobRate(windowDays, 'matchRate') * 100,
+  };
+
+  const vercelSummaryLatest = latestVercelSummary(windowDays);
+  const acquisition: PeriodMetrics['acquisition'] = {
+    vercelAvailable: anyVercelDay(windowDays),
+    siteVisits: sumVercelWindow(windowDays, 'visits'),
+    ascAvailable: anyASCDay(windowDays),
+    downloads: sumASCWindow(windowDays, 'units'),
+    signedIn: productHealth.newUsers,
+    topReferrers: Array.isArray(vercelSummaryLatest?.topReferrers) ? vercelSummaryLatest!.topReferrers : [],
+    inviteVisitsWindowTotal: Number(vercelSummaryLatest?.inviteVisitsWindowTotal) || 0,
   };
 
   const reviewsLatest = latestReviewsBlock(windowDays);
@@ -605,7 +715,66 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
     productHealth,
     engagement,
     revenue,
+    acquisition,
     reviews,
     focusSignals,
+  };
+}
+
+// ---------------------------------------------------------------------------
+// Lifetime external-source totals — "Lifetime totals" (mockup: "unaffected
+// by the period filter") needs downloads/ads-watched/ad-revenue sums, which
+// only exist in the adminMetrics rollup (external APIs, not Firestore) —
+// unlike the rest of Lifetime Totals, which is live-queried in
+// computeLiveMetrics(). A separate function, called alongside
+// computeLiveMetrics() by /api/admin/live, rather than folded into it, so
+// that function's existing signature/callers stay untouched.
+// ---------------------------------------------------------------------------
+
+export interface LifetimeExternalTotals {
+  available: boolean; // true once at least one adminMetrics doc has an admob or asc block
+  adsWatchedTotal: number;
+  adEarningsUsdTotal: number;
+  downloadsTotal: number;
+  purchaseCompleteTotal: number;
+  purchaseCompleteUsdTotal: number;
+  tipSentTotal: number;
+  tipSentUsdEstimateTotal: number;
+}
+
+export async function computeLifetimeExternalTotals(): Promise<LifetimeExternalTotals> {
+  const allDays = await fetchAllDayDocs();
+  let adsWatchedTotal = 0;
+  let adEarningsUsdTotal = 0;
+  let downloadsTotal = 0;
+  let purchaseCompleteTotal = 0;
+  let tipSentTotal = 0;
+  let available = false;
+
+  for (const d of allDays) {
+    if (d.admob) {
+      available = true;
+      adsWatchedTotal += Number(d.admob.impressions) || 0;
+      adEarningsUsdTotal += Number(d.admob.earningsUsd) || 0;
+    }
+    if (d.asc) {
+      available = true;
+      downloadsTotal += Number(d.asc.units) || 0;
+    }
+    if (d.ga4) {
+      purchaseCompleteTotal += Number(d.ga4.purchaseComplete) || 0;
+      tipSentTotal += Number(d.ga4.tipSent) || 0;
+    }
+  }
+
+  return {
+    available,
+    adsWatchedTotal,
+    adEarningsUsdTotal,
+    downloadsTotal,
+    purchaseCompleteTotal,
+    purchaseCompleteUsdTotal: purchaseCompleteTotal * WAIVER_PRICE_USD,
+    tipSentTotal,
+    tipSentUsdEstimateTotal: tipSentTotal * TIP_ESTIMATED_PRICE_USD,
   };
 }

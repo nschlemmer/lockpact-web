@@ -3,6 +3,7 @@ import { requireAdmin, adminAuthErrorResponse } from '../../../lib/adminAuth';
 import {
   computeLiveMetrics,
   computePeriodMetrics,
+  computeLifetimeExternalTotals,
   parseWindowParams,
   InvalidRangeError,
   type MetricsWindow,
@@ -15,6 +16,10 @@ function fmtPct(n: number): string {
   return `${n.toFixed(1)}%`;
 }
 
+function fmtUsd(n: number): string {
+  return `$${(n || 0).toFixed(2)}`;
+}
+
 function windowLabel(window: MetricsWindow): string {
   return window.kind === 'preset' ? window.period : `${window.start} to ${window.end}`;
 }
@@ -22,7 +27,8 @@ function windowLabel(window: MetricsWindow): string {
 function buildSnapshotMarkdown(
   window: MetricsWindow,
   live: Awaited<ReturnType<typeof computeLiveMetrics>>,
-  metrics: Awaited<ReturnType<typeof computePeriodMetrics>>
+  metrics: Awaited<ReturnType<typeof computePeriodMetrics>>,
+  lifetimeExternal: Awaited<ReturnType<typeof computeLifetimeExternalTotals>>
 ): string {
   const lines: string[] = [];
   lines.push(`snapshot_v: 1`);
@@ -47,7 +53,15 @@ function buildSnapshotMarkdown(
     `- bypasses detected: ${live.lifetime.bypassesDetectedTotal} (across ${live.lifetime.bypassAffectedPairs} pairs)`
   );
   lines.push(`- invite codes created: ${live.lifetime.invitesCreatedTotal}`);
-  lines.push('- downloads / ads / revenue: — (connects in Round 2 — GA4, AdMob, App Store Connect)');
+  if (lifetimeExternal.available) {
+    const totalRevenueUsd =
+      lifetimeExternal.adEarningsUsdTotal + lifetimeExternal.purchaseCompleteUsdTotal + lifetimeExternal.tipSentUsdEstimateTotal;
+    lines.push(
+      `- downloads: ${lifetimeExternal.downloadsTotal} (ASC) · ads watched: ${lifetimeExternal.adsWatchedTotal} (AdMob impressions) · total revenue: ${fmtUsd(totalRevenueUsd)} (ads + IAP, web/Stripe not included)`
+    );
+  } else {
+    lines.push('- downloads / ads / revenue: — (connects once AdMob/ASC access is set up)');
+  }
   lines.push('');
   lines.push('## Product health (Firestore, current + period)');
   lines.push(
@@ -77,7 +91,20 @@ function buildSnapshotMarkdown(
   }
   lines.push('');
   lines.push('## Acquisition');
-  lines.push('- connects once Vercel Analytics + App Store Connect credentials are set up (blocked — see agent-log)');
+  const acq = metrics.acquisition;
+  if (acq.vercelAvailable || acq.ascAvailable) {
+    lines.push(
+      `- site visits: ${acq.vercelAvailable ? acq.siteVisits : '—'} (Vercel) · downloads: ${acq.ascAvailable ? acq.downloads : '—'} (ASC units) · signed in: ${acq.signedIn}`
+    );
+    if (acq.vercelAvailable) {
+      lines.push(
+        `- top referrers: ${acq.topReferrers.map((r) => r.referrer).join(', ') || 'none yet'} — /invite page: ${acq.inviteVisitsWindowTotal} visits`
+      );
+    }
+    lines.push('- store page-view conversion: connects once ASC Analytics Reports access is bootstrapped (Sales-and-Reports key can only list/download an existing request, not create one)');
+  } else {
+    lines.push('- connects once Vercel Analytics + App Store Connect access are set up — not yet flowing');
+  }
   lines.push('');
   lines.push('## Engagement & retention (GA4)');
   if (metrics.engagement.available) {
@@ -98,12 +125,18 @@ function buildSnapshotMarkdown(
   lines.push('## Revenue');
   if (metrics.revenue.available) {
     lines.push(
-      `- Willpower Waivers: ${metrics.revenue.purchaseComplete} this period ($ pending — no verified in-app price constant) · Support LockPact: ${metrics.revenue.tipSent} this period ($ pending, same reason)`
+      `- Willpower Waivers: ${metrics.revenue.purchaseComplete} this period (${fmtUsd(metrics.revenue.purchaseCompleteUsd)}) · Support LockPact: ${metrics.revenue.tipSent} this period (${fmtUsd(metrics.revenue.tipSentUsdEstimate)} est. — no per-tier breakdown)`
     );
   } else {
     lines.push('- connects once GA4 access is granted — not yet flowing');
   }
-  lines.push('- ad earnings/impressions/eCPM: connects once AdMob credentials are set up (blocked — see agent-log)');
+  if (metrics.revenue.admobAvailable) {
+    lines.push(
+      `- ad earnings: ${fmtUsd(metrics.revenue.adEarningsUsd)} · impressions: ${metrics.revenue.adImpressions} · eCPM: ${fmtUsd(metrics.revenue.adEcpmUsd)} · match rate: ${fmtPct(metrics.revenue.adMatchRatePct)}`
+    );
+  } else {
+    lines.push('- ad earnings/impressions/eCPM: connects once AdMob access is set up — not yet flowing');
+  }
   lines.push('');
   lines.push('## Quality & sentiment');
   if (metrics.reviews.available) {
@@ -134,8 +167,12 @@ export const GET: APIRoute = async ({ request, url }) => {
   const window = parseWindowParams(url.searchParams);
 
   try {
-    const [live, metrics] = await Promise.all([computeLiveMetrics(), computePeriodMetrics(window)]);
-    const markdown = buildSnapshotMarkdown(window, live, metrics);
+    const [live, metrics, lifetimeExternal] = await Promise.all([
+      computeLiveMetrics(),
+      computePeriodMetrics(window),
+      computeLifetimeExternalTotals(),
+    ]);
+    const markdown = buildSnapshotMarkdown(window, live, metrics, lifetimeExternal);
     return new Response(markdown, {
       status: 200,
       headers: { 'content-type': 'text/markdown; charset=utf-8' },
