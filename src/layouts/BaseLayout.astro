@@ -8,6 +8,7 @@ interface Props {
   ogImage?: string;
   ogType?: string;
   structuredData?: object;
+  noindex?: boolean;
 }
 
 const {
@@ -17,6 +18,7 @@ const {
   ogImage = '/og-image.png',
   ogType = 'website',
   structuredData,
+  noindex = false,
 } = Astro.props;
 
 const siteName = 'LockPact';
@@ -36,6 +38,7 @@ const twitterHandle = '@lockpact';
     <meta name="theme-color" content="#6366F1" />
     <meta name="msapplication-TileColor" content="#6366F1" />
     <link rel="canonical" href={canonicalURL} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
 
     <!-- Primary Meta Tags -->
     <title>{title}</title>

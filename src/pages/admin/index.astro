@@ -1,0 +1,376 @@
+---
+export const prerender = false;
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="LockPact / admin"
+  description="Internal analytics dashboard."
+  noindex={true}
+>
+  <div class="wrap">
+    <div id="signin-gate" class="signin-gate">
+      <h1 class="signin-title">Lock<span>Pact</span> <span class="muted">/ admin</span></h1>
+      <p id="signin-status" class="signin-status">Sign in with the Apple ID you use for the LockPact app.</p>
+      <button id="signin-btn" class="signin-btn">Sign in with Apple</button>
+    </div>
+
+    <div id="dashboard" class="dashboard" style="display: none;">
+      <header class="admin-header">
+        <div class="logo">Lock<span>Pact</span> <span class="muted">/ admin</span></div>
+        <div class="header-right">
+          <div class="range" id="range-toggle">
+            <button data-p="7d">7d</button><button data-p="30d" class="active">30d</button><button data-p="90d">90d</button><button data-p="all">All time</button>
+          </div>
+          <span class="pill" id="whoami">···</span>
+          <button id="signout-btn" class="text-btn">Sign out</button>
+        </div>
+      </header>
+      <div class="compare-note" id="cmp">Loading…</div>
+
+      <section>
+        <div class="sec-head"><h2>Focus signals</h2><span class="src">auto-computed — biggest movers vs previous period, tagged where to act</span></div>
+        <div class="card" id="signals"><div class="row"><span class="k muted">Loading…</span></div></div>
+      </section>
+
+      <section>
+        <div class="sec-head"><h2>Lifetime totals</h2><span class="src">all time since launch — unaffected by the period filter</span></div>
+        <div class="totals" id="lifetime-totals"></div>
+      </section>
+
+      <section>
+        <div class="sec-head"><h2>Product health</h2><span class="src">source: <b>Firestore</b> · authoritative</span><span class="cache" id="ph-cache"></span></div>
+        <div class="grid g4" style="margin-bottom: 12px;" id="ph-cards"></div>
+        <div class="grid g2">
+          <div class="card">
+            <div class="kpi-label" style="margin-bottom: 10px;">How pacts end</div>
+            <div id="pact-bars"></div>
+          </div>
+          <div class="card">
+            <div class="kpi-label" style="margin-bottom: 6px;">Unlock requests &amp; locking activity</div>
+            <div id="unlock-rows"></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="sec-head"><h2>Acquisition</h2><span class="src">connects in Round 2 — Vercel · App Store Connect</span></div>
+        <div class="card"><div class="row"><span class="k muted">Site traffic, store conversion, and download-source breakdowns connect in Round 2.</span></div></div>
+      </section>
+
+      <section>
+        <div class="sec-head"><h2>Engagement &amp; retention</h2><span class="src">connects in Round 2 — GA4</span></div>
+        <div class="card"><div class="row"><span class="k muted">DAU/MAU, retention cohorts, and onboarding funnel connect in Round 2.</span></div></div>
+      </section>
+
+      <section>
+        <div class="sec-head"><h2>Revenue</h2><span class="src">connects in Round 2 — AdMob API · GA4 purchases</span></div>
+        <div class="card"><div class="row"><span class="k muted">Ad earnings and purchase breakdowns connect in Round 2.</span></div></div>
+      </section>
+
+      <section>
+        <div class="sec-head"><h2>Quality &amp; sentiment</h2><span class="src">connects in Round 2 — App Store Connect</span></div>
+        <div class="card"><div class="row"><span class="k muted">Ratings and review excerpts connect in Round 2.</span></div></div>
+      </section>
+
+      <section>
+        <div class="sec-head"><h2>Claude snapshot</h2><span class="src">the optimization feed — every metric above, machine-readable</span></div>
+        <div class="card">
+          <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+            <button class="snap-btn" id="snap-btn">Copy snapshot for Claude</button>
+            <span style="font-size: 12.5px; color: var(--color-text-tertiary);">Markdown export for the selected period. Also served at <span class="tech">/api/admin/snapshot?period=</span></span>
+          </div>
+          <pre class="snap" id="snap-prev" style="display: none;"></pre>
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  /* Adapted from docs/phase-1.5/mockups/admin-dashboard-mockup.html, using
+     this site's existing CSS custom properties instead of the mockup's
+     standalone palette. */
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 24px 20px 64px; }
+
+  .signin-gate { min-height: 60vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; text-align: center; }
+  .signin-title { font-size: 20px; font-weight: 700; color: var(--color-text-primary); }
+  .signin-title span:not(.muted) { color: var(--color-accent); }
+  .signin-title span.muted { color: var(--color-text-tertiary); font-weight: 400; }
+  .signin-status { color: var(--color-text-secondary); font-size: 14px; max-width: 420px; }
+  .signin-btn { background: #000; color: #fff; border-radius: 10px; padding: 12px 22px; font-size: 14px; font-weight: 600; cursor: pointer; border: 0; }
+
+  .admin-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid var(--color-card-border); margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
+  .logo { font-weight: 700; font-size: 17px; color: var(--color-text-primary); }
+  .logo span.muted { color: var(--color-text-tertiary); font-weight: 400; }
+  .logo span:not(.muted) { color: var(--color-accent); }
+  .header-right { display: flex; gap: 10px; align-items: center; font-size: 13px; color: var(--color-text-secondary); }
+  .range { display: flex; border: 1px solid var(--color-card-border); border-radius: 8px; overflow: hidden; }
+  .range button { background: transparent; border: 0; color: var(--color-text-secondary); padding: 6px 14px; font-size: 13px; cursor: pointer; font-family: inherit; }
+  .range button.active { background: var(--color-accent); color: #fff; }
+  .pill { border: 1px solid var(--color-card-border); border-radius: 999px; padding: 4px 12px; }
+  .text-btn { background: transparent; border: 0; color: var(--color-text-tertiary); font-size: 12.5px; cursor: pointer; text-decoration: underline; font-family: inherit; }
+  .compare-note { font-size: 12px; color: var(--color-text-tertiary); margin-bottom: 20px; }
+
+  section { margin-bottom: 30px; }
+  .sec-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+  .sec-head h2 { font-size: 15px; font-weight: 600; color: var(--color-text-primary); }
+  .src { font-size: 11px; color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: 0.06em; }
+  .src b { color: var(--color-text-secondary); font-weight: 500; }
+  .cache { margin-left: auto; font-size: 11.5px; color: var(--color-text-tertiary); }
+
+  .grid { display: grid; gap: 12px; }
+  .g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (max-width: 800px) {
+    .g4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .g2 { grid-template-columns: 1fr; }
+  }
+  .card { background: var(--color-card); border: 1px solid var(--color-card-border); border-radius: 14px; padding: 16px 18px; }
+  .kpi-label { font-size: 12.5px; color: var(--color-text-secondary); margin-bottom: 6px; }
+  .kpi-value { font-size: 25px; font-weight: 700; letter-spacing: -0.02em; color: var(--color-text-primary); }
+  .kpi-sub { font-size: 11.5px; color: var(--color-text-tertiary); margin-top: 4px; }
+  .delta { font-size: 12px; font-weight: 600; margin-left: 6px; }
+  .up { color: var(--color-unlocked); }
+  .down { color: var(--color-locked); }
+  .warn { color: #F59E0B; }
+  .flat { color: var(--color-text-tertiary); }
+
+  .row { display: flex; justify-content: space-between; font-size: 13px; padding: 5px 0; border-bottom: 1px solid var(--color-card-border); gap: 8px; }
+  .row:last-child { border-bottom: 0; }
+  .row .k { color: var(--color-text-secondary); }
+  .row .v { font-weight: 600; white-space: nowrap; color: var(--color-text-primary); }
+  .muted { color: var(--color-text-tertiary); font-weight: 400; }
+  .tech { font-size: 10.5px; color: var(--color-text-tertiary); font-family: 'JetBrains Mono', monospace; }
+
+  .bar-row { display: flex; align-items: center; gap: 10px; font-size: 12.5px; padding: 4px 0; }
+  .bar-row .lbl { width: 190px; color: var(--color-text-secondary); }
+  .bar-row .lbl .tech { display: block; }
+  .bar-track { flex: 1; background: var(--color-bg); border-radius: 4px; height: 15px; overflow: hidden; }
+  .bar-fill { background: var(--color-accent); height: 100%; border-radius: 4px; }
+  .bar-fill.g { background: var(--color-unlocked); }
+  .bar-row .pct { width: 56px; text-align: right; font-weight: 600; font-size: 12px; color: var(--color-text-primary); }
+
+  .badge { display: inline-block; font-size: 10.5px; padding: 2px 8px; border-radius: 999px; font-weight: 600; letter-spacing: 0.03em; }
+  .badge.dev { background: rgba(99, 102, 241, 0.18); color: var(--color-accent-hover); }
+  .badge.mkt { background: rgba(16, 185, 129, 0.15); color: var(--color-unlocked); }
+  .signal { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--color-card-border); font-size: 13px; }
+  .signal:last-child { border-bottom: 0; }
+  .signal .sev { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+  .snap-btn { background: var(--color-accent); border: 0; border-radius: 10px; color: #fff; padding: 10px 18px; font-size: 13.5px; font-weight: 600; cursor: pointer; font-family: inherit; }
+  pre.snap { background: var(--color-bg); border: 1px solid var(--color-card-border); border-radius: 10px; padding: 12px 14px; font-size: 11.5px; color: var(--color-text-secondary); font-family: 'JetBrains Mono', monospace; overflow-x: auto; margin-top: 12px; line-height: 1.55; white-space: pre-wrap; }
+
+  .totals { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
+  @media (max-width: 800px) { .totals { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .tot { background: var(--color-card); border: 1px solid var(--color-card-border); border-radius: 12px; padding: 12px 14px; }
+  .tot .n { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: var(--color-text-primary); }
+  .tot .l { font-size: 11.5px; color: var(--color-text-secondary); margin-top: 2px; }
+  .tot .s { font-size: 10.5px; color: var(--color-text-tertiary); margin-top: 2px; }
+</style>
+
+<script>
+  import { initializeApp } from 'firebase/app';
+  import { getAuth, OAuthProvider, signInWithPopup, onAuthStateChanged, signOut, type User } from 'firebase/auth';
+
+  const firebaseConfig = {
+    apiKey: import.meta.env.PUBLIC_FIREBASE_API_KEY,
+    authDomain: import.meta.env.PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.PUBLIC_FIREBASE_APP_ID,
+  };
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  const signinGate = document.getElementById('signin-gate') as HTMLElement;
+  const signinStatus = document.getElementById('signin-status') as HTMLElement;
+  const signinBtn = document.getElementById('signin-btn') as HTMLButtonElement;
+  const dashboard = document.getElementById('dashboard') as HTMLElement;
+  const signoutBtn = document.getElementById('signout-btn') as HTMLButtonElement;
+  const whoami = document.getElementById('whoami') as HTMLElement;
+
+  let idToken: string | null = null;
+  let currentPeriod = '30d';
+
+  signinBtn.addEventListener('click', async () => {
+    signinStatus.textContent = 'Opening sign-in…';
+    try {
+      const provider = new OAuthProvider('apple.com');
+      await signInWithPopup(auth, provider);
+    } catch (err: any) {
+      console.error('[admin] Sign-in failed:', err);
+      // Deliberately NOT falling back to signInWithRedirect — it's broken on
+      // Safari 16.1+ (third-party storage partitioning) without an authDomain
+      // reverse-proxy, and a silently-broken fallback is worse than an error.
+      if (err?.code === 'auth/popup-blocked') {
+        signinStatus.textContent = 'Your browser blocked the sign-in popup — allow popups for this site and try again.';
+      } else if (err?.code === 'auth/operation-not-allowed') {
+        signinStatus.textContent = 'Apple sign-in is not configured yet for this project (setup blocker, not a bug — see keys-guide step 1).';
+      } else {
+        signinStatus.textContent = `Sign-in failed (${err?.code ?? 'unknown error'}). Try again.`;
+      }
+    }
+  });
+
+  signoutBtn.addEventListener('click', () => {
+    void signOut(auth);
+  });
+
+  onAuthStateChanged(auth, async (user: User | null) => {
+    if (!user) {
+      idToken = null;
+      dashboard.style.display = 'none';
+      signinGate.style.display = 'flex';
+      return;
+    }
+    try {
+      idToken = await user.getIdToken();
+    } catch (err) {
+      console.error('[admin] getIdToken failed:', err);
+      signinStatus.textContent = 'Could not get a session token. Try signing in again.';
+      return;
+    }
+    whoami.textContent = `${user.displayName || user.email || 'signed in'} · checking access…`;
+    const ok = await loadEverything();
+    if (ok) {
+      signinGate.style.display = 'none';
+      dashboard.style.display = 'block';
+      whoami.textContent = `${user.displayName || user.email || 'admin'} · isAdmin`;
+    } else {
+      signinGate.style.display = 'flex';
+      signinStatus.textContent = 'Signed in, but this account is not an admin.';
+    }
+  });
+
+  async function authedFetch(path: string): Promise<Response | null> {
+    if (!idToken) return null;
+    return fetch(path, { headers: { Authorization: `Bearer ${idToken}` } });
+  }
+
+  async function loadEverything(): Promise<boolean> {
+    const liveRes = await authedFetch('/api/admin/live');
+    if (!liveRes || liveRes.status === 401 || liveRes.status === 403) return false;
+    const live = await liveRes.json();
+    renderLifetimeTotals(live.lifetime);
+    renderCurrentState(live.current);
+    await loadPeriod(currentPeriod);
+    return true;
+  }
+
+  async function loadPeriod(period: string) {
+    currentPeriod = period;
+    const res = await authedFetch(`/api/admin/metrics?period=${period}`);
+    if (!res) return;
+    const metrics = await res.json();
+    renderPeriodMetrics(metrics);
+  }
+
+  document.querySelectorAll<HTMLButtonElement>('#range-toggle button').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#range-toggle button').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      void loadPeriod(btn.dataset.p as string);
+    });
+  });
+
+  function fmtNum(n: number): string {
+    return Math.round(n || 0).toLocaleString();
+  }
+
+  function renderLifetimeTotals(l: any) {
+    const el = document.getElementById('lifetime-totals') as HTMLElement;
+    const tiles: [string, string, string][] = [
+      ['—', 'Downloads', 'connects in Round 2'],
+      [fmtNum(l.usersTotal), 'Users signed in', 'Firestore'],
+      [fmtNum(l.partnershipsFormedTotal), 'Partnerships formed', 'Firestore'],
+      [fmtNum(l.pactsTotal), 'Pacts made', `${fmtNum(l.pactsKeptToEnd)} kept to the end`],
+      [fmtNum(l.lockSessionsTotal), 'Lock sessions', `≈${fmtNum(l.lockHoursTotal)} hours locked`],
+      [fmtNum(l.unlockRequestsTotal), 'Unlock requests', `${fmtNum(l.unlockApprovedTotal)} approved`],
+      ['—', 'Ads watched', 'connects in Round 2'],
+      [fmtNum(l.bypassesDetectedTotal), 'Bypasses detected', `across ${fmtNum(l.bypassAffectedPairs)} pairs`],
+      [fmtNum(l.invitesCreatedTotal), 'Invite codes created', 'Firestore'],
+      ['—', 'Willpower Waivers', 'connects in Round 2'],
+      ['—', 'Support LockPact', 'connects in Round 2'],
+      ['—', 'Total revenue', 'connects in Round 2'],
+    ];
+    el.innerHTML = tiles
+      .map(([n, label, sub]) => `<div class="tot"><div class="n">${n}</div><div class="l">${label}</div><div class="s">${sub}</div></div>`)
+      .join('');
+  }
+
+  function renderCurrentState(c: any) {
+    (document.getElementById('ph-cache') as HTMLElement).textContent = 'live';
+    const el = document.getElementById('ph-cards') as HTMLElement;
+    const cards: [string, string, string][] = [
+      ['New + total users', `${fmtNum(c.usersTotal)}`, `${fmtNum(c.usersPaired)} paired (${(c.pairedPct || 0).toFixed(0)}%)`],
+      ['Paired users', `${fmtNum(c.usersPaired)} · ${(c.pairedPct || 0).toFixed(0)}%`, ''],
+      ['Engaged pairs (14d)', `${fmtNum(c.partnershipsEngaged14d)}`, 'had a lock or pact recently'],
+      ['Bypass rate', `${(c.bypassRatePct || 0).toFixed(0)}%`, 'of engaged pairs'],
+    ];
+    el.innerHTML = cards
+      .map(([label, value, sub]) => `<div class="card"><div class="kpi-label">${label}</div><div class="kpi-value">${value}</div><div class="kpi-sub">${sub}</div></div>`)
+      .join('');
+
+    const unlockEl = document.getElementById('unlock-rows') as HTMLElement;
+    const sh = c.streakHistogram || { '0': 0, '1-3': 0, '4-7': 0, '8+': 0 };
+    const rows: [string, string][] = [
+      ['Currently locked pairs', fmtNum(c.currentlyLockedPairs)],
+      ['Active pacts', fmtNum(c.activePacts)],
+      ['Pending unlock requests', fmtNum(c.pendingUnlockRequests)],
+      ['Streaks', `0: ${sh['0']} · 1-3: ${sh['1-3']} · 4-7: ${sh['4-7']} · 8+: ${sh['8+']}`],
+    ];
+    unlockEl.innerHTML = rows.map(([k, v]) => `<div class="row"><span class="k">${k}</span><span class="v">${v}</span></div>`).join('');
+  }
+
+  const REASON_LABELS: Record<string, string> = {
+    timer_expired: 'Kept to the end',
+    partner_approved: 'Partner released early',
+    declined: 'Declined',
+    partnership_dissolved: 'Partnership dissolved',
+    superseded_by_pact: 'Superseded by new pact',
+    orphaned_partnership_changed: 'Orphaned (partnership changed)',
+    malformed: 'Malformed',
+    account_deleted: 'Account deleted',
+  };
+
+  function renderPeriodMetrics(m: any) {
+    (document.getElementById('cmp') as HTMLElement).textContent = m.compareNote;
+
+    const signalsEl = document.getElementById('signals') as HTMLElement;
+    if (!m.focusSignals || m.focusSignals.length === 0) {
+      signalsEl.innerHTML = `<div class="row"><span class="k muted">No signals crossed threshold this period${m.hasData ? '' : ' — collecting data, first rollup pending'}.</span></div>`;
+    } else {
+      signalsEl.innerHTML = m.focusSignals
+        .map((s: any) => {
+          const sev = s.severity === 'red' ? 'var(--color-locked)' : s.severity === 'amber' ? '#F59E0B' : 'var(--color-unlocked)';
+          return `<div class="signal"><span class="sev" style="background:${sev}"></span><span style="flex:1;">${s.text}</span><span class="badge ${s.tag}">${s.tag === 'dev' ? 'DEV' : 'MARKETING'}</span></div>`;
+        })
+        .join('');
+    }
+
+    const ph = m.productHealth;
+    const pactBarsEl = document.getElementById('pact-bars') as HTMLElement;
+    const total = ph.pactsEnded || 0;
+    const bars = Object.entries(ph.pactsEndedByReason || {})
+      .filter(([, v]: any) => v > 0)
+      .map(([reason, count]: any) => {
+        const pct = total > 0 ? Math.round((count / total) * 100) : 0;
+        return `<div class="bar-row"><span class="lbl">${REASON_LABELS[reason] ?? reason}<span class="tech">${reason}</span></span><div class="bar-track"><div class="bar-fill ${reason === 'timer_expired' ? 'g' : ''}" style="width:${pct}%"></div></div><span class="pct">${pct}%</span></div>`;
+      });
+    pactBarsEl.innerHTML = bars.length > 0 ? bars.join('') : '<div class="row"><span class="k muted">No pacts ended this period.</span></div>';
+  }
+
+  document.getElementById('snap-btn')?.addEventListener('click', async () => {
+    const pre = document.getElementById('snap-prev') as HTMLElement;
+    if (pre.style.display === 'block') {
+      pre.style.display = 'none';
+      return;
+    }
+    const res = await authedFetch(`/api/admin/snapshot?period=${currentPeriod}`);
+    if (!res) return;
+    pre.textContent = await res.text();
+    pre.style.display = 'block';
+  });
+</script>
