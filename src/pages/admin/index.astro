@@ -60,8 +60,21 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </section>
 
       <section>
-        <div class="sec-head"><h2>Acquisition</h2><span class="src">connects in Round 2 — Vercel · App Store Connect</span></div>
-        <div class="card"><div class="row"><span class="k muted">Site traffic, store conversion, and download-source breakdowns connect in Round 2.</span></div></div>
+        <div class="sec-head"><h2>Acquisition</h2><span class="src">sources: <b>Vercel · App Store Connect · Firestore</b></span></div>
+        <div class="card" style="margin-bottom: 12px;">
+          <div class="funnel" id="funnel"></div>
+          <div class="footnote" id="funnel-note"></div>
+        </div>
+        <div class="grid g2">
+          <div class="card">
+            <div class="kpi-label" style="margin-bottom: 6px;">Where downloads come from <span class="tech">ASC page-view analytics</span></div>
+            <div id="asc-rows"></div>
+          </div>
+          <div class="card">
+            <div class="kpi-label" style="margin-bottom: 6px;">Website traffic → store</div>
+            <div id="web-rows"></div>
+          </div>
+        </div>
       </section>
 
       <section>
@@ -80,7 +93,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </section>
 
       <section>
-        <div class="sec-head"><h2>Revenue</h2><span class="src">sources: <b>GA4 purchases</b> · AdMob blocked</span></div>
+        <div class="sec-head"><h2>Revenue</h2><span class="src">sources: <b>AdMob API · GA4 purchases</b></span></div>
         <div class="grid g4" id="rev-cards"></div>
       </section>
 
@@ -195,6 +208,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   #admin-page .review { padding: 8px 0; border-bottom: 1px solid var(--color-card-border); font-size: 12.5px; }
   #admin-page .review:last-child { border-bottom: 0; }
   #admin-page .stars { color: #F59E0B; font-size: 12px; letter-spacing: 1px; }
+
+  #admin-page .funnel { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; align-items: end; }
+  #admin-page .f-bar { background: rgba(99, 102, 241, 0.35); border-top: 3px solid var(--color-accent); border-radius: 4px 4px 0 0; }
+  #admin-page .f-num { font-size: 17px; font-weight: 700; margin-top: 8px; color: var(--color-text-primary); }
+  #admin-page .f-lbl { font-size: 11.5px; color: var(--color-text-secondary); }
+  #admin-page .f-conv { font-size: 11px; color: var(--color-text-tertiary); }
+  #admin-page .footnote { font-size: 12px; color: var(--color-text-tertiary); margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--color-card-border); }
 
   #admin-page .snap-btn { background: var(--color-accent); border: 0; border-radius: 10px; color: #fff; padding: 10px 18px; font-size: 13.5px; font-weight: 600; cursor: pointer; font-family: inherit; }
   #admin-page pre.snap { background: var(--color-bg); border: 1px solid var(--color-card-border); border-radius: 10px; padding: 12px 14px; font-size: 11.5px; color: var(--color-text-secondary); font-family: 'JetBrains Mono', monospace; overflow-x: auto; margin-top: 12px; line-height: 1.55; white-space: pre-wrap; }
@@ -341,7 +361,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       renderLifetimeTotalsError(liveOutcome.status);
       renderCurrentStateError(liveOutcome.status);
     } else {
-      renderLifetimeTotals(liveOutcome.data.lifetime);
+      renderLifetimeTotals(liveOutcome.data.lifetime, liveOutcome.data.lifetimeExternal);
       renderCurrentState(liveOutcome.data.current);
     }
     // A generic server error still shows the dashboard shell (per-section
@@ -399,21 +419,27 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     return Math.round(n || 0).toLocaleString();
   }
 
-  function renderLifetimeTotals(l: any) {
+  function fmtUsd(n: number): string {
+    return `$${(n || 0).toFixed(2)}`;
+  }
+
+  function renderLifetimeTotals(l: any, ext: any) {
     const el = document.getElementById('lifetime-totals') as HTMLElement;
+    const extAvail = ext?.available;
+    const totalRevenueUsd = (ext?.adEarningsUsdTotal || 0) + (ext?.purchaseCompleteUsdTotal || 0) + (ext?.tipSentUsdEstimateTotal || 0);
     const tiles: [string, string, string][] = [
-      ['—', 'Downloads', 'connects in Round 2'],
+      [extAvail ? fmtNum(ext.downloadsTotal) : '—', 'Downloads', extAvail ? 'App Store Connect' : 'connects once ASC access is set up'],
       [fmtNum(l.usersTotal), 'Users signed in', 'Firestore'],
       [fmtNum(l.partnershipsFormedTotal), 'Partnerships formed', 'Firestore'],
       [fmtNum(l.pactsTotal), 'Pacts made', `${fmtNum(l.pactsKeptToEnd)} kept to the end`],
       [fmtNum(l.lockSessionsTotal), 'Lock sessions', `≈${fmtNum(l.lockHoursTotal)} hours locked`],
       [fmtNum(l.unlockRequestsTotal), 'Unlock requests', `${fmtNum(l.unlockApprovedTotal)} approved`],
-      ['—', 'Ads watched', 'connects in Round 2'],
+      [extAvail ? fmtNum(ext.adsWatchedTotal) : '—', 'Ads watched', extAvail ? 'AdMob impressions' : 'connects once AdMob is set up'],
       [fmtNum(l.bypassesDetectedTotal), 'Bypasses detected', `across ${fmtNum(l.bypassAffectedPairs)} pairs`],
       [fmtNum(l.invitesCreatedTotal), 'Invite codes created', 'Firestore'],
-      ['—', 'Willpower Waivers', 'connects in Round 2'],
-      ['—', 'Support LockPact', 'connects in Round 2'],
-      ['—', 'Total revenue', 'connects in Round 2'],
+      [fmtNum(ext?.purchaseCompleteTotal || 0), 'Willpower Waivers', fmtUsd(ext?.purchaseCompleteUsdTotal || 0)],
+      [fmtNum(ext?.tipSentTotal || 0), 'Support LockPact', `${fmtUsd(ext?.tipSentUsdEstimateTotal || 0)} (est.)`],
+      [extAvail ? fmtUsd(totalRevenueUsd) : '—', 'Total revenue', 'ads + IAP (web/Stripe not included)'],
     ];
     el.innerHTML = tiles
       .map(([n, label, sub]) => `<div class="tot"><div class="n">${n}</div><div class="l">${label}</div><div class="s">${sub}</div></div>`)
@@ -500,6 +526,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
     renderEngagement(m);
     renderRevenue(m);
+    renderAcquisition(m);
     renderQuality(m);
   }
 
@@ -564,14 +591,49 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     const rev = m.revenue;
     const el = document.getElementById('rev-cards') as HTMLElement;
     const cards: [string, string, string][] = [
-      ['Willpower Waivers', rev?.available ? fmtNum(rev.purchaseComplete) : '—', rev?.available ? '$ pending — no verified price constant' : 'connects once GA4 access is granted'],
-      ['Support LockPact', rev?.available ? fmtNum(rev.tipSent) : '—', rev?.available ? '$ pending, same reason' : 'connects once GA4 access is granted'],
-      ['Ad earnings', '—', 'connects once AdMob credentials are set up'],
-      ['Impressions / eCPM', '—', 'connects once AdMob credentials are set up'],
+      ['Ad earnings', rev?.admobAvailable ? fmtUsd(rev.adEarningsUsd) : '—', rev?.admobAvailable ? 'rewarded video' : 'connects once AdMob is set up'],
+      ['Impressions / eCPM', rev?.admobAvailable ? `${fmtNum(rev.adImpressions)} / ${fmtUsd(rev.adEcpmUsd)}` : '—', rev?.admobAvailable ? `match rate ${(rev.adMatchRatePct || 0).toFixed(0)}%` : 'connects once AdMob is set up'],
+      ['Willpower Waivers', rev?.available ? fmtNum(rev.purchaseComplete) : '—', rev?.available ? fmtUsd(rev.purchaseCompleteUsd) : 'connects once GA4 access is granted'],
+      ['Support LockPact', rev?.available ? fmtNum(rev.tipSent) : '—', rev?.available ? `${fmtUsd(rev.tipSentUsdEstimate)} (est.)` : 'connects once GA4 access is granted'],
     ];
     el.innerHTML = cards
       .map(([label, value, sub]) => `<div class="card"><div class="kpi-label">${label}</div><div class="kpi-value">${value}</div><div class="kpi-sub">${sub}</div></div>`)
       .join('');
+  }
+
+  function renderAcquisition(m: any) {
+    const acq = m.acquisition;
+    const ph = m.productHealth;
+    const funnelEl = document.getElementById('funnel') as HTMLElement;
+    const noteEl = document.getElementById('funnel-note') as HTMLElement;
+    const ascRowsEl = document.getElementById('asc-rows') as HTMLElement;
+    const webRowsEl = document.getElementById('web-rows') as HTMLElement;
+
+    const stages: Array<{ label: string; value: number | null; source: string }> = [
+      { label: 'Site visits', value: acq?.vercelAvailable ? acq.siteVisits : null, source: 'Vercel' },
+      { label: 'Store page views', value: null, source: 'ASC (blocked — see agent-log)' },
+      { label: 'Downloads', value: acq?.ascAvailable ? acq.downloads : null, source: 'ASC' },
+      { label: 'Signed in', value: ph?.newUsers ?? null, source: 'Firestore' },
+    ];
+    const maxValue = Math.max(1, ...stages.map((s) => s.value ?? 0));
+    funnelEl.innerHTML = stages
+      .map((s) => {
+        const heightPx = s.value !== null ? Math.max(4, Math.round((s.value / maxValue) * 96)) : 4;
+        const numText = s.value !== null ? fmtNum(s.value) : '—';
+        return `<div><div class="f-bar" style="height:${heightPx}px;"></div><div class="f-num">${numText}</div><div class="f-lbl">${s.label}</div><div class="f-conv">${s.source}</div></div>`;
+      })
+      .join('');
+    noteEl.textContent = acq?.vercelAvailable
+      ? `Top referrers: ${(acq.topReferrers || []).map((r: any) => r.referrer).slice(0, 3).join(' · ') || 'none yet'} — /invite page: ${fmtNum(acq.inviteVisitsWindowTotal)} visits`
+      : 'Connects once Vercel access is set up.';
+
+    ascRowsEl.innerHTML = acq?.ascAvailable
+      ? `<div class="row"><span class="k">App Store units this period</span><span class="v">${fmtNum(acq.downloads)}</span></div><div class="row"><span class="k muted">Source-type breakdown (search/browse/referral)</span><span class="v muted">connects once ASC page-view analytics is bootstrapped</span></div>`
+      : '<div class="row"><span class="k muted">Connects once ASC access is set up.</span></div>';
+
+    webRowsEl.innerHTML = acq?.vercelAvailable
+      ? `<div class="row"><span class="k">Unique visits this period</span><span class="v">${fmtNum(acq.siteVisits)}</span></div><div class="row"><span class="k">Invite-link landings (/invite)</span><span class="v">${fmtNum(acq.inviteVisitsWindowTotal)}</span></div>`
+      : '<div class="row"><span class="k muted">Connects once Vercel access is set up.</span></div>';
   }
 
   function starString(rating: number): string {
@@ -614,6 +676,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     (document.getElementById('onb-bars') as HTMLElement).innerHTML = '';
     (document.getElementById('inv-bars') as HTMLElement).innerHTML = '';
     (document.getElementById('rev-cards') as HTMLElement).innerHTML = errMsg;
+    (document.getElementById('funnel') as HTMLElement).innerHTML = '';
+    (document.getElementById('funnel-note') as HTMLElement).textContent = `Server error (HTTP ${status}) — data unavailable`;
+    (document.getElementById('asc-rows') as HTMLElement).innerHTML = errMsg;
+    (document.getElementById('web-rows') as HTMLElement).innerHTML = errMsg;
     (document.getElementById('qual-cards') as HTMLElement).innerHTML = errMsg;
     (document.getElementById('qual-reviews') as HTMLElement).innerHTML = '';
   }
