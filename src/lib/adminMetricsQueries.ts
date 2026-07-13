@@ -124,6 +124,7 @@ export async function computeLiveMetrics(): Promise<LiveMetrics> {
 
   let partnershipsActive = 0;
   let currentlyLockedPairs = 0;
+  let activePartnershipsWithBypass = 0;
   const streakHistogram: Record<StreakBucket, number> = { '0': 0, '1-3': 0, '4-7': 0, '8+': 0 };
   for (const doc of partnerships.docs) {
     const data = doc.data();
@@ -131,6 +132,7 @@ export async function computeLiveMetrics(): Promise<LiveMetrics> {
     partnershipsActive++;
     const streak = typeof data.currentStreak === 'number' ? data.currentStreak : 0;
     streakHistogram[streakBucket(streak)]++;
+    if (typeof data.bypassCount === 'number' && data.bypassCount > 0) activePartnershipsWithBypass++;
     const user1 = usersById.get(data.user1Uid);
     const user2 = usersById.get(data.user2Uid);
     if (user1?.isLocked === true || user2?.isLocked === true) currentlyLockedPairs++;
@@ -157,10 +159,12 @@ export async function computeLiveMetrics(): Promise<LiveMetrics> {
     if (doc.data().status === 'pending') pendingUnlockRequests++;
   }
 
+  // Doc #07 KPI 8's exact formula: pairs with bypassCount > 0 / active pairs.
+  // A live/current-state snapshot only (bypassCount has no history) — same
+  // category of metric as partnershipsActive/streakHistogram above, which
+  // have the identical limitation for the identical reason.
   const bypassRatePct =
-    partnershipsEngaged14d > 0
-      ? (bypassAffectedPartnershipIds.size / partnershipsEngaged14d) * 100
-      : 0;
+    partnershipsActive > 0 ? (activePartnershipsWithBypass / partnershipsActive) * 100 : 0;
 
   return {
     lifetime: {
@@ -199,11 +203,77 @@ export async function computeLiveMetrics(): Promise<LiveMetrics> {
 
 export type Period = '7d' | '30d' | '90d' | 'all';
 
+export type MetricsWindow =
+  | { kind: 'preset'; period: Period }
+  | { kind: 'range'; start: string; end: string };
+
 const PERIOD_DAYS: Record<Exclude<Period, 'all'>, number> = { '7d': 7, '30d': 30, '90d': 90 };
+
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+
+/** Whole-day difference between two YYYY-MM-DD date strings (UTC, DST-safe). */
+function daysBetween(startDate: string, endDate: string): number {
+  const start = new Date(`${startDate}T00:00:00.000Z`).getTime();
+  const end = new Date(`${endDate}T00:00:00.000Z`).getTime();
+  return Math.round((end - start) / 86400000);
+}
+
+function addDaysToDateString(dateStr: string, days: number): string {
+  const d = new Date(`${dateStr}T00:00:00.000Z`);
+  d.setUTCDate(d.getUTCDate() + days);
+  return d.toISOString().slice(0, 10);
+}
+
+export class InvalidRangeError extends Error {}
+
+const VALID_PERIODS: Period[] = ['7d', '30d', '90d', 'all'];
+
+/**
+ * Parses `?start=YYYY-MM-DD&end=YYYY-MM-DD` (takes precedence when both are
+ * present) or `?period=7d|30d|90d|all` (default `30d`) from a request URL's
+ * search params into a MetricsWindow. Shared by /api/admin/metrics and
+ * /api/admin/snapshot so the two routes can't drift on parsing rules.
+ */
+export function parseWindowParams(searchParams: URLSearchParams): MetricsWindow {
+  const start = searchParams.get('start');
+  const end = searchParams.get('end');
+  if (start && end) {
+    return { kind: 'range', start, end };
+  }
+  const periodParam = searchParams.get('period');
+  const period = (VALID_PERIODS as string[]).includes(periodParam ?? '') ? (periodParam as Period) : '30d';
+  return { kind: 'preset', period };
+}
+
+/**
+ * Validates a custom start/end range: well-formed dates, start <= end, end
+ * not in the future, start clamped forward to the earliest available
+ * `adminMetrics` doc (if any exist). Throws InvalidRangeError with a
+ * user-facing message on anything malformed.
+ */
+function validateRange(start: string, end: string, allDays: DayDoc[]): { start: string; end: string } {
+  if (!DATE_RE.test(start) || !DATE_RE.test(end)) {
+    throw new InvalidRangeError('start/end must be YYYY-MM-DD');
+  }
+  if (start > end) {
+    throw new InvalidRangeError('start must be on or before end');
+  }
+  const todayStr = new Date().toISOString().slice(0, 10);
+  if (end > todayStr) {
+    throw new InvalidRangeError('end cannot be in the future');
+  }
+  let clampedStart = start;
+  if (allDays.length > 0 && clampedStart < allDays[0].date) {
+    clampedStart = allDays[0].date;
+  }
+  return { start: clampedStart, end };
+}
 
 interface DayDoc {
   date: string;
   firestore: Record<string, any>;
+  ga4?: Record<string, any>;
+  reviews?: Record<string, any>;
 }
 
 function median(values: number[]): number {
@@ -235,12 +305,6 @@ function pactCompletionPct(days: DayDoc[]): number {
   return (keptToEnd / ended) * 100;
 }
 
-function bypassRatePctProxy(days: DayDoc[]): number {
-  const bypasses = sumWindow(days, 'bypassesDetected');
-  const engaged = days.length > 0 ? Number(days[days.length - 1].firestore?.partnershipsEngaged14d) || 0 : 0;
-  return engaged > 0 ? (bypasses / engaged) * 100 : 0;
-}
-
 function pairedPctSnapshot(days: DayDoc[]): number {
   if (days.length === 0) return 0;
   const last = days[days.length - 1].firestore;
@@ -254,19 +318,54 @@ function engagedPairsSnapshot(days: DayDoc[]): number {
   return Number(days[days.length - 1].firestore?.partnershipsEngaged14d) || 0;
 }
 
-/** The comparable-metrics view used for focus-signal deltas. */
+// ---------------------------------------------------------------------------
+// GA4 + reviews readers — Round B (agent-2/metrics-collector-round-b). Only
+// these two external sources are implemented; AdMob/Vercel/ASC blocks simply
+// don't exist on any adminMetrics doc yet (see that PR's description) — no
+// separate "blocked" handling needed here, `ga4`/`reviews` are just absent
+// until a day actually has them, same as any other not-yet-populated field.
+// ---------------------------------------------------------------------------
+
+function sumGA4Window(days: DayDoc[], field: string): number {
+  return days.reduce((acc, d) => acc + (Number(d.ga4?.[field]) || 0), 0);
+}
+
+/** Most recent day in the window that actually has a ga4 block, or null. */
+function latestGA4Day(days: DayDoc[]): Record<string, any> | null {
+  for (let i = days.length - 1; i >= 0; i--) {
+    if (days[i].ga4) return days[i].ga4 as Record<string, any>;
+  }
+  return null;
+}
+
+/** Reviews has no historical concept — only the most recent day in the window ever carries it. */
+function latestReviewsBlock(days: DayDoc[]): Record<string, any> | null {
+  for (let i = days.length - 1; i >= 0; i--) {
+    if (days[i].reviews) return days[i].reviews as Record<string, any>;
+  }
+  return null;
+}
+
+/**
+ * The comparable-metrics view used for focus-signal deltas. Deliberately no
+ * `bypassRatePct` here — doc #07's bypass-rate formula (partnerships.bypassCount
+ * > 0 / active pairs, see computeLiveMetrics) is a live/current-state-only
+ * value with no historical field to reconstruct a true "previous period"
+ * comparison from, and fabricating a differently-defined proxy just to have
+ * a delta reintroduces the exact two-different-numbers bug this was meant
+ * to fix. The single correct value lives only in computeLiveMetrics().
+ */
 function comparableMetrics(days: DayDoc[]): Record<string, number> {
   return {
     pactCompletionPct: pactCompletionPct(days),
     unlockResponseMinutesMedian: medianOfDailyMedians(days),
-    bypassRatePct: bypassRatePctProxy(days),
     pairedPct: pairedPctSnapshot(days),
     engagedPairs: engagedPairsSnapshot(days),
   };
 }
 
 export interface PeriodMetrics {
-  period: Period;
+  window: MetricsWindow;
   hasData: boolean;
   windowStart: string | null;
   windowEnd: string | null;
@@ -288,9 +387,37 @@ export interface PeriodMetrics {
     unlockApprovalPct: number;
     unlockResponseMinutesMedian: number;
     bypassesDetected: number;
-    bypassRatePct: number;
     invitesCreated: number;
     streakHistogram: Record<StreakBucket, number> | null;
+  };
+  engagement: {
+    available: boolean; // false until metricsCollector's GA4 pull has landed at least once
+    dailyActiveUsers: number; // latest day in window with a ga4 block
+    newUsers: number; // summed over window
+    permissionDenialPct: number;
+    onboarding: {
+      onboardingStart: number;
+      authComplete: number;
+      permissionGranted: number;
+      appsSelected: number;
+      onboardingComplete: number;
+    };
+    invite: {
+      inviteCreated: number;
+      inviteShared: number;
+      inviteEntered: number;
+    };
+  };
+  revenue: {
+    available: boolean;
+    purchaseComplete: number; // GA4 purchase_complete count -- Willpower Waivers. No $ amount (no verified price constant).
+    tipSent: number; // GA4 tip_sent count -- Support LockPact. No $ amount, same reason.
+  };
+  reviews: {
+    available: boolean;
+    averageRating: number;
+    ratingCount: number;
+    recentReviews: Array<{ title: string; rating: number; excerpt: string; date: string }>;
   };
   focusSignals: FocusSignal[];
 }
@@ -318,23 +445,44 @@ function emptyProductHealth(): PeriodMetrics['productHealth'] {
     unlockApprovalPct: 0,
     unlockResponseMinutesMedian: 0,
     bypassesDetected: 0,
-    bypassRatePct: 0,
     invitesCreated: 0,
     streakHistogram: null,
   };
 }
 
-export async function computePeriodMetrics(period: Period): Promise<PeriodMetrics> {
+function emptyEngagement(): PeriodMetrics['engagement'] {
+  return {
+    available: false,
+    dailyActiveUsers: 0,
+    newUsers: 0,
+    permissionDenialPct: 0,
+    onboarding: { onboardingStart: 0, authComplete: 0, permissionGranted: 0, appsSelected: 0, onboardingComplete: 0 },
+    invite: { inviteCreated: 0, inviteShared: 0, inviteEntered: 0 },
+  };
+}
+
+function emptyRevenue(): PeriodMetrics['revenue'] {
+  return { available: false, purchaseComplete: 0, tipSent: 0 };
+}
+
+function emptyReviews(): PeriodMetrics['reviews'] {
+  return { available: false, averageRating: 0, ratingCount: 0, recentReviews: [] };
+}
+
+export async function computePeriodMetrics(window: MetricsWindow): Promise<PeriodMetrics> {
   const allDays = await fetchAllDayDocs();
 
   if (allDays.length === 0) {
     return {
-      period,
+      window,
       hasData: false,
       windowStart: null,
       windowEnd: null,
       compareNote: 'Collecting — first rollup pending',
       productHealth: emptyProductHealth(),
+      engagement: emptyEngagement(),
+      revenue: emptyRevenue(),
+      reviews: emptyReviews(),
       focusSignals: [],
     };
   }
@@ -343,15 +491,27 @@ export async function computePeriodMetrics(period: Period): Promise<PeriodMetric
   let prevWindowDays: DayDoc[];
   let compareNote: string;
 
-  if (period === 'all') {
+  if (window.kind === 'range') {
+    const { start, end } = validateRange(window.start, window.end, allDays);
+    windowDays = allDays.filter((d) => d.date >= start && d.date <= end);
+    const spanDays = daysBetween(start, end) + 1;
+    const prevEnd = addDaysToDateString(start, -1);
+    const prevStart = addDaysToDateString(start, -spanDays);
+    prevWindowDays = allDays.filter((d) => d.date >= prevStart && d.date <= prevEnd);
+    const clampedNote = start !== window.start ? ` (clamped to earliest available data, ${start})` : '';
+    compareNote =
+      prevWindowDays.length > 0
+        ? `Showing ${start} → ${end}${clampedNote} · deltas vs the preceding ${spanDays}-day window`
+        : `Showing ${start} → ${end}${clampedNote} · not enough history yet for a comparison period`;
+  } else if (window.period === 'all') {
     windowDays = allDays;
     prevWindowDays = [];
     compareNote = `Showing all time (since ${allDays[0].date}) · no comparison period`;
   } else {
-    const n = PERIOD_DAYS[period];
+    const n = PERIOD_DAYS[window.period];
     windowDays = allDays.slice(-n);
     prevWindowDays = allDays.slice(-2 * n, -n);
-    const label = period === '7d' ? 'last 7 days' : period === '30d' ? 'last 30 days' : 'last 90 days';
+    const label = window.period === '7d' ? 'last 7 days' : window.period === '30d' ? 'last 30 days' : 'last 90 days';
     compareNote =
       prevWindowDays.length > 0
         ? `Showing ${label} · deltas vs previous ${label.replace('last ', '')}`
@@ -388,7 +548,6 @@ export async function computePeriodMetrics(period: Period): Promise<PeriodMetric
     unlockApprovalPct: unlockApproved + unlockDenied > 0 ? (unlockApproved / (unlockApproved + unlockDenied)) * 100 : 0,
     unlockResponseMinutesMedian: medianOfDailyMedians(windowDays),
     bypassesDetected: sumWindow(windowDays, 'bypassesDetected'),
-    bypassRatePct: bypassRatePctProxy(windowDays),
     invitesCreated: sumWindow(windowDays, 'invitesCreated'),
     streakHistogram: lastDayStreak ?? null,
   };
@@ -398,13 +557,55 @@ export async function computePeriodMetrics(period: Period): Promise<PeriodMetric
       ? computeFocusSignals(comparableMetrics(windowDays), comparableMetrics(prevWindowDays))
       : [];
 
+  const ga4Latest = latestGA4Day(windowDays);
+  const permissionGrantedSum = sumGA4Window(windowDays, 'permissionGranted');
+  const permissionDeniedSum = sumGA4Window(windowDays, 'permissionDenied');
+  const engagement: PeriodMetrics['engagement'] = {
+    available: ga4Latest !== null,
+    dailyActiveUsers: Number(ga4Latest?.activeUsers) || 0,
+    newUsers: sumGA4Window(windowDays, 'newUsers'),
+    permissionDenialPct:
+      permissionGrantedSum + permissionDeniedSum > 0
+        ? (permissionDeniedSum / (permissionGrantedSum + permissionDeniedSum)) * 100
+        : 0,
+    onboarding: {
+      onboardingStart: sumGA4Window(windowDays, 'onboardingStart'),
+      authComplete: sumGA4Window(windowDays, 'authComplete'),
+      permissionGranted: permissionGrantedSum,
+      appsSelected: sumGA4Window(windowDays, 'appsSelected'),
+      onboardingComplete: sumGA4Window(windowDays, 'onboardingComplete'),
+    },
+    invite: {
+      inviteCreated: sumGA4Window(windowDays, 'inviteCreated'),
+      inviteShared: sumGA4Window(windowDays, 'inviteShared'),
+      inviteEntered: sumGA4Window(windowDays, 'inviteEntered'),
+    },
+  };
+
+  const revenue: PeriodMetrics['revenue'] = {
+    available: ga4Latest !== null,
+    purchaseComplete: sumGA4Window(windowDays, 'purchaseComplete'),
+    tipSent: sumGA4Window(windowDays, 'tipSent'),
+  };
+
+  const reviewsLatest = latestReviewsBlock(windowDays);
+  const reviews: PeriodMetrics['reviews'] = {
+    available: reviewsLatest !== null,
+    averageRating: Number(reviewsLatest?.averageRating) || 0,
+    ratingCount: Number(reviewsLatest?.ratingCount) || 0,
+    recentReviews: Array.isArray(reviewsLatest?.recentReviews) ? reviewsLatest!.recentReviews : [],
+  };
+
   return {
-    period,
+    window,
     hasData: true,
     windowStart: windowDays[0]?.date ?? null,
     windowEnd: windowDays[windowDays.length - 1]?.date ?? null,
     compareNote,
     productHealth,
+    engagement,
+    revenue,
+    reviews,
     focusSignals,
   };
 }
