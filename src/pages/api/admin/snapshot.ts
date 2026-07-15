@@ -55,7 +55,7 @@ function buildSnapshotMarkdown(
   lines.push(`- invite codes created: ${live.lifetime.invitesCreatedTotal}`);
   if (lifetimeExternal.available) {
     const totalRevenueUsd =
-      lifetimeExternal.adEarningsUsdTotal + lifetimeExternal.purchaseCompleteUsdTotal + lifetimeExternal.tipSentUsdEstimateTotal;
+      lifetimeExternal.adEarningsUsdTotal + lifetimeExternal.waiversAscUsdTotal + lifetimeExternal.supportAscUsdTotal;
     lines.push(
       `- downloads: ${lifetimeExternal.downloadsTotal} (ASC) · ads watched: ${lifetimeExternal.adsWatchedTotal} (AdMob impressions) · total revenue: ${fmtUsd(totalRevenueUsd)} (ads + IAP, web/Stripe not included)`
     );
@@ -123,12 +123,20 @@ function buildSnapshotMarkdown(
   }
   lines.push('');
   lines.push('## Revenue');
-  if (metrics.revenue.available) {
+  if (metrics.revenue.ascRevenueAvailable) {
+    const support = metrics.revenue.supportAsc;
     lines.push(
-      `- Willpower Waivers: ${metrics.revenue.purchaseComplete} this period (${fmtUsd(metrics.revenue.purchaseCompleteUsd)}) · Support LockPact: ${metrics.revenue.tipSent} this period (${fmtUsd(metrics.revenue.tipSentUsdEstimate)} est. — no per-tier breakdown)`
+      `- Willpower Waivers: ${metrics.revenue.waiversAsc} this period (${fmtUsd(metrics.revenue.waiversAscUsd)}, ASC) · Support LockPact: ${support.small + support.medium + support.large} this period (${fmtUsd(metrics.revenue.supportAscUsd)}, ASC)`
+    );
+    lines.push(
+      `  - GA4 events (incl. test purchases, secondary signal): Willpower Waivers ${metrics.revenue.purchaseComplete} · Support LockPact ${metrics.revenue.tipSent}`
+    );
+  } else if (metrics.revenue.available) {
+    lines.push(
+      `- Willpower Waivers: ${metrics.revenue.purchaseComplete} this period (${fmtUsd(metrics.revenue.purchaseCompleteUsd)}, GA4 — includes test purchases) · Support LockPact: ${metrics.revenue.tipSent} this period (${fmtUsd(metrics.revenue.tipSentUsdEstimate)} est. — no per-tier breakdown, GA4)`
     );
   } else {
-    lines.push('- connects once GA4 access is granted — not yet flowing');
+    lines.push('- connects once ASC/GA4 access is granted — not yet flowing');
   }
   if (metrics.revenue.admobAvailable) {
     lines.push(

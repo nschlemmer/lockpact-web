@@ -1,7 +1,7 @@
 import { Timestamp } from 'firebase-admin/firestore';
 import { adminDb } from './adminAuth';
 import { computeFocusSignals, type FocusSignal } from './adminFocusSignals';
-import { WAIVER_PRICE_USD, TIP_ESTIMATED_PRICE_USD } from './iapPrices';
+import { WAIVER_PRICE_USD, TIP_ESTIMATED_PRICE_USD, TIP_TIER_PRICES_USD } from './iapPrices';
 
 // pacts.endReason — code-verified set (docs/agent-log.md 2026-07-13 entry has
 // the full grep evidence). Only 5 of these 8 are ever actually written to a
@@ -369,6 +369,11 @@ function sumASCWindow(days: DayDoc[], field: string): number {
   return days.reduce((acc, d) => acc + (Number(d.asc?.[field]) || 0), 0);
 }
 
+/** ASC's authoritative IAP counts (asc.iap.*) — excludes TestFlight/sandbox test purchases, unlike ga4.purchaseComplete/tipSent. */
+function sumASCIapWindow(days: DayDoc[], field: string): number {
+  return days.reduce((acc, d) => acc + (Number(d.asc?.iap?.[field]) || 0), 0);
+}
+
 function anyAdMobDay(days: DayDoc[]): boolean {
   return days.some((d) => d.admob);
 }
@@ -460,10 +465,15 @@ export interface PeriodMetrics {
   };
   revenue: {
     available: boolean; // true once GA4 has landed at least once
-    purchaseComplete: number; // GA4 purchase_complete count -- Willpower Waivers
+    purchaseComplete: number; // GA4 purchase_complete count -- Willpower Waivers -- SECONDARY signal, includes test purchases
     purchaseCompleteUsd: number; // exact -- single price point ($9.99)
-    tipSent: number; // GA4 tip_sent count -- Support LockPact
+    tipSent: number; // GA4 tip_sent count -- Support LockPact -- SECONDARY signal, includes test purchases
     tipSentUsdEstimate: number; // ESTIMATE -- count only, no per-tier breakdown; uses the median tier price
+    ascRevenueAvailable: boolean; // true once at least one adminMetrics doc has an asc.iap block
+    waiversAsc: number; // ASC sales, Product Type Identifier IA1/IA3 -- AUTHORITATIVE, excludes test purchases
+    waiversAscUsd: number; // exact -- single price point ($9.99)
+    supportAsc: { small: number; medium: number; large: number }; // ASC sales, SKU-matched per tier -- AUTHORITATIVE
+    supportAscUsd: number; // exact -- real per-tier prices, not a blended estimate
     admobAvailable: boolean;
     adEarningsUsd: number;
     adImpressions: number;
@@ -534,6 +544,11 @@ function emptyRevenue(): PeriodMetrics['revenue'] {
     purchaseCompleteUsd: 0,
     tipSent: 0,
     tipSentUsdEstimate: 0,
+    ascRevenueAvailable: false,
+    waiversAsc: 0,
+    waiversAscUsd: 0,
+    supportAsc: { small: 0, medium: 0, large: 0 },
+    supportAscUsd: 0,
     admobAvailable: false,
     adEarningsUsd: 0,
     adImpressions: 0,
@@ -674,12 +689,26 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
 
   const purchaseComplete = sumGA4Window(windowDays, 'purchaseComplete');
   const tipSent = sumGA4Window(windowDays, 'tipSent');
+  const waiversAsc = sumASCIapWindow(windowDays, 'waivers');
+  const supportAsc = {
+    small: sumASCIapWindow(windowDays, 'supportSmall'),
+    medium: sumASCIapWindow(windowDays, 'supportMedium'),
+    large: sumASCIapWindow(windowDays, 'supportLarge'),
+  };
   const revenue: PeriodMetrics['revenue'] = {
     available: ga4Latest !== null,
     purchaseComplete,
     purchaseCompleteUsd: purchaseComplete * WAIVER_PRICE_USD,
     tipSent,
     tipSentUsdEstimate: tipSent * TIP_ESTIMATED_PRICE_USD,
+    ascRevenueAvailable: anyASCDay(windowDays),
+    waiversAsc,
+    waiversAscUsd: waiversAsc * WAIVER_PRICE_USD,
+    supportAsc,
+    supportAscUsd:
+      supportAsc.small * TIP_TIER_PRICES_USD.small +
+      supportAsc.medium * TIP_TIER_PRICES_USD.medium +
+      supportAsc.large * TIP_TIER_PRICES_USD.large,
     admobAvailable: anyAdMobDay(windowDays),
     adEarningsUsd: sumAdMobWindow(windowDays, 'earningsUsd'),
     adImpressions: sumAdMobWindow(windowDays, 'impressions'),
@@ -736,10 +765,14 @@ export interface LifetimeExternalTotals {
   adsWatchedTotal: number;
   adEarningsUsdTotal: number;
   downloadsTotal: number;
-  purchaseCompleteTotal: number;
+  purchaseCompleteTotal: number; // GA4 -- SECONDARY signal, includes test purchases
   purchaseCompleteUsdTotal: number;
-  tipSentTotal: number;
+  tipSentTotal: number; // GA4 -- SECONDARY signal, includes test purchases
   tipSentUsdEstimateTotal: number;
+  waiversAscTotal: number; // ASC -- AUTHORITATIVE, excludes test purchases
+  waiversAscUsdTotal: number;
+  supportAscTotal: number; // ASC -- AUTHORITATIVE, excludes test purchases (small+medium+large)
+  supportAscUsdTotal: number; // exact, real per-tier prices
 }
 
 export async function computeLifetimeExternalTotals(): Promise<LifetimeExternalTotals> {
@@ -749,6 +782,10 @@ export async function computeLifetimeExternalTotals(): Promise<LifetimeExternalT
   let downloadsTotal = 0;
   let purchaseCompleteTotal = 0;
   let tipSentTotal = 0;
+  let waiversAscTotal = 0;
+  let supportSmallAscTotal = 0;
+  let supportMediumAscTotal = 0;
+  let supportLargeAscTotal = 0;
   let available = false;
 
   for (const d of allDays) {
@@ -760,12 +797,18 @@ export async function computeLifetimeExternalTotals(): Promise<LifetimeExternalT
     if (d.asc) {
       available = true;
       downloadsTotal += Number(d.asc.units) || 0;
+      waiversAscTotal += Number(d.asc.iap?.waivers) || 0;
+      supportSmallAscTotal += Number(d.asc.iap?.supportSmall) || 0;
+      supportMediumAscTotal += Number(d.asc.iap?.supportMedium) || 0;
+      supportLargeAscTotal += Number(d.asc.iap?.supportLarge) || 0;
     }
     if (d.ga4) {
       purchaseCompleteTotal += Number(d.ga4.purchaseComplete) || 0;
       tipSentTotal += Number(d.ga4.tipSent) || 0;
     }
   }
+
+  const supportAscTotal = supportSmallAscTotal + supportMediumAscTotal + supportLargeAscTotal;
 
   return {
     available,
@@ -776,5 +819,12 @@ export async function computeLifetimeExternalTotals(): Promise<LifetimeExternalT
     purchaseCompleteUsdTotal: purchaseCompleteTotal * WAIVER_PRICE_USD,
     tipSentTotal,
     tipSentUsdEstimateTotal: tipSentTotal * TIP_ESTIMATED_PRICE_USD,
+    waiversAscTotal,
+    waiversAscUsdTotal: waiversAscTotal * WAIVER_PRICE_USD,
+    supportAscTotal,
+    supportAscUsdTotal:
+      supportSmallAscTotal * TIP_TIER_PRICES_USD.small +
+      supportMediumAscTotal * TIP_TIER_PRICES_USD.medium +
+      supportLargeAscTotal * TIP_TIER_PRICES_USD.large,
   };
 }
