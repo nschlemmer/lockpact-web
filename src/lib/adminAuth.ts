@@ -72,12 +72,22 @@ export async function requireAdmin(request: Request): Promise<string> {
   return uid;
 }
 
+/**
+ * Audit finding B-L2: a non-AdminAuthError thrown from `requireAdmin` (e.g.
+ * a transient Firestore/Auth failure while checking the token or the
+ * isAdmin field — genuinely not proof the caller is unauthenticated) used
+ * to be mapped to 401 here, same as a real invalid/missing token. The
+ * client treats any 401 as "session expired" and bounces to the sign-in
+ * gate — a real server error should never masquerade as that. Only an
+ * actual AdminAuthError gets its specific 401/403; anything else is a
+ * genuine server error (500).
+ */
 export function adminAuthErrorResponse(err: unknown): Response {
   if (err instanceof AdminAuthError) {
     return new Response(null, { status: err.status });
   }
   console.error('[adminAuth] Unexpected error:', err);
-  return new Response(null, { status: 401 });
+  return new Response(null, { status: 500 });
 }
 
 export { db as adminDb };

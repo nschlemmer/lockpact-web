@@ -95,12 +95,17 @@ export async function computeLiveMetrics(): Promise<LiveMetrics> {
     if (doc.data().endReason === 'timer_expired') pactsKeptToEnd++;
   }
 
+  // Audit finding B-L1: a malformed doc with endedAt before createdAt would
+  // silently subtract from the lifetime total. Skip the session's
+  // contribution entirely rather than accumulate a negative duration — a
+  // floor on the final sum could still hide an offsetting-but-wrong pair of
+  // sessions, whereas skipping the bad one can't.
   let lockHoursTotal = 0;
   for (const doc of lockSessions.docs) {
     const data = doc.data();
     const createdAtMs = tsToMillis(data.createdAt);
     const endedAtMs = tsToMillis(data.endedAt);
-    if (createdAtMs !== null && endedAtMs !== null) {
+    if (createdAtMs !== null && endedAtMs !== null && endedAtMs >= createdAtMs) {
       lockHoursTotal += (endedAtMs - createdAtMs) / 3600000;
     }
   }
@@ -250,7 +255,9 @@ export function parseWindowParams(searchParams: URLSearchParams): MetricsWindow 
  * Validates a custom start/end range: well-formed dates, start <= end, end
  * not in the future, start clamped forward to the earliest available
  * `adminMetrics` doc (if any exist). Throws InvalidRangeError with a
- * user-facing message on anything malformed.
+ * user-facing message on anything malformed — including when the earliest-
+ * data clamp itself pushes start past end (audit finding B-M4: previously
+ * silently produced an empty `hasData:true` window instead of a 400).
  */
 function validateRange(start: string, end: string, allDays: DayDoc[]): { start: string; end: string } {
   if (!DATE_RE.test(start) || !DATE_RE.test(end)) {
@@ -267,14 +274,20 @@ function validateRange(start: string, end: string, allDays: DayDoc[]): { start: 
   if (allDays.length > 0 && clampedStart < allDays[0].date) {
     clampedStart = allDays[0].date;
   }
+  if (clampedStart > end) {
+    throw new InvalidRangeError('no data available in the requested range');
+  }
   return { start: clampedStart, end };
 }
 
 interface DayDoc {
   date: string;
+  schemaVersion?: number;
+  backfilled?: true;
   firestore: Record<string, any>;
   ga4?: Record<string, any>;
   reviews?: Record<string, any>;
+  appStoreRatingCount?: number;
   admob?: Record<string, any>;
   vercel?: Record<string, any>;
   vercelSummary?: Record<string, any>;
@@ -292,11 +305,25 @@ function sumWindow(days: DayDoc[], field: string): number {
   return days.reduce((acc, d) => acc + (Number(d.firestore?.[field]) || 0), 0);
 }
 
-/** Median of each day's own median in the window, excluding days with zero resolved requests. */
+/**
+ * Median of each day's own median in the window — labeled everywhere it's
+ * displayed as "median of daily medians," not a true window-wide median
+ * (that needs the collector to store a per-day response-time histogram,
+ * deferred — see the contract doc). Excludes days with zero resolved
+ * requests AND days where the median field itself is missing/null (audit
+ * finding B-H4 — previously a present-but-null field coalesced to 0 via
+ * `Number(...) || 0`, silently injecting a fake zero into the median input).
+ */
 function medianOfDailyMedians(days: DayDoc[]): number {
   const values = days
-    .filter((d) => (d.firestore?.unlockApproved || 0) + (d.firestore?.unlockDenied || 0) > 0)
-    .map((d) => Number(d.firestore?.unlockResponseMinutesMedian) || 0);
+    .filter((d) => {
+      const f = d.firestore;
+      if (!f) return false;
+      const hasResolved = (f.unlockApproved || 0) + (f.unlockDenied || 0) > 0;
+      const hasMedianField = f.unlockResponseMinutesMedian !== null && f.unlockResponseMinutesMedian !== undefined;
+      return hasResolved && hasMedianField;
+    })
+    .map((d) => Number(d.firestore!.unlockResponseMinutesMedian));
   return median(values);
 }
 
@@ -310,17 +337,40 @@ function pactCompletionPct(days: DayDoc[]): number {
   return (keptToEnd / ended) * 100;
 }
 
+/**
+ * Walks backward to the latest day with a real (non-null, non-backfilled)
+ * `paired`/`usersTotal` pair — same walk-back pattern as `latestGA4Day`
+ * below (audit finding B-M3/A-H6). `backfillAdminMetrics` writes `paired`
+ * as `null` on dates it can't reconstruct point-in-time state for; reading
+ * a fixed last-day-in-window without this walk-back would read that `null`
+ * as a false "fell to 0%".
+ */
 function pairedPctSnapshot(days: DayDoc[]): number {
-  if (days.length === 0) return 0;
-  const last = days[days.length - 1].firestore;
-  const total = Number(last?.usersTotal) || 0;
-  const paired = Number(last?.paired) || 0;
-  return total > 0 ? (paired / total) * 100 : 0;
+  for (let i = days.length - 1; i >= 0; i--) {
+    const f = days[i].firestore;
+    if (f && f.paired !== null && f.paired !== undefined && f.usersTotal) {
+      return f.usersTotal > 0 ? (f.paired / f.usersTotal) * 100 : 0;
+    }
+  }
+  return 0;
 }
 
+/** Same walk-back reasoning as pairedPctSnapshot above. */
 function engagedPairsSnapshot(days: DayDoc[]): number {
-  if (days.length === 0) return 0;
-  return Number(days[days.length - 1].firestore?.partnershipsEngaged14d) || 0;
+  for (let i = days.length - 1; i >= 0; i--) {
+    const v = days[i].firestore?.partnershipsEngaged14d;
+    if (typeof v === 'number') return v;
+  }
+  return 0;
+}
+
+/** Same walk-back reasoning as pairedPctSnapshot above — `streakHistogram` is also nulled on backfilled dates. */
+function latestStreakHistogram(days: DayDoc[]): Record<StreakBucket, number> | null {
+  for (let i = days.length - 1; i >= 0; i--) {
+    const sh = days[i].firestore?.streakHistogram;
+    if (sh) return sh as Record<StreakBucket, number>;
+  }
+  return null;
 }
 
 // ---------------------------------------------------------------------------
@@ -341,6 +391,19 @@ function latestGA4Day(days: DayDoc[]): Record<string, any> | null {
     if (days[i].ga4) return days[i].ga4 as Record<string, any>;
   }
   return null;
+}
+
+/**
+ * True only if every day in the window that has a `ga4` block also has the
+ * schemaVersion-2 unique-user fields (audit finding A-C3/B-C3) — used to
+ * decide the funnel basis without silently mixing event-count and
+ * unique-user bases within one render. False (event-count fallback) for any
+ * window spanning pre-rollout docs.
+ */
+function allDaysHaveGA4UsersFields(days: DayDoc[]): boolean {
+  const ga4Days = days.filter((d) => d.ga4);
+  if (ga4Days.length === 0) return false;
+  return ga4Days.every((d) => typeof d.ga4!.onboardingStartUsers === 'number');
 }
 
 /** Reviews has no historical concept — only the most recent day in the window ever carries it. */
@@ -386,7 +449,11 @@ function anyASCDay(days: DayDoc[]): boolean {
   return days.some((d) => d.asc);
 }
 
-/** Vercel's referrer/invite summary is a whole-window aggregate, not per-day — only the most recent day in a run ever carries it, same convention as reviews. */
+function anyGA4Day(days: DayDoc[]): boolean {
+  return days.some((d) => d.ga4);
+}
+
+/** Vercel's referrer/invite/UTM summary is a whole-window aggregate, not per-day — only the most recent day in a run ever carries it, same convention as reviews. Its window (windowStart/windowEnd) is DECOUPLED from the caller's selected period — see acquisition.summaryWindowStart/End. */
 function latestVercelSummary(days: DayDoc[]): Record<string, any> | null {
   for (let i = days.length - 1; i >= 0; i--) {
     if (days[i].vercelSummary) return days[i].vercelSummary as Record<string, any>;
@@ -394,11 +461,25 @@ function latestVercelSummary(days: DayDoc[]): Record<string, any> | null {
   return null;
 }
 
-/** AdMob's eCPM/match-rate are per-day rates, not additive — average them across days that actually reported. */
-function averageAdMobRate(days: DayDoc[], field: string): number {
-  const values = days.filter((d) => d.admob).map((d) => Number(d.admob![field]) || 0);
+/** AdMob's match-rate is a per-day rate, not additive — average across days that actually reported, then clamp to [0,100] (audit finding B-M6: the raw field is asserted to be a 0-1 fraction, never enforced before). */
+function averageAdMobMatchRatePct(days: DayDoc[]): number {
+  const values = days.filter((d) => d.admob).map((d) => Number(d.admob!.matchRate) || 0);
   if (values.length === 0) return 0;
-  return values.reduce((a, b) => a + b, 0) / values.length;
+  const avg = values.reduce((a, b) => a + b, 0) / values.length;
+  return Math.min(100, Math.max(0, avg * 100));
+}
+
+/**
+ * Period eCPM: sum(earnings)/sum(impressions)*1000, never a simple average
+ * of each day's own eCPM (audit finding B-H3 — averaging daily rates
+ * weights a near-zero-impression day equally with a high-impression day,
+ * skewing the period figure). Null (not 0) when the window has zero
+ * impressions total, matching the collector's own null convention.
+ */
+function sumWeightedAdMobEcpm(days: DayDoc[]): number | null {
+  const totalEarnings = sumAdMobWindow(days, 'earningsUsd');
+  const totalImpressions = sumAdMobWindow(days, 'impressions');
+  return totalImpressions > 0 ? (totalEarnings / totalImpressions) * 1000 : null;
 }
 
 /**
@@ -410,12 +491,24 @@ function averageAdMobRate(days: DayDoc[], field: string): number {
  * a delta reintroduces the exact two-different-numbers bug this was meant
  * to fix. The single correct value lives only in computeLiveMetrics().
  */
+function onboardingCompletionPctFromDays(days: DayDoc[]): number {
+  const usersBasis = allDaysHaveGA4UsersFields(days);
+  const start = sumGA4Window(days, usersBasis ? 'onboardingStartUsers' : 'onboardingStart');
+  const complete = sumGA4Window(days, usersBasis ? 'onboardingCompleteUsers' : 'onboardingComplete');
+  return start > 0 ? (complete / start) * 100 : 0;
+}
+
 function comparableMetrics(days: DayDoc[]): Record<string, number> {
   return {
     pactCompletionPct: pactCompletionPct(days),
     unlockResponseMinutesMedian: medianOfDailyMedians(days),
     pairedPct: pairedPctSnapshot(days),
     engagedPairs: engagedPairsSnapshot(days),
+    // New in this round (audit finding B-M9) — funnel-step-conversion and
+    // referrer/site-visit-traffic signal coverage, using the spec's own
+    // example thresholds (±5pt / ±25%).
+    onboardingCompletionPct: onboardingCompletionPctFromDays(days),
+    siteVisits: sumVercelWindow(days, 'visits'),
   };
 }
 
@@ -425,6 +518,13 @@ export interface PeriodMetrics {
   windowStart: string | null;
   windowEnd: string | null;
   compareNote: string;
+  /** True when the newest adminMetrics doc is more than 2 days behind real "today" — surfaced as a banner (audit finding B-C1/B-C2). */
+  collectorStalled: { sinceDate: string } | null;
+  /** Intra-window completeness — how many of the calendar days in this window actually have a doc (audit finding B-M7). Not meaningful for the 'all' period (no fixed expected length). */
+  gapInfo: {
+    current: { daysWithData: number; daysExpected: number };
+    previous: { daysWithData: number; daysExpected: number } | null;
+  };
   productHealth: {
     newUsers: number;
     pairedPct: number;
@@ -449,7 +549,11 @@ export interface PeriodMetrics {
     available: boolean; // false until metricsCollector's GA4 pull has landed at least once
     dailyActiveUsers: number; // latest day in window with a ga4 block
     newUsers: number; // summed over window
+    wau: number; // latest day's rolling 7d active users
+    mau: number; // latest day's rolling 28d active users
     permissionDenialPct: number;
+    /** 'users' when every day in the window has the schemaVersion-2 unique-user fields; 'events' (approximate, footnoted) otherwise. Never mixed within one render. */
+    funnelBasis: 'users' | 'events';
     onboarding: {
       onboardingStart: number;
       authComplete: number;
@@ -470,15 +574,15 @@ export interface PeriodMetrics {
     tipSent: number; // GA4 tip_sent count -- Support LockPact -- SECONDARY signal, includes test purchases
     tipSentUsdEstimate: number; // ESTIMATE -- count only, no per-tier breakdown; uses the median tier price
     ascRevenueAvailable: boolean; // true once at least one adminMetrics doc has an asc.iap block
-    waiversAsc: number; // ASC sales, Product Type Identifier IA1/IA3 -- AUTHORITATIVE, excludes test purchases
+    waiversAsc: number; // ASC sales, Product Type Identifier IA1 -- AUTHORITATIVE, excludes test purchases and restores
     waiversAscUsd: number; // exact -- single price point ($9.99)
     supportAsc: { small: number; medium: number; large: number }; // ASC sales, SKU-matched per tier -- AUTHORITATIVE
     supportAscUsd: number; // exact -- real per-tier prices, not a blended estimate
     admobAvailable: boolean;
     adEarningsUsd: number;
     adImpressions: number;
-    adEcpmUsd: number; // averaged across days that reported (not additive)
-    adMatchRatePct: number; // averaged across days that reported, as a percent
+    adEcpmUsd: number | null; // sum(earnings)/sum(impressions)*1000 -- null (not 0) when the window has zero impressions
+    adMatchRatePct: number; // averaged across days that reported, clamped to [0,100]
   };
   acquisition: {
     vercelAvailable: boolean;
@@ -488,6 +592,9 @@ export interface PeriodMetrics {
     signedIn: number; // Firestore new users, same value as productHealth.newUsers
     topReferrers: Array<{ referrer: string; visits: number }>;
     inviteVisitsWindowTotal: number;
+    /** The summary's OWN fixed trailing-30d window (decoupled from the selected period) — must be disclosed alongside topReferrers/inviteVisitsWindowTotal, never implied to be period-scoped (audit finding B-M5). */
+    summaryWindowStart: string | null;
+    summaryWindowEnd: string | null;
   };
   reviews: {
     available: boolean;
@@ -496,11 +603,46 @@ export interface PeriodMetrics {
     recentReviews: Array<{ title: string; rating: number; excerpt: string; date: string }>;
   };
   focusSignals: FocusSignal[];
+  /**
+   * Comparable prior-window values for the period-scoped KPI cards (audit
+   * finding B-M8 — per-card deltas were specced but never rendered). Null
+   * when there's no comparison period (e.g. 'all' time, or insufficient
+   * history). Deliberately a narrower subset than the full PeriodMetrics
+   * shape — only the fields that actually have a rendered KPI card need one.
+   */
+  previousPeriod: {
+    productHealth: {
+      newUsers: number;
+      pactCompletionPct: number;
+      unlockResponseMinutesMedian: number;
+    };
+    engagement: {
+      dailyActiveUsers: number;
+      newUsers: number;
+      permissionDenialPct: number;
+    };
+    revenue: {
+      adEarningsUsd: number;
+      adEcpmUsd: number | null;
+      waiversAscUsd: number;
+      supportAscUsd: number;
+    };
+    acquisition: {
+      siteVisits: number;
+      downloads: number;
+    };
+    reviews: {
+      averageRating: number;
+    };
+  } | null;
 }
 
 async function fetchAllDayDocs(): Promise<DayDoc[]> {
   const snap = await adminDb.collection('adminMetrics').orderBy('date', 'asc').get();
-  return snap.docs.map((d) => d.data() as DayDoc);
+  // Filters out the `_meta` gap-tracking doc (audit finding A-L4's
+  // companion on the reader side — `_meta` isn't date-shaped and must never
+  // be treated as a day doc).
+  return snap.docs.filter((d) => DATE_RE.test(d.id)).map((d) => d.data() as DayDoc);
 }
 
 function emptyProductHealth(): PeriodMetrics['productHealth'] {
@@ -531,7 +673,10 @@ function emptyEngagement(): PeriodMetrics['engagement'] {
     available: false,
     dailyActiveUsers: 0,
     newUsers: 0,
+    wau: 0,
+    mau: 0,
     permissionDenialPct: 0,
+    funnelBasis: 'events',
     onboarding: { onboardingStart: 0, authComplete: 0, permissionGranted: 0, appsSelected: 0, onboardingComplete: 0 },
     invite: { inviteCreated: 0, inviteShared: 0, inviteEntered: 0 },
   };
@@ -552,7 +697,7 @@ function emptyRevenue(): PeriodMetrics['revenue'] {
     admobAvailable: false,
     adEarningsUsd: 0,
     adImpressions: 0,
-    adEcpmUsd: 0,
+    adEcpmUsd: null,
     adMatchRatePct: 0,
   };
 }
@@ -566,11 +711,19 @@ function emptyAcquisition(): PeriodMetrics['acquisition'] {
     signedIn: 0,
     topReferrers: [],
     inviteVisitsWindowTotal: 0,
+    summaryWindowStart: null,
+    summaryWindowEnd: null,
   };
 }
 
 function emptyReviews(): PeriodMetrics['reviews'] {
   return { available: false, averageRating: 0, ratingCount: 0, recentReviews: [] };
+}
+
+/** daysExpected for a calendar-anchored span — 'all' has no fixed expected length (100% by definition). */
+function gapInfoFor(days: DayDoc[], daysExpected: number | null): { daysWithData: number; daysExpected: number } {
+  const expected = daysExpected ?? days.length;
+  return { daysWithData: days.length, daysExpected: expected };
 }
 
 export async function computePeriodMetrics(window: MetricsWindow): Promise<PeriodMetrics> {
@@ -583,18 +736,30 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
       windowStart: null,
       windowEnd: null,
       compareNote: 'Collecting — first rollup pending',
+      collectorStalled: null,
+      gapInfo: { current: { daysWithData: 0, daysExpected: 0 }, previous: null },
       productHealth: emptyProductHealth(),
       engagement: emptyEngagement(),
       revenue: emptyRevenue(),
       acquisition: emptyAcquisition(),
       reviews: emptyReviews(),
       focusSignals: [],
+      previousPeriod: null,
     };
   }
+
+  const todayStr = new Date().toISOString().slice(0, 10);
+  const latestDocDate = allDays[allDays.length - 1].date;
+  // Audit finding B-C1: surfaced regardless of the selected window — a
+  // collector stall should be visible even when viewing "all time" or a
+  // custom historical range.
+  const collectorStalled = daysBetween(latestDocDate, todayStr) > 2 ? { sinceDate: latestDocDate } : null;
 
   let windowDays: DayDoc[];
   let prevWindowDays: DayDoc[];
   let compareNote: string;
+  let daysExpected: number | null;
+  let prevDaysExpected: number | null;
 
   if (window.kind === 'range') {
     const { start, end } = validateRange(window.start, window.end, allDays);
@@ -603,6 +768,8 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
     const prevEnd = addDaysToDateString(start, -1);
     const prevStart = addDaysToDateString(start, -spanDays);
     prevWindowDays = allDays.filter((d) => d.date >= prevStart && d.date <= prevEnd);
+    daysExpected = spanDays;
+    prevDaysExpected = spanDays;
     const clampedNote = start !== window.start ? ` (clamped to earliest available data, ${start})` : '';
     compareNote =
       prevWindowDays.length > 0
@@ -611,16 +778,42 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
   } else if (window.period === 'all') {
     windowDays = allDays;
     prevWindowDays = [];
+    daysExpected = null;
+    prevDaysExpected = null;
     compareNote = `Showing all time (since ${allDays[0].date}) · no comparison period`;
   } else {
+    // Calendar-anchored to real "today" (audit finding B-C1/B-C2) — NOT
+    // `allDays.slice(-n)`, which silently stretched to "the last n
+    // *documents*" (any collector stall or missing day made the window span
+    // more real calendar time than its label claimed, and could make a
+    // sub-n-history dashboard show all-time data still labeled "last 30
+    // days"). Anchored to yesterday, not today — the collector's freshest
+    // possible doc is always "yesterday" by design, so anchoring to today
+    // would show a permanent 1-day gap even in a perfectly healthy state.
     const n = PERIOD_DAYS[window.period];
-    windowDays = allDays.slice(-n);
-    prevWindowDays = allDays.slice(-2 * n, -n);
+    const end = addDaysToDateString(todayStr, -1);
+    const start = addDaysToDateString(end, -(n - 1));
+    const prevEnd = addDaysToDateString(start, -1);
+    const prevStart = addDaysToDateString(prevEnd, -(n - 1));
+    windowDays = allDays.filter((d) => d.date >= start && d.date <= end);
+    prevWindowDays = allDays.filter((d) => d.date >= prevStart && d.date <= prevEnd);
+    daysExpected = n;
+    prevDaysExpected = n;
     const label = window.period === '7d' ? 'last 7 days' : window.period === '30d' ? 'last 30 days' : 'last 90 days';
     compareNote =
       prevWindowDays.length > 0
-        ? `Showing ${label} · deltas vs previous ${label.replace('last ', '')}`
-        : `Showing ${label} · not enough history yet for a comparison period`;
+        ? `Showing ${label} (${start} → ${end}) · deltas vs previous ${label.replace('last ', '')}`
+        : `Showing ${label} (${start} → ${end}) · not enough history yet for a comparison period`;
+  }
+
+  const gapInfo = {
+    current: gapInfoFor(windowDays, daysExpected),
+    previous: prevWindowDays.length > 0 ? gapInfoFor(prevWindowDays, prevDaysExpected) : null,
+  };
+  // Audit finding B-M7: disclose intra-window completeness directly in the
+  // human-readable note, not just the structured gapInfo field above.
+  if (gapInfo.current.daysWithData < gapInfo.current.daysExpected) {
+    compareNote += ` (${gapInfo.current.daysWithData} of ${gapInfo.current.daysExpected} days reported)`;
   }
 
   const pactsEndedByReason = Object.fromEntries(
@@ -632,9 +825,6 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
 
   const unlockApproved = sumWindow(windowDays, 'unlockApproved');
   const unlockDenied = sumWindow(windowDays, 'unlockDenied');
-  const lastDayStreak = windowDays.length > 0
-    ? (windowDays[windowDays.length - 1].firestore?.streakHistogram as Record<StreakBucket, number> | undefined)
-    : undefined;
 
   const productHealth: PeriodMetrics['productHealth'] = {
     newUsers: sumWindow(windowDays, 'usersNew'),
@@ -654,7 +844,7 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
     unlockResponseMinutesMedian: medianOfDailyMedians(windowDays),
     bypassesDetected: sumWindow(windowDays, 'bypassesDetected'),
     invitesCreated: sumWindow(windowDays, 'invitesCreated'),
-    streakHistogram: lastDayStreak ?? null,
+    streakHistogram: latestStreakHistogram(windowDays),
   };
 
   const focusSignals =
@@ -665,25 +855,30 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
   const ga4Latest = latestGA4Day(windowDays);
   const permissionGrantedSum = sumGA4Window(windowDays, 'permissionGranted');
   const permissionDeniedSum = sumGA4Window(windowDays, 'permissionDenied');
+  const funnelBasis: 'users' | 'events' = allDaysHaveGA4UsersFields(windowDays) ? 'users' : 'events';
+  const onboardingField = (base: string) => (funnelBasis === 'users' ? `${base}Users` : base);
   const engagement: PeriodMetrics['engagement'] = {
     available: ga4Latest !== null,
     dailyActiveUsers: Number(ga4Latest?.activeUsers) || 0,
     newUsers: sumGA4Window(windowDays, 'newUsers'),
+    wau: Number(ga4Latest?.wau) || 0,
+    mau: Number(ga4Latest?.mau) || 0,
     permissionDenialPct:
       permissionGrantedSum + permissionDeniedSum > 0
         ? (permissionDeniedSum / (permissionGrantedSum + permissionDeniedSum)) * 100
         : 0,
+    funnelBasis,
     onboarding: {
-      onboardingStart: sumGA4Window(windowDays, 'onboardingStart'),
-      authComplete: sumGA4Window(windowDays, 'authComplete'),
-      permissionGranted: permissionGrantedSum,
-      appsSelected: sumGA4Window(windowDays, 'appsSelected'),
-      onboardingComplete: sumGA4Window(windowDays, 'onboardingComplete'),
+      onboardingStart: sumGA4Window(windowDays, onboardingField('onboardingStart')),
+      authComplete: sumGA4Window(windowDays, onboardingField('authComplete')),
+      permissionGranted: sumGA4Window(windowDays, onboardingField('permissionGranted')),
+      appsSelected: sumGA4Window(windowDays, onboardingField('appsSelected')),
+      onboardingComplete: sumGA4Window(windowDays, onboardingField('onboardingComplete')),
     },
     invite: {
-      inviteCreated: sumGA4Window(windowDays, 'inviteCreated'),
-      inviteShared: sumGA4Window(windowDays, 'inviteShared'),
-      inviteEntered: sumGA4Window(windowDays, 'inviteEntered'),
+      inviteCreated: sumGA4Window(windowDays, onboardingField('inviteCreated')),
+      inviteShared: sumGA4Window(windowDays, onboardingField('inviteShared')),
+      inviteEntered: sumGA4Window(windowDays, onboardingField('inviteEntered')),
     },
   };
 
@@ -712,8 +907,8 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
     admobAvailable: anyAdMobDay(windowDays),
     adEarningsUsd: sumAdMobWindow(windowDays, 'earningsUsd'),
     adImpressions: sumAdMobWindow(windowDays, 'impressions'),
-    adEcpmUsd: averageAdMobRate(windowDays, 'ecpmUsd'),
-    adMatchRatePct: averageAdMobRate(windowDays, 'matchRate') * 100,
+    adEcpmUsd: sumWeightedAdMobEcpm(windowDays),
+    adMatchRatePct: averageAdMobMatchRatePct(windowDays),
   };
 
   const vercelSummaryLatest = latestVercelSummary(windowDays);
@@ -725,6 +920,8 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
     signedIn: productHealth.newUsers,
     topReferrers: Array.isArray(vercelSummaryLatest?.topReferrers) ? vercelSummaryLatest!.topReferrers : [],
     inviteVisitsWindowTotal: Number(vercelSummaryLatest?.inviteVisitsWindowTotal) || 0,
+    summaryWindowStart: vercelSummaryLatest?.windowStart ?? null,
+    summaryWindowEnd: vercelSummaryLatest?.windowEnd ?? null,
   };
 
   const reviewsLatest = latestReviewsBlock(windowDays);
@@ -735,18 +932,57 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
     recentReviews: Array.isArray(reviewsLatest?.recentReviews) ? reviewsLatest!.recentReviews : [],
   };
 
+  const previousPeriod: PeriodMetrics['previousPeriod'] =
+    prevWindowDays.length > 0
+      ? {
+          productHealth: {
+            newUsers: sumWindow(prevWindowDays, 'usersNew'),
+            pactCompletionPct: pactCompletionPct(prevWindowDays),
+            unlockResponseMinutesMedian: medianOfDailyMedians(prevWindowDays),
+          },
+          engagement: {
+            dailyActiveUsers: Number(latestGA4Day(prevWindowDays)?.activeUsers) || 0,
+            newUsers: sumGA4Window(prevWindowDays, 'newUsers'),
+            permissionDenialPct: (() => {
+              const g = sumGA4Window(prevWindowDays, 'permissionGranted');
+              const d = sumGA4Window(prevWindowDays, 'permissionDenied');
+              return g + d > 0 ? (d / (g + d)) * 100 : 0;
+            })(),
+          },
+          revenue: {
+            adEarningsUsd: sumAdMobWindow(prevWindowDays, 'earningsUsd'),
+            adEcpmUsd: sumWeightedAdMobEcpm(prevWindowDays),
+            waiversAscUsd: sumASCIapWindow(prevWindowDays, 'waivers') * WAIVER_PRICE_USD,
+            supportAscUsd:
+              sumASCIapWindow(prevWindowDays, 'supportSmall') * TIP_TIER_PRICES_USD.small +
+              sumASCIapWindow(prevWindowDays, 'supportMedium') * TIP_TIER_PRICES_USD.medium +
+              sumASCIapWindow(prevWindowDays, 'supportLarge') * TIP_TIER_PRICES_USD.large,
+          },
+          acquisition: {
+            siteVisits: sumVercelWindow(prevWindowDays, 'visits'),
+            downloads: sumASCWindow(prevWindowDays, 'units'),
+          },
+          reviews: {
+            averageRating: Number(latestReviewsBlock(prevWindowDays)?.averageRating) || 0,
+          },
+        }
+      : null;
+
   return {
     window,
     hasData: true,
     windowStart: windowDays[0]?.date ?? null,
     windowEnd: windowDays[windowDays.length - 1]?.date ?? null,
     compareNote,
+    collectorStalled,
+    gapInfo,
     productHealth,
     engagement,
     revenue,
     acquisition,
     reviews,
     focusSignals,
+    previousPeriod,
   };
 }
 
@@ -761,7 +997,10 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
 // ---------------------------------------------------------------------------
 
 export interface LifetimeExternalTotals {
-  available: boolean; // true once at least one adminMetrics doc has an admob or asc block
+  available: boolean; // true if EITHER admob or asc has ever populated (general gating — kept for back-compat)
+  admobAvailable: boolean;
+  ascAvailable: boolean;
+  ga4Available: boolean;
   adsWatchedTotal: number;
   adEarningsUsdTotal: number;
   downloadsTotal: number;
@@ -773,6 +1012,17 @@ export interface LifetimeExternalTotals {
   waiversAscUsdTotal: number;
   supportAscTotal: number; // ASC -- AUTHORITATIVE, excludes test purchases (small+medium+large)
   supportAscUsdTotal: number; // exact, real per-tier prices
+  /**
+   * Server-computed once, consumed identically by the UI and snapshot.ts
+   * (audit finding B-L3 — this composition previously lived only in
+   * index.astro's client script, duplicated nowhere else but still the
+   * wrong layer for a number meant to be authoritative). Only meaningful
+   * when both `admobAvailable` and `ascAvailable` are true — see
+   * `totalRevenueComplete`.
+   */
+  totalRevenueUsdTotal: number;
+  /** True only when every component of totalRevenueUsdTotal (ads + IAP) is actually available — false means the figure is partial, not wrong (audit finding B-H5). */
+  totalRevenueComplete: boolean;
 }
 
 export async function computeLifetimeExternalTotals(): Promise<LifetimeExternalTotals> {
@@ -786,16 +1036,17 @@ export async function computeLifetimeExternalTotals(): Promise<LifetimeExternalT
   let supportSmallAscTotal = 0;
   let supportMediumAscTotal = 0;
   let supportLargeAscTotal = 0;
-  let available = false;
+  let admobAvailable = false;
+  let ascAvailable = false;
 
   for (const d of allDays) {
     if (d.admob) {
-      available = true;
+      admobAvailable = true;
       adsWatchedTotal += Number(d.admob.impressions) || 0;
       adEarningsUsdTotal += Number(d.admob.earningsUsd) || 0;
     }
     if (d.asc) {
-      available = true;
+      ascAvailable = true;
       downloadsTotal += Number(d.asc.units) || 0;
       waiversAscTotal += Number(d.asc.iap?.waivers) || 0;
       supportSmallAscTotal += Number(d.asc.iap?.supportSmall) || 0;
@@ -809,9 +1060,17 @@ export async function computeLifetimeExternalTotals(): Promise<LifetimeExternalT
   }
 
   const supportAscTotal = supportSmallAscTotal + supportMediumAscTotal + supportLargeAscTotal;
+  const waiversAscUsdTotal = waiversAscTotal * WAIVER_PRICE_USD;
+  const supportAscUsdTotal =
+    supportSmallAscTotal * TIP_TIER_PRICES_USD.small +
+    supportMediumAscTotal * TIP_TIER_PRICES_USD.medium +
+    supportLargeAscTotal * TIP_TIER_PRICES_USD.large;
 
   return {
-    available,
+    available: admobAvailable || ascAvailable,
+    admobAvailable,
+    ascAvailable,
+    ga4Available: anyGA4Day(allDays),
     adsWatchedTotal,
     adEarningsUsdTotal,
     downloadsTotal,
@@ -820,11 +1079,10 @@ export async function computeLifetimeExternalTotals(): Promise<LifetimeExternalT
     tipSentTotal,
     tipSentUsdEstimateTotal: tipSentTotal * TIP_ESTIMATED_PRICE_USD,
     waiversAscTotal,
-    waiversAscUsdTotal: waiversAscTotal * WAIVER_PRICE_USD,
+    waiversAscUsdTotal,
     supportAscTotal,
-    supportAscUsdTotal:
-      supportSmallAscTotal * TIP_TIER_PRICES_USD.small +
-      supportMediumAscTotal * TIP_TIER_PRICES_USD.medium +
-      supportLargeAscTotal * TIP_TIER_PRICES_USD.large,
+    supportAscUsdTotal,
+    totalRevenueUsdTotal: adEarningsUsdTotal + waiversAscUsdTotal + supportAscUsdTotal,
+    totalRevenueComplete: admobAvailable && ascAvailable,
   };
 }
