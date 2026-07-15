@@ -331,7 +331,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     | { kind: 'ok'; data: T }
     | { kind: 'unauthorized' }
     | { kind: 'forbidden' }
-    | { kind: 'error'; status: number };
+    | { kind: 'error'; status: number; message?: string };
 
   // Never throws — every failure mode (no token, network error, non-2xx
   // status, unparseable body) resolves to a tagged outcome instead of a
@@ -347,7 +347,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     }
     if (res.status === 401) return { kind: 'unauthorized' };
     if (res.status === 403) return { kind: 'forbidden' };
-    if (!res.ok) return { kind: 'error', status: res.status };
+    if (!res.ok) {
+      // Item 8 (validation round): a 400 (InvalidRangeError, e.g. a custom
+      // range with no data) carries a real, safe, actionable message in its
+      // JSON body — surface it instead of a generic "Server error". Never
+      // do this for 5xx: a server error's internals shouldn't reach the
+      // client (same reasoning as the B-L2 fix).
+      let message: string | undefined;
+      if (res.status === 400) {
+        try {
+          const body = await res.json();
+          if (typeof body?.error === 'string') message = body.error;
+        } catch {
+          // body isn't JSON or is unparseable — fall back to the generic status message below.
+        }
+      }
+      return { kind: 'error', status: res.status, message };
+    }
     try {
       return { kind: 'ok', data: (await res.json()) as T };
     } catch (err) {
@@ -390,7 +406,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           ? 'Session expired — sign in again.'
           : 'Signed in, but this account is not an admin.';
     } else {
-      renderPeriodMetricsError(outcome.status);
+      renderPeriodMetricsError(outcome.status, outcome.message);
     }
   }
 
@@ -811,8 +827,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     // genuinely IS summed over the selected period.
     const summaryWindowLabel =
       acq?.summaryWindowStart && acq?.summaryWindowEnd ? ` (${acq.summaryWindowStart} → ${acq.summaryWindowEnd})` : '';
+    // acq.topReferrers/inviteVisitsWindowTotal are `null` when the
+    // collector's own summary sub-query failed this run — distinct from a
+    // confirmed-empty/zero result (companion fix to the collector's R4).
+    // `fmtNum(null)` would silently render "0", the exact zero-vs-missing
+    // conflation this whole audit was about — handled explicitly instead.
+    const referrersText = acq?.topReferrers
+      ? acq.topReferrers.map((r: any) => r.referrer).slice(0, 3).join(' · ') || 'none yet'
+      : '— (summary query failed this run)';
+    const inviteVisitsText = acq?.inviteVisitsWindowTotal === null ? '—' : fmtNum(acq?.inviteVisitsWindowTotal ?? 0);
     noteEl.textContent = acq?.vercelAvailable
-      ? `Top referrers${summaryWindowLabel}: ${(acq.topReferrers || []).map((r: any) => r.referrer).slice(0, 3).join(' · ') || 'none yet'} — /invite page: ${fmtNum(acq.inviteVisitsWindowTotal)} visits`
+      ? `Top referrers${summaryWindowLabel}: ${referrersText} — /invite page: ${inviteVisitsText} visits`
       : 'Connects once Vercel access is set up.';
 
     const prev = m.previousPeriod?.acquisition;
@@ -822,7 +847,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       : '<div class="row"><span class="k muted">Connects once ASC access is set up.</span></div>';
 
     webRowsEl.innerHTML = acq?.vercelAvailable
-      ? `<div class="row"><span class="k">Unique visits this period</span><span class="v">${fmtNum(acq.siteVisits)}${renderDelta(acq.siteVisits, prev?.siteVisits, { suffix: '' })}${gapWarn}</span></div><div class="row"><span class="k">Invite-link landings (/invite)<span class="tech">${summaryWindowLabel.trim()}</span></span><span class="v">${fmtNum(acq.inviteVisitsWindowTotal)}</span></div>`
+      ? `<div class="row"><span class="k">Unique visits this period</span><span class="v">${fmtNum(acq.siteVisits)}${renderDelta(acq.siteVisits, prev?.siteVisits, { suffix: '' })}${gapWarn}</span></div><div class="row"><span class="k">Invite-link landings (/invite)<span class="tech">${esc(summaryWindowLabel.trim())}</span></span><span class="v">${inviteVisitsText}</span></div>`
       : '<div class="row"><span class="k muted">Connects once Vercel access is set up.</span></div>';
   }
 
@@ -864,10 +889,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     }
   }
 
-  function renderPeriodMetricsError(status: number) {
-    const errMsg = `<div class="row"><span class="k muted">Server error (HTTP ${status}) — data unavailable</span></div>`;
+  function renderPeriodMetricsError(status: number, message?: string) {
+    // Item 8 (validation round): a 400's real message (e.g. "no data
+    // available in the requested range") is more useful than a generic
+    // "Server error". `plainText` feeds .textContent assignments (never
+    // escaped — escaping there would show literal "&amp;"-style entities
+    // to the user); `escapedText` feeds the one innerHTML template below.
+    const plainText = message ? `Invalid range: ${message}` : `Server error (HTTP ${status}) — data unavailable`;
+    const escapedText = message ? `Invalid range: ${esc(message)}` : plainText;
+    const errMsg = `<div class="row"><span class="k muted">${escapedText}</span></div>`;
     (document.getElementById('stalled-banner') as HTMLElement).style.display = 'none';
-    (document.getElementById('cmp') as HTMLElement).textContent = `Server error (HTTP ${status}) — could not load period metrics.`;
+    (document.getElementById('cmp') as HTMLElement).textContent = message ? plainText : `Server error (HTTP ${status}) — could not load period metrics.`;
     (document.getElementById('signals') as HTMLElement).innerHTML = errMsg;
     (document.getElementById('pact-bars') as HTMLElement).innerHTML = errMsg;
     (document.getElementById('unlock-response-row') as HTMLElement).innerHTML = errMsg;
@@ -876,7 +908,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     (document.getElementById('inv-bars') as HTMLElement).innerHTML = '';
     (document.getElementById('rev-cards') as HTMLElement).innerHTML = errMsg;
     (document.getElementById('funnel') as HTMLElement).innerHTML = '';
-    (document.getElementById('funnel-note') as HTMLElement).textContent = `Server error (HTTP ${status}) — data unavailable`;
+    (document.getElementById('funnel-note') as HTMLElement).textContent = plainText;
     (document.getElementById('asc-rows') as HTMLElement).innerHTML = errMsg;
     (document.getElementById('web-rows') as HTMLElement).innerHTML = errMsg;
     (document.getElementById('qual-cards') as HTMLElement).innerHTML = errMsg;

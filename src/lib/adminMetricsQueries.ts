@@ -590,8 +590,13 @@ export interface PeriodMetrics {
     ascAvailable: boolean;
     downloads: number; // ASC sales units, summed over window
     signedIn: number; // Firestore new users, same value as productHealth.newUsers
-    topReferrers: Array<{ referrer: string; visits: number }>;
-    inviteVisitsWindowTotal: number;
+    // `null` (not `[]`/`0`) when the collector's own sub-query for this
+    // field failed this run (its `vercelSummary.failedFields` — companion
+    // fix to the collector's R4, otherwise the collector's improved
+    // zero-vs-missing signal is silently discarded here via `Number(null)
+    // || 0`/an empty-array fallback, and the fix has no observable effect).
+    topReferrers: Array<{ referrer: string; visits: number }> | null;
+    inviteVisitsWindowTotal: number | null;
     /** The summary's OWN fixed trailing-30d window (decoupled from the selected period) — must be disclosed alongside topReferrers/inviteVisitsWindowTotal, never implied to be period-scoped (audit finding B-M5). */
     summaryWindowStart: string | null;
     summaryWindowEnd: string | null;
@@ -609,6 +614,16 @@ export interface PeriodMetrics {
    * when there's no comparison period (e.g. 'all' time, or insufficient
    * history). Deliberately a narrower subset than the full PeriodMetrics
    * shape — only the fields that actually have a rendered KPI card need one.
+   *
+   * Every source-specific field below is `number | null` — `null` when the
+   * PREVIOUS window had no docs/blocks for that source, not `0` (fixed in
+   * the validation round, Regression #1: the original implementation reused
+   * the same `sum*Window`/`latest*` helpers as the current-period values,
+   * which return 0/undefined-coalesced-to-0 for an empty source — feeding
+   * `renderDelta` a fabricated "0 -> current" delta at the exact moment a
+   * source first connects, e.g. a false "rating ▲ 4.8pt" on day one).
+   * `productHealth` fields stay non-nullable — Firestore data has no
+   * connect/disconnect lifecycle, so 0 there is always a genuine zero.
    */
   previousPeriod: {
     productHealth: {
@@ -617,22 +632,22 @@ export interface PeriodMetrics {
       unlockResponseMinutesMedian: number;
     };
     engagement: {
-      dailyActiveUsers: number;
-      newUsers: number;
-      permissionDenialPct: number;
+      dailyActiveUsers: number | null;
+      newUsers: number | null;
+      permissionDenialPct: number | null;
     };
     revenue: {
-      adEarningsUsd: number;
+      adEarningsUsd: number | null;
       adEcpmUsd: number | null;
-      waiversAscUsd: number;
-      supportAscUsd: number;
+      waiversAscUsd: number | null;
+      supportAscUsd: number | null;
     };
     acquisition: {
-      siteVisits: number;
-      downloads: number;
+      siteVisits: number | null;
+      downloads: number | null;
     };
     reviews: {
-      averageRating: number;
+      averageRating: number | null;
     };
   } | null;
 }
@@ -847,8 +862,14 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
     streakHistogram: latestStreakHistogram(windowDays),
   };
 
+  // Regression #2 (validation round): a long collector stall left
+  // `windowDays` empty (or with no relevant data) while `prevWindowDays`
+  // still had real data from before the stall — `comparableMetrics(windowDays)`
+  // then computes all-zero "current" values, firing false "fell to 0%"
+  // signals driven by a data gap, not a real change. Gate on the current
+  // window actually having data too, not just the previous one.
   const focusSignals =
-    prevWindowDays.length > 0
+    prevWindowDays.length > 0 && gapInfo.current.daysWithData > 0
       ? computeFocusSignals(comparableMetrics(windowDays), comparableMetrics(prevWindowDays))
       : [];
 
@@ -918,8 +939,12 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
     ascAvailable: anyASCDay(windowDays),
     downloads: sumASCWindow(windowDays, 'units'),
     signedIn: productHealth.newUsers,
-    topReferrers: Array.isArray(vercelSummaryLatest?.topReferrers) ? vercelSummaryLatest!.topReferrers : [],
-    inviteVisitsWindowTotal: Number(vercelSummaryLatest?.inviteVisitsWindowTotal) || 0,
+    // `null` when there's no summary this window OR the collector's own
+    // sub-query for this field failed (companion fix to the collector's
+    // R4) — never coerced to `[]`/`0`, which would read as a confirmed
+    // empty/zero rather than "unknown, the fetch didn't succeed."
+    topReferrers: Array.isArray(vercelSummaryLatest?.topReferrers) ? vercelSummaryLatest!.topReferrers : null,
+    inviteVisitsWindowTotal: typeof vercelSummaryLatest?.inviteVisitsWindowTotal === 'number' ? vercelSummaryLatest.inviteVisitsWindowTotal : null,
     summaryWindowStart: vercelSummaryLatest?.windowStart ?? null,
     summaryWindowEnd: vercelSummaryLatest?.windowEnd ?? null,
   };
@@ -932,6 +957,15 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
     recentReviews: Array.isArray(reviewsLatest?.recentReviews) ? reviewsLatest!.recentReviews : [],
   };
 
+  // Regression #1 (validation round): gate every source-specific field on
+  // that source's own availability in prevWindowDays — see the type's doc
+  // comment above for why (fabricated deltas at source onset otherwise).
+  const prevGa4Available = latestGA4Day(prevWindowDays) !== null;
+  const prevAdmobAvailable = anyAdMobDay(prevWindowDays);
+  const prevAscAvailable = anyASCDay(prevWindowDays);
+  const prevVercelAvailable = anyVercelDay(prevWindowDays);
+  const prevReviewsAvailable = latestReviewsBlock(prevWindowDays) !== null;
+
   const previousPeriod: PeriodMetrics['previousPeriod'] =
     prevWindowDays.length > 0
       ? {
@@ -941,29 +975,32 @@ export async function computePeriodMetrics(window: MetricsWindow): Promise<Perio
             unlockResponseMinutesMedian: medianOfDailyMedians(prevWindowDays),
           },
           engagement: {
-            dailyActiveUsers: Number(latestGA4Day(prevWindowDays)?.activeUsers) || 0,
-            newUsers: sumGA4Window(prevWindowDays, 'newUsers'),
-            permissionDenialPct: (() => {
-              const g = sumGA4Window(prevWindowDays, 'permissionGranted');
-              const d = sumGA4Window(prevWindowDays, 'permissionDenied');
-              return g + d > 0 ? (d / (g + d)) * 100 : 0;
-            })(),
+            dailyActiveUsers: prevGa4Available ? Number(latestGA4Day(prevWindowDays)?.activeUsers) || 0 : null,
+            newUsers: prevGa4Available ? sumGA4Window(prevWindowDays, 'newUsers') : null,
+            permissionDenialPct: prevGa4Available
+              ? (() => {
+                  const g = sumGA4Window(prevWindowDays, 'permissionGranted');
+                  const d = sumGA4Window(prevWindowDays, 'permissionDenied');
+                  return g + d > 0 ? (d / (g + d)) * 100 : 0;
+                })()
+              : null,
           },
           revenue: {
-            adEarningsUsd: sumAdMobWindow(prevWindowDays, 'earningsUsd'),
-            adEcpmUsd: sumWeightedAdMobEcpm(prevWindowDays),
-            waiversAscUsd: sumASCIapWindow(prevWindowDays, 'waivers') * WAIVER_PRICE_USD,
-            supportAscUsd:
-              sumASCIapWindow(prevWindowDays, 'supportSmall') * TIP_TIER_PRICES_USD.small +
-              sumASCIapWindow(prevWindowDays, 'supportMedium') * TIP_TIER_PRICES_USD.medium +
-              sumASCIapWindow(prevWindowDays, 'supportLarge') * TIP_TIER_PRICES_USD.large,
+            adEarningsUsd: prevAdmobAvailable ? sumAdMobWindow(prevWindowDays, 'earningsUsd') : null,
+            adEcpmUsd: prevAdmobAvailable ? sumWeightedAdMobEcpm(prevWindowDays) : null,
+            waiversAscUsd: prevAscAvailable ? sumASCIapWindow(prevWindowDays, 'waivers') * WAIVER_PRICE_USD : null,
+            supportAscUsd: prevAscAvailable
+              ? sumASCIapWindow(prevWindowDays, 'supportSmall') * TIP_TIER_PRICES_USD.small +
+                sumASCIapWindow(prevWindowDays, 'supportMedium') * TIP_TIER_PRICES_USD.medium +
+                sumASCIapWindow(prevWindowDays, 'supportLarge') * TIP_TIER_PRICES_USD.large
+              : null,
           },
           acquisition: {
-            siteVisits: sumVercelWindow(prevWindowDays, 'visits'),
-            downloads: sumASCWindow(prevWindowDays, 'units'),
+            siteVisits: prevVercelAvailable ? sumVercelWindow(prevWindowDays, 'visits') : null,
+            downloads: prevAscAvailable ? sumASCWindow(prevWindowDays, 'units') : null,
           },
           reviews: {
-            averageRating: Number(latestReviewsBlock(prevWindowDays)?.averageRating) || 0,
+            averageRating: prevReviewsAvailable ? Number(latestReviewsBlock(prevWindowDays)?.averageRating) || 0 : null,
           },
         }
       : null;

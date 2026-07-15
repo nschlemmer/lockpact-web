@@ -112,9 +112,12 @@ function buildSnapshotMarkdown(
     if (acq.vercelAvailable) {
       const summaryWindow =
         acq.summaryWindowStart && acq.summaryWindowEnd ? ` [${acq.summaryWindowStart} → ${acq.summaryWindowEnd}, NOT the selected period]` : '';
-      lines.push(
-        `- top referrers${summaryWindow}: ${acq.topReferrers.map((r) => r.referrer).join(', ') || 'none yet'} — /invite page: ${acq.inviteVisitsWindowTotal} visits`
-      );
+      // acq.topReferrers/inviteVisitsWindowTotal are `null` when the
+      // collector's own summary sub-query failed this run — distinct from a
+      // confirmed-empty `[]`/`0` (companion fix to the collector's R4).
+      const referrersText = acq.topReferrers ? acq.topReferrers.map((r) => r.referrer).join(', ') || 'none yet' : '— (summary query failed this run)';
+      const inviteVisitsText = acq.inviteVisitsWindowTotal === null ? '—' : `${acq.inviteVisitsWindowTotal}`;
+      lines.push(`- top referrers${summaryWindow}: ${referrersText} — /invite page: ${inviteVisitsText} visits`);
     }
     lines.push('- store page-view conversion: connects once ASC Analytics Reports access is bootstrapped (Sales-and-Reports key can only list/download an existing request, not create one)');
   } else {
@@ -126,12 +129,18 @@ function buildSnapshotMarkdown(
     lines.push(
       `- daily active users: ${metrics.engagement.dailyActiveUsers} · new users this period: ${metrics.engagement.newUsers} · permission denial rate: ${fmtPct(metrics.engagement.permissionDenialPct)}`
     );
+    // Item 8 (validation round): same funnel-basis disclosure the UI already
+    // has (index.astro's footnote) — the funnel base/steps switch to GA4's
+    // unique-user fields once every day in the window supports it, falling
+    // back to raw event counts (approximate — can double-count) otherwise.
+    const basisNote =
+      metrics.engagement.funnelBasis === 'events' ? ' (event-count basis — approximate)' : ' (unique users)';
     const ob = metrics.engagement.onboarding;
     lines.push(
-      `- onboarding funnel: start ${ob.onboardingStart} → auth ${ob.authComplete} → permission ${ob.permissionGranted} → apps selected ${ob.appsSelected} → complete ${ob.onboardingComplete}`
+      `- onboarding funnel${basisNote}: start ${ob.onboardingStart} → auth ${ob.authComplete} → permission ${ob.permissionGranted} → apps selected ${ob.appsSelected} → complete ${ob.onboardingComplete}`
     );
     const inv = metrics.engagement.invite;
-    lines.push(`- invite loop: created ${inv.inviteCreated} → shared ${inv.inviteShared} → entered ${inv.inviteEntered}`);
+    lines.push(`- invite loop${basisNote}: created ${inv.inviteCreated} → shared ${inv.inviteShared} → entered ${inv.inviteEntered}`);
     lines.push('- retention (D1/D7/D30 cohorts): connects in a follow-up (deferred — heavier GA4 report shape)');
   } else {
     lines.push('- connects once GA4 access is granted (keys-guide step 4) — not yet flowing');
