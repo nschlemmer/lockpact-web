@@ -93,7 +93,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </section>
 
       <section>
-        <div class="sec-head"><h2>Revenue</h2><span class="src">sources: <b>AdMob API · GA4 purchases</b></span></div>
+        <div class="sec-head"><h2>Revenue</h2><span class="src">sources: <b>AdMob API · App Store Connect sales (GA4 shown as a secondary signal)</b></span></div>
         <div class="grid g4" id="rev-cards"></div>
       </section>
 
@@ -426,7 +426,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   function renderLifetimeTotals(l: any, ext: any) {
     const el = document.getElementById('lifetime-totals') as HTMLElement;
     const extAvail = ext?.available;
-    const totalRevenueUsd = (ext?.adEarningsUsdTotal || 0) + (ext?.purchaseCompleteUsdTotal || 0) + (ext?.tipSentUsdEstimateTotal || 0);
+    const totalRevenueUsd = (ext?.adEarningsUsdTotal || 0) + (ext?.waiversAscUsdTotal || 0) + (ext?.supportAscUsdTotal || 0);
     const tiles: [string, string, string][] = [
       [extAvail ? fmtNum(ext.downloadsTotal) : '—', 'Downloads', extAvail ? 'App Store Connect' : 'connects once ASC access is set up'],
       [fmtNum(l.usersTotal), 'Users signed in', 'Firestore'],
@@ -437,8 +437,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       [extAvail ? fmtNum(ext.adsWatchedTotal) : '—', 'Ads watched', extAvail ? 'AdMob impressions' : 'connects once AdMob is set up'],
       [fmtNum(l.bypassesDetectedTotal), 'Bypasses detected', `across ${fmtNum(l.bypassAffectedPairs)} pairs`],
       [fmtNum(l.invitesCreatedTotal), 'Invite codes created', 'Firestore'],
-      [fmtNum(ext?.purchaseCompleteTotal || 0), 'Willpower Waivers', fmtUsd(ext?.purchaseCompleteUsdTotal || 0)],
-      [fmtNum(ext?.tipSentTotal || 0), 'Support LockPact', `${fmtUsd(ext?.tipSentUsdEstimateTotal || 0)} (est.)`],
+      [
+        fmtNum(ext?.waiversAscTotal || 0),
+        'Willpower Waivers',
+        `${fmtUsd(ext?.waiversAscUsdTotal || 0)} (ASC) · GA4 events (incl. test purchases): ${fmtNum(ext?.purchaseCompleteTotal || 0)}`,
+      ],
+      [
+        fmtNum(ext?.supportAscTotal || 0),
+        'Support LockPact',
+        `${fmtUsd(ext?.supportAscUsdTotal || 0)} (ASC) · GA4 events (incl. test purchases): ${fmtNum(ext?.tipSentTotal || 0)}`,
+      ],
       [extAvail ? fmtUsd(totalRevenueUsd) : '—', 'Total revenue', 'ads + IAP (web/Stripe not included)'],
     ];
     el.innerHTML = tiles
@@ -593,8 +601,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     const cards: [string, string, string][] = [
       ['Ad earnings', rev?.admobAvailable ? fmtUsd(rev.adEarningsUsd) : '—', rev?.admobAvailable ? 'rewarded video' : 'connects once AdMob is set up'],
       ['Impressions / eCPM', rev?.admobAvailable ? `${fmtNum(rev.adImpressions)} / ${fmtUsd(rev.adEcpmUsd)}` : '—', rev?.admobAvailable ? `match rate ${(rev.adMatchRatePct || 0).toFixed(0)}%` : 'connects once AdMob is set up'],
-      ['Willpower Waivers', rev?.available ? fmtNum(rev.purchaseComplete) : '—', rev?.available ? fmtUsd(rev.purchaseCompleteUsd) : 'connects once GA4 access is granted'],
-      ['Support LockPact', rev?.available ? fmtNum(rev.tipSent) : '—', rev?.available ? `${fmtUsd(rev.tipSentUsdEstimate)} (est.)` : 'connects once GA4 access is granted'],
+      [
+        'Willpower Waivers',
+        rev?.ascRevenueAvailable ? fmtNum(rev.waiversAsc) : '—',
+        rev?.ascRevenueAvailable
+          ? `${fmtUsd(rev.waiversAscUsd)} (ASC) · GA4 events (incl. test purchases): ${fmtNum(rev.purchaseComplete)}`
+          : 'connects once ASC access is set up',
+      ],
+      [
+        'Support LockPact',
+        rev?.ascRevenueAvailable ? fmtNum(rev.supportAsc.small + rev.supportAsc.medium + rev.supportAsc.large) : '—',
+        rev?.ascRevenueAvailable
+          ? `${fmtUsd(rev.supportAscUsd)} (ASC) · GA4 events (incl. test purchases): ${fmtNum(rev.tipSent)}`
+          : 'connects once ASC access is set up',
+      ],
     ];
     el.innerHTML = cards
       .map(([label, value, sub]) => `<div class="card"><div class="kpi-label">${label}</div><div class="kpi-value">${value}</div><div class="kpi-sub">${sub}</div></div>`)
