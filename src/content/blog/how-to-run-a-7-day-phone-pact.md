@@ -1,14 +1,15 @@
 ---
-title: "How to Run a 7-Day Phone Pact With Your Partner"
-description: "A practical guide to setting up a week-long mutual screen time agreement — choosing apps, having the conversation, surviving day 3, and what to do when you bypass."
+title: "The 7-Day Phone Pact: A Digital Detox Challenge for Two"
+description: "A 7-day digital detox challenge with a friend or partner beats solo willpower. Here's how to set the rules, survive day 3, and what to do when you bypass."
 pubDate: 2026-05-03
+updatedDate: 2026-07-23
 author: "LockPact"
 tags: ["how-to", "phone pact", "screen time", "accountability"]
 ---
 
 ## The Setup
 
-You and someone you care about are sitting on the couch. You're both scrolling. Not talking. Not connecting. Just scrolling. And you both know it.
+A 7-day digital detox challenge with a friend works differently than doing it alone — and that difference is the whole point. You and someone you care about are sitting on the couch. You're both scrolling. Not talking. Not connecting. Just scrolling. And you both know it.
 
 One of you says: "What if we tried something? What if for one week, we agreed to lock our phones from each other?"
 
@@ -254,6 +255,8 @@ It's free. No trial, no paywall.
 [Learn more about why accountability partners work](/blog/psychology-of-accountability-partners) — the science behind why another person's expectations matter more than your own willpower.
 
 And if you're in a long-term relationship, read [how couples can use phone boundaries to actually connect](/blog/couples-and-phone-boundaries) — because the same principle works for partners who want to be more present together.
+
+If you're wondering whether the momentum from Day 7 actually holds past the first week, [here's why streaks work — and why they sometimes don't](/blog/streaks-and-accountability-why-they-work/). And if you're still deciding which app to run the pact on, [our full comparison of the best free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/) breaks down where LockPact fits.
 
 Download LockPact and invite someone you trust. Seven days. See what you notice.
 

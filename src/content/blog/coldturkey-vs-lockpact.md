@@ -112,4 +112,4 @@ Cold Turkey is the right tool for serious daytime productivity protection. LockP
 
 **Related reading:** [Opal vs. LockPact](/blog/opal-vs-lockpact) · [Freedom vs. LockPact](/blog/freedom-vs-lockpact) · [Best Free App Blockers for iPhone](/blog/best-free-app-blocker-iphone-2026)
 
-If you have a partner ready to try the social accountability approach, [get LockPact](https://apps.apple.com/app/lockpact/id6759302382) — it's free for both of you.
+If you have a partner ready to try the social accountability approach, [LockPact](/) is free for both of you. [Get it on the App Store](https://apps.apple.com/app/lockpact/id6759302382).

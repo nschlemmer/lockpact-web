@@ -1,12 +1,13 @@
 ---
-title: "The Phone Stacking Game: Does It Actually Work?"
-description: "The phone stacking game makes dinner more present. But does it change anything once the bill is paid? Here's what research says — and what actually sticks."
+title: "The Phone Stacking Game: Rules, Variations, and Whether It Works (2026)"
+description: "The phone stacking game rules are simple: stack your phones, first to pick one up pays. Here's why it works at dinner — and what happens once the bill is paid."
 pubDate: 2026-05-05
+updatedDate: 2026-07-23
 author: "LockPact"
 tags: ["phone habits", "social accountability", "dinner", "behavior change"]
 ---
 
-You've seen it. Maybe you've done it. Everyone at the table stacks their phones face-down in the middle. First person to pick up their phone pays the bill.
+The phone stacking game rules are almost embarrassingly simple: everyone at the table stacks their phones face-down in the middle, and the first person to pick theirs up pays the bill. You've seen it. Maybe you've done it.
 
 It's a clever idea. It turns phone restraint into a game. It adds social stakes to something that usually has none. And for about forty-five minutes, it works.
 
@@ -100,4 +101,4 @@ Phone stacking is a start. If it showed you what's possible — an hour of real 
 
 **Related reading:** [How to Run a 7-Day Phone Pact With Your Partner](/blog/how-to-run-a-7-day-phone-pact) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners) · [Couples and Phone Boundaries](/blog/couples-and-phone-boundaries)
 
-[LockPact](https://apps.apple.com/app/lockpact/id6759302382) lets you and a partner carry that principle into your everyday evenings. Not just dinner. Everywhere it matters.
+[LockPact](https://apps.apple.com/app/lockpact/id6759302382) lets you and a partner carry that principle into your everyday evenings. Not just dinner. Everywhere it matters. If you're weighing it against other options, [see how it compares to the rest of the free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/).

@@ -1,7 +1,8 @@
 ---
 title: "ScreenZen vs. LockPact: Friction vs. Accountability"
-description: "Compare ScreenZen (friction-based delays) and LockPact (partner accountability). Two different approaches to breaking phone habits."
+description: "ScreenZen's escalating friction vs. LockPact's mutual partner lock — full comparison, real-world example, and when ScreenZen is the better pick."
 pubDate: 2026-04-25
+updatedDate: 2026-07-23
 author: "LockPact"
 tags: ["comparison", "ScreenZen", "accountability"]
 ---
@@ -84,11 +85,44 @@ Let's say you struggle with TikTok and Instagram, but you want to keep WhatsApp 
 
 Most people who break their phone habits use more than one tool.
 
+## When ScreenZen Is Actually the Better Pick
+
+To give ScreenZen its due, there are real situations where it's the smarter choice:
+
+**You want to reduce usage, not eliminate it.** If your actual goal is "check Instagram less," not "never check Instagram during these hours," ScreenZen's escalating delays are built for exactly that. LockPact is a blunter instrument by design — apps are locked or they're not.
+
+**You don't have (or want) a partner for this.** ScreenZen's social layer is opt-in visibility with friends, not a mutual commitment with one person. If you're not ready to hand someone the actual key to your apps, ScreenZen gives you a lighter-weight option that still adds some social pressure.
+
+**You want a dashboard of your own behavior.** ScreenZen's stats and open-count tracking give you data LockPact doesn't — LockPact deliberately doesn't track or share your usage patterns with your partner, only lock and unlock requests.
+
+**You're testing whether friction alone is enough before involving someone else.** Some people try friction first, find it insufficient, and move to a harder mechanism after. ScreenZen is a reasonable first step on that path.
+
+If your problem has resisted friction before — you already know you'll wait out a 30-second delay if you want something badly enough — a hard block with a real person on the other end solves a different, harder version of the same problem.
+
+## Frequently Asked Questions
+
+### Can ScreenZen's friction actually stop compulsive phone use?
+
+For some people, yes — the pause is often enough to interrupt an automatic reach for the phone. For people whose usage is more compulsive or habitual, friction alone tends to get overridden once the delay becomes familiar, which is where a hard block changes the equation.
+
+### Does ScreenZen's social sharing count as accountability?
+
+It's visibility, not accountability. Friends can see your stats after the fact, but nobody has to approve anything before you open an app. LockPact's model requires active approval from your partner before an unlock happens, which is a structurally different — and stronger — mechanism.
+
+### Is the Halo hardware device worth it?
+
+It's optional and adds ambient, ScreenZen is fully functional without it. It doesn't change the core friction-vs-accountability comparison with LockPact either way.
+
+### Can I use ScreenZen and LockPact together?
+
+Yes, and some people do — ScreenZen's delays on apps you're trying to moderate, LockPact's hard lock on the one or two apps you're trying to eliminate entirely during specific hours.
 
 ## Download LockPact
 
-ScreenZen is smart. But if friction doesn't work and you need someone else holding the key, LockPact is free.
+ScreenZen is smart. But if friction doesn't work and you need someone else holding the key, [LockPact](/) is free.
 
 **[Get LockPact on the App Store](https://apps.apple.com/app/lockpact/id6759302382)**
 
 Start solo. Test your willpower. When you're ready, invite your partner and lock together.
+
+**Related reading:** [AppBlock vs. LockPact](/blog/appblock-vs-lockpact/) · [One Sec vs. LockPact](/blog/onesec-vs-lockpact/) · [Best Free App Blockers for iPhone (2026)](/blog/best-free-app-blocker-iphone-2026/)

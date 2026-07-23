@@ -1,12 +1,13 @@
 ---
-title: "How to Talk to Your Partner About Their Phone Use"
-description: "Telling your partner they're on their phone too much usually starts a fight. Here's how to have the conversation that actually leads somewhere."
+title: "My Partner Is Always on Their Phone: How to Actually Have the Conversation"
+description: "\"My partner is always on their phone\" usually starts a fight when said out loud. Here's how to have the conversation that actually leads somewhere."
 pubDate: 2026-05-20
+updatedDate: 2026-07-23
 author: "LockPact"
 tags: ["relationships", "communication", "phone use", "couples", "how-to"]
 ---
 
-The conversation usually starts with something like: "You're always on your phone."
+"My partner is always on their phone" is one of the most common relationship complaints there is — and also one of the most common ways to start a fight without meaning to. The conversation usually starts with something like: "You're always on your phone."
 
 And then it becomes a fight about whether "always" is an accurate description, and whether they're "allowed" to use their phone, and why you're being controlling. The original issue — that you feel ignored, disconnected, less important than Instagram — never gets resolved.
 
@@ -102,6 +103,6 @@ Give it two weeks of active effort before concluding it failed. If nothing chang
 
 The phone conversation doesn't have to be a fight. It can be an invitation to something both of you actually want — more time that actually feels like time together.
 
-**Related reading:** [Couples and Phone Boundaries: A Field Guide](/blog/couples-and-phone-boundaries) · [How to Run a 7-Day Phone Pact With Your Partner](/blog/how-to-run-a-7-day-phone-pact) · [What to Do When Your Partner Bypasses the Lock](/blog/what-to-do-when-partner-bypasses-lock)
+**Related reading:** [Couples and Phone Boundaries: A Field Guide](/blog/couples-and-phone-boundaries) · [How to Run a 7-Day Phone Pact With Your Partner](/blog/how-to-run-a-7-day-phone-pact) · [What to Do When Your Partner Bypasses the Lock](/blog/what-to-do-when-partner-bypasses-lock) · [Long-Distance Relationships and Phone Boundaries](/blog/long-distance-relationship-phone-boundaries/)
 
-[LockPact](https://apps.apple.com/app/lockpact/id6759302382) gives you a concrete tool to propose: mutual app locks, not surveillance. Something you both opt into together.
+[LockPact](https://apps.apple.com/app/lockpact/id6759302382) gives you a concrete tool to propose: mutual app locks, not surveillance. Something you both opt into together. If you want to see how it stacks up against other options first, [our roundup of the best free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/) is a fair place to start.

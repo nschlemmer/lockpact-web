@@ -1,12 +1,13 @@
 ---
-title: "How to Do a Phone Pact With Your Best Friend"
-description: "Close friends are underused as accountability partners. Here's how to set up a mutual phone pact — what to lock, how to ask, and what to do when someone cheats."
+title: "How to Be Screen Time Accountability Partners With Your Best Friend"
+description: "Looking for an accountability partner app with friends instead of a partner or roommate? Here's how to set up a mutual phone pact with your best friend."
 pubDate: 2026-05-13
+updatedDate: 2026-07-23
 author: "LockPact"
 tags: ["friendship", "phone pact", "accountability", "how-to"]
 ---
 
-Partners and roommates get most of the attention when it comes to phone accountability. But close friends are often the best pairing for a phone pact — and dramatically underused.
+If you're searching for an accountability partner app with friends rather than a romantic partner or roommate, close friends are actually one of the best-kept secrets in phone accountability. Partners and roommates get most of the attention when it comes to phone accountability. But close friends are often the best pairing for a phone pact — and dramatically underused.
 
 Here's why friends work well, and how to set one up.
 
@@ -136,6 +137,6 @@ You can try, but enforcement relies on willpower without an app, which is the th
 
 The phone pact isn't complicated. It's two people making an honest agreement and holding each other to it.
 
-**Related reading:** [How to Run a 7-Day Phone Pact With Your Partner](/blog/how-to-run-a-7-day-phone-pact) · [Roommate Phone Pacts](/blog/roommate-phone-pact-guide) · [What to Do When Your Partner Bypasses the Lock](/blog/what-to-do-when-partner-bypasses-lock)
+**Related reading:** [How to Run a 7-Day Phone Pact With Your Partner](/blog/how-to-run-a-7-day-phone-pact) · [Roommate Phone Pacts](/blog/roommate-phone-pact-guide) · [What to Do When Your Partner Bypasses the Lock](/blog/what-to-do-when-partner-bypasses-lock) · [How College Students Actually Fix Their Phone Habits](/blog/college-student-phone-habits/)
 
-[Get LockPact](https://apps.apple.com/app/lockpact/id6759302382) and send your friend a link. The conversation is the first step. The app does the rest.
+[Get LockPact](https://apps.apple.com/app/lockpact/id6759302382) and send your friend a link. The conversation is the first step. The app does the rest. Still comparing options? [See how it stacks up against the rest of the free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/).

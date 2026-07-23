@@ -158,6 +158,8 @@ But it works. Because accountability is what actually works.
 - **[Opal vs. LockPact: Which Screen Time App Is Right for You?](/blog/opal-vs-lockpact)** — How LockPact's partner model compares to Opal's solo-first approach.
 - **[Best Free App Blockers for iPhone (2026)](/blog/best-free-app-blocker-iphone-2026)** — Honest reviews of every major screen time app on the market.
 - **[Does Apple Screen Time Work?](/blog/apple-screen-time-doesnt-work)** — Why the built-in tool fails, and what it's actually good for.
+- **[One Sec vs. LockPact: Friction vs. Accountability](/blog/onesec-vs-lockpact/)** — Another honest look at a friction-based tool versus a partner-held lock.
+- **[What Happened to the Moment App? Where It Went + 5 Alternatives](/blog/moment-app-review/)** — Why tracking alone (Moment's whole model) runs into the same present-bias problem this post covers.
 
 ---
 

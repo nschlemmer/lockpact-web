@@ -148,6 +148,8 @@ If you want to see how other pairs are handling this (roommates, co-workers, fri
 
 And if you're trying to understand why solo phone rules fail, **[Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work)** breaks down the behavioral science.
 
+If distance is part of your situation, **[Long Distance Relationship Phone Habits: Why It's a Different Problem](/blog/long-distance-relationship-phone-boundaries/)** covers the version of this that co-located couples don't have to deal with.
+
 ---
 
 ## The Real Goal

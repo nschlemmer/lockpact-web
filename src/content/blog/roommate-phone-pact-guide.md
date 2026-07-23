@@ -245,6 +245,8 @@ No. Roommate pacts often work better with neutral roommates than close friends b
 
 - **[Why Screen Time Apps Don't Work (And What Does)](/blog/why-screen-time-apps-dont-work)** — The core research on accountability and behavior change.
 - **[How to Run a 7-Day Phone Pact](/blog/how-to-run-a-7-day-phone-pact)** — A day-by-day guide for the first week.
+- **[How to Be Screen Time Accountability Partners With Your Best Friend](/blog/best-friends-phone-pact-guide/)** — The same pact structure, applied to a close friend instead of a roommate.
+- **[How College Students Actually Fix Their Phone Habits](/blog/college-student-phone-habits/)** — If your roommate situation is specifically a dorm or college house, this covers the study-specific angle.
 
 ---
 

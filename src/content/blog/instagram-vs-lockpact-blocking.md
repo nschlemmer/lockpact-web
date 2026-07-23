@@ -108,4 +108,4 @@ Instagram is designed to resist your attempts to use it less. The tools that wor
 
 **Related reading:** [How to Actually Reduce Your TikTok Use](/blog/how-to-reduce-tiktok-use) · [Social Media Detox: Does It Actually Work?](/blog/social-media-detox-does-it-work) · [iPhone Focus Modes vs. App Blockers](/blog/do-not-disturb-modes-comparison)
 
-[LockPact](https://apps.apple.com/app/lockpact/id6759302382) lets your partner hold the evening block. No tap-to-override. No in-app reminder you can dismiss. Just a commitment that holds.
+[LockPact](/) lets your partner hold the evening block. No tap-to-override. No in-app reminder you can dismiss. Just a commitment that holds. [Get it on the App Store](https://apps.apple.com/app/lockpact/id6759302382).

@@ -100,6 +100,6 @@ Yes, and this combination is probably the most effective approach. Newport's fra
 
 Newport's book is worth your time. Just don't mistake understanding the problem for solving it.
 
-**Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners) · [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick)
+**Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners) · [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick) · [What Happened to the Moment App? Where It Went + 5 Alternatives](/blog/moment-app-review/)
 
 If you're ready for the behavioral layer — the friction, the commitment, the external accountability — [LockPact](https://apps.apple.com/app/lockpact/id6759302382) gives you and a partner a concrete place to start.

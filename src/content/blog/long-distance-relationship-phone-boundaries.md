@@ -1,12 +1,13 @@
 ---
-title: "Long-Distance Relationships and Phone Boundaries: A Different Problem"
-description: "In long-distance relationships, the phone is your lifeline and your biggest distraction. Here's how to navigate the tension between connection and avoidance."
+title: "Long Distance Relationship Phone Habits: Why It's a Different Problem"
+description: "Long distance relationship phone habits aren't the same problem as co-located couples face. Here's how to navigate connection versus avoidance across distance."
 pubDate: 2026-05-17
+updatedDate: 2026-07-23
 author: "LockPact"
 tags: ["long distance", "relationships", "phone use", "couples", "screen time"]
 ---
 
-Long-distance relationships have a particular phone problem that doesn't get discussed enough.
+Long distance relationship phone habits have a particular problem that doesn't get discussed enough.
 
 In co-located relationships, the phone competes with your partner for your attention. You're in the same room, and the phone pulls you away from them.
 
@@ -116,4 +117,4 @@ Long-distance is hard. The phone doesn't have to make it harder.
 
 **Related reading:** [Couples and Phone Boundaries: A Field Guide](/blog/couples-and-phone-boundaries) · [How to Talk to Your Partner About Their Phone Use](/blog/how-to-have-the-phone-conversation) · [How to Be More Present](/blog/how-to-be-more-present)
 
-[LockPact](https://apps.apple.com/app/lockpact/id6759302382) works across any distance — your partner holds your lock from wherever they are. The commitment travels.
+[LockPact](https://apps.apple.com/app/lockpact/id6759302382) works across any distance — your partner holds your lock from wherever they are. The commitment travels. If you're still deciding on a tool, [our full comparison of the best free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/) is a good place to start.

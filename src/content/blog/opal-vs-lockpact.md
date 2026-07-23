@@ -1,7 +1,8 @@
 ---
 title: "Opal vs. LockPact: Which Screen Time App Is Right for You?"
-description: "A fair comparison of Opal and LockPact. What Opal does best, where each falls short, and how to choose based on your needs."
+description: "A fair comparison of Opal and LockPact — the real cost of Opal's $100/year plan, what each app actually enforces, and when Opal is the better pick."
 pubDate: 2026-04-21
+updatedDate: 2026-07-23
 author: "LockPact"
 tags: ["comparison", "Opal", "screen time"]
 ---
@@ -18,6 +19,20 @@ tags: ["comparison", "Opal", "screen time"]
 | **Platforms** | iOS + macOS | iOS only |
 | **Social Cost** | Low (you can silently fail) | High (partner sees and must approve unlock) |
 | **Best For** | Solo users who want beautiful UX and Mac support | Pairs who want mutual accountability without paying |
+
+## The Actual Price Breakdown
+
+Opal's pricing isn't hidden, but it's worth laying out plainly next to what you actually get, because "$100/year" undersells how big that gap is over time.
+
+| | Opal | LockPact |
+|---|---|---|
+| **Monthly** | $9.99/mo billed monthly | $0 |
+| **Annual** | ~$100/yr (roughly $8.33/mo) | $0 |
+| **3-year cost** | ~$300 | $0 |
+| **What's gated behind payment** | Deep Focus (the bypass-resistant mode), buddy notifications, Mac support, advanced scheduling | Nothing — pairing, unlock requests, bypass detection, and mutual locking are all included |
+| **Free tier ceiling** | Basic blocking you can turn off anytime — no real enforcement | Not applicable; there's only one tier |
+
+Over three years, Opal's paid tier costs roughly what a mid-range iPhone case costs every few months, forever, for as long as you keep paying to stay accountable to yourself. That's not a knock on Opal's engineering — Deep Focus is a genuinely well-built feature. It's a question of whether you want to keep paying a subscription to enforce a boundary a free, mutual system enforces for nothing.
 
 
 ## Where Opal Falls Short
@@ -46,6 +61,19 @@ Opal is a legitimate choice. It's not a failure. Some people *will* stick with i
 
 Just go in knowing: if it doesn't work after three months, it's probably not the app. It's that solo blockers don't work for most people. Not a reflection on Opal.
 
+## When Opal Is Actually the Better Pick
+
+To be honest about this comparison, there are real situations where Opal is the right call and LockPact isn't:
+
+**You genuinely don't have a partner for this.** LockPact's entire mechanism requires another person willing to hold your key. If nobody in your life is a fit for that right now — no partner, roommate, or close friend who'd actually engage — Opal's solo model is simply more available to you today. A worse-fit tool you'll use beats a better-fit tool you can't set up.
+
+**You work across Mac and iPhone and want one system for both.** LockPact is iOS only. If a meaningful share of your distraction happens on a laptop — browser tabs, not just apps — Opal's cross-device coverage does something LockPact currently can't.
+
+**You respond well to gamification and progress tracking.** Some people are genuinely motivated by streaks, visual progress, and a well-designed app cheering them on. If that's you — and you know your own history well enough to know it — the research on extrinsic motivation undermining intrinsic drive is a population-level tendency, not a rule that applies to everyone equally.
+
+**You'd rather pay than ask someone for help.** This is a real preference, not a character flaw. Some people would genuinely rather spend $100/year than have an uncomfortable conversation with a partner about their phone habits. If that trade is worth it to you, it's worth it.
+
+If none of those describe you — you have a willing partner, you're iPhone-primary, and you don't need the paid tier's gamification to stay engaged — the free, mutual option is hard to argue against on the merits.
 
 ## The Real Difference
 
@@ -63,10 +91,29 @@ There's no objectively right answer. It depends on how you actually change behav
 
 Know yourself.
 
+## Frequently Asked Questions
+
+### Is Opal worth $100 a year?
+
+For the right person, yes. If you're iPhone-and-Mac and respond well to a polished, gamified solo experience, Opal is one of the best-designed tools in the category. If you have a willing accountability partner, the same $100/year buys you nothing that a free mutual lock doesn't already do.
+
+### Does Opal's Deep Focus mode actually stop you from bypassing it?
+
+It makes bypassing more difficult than the free tier, but Opal is still a solo tool — you set it, and ultimately you're the one deciding whether to override it, even if the override is harder to reach. LockPact's model is different: the override still exists (Apple requires it), but your partner is notified when it happens, so the cost isn't "was it hard to click," it's "will someone find out."
+
+### Can I use Opal and LockPact together?
+
+Some people do — Opal for cross-device focus sessions on a laptop, LockPact for the phone-specific apps where a partner's involvement matters most. They're not mutually exclusive, though most people end up preferring one primary system once they see which one actually holds.
+
+### Which one is better for couples?
+
+LockPact, if both people are willing to participate — the mutual structure (you each hold the other's key) is built for exactly that. Opal's Buddies feature offers visibility to a partner, but doesn't give them any actual control, which is a meaningfully weaker form of accountability for two people trying to change together.
 
 ## Read Next
 
 - **[Why Screen Time Apps Don't Work (And What Does)](/blog/why-screen-time-apps-dont-work)** — The behavioral science behind why solo blockers fail.
 - **[Best Free App Blockers for iPhone (2026)](/blog/best-free-app-blocker-iphone-2026)** — Honest reviews of every major screen time app, including Opal and LockPact.
 - **[AppBlock vs. LockPact](/blog/appblock-vs-lockpact)** — How LockPact compares to AppBlock's approach.
+
+If you've got a willing partner, [LockPact](/) is free — no trial period to compare against Opal's paid tier. [Get it on the App Store →](https://apps.apple.com/app/lockpact/id6759302382)
 
