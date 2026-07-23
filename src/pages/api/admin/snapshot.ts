@@ -16,8 +16,8 @@ function fmtPct(n: number): string {
   return `${n.toFixed(1)}%`;
 }
 
-function fmtUsd(n: number): string {
-  return `$${(n || 0).toFixed(2)}`;
+function fmtUsd(n: number | null): string {
+  return n === null ? '—' : `$${n.toFixed(2)}`;
 }
 
 function windowLabel(window: MetricsWindow): string {
@@ -31,13 +31,23 @@ function buildSnapshotMarkdown(
   lifetimeExternal: Awaited<ReturnType<typeof computeLifetimeExternalTotals>>
 ): string {
   const lines: string[] = [];
-  lines.push(`snapshot_v: 1`);
+  lines.push(`snapshot_v: 2`);
   lines.push(`# LockPact metrics snapshot — period: ${windowLabel(window)}`);
   lines.push(
     metrics.hasData
       ? `${metrics.compareNote} (window ${metrics.windowStart} → ${metrics.windowEnd})`
       : metrics.compareNote
   );
+  if (metrics.collectorStalled) {
+    lines.push(`⚠ collector stalled — data ends ${metrics.collectorStalled.sinceDate}`);
+  }
+  if (metrics.hasData) {
+    const gi = metrics.gapInfo;
+    lines.push(
+      `data completeness: current window ${gi.current.daysWithData}/${gi.current.daysExpected} days` +
+        (gi.previous ? ` · previous window ${gi.previous.daysWithData}/${gi.previous.daysExpected} days` : '')
+    );
+  }
   lines.push('');
   lines.push('## Lifetime totals (Firestore, live — unaffected by period)');
   lines.push(`- users signed in: ${live.lifetime.usersTotal}`);
@@ -54,10 +64,13 @@ function buildSnapshotMarkdown(
   );
   lines.push(`- invite codes created: ${live.lifetime.invitesCreatedTotal}`);
   if (lifetimeExternal.available) {
-    const totalRevenueUsd =
-      lifetimeExternal.adEarningsUsdTotal + lifetimeExternal.waiversAscUsdTotal + lifetimeExternal.supportAscUsdTotal;
+    const revenueNote = lifetimeExternal.totalRevenueComplete
+      ? '(ads + IAP, web/Stripe not included)'
+      : lifetimeExternal.admobAvailable
+        ? '(ads only — partial, ASC not yet connected)'
+        : '(IAP only — partial, AdMob not yet connected)';
     lines.push(
-      `- downloads: ${lifetimeExternal.downloadsTotal} (ASC) · ads watched: ${lifetimeExternal.adsWatchedTotal} (AdMob impressions) · total revenue: ${fmtUsd(totalRevenueUsd)} (ads + IAP, web/Stripe not included)`
+      `- downloads: ${lifetimeExternal.ascAvailable ? lifetimeExternal.downloadsTotal : '—'} (ASC) · ad impressions: ${lifetimeExternal.admobAvailable ? lifetimeExternal.adsWatchedTotal : '—'} (AdMob) · total revenue: ${fmtUsd(lifetimeExternal.totalRevenueUsdTotal)} ${revenueNote}`
     );
   } else {
     lines.push('- downloads / ads / revenue: — (connects once AdMob/ASC access is set up)');
@@ -79,7 +92,7 @@ function buildSnapshotMarkdown(
     lines.push(`  - by reason: ${reasonEntries.map(([k, v]) => `${k}=${v}`).join(', ')}`);
   }
   lines.push(
-    `- unlock requests this period: ${metrics.productHealth.unlockRequestsCreated} (approved ${fmtPct(metrics.productHealth.unlockApprovalPct)}, median response ${formatMinutes(metrics.productHealth.unlockResponseMinutesMedian)})`
+    `- unlock requests this period: ${metrics.productHealth.unlockRequestsCreated} (approved ${fmtPct(metrics.productHealth.unlockApprovalPct)}, median response ${formatMinutes(metrics.productHealth.unlockResponseMinutesMedian)} — median of daily medians, not a true window median)`
   );
   lines.push(
     `- lock sessions this period: started ${metrics.productHealth.lockSessionsStarted}, ended ${metrics.productHealth.lockSessionsEnded} (${metrics.productHealth.lockHoursEnded.toFixed(1)} hours)`
@@ -97,9 +110,14 @@ function buildSnapshotMarkdown(
       `- site visits: ${acq.vercelAvailable ? acq.siteVisits : '—'} (Vercel) · downloads: ${acq.ascAvailable ? acq.downloads : '—'} (ASC units) · signed in: ${acq.signedIn}`
     );
     if (acq.vercelAvailable) {
-      lines.push(
-        `- top referrers: ${acq.topReferrers.map((r) => r.referrer).join(', ') || 'none yet'} — /invite page: ${acq.inviteVisitsWindowTotal} visits`
-      );
+      const summaryWindow =
+        acq.summaryWindowStart && acq.summaryWindowEnd ? ` [${acq.summaryWindowStart} → ${acq.summaryWindowEnd}, NOT the selected period]` : '';
+      // acq.topReferrers/inviteVisitsWindowTotal are `null` when the
+      // collector's own summary sub-query failed this run — distinct from a
+      // confirmed-empty `[]`/`0` (companion fix to the collector's R4).
+      const referrersText = acq.topReferrers ? acq.topReferrers.map((r) => r.referrer).join(', ') || 'none yet' : '— (summary query failed this run)';
+      const inviteVisitsText = acq.inviteVisitsWindowTotal === null ? '—' : `${acq.inviteVisitsWindowTotal}`;
+      lines.push(`- top referrers${summaryWindow}: ${referrersText} — /invite page: ${inviteVisitsText} visits`);
     }
     lines.push('- store page-view conversion: connects once ASC Analytics Reports access is bootstrapped (Sales-and-Reports key can only list/download an existing request, not create one)');
   } else {
@@ -111,12 +129,18 @@ function buildSnapshotMarkdown(
     lines.push(
       `- daily active users: ${metrics.engagement.dailyActiveUsers} · new users this period: ${metrics.engagement.newUsers} · permission denial rate: ${fmtPct(metrics.engagement.permissionDenialPct)}`
     );
+    // Item 8 (validation round): same funnel-basis disclosure the UI already
+    // has (index.astro's footnote) — the funnel base/steps switch to GA4's
+    // unique-user fields once every day in the window supports it, falling
+    // back to raw event counts (approximate — can double-count) otherwise.
+    const basisNote =
+      metrics.engagement.funnelBasis === 'events' ? ' (event-count basis — approximate)' : ' (unique users)';
     const ob = metrics.engagement.onboarding;
     lines.push(
-      `- onboarding funnel: start ${ob.onboardingStart} → auth ${ob.authComplete} → permission ${ob.permissionGranted} → apps selected ${ob.appsSelected} → complete ${ob.onboardingComplete}`
+      `- onboarding funnel${basisNote}: start ${ob.onboardingStart} → auth ${ob.authComplete} → permission ${ob.permissionGranted} → apps selected ${ob.appsSelected} → complete ${ob.onboardingComplete}`
     );
     const inv = metrics.engagement.invite;
-    lines.push(`- invite loop: created ${inv.inviteCreated} → shared ${inv.inviteShared} → entered ${inv.inviteEntered}`);
+    lines.push(`- invite loop${basisNote}: created ${inv.inviteCreated} → shared ${inv.inviteShared} → entered ${inv.inviteEntered}`);
     lines.push('- retention (D1/D7/D30 cohorts): connects in a follow-up (deferred — heavier GA4 report shape)');
   } else {
     lines.push('- connects once GA4 access is granted (keys-guide step 4) — not yet flowing');

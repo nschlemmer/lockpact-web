@@ -26,11 +26,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <input type="date" id="range-start" aria-label="Custom range start" />
             <span>–</span>
             <input type="date" id="range-end" aria-label="Custom range end" />
+            <span class="tech" title="Custom range dates are interpreted in UTC, not your local timezone">UTC</span>
           </div>
           <span class="pill" id="whoami">···</span>
           <button id="signout-btn" class="text-btn">Sign out</button>
         </div>
       </header>
+      <div class="stalled-banner" id="stalled-banner" style="display: none;"></div>
       <div class="compare-note" id="cmp">Loading…</div>
 
       <section>
@@ -158,6 +160,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   #admin-page .pill { border: 1px solid var(--color-card-border); border-radius: 999px; padding: 4px 12px; }
   #admin-page .text-btn { background: transparent; border: 0; color: var(--color-text-tertiary); font-size: 12.5px; cursor: pointer; text-decoration: underline; font-family: inherit; }
   #admin-page .compare-note { font-size: 12px; color: var(--color-text-tertiary); margin-bottom: 20px; }
+  #admin-page .stalled-banner { font-size: 13px; font-weight: 600; color: #F59E0B; background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.35); border-radius: 10px; padding: 10px 14px; margin-bottom: 14px; }
 
   #admin-page section { margin-bottom: 30px; }
   #admin-page .sec-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
@@ -328,7 +331,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     | { kind: 'ok'; data: T }
     | { kind: 'unauthorized' }
     | { kind: 'forbidden' }
-    | { kind: 'error'; status: number };
+    | { kind: 'error'; status: number; message?: string };
 
   // Never throws — every failure mode (no token, network error, non-2xx
   // status, unparseable body) resolves to a tagged outcome instead of a
@@ -344,7 +347,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     }
     if (res.status === 401) return { kind: 'unauthorized' };
     if (res.status === 403) return { kind: 'forbidden' };
-    if (!res.ok) return { kind: 'error', status: res.status };
+    if (!res.ok) {
+      // Item 8 (validation round): a 400 (InvalidRangeError, e.g. a custom
+      // range with no data) carries a real, safe, actionable message in its
+      // JSON body — surface it instead of a generic "Server error". Never
+      // do this for 5xx: a server error's internals shouldn't reach the
+      // client (same reasoning as the B-L2 fix).
+      let message: string | undefined;
+      if (res.status === 400) {
+        try {
+          const body = await res.json();
+          if (typeof body?.error === 'string') message = body.error;
+        } catch {
+          // body isn't JSON or is unparseable — fall back to the generic status message below.
+        }
+      }
+      return { kind: 'error', status: res.status, message };
+    }
     try {
       return { kind: 'ok', data: (await res.json()) as T };
     } catch (err) {
@@ -387,7 +406,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           ? 'Session expired — sign in again.'
           : 'Signed in, but this account is not an admin.';
     } else {
-      renderPeriodMetricsError(outcome.status);
+      renderPeriodMetricsError(outcome.status, outcome.message);
     }
   }
 
@@ -419,35 +438,110 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     return Math.round(n || 0).toLocaleString();
   }
 
-  function fmtUsd(n: number): string {
-    return `$${(n || 0).toFixed(2)}`;
+  function fmtUsd(n: number | null): string {
+    return n === null ? '—' : `$${n.toFixed(2)}`;
+  }
+
+  // Audit finding B-H6 (stored XSS): every externally-sourced string (App
+  // Store review text, Vercel referrer hostnames, UTM values) must be
+  // escaped before reaching an innerHTML template — applied at every such
+  // interpolation below, not just the one confirmed-exploitable site.
+  function esc(s: unknown): string {
+    const map: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+    return String(s ?? '').replace(/[&<>"']/g, (c) => map[c]);
+  }
+
+  // Audit finding B-M8: per-card deltas were specced but the .delta CSS
+  // classes were never wired to any data. `isPct` renders the raw delta in
+  // percentage points (for metrics that are themselves already a percent);
+  // otherwise renders the relative percent change (or the raw delta with
+  // `suffix` when previous is 0, since a percent-of-zero is undefined).
+  function renderDelta(
+    current: number | null | undefined,
+    previous: number | null | undefined,
+    opts: { goodDirection?: 'up' | 'down'; isPct?: boolean; suffix?: string } = {}
+  ): string {
+    if (current === null || current === undefined || previous === null || previous === undefined) return '';
+    const delta = current - previous;
+    if (delta === 0) return `<span class="delta flat">±0${opts.isPct ? 'pt' : opts.suffix ?? ''}</span>`;
+    const goodDirection = opts.goodDirection ?? 'up';
+    const rose = delta > 0;
+    const improved = goodDirection === 'up' ? rose : !rose;
+    const cls = improved ? 'up' : 'down';
+    const arrow = rose ? '▲' : '▼';
+    const magnitudeText = opts.isPct
+      ? `${Math.abs(delta).toFixed(1)}pt`
+      : previous !== 0
+        ? `${Math.abs((delta / previous) * 100).toFixed(0)}%`
+        : `${Math.abs(delta).toFixed(0)}${opts.suffix ?? ''}`;
+    return `<span class="delta ${cls}">${arrow} ${magnitudeText}</span>`;
+  }
+
+  // Audit finding B-M7: renders a ⚠ next to a delta when either window
+  // (current or previous) has fewer days of data than expected — a delta
+  // computed across an incomplete window shouldn't read as equally
+  // trustworthy as one from a fully-reported window.
+  function gapWarning(gapInfo: any): string {
+    if (!gapInfo) return '';
+    const curIncomplete = gapInfo.current && gapInfo.current.daysWithData < gapInfo.current.daysExpected;
+    const prevIncomplete = gapInfo.previous && gapInfo.previous.daysWithData < gapInfo.previous.daysExpected;
+    return curIncomplete || prevIncomplete
+      ? ' <span class="warn" title="one or both windows have missing days — deltas may be skewed">⚠</span>'
+      : '';
   }
 
   function renderLifetimeTotals(l: any, ext: any) {
     const el = document.getElementById('lifetime-totals') as HTMLElement;
-    const extAvail = ext?.available;
-    const totalRevenueUsd = (ext?.adEarningsUsdTotal || 0) + (ext?.waiversAscUsdTotal || 0) + (ext?.supportAscUsdTotal || 0);
+    // Audit finding B-L3: total-revenue composition now computed server-side
+    // once (computeLifetimeExternalTotals), consumed identically here and in
+    // /api/admin/snapshot — no client-side re-derivation.
+    const totalRevenueValue = ext?.totalRevenueComplete || ext?.admobAvailable || ext?.ascAvailable ? fmtUsd(ext.totalRevenueUsdTotal) : '—';
+    const totalRevenueSub = ext?.totalRevenueComplete
+      ? 'ads + IAP (web/Stripe not included)'
+      : ext?.admobAvailable
+        ? 'ads only — partial (ASC not yet connected)'
+        : ext?.ascAvailable
+          ? 'IAP only — partial (AdMob not yet connected)'
+          : 'connects once AdMob/ASC access is set up';
+
+    const [waiversValue, waiversSub] = revenueTileValueSub(
+      ext?.waiversAscTotal || 0,
+      ext?.waiversAscUsdTotal || 0,
+      ext?.purchaseCompleteTotal || 0,
+      ext?.purchaseCompleteUsdTotal || 0,
+      Boolean(ext?.ascAvailable),
+      Boolean(ext?.ga4Available),
+      '',
+      ''
+    );
+    const [supportValue, supportSub] = revenueTileValueSub(
+      ext?.supportAscTotal || 0,
+      ext?.supportAscUsdTotal || 0,
+      ext?.tipSentTotal || 0,
+      ext?.tipSentUsdEstimateTotal || 0,
+      Boolean(ext?.ascAvailable),
+      Boolean(ext?.ga4Available),
+      '',
+      ''
+    );
+
     const tiles: [string, string, string][] = [
-      [extAvail ? fmtNum(ext.downloadsTotal) : '—', 'Downloads', extAvail ? 'App Store Connect' : 'connects once ASC access is set up'],
+      [ext?.ascAvailable ? fmtNum(ext.downloadsTotal) : '—', 'Downloads', ext?.ascAvailable ? 'App Store Connect' : 'connects once ASC access is set up'],
       [fmtNum(l.usersTotal), 'Users signed in', 'Firestore'],
       [fmtNum(l.partnershipsFormedTotal), 'Partnerships formed', 'Firestore'],
       [fmtNum(l.pactsTotal), 'Pacts made', `${fmtNum(l.pactsKeptToEnd)} kept to the end`],
       [fmtNum(l.lockSessionsTotal), 'Lock sessions', `≈${fmtNum(l.lockHoursTotal)} hours locked`],
       [fmtNum(l.unlockRequestsTotal), 'Unlock requests', `${fmtNum(l.unlockApprovedTotal)} approved`],
-      [extAvail ? fmtNum(ext.adsWatchedTotal) : '—', 'Ads watched', extAvail ? 'AdMob impressions' : 'connects once AdMob is set up'],
+      // Audit finding B-L5: "Ads watched" implies completed views; the
+      // underlying metric is AdMob impressions, which may include
+      // ad-load/impression events that aren't full watches for rewarded
+      // video — relabeled to match what it actually counts.
+      [ext?.admobAvailable ? fmtNum(ext.adsWatchedTotal) : '—', 'Ad impressions', ext?.admobAvailable ? 'AdMob' : 'connects once AdMob is set up'],
       [fmtNum(l.bypassesDetectedTotal), 'Bypasses detected', `across ${fmtNum(l.bypassAffectedPairs)} pairs`],
       [fmtNum(l.invitesCreatedTotal), 'Invite codes created', 'Firestore'],
-      [
-        fmtNum(ext?.waiversAscTotal || 0),
-        'Willpower Waivers',
-        `${fmtUsd(ext?.waiversAscUsdTotal || 0)} (ASC) · GA4 events (incl. test purchases): ${fmtNum(ext?.purchaseCompleteTotal || 0)}`,
-      ],
-      [
-        fmtNum(ext?.supportAscTotal || 0),
-        'Support LockPact',
-        `${fmtUsd(ext?.supportAscUsdTotal || 0)} (ASC) · GA4 events (incl. test purchases): ${fmtNum(ext?.tipSentTotal || 0)}`,
-      ],
-      [extAvail ? fmtUsd(totalRevenueUsd) : '—', 'Total revenue', 'ads + IAP (web/Stripe not included)'],
+      [waiversValue, 'Willpower Waivers', waiversSub],
+      [supportValue, 'Support LockPact', supportSub],
+      [totalRevenueValue, 'Total revenue', totalRevenueSub],
     ];
     el.innerHTML = tiles
       .map(([n, label, sub]) => `<div class="tot"><div class="n">${n}</div><div class="l">${label}</div><div class="s">${sub}</div></div>`)
@@ -505,6 +599,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   function renderPeriodMetrics(m: any) {
     (document.getElementById('cmp') as HTMLElement).textContent = m.compareNote;
 
+    const stalledEl = document.getElementById('stalled-banner') as HTMLElement;
+    if (m.collectorStalled) {
+      stalledEl.style.display = 'block';
+      stalledEl.textContent = `⚠ Collector stalled — data ends ${m.collectorStalled.sinceDate}. Numbers below may be missing recent days.`;
+    } else {
+      stalledEl.style.display = 'none';
+    }
+
     const signalsEl = document.getElementById('signals') as HTMLElement;
     if (!m.focusSignals || m.focusSignals.length === 0) {
       signalsEl.innerHTML = `<div class="row"><span class="k muted">No signals crossed threshold this period${m.hasData ? '' : ' — collecting data, first rollup pending'}.</span></div>`;
@@ -520,7 +622,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     const ph = m.productHealth;
 
     const responseEl = document.getElementById('unlock-response-row') as HTMLElement;
-    responseEl.innerHTML = `<div class="row"><span class="k">Median partner response</span><span class="v">${formatMinutes(ph.unlockResponseMinutesMedian || 0)}</span></div>`;
+    const responseDelta = renderDelta(ph.unlockResponseMinutesMedian, m.previousPeriod?.productHealth?.unlockResponseMinutesMedian, {
+      goodDirection: 'down',
+      suffix: ' min',
+    });
+    responseEl.innerHTML = `<div class="row"><span class="k">Median partner response <span class="tech">median of daily medians</span></span><span class="v">${formatMinutes(ph.unlockResponseMinutesMedian || 0)}${responseDelta}${gapWarning(m.gapInfo)}</span></div>`;
 
     const pactBarsEl = document.getElementById('pact-bars') as HTMLElement;
     const total = ph.pactsEnded || 0;
@@ -542,7 +648,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     if (total <= 0) return `<div class="row"><span class="k muted">${emptyMsg}</span></div>`;
     return stages
       .map(([label, tech, count]) => {
-        const pct = Math.round((count / total) * 100);
+        // Audit finding B-C3: clamp to 100 — a later funnel step can never
+        // legitimately exceed its own base, but a data race/double-count
+        // upstream shouldn't be allowed to render a >100% step as fact.
+        const pct = Math.min(100, Math.round((count / total) * 100));
         return `<div class="bar-row"><span class="lbl">${label}<span class="tech">${tech}</span></span><div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div><span class="pct">${pct}%</span></div>`;
       })
       .join('');
@@ -550,6 +659,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
   function renderEngagement(m: any) {
     const eng = m.engagement;
+    const prev = m.previousPeriod?.engagement;
     const cardsEl = document.getElementById('eng-cards') as HTMLElement;
     const onbEl = document.getElementById('onb-bars') as HTMLElement;
     const invEl = document.getElementById('inv-bars') as HTMLElement;
@@ -561,60 +671,127 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       return;
     }
 
+    const gapWarn = gapWarning(m.gapInfo);
     const cards: [string, string, string][] = [
-      ['Daily active users', fmtNum(eng.dailyActiveUsers), 'latest day with GA4 data'],
-      ['New users (period)', fmtNum(eng.newUsers), ''],
-      ['Screen Time permission denial rate', `${(eng.permissionDenialPct || 0).toFixed(0)}%`, 'watch if rising'],
+      [
+        'Daily active users',
+        `${fmtNum(eng.dailyActiveUsers)}${renderDelta(eng.dailyActiveUsers, prev?.dailyActiveUsers)}${gapWarn}`,
+        'latest day with GA4 data',
+      ],
+      ['New users (period)', `${fmtNum(eng.newUsers)}${renderDelta(eng.newUsers, prev?.newUsers)}${gapWarn}`, ''],
+      [
+        'Screen Time permission denial rate',
+        `${(eng.permissionDenialPct || 0).toFixed(0)}%${renderDelta(eng.permissionDenialPct, prev?.permissionDenialPct, { goodDirection: 'down', isPct: true })}${gapWarn}`,
+        'watch if rising',
+      ],
     ];
     cardsEl.innerHTML = cards
       .map(([label, value, sub]) => `<div class="card"><div class="kpi-label">${label}</div><div class="kpi-value">${value}</div><div class="kpi-sub">${sub}</div></div>`)
       .join('');
 
+    // Audit finding A-C3/B-C3: funnel base/steps use unique-user counts
+    // (GA4 totalUsers), never raw event counts, whenever every day in the
+    // window supports it — a raw event count lets one user's repeat firing
+    // of an earlier step inflate a later step's percentage past 100.
+    const basisNote =
+      eng.funnelBasis === 'events'
+        ? ' (event-count basis — approximate; some days in this window predate unique-user tracking)'
+        : ' (unique users)';
+
     const ob = eng.onboarding;
-    onbEl.innerHTML = funnelBars(
-      [
-        ['Opened app first time', 'onboarding_start', ob.onboardingStart],
-        ['Signed in with Apple', 'auth_complete', ob.authComplete],
-        ['Granted Screen Time access', 'permission_granted', ob.permissionGranted],
-        ['Chose apps to block', 'apps_selected', ob.appsSelected],
-        ['Reached dashboard', 'onboarding_complete', ob.onboardingComplete],
-      ],
-      ob.onboardingStart || 0,
-      'No onboarding events this period.'
-    );
+    onbEl.innerHTML =
+      funnelBars(
+        [
+          ['Opened app first time', 'onboarding_start', ob.onboardingStart],
+          ['Signed in with Apple', 'auth_complete', ob.authComplete],
+          ['Granted Screen Time access', 'permission_granted', ob.permissionGranted],
+          ['Chose apps to block', 'apps_selected', ob.appsSelected],
+          ['Reached dashboard', 'onboarding_complete', ob.onboardingComplete],
+        ],
+        ob.onboardingStart || 0,
+        'No onboarding events this period.'
+      ) + (ob.onboardingStart > 0 ? `<div class="footnote">${esc(basisNote)}</div>` : '');
 
     const inv = eng.invite;
-    invEl.innerHTML = funnelBars(
-      [
-        ['Invite codes created', 'invite_created', inv.inviteCreated],
-        ['Shared to partner', 'invite_shared', inv.inviteShared],
-        ['Partner entered code', 'invite_entered', inv.inviteEntered],
-      ],
-      inv.inviteCreated || 0,
-      'No invite events this period.'
-    );
+    invEl.innerHTML =
+      funnelBars(
+        [
+          ['Invite codes created', 'invite_created', inv.inviteCreated],
+          ['Shared to partner', 'invite_shared', inv.inviteShared],
+          ['Partner entered code', 'invite_entered', inv.inviteEntered],
+        ],
+        inv.inviteCreated || 0,
+        'No invite events this period.'
+      ) + (inv.inviteCreated > 0 ? `<div class="footnote">${esc(basisNote)}</div>` : '');
+  }
+
+  // Audit finding B-H5: previously a single ternary on ascRevenueAvailable
+  // hid the GA4-only numbers entirely whenever ASC hadn't connected yet,
+  // even when GA4 (a real, if secondary, signal) was available. Now checks
+  // each source's own availability independently.
+  function revenueTileValueSub(
+    ascCount: number,
+    ascUsd: number,
+    ga4Count: number,
+    ga4Usd: number,
+    ascAvailable: boolean,
+    ga4Available: boolean,
+    delta: string,
+    gapWarn: string
+  ): [string, string] {
+    if (ascAvailable) {
+      return [
+        `${fmtNum(ascCount)}${delta}${gapWarn}`,
+        `${fmtUsd(ascUsd)} (ASC) · GA4 events (incl. test purchases): ${fmtNum(ga4Count)}`,
+      ];
+    }
+    if (ga4Available) {
+      return [`${fmtNum(ga4Count)}${gapWarn}`, `${fmtUsd(ga4Usd)} (GA4 — incl. test purchases, ASC not yet connected)`];
+    }
+    return ['—', 'connects once ASC/GA4 access is set up'];
   }
 
   function renderRevenue(m: any) {
     const rev = m.revenue;
+    const prev = m.previousPeriod?.revenue;
     const el = document.getElementById('rev-cards') as HTMLElement;
+    const gapWarn = gapWarning(m.gapInfo);
+    const supportAscCount = rev?.ascRevenueAvailable ? rev.supportAsc.small + rev.supportAsc.medium + rev.supportAsc.large : 0;
+    const [waiversValue, waiversSub] = revenueTileValueSub(
+      rev?.waiversAsc || 0,
+      rev?.waiversAscUsd || 0,
+      rev?.purchaseComplete || 0,
+      rev?.purchaseCompleteUsd || 0,
+      Boolean(rev?.ascRevenueAvailable),
+      Boolean(rev?.available),
+      renderDelta(rev?.waiversAscUsd, prev?.waiversAscUsd, { suffix: '' }),
+      gapWarn
+    );
+    const [supportValue, supportSub] = revenueTileValueSub(
+      supportAscCount,
+      rev?.supportAscUsd || 0,
+      rev?.tipSent || 0,
+      rev?.tipSentUsdEstimate || 0,
+      Boolean(rev?.ascRevenueAvailable),
+      Boolean(rev?.available),
+      renderDelta(rev?.supportAscUsd, prev?.supportAscUsd, { suffix: '' }),
+      gapWarn
+    );
     const cards: [string, string, string][] = [
-      ['Ad earnings', rev?.admobAvailable ? fmtUsd(rev.adEarningsUsd) : '—', rev?.admobAvailable ? 'rewarded video' : 'connects once AdMob is set up'],
-      ['Impressions / eCPM', rev?.admobAvailable ? `${fmtNum(rev.adImpressions)} / ${fmtUsd(rev.adEcpmUsd)}` : '—', rev?.admobAvailable ? `match rate ${(rev.adMatchRatePct || 0).toFixed(0)}%` : 'connects once AdMob is set up'],
       [
-        'Willpower Waivers',
-        rev?.ascRevenueAvailable ? fmtNum(rev.waiversAsc) : '—',
-        rev?.ascRevenueAvailable
-          ? `${fmtUsd(rev.waiversAscUsd)} (ASC) · GA4 events (incl. test purchases): ${fmtNum(rev.purchaseComplete)}`
-          : 'connects once ASC access is set up',
+        'Ad earnings',
+        rev?.admobAvailable ? `${fmtUsd(rev.adEarningsUsd)}${renderDelta(rev.adEarningsUsd, prev?.adEarningsUsd, { suffix: '' })}${gapWarn}` : '—',
+        rev?.admobAvailable ? 'rewarded video' : 'connects once AdMob is set up',
       ],
       [
-        'Support LockPact',
-        rev?.ascRevenueAvailable ? fmtNum(rev.supportAsc.small + rev.supportAsc.medium + rev.supportAsc.large) : '—',
-        rev?.ascRevenueAvailable
-          ? `${fmtUsd(rev.supportAscUsd)} (ASC) · GA4 events (incl. test purchases): ${fmtNum(rev.tipSent)}`
-          : 'connects once ASC access is set up',
+        'Impressions / eCPM',
+        rev?.admobAvailable
+          ? `${fmtNum(rev.adImpressions)} / ${fmtUsd(rev.adEcpmUsd)}${renderDelta(rev.adEcpmUsd, prev?.adEcpmUsd, { suffix: '' })}${gapWarn}`
+          : '—',
+        rev?.admobAvailable ? `match rate ${(rev.adMatchRatePct || 0).toFixed(0)}%` : 'connects once AdMob is set up',
       ],
+      ['Willpower Waivers', waiversValue, waiversSub],
+      ['Support LockPact', supportValue, supportSub],
     ];
     el.innerHTML = cards
       .map(([label, value, sub]) => `<div class="card"><div class="kpi-label">${label}</div><div class="kpi-value">${value}</div><div class="kpi-sub">${sub}</div></div>`)
@@ -643,16 +820,34 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         return `<div><div class="f-bar" style="height:${heightPx}px;"></div><div class="f-num">${numText}</div><div class="f-lbl">${s.label}</div><div class="f-conv">${s.source}</div></div>`;
       })
       .join('');
+    // Audit finding B-M5: the referrer/invite summary is scoped to its OWN
+    // fixed trailing-30d window (see the collector's vercelSummary), NOT the
+    // currently-selected period — must be disclosed, never implied to be
+    // period-scoped, since it's shown right next to `acq.siteVisits`, which
+    // genuinely IS summed over the selected period.
+    const summaryWindowLabel =
+      acq?.summaryWindowStart && acq?.summaryWindowEnd ? ` (${acq.summaryWindowStart} → ${acq.summaryWindowEnd})` : '';
+    // acq.topReferrers/inviteVisitsWindowTotal are `null` when the
+    // collector's own summary sub-query failed this run — distinct from a
+    // confirmed-empty/zero result (companion fix to the collector's R4).
+    // `fmtNum(null)` would silently render "0", the exact zero-vs-missing
+    // conflation this whole audit was about — handled explicitly instead.
+    const referrersText = acq?.topReferrers
+      ? acq.topReferrers.map((r: any) => r.referrer).slice(0, 3).join(' · ') || 'none yet'
+      : '— (summary query failed this run)';
+    const inviteVisitsText = acq?.inviteVisitsWindowTotal === null ? '—' : fmtNum(acq?.inviteVisitsWindowTotal ?? 0);
     noteEl.textContent = acq?.vercelAvailable
-      ? `Top referrers: ${(acq.topReferrers || []).map((r: any) => r.referrer).slice(0, 3).join(' · ') || 'none yet'} — /invite page: ${fmtNum(acq.inviteVisitsWindowTotal)} visits`
+      ? `Top referrers${summaryWindowLabel}: ${referrersText} — /invite page: ${inviteVisitsText} visits`
       : 'Connects once Vercel access is set up.';
 
+    const prev = m.previousPeriod?.acquisition;
+    const gapWarn = gapWarning(m.gapInfo);
     ascRowsEl.innerHTML = acq?.ascAvailable
-      ? `<div class="row"><span class="k">App Store units this period</span><span class="v">${fmtNum(acq.downloads)}</span></div><div class="row"><span class="k muted">Source-type breakdown (search/browse/referral)</span><span class="v muted">connects once ASC page-view analytics is bootstrapped</span></div>`
+      ? `<div class="row"><span class="k">App Store units this period</span><span class="v">${fmtNum(acq.downloads)}${renderDelta(acq.downloads, prev?.downloads, { suffix: '' })}${gapWarn}</span></div><div class="row"><span class="k muted">Source-type breakdown (search/browse/referral)</span><span class="v muted">connects once ASC page-view analytics is bootstrapped</span></div>`
       : '<div class="row"><span class="k muted">Connects once ASC access is set up.</span></div>';
 
     webRowsEl.innerHTML = acq?.vercelAvailable
-      ? `<div class="row"><span class="k">Unique visits this period</span><span class="v">${fmtNum(acq.siteVisits)}</span></div><div class="row"><span class="k">Invite-link landings (/invite)</span><span class="v">${fmtNum(acq.inviteVisitsWindowTotal)}</span></div>`
+      ? `<div class="row"><span class="k">Unique visits this period</span><span class="v">${fmtNum(acq.siteVisits)}${renderDelta(acq.siteVisits, prev?.siteVisits, { suffix: '' })}${gapWarn}</span></div><div class="row"><span class="k">Invite-link landings (/invite)<span class="tech">${esc(summaryWindowLabel.trim())}</span></span><span class="v">${inviteVisitsText}</span></div>`
       : '<div class="row"><span class="k muted">Connects once Vercel access is set up.</span></div>';
   }
 
@@ -663,9 +858,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
   function renderQuality(m: any) {
     const rv = m.reviews;
+    const prev = m.previousPeriod?.reviews;
     const cardsEl = document.getElementById('qual-cards') as HTMLElement;
     const cards: [string, string, string][] = [
-      ['App Store rating', rv?.available ? `${rv.averageRating.toFixed(1)} (${fmtNum(rv.ratingCount)})` : '—', rv?.available ? '' : 'connects once the reviews source has run'],
+      [
+        'App Store rating',
+        rv?.available ? `${rv.averageRating.toFixed(1)} (${fmtNum(rv.ratingCount)})${renderDelta(rv.averageRating, prev?.averageRating, { isPct: true })}` : '—',
+        rv?.available ? '' : 'connects once the reviews source has run',
+      ],
       ['Crash-free sessions', '—', 'not instrumented — gap (no Crashlytics)'],
       ['iOS 18+ share', '—', 'connects in a follow-up (GA4 device dims not fetched yet)'],
     ];
@@ -675,10 +875,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
     const reviewsEl = document.getElementById('qual-reviews') as HTMLElement;
     if (rv?.available && rv.recentReviews?.length > 0) {
+      // Audit finding B-H6: App Store review text is public and
+      // attacker-writable (anyone can submit a review) — it must never
+      // reach innerHTML unescaped. Confirmed live XSS vector before this fix.
       reviewsEl.innerHTML = rv.recentReviews
         .map(
           (r: any) =>
-            `<div class="review"><span class="stars">${starString(r.rating)}</span> <b style="font-size:12px;">"${r.title}"</b> — <span style="color:var(--color-text-secondary);">${r.excerpt}</span> <span class="tech">${r.date}</span></div>`
+            `<div class="review"><span class="stars">${starString(r.rating)}</span> <b style="font-size:12px;">"${esc(r.title)}"</b> — <span style="color:var(--color-text-secondary);">${esc(r.excerpt)}</span> <span class="tech">${esc(r.date)}</span></div>`
         )
         .join('');
     } else {
@@ -686,9 +889,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     }
   }
 
-  function renderPeriodMetricsError(status: number) {
-    const errMsg = `<div class="row"><span class="k muted">Server error (HTTP ${status}) — data unavailable</span></div>`;
-    (document.getElementById('cmp') as HTMLElement).textContent = `Server error (HTTP ${status}) — could not load period metrics.`;
+  function renderPeriodMetricsError(status: number, message?: string) {
+    // Item 8 (validation round): a 400's real message (e.g. "no data
+    // available in the requested range") is more useful than a generic
+    // "Server error". `plainText` feeds .textContent assignments (never
+    // escaped — escaping there would show literal "&amp;"-style entities
+    // to the user); `escapedText` feeds the one innerHTML template below.
+    const plainText = message ? `Invalid range: ${message}` : `Server error (HTTP ${status}) — data unavailable`;
+    const escapedText = message ? `Invalid range: ${esc(message)}` : plainText;
+    const errMsg = `<div class="row"><span class="k muted">${escapedText}</span></div>`;
+    (document.getElementById('stalled-banner') as HTMLElement).style.display = 'none';
+    (document.getElementById('cmp') as HTMLElement).textContent = message ? plainText : `Server error (HTTP ${status}) — could not load period metrics.`;
     (document.getElementById('signals') as HTMLElement).innerHTML = errMsg;
     (document.getElementById('pact-bars') as HTMLElement).innerHTML = errMsg;
     (document.getElementById('unlock-response-row') as HTMLElement).innerHTML = errMsg;
@@ -697,7 +908,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     (document.getElementById('inv-bars') as HTMLElement).innerHTML = '';
     (document.getElementById('rev-cards') as HTMLElement).innerHTML = errMsg;
     (document.getElementById('funnel') as HTMLElement).innerHTML = '';
-    (document.getElementById('funnel-note') as HTMLElement).textContent = `Server error (HTTP ${status}) — data unavailable`;
+    (document.getElementById('funnel-note') as HTMLElement).textContent = plainText;
     (document.getElementById('asc-rows') as HTMLElement).innerHTML = errMsg;
     (document.getElementById('web-rows') as HTMLElement).innerHTML = errMsg;
     (document.getElementById('qual-cards') as HTMLElement).innerHTML = errMsg;

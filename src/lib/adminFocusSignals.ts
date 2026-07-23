@@ -3,6 +3,8 @@
 // DEV or MARKETING. Kept in one module so thresholds/tags are edited in
 // exactly one place.
 
+import { formatMinutes } from './format';
+
 export type FocusSignalTag = 'dev' | 'mkt';
 export type FocusSignalSeverity = 'red' | 'amber' | 'green';
 
@@ -38,7 +40,7 @@ export const FOCUS_SIGNAL_METRICS: FocusSignalMetricConfig[] = [
     thresholdAbs: 5,
     thresholdPct: 20,
     goodDirection: 'down',
-    format: (v) => `${v.toFixed(0)} min`,
+    format: (v) => formatMinutes(v),
   },
   {
     key: 'pairedPct',
@@ -53,6 +55,25 @@ export const FOCUS_SIGNAL_METRICS: FocusSignalMetricConfig[] = [
     label: 'Engaged pairs (14d)',
     tag: 'mkt',
     thresholdPct: 20,
+    goodDirection: 'up',
+    format: (v) => `${v.toFixed(0)}`,
+  },
+  // New in this round (audit finding B-M9 — signal coverage was limited to
+  // 4 metrics vs. the spec's own example list, which explicitly calls out
+  // funnel-step conversion and referrer/traffic thresholds).
+  {
+    key: 'onboardingCompletionPct',
+    label: 'Onboarding completion rate',
+    tag: 'dev',
+    thresholdAbs: 5,
+    goodDirection: 'up',
+    format: (v) => `${v.toFixed(0)}%`,
+  },
+  {
+    key: 'siteVisits',
+    label: 'Site visits',
+    tag: 'mkt',
+    thresholdPct: 25,
     goodDirection: 'up',
     format: (v) => `${v.toFixed(0)}`,
   },
@@ -83,6 +104,11 @@ export function computeFocusSignals(
     if (curVal === undefined || prevVal === undefined) continue;
 
     const absDelta = curVal - prevVal;
+    // Audit finding B-M2: prevVal===0 forced pctDelta to 0, which meant a
+    // percent-only-threshold metric going from 0 to any positive value
+    // could never cross its own threshold and silently never signaled.
+    // Treat 0 -> positive as an automatic threshold cross instead.
+    const zeroBaselineCross = prevVal === 0 && curVal > 0;
     const pctDelta = prevVal !== 0 ? (absDelta / prevVal) * 100 : 0;
     const exceedsAbs = cfg.thresholdAbs !== undefined && Math.abs(absDelta) >= cfg.thresholdAbs;
     const exceedsPct = cfg.thresholdPct !== undefined && Math.abs(pctDelta) >= cfg.thresholdPct;
@@ -91,14 +117,27 @@ export function computeFocusSignals(
     // on a tiny, meaningless absolute move. A metric with only one threshold
     // kind defined keeps firing on that one alone, as before.
     const bothDefined = cfg.thresholdAbs !== undefined && cfg.thresholdPct !== undefined;
-    const crossed = bothDefined ? exceedsAbs && exceedsPct : exceedsAbs || exceedsPct;
+    const crossed = zeroBaselineCross || (bothDefined ? exceedsAbs && exceedsPct : exceedsAbs || exceedsPct);
     if (!crossed) continue;
 
     const improved = cfg.goodDirection === 'up' ? absDelta > 0 : absDelta < 0;
-    const doubleThreshold =
-      Math.max(cfg.thresholdAbs ?? 0, 0) * 2 || Math.max(cfg.thresholdPct ?? 0, 0) * 2;
-    const magnitude = Math.max(Math.abs(absDelta), Math.abs(pctDelta));
-    const severity: FocusSignalSeverity = improved ? 'green' : magnitude >= doubleThreshold ? 'red' : 'amber';
+    // Audit finding B-M1: severity magnitude previously Math.max'd an
+    // absolute-point delta against a percent delta together, comparing two
+    // different units for any metric with only ONE threshold kind defined —
+    // e.g. `engagedPairs` (percent-only) could hit "red" purely because its
+    // raw pair-count delta happened to exceed a percent-scaled threshold
+    // number. Now each threshold KIND is only ever compared against its own
+    // doubled value, never against the other kind's.
+    let severity: FocusSignalSeverity;
+    if (improved) {
+      severity = 'green';
+    } else if (zeroBaselineCross) {
+      severity = 'amber'; // floor — a 0-baseline cross is always at least a real signal, but "double the threshold" has no meaning from a 0 base
+    } else {
+      const redOnAbs = cfg.thresholdAbs !== undefined && Math.abs(absDelta) >= cfg.thresholdAbs * 2;
+      const redOnPct = cfg.thresholdPct !== undefined && Math.abs(pctDelta) >= cfg.thresholdPct * 2;
+      severity = redOnAbs || redOnPct ? 'red' : 'amber';
+    }
     const direction = absDelta > 0 ? 'rose' : absDelta < 0 ? 'fell' : 'held steady';
 
     signals.push({
