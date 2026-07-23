@@ -111,7 +111,7 @@ It's visibility, not accountability. Friends can see your stats after the fact, 
 
 ### Is the Halo hardware device worth it?
 
-It's optional and adds ambient, ScreenZen is fully functional without it. It doesn't change the core friction-vs-accountability comparison with LockPact either way.
+It's optional. ScreenZen is fully functional without it — the Halo just adds an ambient physical notification layer on top of the app. It doesn't change the core friction-vs-accountability comparison with LockPact either way.
 
 ### Can I use ScreenZen and LockPact together?
 

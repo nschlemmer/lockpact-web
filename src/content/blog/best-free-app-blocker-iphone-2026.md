@@ -161,9 +161,9 @@ Worth including here mainly for honesty: if you searched "app blocker iPhone" an
 
 ## What Reddit Recommends
 
-Search r/nosurf, r/productivity, or r/getdisciplined for "best app blocker iPhone" and a few names come up over and over. Opal and One Sec get recommended most often — Opal for people willing to pay for polish, One Sec for people who want something free and are already trying to change. Cold Turkey shows up constantly, almost always followed by a comment clarifying it's really a desktop tool. AppBlock gets recommended by people who specifically want granular scheduling rules.
+Search r/nosurf, r/productivity, or r/getdisciplined for "best app blocker iPhone" and a handful of names come up repeatedly, based on browsing those threads directly rather than any formal survey. Opal and One Sec get mentioned most often in our own reading — Opal from people willing to pay for polish, One Sec from people who want something free and are already trying to change. Cold Turkey comes up often too, usually with someone clarifying in the replies that it's really a desktop tool. AppBlock tends to get recommended by people specifically after granular scheduling rules.
 
-What's notably rare in those threads: anyone recommending a tool that involves another person. Most of Reddit's advice is solo-tool advice, because that's what most of these apps are. The recurring complaint underneath almost every "what app blocker actually worked for you" thread is the same one this guide keeps returning to — people report initial success, then quietly turning the blocker off a few weeks later, because nothing stopped them except themselves.
+One pattern was consistent across the threads we looked at: recommendations for a tool that involves another person were rare. Most of Reddit's advice in this space is solo-tool advice, because that's what most of these apps are. And a recurring complaint shows up in a lot of "what app blocker actually worked for you" threads — people report initial success, then admit to quietly turning the blocker off a few weeks later, because nothing stopped them except themselves.
 
 
 ## The Honest Truth About Free Blockers
