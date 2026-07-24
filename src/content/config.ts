@@ -11,6 +11,10 @@ const blog = defineCollection({
     tags: z.array(z.string()).default([]),
     image: z.string().optional(),
     imageAlt: z.string().optional(),
+    // Optional FAQPage JSON-LD source. Keep each `a` short (~50 words) — this feeds a
+    // machine-readable answer set for answer engines (AI Overviews, ChatGPT/Bing
+    // retrieval, Perplexity), not the visible article prose.
+    faq: z.array(z.object({ q: z.string(), a: z.string() })).optional(),
   }),
 });
 
