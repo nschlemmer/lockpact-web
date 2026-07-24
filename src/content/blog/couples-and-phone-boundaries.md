@@ -148,6 +148,8 @@ If you want to see how other pairs are handling this (roommates, co-workers, fri
 
 And if you're trying to understand why solo phone rules fail, **[Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work)** breaks down the behavioral science.
 
+If distance is part of your situation, **[Long Distance Relationship Phone Habits: Why It's a Different Problem](/blog/long-distance-relationship-phone-boundaries/)** covers the version of this that co-located couples don't have to deal with.
+
 ---
 
 ## The Real Goal
@@ -186,6 +188,6 @@ Most couples report a noticeable shift by day four or five, with the rule feelin
 
 LockPact can help you keep that boundary once you've decided on it. Your partner holds the app unlock key during your window. The friction is built in. The commitment becomes visible.
 
-But the real boundary? That's between you and your partner. The phone is just the thing you're putting down.
+But the real boundary? That's between you and your partner. The phone is just the thing you're putting down. Dinner is a good place to start — [the phone stacking game](/blog/phone-stacking-dinner-game/) turns the first boundary into something you can practice together in twenty minutes.
 
 Ready to try? [Get LockPact on the App Store](https://apps.apple.com/app/lockpact/id6759302382) and set your first boundary together.

@@ -180,7 +180,7 @@ Yes. Solo testing and partner mode are both free. LockPact's value is the accoun
 
 ## Get LockPact
 
-one sec is excellent at what it does. But if friction doesn't work and you need someone else holding the key, LockPact is free.
+one sec is excellent at what it does. But if friction doesn't work and you need someone else holding the key, [LockPact](/) is free.
 
 **[Get LockPact on the App Store](https://apps.apple.com/app/lockpact/id6759302382)**
 

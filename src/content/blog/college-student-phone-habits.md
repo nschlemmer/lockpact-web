@@ -1,12 +1,13 @@
 ---
-title: "Phone Habits in College: What Actually Helps When Everything Is On Your Phone"
-description: "College is the hardest phone environment: no one's watching, the phone is required, and habits form fast. Here's what actually works for students."
+title: "How College Students Actually Fix Their Phone Habits (Study Mode That Sticks)"
+description: "How to stop scrolling in class and actually study: what college students say works, what doesn't, and why willpower-only strategies fail by the second hour."
 pubDate: 2026-05-14
+updatedDate: 2026-07-23
 author: "LockPact"
 tags: ["college", "students", "phone habits", "studying", "productivity"]
 ---
 
-College is a particular phone environment. Your schedule is your own — no one is watching when you check your phone during lecture or when you fall into a three-hour Reddit spiral at 11pm. The phone is also genuinely necessary: syllabuses, group chats, research, campus apps, everything runs through it.
+If you're trying to figure out how to stop scrolling in class or during a study session, you're dealing with a particular phone environment. Your schedule is your own — no one is watching when you check your phone during lecture or when you fall into a three-hour Reddit spiral at 11pm. The phone is also genuinely necessary: syllabuses, group chats, research, campus apps, everything runs through it.
 
 The result is a uniquely difficult phone environment to navigate. Here's what actually works.
 
@@ -96,8 +97,8 @@ No. Most actual school tasks (reading PDFs, accessing the LMS, research) can be 
 
 ---
 
-The phone is your biggest study rival. The good news: it's also the easiest variable to change.
+The phone is your biggest study rival. The good news: it's also the easiest variable to change. For most students that rival has a name — see [what actually works to reduce TikTok use](/blog/how-to-reduce-tiktok-use/), since it's the app most likely to eat a study session.
 
 **Related reading:** [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick) · [Roommate Phone Pacts: How to Stop Late-Night Scrolling](/blog/roommate-phone-pact-guide) · [Phone Addiction vs. Phone Habit](/blog/phone-addiction-vs-phone-habit)
 
-If your roommate or study partner is dealing with the same thing, [LockPact](https://apps.apple.com/app/lockpact/id6759302382) lets you hold each other's app locks during study blocks. Free for both of you. Worth trying during your next exam period.
+If your roommate or study partner is dealing with the same thing, [LockPact](https://apps.apple.com/app/lockpact/id6759302382) lets you hold each other's app locks during study blocks. Free for both of you. Worth trying during your next exam period. If you want to see it next to the other options first, [our comparison of the best free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/) covers where it fits.

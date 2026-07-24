@@ -113,7 +113,7 @@ Environment design (remove the phone from situations where the habit fires) comb
 
 ---
 
-Most phone problems are habit problems in disguise. The framing matters, because it points you toward the right solutions.
+Most phone problems are habit problems in disguise. The framing matters, because it points you toward the right solutions. The same habit loop fires during business hours too — see [what's actually reasonable for phone boundaries at work](/blog/phone-boundaries-at-work/).
 
 **Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners) · [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick)
 

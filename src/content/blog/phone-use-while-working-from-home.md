@@ -92,7 +92,7 @@ Yes, particularly if your partner also works from home. Shared app locks during 
 
 ---
 
-The office had social friction that made phone discipline easier. Working from home requires building that friction yourself.
+The office had social friction that made phone discipline easier. Working from home requires building that friction yourself. If the urge to check your phone during the workday is driven less by boredom than by low-grade dread, [the anxiety loop behind phone use](/blog/phone-use-and-anxiety/) is worth understanding too.
 
 **Related reading:** [Phone Boundaries at Work](/blog/phone-boundaries-at-work) · [The Phone-Free Morning](/blog/phone-free-morning-routine) · [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick)
 

@@ -138,7 +138,7 @@ Yes. Solo limits work for some people, especially when combined with structural 
 
 ---
 
-You don't need to be more disciplined. You need a better-designed limit.
+You don't need to be more disciplined. You need a better-designed limit. If you want the philosophy behind why discipline alone doesn't work, [our review of Cal Newport's Digital Minimalism](/blog/digital-minimalism-review/) covers the gap between the "why" and the "how."
 
 **Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners) · [The Phone-Free Morning](/blog/phone-free-morning-routine)
 

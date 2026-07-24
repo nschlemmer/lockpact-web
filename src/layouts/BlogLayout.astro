@@ -8,6 +8,7 @@ interface Props {
   title: string;
   description: string;
   pubDate: Date;
+  updatedDate?: Date;
   author: string;
   tags?: string[];
   image?: string;
@@ -15,7 +16,7 @@ interface Props {
   readTime?: string;
 }
 
-const { title, description, pubDate, author, tags = [], image, imageAlt, readTime } = Astro.props;
+const { title, description, pubDate, updatedDate, author, tags = [], image, imageAlt, readTime } = Astro.props;
 
 const formattedDate = pubDate.toLocaleDateString('en-US', {
   year: 'numeric',
@@ -23,16 +24,18 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
   day: 'numeric',
 });
 
-const structuredData = {
+const blogPostingData = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline: title,
   description: description,
   author: {
     '@type': 'Organization',
-    name: author,
+    name: 'LockPact',
+    url: 'https://lockpact.app',
   },
   datePublished: pubDate.toISOString(),
+  dateModified: (updatedDate ?? pubDate).toISOString(),
   publisher: {
     '@type': 'Organization',
     name: 'LockPact',
@@ -43,6 +46,18 @@ const structuredData = {
     '@id': Astro.url.href,
   },
 };
+
+const breadcrumbData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://lockpact.app/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://lockpact.app/blog/' },
+    { '@type': 'ListItem', position: 3, name: title, item: Astro.url.href },
+  ],
+};
+
+const structuredData = [blogPostingData, breadcrumbData];
 ---
 
 <BaseLayout

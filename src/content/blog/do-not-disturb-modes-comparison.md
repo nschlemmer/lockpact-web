@@ -94,4 +94,4 @@ Focus modes are a good tool solving a specific problem (interruption management)
 
 **Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work) · [Instagram's Built-In Time Limit vs. Blocking It Entirely](/blog/instagram-vs-lockpact-blocking) · [Opal vs. LockPact](/blog/opal-vs-lockpact)
 
-For the bigger problem: [LockPact](https://apps.apple.com/app/lockpact/id6759302382) with a partner, or Screen Time limits with a partner-set passcode. The key ingredient in both is external accountability.
+For the bigger problem: [LockPact](/) with a partner, or Screen Time limits with a partner-set passcode. The key ingredient in both is external accountability. [Get it on the App Store](https://apps.apple.com/app/lockpact/id6759302382).

@@ -149,9 +149,10 @@ Freedom costs roughly $40–130 per year depending on devices. LockPact is free,
 
 - **[Opal vs. LockPact: Which Screen Time App Is Right for You?](/blog/opal-vs-lockpact)** — Another comparison of solo blocking vs. partner accountability.
 - **[The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners)** — Why partner accountability works when solo discipline doesn't.
+- **[Cold Turkey vs. LockPact: Hardcore Blocking vs. Social Accountability](/blog/coldturkey-vs-lockpact/)** — Freedom's cross-device scheduling compared against an even harder-line solo blocker.
 
 ---
 
-**[Get LockPact on the App Store](https://apps.apple.com/app/lockpact/id6759302382)**
+If a willing partner is more available to you than a $40–130/year subscription, [LockPact](/) is free. **[Get LockPact on the App Store](https://apps.apple.com/app/lockpact/id6759302382)**
 
 Start in solo mode. Test your self-discipline. When you're ready, invite your partner.
