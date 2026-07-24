@@ -114,6 +114,7 @@ LockPact, if both people are willing to participate — the mutual structure (yo
 - **[Why Screen Time Apps Don't Work (And What Does)](/blog/why-screen-time-apps-dont-work)** — The behavioral science behind why solo blockers fail.
 - **[Best Free App Blockers for iPhone (2026)](/blog/best-free-app-blocker-iphone-2026)** — Honest reviews of every major screen time app, including Opal and LockPact.
 - **[AppBlock vs. LockPact](/blog/appblock-vs-lockpact)** — How LockPact compares to AppBlock's approach.
+- **[Screen Time Not Working on iPhone? Here's the Actual Reason](/blog/apple-screen-time-doesnt-work/)** — Why Apple's native tool can't solve this on its own, whether or not you add Opal on top of it.
 
 If you've got a willing partner, [LockPact](/) is free — no trial period to compare against Opal's paid tier. [Get it on the App Store →](https://apps.apple.com/app/lockpact/id6759302382)
 

@@ -30,14 +30,9 @@ const blogPostingData = {
   headline: title,
   description: description,
   author: {
-    '@type': 'Person',
-    name: 'Nick',
-    jobTitle: 'Founder',
-    worksFor: {
-      '@type': 'Organization',
-      name: 'LockPact',
-      url: 'https://lockpact.app',
-    },
+    '@type': 'Organization',
+    name: 'LockPact',
+    url: 'https://lockpact.app',
   },
   datePublished: pubDate.toISOString(),
   dateModified: (updatedDate ?? pubDate).toISOString(),

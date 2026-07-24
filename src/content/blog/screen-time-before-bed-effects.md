@@ -116,7 +116,7 @@ The interventions with the strongest evidence are structural, not willpower-base
 
 ---
 
-If late-night scrolling is your biggest phone habit problem, the fix isn't information — you already know it's a problem. It's making the phone structurally unavailable during the hours that matter.
+If late-night scrolling is your biggest phone habit problem, the fix isn't information — you already know it's a problem. It's making the phone structurally unavailable during the hours that matter. The same principle applies past sunset too — see [how to be more present](/blog/how-to-be-more-present/) once the phone's out of the room, not just at night.
 
 **Related reading:** [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick) · [The Phone-Free Morning](/blog/phone-free-morning-routine) · [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work)
 
