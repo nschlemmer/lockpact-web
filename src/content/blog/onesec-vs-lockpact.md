@@ -1,7 +1,8 @@
 ---
 title: "one sec vs. LockPact: Friction vs. Accountability"
-description: "one sec uses friction (a deep breath delay) before opening apps. LockPact uses partner accountability. Compare both screen time approaches and pick the right one."
+description: "one sec uses friction (a deep breath delay) before opening apps. LockPact uses partner accountability. Compare both approaches and pick the right one."
 pubDate: 2026-05-02
+updatedDate: 2026-07-24
 author: "LockPact"
 tags: ["comparison", "one sec", "screen time apps", "accountability"]
 ---
@@ -58,7 +59,7 @@ LockPact doesn't use friction. It uses gatekeeping.
 
 **Mechanism vs. Presence.** one sec works through friction—making the moment of decision slower. LockPact works through presence—making someone else part of the decision. Friction assumes you'll self-correct if you pause. Presence assumes you'll self-correct if someone cares.
 
-**Solo vs. Social.** one sec is designed to be used alone. You're in a conversation with yourself. LockPact is designed to be used in pairs. You're in a conversation with your partner. This isn't a small difference. It changes what works.
+**Solo vs. Social.** one sec is designed to be used alone. You're in a conversation with yourself. LockPact is designed to be used in pairs. You're in a conversation with your partner. This isn't a small difference. It changes what works. For the wider field of apps built around a friend or partner instead of a solo pause, see our roundup of [apps that let a friend control your screen time](/blog/apps-that-let-a-friend-control-your-screen-time/).
 
 **The Bypass Question.** one sec's friction-based approach relies on you *wanting* to override it less over time. If you start tapping through the breathing animation every time, one sec has failed. LockPact's approach is different: you can always bypass (Apple's architecture guarantees it), but when you do, your partner finds out. The bypass isn't a clean escape. It's a betrayal. This matters psychologically.
 

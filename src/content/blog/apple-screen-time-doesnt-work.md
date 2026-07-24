@@ -2,7 +2,7 @@
 title: "Screen Time Not Working on iPhone? Here's the Actual Reason"
 description: "Screen time not working on your iPhone isn't a bug — it's the design. You set the passcode, so you can always override it. Here's the actual fix."
 pubDate: 2026-04-09
-updatedDate: 2026-07-23
+updatedDate: 2026-07-24
 author: "LockPact"
 tags: ["Apple", "Screen Time", "alternatives"]
 ---
@@ -72,6 +72,8 @@ If the passcode lives with someone else — someone who has to say yes before th
 This is the mechanism LockPact is built around. You and a partner each pick apps to lock on your own device. Only they can approve your unlock requests — and only you can approve theirs. Apple still makes it architecturally possible for either of you to bypass Screen Time entirely from Settings (that part can't be prevented — Apple doesn't allow third-party apps to block Settings access, and no app honestly claiming otherwise is telling the truth). What changes is that a bypass doesn't happen invisibly anymore. Your partner gets notified. The override isn't private, so it isn't free.
 
 That's the actual structural difference between Screen Time and a partner-held lock: Screen Time makes overriding easy and invisible. A partner lock makes overriding possible but socially costly. It doesn't out-engineer your discipline. It changes who's holding the key.
+
+LockPact isn't the only app built around this idea — see the full roundup of [apps that let a friend control your screen time](/blog/apps-that-let-a-friend-control-your-screen-time/) for how the mechanics differ from one to the next.
 
 ## How These Tools Compare
 

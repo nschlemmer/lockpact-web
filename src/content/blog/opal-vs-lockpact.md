@@ -2,7 +2,7 @@
 title: "Opal vs. LockPact: Which Screen Time App Is Right for You?"
 description: "A fair comparison of Opal and LockPact — the real cost of Opal's $100/year plan, what each app actually enforces, and when Opal is the better pick."
 pubDate: 2026-04-21
-updatedDate: 2026-07-23
+updatedDate: 2026-07-24
 author: "LockPact"
 tags: ["comparison", "Opal", "screen time"]
 ---
@@ -41,7 +41,7 @@ Over three years, Opal's paid tier costs roughly what a mid-range iPhone case co
 
 **Free tier has no teeth.** The free version of Opal lets you block apps, but it also lets you easily unblock them. There's no enforcement. No cost to overriding it. This is fine if Opal is just a reminder tool. But if you're installing it because you *need* to stop yourself, the free tier won't hold you.
 
-**Accountability is one-way.** Opal's "Buddies" feature lets your partner see when you use blocked apps. But *you chose* to show them. You can hide it. You can pretend you weren't on the app. Your partner isn't holding a key. They're just watching. That's weaker than it sounds.
+**Accountability is one-way.** Opal's "Buddies" feature lets your partner see when you use blocked apps. But *you chose* to show them. You can hide it. You can pretend you weren't on the app. Your partner isn't holding a key. They're just watching. That's weaker than it sounds. If real veto power is what you're after, our roundup of [apps that let a friend control your screen time](/blog/apps-that-let-a-friend-control-your-screen-time/) covers the ones actually built for that.
 
 **Gamification bloat.** Opal has streaks, progress tracking, notifications about your wins. For some people, this is motivating. For others, it's noise. The app is trying to be your cheerleader. But [research on intrinsic vs. extrinsic motivation](https://www.apa.org/science/about/psa/motivation) suggests that leaderboards and badges can actually undermine internal motivation. You're doing it for the streak, not for yourself.
 
