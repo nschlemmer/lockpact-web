@@ -23,11 +23,13 @@ Here are 8 apps worth knowing, what's actually free in each one, and where the f
 | **LockPact** | Mutual partner locking | Everything | None | Two people who trust each other |
 | **One Sec** | Friction / pause before opening | Fully-featured | $5.99/mo optional | People already trying to change |
 | **ScreenZen** | Friction + streak sharing | Core features | None currently | Friends who like gamified stats |
-| **Opal** | Solo blocking | Basic blocking only | $9.99/mo (~$100/yr) | People who'll pay for polish |
+| **Opal** | Solo blocking | Basic blocking only | $19.99/mo (~$100/yr with the annual plan) | People who'll pay for polish |
 | **AppBlock** | Solo blocking, granular rules | Core blocking | Premium unlocks Strict Mode | Power users who want control |
 | **Freedom** | Cross-device blocking | 7 sessions/month trial | ~$40–130/yr | Multi-device solo blockers |
 | **Friend Controls** | Friend-managed locking | Core locking | None known | Testing a lighter partner-lock |
 | **Cold Turkey** | Hardcore desktop blocking | Basic blocking | $39 one-time (Mac/Windows) | Deadline-driven desktop focus |
+
+Prices reflect each app's live App Store listing as of July 2026 and can change without notice.
 
 ## 1. LockPact
 
@@ -86,13 +88,13 @@ The gap is that visibility isn't the same as control. Nobody has to approve anyt
 
 ## 4. Opal
 
-**Price:** Free with $9.99/month premium ($100/year)
+**Price:** Free with $19.99/month premium (~$100/year with Opal's annual plan, as of July 2026 — billing month-to-month instead runs closer to $240/year)
 **What's Free:** Basic app blocking, no bypass protection, limited features
 **The Catch:** Everything worth paying for costs money; free tier feels like a trial
 
 We covered Opal in depth in [Opal vs. LockPact](/blog/opal-vs-lockpact), so let's keep this brief.
 
-Opal's free tier lets you block apps. But the real features — Deep Focus (bypass-resistant locking), buddy notifications, Mac support — are locked behind the $100/year paywall.
+Opal's free tier lets you block apps. But the real features — Deep Focus (bypass-resistant locking), buddy notifications, Mac support — are locked behind the paywall.
 
 The free tier exists to let you experience Opal without paying. Once you're hooked, the paywall appears. This is standard SaaS strategy, and it's honest marketing. But it's not a free app. It's a paid app with a free trial.
 

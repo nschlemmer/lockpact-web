@@ -10,7 +10,7 @@ tags: ["comparison", "Opal", "screen time"]
 
 | Feature | Opal | LockPact |
 |---------|------|----------|
-| **Price** | $100/year | Free |
+| **Price** | ~$100/year with the annual plan (as of July 2026) | Free |
 | **Core Model** | Solo focus sessions + optional accountability buddy | Mutual partner accountability |
 | **How It Works** | You set focus times; optional partner gets notifications of when you use blocked apps | Partner holds the unlock key; you hold theirs |
 | **Accountability** | One-way (partner sees your activity) | Two-way (mutual trust and enforcement) |
@@ -22,17 +22,17 @@ tags: ["comparison", "Opal", "screen time"]
 
 ## The Actual Price Breakdown
 
-Opal's pricing isn't hidden, but it's worth laying out plainly next to what you actually get, because "$100/year" undersells how big that gap is over time.
+Opal's pricing isn't hidden, but it's worth laying out plainly next to what you actually get, because "~$100/year" undersells how big that gap is over time. Figures below are per Opal's App Store listing as of July 2026.
 
 | | Opal | LockPact |
 |---|---|---|
-| **Monthly** | $9.99/mo billed monthly | $0 |
+| **Monthly** | $19.99/mo billed monthly (~$240/yr if you never switch to the annual plan) | $0 |
 | **Annual** | ~$100/yr (roughly $8.33/mo) | $0 |
-| **3-year cost** | ~$300 | $0 |
+| **3-year cost** | ~$300 on the annual plan | $0 |
 | **What's gated behind payment** | Deep Focus (the bypass-resistant mode), buddy notifications, Mac support, advanced scheduling | Nothing — pairing, unlock requests, bypass detection, and mutual locking are all included |
 | **Free tier ceiling** | Basic blocking you can turn off anytime — no real enforcement | Not applicable; there's only one tier |
 
-Over three years, Opal's paid tier costs roughly what a mid-range iPhone case costs every few months, forever, for as long as you keep paying to stay accountable to yourself. That's not a knock on Opal's engineering — Deep Focus is a genuinely well-built feature. It's a question of whether you want to keep paying a subscription to enforce a boundary a free, mutual system enforces for nothing.
+Over three years, Opal's paid tier costs roughly what a mid-range iPhone case costs every few months, forever, for as long as you keep paying to stay accountable to yourself — more than double that if you stay on month-to-month billing instead of committing to the annual plan. That's not a knock on Opal's engineering — Deep Focus is a genuinely well-built feature. It's a question of whether you want to keep paying a subscription to enforce a boundary a free, mutual system enforces for nothing.
 
 
 ## Where Opal Falls Short
