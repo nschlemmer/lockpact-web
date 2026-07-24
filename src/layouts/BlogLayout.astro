@@ -4,6 +4,11 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import DownloadCTA from '../components/DownloadCTA.astro';
 
+interface FaqItem {
+  q: string;
+  a: string;
+}
+
 interface Props {
   title: string;
   description: string;
@@ -14,9 +19,10 @@ interface Props {
   image?: string;
   imageAlt?: string;
   readTime?: string;
+  faq?: FaqItem[];
 }
 
-const { title, description, pubDate, updatedDate, author, tags = [], image, imageAlt, readTime } = Astro.props;
+const { title, description, pubDate, updatedDate, author, tags = [], image, imageAlt, readTime, faq } = Astro.props;
 
 const formattedDate = pubDate.toLocaleDateString('en-US', {
   year: 'numeric',
@@ -57,7 +63,31 @@ const breadcrumbData = {
   ],
 };
 
-const structuredData = [blogPostingData, breadcrumbData];
+// FAQPage JSON-LD, emitted only when frontmatter `faq` is present. Google retired the
+// FAQ rich-result feature for Search in 2026 (no more expandable snippets), so this no
+// longer buys classic rich-result real estate — it's kept as a machine-readable answer
+// set for non-Google answer engines (AI Overviews, Bing/ChatGPT retrieval, Perplexity,
+// Claude) that still parse FAQPage for extraction. BaseLayout renders `structuredData`
+// as a single <script type="application/ld+json"> containing a JSON array of root
+// nodes (not a @graph wrapper) — appending here follows that existing convention.
+const faqPageData = faq && faq.length > 0
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.a,
+        },
+      })),
+    }
+  : null;
+
+const structuredData = faqPageData
+  ? [blogPostingData, breadcrumbData, faqPageData]
+  : [blogPostingData, breadcrumbData];
 ---
 
 <BaseLayout

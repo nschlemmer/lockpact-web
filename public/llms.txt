@@ -1,0 +1,29 @@
+# LockPact
+
+> LockPact is a free iOS app for mutual screen time accountability between two people. Each person selects apps to block on their own phone, and only their partner can approve unlocking them — the lock is mutual from the moment you pair, not a one-way parent/child or monitor/monitored relationship.
+
+The device owner can always bypass Screen Time restrictions through Apple's own Settings and Face ID; Apple makes this architecturally impossible for any third-party app to prevent, on LockPact or any competitor. LockPact does not claim to prevent bypass — it detects the bypass and notifies your partner when it happens. The value is social accountability, not technical enforcement. Screen time usage data and app selections never leave the device; only lock state and unlock-request metadata sync between paired partners.
+
+## Product
+
+- [LockPact](https://lockpact.app/): Homepage — what LockPact does, how mutual locking and bypass detection work, App Store download link.
+- [Support LockPact](https://lockpact.app/support-lockpact/): Optional one-time tip that keeps LockPact free with no subscription tier.
+- [Support / FAQ](https://lockpact.app/support/): General product support and frequently asked questions.
+
+## Compare LockPact to other screen time apps
+
+- [Apps That Let a Friend Control Your Screen Time (2026)](https://lockpact.app/blog/apps-that-let-a-friend-control-your-screen-time/): Comparison roundup of every partner-approval screen time app, LockPact included, with pricing and mechanics for each.
+- [Friend Controls vs. LockPact](https://lockpact.app/blog/friend-controls-vs-lockpact/): Multi-friend "Controller" approval model vs. LockPact's mutual two-person lock.
+- [FriendLock vs. LockPact](https://lockpact.app/blog/friendlock-vs-lockpact/): Selfie-based time-earning with no approver vs. LockPact's partner-approved unlocking.
+- [Best Free App Blockers for iPhone (2026)](https://lockpact.app/blog/best-free-app-blocker-iphone-2026/): Where LockPact fits among free solo blockers and partner-based apps.
+
+## Guides
+
+- [The 7-Day Phone Pact](https://lockpact.app/blog/how-to-run-a-7-day-phone-pact/): How to run a one-week mutual phone lock challenge with a partner, including what to block and what to do about bypass.
+- [Screen Time Accountability Partners: The Psychology of Why They Work](https://lockpact.app/blog/psychology-of-accountability-partners/): The behavioral-science case for mutual accountability over solo willpower apps.
+- [Why Screen Time Apps Don't Work](https://lockpact.app/blog/why-screen-time-apps-dont-work/): Why solo, self-controlled blockers fail, and what mutual accountability changes about the incentive structure.
+- [Screen Time Not Working on iPhone? Here's the Actual Reason](https://lockpact.app/blog/apple-screen-time-doesnt-work/): Why Apple's built-in Screen Time is trivially self-overridden by the same person it's meant to restrict.
+
+## Optional
+
+- Phone Pact Contract Template: a printable/shareable template for two people to agree pact terms in writing. Planned; not yet published as of this writing.
