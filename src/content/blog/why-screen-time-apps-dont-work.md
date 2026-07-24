@@ -1,7 +1,8 @@
 ---
 title: "Why Screen Time Apps Don't Work (And What Does)"
-description: "Most screen time apps fail because they treat a social problem as a technical one. Learn why solo blockers fail, and what actually works: accountability partners."
+description: "Most screen time apps fail because they treat a social problem as a technical one. Why solo blockers fail, and what actually works instead: accountability."
 pubDate: 2026-04-13
+updatedDate: 2026-07-24
 author: "LockPact"
 tags: ["screen time", "accountability", "behavior change"]
 ---
@@ -100,6 +101,8 @@ None of them solve the core problem: **when you're alone with the app and bored,
 They all try to make the blocker stronger (Deep Focus, advanced algorithms, better UI). But a stronger lock that you can disable is still just a lock you can disable.
 
 The solo blocker is trying to replace a person. It can't.
+
+That's the dividing line worth knowing before you pick a tool: for the newer apps built specifically around a friend or partner holding the key instead of a setting, see our roundup of [apps that let a friend control your screen time](/blog/apps-that-let-a-friend-control-your-screen-time/).
 
 What you actually need is for someone who cares about you to care about your commitment. Not to force you. To make you not want to let them down.
 

@@ -2,7 +2,7 @@
 title: "ScreenZen vs. LockPact: Friction vs. Accountability"
 description: "ScreenZen's escalating friction vs. LockPact's mutual partner lock — full comparison, real-world example, and when ScreenZen is the better pick."
 pubDate: 2026-04-25
-updatedDate: 2026-07-23
+updatedDate: 2026-07-24
 author: "LockPact"
 tags: ["comparison", "ScreenZen", "accountability"]
 ---
@@ -37,7 +37,7 @@ This is clever. It uses psychology, not enforcement.
 
 **Daily Open Limits.** After you open an app 5 times today, ScreenZen stops letting you open it until tomorrow. It's a softer approach than hard blocking—you get a few bites at the apple, then it's closed.
 
-**Social Features.** Share your stats with friends. See how many times they opened Instagram today. It's not accountability (they can't approve/deny your unlocks), but it's visibility. Knowing someone else can see your behavior adds light pressure.
+**Social Features.** Share your stats with friends. See how many times they opened Instagram today. It's not accountability (they can't approve/deny your unlocks), but it's visibility. Knowing someone else can see your behavior adds light pressure. For apps where a friend actually does approve or deny, see our roundup of [apps that let a friend control your screen time](/blog/apps-that-let-a-friend-control-your-screen-time/).
 
 **Almost Entirely Free.** The core app—delays, limits, social sharing—costs nothing. You can add a Halo hardware device ($99) for ambient notifications, but it's optional.
 

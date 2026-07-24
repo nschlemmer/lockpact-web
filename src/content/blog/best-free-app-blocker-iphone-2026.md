@@ -2,7 +2,7 @@
 title: "Best Free App Blockers for iPhone (2026)"
 description: "Honest review of 8 free and freemium screen time apps for iOS. Which ones actually work, which are just paywalls, what Reddit recommends, and how to choose."
 pubDate: 2026-04-17
-updatedDate: 2026-07-23
+updatedDate: 2026-07-24
 author: "LockPact"
 tags: ["guide", "app blockers", "free apps"]
 ---
@@ -139,7 +139,7 @@ But the free tier is the thinnest on this list. Seven sessions, ever, not per mo
 
 Friend Controls is conceptually the closest thing to LockPact on this list: someone else manages your blocks instead of you. The core mechanic — hand a friend the ability to lock and unlock your apps — is the same accountability principle this entire list keeps coming back to.
 
-The difference is maturity and scope. LockPact is built specifically around *mutual* locking (you each hold the other's key, so it's not one-directional), plus bypass detection that tells your partner if you turn Screen Time off yourself. Friend Controls is worth trying if you want a lighter version of the same idea.
+The difference is maturity and scope. LockPact is built specifically around *mutual* locking (you each hold the other's key, so it's not one-directional), plus bypass detection that tells your partner if you turn Screen Time off yourself. Friend Controls is worth trying if you want a lighter version of the same idea. For the full picture of every app built around a friend or partner holding the key, see our dedicated roundup of [apps that let a friend control your screen time](/blog/apps-that-let-a-friend-control-your-screen-time/).
 
 **Best for:** People who want to test whether "someone else holds the key" works for them, without a mutual commitment.
 

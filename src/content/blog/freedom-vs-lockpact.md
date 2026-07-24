@@ -1,7 +1,8 @@
 ---
 title: "Freedom vs. LockPact: Which Screen Time App Fits You?"
-description: "Freedom blocks apps and websites across all your devices. LockPact uses partner accountability on iPhone. Different problems — here's how to choose between them."
+description: "Freedom blocks apps and websites across all your devices. LockPact uses partner accountability on iPhone. Different problems, different fix — how to choose."
 pubDate: 2026-05-02
+updatedDate: 2026-07-24
 author: "LockPact"
 tags: ["comparison", "Freedom", "screen time apps", "cross-device blocker"]
 ---
