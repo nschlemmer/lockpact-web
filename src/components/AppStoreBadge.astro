@@ -1,14 +1,19 @@
 ---
+import { appStoreUrl } from '../lib/campaigns';
+
 interface Props {
   size?: 'normal' | 'large';
+  // Apple campaign-link `ct` token (see src/lib/campaigns.ts). Optional — omit for an
+  // untracked bare App Store link (e.g. the homepage JSON-LD downloadUrl).
+  campaign?: string;
 }
 
-const { size = 'normal' } = Astro.props;
+const { size = 'normal', campaign } = Astro.props;
 const padding = size === 'large' ? 'px-7 py-3' : 'px-6 py-2.5';
 ---
 
 <a
-  href="https://apps.apple.com/app/lockpact/id6759302382"
+  href={appStoreUrl(campaign)}
   target="_blank"
   rel="noopener noreferrer"
   class:list={[

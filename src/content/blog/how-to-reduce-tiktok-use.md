@@ -92,4 +92,4 @@ TikTok is a hard opponent. The strategies that work are the ones that don't put 
 
 **Related reading:** [Instagram's Built-In Time Limit vs. Blocking It Entirely](/blog/instagram-vs-lockpact-blocking) · [Phone Addiction vs. Phone Habit](/blog/phone-addiction-vs-phone-habit) · [Social Media Detox: Does It Actually Work?](/blog/social-media-detox-does-it-work)
 
-[LockPact](https://apps.apple.com/app/lockpact/id6759302382) lets your partner hold your TikTok block. You don't have to be stronger than the algorithm — you just have to have made a commitment someone else is holding.
+[LockPact](/go/b-how-to-reduce-tiktok-use/) lets your partner hold your TikTok block. You don't have to be stronger than the algorithm — you just have to have made a commitment someone else is holding.

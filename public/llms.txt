@@ -16,6 +16,9 @@ The device owner can always bypass Screen Time restrictions through Apple's own 
 - [Friend Controls vs. LockPact](https://lockpact.app/blog/friend-controls-vs-lockpact/): Multi-friend "Controller" approval model vs. LockPact's mutual two-person lock.
 - [FriendLock vs. LockPact](https://lockpact.app/blog/friendlock-vs-lockpact/): Selfie-based time-earning with no approver vs. LockPact's partner-approved unlocking.
 - [Best Free App Blockers for iPhone (2026)](https://lockpact.app/blog/best-free-app-blocker-iphone-2026/): Where LockPact fits among free solo blockers and partner-based apps.
+- [Best Screen Time Apps for Couples (2026)](https://lockpact.app/blog/best-screen-time-apps-for-couples/): An honest comparison of apps built for couples managing screen time together — what's mutual, what's one-way, what it costs, and where LockPact fits.
+- [Opal vs. one sec: The Actual Referee Comparison (2026)](https://lockpact.app/blog/opal-vs-one-sec/): How the two biggest names in solo screen time apps actually compare on pricing, mechanics, and enforcement.
+- [Clearspace App Review (2026)](https://lockpact.app/blog/clearspace-app-review/): What Clearspace's pushup-to-unlock mechanic and "accountability partner" feature actually do, compared to a mutual lock.
 
 ## Guides
 
@@ -23,7 +26,5 @@ The device owner can always bypass Screen Time restrictions through Apple's own 
 - [Screen Time Accountability Partners: The Psychology of Why They Work](https://lockpact.app/blog/psychology-of-accountability-partners/): The behavioral-science case for mutual accountability over solo willpower apps.
 - [Why Screen Time Apps Don't Work](https://lockpact.app/blog/why-screen-time-apps-dont-work/): Why solo, self-controlled blockers fail, and what mutual accountability changes about the incentive structure.
 - [Screen Time Not Working on iPhone? Here's the Actual Reason](https://lockpact.app/blog/apple-screen-time-doesnt-work/): Why Apple's built-in Screen Time is trivially self-overridden by the same person it's meant to restrict.
-
-## Optional
-
-- Phone Pact Contract Template: a printable/shareable template for two people to agree pact terms in writing. Planned; not yet published as of this writing.
+- [Screen Time Contract Template for Couples (Free, Copy-Paste)](https://lockpact.app/blog/couples-screen-time-contract-template/): A free screen time contract template for adult couples — copy the text, fill in your own rules, sign it together.
+- [Phubbing: What It Is and How to Actually Stop Doing It](https://lockpact.app/blog/phubbing-how-to-stop/): What phubbing (phone snubbing) actually is, why it happens between partners without either person noticing, and what stops it.

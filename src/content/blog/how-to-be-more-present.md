@@ -114,4 +114,4 @@ Presence is a skill, not a personality trait. It's available to you. The questio
 
 **Related reading:** [Couples and Phone Boundaries: A Field Guide](/blog/couples-and-phone-boundaries) · [Phone Use and Anxiety](/blog/phone-use-and-anxiety) · [The Phone Stacking Game: Does It Actually Work?](/blog/phone-stacking-dinner-game)
 
-[LockPact](https://apps.apple.com/app/lockpact/id6759302382) provides one of those structures — a mutual commitment with a partner to protect specific windows of time. The technology handles the enforcement. You get the presence.
+[LockPact](/go/b-how-to-be-more-present/) provides one of those structures — a mutual commitment with a partner to protect specific windows of time. The technology handles the enforcement. You get the presence.

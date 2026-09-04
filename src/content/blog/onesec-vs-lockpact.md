@@ -183,6 +183,6 @@ Yes. Solo testing and partner mode are both free. LockPact's value is the accoun
 
 one sec is excellent at what it does. But if friction doesn't work and you need someone else holding the key, [LockPact](/) is free.
 
-**[Get LockPact on the App Store](https://apps.apple.com/app/lockpact/id6759302382)**
+**[Get LockPact on the App Store](/go/b-onesec-vs-lockpact/)**
 
 Start solo. Test your willpower. When you're ready, invite your partner and lock together.

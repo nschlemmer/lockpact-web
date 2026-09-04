@@ -115,4 +115,4 @@ Data is where to start. Accountability is what actually changes the behavior.
 
 **Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work) · [Best Free App Blockers for iPhone](/blog/best-free-app-blocker-iphone-2026) · [iPhone Focus Modes vs. App Blockers](/blog/do-not-disturb-modes-comparison)
 
-If you've been looking at the number for a while and it hasn't moved, the next step isn't more data. [Try LockPact](https://apps.apple.com/app/lockpact/id6759302382) with a partner and see if adding a social cost to the behavior changes the outcome.
+If you've been looking at the number for a while and it hasn't moved, the next step isn't more data. [Try LockPact](/go/b-moment-app-review/) with a partner and see if adding a social cost to the behavior changes the outcome.

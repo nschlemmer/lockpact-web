@@ -154,6 +154,6 @@ Freedom costs roughly $40–130 per year depending on devices. LockPact is free,
 
 ---
 
-If a willing partner is more available to you than a $40–130/year subscription, [LockPact](/) is free. **[Get LockPact on the App Store](https://apps.apple.com/app/lockpact/id6759302382)**
+If a willing partner is more available to you than a $40–130/year subscription, [LockPact](/) is free. **[Get LockPact on the App Store](/go/b-freedom-vs-lockpact/)**
 
 Start in solo mode. Test your self-discipline. When you're ready, invite your partner.

@@ -190,4 +190,4 @@ LockPact can help you keep that boundary once you've decided on it. Your partner
 
 But the real boundary? That's between you and your partner. The phone is just the thing you're putting down. Dinner is a good place to start — [the phone stacking game](/blog/phone-stacking-dinner-game/) turns the first boundary into something you can practice together in twenty minutes.
 
-Ready to try? [Get LockPact on the App Store](https://apps.apple.com/app/lockpact/id6759302382) and set your first boundary together.
+Ready to try? [Get LockPact on the App Store](/go/b-couples-and-phone-boundaries/) and set your first boundary together.

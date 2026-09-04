@@ -106,4 +106,4 @@ one sec, by a wide margin. Its $99.99 individual lifetime purchase costs about w
 
 If you've tried the best solo tools in the category and the override still wins some nights, [LockPact](/) is free — no subscription, no lifetime purchase, just a partner holding the key instead of a setting.
 
-[Get LockPact on the App Store →](https://apps.apple.com/app/lockpact/id6759302382)
+[Get LockPact on the App Store →](/go/b-opal-vs-one-sec/)

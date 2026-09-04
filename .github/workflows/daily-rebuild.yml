@@ -1,0 +1,13 @@
+name: daily-rebuild
+on:
+  schedule:
+    - cron: '17 14 * * *'   # 14:17 UTC = 07:17 PT; off the hour on purpose (GitHub delays/drops at :00)
+  workflow_dispatch:
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel production build
+        run: |
+          test -n "${{ secrets.VERCEL_DEPLOY_HOOK }}" || { echo "VERCEL_DEPLOY_HOOK secret not set"; exit 1; }
+          curl -fsS -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}"

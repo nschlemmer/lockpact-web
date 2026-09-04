@@ -2,9 +2,10 @@
 export const prerender = true;
 import { getCollection } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
+import { isVisible } from '../../lib/posts';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
+  const posts = await getCollection('blog', isVisible);
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: post,
@@ -30,6 +31,7 @@ const readTime = `${Math.max(1, Math.ceil(wordCount / 250))} min read`;
   imageAlt={post.data.imageAlt}
   readTime={readTime}
   faq={post.data.faq}
+  slug={post.slug}
 >
   <Content />
 </BlogLayout>

@@ -4,8 +4,9 @@ import PageLayout from '../../layouts/PageLayout.astro';
 import BlogCard from '../../components/BlogCard.astro';
 import DownloadCTA from '../../components/DownloadCTA.astro';
 import { getCollection } from 'astro:content';
+import { isVisible } from '../../lib/posts';
 
-const posts = (await getCollection('blog')).sort(
+const posts = (await getCollection('blog', isVisible)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---

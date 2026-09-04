@@ -139,4 +139,4 @@ The phone pact isn't complicated. It's two people making an honest agreement and
 
 **Related reading:** [How to Run a 7-Day Phone Pact With Your Partner](/blog/how-to-run-a-7-day-phone-pact) · [Roommate Phone Pacts](/blog/roommate-phone-pact-guide) · [What to Do When Your Partner Bypasses the Lock](/blog/what-to-do-when-partner-bypasses-lock) · [How College Students Actually Fix Their Phone Habits](/blog/college-student-phone-habits/)
 
-[Get LockPact](https://apps.apple.com/app/lockpact/id6759302382) and send your friend a link. The conversation is the first step. The app does the rest. Still comparing options? [See how it stacks up against the rest of the free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/).
+[Get LockPact](/go/b-best-friends-phone-pact-guide/) and send your friend a link. The conversation is the first step. The app does the rest. Still comparing options? [See how it stacks up against the rest of the free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/).

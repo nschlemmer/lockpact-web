@@ -100,4 +100,4 @@ Streaks are a useful tool in a toolkit — not a solution on their own.
 
 **Related reading:** [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners) · [How to Run a 7-Day Phone Pact With Your Partner](/blog/how-to-run-a-7-day-phone-pact) · [What to Do When Your Partner Bypasses the Lock](/blog/what-to-do-when-partner-bypasses-lock)
 
-LockPact tracks your mutual bypass streak as one signal among several. [See what your streak looks like after the first week.](https://apps.apple.com/app/lockpact/id6759302382)
+LockPact tracks your mutual bypass streak as one signal among several. [See what your streak looks like after the first week.](/go/b-streaks-and-accountability-why-they-work/)

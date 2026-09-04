@@ -173,4 +173,4 @@ If you want to test this with a partner, LockPact is free. No trials, no upsells
 
 It's not a magic solution. But the psychology is sound. And if you have a willing partner, the results are usually the same: less mindless scrolling, more time back, and a small shared win you can both see.
 
-[Get LockPact on the App Store](https://apps.apple.com/app/lockpact/id6759302382).
+[Get LockPact on the App Store](/go/b-psychology-of-accountability-partners/).

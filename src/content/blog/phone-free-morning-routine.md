@@ -96,4 +96,4 @@ The morning phone check is one habit that produces an outsized return when you i
 
 **Related reading:** [What Screen Time Before Bed Actually Does to Your Sleep](/blog/screen-time-before-bed-effects) · [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick) · [Phone Use While Working From Home](/blog/phone-use-while-working-from-home)
 
-[LockPact](https://apps.apple.com/app/lockpact/id6759302382) lets you and a partner set a morning window where specific apps are locked. The alarm clock gets you out of bed. The lock handles the rest.
+[LockPact](/go/b-phone-free-morning-routine/) lets you and a partner set a morning window where specific apps are locked. The alarm clock gets you out of bed. The lock handles the rest.

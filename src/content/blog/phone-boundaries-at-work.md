@@ -92,6 +92,6 @@ Define intentional check windows so you're not eliminating phone use, just sched
 
 The work phone habit isn't a moral failing. It's an environment problem: the phone is always present, the social norms are ambiguous, and the tasks it distracts you from are often hard.
 
-For the evenings outside work hours — when work is done but the phone habits persist — [LockPact](https://apps.apple.com/app/lockpact/id6759302382) provides mutual accountability with a partner.
+For the evenings outside work hours — when work is done but the phone habits persist — [LockPact](/go/b-phone-boundaries-at-work/) provides mutual accountability with a partner.
 
 **Related reading:** [Phone Use While Working From Home](/blog/phone-use-while-working-from-home) · [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick) · [Phone Addiction vs. Phone Habit](/blog/phone-addiction-vs-phone-habit) The work hours are yours to structure. The evenings don't have to be a scroll default.

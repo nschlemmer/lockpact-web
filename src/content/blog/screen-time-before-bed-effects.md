@@ -120,4 +120,4 @@ If late-night scrolling is your biggest phone habit problem, the fix isn't infor
 
 **Related reading:** [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick) · [The Phone-Free Morning](/blog/phone-free-morning-routine) · [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work)
 
-[LockPact](https://apps.apple.com/app/lockpact/id6759302382) lets you and a partner lock specific apps during your nightly window. No willpower required at 11pm. Just an agreement you both made earlier, doing the work for you.
+[LockPact](/go/b-screen-time-before-bed-effects/) lets you and a partner lock specific apps during your nightly window. No willpower required at 11pm. Just an agreement you both made earlier, doing the work for you.

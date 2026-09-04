@@ -118,4 +118,4 @@ Bypass is part of every phone pact. How you handle it is what determines whether
 
 **Related reading:** [How to Run a 7-Day Phone Pact With Your Partner](/blog/how-to-run-a-7-day-phone-pact) · [How to Talk to Your Partner About Their Phone Use](/blog/how-to-have-the-phone-conversation) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners)
 
-[LockPact](https://apps.apple.com/app/lockpact/id6759302382) surfaces bypasses automatically so the conversation can happen. The app handles the transparency. You handle the conversation.
+[LockPact](/go/b-what-to-do-when-partner-bypasses-lock/) surfaces bypasses automatically so the conversation can happen. The app handles the transparency. You handle the conversation.
