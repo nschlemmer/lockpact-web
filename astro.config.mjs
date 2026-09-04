@@ -20,6 +20,12 @@ function extractFrontmatterDate(raw, field) {
   return Number.isNaN(date.getTime()) ? null : date;
 }
 
+function extractFrontmatterDraft(raw) {
+  const match = raw.match(/^draft:\s*(.+)$/m);
+  if (!match) return false;
+  return match[1].trim().replace(/^["']|["']$/g, '') === 'true';
+}
+
 const blogLastmodBySlug = new Map();
 for (const file of readdirSync(blogDir)) {
   if (!file.endsWith('.md') && !file.endsWith('.mdx')) continue;
@@ -27,6 +33,12 @@ for (const file of readdirSync(blogDir)) {
   const raw = readFileSync(new URL(file, blogDir), 'utf-8');
   const pubDate = extractFrontmatterDate(raw, 'pubDate');
   const updatedDate = extractFrontmatterDate(raw, 'updatedDate');
+  const draft = extractFrontmatterDraft(raw);
+  // Skip future-dated or draft posts — consistency only; the sitemap integration's
+  // `filter`/`serialize` below only ever sees routes that actually got built, so an
+  // unbuilt (not-yet-visible) post can't leak into the sitemap regardless. This just
+  // keeps this map from holding a lastmod for a slug that isn't live yet.
+  if (draft || (pubDate && pubDate.valueOf() > Date.now())) continue;
   const lastmod = updatedDate ?? pubDate;
   if (lastmod) blogLastmodBySlug.set(slug, lastmod);
 }

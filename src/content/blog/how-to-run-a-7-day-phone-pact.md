@@ -260,4 +260,4 @@ If you're wondering whether the momentum from Day 7 actually holds past the firs
 
 Download LockPact and invite someone you trust. Seven days. See what you notice.
 
-[Get LockPact on the App Store →](https://apps.apple.com/app/lockpact/id6759302382)
+[Get LockPact on the App Store →](/go/b-how-to-run-a-7-day-phone-pact/)

@@ -117,4 +117,4 @@ Most phone problems are habit problems in disguise. The framing matters, because
 
 **Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners) · [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick)
 
-If you have a partner willing to try a mutual commitment, [LockPact](https://apps.apple.com/app/lockpact/id6759302382) provides the structural friction that turns intention into actual behavior change. No willpower required. Just two people with an agreement.
+If you have a partner willing to try a mutual commitment, [LockPact](/go/b-phone-addiction-vs-phone-habit/) provides the structural friction that turns intention into actual behavior change. No willpower required. Just two people with an agreement.

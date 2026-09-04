@@ -189,4 +189,4 @@ If you have someone you trust, [LockPact](/) is free on the App Store right now.
 
 No free trial. No paywall. Just you, your partner, and the social cost of letting them down.
 
-[Get LockPact on the App Store →](https://apps.apple.com/app/lockpact/id6759302382)
+[Get LockPact on the App Store →](/go/b-best-free-app-blocker-iphone-2026/)

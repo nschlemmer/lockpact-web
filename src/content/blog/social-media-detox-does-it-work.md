@@ -112,4 +112,4 @@ A detox is a start, not a solution.
 
 **Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work) · [Digital Minimalism: What Cal Newport Gets Right](/blog/digital-minimalism-review) · [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick)
 
-If you come out of yours wanting to actually change the structure — rather than reset and repeat the same cycle — [LockPact](https://apps.apple.com/app/lockpact/id6759302382) gives you and a partner a persistent accountability mechanism that works after the detox ends.
+If you come out of yours wanting to actually change the structure — rather than reset and repeat the same cycle — [LockPact](/go/b-social-media-detox-does-it-work/) gives you and a partner a persistent accountability mechanism that works after the detox ends.

@@ -142,4 +142,4 @@ You don't need to be more disciplined. You need a better-designed limit. If you 
 
 **Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners) · [The Phone-Free Morning](/blog/phone-free-morning-routine)
 
-[LockPact](https://apps.apple.com/app/lockpact/id6759302382) handles the external accountability and structural enforcement. Your partner holds the lock. The limit holds when you're tired. Start there.
+[LockPact](/go/b-how-to-set-phone-limits-that-actually-stick/) handles the external accountability and structural enforcement. Your partner holds the lock. The limit holds when you're tired. Start there.

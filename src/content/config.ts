@@ -8,6 +8,9 @@ const blog = defineCollection({
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     author: z.string().default('LockPact'),
+    // "Merged but not ready" escape hatch alongside the `pubDate <= now` visibility
+    // filter (src/lib/posts.ts) — see README.md "Scheduled visibility".
+    draft: z.boolean().default(false),
     tags: z.array(z.string()).default([]),
     image: z.string().optional(),
     imageAlt: z.string().optional(),

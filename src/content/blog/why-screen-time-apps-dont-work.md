@@ -172,4 +172,4 @@ Download LockPact free on the App Store. Pair with someone you trust. Get your p
 
 No trials. No upsells. No "premium features." Just you, your partner, and the social cost of letting them down.
 
-[Get LockPact on the App Store](https://apps.apple.com/app/lockpact/id6759302382)
+[Get LockPact on the App Store](/go/b-why-screen-time-apps-dont-work/)

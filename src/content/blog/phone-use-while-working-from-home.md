@@ -96,4 +96,4 @@ The office had social friction that made phone discipline easier. Working from h
 
 **Related reading:** [Phone Boundaries at Work](/blog/phone-boundaries-at-work) · [The Phone-Free Morning](/blog/phone-free-morning-routine) · [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick)
 
-[LockPact](https://apps.apple.com/app/lockpact/id6759302382) provides an external accountability layer that replicates the social cost of the office. Your partner holds the lock during your work window. No one's watching, but someone knows.
+[LockPact](/go/b-phone-use-while-working-from-home/) provides an external accountability layer that replicates the social cost of the office. Your partner holds the lock during your work window. No one's watching, but someone knows.

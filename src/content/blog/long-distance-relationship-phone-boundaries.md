@@ -117,4 +117,4 @@ Long-distance is hard. The phone doesn't have to make it harder.
 
 **Related reading:** [Couples and Phone Boundaries: A Field Guide](/blog/couples-and-phone-boundaries) · [How to Talk to Your Partner About Their Phone Use](/blog/how-to-have-the-phone-conversation) · [How to Be More Present](/blog/how-to-be-more-present)
 
-[LockPact](https://apps.apple.com/app/lockpact/id6759302382) works across any distance — your partner holds your lock from wherever they are. The commitment travels. If you're still deciding on a tool, [our full comparison of the best free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/) is a good place to start.
+[LockPact](/go/b-long-distance-relationship-phone-boundaries/) works across any distance — your partner holds your lock from wherever they are. The commitment travels. If you're still deciding on a tool, [our full comparison of the best free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/) is a good place to start.

@@ -10,7 +10,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "generate:og": "node scripts/generate-og.mjs",
-    "generate:favicons": "node scripts/generate-favicons.mjs"
+    "generate:favicons": "node scripts/generate-favicons.mjs",
+    "check:links": "node scripts/check-links.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.6",

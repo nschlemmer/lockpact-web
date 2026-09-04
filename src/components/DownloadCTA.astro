@@ -1,5 +1,12 @@
 ---
 import AppStoreBadge from './AppStoreBadge.astro';
+
+interface Props {
+  // Apple campaign-link `ct` token, passed straight through to AppStoreBadge.
+  campaign?: string;
+}
+
+const { campaign } = Astro.props;
 ---
 
 <section class="scroll-fade-up hero-glow section-lg px-6 text-center">
@@ -12,5 +19,5 @@ import AppStoreBadge from './AppStoreBadge.astro';
   <p class="text-body-lg mb-8" style="color: var(--color-text-secondary);">
     Download LockPact. It's free. Your partner is waiting.
   </p>
-  <AppStoreBadge size="large" />
+  <AppStoreBadge size="large" campaign={campaign} />
 </section>

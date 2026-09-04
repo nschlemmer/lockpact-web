@@ -256,4 +256,4 @@ Download LockPact free on the App Store. Set it up with your roommate. See if it
 
 No free trial. No paywall. Just you, your roommate, and a locked app that only they can unlock.
 
-[Get LockPact on the App Store →](https://apps.apple.com/app/lockpact/id6759302382)
+[Get LockPact on the App Store →](/go/b-roommate-phone-pact-guide/)

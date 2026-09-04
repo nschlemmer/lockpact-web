@@ -107,4 +107,4 @@ The loop between anxiety and phone use is real and self-reinforcing. But it's a 
 
 Structural changes — phone out of reach during high-risk windows, a partner-held lock on the apps that most reliably trigger the loop — make the loop harder to run without requiring willpower at the moment the anxiety shows up.
 
-[LockPact](https://apps.apple.com/app/lockpact/id6759302382) gives you and a partner a place to put that structure. The commitment does the work so the habit doesn't have to.
+[LockPact](/go/b-phone-use-and-anxiety/) gives you and a partner a place to put that structure. The commitment does the work so the habit doesn't have to.
