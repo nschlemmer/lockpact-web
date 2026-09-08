@@ -2,6 +2,7 @@
 title: "Cold Turkey vs. LockPact: Hardcore Blocking vs. Social Accountability"
 description: "Cold Turkey is the most aggressive app blocker available. LockPact uses social accountability instead. Here's how they compare and which fits your situation."
 pubDate: 2026-05-19
+updatedDate: 2026-09-08
 author: "LockPact"
 tags: ["comparison", "Cold Turkey", "app blockers", "accountability"]
 ---
@@ -110,6 +111,6 @@ No. LockPact requires two people. The solo lock (available when you're unpaired)
 
 Cold Turkey is the right tool for serious daytime productivity protection. LockPact is the right tool for building mutual phone boundaries with someone you trust.
 
-**Related reading:** [Opal vs. LockPact](/blog/opal-vs-lockpact) · [Freedom vs. LockPact](/blog/freedom-vs-lockpact) · [Best Free App Blockers for iPhone](/blog/best-free-app-blocker-iphone-2026)
+**Related reading:** [Opal vs. LockPact](/blog/opal-vs-lockpact) · [Freedom vs. LockPact](/blog/freedom-vs-lockpact) · [Best Free App Blockers for iPhone](/blog/best-free-app-blocker-iphone-2026) · [App Blockers You Can't Bypass on iPhone — Ranked, Honestly](/blog/app-blockers-you-cant-bypass-iphone/)
 
 If you have a partner ready to try the social accountability approach, [LockPact](/) is free for both of you. [Get it on the App Store](/go/b-coldturkey-vs-lockpact/).

@@ -2,7 +2,7 @@
 title: "Best Free App Blockers for iPhone (2026)"
 description: "Honest review of 8 free and freemium screen time apps for iOS. Which ones actually work, which are just paywalls, what Reddit recommends, and how to choose."
 pubDate: 2026-04-17
-updatedDate: 2026-07-24
+updatedDate: 2026-09-08
 author: "LockPact"
 tags: ["guide", "app blockers", "free apps"]
 ---
@@ -190,3 +190,5 @@ If you have someone you trust, [LockPact](/) is free on the App Store right now.
 No free trial. No paywall. Just you, your partner, and the social cost of letting them down.
 
 [Get LockPact on the App Store →](/go/b-best-free-app-blocker-iphone-2026/)
+
+**Related reading:** [App Blockers You Can't Bypass on iPhone — Ranked, Honestly](/blog/app-blockers-you-cant-bypass-iphone/) — this list is about free and breadth; that one ranks the same apps (plus a few more) by how hard they actually are to get around.

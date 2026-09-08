@@ -2,7 +2,7 @@
 title: "Screen Time Not Working on iPhone? Here's the Actual Reason"
 description: "Screen Time isn't broken — you set the passcode, so you can override it. iOS 26.4 changed that, but only if someone else holds the code."
 pubDate: 2026-04-09
-updatedDate: 2026-09-04
+updatedDate: 2026-09-08
 author: "LockPact"
 tags: ["Apple", "Screen Time", "alternatives"]
 faq:
@@ -129,6 +129,8 @@ Yes, as a diagnostic. It's genuinely useful for seeing how much time you're actu
 ## Next Steps
 
 **If you want the Instagram-specific version of this:** [How to lock Instagram after a time limit, or during certain hours](/blog/instagram-vs-lockpact-blocking) — the same Lock Screen Time Settings mechanic, applied to one app.
+
+**If you want the full walkthrough:** [Lock Screen Time Settings: Give Your Partner the Passcode](/blog/lock-screen-time-settings-partner-passcode/) — the step-by-step setup, written for the partner who's holding the code, plus the honest loopholes that remain.
 
 **If you want to understand partner accountability better:** [Why screen time apps fail](/blog/why-screen-time-apps-dont-work)—and the exception.
 

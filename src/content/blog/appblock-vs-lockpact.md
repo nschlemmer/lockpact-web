@@ -2,7 +2,7 @@
 title: "AppBlock vs. LockPact: Feature Comparison"
 description: "AppBlock is free with a paid Premium tier; LockPact is free. AppBlock's Approval Access is one-way and Premium-only — LockPact's mutual lock is neither."
 pubDate: 2026-04-29
-updatedDate: 2026-09-04
+updatedDate: 2026-09-08
 author: "LockPact"
 tags: ["comparison", "AppBlock", "app blockers"]
 faq:
@@ -139,6 +139,5 @@ AppBlock is powerful. But if you want someone else holding the key—not algorit
 
 Start with solo mode. Test your discipline. When you're ready, invite your partner and lock together.
 
-**Related reading:** [Opal vs. LockPact](/blog/opal-vs-lockpact/) · [ScreenZen vs. LockPact](/blog/screenzen-vs-lockpact/) · [Best Free App Blockers for iPhone (2026)](/blog/best-free-app-blocker-iphone-2026/)
-<!-- link /blog/appblock-vs-blocksite/ when live (Round 2) -->
+**Related reading:** [Opal vs. LockPact](/blog/opal-vs-lockpact/) · [ScreenZen vs. LockPact](/blog/screenzen-vs-lockpact/) · [Best Free App Blockers for iPhone (2026)](/blog/best-free-app-blocker-iphone-2026/) · [AppBlock vs. BlockSite: An Honest Comparison](/blog/appblock-vs-blocksite/)
 
