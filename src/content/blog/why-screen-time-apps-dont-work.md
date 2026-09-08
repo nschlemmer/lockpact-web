@@ -2,7 +2,7 @@
 title: "Why Screen Time Apps Don't Work (And What Does)"
 description: "Most screen time apps fail because they treat a social problem as a technical one. Why solo blockers fail, and what actually works instead: accountability."
 pubDate: 2026-04-13
-updatedDate: 2026-07-24
+updatedDate: 2026-09-08
 author: "LockPact"
 tags: ["screen time", "accountability", "behavior change"]
 ---
@@ -163,6 +163,8 @@ But it works. Because accountability is what actually works.
 - **[Screen Time Not Working on iPhone? Here's the Actual Reason](/blog/apple-screen-time-doesnt-work)** — Why the built-in tool fails, and what it's actually good for.
 - **[One Sec vs. LockPact: Friction vs. Accountability](/blog/onesec-vs-lockpact/)** — Another honest look at a friction-based tool versus a partner-held lock.
 - **[What Happened to the Moment App? Where It Went + 5 Alternatives](/blog/moment-app-review/)** — Why tracking alone (Moment's whole model) runs into the same present-bias problem this post covers.
+- **[Lock Screen Time Settings: Give Your Partner the Passcode](/blog/lock-screen-time-settings-partner-passcode/)** — The free iOS 26.4 setting that closes the "you know your own passcode" gap this post describes.
+- **[App Blockers You Can't Bypass on iPhone — Ranked, Honestly](/blog/app-blockers-you-cant-bypass-iphone/)** — Every major blocker's actual off-switch, and why a person is a different category than a passcode or a timer.
 
 ---
 
