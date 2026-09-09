@@ -2,7 +2,7 @@
 title: "Screen Time Accountability Partners: The Psychology of Why They Work"
 description: "What makes a screen time accountability partner actually work, per behavioral research — and why solo willpower apps keep failing where partners succeed."
 pubDate: 2026-05-01
-updatedDate: 2026-07-24
+updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["psychology", "accountability partner", "behavior change", "screen time"]
 ---
@@ -169,7 +169,7 @@ No. LockPact does not share any usage data or app activity with your partner. Yo
 
 ## Ready to Try It
 
-If you want to test this with a partner, LockPact is free. No trials, no upsells, no premium features locked behind paywalls. Just two people, mutual locks, and the social cost of letting each other down. If you're still comparing tools before you commit, [our breakdown of the best free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/) covers where LockPact fits alongside the rest.
+If you want to test this with a partner, LockPact is free. No trials, no upsells, no premium features locked behind paywalls. Just two people, mutual locks, and the social cost of letting each other down. If you're still comparing tools before you commit, [our breakdown of the best free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/) covers where LockPact fits alongside the rest, and [our ranking of accountability partner apps by how much the partner actually controls](/blog/accountability-partner-app-phone-addiction/) goes deeper on this exact question.
 
 It's not a magic solution. But the psychology is sound. And if you have a willing partner, the results are usually the same: less mindless scrolling, more time back, and a small shared win you can both see.
 

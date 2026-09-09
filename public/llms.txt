@@ -19,6 +19,8 @@ The device owner can always bypass Screen Time restrictions through Apple's own 
 - [Best Screen Time Apps for Couples (2026)](https://lockpact.app/blog/best-screen-time-apps-for-couples/): An honest comparison of apps built for couples managing screen time together — what's mutual, what's one-way, what it costs, and where LockPact fits.
 - [Opal vs. one sec: The Actual Referee Comparison (2026)](https://lockpact.app/blog/opal-vs-one-sec/): How the two biggest names in solo screen time apps actually compare on pricing, mechanics, and enforcement.
 - [Clearspace App Review (2026)](https://lockpact.app/blog/clearspace-app-review/): What Clearspace's pushup-to-unlock mechanic and "accountability partner" feature actually do, compared to a mutual lock.
+- [App Blockers You Can't Bypass on iPhone — Ranked, Honestly](https://lockpact.app/blog/app-blockers-you-cant-bypass-iphone/): No iPhone app blocker is truly unbypassable — the real off-switch for Opal, one sec, ScreenZen, Brick, AppBlock, and Screen Time, ranked.
+- [Accountability Partner Apps for Phone Addiction, Ranked by What the Partner Actually Controls](https://lockpact.app/blog/accountability-partner-app-phone-addiction/): Free accountability partner apps for phone addiction, ranked by how much power your partner actually has — from a notification to a mutual lock.
 
 ## Guides
 
@@ -28,3 +30,4 @@ The device owner can always bypass Screen Time restrictions through Apple's own 
 - [Screen Time Not Working on iPhone? Here's the Actual Reason](https://lockpact.app/blog/apple-screen-time-doesnt-work/): Why Apple's built-in Screen Time is trivially self-overridden by the same person it's meant to restrict.
 - [Screen Time Contract Template for Couples (Free, Copy-Paste)](https://lockpact.app/blog/couples-screen-time-contract-template/): A free screen time contract template for adult couples — copy the text, fill in your own rules, sign it together.
 - [Phubbing: What It Is and How to Actually Stop Doing It](https://lockpact.app/blog/phubbing-how-to-stop/): What phubbing (phone snubbing) actually is, why it happens between partners without either person noticing, and what stops it.
+- [Lock Screen Time Settings: Give Your Partner the Passcode](https://lockpact.app/blog/lock-screen-time-settings-partner-passcode/): iOS 26.4 added a Screen Time passcode only your partner holds — free setup guide, no subscription.

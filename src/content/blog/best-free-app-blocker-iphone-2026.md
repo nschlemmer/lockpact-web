@@ -2,7 +2,7 @@
 title: "Best Free App Blockers for iPhone (2026)"
 description: "Honest review of 8 free and freemium screen time apps for iOS. Which ones actually work, which are just paywalls, what Reddit recommends, and how to choose."
 pubDate: 2026-04-17
-updatedDate: 2026-09-08
+updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["guide", "app blockers", "free apps"]
 ---
@@ -18,18 +18,18 @@ Here are 8 apps worth knowing, what's actually free in each one, and where the f
 
 ## Quick Comparison
 
-| App | Approach | Actually Free? | Paid Tier | Best For |
-|---|---|---|---|---|
-| **LockPact** | Mutual partner locking | Everything | None | Two people who trust each other |
-| **One Sec** | Friction / pause before opening | Fully-featured | $5.99/mo optional | People already trying to change |
-| **ScreenZen** | Friction + streak sharing | Core features | None currently | Friends who like gamified stats |
-| **Opal** | Solo blocking | Basic blocking only | $19.99/mo (~$100/yr with the annual plan) | People who'll pay for polish |
-| **AppBlock** | Solo blocking, granular rules | Core blocking | Premium unlocks Strict Mode | Power users who want control |
-| **Freedom** | Cross-device blocking | 7 sessions/month trial | ~$40–130/yr | Multi-device solo blockers |
-| **Friend Controls** | Friend-managed locking | Core locking | None known | Testing a lighter partner-lock |
-| **Cold Turkey** | Hardcore desktop blocking | Basic blocking | $39 one-time (Mac/Windows) | Deadline-driven desktop focus |
+| App | Approach | Bypass difficulty | Actually Free? | Paid Tier | Best For |
+|---|---|---|---|---|---|
+| **LockPact** | Mutual partner locking | Same OS-level route as any Screen Time app — but bypass is always detected, partner notified | Everything | None | Two people who trust each other |
+| **One Sec** | Friction / pause before opening | Same OS-level route, unless a partner holds the Lock Screen Time Settings passcode; no bypass notification | Fully-featured | $5.99/mo optional | People already trying to change |
+| **ScreenZen** | Friction + streak sharing | Same OS-level route; no bypass-detection feature found on its listing | Core features | None currently | Friends who like gamified stats |
+| **Opal** | Solo blocking | Same OS-level route unless "Make Opal Foolproof" is set up with a partner's passcode; Buddies is visibility, not an alert | Basic blocking only | $19.99/mo (~$100/yr with the annual plan) | People who'll pay for polish |
+| **AppBlock** | Solo blocking, granular rules | Strict Mode blocks its own in-app toggle, not Apple's Settings route; Approval Access doesn't cover the OS-level path either | Core blocking | Premium ($4.99/mo or $29.99/yr) unlocks Strict Mode | Power users who want control |
+| **Freedom** | Cross-device blocking (Screen Time API on iOS, VPN for websites) | Same OS-level Screen Time route on iOS, unless a partner holds the passcode | Free plan exists; limits undocumented | $39.99/yr (7-day trial), $8.99–$12.99/mo, or $199 lifetime | Multi-device solo blockers |
+| **Friend Controls** | Friend-managed locking | Same OS-level route works around friend approval; no bypass-detection feature found | Core locking | None known | Testing a lighter partner-lock |
+| **Cold Turkey** | Hardcore desktop blocking | N/A on iPhone — no native Cold Turkey iOS app exists (Frozen Turkey is Mac/Windows only) | Basic blocking | $39 one-time (Mac/Windows) | Deadline-driven desktop focus |
 
-Prices reflect each app's live App Store listing as of July 2026 and can change without notice.
+Prices reflect each app's live App Store listing as of September 2026 and can change without notice. Bypass-difficulty values are consistent with our full ranking in [App Blockers You Can't Bypass on iPhone](/blog/app-blockers-you-cant-bypass-iphone/), which covers the exact taps for each.
 
 ## 1. LockPact
 
@@ -88,7 +88,7 @@ The gap is that visibility isn't the same as control. Nobody has to approve anyt
 
 ## 4. Opal
 
-**Price:** Free with $19.99/month premium (~$100/year with Opal's annual plan, as of July 2026 — billing month-to-month instead runs closer to $240/year)
+**Price:** Free with $19.99/month premium (~$99.99/year with Opal's annual plan, as of September 2026 — billing month-to-month instead runs closer to $240/year; a $399 lifetime option also exists)
 **What's Free:** Basic app blocking, no bypass protection, limited features
 **The Catch:** Everything worth paying for costs money; free tier feels like a trial
 
@@ -120,17 +120,17 @@ The tradeoff: AppBlock's free version is honest-system, not hard-enforced. You c
 
 ## 6. Freedom
 
-**Price:** ~$40–130/year depending on device count, with a limited free trial
-**What's Free:** 7 blocking sessions total, not per month — after that, it's a paywall
-**The Catch:** The free tier isn't really "free," it's a sample
+**Price:** $39.99/year (7-day free trial), $8.99–$12.99/month, or $199 one-time for lifetime
+**What's Free:** A free plan exists, but Freedom doesn't publicly detail its limits — marketing leads with the paid tier
+**The Catch:** On iOS, Freedom blocks apps using Apple's own Screen Time API — the same mechanism (and the same OS-level bypass path) every solo Screen Time-based blocker shares
 
 Freedom's strength is cross-device blocking — one schedule that blocks apps and websites across your phone, laptop, and tablet simultaneously. For people who lose focus by hopping from phone to browser, that's genuinely useful.
 
-But the free tier is the thinnest on this list. Seven sessions, ever, not per month. After that you're paying a subscription that scales with how many devices you want covered.
+But the free tier is thin and vaguely defined, and on iPhone, Freedom isn't doing anything Apple's Screen Time API doesn't already gate — the same "revoke access in Settings" bypass applies unless a partner holds the Lock Screen Time Settings passcode.
 
 **Best for:** People who need blocking to follow them across a laptop and a phone, and are willing to pay for it.
 
-**Verdict:** Strong tool, weakest "free" claim here. Budget for the subscription if you go this route. Full comparison: [Freedom vs. LockPact](/blog/freedom-vs-lockpact/).
+**Verdict:** Strong cross-device tool, but the free tier is more of a taste than a plan, and iOS enforcement is only as strong as Apple's own Screen Time controls. Full comparison: [Freedom vs. LockPact](/blog/freedom-vs-lockpact/).
 
 
 ## 7. Friend Controls
@@ -161,11 +161,13 @@ Worth including here mainly for honesty: if you searched "app blocker iPhone" an
 **Verdict:** The most hardcore free blocking on this list, but it's solving a desktop problem. Full comparison: [Cold Turkey vs. LockPact](/blog/coldturkey-vs-lockpact/).
 
 
-## What Reddit Recommends
+## What Reddit Recommends (Aug 2026)
 
-Search r/nosurf, r/productivity, or r/getdisciplined for "best app blocker iPhone" and a handful of names come up repeatedly, based on browsing those threads directly rather than any formal survey. Opal and One Sec get mentioned most often in our own reading — Opal from people willing to pay for polish, One Sec from people who want something free and are already trying to change. Cold Turkey comes up often too, usually with someone clarifying in the replies that it's really a desktop tool. AppBlock tends to get recommended by people specifically after granular scheduling rules.
+r/digitalminimalism and r/nosurf are where this question actually gets asked, and the threads are more skeptical of "free" than most best-of lists. One post puts it bluntly: "**PLEASE DO NOT PAY** for screentime apps/blockers" ([r/digitalminimalism, Aug 14](https://www.reddit.com/r/digitalminimalism/comments/1voalb4/)). Another, searching for a Cold Turkey alternative for mobile, writes "I've heard ScreenZen recommended a lot" — then, further down the same thread, "**I've found a way to bypass it**" ([r/digitalminimalism, Aug 23](https://www.reddit.com/r/digitalminimalism/comments/1vvzcx2/)). Genuinely popular and genuinely bypassable shows up together more than once.
 
-One pattern was consistent across the threads we looked at: recommendations for a tool that involves another person were rare. Most of Reddit's advice in this space is solo-tool advice, because that's what most of these apps are. And a recurring complaint shows up in a lot of "what app blocker actually worked for you" threads — people report initial success, then admit to quietly turning the blocker off a few weeks later, because nothing stopped them except themselves.
+A "**strictest app blocker on iOS?**" thread names why solo tools keep failing: "**too easy to just untoggle screen time access in the settings**" ([r/nosurf, Mar 4](https://www.reddit.com/r/nosurf/comments/1rklltd/)) — the exact off-switch every free-tier app here shares. Others just ask for a "**hardcore app blocker (iOS)**" ([r/digitalminimalism, Aug 4](https://www.reddit.com/r/digitalminimalism/comments/1vf6ql2/)), or the harder version of the same question: "**Has a hard blocker ever actually worked for you long-term?**" — noting "**there was no way out for real emergencies**" ([r/digitalminimalism, Aug 16](https://www.reddit.com/r/digitalminimalism/comments/1vpupxs/)). One more names the pattern outright: "**Every blocker I've used has the same flaw: the off switch**" ([r/nosurf, Jul 18](https://www.reddit.com/r/nosurf/comments/1v017bj/)).
+
+Across these threads, recommendations for a tool that puts another *person* in the unlock path — not just another setting — are rare. Most of Reddit's advice here is solo-tool advice, because that's mostly what exists, and "PLEASE DO NOT PAY" means free solo tools get recommended even with a well-known, trivial off-switch.
 
 
 ## The Honest Truth About Free Blockers
@@ -192,3 +194,4 @@ No free trial. No paywall. Just you, your partner, and the social cost of lettin
 [Get LockPact on the App Store →](/go/b-best-free-app-blocker-iphone-2026/)
 
 **Related reading:** [App Blockers You Can't Bypass on iPhone — Ranked, Honestly](/blog/app-blockers-you-cant-bypass-iphone/) — this list is about free and breadth; that one ranks the same apps (plus a few more) by how hard they actually are to get around.
+<!-- link /blog/opal-alternatives-free/ when live (plan §4.2 #5, not yet published) -->
