@@ -2,7 +2,7 @@
 title: "Friend Controls vs. LockPact: Which Friend-Approval App Fits You?"
 description: "Friend Controls and LockPact both put a real person in charge of your screen time overrides — one is one-way, the other is mutual. The honest comparison."
 pubDate: 2026-07-24
-updatedDate: 2026-07-24
+updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "Friend Controls", "accountability"]
 ---
@@ -15,7 +15,7 @@ But "a friend is involved" is where the similarity ends. The two apps make funda
 
 You set your own daily limits per app. When you hit a limit, Friend Controls locks you out and lets you send a request to one or more friends you've invited as "Controllers." They see the request and tap approve or deny. You can invite multiple Controllers — it's not tied to one specific person.
 
-Blocking a single app is free. Blocking more than one app requires a paid tier: Friend Controls offers weekly ($4.99), monthly, and yearly subscriptions (roughly $3–$60 depending on term and plan), plus a $29.99 lifetime purchase, per its current App Store listing. It's iOS only, built by developer Ryan Moazzami, sitting at 4.7 stars across 515 ratings as of this writing — a real, established app, not a ghost listing.
+Blocking a single app is free. Blocking more than one app requires a paid tier: Friend Controls offers weekly ($4.99), monthly, and yearly subscriptions (roughly $3–$60 depending on term and plan), plus a $29.99 lifetime purchase, per its current App Store listing. It's iOS only, built by developer Ryan Moazzami, sitting at 4.7 stars across 569 ratings as of September 2026 — a real, established app, not a ghost listing. Its most recent App Store update shipped in late May 2026 — as of September 2026, it's been a few months since a new version went out.
 
 ## How LockPact actually works
 
@@ -34,7 +34,7 @@ It's free — the core mutual-lock-and-approve mechanic isn't a teaser for a sub
 | **Paid tier** | ~$3–$60 (weekly/monthly/yearly) or $29.99 lifetime, to block more than 1 app | None required — optional support tip |
 | **Bypass detection** | Not described in current listing | Yes — partner is notified |
 | **Platform** | iOS only | iOS only |
-| **Rating (as of writing)** | 4.7★, 515 ratings | New — building its own rating history |
+| **Rating (as of September 2026)** | 4.7★, 569 ratings | New — building its own rating history |
 
 ## Where Friend Controls genuinely wins
 
@@ -44,7 +44,7 @@ Be honest about this part: Friend Controls fits some people better than LockPact
 
 **You want to set your own limits, not have someone else define them.** Friend Controls keeps you in charge of the initial rule — you decide what counts as too much Instagram. The friend only gets involved once you've already broken your own limit. If having a partner set the lock from the start feels like too much control to hand over, Friend Controls' lighter-touch version is the better fit.
 
-**Its track record is longer.** 515 ratings and a mature feature set (website blocking, time-period rules, app groups) mean Friend Controls has been through more real-world usage and iteration than a newer entrant.
+**Its track record is longer.** 569 ratings and a mature feature set (website blocking, time-period rules, app groups) mean Friend Controls has been through more real-world usage and iteration than a newer entrant.
 
 ## Where LockPact wins
 
@@ -66,7 +66,7 @@ Neither is objectively "better" — they're built for different accountability s
 
 Friend Controls' "block one app free" line is worth sitting with for a second, because it exposes the real product decision behind both apps. For Friend Controls, the free tier is a taste — enough to prove the mechanic works, not enough to actually cover the two or three apps most people actually struggle with. That's a normal freemium shape, and there's nothing wrong with it; it's how most of the App Store works.
 
-LockPact made a different bet: the mutual lock isn't a lead-in to a subscription, because there isn't one to lead into. The apps you and your partner lock — however many — are covered from the first pairing. The tradeoff is the opposite one: LockPact is newer, with a shorter track record than Friend Controls' 515 ratings, and it only works if you have one person willing to pair with you specifically, not a loose circle of Controllers.
+LockPact made a different bet: the mutual lock isn't a lead-in to a subscription, because there isn't one to lead into. The apps you and your partner lock — however many — are covered from the first pairing. The tradeoff is the opposite one: LockPact is newer, with a shorter track record than Friend Controls' 569 ratings, and it only works if you have one person willing to pair with you specifically, not a loose circle of Controllers.
 
 ## Try LockPact
 

@@ -2,12 +2,12 @@
 title: "FriendLock vs. LockPact: Selfie Rewards vs. Real Partner Approval"
 description: "FriendLock and LockPact both put a friend in the picture, but only one actually gates your screen time on their approval. Here's what each app really does."
 pubDate: 2026-07-24
-updatedDate: 2026-07-24
+updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "FriendLock", "accountability"]
 ---
 
-FriendLock shows up in searches for "friend controls your screen time" apps, and the name invites the comparison to LockPact directly. Worth being precise about it, though: FriendLock is a real, current app — live on the App Store, developed by Mitness Limited, 4.8 stars off 27 ratings as of this writing — but its "friend" role isn't what the name suggests. There's no approval, no gatekeeping, no one saying yes or no to your request. It's a different mechanic entirely, and the two apps end up solving fairly different problems — see our full roundup of [apps that let a friend control your screen time](/blog/apps-that-let-a-friend-control-your-screen-time/) for how it stacks up against the ones that actually gatekeep.
+FriendLock shows up in searches for "friend controls your screen time" apps, and the name invites the comparison to LockPact directly. Worth being precise about it, though: FriendLock is a real, current app — live on the App Store, developed by Mitness Limited, 4.8 stars off 27 ratings as of September 2026 — but its "friend" role isn't what the name suggests. Its most recent App Store update shipped in early January 2026, so it's been a quiet stretch since a new version went out. There's no approval, no gatekeeping, no one saying yes or no to your request. It's a different mechanic entirely, and the two apps end up solving fairly different problems — see our full roundup of [apps that let a friend control your screen time](/blog/apps-that-let-a-friend-control-your-screen-time/) for how it stacks up against the ones that actually gatekeep.
 
 ## How FriendLock actually works
 
@@ -34,7 +34,7 @@ It's free with no subscription — the mutual lock-and-approve mechanic is the w
 | **Free tier** | Core earn-and-bank feature | Full mutual-lock feature, no subscription |
 | **Paid tier** | Pro: $1.99/mo, $14.99/yr, or $49.99 lifetime | None required — optional support tip |
 | **Bypass detection** | Not part of the app's described mechanic | Yes — partner is notified |
-| **Rating (as of writing)** | 4.8★, 27 ratings | New — building its own rating history |
+| **Rating (as of September 2026)** | 4.8★, 27 ratings | New — building its own rating history |
 | **Platform** | iOS 16+ | iOS |
 
 ## Where FriendLock genuinely wins

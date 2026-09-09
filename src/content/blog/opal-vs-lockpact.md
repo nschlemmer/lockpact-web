@@ -2,7 +2,7 @@
 title: "Opal vs. LockPact: Which Screen Time App Is Right for You?"
 description: "A fair comparison of Opal and LockPact — the real cost of Opal's $100/year plan, what each app actually enforces, and when Opal is the better pick."
 pubDate: 2026-04-21
-updatedDate: 2026-07-24
+updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "Opal", "screen time"]
 ---
@@ -10,7 +10,7 @@ tags: ["comparison", "Opal", "screen time"]
 
 | Feature | Opal | LockPact |
 |---------|------|----------|
-| **Price** | ~$100/year with the annual plan (as of July 2026) | Free |
+| **Price** | ~$100/year with the annual plan (as of September 2026) | Free |
 | **Core Model** | Solo focus sessions + optional accountability buddy | Mutual partner accountability |
 | **How It Works** | You set focus times; optional partner gets notifications of when you use blocked apps | Partner holds the unlock key; you hold theirs |
 | **Accountability** | One-way (partner sees your activity) | Two-way (mutual trust and enforcement) |
@@ -22,7 +22,7 @@ tags: ["comparison", "Opal", "screen time"]
 
 ## The Actual Price Breakdown
 
-Opal's pricing isn't hidden, but it's worth laying out plainly next to what you actually get, because "~$100/year" undersells how big that gap is over time. Figures below are per Opal's App Store listing as of July 2026.
+Opal's pricing isn't hidden, but it's worth laying out plainly next to what you actually get, because "~$100/year" undersells how big that gap is over time. Figures below are per Opal's App Store listing as of September 2026.
 
 | | Opal | LockPact |
 |---|---|---|

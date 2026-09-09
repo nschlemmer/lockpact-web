@@ -2,7 +2,7 @@
 title: "Cold Turkey vs. LockPact: Hardcore Blocking vs. Social Accountability"
 description: "Cold Turkey is the most aggressive app blocker available. LockPact uses social accountability instead. Here's how they compare and which fits your situation."
 pubDate: 2026-05-19
-updatedDate: 2026-09-08
+updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "Cold Turkey", "app blockers", "accountability"]
 ---
@@ -83,7 +83,7 @@ Neither is universally better. They're solving different versions of the problem
 
 ## Pricing
 
-**Cold Turkey** — Blocker is free with limited features. Cold Turkey Pro (full features including the Frozen Turkey mode) is $39 one-time for Mac/Windows.
+**Cold Turkey** — Blocker is free with limited features. Cold Turkey Pro (full features including the Frozen Turkey mode) is $45 one-time, and one key covers both Mac and Windows.
 
 **LockPact** — Free for both partners. No premium tier, no paywalled partner features.
 
@@ -105,7 +105,7 @@ Yes. Cold Turkey for laptop-based work blocks. LockPact for phone-based evening 
 
 ### Does LockPact work without a partner?
 
-No. LockPact requires two people. The solo lock (available when you're unpaired) is for testing, not long-term use. The product is designed for mutual accountability between two willing participants.
+LockPact does have a solo lock, available when you're unpaired — you can lock your own apps and hold yourself to a timer before you have a partner. But that's the setup ramp, not the product: the actual value is the mutual, paired lock, where your partner holds your unlock key and you hold theirs. Pairing cancels any active solo lock, and the app is built around two willing participants holding each other accountable.
 
 ---
 

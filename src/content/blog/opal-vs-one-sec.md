@@ -2,6 +2,7 @@
 title: "Opal vs. one sec: The Actual Referee Comparison (2026)"
 description: "Opal and one sec are the two biggest names in solo screen time apps. Here's how their pricing, mechanics, and enforcement actually compare — verified this week."
 pubDate: 2026-07-24
+updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "Opal", "one sec", "screen time apps"]
 ---
@@ -18,9 +19,9 @@ We sell neither. LockPact isn't a solo blocker, so we don't have a horse in the 
 | **Blocking strength** | Hard block during focus sessions | Soft — a pause, not a wall |
 | **Social layer** | Leaderboards, "challenge friends" | None built in |
 | **Free tier** | Basic blocking, limited | One app, basic friction |
-| **Paid tier** | $19.99/mo or $99.99/yr | $19.99/yr (individual) |
+| **Paid tier** | $19.99/mo or $99.99/yr | $2.99/mo or $19.99/yr (individual) |
 | **Lifetime option** | $399 | $99.99 (individual), $149 (family) |
-| **Rating (as of writing)** | 4.7★, ~84K ratings | 4.8★, 23K+ ratings |
+| **Rating (as of September 2026)** | 4.7★, ~87K ratings | 4.8★, 23K+ ratings |
 | **iOS requirement** | iOS 18.0+ | iOS 15.0+ (also macOS) |
 | **Platform** | iOS, iPadOS, Mac | iOS, iPadOS, Mac |
 
@@ -38,7 +39,7 @@ one sec takes the opposite approach: instead of blocking anything, it inserts fr
 
 There's no hard block anywhere in the mechanic. You can breathe through the delay and open the app every single time, if you choose to. one sec is betting that the moment of conscious pause is often enough on its own — and for impulsive (not compulsive) checking, that bet is frequently right.
 
-Per its current App Store listing, one sec's individual Pro plan is **$19.99/year**, with a **$99.99 lifetime** option. There's also a family plan at **$3.99/month or $29.99/year**, and a **$149 family lifetime**. The free tier covers one app with basic friction — enough to try the mechanic before paying for full coverage.
+Per its current App Store listing, one sec's individual Pro plan is **$19.99/year** (or **$2.99/month** if you'd rather not commit annually), with a **$99.99 lifetime** option. There's also a family plan at **$4.99/month or $29.99/year**, and a **$149 family lifetime**. The free tier covers one app with basic friction — enough to try the mechanic before paying for full coverage.
 
 ## Where Opal wins
 

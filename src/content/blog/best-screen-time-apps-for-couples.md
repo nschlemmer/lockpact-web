@@ -2,6 +2,7 @@
 title: "Best Screen Time Apps for Couples (2026)"
 description: "An honest comparison of the actual apps built for couples managing screen time together — what's mutual, what's one-way, what it costs, and where LockPact fits."
 pubDate: 2026-07-24
+updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["couples", "comparison", "screen time apps", "roundup"]
 ---
@@ -30,7 +31,7 @@ LockPact is built around category 3: you each pick apps to lock on your own phon
 
 ### Jolt — synchronized blocking with a dedicated couples page
 
-[Jolt](https://www.thejoltapp.com/couples-use-case) is a real screen time app with its own couples use-case page, and it's honest to call it out specifically since it's one of the few competitors actually targeting this search. The mechanic is synchronized self-blocking: you can sync blocking and app limits during dinners or dates, and run "Partner Challenges" where both of you disconnect together. That's category 1 above — each person is still locking their own phone on a shared schedule, not holding a key to the other's. Jolt markets "hard blocks that don't negotiate" (rules can't be edited once activated) and includes an "Attention Score" tracking focus, sleep, and discipline. 4.4 stars, 96 ratings, iOS 17+. Pricing is a maze of tiers — weekly $5.99–$7.99, monthly $11.99–$19.99, yearly $69.99–$99.99, or a $79.99 lifetime option, plus a separate $3.00 "Hard Mode SOS" purchase — verified against its live App Store listing.
+[Jolt](https://www.thejoltapp.com/couples-use-case) is a real screen time app with its own couples use-case page, and it's honest to call it out specifically since it's one of the few competitors actually targeting this search. The mechanic is synchronized self-blocking: you can sync blocking and app limits during dinners or dates, and run "Partner Challenges" where both of you disconnect together. That's category 1 above — each person is still locking their own phone on a shared schedule, not holding a key to the other's. Jolt markets "hard blocks that don't negotiate" (rules can't be edited once activated) and includes an "Attention Score" tracking focus, sleep, and discipline. 4.4 stars, 101 ratings, iOS 17+, at v2.0.2 as of early September 2026. Jolt also recently shipped a real "Accountability Partner" mode — a real person who must approve every override attempt — worth noting honestly since it edges toward category 3, though it's still a one-way approver watching your data, not a mutual lock like LockPact's. Pricing is genuinely confusing right now, and two live sources disagree: the App Store listing shows weekly $5.99–$8.99, monthly $11.99–$15.00, yearly $51.00–$60.00, and a separate $3.00 "Hard Mode SOS" purchase, with no lifetime option visible there anymore — but Jolt's own website lists an entirely different structure: $20/month, $100/year, or $250 lifetime. Both were live as of this check; we're not picking one for you, just flagging that what you're quoted may depend on whether you subscribe in-app or through the site.
 
 ### Habi — shared habit tracking with screen time blocking bundled in
 
@@ -49,11 +50,11 @@ Opal, one sec, and ScreenZen are strong solo friction tools, and some let you ad
 | App | Couples mechanic | Who decides your unlock | Free tier | Paid tier | Platform |
 |---|---|---|---|---|---|
 | **LockPact** | Mutual lock, both directions | Your partner | Full features, forever | None — Support LockPact tip optional | iOS |
-| **Jolt** | Synchronized self-blocking + partner challenges | You (rules can't be edited once active) | Limited | $5.99–$99.99 across tiers, or $79.99 lifetime | iOS |
+| **Jolt** | Synchronized self-blocking + partner challenges + new one-way Accountability Partner mode | You, or a partner if Accountability Partner mode is on | Limited | App Store: $5.99–$60/wk-yr + $3 SOS · Website: $20/mo, $100/yr, $250 lifetime (sources disagree) | iOS |
 | **Habi** | Shared habit visibility, not unlock control | You | Core features | $1.99–$89.99 (Pro) | iOS only |
 | Cupla | Not a screen time app (shared calendar) | N/A | Core features | N/A | iOS + Android |
 
-Prices and ratings reflect each app's live listing as of this writing and can change without notice.
+Prices and ratings reflect each app's live listing as of September 2026 and can change without notice.
 
 ## Which one should you actually pick
 
