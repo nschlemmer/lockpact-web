@@ -2,6 +2,7 @@
 title: "Why Streaks Work — And Why They Sometimes Don't"
 description: "Streaks are a powerful behavior change tool — until they aren't. Here's the psychology behind why they work, when they fail, and how to use them well."
 pubDate: 2026-05-26
+updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["streaks", "psychology", "behavior change", "motivation", "accountability"]
 ---
@@ -98,6 +99,6 @@ Consistently, yes. Shared accountability produces stronger commitment than indiv
 
 Streaks are a useful tool in a toolkit — not a solution on their own.
 
-**Related reading:** [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners) · [How to Run a 7-Day Phone Pact With Your Partner](/blog/how-to-run-a-7-day-phone-pact) · [What to Do When Your Partner Bypasses the Lock](/blog/what-to-do-when-partner-bypasses-lock)
+**Related reading:** [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners) · [How to Run a 7-Day Phone Pact With Your Partner](/blog/how-to-run-a-7-day-phone-pact) · [What to Do When Your Partner Bypasses the Lock](/blog/what-to-do-when-partner-bypasses-lock) · [Accountability Partner Apps, Ranked by What the Partner Actually Controls](/blog/accountability-partner-app-phone-addiction/)
 
 LockPact tracks your mutual bypass streak as one signal among several. [See what your streak looks like after the first week.](/go/b-streaks-and-accountability-why-they-work/)

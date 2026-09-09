@@ -2,7 +2,7 @@
 title: "Can iPhone Focus Mode Block Apps? What It Does, What It Doesn't (2026)"
 description: "No — Focus mode filters notifications and can hide Home Screen pages, but it doesn't lock apps. Here's what actually does, and where Focus mode still helps."
 pubDate: 2026-05-10
-updatedDate: 2026-09-04
+updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["Focus mode", "iPhone", "Do Not Disturb", "app blockers", "comparison"]
 faq:
@@ -98,6 +98,6 @@ Yes — a swipe and a tap in Control Center. That ease is appropriate for notifi
 
 Focus modes are a good tool solving a specific problem (interruption management). They're not designed to solve the bigger problem (impulsive, habitual app opening) and shouldn't be expected to.
 
-**Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work) · [Instagram's Built-In Time Limit vs. Blocking It Entirely](/blog/instagram-vs-lockpact-blocking) · [Opal vs. LockPact](/blog/opal-vs-lockpact)
+**Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work) · [Instagram's Built-In Time Limit vs. Blocking It Entirely](/blog/instagram-vs-lockpact-blocking) · [Opal vs. LockPact](/blog/opal-vs-lockpact) · [Screen Time for Adults on iPhone](/blog/screen-time-for-adults-iphone/)
 
 For the bigger problem: [LockPact](/) with a partner, or Screen Time limits with a partner-set passcode. The key ingredient in both is external accountability. [Get it on the App Store](/go/b-do-not-disturb-modes-comparison/).

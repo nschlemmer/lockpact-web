@@ -2,7 +2,7 @@
 title: "How College Students Actually Fix Their Phone Habits (Study Mode That Sticks)"
 description: "How to stop scrolling in class and actually study: what college students say works, what doesn't, and why willpower-only strategies fail by the second hour."
 pubDate: 2026-05-14
-updatedDate: 2026-07-23
+updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["college", "students", "phone habits", "studying", "productivity"]
 ---
@@ -68,6 +68,22 @@ A roommate phone pact can be simple: we both put our phones away from 7pm to 10p
 Roommates who study together have built-in accountability. The same person who can observe your study discipline can hold your phone lock. If they're struggling with the same thing, you're both motivated to make it work.
 
 ---
+
+## The Exam-Season Study Pact
+
+September is syllabus week and a fresh start — which makes it the easiest month all year to actually set this up, before the semester gets loud. By mid-October, first midterms hit, and that's exactly when a study pact pays off, not when you should be scrambling to build one.
+
+A study pact is simple: you and a roommate, classmate, or study partner each lock your highest-distraction apps on your own phone during agreed study blocks, and only the other person can unlock them.
+
+**What to lock.** Whatever you'd actually reach for mid-study-session — usually Instagram, TikTok, and whatever group chat isn't your class group chat. Leave the coursework tools (PDF reader, LMS app, calculator) off the list; the point is removing reflex-checks, not making the phone useless.
+
+**How long.** Match it to how you actually study, not an ideal you don't keep. A two-hour library block on your heaviest days beats "all day, every day" — too broad, and it gets abandoned by week two. Extend it during exam week; keep it tighter the rest of the semester.
+
+**Who holds the key.** Each other. This is mutual, not one person supervising the other — you lock your partner's distraction apps, they lock yours, and unlocking either one requires asking. That's different from one person enforcing rules on someone else; it works because the ask goes both ways.
+
+**What happens on a bypass.** If one of you turns off Screen Time access to get around the lock, the other finds out. That's the mechanism — not preventing the override (nobody can, fully, on a phone you own), but making it visible instead of silent. Knowing your partner will see you bailed on hour one is usually enough friction on its own.
+
+This works especially well applied to [a roommate pact](/blog/roommate-phone-pact-guide/) — you're already sharing a study space, so the accountability is built in. If you want a shorter trial before committing to a full semester, [running it as a 7-day pact first](/blog/how-to-run-a-7-day-phone-pact/) is a reasonable way to see if it sticks before the real exam pressure starts.
 
 ## The All-Nighter Phone Problem
 

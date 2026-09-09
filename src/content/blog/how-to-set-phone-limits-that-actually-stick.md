@@ -2,6 +2,7 @@
 title: "How to Set Phone Limits That Actually Stick"
 description: "Most self-imposed phone limits fail within two weeks. Here's why — and how to design limits that actually hold when your willpower is low."
 pubDate: 2026-05-25
+updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["phone limits", "how-to", "behavior change", "screen time", "habits"]
 ---
@@ -140,6 +141,6 @@ Yes. Solo limits work for some people, especially when combined with structural 
 
 You don't need to be more disciplined. You need a better-designed limit. If you want the philosophy behind why discipline alone doesn't work, [our review of Cal Newport's Digital Minimalism](/blog/digital-minimalism-review/) covers the gap between the "why" and the "how."
 
-**Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners) · [The Phone-Free Morning](/blog/phone-free-morning-routine)
+**Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners) · [The Phone-Free Morning](/blog/phone-free-morning-routine) · [Screen Time for Adults on iPhone](/blog/screen-time-for-adults-iphone/)
 
 [LockPact](/go/b-how-to-set-phone-limits-that-actually-stick/) handles the external accountability and structural enforcement. Your partner holds the lock. The limit holds when you're tired. Start there.

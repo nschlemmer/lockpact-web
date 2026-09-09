@@ -2,7 +2,7 @@
 title: "Screen Time Not Working on iPhone? Here's the Actual Reason"
 description: "Screen Time isn't broken — you set the passcode, so you can override it. iOS 26.4 changed that, but only if someone else holds the code."
 pubDate: 2026-04-09
-updatedDate: 2026-09-08
+updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["Apple", "Screen Time", "alternatives"]
 faq:
@@ -127,6 +127,8 @@ No — and no app can honestly claim otherwise. What it does is make bypassing v
 Yes, as a diagnostic. It's genuinely useful for seeing how much time you're actually spending per app — most people underestimate it. Where it falls short is enforcement for someone who already knows the number is bad and wants a reason not to override their own limit.
 
 ## Next Steps
+
+**If you use Screen Time on yourself, not a child:** [Screen Time for Adults on iPhone](/blog/screen-time-for-adults-iphone/) — why the design assumes two people, and what to do when you're both of them.
 
 **If you want the Instagram-specific version of this:** [How to lock Instagram after a time limit, or during certain hours](/blog/instagram-vs-lockpact-blocking) — the same Lock Screen Time Settings mechanic, applied to one app.
 
