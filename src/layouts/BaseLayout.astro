@@ -10,6 +10,10 @@ interface Props {
   ogType?: string;
   structuredData?: object;
   noindex?: boolean;
+  // Meta-only (2026-09-09, docs/content-plan-60d-2026-08.md §4 "Dates" rule) — only
+  // BlogLayout ever passes these; presence-gated rather than ogType-gated below.
+  pubDate?: Date;
+  updatedDate?: Date;
 }
 
 const {
@@ -20,6 +24,8 @@ const {
   ogType = 'website',
   structuredData,
   noindex = false,
+  pubDate,
+  updatedDate,
 } = Astro.props;
 
 const siteName = 'LockPact';
@@ -52,6 +58,8 @@ const twitterHandle = '@lockpact';
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(ogImage, Astro.site).href} />
     <meta property="og:site_name" content={siteName} />
+    {pubDate && <meta property="article:published_time" content={pubDate.toISOString()} />}
+    {updatedDate && <meta property="article:modified_time" content={updatedDate.toISOString()} />}
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
