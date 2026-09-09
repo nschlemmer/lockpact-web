@@ -33,6 +33,17 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
   day: 'numeric',
 });
 
+// Day-precision "Updated" row (2026-09-09, docs/content-plan-60d-2026-08.md §4
+// "Dates" rule) — shown only when updatedDate is strictly later than pubDate, so a
+// post with no substantive edit keeps today's unlabeled single-date row unchanged.
+// Held as a single Date-or-null (not a separate boolean) so TS narrows it correctly
+// wherever it's used below.
+const shownUpdatedDate: Date | null =
+  updatedDate && updatedDate.valueOf() > pubDate.valueOf() ? updatedDate : null;
+const formattedUpdatedDate = shownUpdatedDate
+  ? shownUpdatedDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+  : '';
+
 const blogPostingData = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
@@ -98,13 +109,23 @@ const structuredData = faqPageData
   description={description}
   ogType="article"
   structuredData={structuredData}
+  pubDate={pubDate}
+  updatedDate={updatedDate}
 >
   <Nav />
   <main class="max-w-[720px] mx-auto px-6 py-16 md:py-24">
     <article>
       <header class="mb-10">
         <div class="flex flex-wrap items-center gap-3 text-sm mb-4" style="color: var(--color-text-tertiary);">
-          <time datetime={pubDate.toISOString()}>{formattedDate}</time>
+          {shownUpdatedDate ? (
+            <>
+              <span>Published <time datetime={pubDate.toISOString()}>{formattedDate}</time></span>
+              <span>&middot;</span>
+              <span>Updated <time datetime={shownUpdatedDate.toISOString()}>{formattedUpdatedDate}</time></span>
+            </>
+          ) : (
+            <time datetime={pubDate.toISOString()}>{formattedDate}</time>
+          )}
           {readTime && (
             <>
               <span>&middot;</span>

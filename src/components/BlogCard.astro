@@ -4,13 +4,20 @@ interface Props {
   description: string;
   slug: string;
   pubDate?: Date;
+  updatedDate?: Date;
   readTime?: string;
 }
 
-const { title, description, slug, pubDate, readTime } = Astro.props;
+const { title, description, slug, pubDate, updatedDate, readTime } = Astro.props;
 
-const formattedDate = pubDate
-  ? pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long' })
+// Day-precision "Updated" dates (2026-09-09, docs/content-plan-60d-2026-08.md §4
+// "Dates" rule) — a card shows the later of pubDate/updatedDate, labelled "Updated"
+// only when updatedDate is strictly later than pubDate (equal dates show the plain
+// publish date, matching lastActivity's fallback in src/lib/posts.ts).
+const isUpdated = pubDate && updatedDate && updatedDate.valueOf() > pubDate.valueOf();
+const displayDate = isUpdated ? updatedDate : pubDate;
+const formattedDate = displayDate
+  ? displayDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
   : '';
 ---
 
@@ -23,7 +30,12 @@ const formattedDate = pubDate
 >
   {(readTime || formattedDate) && (
     <div class="text-label mb-2.5" style="color: var(--color-accent);">
-      {formattedDate}{formattedDate && readTime ? ' \u00B7 ' : ''}{readTime}
+      {displayDate && (
+        <time datetime={displayDate.toISOString()}>
+          {isUpdated ? `Updated ${formattedDate}` : formattedDate}
+        </time>
+      )}
+      {formattedDate && readTime ? ' \u00B7 ' : ''}{readTime}
     </div>
   )}
   <h3

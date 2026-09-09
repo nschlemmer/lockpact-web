@@ -2,6 +2,7 @@
 title: "App Blockers You Can't Bypass on iPhone — Ranked, Honestly"
 description: "No iPhone app blocker is truly unbypassable. Here's the real off-switch for Opal, one sec, ScreenZen, Brick, AppBlock, and Screen Time — ranked, free to read."
 pubDate: 2026-09-10
+updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "app blockers", "bypass", "iOS"]
 faq:
@@ -25,12 +26,14 @@ Nearly every blocking method on iPhone falls into one of five categories:
 - **A physical object** — a hardware key or NFC tag you have to physically use to unlock. Removes the "I know the code" problem, replaces it with "where is the object."
 - **A person** — someone else has to actively say yes. The only category where the off-switch isn't something you personally control.
 
+One 2026 wrinkle: as of its v4.0.0 update, ScreenZen now puts a person in that last category too — but only for its own settings, not for the block itself, so a partner gating your ScreenZen rules is a different thing from a partner gating your actual unlock.
+
 ## Ranked: bypass path, time to bypass, does anyone find out?
 
 | App | Bypass path | Time to bypass | Does anyone find out? |
 |---|---|---|---|
 | **Screen Time (self-set)** | Your own passcode: Ask for More Time, or Settings → Screen Time → turn it off | Seconds | No |
-| **ScreenZen** | Same Screen Time-adjacent OS path: revoke access via Settings, or delete the app | Seconds | No — no partner-notification feature in its current App Store listing |
+| **ScreenZen** | Same Screen Time-adjacent OS path (revoke access via Settings, or delete the app) for the block itself — but as of its v4.0.0 update, a Lock Settings feature can gate *reopening your settings* behind an accountability partner who has to let you back in | Seconds for the block; gated for settings changes if Lock Settings + a partner are set up | Only for the settings-lock path, and only if a partner holds it — the underlying OS-level bypass still isn't detected or reported |
 | **Opal** | Revoke Screen Time access or delete the app, unless "Make Opal Foolproof" (Opal's version of Lock Screen Time Settings) is set up with someone else holding the code | Seconds, unless foolproof mode is on with a friend's passcode | Not automatically — its Buddies feature is social visibility, not a bypass alert |
 | **one sec** | Same OS-level path, unless Lock Screen Time Settings is set up with a friend (one sec's own recommendation); in-app Strict Block only stops disabling one sec's own schedules, not the OS-level route | Seconds, unless a friend holds the Screen Time-settings code | Not automatically |
 | **AppBlock, Strict Mode (no Approval Access)** | Same OS-level path around Screen Time; Strict Mode itself blocks the in-app toggle but not Apple's own Settings route | Seconds via Settings, or wait out the schedule | No |
@@ -75,7 +78,7 @@ Your partner gets notified immediately. LockPact doesn't claim to make bypass im
 
 ---
 
-Sources checked 2026-09-08: [Opal — App Store listing](https://apps.apple.com/us/app/opal-screen-time-control/id1497465230) and pricing pages (~$99.99/yr, ~$19.99/mo, $399 lifetime) · [one sec's guide to locking Screen Time permission](https://one-sec.app/blog/lock-screen-time-permission) (Strict Block mode) · [ScreenZen — App Store listing](https://apps.apple.com/us/app/screenzen-screen-time-control/id1541027222) (Free + tip-based IAP, no partner feature found) · [Brick — emergency unbricks policy](https://getbrick.com/pages/emergency-unbricks) (5 emergency unbricks, 2-business-day manual reset; no visible last-updated date on the page as of this check) · [AppBlock — App Store listing](https://apps.apple.com/us/app/appblock-block-apps-website/id1515753232) (Strict Mode; Premium $4.99/mo or $29.99/yr) and [AppBlock's Approval Access page](https://appblock.app/tired-of-breaking-your-own-phone-rules-try-an-accountability-partner) · [Apple developer forums, thread 821959](https://developer.apple.com/forums/thread/821959) (Face ID path, reported/unconfirmed) · Cold Turkey's own comparison content confirms no native iOS app exists.
+Sources checked 2026-09-08: [Opal — App Store listing](https://apps.apple.com/us/app/opal-screen-time-control/id1497465230) and pricing pages (~$99.99/yr, ~$19.99/mo, $399 lifetime) · [one sec's guide to locking Screen Time permission](https://one-sec.app/blog/lock-screen-time-permission) (Strict Block mode) · [ScreenZen — App Store listing](https://apps.apple.com/us/app/screenzen-screen-time-control/id1541027222) (Free; v4.0.0 added a Lock Settings feature gated by an accountability partner, checked 2026-09-09) · [Brick — emergency unbricks policy](https://getbrick.com/pages/emergency-unbricks) (5 emergency unbricks, 2-business-day manual reset; no visible last-updated date on the page as of this check) · [AppBlock — App Store listing](https://apps.apple.com/us/app/appblock-block-apps-website/id1515753232) (Strict Mode; Premium $4.99/mo or $29.99/yr) and [AppBlock's Approval Access page](https://appblock.app/tired-of-breaking-your-own-phone-rules-try-an-accountability-partner) · [Apple developer forums, thread 821959](https://developer.apple.com/forums/thread/821959) (Face ID path, reported/unconfirmed) · Cold Turkey's own comparison content confirms no native iOS app exists.
 
 Not verified on a physical device this session: whether the reported Face ID path reproduces on any specific iOS 26.4/26.5 build — that needs a device check, not a documentation read.
 

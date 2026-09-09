@@ -2,7 +2,7 @@
 title: "Freedom vs. LockPact: Which Screen Time App Fits You?"
 description: "Freedom blocks apps and websites across all your devices. LockPact uses partner accountability on iPhone. Different problems, different fix — how to choose."
 pubDate: 2026-05-02
-updatedDate: 2026-07-24
+updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "Freedom", "screen time apps", "cross-device blocker"]
 ---
@@ -19,7 +19,7 @@ If you're choosing between them, you need to know which question you're actually
 
 | Feature | Freedom | LockPact |
 |---------|---------|----------|
-| **Price** | Subscription (~$40–130/year depending on devices) | Free |
+| **Price** | $39.99/yr or $8.99/mo (Forever plan: $199) | Free |
 | **Platforms** | iOS, Android, Mac, Windows, Chrome | iOS only |
 | **Core Model** | Cross-device scheduling | Mutual partner accountability |
 | **How It Works** | You set focus times; blocks activate across all devices | Partner holds your unlock key; you hold theirs |
@@ -37,7 +37,7 @@ From one dashboard, you set rules. Block Instagram from 9am to 5pm on weekdays. 
 
 The appeal is obvious: if you're blocked on every device, there's nowhere to run. You *can* disable it—Freedom gives you password protection and requires a cooldown before you can re-enable blocked apps—but the friction is real. You have to consciously choose to override it on every device.
 
-The pricing scales with devices. More devices = higher subscription. It's not cheap, but for knowledge workers juggling phone, laptop, and tablet, it's a reasonable investment in focus.
+Pricing doesn't scale with devices — every plan, including the free tier, covers unlimited devices. It's not cheap on a recurring basis, but for knowledge workers juggling phone, laptop, and tablet, it's a reasonable investment in focus.
 
 ## How LockPact Works
 
@@ -75,7 +75,7 @@ Is it more social friction? Yes. Is it more effective? Behavioral science sugges
 
 ### Pricing and Sustainability
 
-Freedom costs money. Roughly $40–130/year depending on device count. It's a paid service, which means Freedom has a business model and engineers to maintain it.
+Freedom costs money: $39.99/year or $8.99/month, with a $199 "Forever" one-time option (often discounted). Device count doesn't change the price — it's a paid service, which means Freedom has a business model and engineers to maintain it.
 
 LockPact is free. Core features will stay free. The longer-term funding model is still being worked out — that honesty is worth flagging, because any "free forever" promise is a bet on the future.
 
@@ -144,7 +144,7 @@ Yes. You could use Freedom for cross-device focus blocks during work hours and L
 
 ### How much does Freedom cost compared to LockPact?
 
-Freedom costs roughly $40–130 per year depending on devices. LockPact is free, including all core features.
+Freedom costs $39.99/year or $8.99/month (or $199 one-time for the Forever plan), regardless of how many devices you use it on. LockPact is free, including all core features.
 
 ## Read Next
 
@@ -154,6 +154,6 @@ Freedom costs roughly $40–130 per year depending on devices. LockPact is free,
 
 ---
 
-If a willing partner is more available to you than a $40–130/year subscription, [LockPact](/) is free. **[Get LockPact on the App Store](/go/b-freedom-vs-lockpact/)**
+If a willing partner is more available to you than a $39.99/year subscription, [LockPact](/) is free. **[Get LockPact on the App Store](/go/b-freedom-vs-lockpact/)**
 
 Start in solo mode. Test your self-discipline. When you're ready, invite your partner.

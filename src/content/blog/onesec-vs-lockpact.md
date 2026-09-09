@@ -2,7 +2,7 @@
 title: "one sec vs. LockPact: Friction vs. Accountability"
 description: "one sec uses friction (a deep breath delay) before opening apps. LockPact uses partner accountability. Compare both approaches and pick the right one."
 pubDate: 2026-05-02
-updatedDate: 2026-07-24
+updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "one sec", "screen time apps", "accountability"]
 ---
@@ -24,7 +24,7 @@ One uses friction. One uses accountability. They work best for different people.
 | **Accountability** | Self-reflection | Mutual (partner must approve) |
 | **Bypass Friction** | Low (easy to tap through) | High (requires partner action, detected) |
 | **Platform** | iOS only | iOS only |
-| **Price** | Freemium (~$10–$30/year premium) | Free |
+| **Price** | Free (1 app) or Pro — $2.99/mo or $19.99/yr ($99.99 lifetime); Family $4.99/mo or $29.99/yr ($149 lifetime) | Free |
 | **Best For** | Solo users, impulsive openers | Pairs who need mutual commitment |
 
 ## What one sec Does Well

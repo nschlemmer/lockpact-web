@@ -44,6 +44,15 @@ A post is visible on the built site only once `pubDate <= now` (and `draft` is n
 
 `.github/workflows/daily-rebuild.yml` cron-triggers a Vercel Deploy Hook once a day (14:17 UTC / 07:17 PT — off the hour on purpose, GitHub can delay or drop `:00` runs) so scheduled posts actually go live without a manual deploy. It needs a `VERCEL_DEPLOY_HOOK` repository secret (Vercel → Settings → Git → Deploy Hooks) that isn't set by default; the workflow fails loudly until it is. `workflow_dispatch` lets you trigger it manually (also the required re-arm — GitHub auto-disables `schedule:` workflows on public repos after 60 days with no commits to the repo).
 
+### Dates (`pubDate` / `updatedDate`)
+
+Policy added 2026-09-09 (`docs/content-plan-60d-2026-08.md` §4 "Dates" rule):
+
+- Set `updatedDate` only for a **substantive** edit — a new or rewritten section, a live price/mechanic re-verification, a factual correction. Link-only or typo edits do not bump it.
+- **Never change `pubDate` on a published post.** It's the post's permanent publish date.
+- Blog cards and the post header show the later of `pubDate`/`updatedDate`, day precision, labelled `Updated <date>` only when it's strictly later than `pubDate` (`src/lib/posts.ts`'s `lastActivity`, `BlogCard.astro`, `BlogLayout.astro`'s header). The blog index and homepage preview sort by that same latest-activity value (`byLatestActivity`), not raw `pubDate` — so a re-verified older post rises back toward the top on its `updatedDate`, not just new posts on `pubDate`.
+- Every commercial page (vs/review/roundup/alternatives) gets its prices and mechanics live-re-verified at least every ~90 days — this is what keeps "as of &lt;month&gt;" strings true and produces honest, spread-out update dates rather than a one-time re-date. First full pass: the `agent-1/web-dates-reverify` round (2026-09-09, all 12 commercial pages in one PR). Next rotation due ≈ 2026-12-09.
+
 ## Answer engine optimization (AEO)
 
 - **`public/llms.txt`** — a curated, machine-readable index of the site's highest-value pages, per the [llms.txt convention](https://llmstxt.org). Kept in sync manually; not build-generated.

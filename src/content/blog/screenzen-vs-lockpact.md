@@ -2,7 +2,7 @@
 title: "ScreenZen vs. LockPact: Friction vs. Accountability"
 description: "ScreenZen's escalating friction vs. LockPact's mutual partner lock — full comparison, real-world example, and when ScreenZen is the better pick."
 pubDate: 2026-04-25
-updatedDate: 2026-07-24
+updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "ScreenZen", "accountability"]
 ---
@@ -21,9 +21,9 @@ One uses friction. One uses accountability. They work best for different people.
 | **Pause Before Opening** | Yes (escalating delays) | N/A (can't open at all) |
 | **Daily Open Limits** | Yes | No (not in MVP) |
 | **Social Sharing** | Yes (stats visibility) | No |
-| **Partner Feature** | Friends see your stats | Both people lock & unlock |
-| **Partner Control** | None (passive visibility) | Full (active approval) |
-| **Halo Device** | Optional ($99) | N/A |
+| **Partner Feature** | Friends see your stats; v4.0+ adds an accountability partner for settings changes | Both people lock & unlock |
+| **Partner Control** | Settings-lock only — a partner approves changes to your ScreenZen config (v4.0+), not individual app opens | Full (active approval on every unlock) |
+| **Halo Device** | Optional ($49) | N/A |
 | **Price** | Free | Free |
 | **Bypass Risk** | Medium (easy to override) | High (you can always bypass, but it's detected) |
 
@@ -39,7 +39,7 @@ This is clever. It uses psychology, not enforcement.
 
 **Social Features.** Share your stats with friends. See how many times they opened Instagram today. It's not accountability (they can't approve/deny your unlocks), but it's visibility. Knowing someone else can see your behavior adds light pressure. For apps where a friend actually does approve or deny, see our roundup of [apps that let a friend control your screen time](/blog/apps-that-let-a-friend-control-your-screen-time/).
 
-**Almost Entirely Free.** The core app—delays, limits, social sharing—costs nothing. You can add a Halo hardware device ($99) for ambient notifications, but it's optional.
+**Almost Entirely Free.** The core app—delays, limits, social sharing—costs nothing. You can add a Halo hardware device ($49) for ambient notifications, but it's optional.
 
 **Designed for Habit Change.** ScreenZen assumes you're trying to *reduce* usage, not *eliminate* it. It doesn't block; it makes you pause and reconsider.
 
@@ -58,6 +58,16 @@ LockPact doesn't use friction. It uses gatekeeping.
 
 **Designed for Mutual Commitment.** You're not trying to reduce your habit alone. You're trying to change it *with* someone else.
 
+
+## ScreenZen's New Lock Settings Feature (v4.0, September 2026)
+
+ScreenZen shipped version 4.0.0 in early September 2026, and the headline addition is worth taking seriously: **Lock Settings**, which lets you add an accountability partner who has to approve before you can change your own ScreenZen configuration.
+
+Here's precisely what that does and doesn't do. Lock Settings gates *settings changes* — if you try to loosen your delays, raise your daily open limits, or turn off blocking on an app, your partner gets asked first and has to say yes. What it doesn't gate is the moment you're actually opening an app. Your escalating friction (the breathing pause, the countdown) still runs exactly as it did before — a partner is never in the loop for a single app open. Once your settings are configured the way you want, ScreenZen enforces them the same way it always has: friction that gets slower the more you tap through it, not a wall your partner has to unlock.
+
+That's a genuinely useful addition — it closes ScreenZen's biggest historical gap, which was that anyone could just turn the friction off the moment it got inconvenient. Now that requires someone else's sign-off. But it's a different mechanism than LockPact's, not a smaller version of the same one. LockPact's partner gate sits on the *unlock request itself* — every single time you want back into a locked app, your partner is the one deciding, in real time. ScreenZen's partner gate sits one layer up, on the *configuration* — your partner approves the rules once (or whenever you try to change them), and between those approvals, the friction (or lack of it) runs on its own.
+
+Put plainly: ScreenZen 4.0 added a partner who guards your settings. LockPact has always had a partner who guards your unlocks. If what you actually want stopped is the 11pm impulse open, not the theoretical possibility that you'll edit a setting next week, that's still a different gate.
 
 ## Who Should Use LockPact
 
@@ -107,7 +117,7 @@ For some people, yes — the pause is often enough to interrupt an automatic rea
 
 ### Does ScreenZen's social sharing count as accountability?
 
-It's visibility, not accountability. Friends can see your stats after the fact, but nobody has to approve anything before you open an app. LockPact's model requires active approval from your partner before an unlock happens, which is a structurally different — and stronger — mechanism.
+The stats-sharing feature is visibility, not accountability — friends can see your numbers after the fact, but nobody has to approve anything before you open an app. Separately, ScreenZen 4.0 (September 2026) added Lock Settings, a real accountability-partner gate — but it protects your *configuration*, not individual app opens; see the section above for the distinction. LockPact's model requires active partner approval before every unlock of an app itself, which is still the structurally different — and stronger — mechanism for the moment that actually matters.
 
 ### Is the Halo hardware device worth it?
 

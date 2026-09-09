@@ -4,11 +4,9 @@ import PageLayout from '../../layouts/PageLayout.astro';
 import BlogCard from '../../components/BlogCard.astro';
 import DownloadCTA from '../../components/DownloadCTA.astro';
 import { getCollection } from 'astro:content';
-import { isVisible } from '../../lib/posts';
+import { isVisible, byLatestActivity } from '../../lib/posts';
 
-const posts = (await getCollection('blog', isVisible)).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const posts = (await getCollection('blog', isVisible)).sort(byLatestActivity);
 ---
 
 <PageLayout
@@ -32,6 +30,7 @@ const posts = (await getCollection('blog', isVisible)).sort(
             description={post.data.description}
             slug={post.slug}
             pubDate={post.data.pubDate}
+            updatedDate={post.data.updatedDate}
             readTime={readTime}
           />
         );
