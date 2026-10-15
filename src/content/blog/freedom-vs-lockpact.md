@@ -148,8 +148,8 @@ Freedom costs $39.99/year or $8.99/month (or $199 one-time for the Forever plan)
 
 ## Read Next
 
-- **[Opal vs. LockPact: Which Screen Time App Is Right for You?](/blog/opal-vs-lockpact)** — Another comparison of solo blocking vs. partner accountability.
-- **[The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners)** — Why partner accountability works when solo discipline doesn't.
+- **[Opal vs. LockPact: Which Screen Time App Is Right for You?](/blog/opal-vs-lockpact/)** — Another comparison of solo blocking vs. partner accountability.
+- **[The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners/)** — Why partner accountability works when solo discipline doesn't.
 - **[Cold Turkey vs. LockPact: Hardcore Blocking vs. Social Accountability](/blog/coldturkey-vs-lockpact/)** — Freedom's cross-device scheduling compared against an even harder-line solo blocker.
 
 ---

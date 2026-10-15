@@ -1,6 +1,6 @@
 ---
-title: "Accountability Partner Apps for Phone Addiction: Ranked by What the Partner Actually Controls"
-description: "Free accountability partner apps for phone addiction, ranked by how much power your partner actually has — from a notification to a mutual lock. LockPact included."
+title: "Accountability Partner Apps for Phone Addiction, Ranked"
+description: "Free accountability partner apps for phone addiction, ranked by how much power your partner has, from a notification to a mutual lock. LockPact included."
 pubDate: 2026-09-15
 author: "LockPact"
 tags: ["accountability partner", "comparison", "phone addiction", "screen time apps"]

@@ -1,6 +1,6 @@
 ---
-title: "Screen Time for Adults on iPhone: Why Apple's Tool Fails the Person Who Set It Up"
-description: "Screen Time was built for a parent and a child. Used on yourself, you're both — and that design gap is exactly why it doesn't hold. Here's what actually fixes it, free."
+title: "Screen Time for Adults on iPhone: Why Apple's Tool Fails"
+description: "Screen Time was built for a parent and a child. Used on yourself, you're both, and that design gap is why it doesn't hold. Here's what fixes it, free."
 pubDate: 2026-09-17
 author: "LockPact"
 tags: ["Screen Time", "self control", "iPhone", "how-to"]

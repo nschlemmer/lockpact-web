@@ -116,8 +116,8 @@ The interventions with the strongest evidence are structural, not willpower-base
 
 ---
 
-If late-night scrolling is your biggest phone habit problem, the fix isn't information — you already know it's a problem. It's making the phone structurally unavailable during the hours that matter. The same principle applies past sunset too — see [how to be more present](/blog/how-to-be-more-present/) once the phone's out of the room, not just at night.
+If late-night scrolling is your biggest phone habit problem, the fix isn't information — you already know it's a problem. It's making the phone structurally unavailable during the hours that matter. The same principle applies past sunset too — see [how to stop phubbing](/blog/phubbing-how-to-stop/) and be present with the people you're with once the phone's out of the room, not just at night.
 
-**Related reading:** [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick) · [The Phone-Free Morning](/blog/phone-free-morning-routine) · [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work)
+**Related reading:** [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick/) · [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work/)
 
 [LockPact](/go/b-screen-time-before-bed-effects/) lets you and a partner lock specific apps during your nightly window. No willpower required at 11pm. Just an agreement you both made earlier, doing the work for you.

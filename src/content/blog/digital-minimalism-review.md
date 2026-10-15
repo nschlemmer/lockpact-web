@@ -1,5 +1,5 @@
 ---
-title: "Digital Minimalism: What Cal Newport Gets Right (And What's Missing)"
+title: "Digital Minimalism Review: What It Gets Right and Misses"
 description: "Cal Newport's Digital Minimalism nails the 'why' but leaves a gap in the 'how.' What the framework gets right, where it falls short, and what's missing."
 pubDate: 2026-05-09
 author: "LockPact"
@@ -100,6 +100,6 @@ Yes, and this combination is probably the most effective approach. Newport's fra
 
 Newport's book is worth your time. Just don't mistake understanding the problem for solving it.
 
-**Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners) · [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick) · [What Happened to the Moment App? Where It Went + 5 Alternatives](/blog/moment-app-review/)
+**Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work/) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners/) · [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick/) · [What Happened to the Moment App? Where It Went + 5 Alternatives](/blog/moment-app-review/)
 
 If you're ready for the behavioral layer — the friction, the commitment, the external accountability — [LockPact](/go/b-digital-minimalism-review/) gives you and a partner a concrete place to start.

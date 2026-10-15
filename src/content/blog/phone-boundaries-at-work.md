@@ -2,6 +2,7 @@
 title: "Phone Boundaries at Work: What's Actually Reasonable"
 description: "Personal phone use at work is universal and largely unaddressed. Here's what's reasonable, what's excessive, and how to set limits that actually hold."
 pubDate: 2026-05-22
+updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["work", "phone habits", "productivity", "professional", "focus"]
 ---
@@ -70,6 +71,12 @@ Adding a partner-held app lock during your core work hours provides accountabili
 
 ---
 
+### The end-of-day cutoff
+
+Working from home takes away the commute, and with it the natural stopping point. Slack and email keep arriving, and you end up half-present with the people you live with while still mentally at work.
+
+Use the phone as the boundary marker instead. At your stopping time, close the work apps, turn on Do Not Disturb for work notifications, and do one personal thing that tells your brain the day is over. The ritual is the point: it only works if the phone behaves differently after five than it did at two.
+
 ## Frequently Asked Questions
 
 ### Is personal phone use at work a fireable offense?
@@ -94,4 +101,4 @@ The work phone habit isn't a moral failing. It's an environment problem: the pho
 
 For the evenings outside work hours — when work is done but the phone habits persist — [LockPact](/go/b-phone-boundaries-at-work/) provides mutual accountability with a partner.
 
-**Related reading:** [Phone Use While Working From Home](/blog/phone-use-while-working-from-home) · [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick) · [Phone Addiction vs. Phone Habit](/blog/phone-addiction-vs-phone-habit) The work hours are yours to structure. The evenings don't have to be a scroll default.
+**Related reading:** [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick/) · [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work/) The work hours are yours to structure. The evenings don't have to be a scroll default.

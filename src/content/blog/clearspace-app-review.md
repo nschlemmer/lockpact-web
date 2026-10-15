@@ -87,7 +87,7 @@ The family plan covers multiple people under one subscription — a reasonable d
 
 ### Where LockPact fits
 
-If what draws you to Clearspace's "accountability partner" feature is wanting someone else in the loop, LockPact is built around exactly that, with the one piece Clearspace's Premium tier doesn't include: your partner has to actively approve before you're back in, not just get notified afterward. It's also free, with no Premium tier gating that mechanism.
+If what draws you to Clearspace's "accountability partner" feature is wanting someone else in the loop, LockPact is built around exactly that, with the one piece Clearspace's Premium tier doesn't include: your partner has to actively approve before you're back in, not just get notified afterward. It's also free, with no Premium tier gating that mechanism. If you're still comparing, [Best Free App Blockers for iPhone (2026)](/blog/best-free-app-blocker-iphone-2026/) covers the free alternatives, and [Freedom vs. LockPact](/blog/freedom-vs-lockpact/) makes the same comparison for another solo-first blocker.
 
 [Get LockPact on the App Store →](/go/b-clearspace-app-review/)
 

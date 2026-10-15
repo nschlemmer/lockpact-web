@@ -73,7 +73,7 @@ AppBlock is comprehensive, but it has blind spots—especially for partner accou
 
 **Complex UX.** Scheduled rules, location rules, Pomodoro sessions, website blacklists — there's a lot to learn and maintain.
 
-**Not Built for Mutual Commitment.** AppBlock assumes one "gatekeeper" and one "person being monitored" — useful for parents and teens, less so for two adults who want equal accountability.
+**Not Built for Mutual Commitment.** AppBlock assumes one "gatekeeper" and one "person being monitored" — useful for parents and teens, less so for two adults who want equal accountability. If you're weighing AppBlock against a website-focused blocker instead, [AppBlock vs. BlockSite](/blog/appblock-vs-blocksite/) is the comparison.
 
 
 ## Who Should Use AppBlock

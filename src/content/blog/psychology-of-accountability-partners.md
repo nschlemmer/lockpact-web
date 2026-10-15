@@ -1,5 +1,5 @@
 ---
-title: "Screen Time Accountability Partners: The Psychology of Why They Work"
+title: "Screen Time Accountability Partners: Why They Work"
 description: "What makes a screen time accountability partner actually work, per behavioral research — and why solo willpower apps keep failing where partners succeed."
 pubDate: 2026-05-01
 updatedDate: 2026-09-09
@@ -99,7 +99,7 @@ If you're single, this doesn't work. If your partner doesn't want to participate
 
 But for couples, roommates, close friends, or family members trying to reclaim phone time together, mutual accountability changes the game. It's not because the lock is better. It's because **the incentive structure is different**.
 
-[The behavioral science behind why solo screen time apps fail](/blog/why-screen-time-apps-dont-work) covers this principle in more depth. For tactical guidance on running a partner lock, see the [7-day phone pact guide](/blog/how-to-run-a-7-day-phone-pact).
+[The behavioral science behind why solo screen time apps fail](/blog/why-screen-time-apps-dont-work/) covers this principle in more depth. For tactical guidance on running a partner lock, see the [7-day phone pact guide](/blog/how-to-run-a-7-day-phone-pact/).
 
 If your closest person for this is a friend rather than a partner, [the same mutual-lock structure works between best friends](/blog/best-friends-phone-pact-guide/) — the psychology doesn't care what the relationship label is, only that trust and consequence both exist. And if you're wondering whether the effect fades after the first few weeks, [it's the same mechanism behind why streaks work — and why they sometimes stop working](/blog/streaks-and-accountability-why-they-work/).
 

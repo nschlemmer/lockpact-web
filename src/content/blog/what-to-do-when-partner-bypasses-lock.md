@@ -116,6 +116,6 @@ Yes. Getting ahead of the notification — "I bypassed last night, here's why" �
 
 Bypass is part of every phone pact. How you handle it is what determines whether the pact is worth having.
 
-**Related reading:** [How to Run a 7-Day Phone Pact With Your Partner](/blog/how-to-run-a-7-day-phone-pact) · [How to Talk to Your Partner About Their Phone Use](/blog/how-to-have-the-phone-conversation) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners)
+**Related reading:** [How to Run a 7-Day Phone Pact With Your Partner](/blog/how-to-run-a-7-day-phone-pact/) · [How to Talk to Your Partner About Their Phone Use](/blog/how-to-have-the-phone-conversation/) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners/)
 
 [LockPact](/go/b-what-to-do-when-partner-bypasses-lock/) surfaces bypasses automatically so the conversation can happen. The app handles the transparency. You handle the conversation.

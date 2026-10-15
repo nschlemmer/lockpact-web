@@ -142,11 +142,11 @@ You don't need to be a couple that has their phones in the other room. You just 
 
 ## Reading Further
 
-If you want concrete strategies for maintaining boundaries, see **[How to Run a 7-Day Phone Pact](/blog/how-to-run-a-7-day-phone-pact)** — a step-by-step guide for couples setting their first shared boundary.
+If you want concrete strategies for maintaining boundaries, see **[How to Run a 7-Day Phone Pact](/blog/how-to-run-a-7-day-phone-pact/)** — a step-by-step guide for couples setting their first shared boundary.
 
-If you want to see how other pairs are handling this (roommates, co-workers, friends), **[The Phone Pact Guide for Roommates](/blog/roommate-phone-pact-guide)** walks through the same principles in a different context.
+If you want to see how other pairs are handling this (roommates, co-workers, friends), **[The Phone Pact Guide for Roommates](/blog/roommate-phone-pact-guide/)** walks through the same principles in a different context.
 
-And if you're trying to understand why solo phone rules fail, **[Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work)** breaks down the behavioral science.
+And if you're trying to understand why solo phone rules fail, **[Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work/)** breaks down the behavioral science.
 
 If distance is part of your situation, **[Long Distance Relationship Phone Habits: Why It's a Different Problem](/blog/long-distance-relationship-phone-boundaries/)** covers the version of this that co-located couples don't have to deal with.
 

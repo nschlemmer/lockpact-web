@@ -2,7 +2,7 @@
 title: "How to Set Phone Limits That Actually Stick"
 description: "Most self-imposed phone limits fail within two weeks. Here's why — and how to design limits that actually hold when your willpower is low."
 pubDate: 2026-05-25
-updatedDate: 2026-09-09
+updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["phone limits", "how-to", "behavior change", "screen time", "habits"]
 ---
@@ -75,6 +75,8 @@ Ask yourself: if I really didn't want to follow this limit tonight, how easy wou
 
 ---
 
+**Example: the first week of a phone-free morning.** Take the most common limit people try: no phone for the first hour after waking. Days one to three are uncomfortable, because the habit fires and there's nothing to answer it. Name the urge ("I want to check my phone right now") and don't act on it. Labeling doesn't make it painless, but it takes some of the automatic out of it. By day four or five the itch is weaker. By day ten the morning is less reactive: the day starts with you instead of your inbox. That's the pattern with any limit that holds: the first week costs the most, and it gets cheaper.
+
 ## Principle 4: Add External Accountability
 
 The most reliable upgrade to any self-imposed limit is making it visible to someone else.
@@ -141,6 +143,6 @@ Yes. Solo limits work for some people, especially when combined with structural 
 
 You don't need to be more disciplined. You need a better-designed limit. If you want the philosophy behind why discipline alone doesn't work, [our review of Cal Newport's Digital Minimalism](/blog/digital-minimalism-review/) covers the gap between the "why" and the "how."
 
-**Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners) · [The Phone-Free Morning](/blog/phone-free-morning-routine) · [Screen Time for Adults on iPhone](/blog/screen-time-for-adults-iphone/)
+**Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work/) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners/) · [Screen Time for Adults on iPhone](/blog/screen-time-for-adults-iphone/)
 
 [LockPact](/go/b-how-to-set-phone-limits-that-actually-stick/) handles the external accountability and structural enforcement. Your partner holds the lock. The limit holds when you're tired. Start there.

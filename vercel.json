@@ -31,7 +31,15 @@
   "redirects": [
     { "source": "/download", "destination": "https://apps.apple.com/app/lockpact/id6759302382", "permanent": false },
     { "source": "/app", "destination": "https://apps.apple.com/app/lockpact/id6759302382", "permanent": false },
-    { "source": "/tip", "destination": "/support-lockpact", "permanent": true },
-    { "source": "/tip/thanks", "destination": "/support-lockpact/thanks", "permanent": true }
+    { "source": "/blog/phone-use-while-working-from-home/", "destination": "/blog/phone-boundaries-at-work/", "permanent": true },
+    { "source": "/blog/phone-use-while-working-from-home", "destination": "/blog/phone-boundaries-at-work/", "permanent": true },
+    { "source": "/blog/phone-free-morning-routine/", "destination": "/blog/how-to-set-phone-limits-that-actually-stick/", "permanent": true },
+    { "source": "/blog/phone-free-morning-routine", "destination": "/blog/how-to-set-phone-limits-that-actually-stick/", "permanent": true },
+    { "source": "/blog/how-to-be-more-present/", "destination": "/blog/phubbing-how-to-stop/", "permanent": true },
+    { "source": "/blog/how-to-be-more-present", "destination": "/blog/phubbing-how-to-stop/", "permanent": true },
+    { "source": "/blog/phone-addiction-vs-phone-habit/", "destination": "/blog/why-screen-time-apps-dont-work/", "permanent": true },
+    { "source": "/blog/phone-addiction-vs-phone-habit", "destination": "/blog/why-screen-time-apps-dont-work/", "permanent": true },
+    { "source": "/tip", "destination": "/support-lockpact/", "permanent": true },
+    { "source": "/tip/thanks", "destination": "/support-lockpact/thanks/", "permanent": true }
   ]
 }

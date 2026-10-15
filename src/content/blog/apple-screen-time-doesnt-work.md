@@ -130,15 +130,15 @@ Yes, as a diagnostic. It's genuinely useful for seeing how much time you're actu
 
 **If you use Screen Time on yourself, not a child:** [Screen Time for Adults on iPhone](/blog/screen-time-for-adults-iphone/) — why the design assumes two people, and what to do when you're both of them.
 
-**If you want the Instagram-specific version of this:** [How to lock Instagram after a time limit, or during certain hours](/blog/instagram-vs-lockpact-blocking) — the same Lock Screen Time Settings mechanic, applied to one app.
+**If you want the Instagram-specific version of this:** [How to lock Instagram after a time limit, or during certain hours](/blog/instagram-vs-lockpact-blocking/) — the same Lock Screen Time Settings mechanic, applied to one app.
 
 **If you want the full walkthrough:** [Lock Screen Time Settings: Give Your Partner the Passcode](/blog/lock-screen-time-settings-partner-passcode/) — the step-by-step setup, written for the partner who's holding the code, plus the honest loopholes that remain.
 
-**If you want to understand partner accountability better:** [Why screen time apps fail](/blog/why-screen-time-apps-dont-work)—and the exception.
+**If you want to understand partner accountability better:** [Why screen time apps fail](/blog/why-screen-time-apps-dont-work/)—and the exception.
 
-**If you want to compare blockers:** [The best free app blockers for iPhone in 2026](/blog/best-free-app-blocker-iphone-2026).
+**If you want to compare blockers:** [The best free app blockers for iPhone in 2026](/blog/best-free-app-blocker-iphone-2026/).
 
 **If you want to see how LockPact compares to specific tools:**
-- [AppBlock vs. LockPact](/blog/appblock-vs-lockpact)
-- [ScreenZen vs. LockPact](/blog/screenzen-vs-lockpact)
+- [AppBlock vs. LockPact](/blog/appblock-vs-lockpact/)
+- [ScreenZen vs. LockPact](/blog/screenzen-vs-lockpact/)
 

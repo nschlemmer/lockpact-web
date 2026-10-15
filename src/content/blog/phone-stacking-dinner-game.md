@@ -1,5 +1,5 @@
 ---
-title: "Phone Stacking Game: What It Is, the Rules, and Whether It Works"
+title: "Phone Stacking Game: The Rules and Whether It Works"
 description: "Phone stacking is a dinner game: everyone piles their phones face-down, first to grab theirs pays the bill. Here's whether it actually works."
 pubDate: 2026-05-05
 updatedDate: 2026-09-04
@@ -63,7 +63,7 @@ That's the phone stacking game applied to your actual life. The dinner is replac
 
 The difference in outcomes is significant. A one-time dinner game barely registers in habit research. A consistent, mutual commitment — especially one with a trusted partner — is one of the strongest predictors of sustained behavior change.
 
-Worth being precise about what "accountability partner" means if you go looking for an app version of this: some apps (see our [Clearspace review](/blog/clearspace-app-review)) just notify a partner after you've already gone over budget — visibility, not a gate. The stacked-phones bet works because losing has an immediate, unavoidable cost; an app-based version needs that same actual gate, not just a heads-up after the fact.
+Worth being precise about what "accountability partner" means if you go looking for an app version of this: some apps (see our [Clearspace review](/blog/clearspace-app-review/)) just notify a partner after you've already gone over budget — visibility, not a gate. The stacked-phones bet works because losing has an immediate, unavoidable cost; an app-based version needs that same actual gate, not just a heads-up after the fact.
 
 ---
 
@@ -101,6 +101,6 @@ Someone you already have a relationship with, who has their own phone habits the
 
 Phone stacking is a start. If it showed you what's possible — an hour of real presence, an actual conversation, a meal you actually remember — the next step is making that the default instead of the exception.
 
-**Related reading:** [How to Run a 7-Day Phone Pact With Your Partner](/blog/how-to-run-a-7-day-phone-pact) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners) · [Couples and Phone Boundaries](/blog/couples-and-phone-boundaries)
+**Related reading:** [How to Run a 7-Day Phone Pact With Your Partner](/blog/how-to-run-a-7-day-phone-pact/) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners/) · [Couples and Phone Boundaries](/blog/couples-and-phone-boundaries/)
 
 [LockPact](/go/b-phone-stacking-dinner-game/) lets you and a partner carry that principle into your everyday evenings. Not just dinner. Everywhere it matters. If you're weighing it against other options, [see how it compares to the rest of the free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/).

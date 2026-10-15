@@ -67,6 +67,8 @@ No setting from Apple, and no app, makes an iPhone bypass-proof for its own owne
 
 ## What to pair this with
 
+If you also need the basics (how to change, reset, or turn off the regular Screen Time passcode), [the Screen Time passcode guide](/blog/screen-time-passcode/) covers each step.
+
 Lock Screen Time Settings is a one-time setting, not an app — it doesn't tell anyone if you try to get around it, and it only covers the two exits described above. If you want the full picture of what happens when someone does get past a lock, including how to handle it as a couple, [what to do when your partner bypasses the lock](/blog/what-to-do-when-partner-bypasses-lock/) covers that conversation directly. And if the goal is ranking how hard various blockers actually are to get around — this setting included — [see the honest ranking of app blockers by bypass difficulty](/blog/app-blockers-you-cant-bypass-iphone/).
 
 If you don't currently have a specific app you're trying to lock so much as a general "I want someone else to hold the key" arrangement, [the category of apps built around exactly that](/blog/apps-that-let-a-friend-control-your-screen-time/) is a reasonable next stop.
