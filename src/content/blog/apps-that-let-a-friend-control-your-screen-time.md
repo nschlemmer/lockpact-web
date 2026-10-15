@@ -50,7 +50,7 @@ The apps in this roundup take a different approach: they hand the override decis
 
 The mechanic varies app to app, but the shared idea is simple: when you want past your limit, a real person — not a setting — decides whether you get through.
 
-That changes the psychology in a way friction alone doesn't. It's not "am I strong enough to wait 10 seconds," it's "am I willing to ask my partner, at 11pm, why I need Instagram back." For a lot of people, the second question is the one that actually works. The lowest-tech version needs no app at all: [give your partner the Screen Time passcode](/blog/lock-screen-time-settings-partner-passcode/) so that they're the only one who can change it.
+That changes the psychology in a way friction alone doesn't. It's not "am I strong enough to wait 10 seconds," it's "am I willing to ask my partner, at 11pm, why I need Instagram back." For a lot of people, the second question is the one that actually works. The lowest-tech version needs no app at all: [give your partner the Screen Time passcode](/blog/lock-screen-time-settings-partner-passcode/) so that they're the only one who can change it, and [how to change or hand off the Screen Time passcode](/blog/screen-time-passcode/) covers the basics.
 
 Below are the apps we could verify are live, on iOS, and built around a friend or partner in the approval loop — plus where the popular "solo" tools fit for contrast.
 
