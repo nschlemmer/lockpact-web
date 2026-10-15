@@ -2,7 +2,7 @@
 title: "AppBlock vs. LockPact: Feature Comparison"
 description: "AppBlock is free with a paid Premium tier; LockPact is free. AppBlock's Approval Access is one-way and Premium-only — LockPact's mutual lock is neither."
 pubDate: 2026-04-29
-updatedDate: 2026-09-08
+updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["comparison", "AppBlock", "app blockers"]
 faq:
@@ -25,7 +25,7 @@ But if you're looking for partner accountability, AppBlock's approach is differe
 | **Schedule Blocking** | Yes (time-based rules) | No (not in MVP) |
 | **Location-Based Blocking** | Yes (geo-fencing) | No |
 | **Pomodoro Timer** | Yes (work/break cycles) | No |
-| **Website Blocking** | Yes | No |
+| **Website Blocking** | Yes | Locks websites you pick in Apple's picker (browser coverage isn't documented by Apple) |
 | **Partner Feature** | Yes (Premium, ~$4.99/mo or ~$29.99/yr) | Yes (Free) |
 | **Partner Approval** | Asymmetric (one-way) | Mutual (both-way) |
 | **Bypass Detection** | No | Yes |

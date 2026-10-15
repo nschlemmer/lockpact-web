@@ -82,6 +82,8 @@ No setting changes that completely. A device owner can always get around an iPho
 
 That's the real upgrade over everything above. [How to change, reset, or hand off your Screen Time passcode](/blog/screen-time-passcode/) covers the passcode basics, and [Lock Screen Time Settings: give your partner the passcode](/blog/lock-screen-time-settings-partner-passcode/) walks through the setup and the loopholes that still exist.
 
+If the thing you want to lock is a website rather than an app, see [how to block websites on iPhone](/blog/how-to-block-websites-on-iphone/).
+
 ## Where LockPact fits
 
 Built-in locks ask you to be disciplined at your worst moment. LockPact puts a second person in that moment: you each lock your own apps, your partner approves your unlock requests, you approve theirs, and either of you is notified if the other bypasses the lock. It's free, with no premium tier gating the lock, and it works alongside every Apple tool above rather than replacing them.
