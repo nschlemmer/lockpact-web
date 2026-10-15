@@ -5,6 +5,13 @@ pubDate: 2026-04-17
 updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["guide", "app blockers", "free apps"]
+faq:
+  - q: "What is the best free app blocker for iPhone?"
+    a: "It depends on who holds the off switch. For a free lock a partner controls, LockPact; for free friction, one sec's essentials or ScreenZen; for a free solo block, Opal's one-rule plan. All of the solo options can be turned off by you in Settings."
+  - q: "Are free iPhone app blockers really free?"
+    a: "Some are. ScreenZen's App Store listing shows only optional tips, and LockPact's partner features have no paid tier. Opal's free plan is limited to one rule, and Freedom's free plan has no scheduling or Locked Mode. Check each pricing page before relying on it."
+  - q: "Can a free app blocker stop me turning it off?"
+    a: "Not on its own. An iPhone owner can always revoke an app's Screen Time access in Settings. A blocker can make that slower, or tell another person when you do, as LockPact does, but nothing makes it impossible."
 ---
 The best free app blocker for iPhone depends on who holds the off switch. Solo blockers, including the free ones, can all be turned off by you in Settings. An app that puts another person in the unlock path, like LockPact, is the free option built for that. Prices below were checked on App Store listings and each app's own site on October 15, 2026.
 
