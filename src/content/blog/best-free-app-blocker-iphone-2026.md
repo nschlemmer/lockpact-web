@@ -1,11 +1,13 @@
 ---
-title: "Best Free App Blockers for iPhone (2026)"
-description: "Honest review of 8 free and freemium screen time apps for iOS. Which ones actually work, which are just paywalls, what Reddit recommends, and how to choose."
+title: "Best App Blocker for iPhone: Free Options Tested (2026)"
+description: "The best app blocker for iPhone, free or nearly: 8 apps compared on what's actually free, who can turn each one off, and what it costs. Which ones actually work, which are just paywalls, what Reddit recommends, and how to choose."
 pubDate: 2026-04-17
-updatedDate: 2026-09-09
+updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["guide", "app blockers", "free apps"]
 ---
+The best free app blocker for iPhone depends on who holds the off switch. Solo blockers, including the free ones, can all be turned off by you in Settings. An app that puts another person in the unlock path, like LockPact, is the free option built for that. Prices below were checked on App Store listings and each app's own site on October 15, 2026.
+
 ## The Free Tier Problem
 
 **Most "free" screen time apps are actually paywalls.**
@@ -20,28 +22,28 @@ Here are 8 apps worth knowing, what's actually free in each one, and where the f
 
 | App | Approach | Bypass difficulty | Actually Free? | Paid Tier | Best For |
 |---|---|---|---|---|---|
-| **LockPact** | Mutual partner locking | Same OS-level route as any Screen Time app — but bypass is always detected, partner notified | Everything | None | Two people who trust each other |
-| **One Sec** | Friction / pause before opening | Same OS-level route, unless a partner holds the Lock Screen Time Settings passcode; no bypass notification | Fully-featured | $5.99/mo optional | People already trying to change |
+| **LockPact** | Mutual partner locking | Same OS-level route as any Screen Time app — but bypass is always detected, partner notified | Core flow: pairing, unlock requests, bypass detection, mutual locking | Optional: tips and Willpower Waivers ($1.99–$9.99, skip the pre-request video) | Two people who trust each other |
+| **One Sec** | Friction / pause before opening | Same OS-level route, unless a partner holds the Lock Screen Time Settings passcode; no bypass notification | Essentials | Pro: $6.99/mo, $19.99/yr, or $99.99 lifetime | People already trying to change |
 | **ScreenZen** | Friction + streak sharing | Same OS-level route; no bypass-detection feature found on its listing | Core features | None currently | Friends who like gamified stats |
 | **Opal** | Solo blocking | Same OS-level route unless "Make Opal Foolproof" is set up with a partner's passcode; Buddies is visibility, not an alert | Basic blocking only | $19.99/mo (~$100/yr with the annual plan) | People who'll pay for polish |
 | **AppBlock** | Solo blocking, granular rules | Strict Mode blocks its own in-app toggle, not Apple's Settings route; Approval Access doesn't cover the OS-level path either | Core blocking | Premium ($4.99/mo or $29.99/yr) unlocks Strict Mode | Power users who want control |
-| **Freedom** | Cross-device blocking (Screen Time API on iOS, VPN for websites) | Same OS-level Screen Time route on iOS, unless a partner holds the passcode | Free plan exists; limits undocumented | $39.99/yr (7-day trial), $8.99–$12.99/mo, or $199 lifetime | Multi-device solo blockers |
-| **Friend Controls** | Friend-managed locking | Same OS-level route works around friend approval; no bypass-detection feature found | Core locking | None known | Testing a lighter partner-lock |
-| **Cold Turkey** | Hardcore desktop blocking | N/A on iPhone — no native Cold Turkey iOS app exists (Frozen Turkey is Mac/Windows only) | Basic blocking | $39 one-time (Mac/Windows) | Deadline-driven desktop focus |
+| **Freedom** | Cross-device blocking (Screen Time API on iOS, VPN for websites) | Same OS-level Screen Time route on iOS, unless a partner holds the passcode | Free plan: blocks apps and sites; no scheduling or Locked Mode | Premium: $3.33/mo billed yearly (7-day trial), $8.99/mo, or $99.50 lifetime | Multi-device solo blockers |
+| **Friend Controls** | Friend-managed locking | Same OS-level route works around friend approval; no bypass-detection feature found | Free to install; core locking | In-app subscriptions listed from $2.99/mo ($14.99/yr, $29.99 lifetime) | Testing a lighter partner-lock |
+| **Cold Turkey** | Hardcore desktop blocking | N/A on iPhone — no native Cold Turkey iOS app exists (Frozen Turkey is Mac/Windows only) | Basic blocking | Pro: pay once (Mac/Windows only; price on its site) | Deadline-driven desktop focus |
 
-Prices reflect each app's live App Store listing as of September 2026 and can change without notice. Bypass-difficulty values are consistent with our full ranking in [App Blockers You Can't Bypass on iPhone](/blog/app-blockers-you-cant-bypass-iphone/), which covers the exact taps for each.
+Prices reflect each app's live App Store listing (or its own pricing page, for Freedom and Opal) as of October 15, 2026 and can change without notice. Bypass-difficulty values are consistent with our full ranking in [App Blockers You Can't Bypass on iPhone](/blog/app-blockers-you-cant-bypass-iphone/), which covers the exact taps for each.
 
 ## 1. LockPact
 
-**Price:** Free, forever
-**What's Free:** Everything — partner pairing, unlock requests, bypass detection, mutual locking
+**Price:** Free to use, with optional in-app purchases (tips, and Willpower Waivers at $1.99, $4.99 or $9.99)
+**What's Free:** The whole partner flow — pairing, unlock requests, bypass detection, mutual locking
 **The Catch:** You need another person
 
 LockPact is built around one idea: you can't do this alone. So don't try.
 
 You pair with someone you trust (a partner, roommate, sibling, or friend). You each select apps to block. When you want to unlock an app, your partner has to approve it. If you bypass (Apple lets you), your partner gets alerted immediately.
 
-It's free because the enforcement mechanism is the relationship, not the software. You don't pay for premium features. Everything that exists is free.
+It's free to use because the enforcement mechanism is the relationship, not the software. There's no premium tier gating the partner features. The optional purchases are a tip jar and Willpower Waivers, which skip the short video before an unlock request; you never need either to use the app.
 
 **The social cost is the feature.** Texting your partner "Can you unlock Instagram?" is uncomfortable. So you don't do it unless you really need it. And you probably don't.
 
@@ -52,7 +54,7 @@ It's free because the enforcement mechanism is the relationship, not the softwar
 
 ## 2. One Sec
 
-**Price:** Free with optional $5.99/month premium
+**Price:** Free essentials; Pro is $6.99/month, $19.99/year or $99.99 lifetime
 **What's Free:** App blocking with customizable "friction" messages
 **The Catch:** Less powerful blocking than enterprise apps; designed for "awareness" not "prevention"
 
@@ -60,7 +62,7 @@ One Sec is built on [science about habit formation](https://www.apa.org/science/
 
 You set up a custom message that appears before you can open Instagram: "Do you actually want to open this, or are you bored?" If you're honest with yourself, you'll sometimes close the app and do something else.
 
-It's genuinely clever. And the free tier is full-featured.
+It's genuinely clever. And the free essentials cover the core friction feature.
 
 The catch: this only works if you're already motivated to change. If you're not, you'll just read the message and open Instagram anyway. It's a tool for people already trying, not for people who don't think they have a problem.
 
@@ -88,7 +90,7 @@ The gap is that visibility isn't the same as control. Nobody has to approve anyt
 
 ## 4. Opal
 
-**Price:** Free with $19.99/month premium (~$99.99/year with Opal's annual plan, as of September 2026 — billing month-to-month instead runs closer to $240/year; a $399 lifetime option also exists)
+**Price:** Free with $19.99/month premium (~$99.99/year with Opal's annual plan, as of October 2026 — billing month-to-month instead runs closer to $240/year; a $399 lifetime option also exists, per opalapp.com/pricing)
 **What's Free:** Basic app blocking, no bypass protection, limited features
 **The Catch:** Everything worth paying for costs money; free tier feels like a trial
 
@@ -120,8 +122,8 @@ The tradeoff: AppBlock's free version is honest-system, not hard-enforced. You c
 
 ## 6. Freedom
 
-**Price:** $39.99/year (7-day free trial), $8.99–$12.99/month, or $199 one-time for lifetime
-**What's Free:** A free plan exists, but Freedom doesn't publicly detail its limits — marketing leads with the paid tier
+**Price:** $3.33/month billed yearly (7-day free trial), $8.99/month, or $99.50 one-time for lifetime (listed as 50% off $199)
+**What's Free:** A free plan blocks apps, websites, or the whole internet on unlimited devices; scheduling, recurring sessions and Locked Mode are Premium
 **The Catch:** On iOS, Freedom blocks apps using Apple's own Screen Time API — the same mechanism (and the same OS-level bypass path) every solo Screen Time-based blocker shares
 
 Freedom's strength is cross-device blocking — one schedule that blocks apps and websites across your phone, laptop, and tablet simultaneously. For people who lose focus by hopping from phone to browser, that's genuinely useful.
@@ -135,8 +137,8 @@ But the free tier is thin and vaguely defined, and on iPhone, Freedom isn't doin
 
 ## 7. Friend Controls
 
-**Price:** Free
-**What's Free:** A friend can remotely manage your app blocks
+**Price:** Free to install; the App Store listing shows in-app subscriptions starting at $2.99/month ($14.99/year, $29.99 lifetime)
+**What's Free:** Check the listing before relying on it — we couldn't confirm which features sit behind the in-app purchases
 **The Catch:** Smaller, newer app — fewer reviews, less track record than the bigger names on this list
 
 Friend Controls is conceptually the closest thing to LockPact on this list: someone else manages your blocks instead of you. The core mechanic — hand a friend the ability to lock and unlock your apps — is the same accountability principle this entire list keeps coming back to.
@@ -150,7 +152,7 @@ The difference is maturity and scope. LockPact is built specifically around *mut
 
 ## 8. Cold Turkey
 
-**Price:** Free basic blocking; Cold Turkey Pro is $39 one-time for Mac/Windows
+**Price:** Free basic blocking; Cold Turkey Pro is a one-time purchase for Mac/Windows (not iPhone)
 **What's Free:** Website and app blocking on desktop, with a "Frozen Turkey" mode that can't be disabled once started
 **The Catch:** It's a desktop tool first — the mobile story is much thinner than the Mac/Windows product
 
