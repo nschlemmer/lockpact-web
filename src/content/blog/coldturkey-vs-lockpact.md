@@ -111,6 +111,6 @@ LockPact does have a solo lock, available when you're unpaired — you can lock 
 
 Cold Turkey is the right tool for serious daytime productivity protection. LockPact is the right tool for building mutual phone boundaries with someone you trust.
 
-**Related reading:** [Opal vs. LockPact](/blog/opal-vs-lockpact) · [Freedom vs. LockPact](/blog/freedom-vs-lockpact) · [Best Free App Blockers for iPhone](/blog/best-free-app-blocker-iphone-2026) · [App Blockers You Can't Bypass on iPhone — Ranked, Honestly](/blog/app-blockers-you-cant-bypass-iphone/)
+**Related reading:** [Opal vs. LockPact](/blog/opal-vs-lockpact/) · [Freedom vs. LockPact](/blog/freedom-vs-lockpact/) · [Best Free App Blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/) · [App Blockers You Can't Bypass on iPhone — Ranked, Honestly](/blog/app-blockers-you-cant-bypass-iphone/)
 
 If you have a partner ready to try the social accountability approach, [LockPact](/) is free for both of you. [Get it on the App Store](/go/b-coldturkey-vs-lockpact/).

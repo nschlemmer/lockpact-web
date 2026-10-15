@@ -115,6 +115,6 @@ No. Most actual school tasks (reading PDFs, accessing the LMS, research) can be 
 
 The phone is your biggest study rival. The good news: it's also the easiest variable to change. For most students that rival has a name — see [what actually works to reduce TikTok use](/blog/how-to-reduce-tiktok-use/), since it's the app most likely to eat a study session.
 
-**Related reading:** [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick) · [Roommate Phone Pacts: How to Stop Late-Night Scrolling](/blog/roommate-phone-pact-guide) · [Phone Addiction vs. Phone Habit](/blog/phone-addiction-vs-phone-habit)
+**Related reading:** [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick/) · [Roommate Phone Pacts: How to Stop Late-Night Scrolling](/blog/roommate-phone-pact-guide/) · [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work/)
 
 If your roommate or study partner is dealing with the same thing, [LockPact](/go/b-college-student-phone-habits/) lets you hold each other's app locks during study blocks. Free for both of you. Worth trying during your next exam period. If you want to see it next to the other options first, [our comparison of the best free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/) covers where it fits.

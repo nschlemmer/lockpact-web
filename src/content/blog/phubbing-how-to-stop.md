@@ -2,6 +2,7 @@
 title: "Phubbing: What It Is and How to Actually Stop Doing It"
 description: "Phubbing — phone snubbing — is the thing you and your partner both do without noticing. Here's what it actually is, why it happens, and what stops it."
 pubDate: 2026-07-24
+updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["relationships", "phone use", "couples", "how-to"]
 ---
@@ -59,6 +60,12 @@ Try naming the moment and the feeling instead of the general pattern: "When we'r
 ## Is phubbing normal, or is it a sign something's wrong?
 
 Both, depending on how much and where. Nearly everyone phubs occasionally — a glance at a text mid-conversation isn't a crisis, and treating every phone check as a betrayal will exhaust you faster than the phubbing itself does. What's worth addressing is a pattern: the same windows, night after night, where the phone reliably wins. That's not a moral failing either — it's a habit loop, and habit loops respond to structure, not guilt.
+
+## What should you expect in the first week?
+
+Expect it to feel awkward. Once you stop reaching for the phone, you notice what you'd been numbing: conversations ask for more sustained attention than you're used to, and meals feel slower. The urge to check is still there, and it's annoying.
+
+That discomfort is the habit pushing back. It doesn't mean the change is wrong. Most people who stick with it for a week report remembering more of what was said, noticing small things about the person across from them, and feeling less reactive. What's underneath the discomfort tends to be more satisfying than the scroll.
 
 ## What actually stops phubbing, long-term?
 

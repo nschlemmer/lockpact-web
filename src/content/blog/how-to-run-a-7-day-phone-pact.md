@@ -252,9 +252,9 @@ If a 7-day pact sounds interesting, you'll need a tool. LockPact exists for exac
 
 It's free. No trial, no paywall.
 
-[Learn more about why accountability partners work](/blog/psychology-of-accountability-partners) — the science behind why another person's expectations matter more than your own willpower.
+[Learn more about why accountability partners work](/blog/psychology-of-accountability-partners/) — the science behind why another person's expectations matter more than your own willpower.
 
-And if you're in a long-term relationship, read [how couples can use phone boundaries to actually connect](/blog/couples-and-phone-boundaries) — because the same principle works for partners who want to be more present together.
+And if you're in a long-term relationship, read [how couples can use phone boundaries to actually connect](/blog/couples-and-phone-boundaries/) — because the same principle works for partners who want to be more present together.
 
 If you're wondering whether the momentum from Day 7 actually holds past the first week, [here's why streaks work — and why they sometimes don't](/blog/streaks-and-accountability-why-they-work/). And if you're still deciding which app to run the pact on, [our full comparison of the best free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/) breaks down where LockPact fits.
 

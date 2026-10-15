@@ -71,6 +71,8 @@ Lock Screen Time Settings answers "can I stop myself from turning it off" for In
 
 **Deleting Instagram:** most effective if the goal is quitting, not reducing. The first three days are the hard part; most people report it easier than expected after a week.
 
+Looking beyond Instagram? [Best Free App Blockers for iPhone (2026)](/blog/best-free-app-blocker-iphone-2026/) covers the free options, and [the ranking of app blockers you can't easily bypass](/blog/app-blockers-you-cant-bypass-iphone/) shows how hard each one is to get around.
+
 ---
 
 ## Frequently Asked Questions
@@ -93,6 +95,6 @@ No — it's a notification, not a lock. Most people who set it override it more 
 
 ---
 
-**Related reading:** [How to Actually Reduce Your TikTok Use](/blog/how-to-reduce-tiktok-use) · [Social Media Detox: Does It Actually Work?](/blog/social-media-detox-does-it-work) · [Can iPhone Focus Mode Block Apps?](/blog/do-not-disturb-modes-comparison) · [Screen Time Not Working? Here's the Actual Reason](/blog/apple-screen-time-doesnt-work) · [Lock Screen Time Settings: Give Your Partner the Passcode](/blog/lock-screen-time-settings-partner-passcode/)
+**Related reading:** [How to Actually Reduce Your TikTok Use](/blog/how-to-reduce-tiktok-use/) · [Social Media Detox: Does It Actually Work?](/blog/social-media-detox-does-it-work/) · [Can iPhone Focus Mode Block Apps?](/blog/do-not-disturb-modes-comparison/) · [Screen Time Not Working? Here's the Actual Reason](/blog/apple-screen-time-doesnt-work/) · [Lock Screen Time Settings: Give Your Partner the Passcode](/blog/lock-screen-time-settings-partner-passcode/)
 
 [LockPact](/) lets your partner hold the evening lock. No tap-to-override. No in-app reminder you can dismiss. Just a commitment that holds. [Get it on the App Store](/go/b-instagram-vs-lockpact-blocking/).

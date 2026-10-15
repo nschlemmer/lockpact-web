@@ -92,7 +92,7 @@ The gap is that visibility isn't the same as control. Nobody has to approve anyt
 **What's Free:** Basic app blocking, no bypass protection, limited features
 **The Catch:** Everything worth paying for costs money; free tier feels like a trial
 
-We covered Opal in depth in [Opal vs. LockPact](/blog/opal-vs-lockpact), so let's keep this brief.
+We covered Opal in depth in [Opal vs. LockPact](/blog/opal-vs-lockpact/), so let's keep this brief.
 
 Opal's free tier lets you block apps. But the real features — Deep Focus (bypass-resistant locking), buddy notifications, Mac support — are locked behind the paywall.
 

@@ -176,8 +176,8 @@ Yes. Solo testing and partner mode are both free. LockPact's value is the accoun
 
 ## Read Next
 
-- **[ScreenZen vs. LockPact](/blog/screenzen-vs-lockpact)** — Another friction-vs-accountability comparison with a different tool.
-- **[Psychology of Accountability Partners](/blog/psychology-of-accountability-partners)** — Why involving another person works better than willpower alone.
+- **[ScreenZen vs. LockPact](/blog/screenzen-vs-lockpact/)** — Another friction-vs-accountability comparison with a different tool.
+- **[Psychology of Accountability Partners](/blog/psychology-of-accountability-partners/)** — Why involving another person works better than willpower alone.
 
 ## Get LockPact
 

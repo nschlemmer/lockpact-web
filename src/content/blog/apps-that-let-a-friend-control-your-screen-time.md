@@ -50,7 +50,7 @@ The apps in this roundup take a different approach: they hand the override decis
 
 The mechanic varies app to app, but the shared idea is simple: when you want past your limit, a real person — not a setting — decides whether you get through.
 
-That changes the psychology in a way friction alone doesn't. It's not "am I strong enough to wait 10 seconds," it's "am I willing to ask my partner, at 11pm, why I need Instagram back." For a lot of people, the second question is the one that actually works.
+That changes the psychology in a way friction alone doesn't. It's not "am I strong enough to wait 10 seconds," it's "am I willing to ask my partner, at 11pm, why I need Instagram back." For a lot of people, the second question is the one that actually works. The lowest-tech version needs no app at all: [give your partner the Screen Time passcode](/blog/lock-screen-time-settings-partner-passcode/) so that they're the only one who can change it.
 
 Below are the apps we could verify are live, on iOS, and built around a friend or partner in the approval loop — plus where the popular "solo" tools fit for contrast.
 
@@ -132,7 +132,7 @@ Parental control apps (Covenant Eyes, Bark, Family Sharing screen time limits) a
 
 ### Does bypassing these apps just mean turning off Screen Time in Settings?
 
-Yes — for any app built on Apple's Screen Time API, which is all of these, the device owner can revoke access through Settings and a Face ID prompt in a few taps. Apple doesn't give third-party apps a way to prevent that; it's a platform-level limit, not a bug in any one app. What separates the apps here is whether they notice and tell your partner. LockPact detects the bypass and notifies your partner when it happens — the point isn't making bypass impossible, it's making it visible.
+Yes — for any app built on Apple's Screen Time API, which is all of these, the device owner can revoke access through Settings and a Face ID prompt in a few taps. Apple doesn't give third-party apps a way to prevent that; it's a platform-level limit, not a bug in any one app. What separates the apps here is whether they notice and tell your partner. LockPact detects the bypass and notifies your partner when it happens — the point isn't making bypass impossible, it's making it visible. If how hard each one is to get around is your deciding factor, [the honest ranking of app blockers you can't easily bypass](/blog/app-blockers-you-cant-bypass-iphone/) compares them side by side.
 
 ### Which one should I actually pick?
 
@@ -156,4 +156,4 @@ Only LockPact. The four newer apps here — Useless, Snitch, SelfBlock, and Scre
 
 ## How to actually choose
 
-Start with who you have in mind, not which app has the most features. One dedicated partner who'll also let you lock their apps → LockPact. A friend group you'd rather spread the asking across → Friend Controls or Snitch's shared time pool. Someone you'd rather not put in a position to say no → FriendLock. A single buddy who's fine with an occasional approve/deny text-style prompt → PeerPause or Screen Time Buddy, with the gamification layer as a tiebreaker between those two. Comfortable with public exposure as the deterrent → Useless. No specific buddy in mind → SelfBlock's anonymous community mode. Want it free with zero IAP and an optional real veto instead of just a heads-up → Screen Freedom. All nine are real, live, and doing roughly what they claim — the differences that matter are who holds the power and what it costs to find out.
+Start with who you have in mind, not which app has the most features. One dedicated partner who'll also let you lock their apps → LockPact. A friend group you'd rather spread the asking across → Friend Controls or Snitch's shared time pool. Someone you'd rather not put in a position to say no → FriendLock. A single buddy who's fine with an occasional approve/deny text-style prompt → PeerPause or Screen Time Buddy, with the gamification layer as a tiebreaker between those two. Comfortable with public exposure as the deterrent → Useless. No specific buddy in mind → SelfBlock's anonymous community mode. Want it free with zero IAP and an optional real veto instead of just a heads-up → Screen Freedom. All nine are real, live, and doing roughly what they claim — the differences that matter are who holds the power and what it costs to find out. And if you're setting this up for your own phone rather than a child's, [Screen Time for adults on iPhone](/blog/screen-time-for-adults-iphone/) explains why Apple's tool fails the person who set it up.

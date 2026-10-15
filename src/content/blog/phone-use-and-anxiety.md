@@ -103,7 +103,7 @@ Not inherently. Using your phone to contact someone, listen to something calming
 
 The loop between anxiety and phone use is real and self-reinforcing. But it's a habit pattern, not a life sentence.
 
-**Related reading:** [Phone Addiction vs. Phone Habit](/blog/phone-addiction-vs-phone-habit) · [What Screen Time Before Bed Actually Does to Your Sleep](/blog/screen-time-before-bed-effects) · [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick)
+**Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work/) · [What Screen Time Before Bed Actually Does to Your Sleep](/blog/screen-time-before-bed-effects/) · [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick/)
 
 Structural changes — phone out of reach during high-risk windows, a partner-held lock on the apps that most reliably trigger the loop — make the loop harder to run without requiring willpower at the moment the anxiety shows up.
 

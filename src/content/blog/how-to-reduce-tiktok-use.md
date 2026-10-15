@@ -90,6 +90,6 @@ Yes, and meaningfully so. The social cost of asking someone to unlock TikTok dur
 
 TikTok is a hard opponent. The strategies that work are the ones that don't put you in a fair fight with it.
 
-**Related reading:** [Instagram's Built-In Time Limit vs. Blocking It Entirely](/blog/instagram-vs-lockpact-blocking) · [Phone Addiction vs. Phone Habit](/blog/phone-addiction-vs-phone-habit) · [Social Media Detox: Does It Actually Work?](/blog/social-media-detox-does-it-work)
+**Related reading:** [Instagram's Built-In Time Limit vs. Blocking It Entirely](/blog/instagram-vs-lockpact-blocking/) · [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work/) · [Social Media Detox: Does It Actually Work?](/blog/social-media-detox-does-it-work/)
 
 [LockPact](/go/b-how-to-reduce-tiktok-use/) lets your partner hold your TikTok block. You don't have to be stronger than the algorithm — you just have to have made a commitment someone else is holding.

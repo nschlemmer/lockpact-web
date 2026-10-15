@@ -2,7 +2,7 @@
 title: "Why Screen Time Apps Don't Work (And What Does)"
 description: "Most screen time apps fail because they treat a social problem as a technical one. Why solo blockers fail, and what actually works instead: accountability."
 pubDate: 2026-04-13
-updatedDate: 2026-09-08
+updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["screen time", "accountability", "behavior change"]
 ---
@@ -126,6 +126,12 @@ Now the app blocker isn't the enforcement mechanism. **The relationship is.**
 
 ---
 
+## Is It an Addiction or a Habit?
+
+Be careful with the word "addiction." It casts you as someone with a disease, which removes agency ("I can't help it") and points toward clinical fixes most people don't need. If you're in real distress, that's a conversation for a professional. For most people the problem is a powerful habit that needs better environment design and another person in the loop.
+
+"It's just a habit" has the opposite flaw: it makes the fix sound simple. It isn't. Deeply ingrained habits take specific techniques to interrupt, and that's exactly why a rule you set for yourself and can undo yourself keeps failing.
+
 ## The Uncomfortable Truth
 
 You can't self-discipline your way out of a technology designed to be addictive.
@@ -158,9 +164,9 @@ But it works. Because accountability is what actually works.
 
 ## Read Next
 
-- **[Opal vs. LockPact: Which Screen Time App Is Right for You?](/blog/opal-vs-lockpact)** — How LockPact's partner model compares to Opal's solo-first approach.
-- **[Best Free App Blockers for iPhone (2026)](/blog/best-free-app-blocker-iphone-2026)** — Honest reviews of every major screen time app on the market.
-- **[Screen Time Not Working on iPhone? Here's the Actual Reason](/blog/apple-screen-time-doesnt-work)** — Why the built-in tool fails, and what it's actually good for.
+- **[Opal vs. LockPact: Which Screen Time App Is Right for You?](/blog/opal-vs-lockpact/)** — How LockPact's partner model compares to Opal's solo-first approach.
+- **[Best Free App Blockers for iPhone (2026)](/blog/best-free-app-blocker-iphone-2026/)** — Honest reviews of every major screen time app on the market.
+- **[Screen Time Not Working on iPhone? Here's the Actual Reason](/blog/apple-screen-time-doesnt-work/)** — Why the built-in tool fails, and what it's actually good for.
 - **[One Sec vs. LockPact: Friction vs. Accountability](/blog/onesec-vs-lockpact/)** — Another honest look at a friction-based tool versus a partner-held lock.
 - **[What Happened to the Moment App? Where It Went + 5 Alternatives](/blog/moment-app-review/)** — Why tracking alone (Moment's whole model) runs into the same present-bias problem this post covers.
 - **[Lock Screen Time Settings: Give Your Partner the Passcode](/blog/lock-screen-time-settings-partner-passcode/)** — The free iOS 26.4 setting that closes the "you know your own passcode" gap this post describes.

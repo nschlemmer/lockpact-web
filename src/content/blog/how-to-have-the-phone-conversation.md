@@ -103,6 +103,6 @@ Give it two weeks of active effort before concluding it failed. If nothing chang
 
 The phone conversation doesn't have to be a fight. It can be an invitation to something both of you actually want — more time that actually feels like time together.
 
-**Related reading:** [Couples and Phone Boundaries: A Field Guide](/blog/couples-and-phone-boundaries) · [How to Run a 7-Day Phone Pact With Your Partner](/blog/how-to-run-a-7-day-phone-pact) · [What to Do When Your Partner Bypasses the Lock](/blog/what-to-do-when-partner-bypasses-lock) · [Long-Distance Relationships and Phone Boundaries](/blog/long-distance-relationship-phone-boundaries/)
+**Related reading:** [Couples and Phone Boundaries: A Field Guide](/blog/couples-and-phone-boundaries/) · [How to Run a 7-Day Phone Pact With Your Partner](/blog/how-to-run-a-7-day-phone-pact/) · [What to Do When Your Partner Bypasses the Lock](/blog/what-to-do-when-partner-bypasses-lock/) · [Long-Distance Relationships and Phone Boundaries](/blog/long-distance-relationship-phone-boundaries/)
 
 [LockPact](/go/b-how-to-have-the-phone-conversation/) gives you a concrete tool to propose: mutual app locks, not surveillance. Something you both opt into together. If you want to see how it stacks up against other options first, [our roundup of the best free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/) is a fair place to start.
