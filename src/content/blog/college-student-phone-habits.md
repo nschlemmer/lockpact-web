@@ -1,5 +1,5 @@
 ---
-title: "How College Students Actually Fix Their Phone Habits (Study Mode That Sticks)"
+title: "How College Students Fix Their Phone Habits (Study Mode)"
 description: "How to stop scrolling in class and actually study: what college students say works, what doesn't, and why willpower-only strategies fail by the second hour."
 pubDate: 2026-05-14
 updatedDate: 2026-09-09

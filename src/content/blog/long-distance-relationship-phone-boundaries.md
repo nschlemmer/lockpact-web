@@ -1,5 +1,5 @@
 ---
-title: "Long Distance Relationship Phone Habits: Why It's a Different Problem"
+title: "Long Distance Relationship Phone Habits: A Different Problem"
 description: "Long distance relationship phone habits aren't the same problem as co-located couples face. Here's how to navigate connection versus avoidance across distance."
 pubDate: 2026-05-17
 updatedDate: 2026-07-23

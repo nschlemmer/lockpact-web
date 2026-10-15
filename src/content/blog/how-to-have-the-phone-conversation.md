@@ -1,5 +1,5 @@
 ---
-title: "My Partner Is Always on Their Phone: How to Actually Have the Conversation"
+title: "Partner Always on Their Phone? How to Have the Talk"
 description: "\"My partner is always on their phone\" usually starts a fight when said out loud. Here's how to have the conversation that actually leads somewhere."
 pubDate: 2026-05-20
 updatedDate: 2026-07-23

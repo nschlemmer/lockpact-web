@@ -1,5 +1,5 @@
 ---
-title: "How to Lock Instagram After a Time Limit (or During Certain Hours) on iPhone"
+title: "How to Lock Instagram After a Time Limit on iPhone"
 description: "The three real ways to lock Instagram — after a time limit, during set hours, or so you can't override it yourself. Free, no subscription."
 pubDate: 2026-05-27
 updatedDate: 2026-09-08

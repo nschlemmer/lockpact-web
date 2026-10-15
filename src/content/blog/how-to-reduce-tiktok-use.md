@@ -1,5 +1,5 @@
 ---
-title: "How to Actually Reduce Your TikTok Use (What Works, What Doesn't)"
+title: "How to Reduce Your TikTok Use (What Actually Works)"
 description: "TikTok's algorithm is built to prevent you from stopping. Here's what actually works to reduce your use — and why willpower isn't one of the options."
 pubDate: 2026-05-21
 author: "LockPact"

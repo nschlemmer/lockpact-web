@@ -1,5 +1,5 @@
 ---
-title: "Digital Minimalism: What Cal Newport Gets Right (And What's Missing)"
+title: "Digital Minimalism Review: What It Gets Right and Misses"
 description: "Cal Newport's Digital Minimalism nails the 'why' but leaves a gap in the 'how.' What the framework gets right, where it falls short, and what's missing."
 pubDate: 2026-05-09
 author: "LockPact"

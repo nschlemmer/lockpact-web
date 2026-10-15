@@ -1,5 +1,5 @@
 ---
-title: "Screen Time Accountability Partners: The Psychology of Why They Work"
+title: "Screen Time Accountability Partners: Why They Work"
 description: "What makes a screen time accountability partner actually work, per behavioral research — and why solo willpower apps keep failing where partners succeed."
 pubDate: 2026-05-01
 updatedDate: 2026-09-09

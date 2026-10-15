@@ -1,5 +1,5 @@
 ---
-title: "Friend Controls vs. LockPact: Which Friend-Approval App Fits You?"
+title: "Friend Controls vs. LockPact: Which Approval App Fits?"
 description: "Friend Controls and LockPact both put a real person in charge of your screen time overrides — one is one-way, the other is mutual. The honest comparison."
 pubDate: 2026-07-24
 updatedDate: 2026-09-09

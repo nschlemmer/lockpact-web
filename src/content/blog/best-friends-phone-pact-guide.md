@@ -1,5 +1,5 @@
 ---
-title: "How to Be Screen Time Accountability Partners With Your Best Friend"
+title: "Screen Time Accountability Partners With a Best Friend"
 description: "Looking for an accountability partner app with friends instead of a partner or roommate? Here's how to set up a mutual phone pact with your best friend."
 pubDate: 2026-05-13
 updatedDate: 2026-09-09

@@ -64,7 +64,7 @@ export default defineConfig({
     tailwind({ applyBaseStyles: false }),
     mdx(),
     sitemap({
-      filter: (page) => !page.includes('/admin') && !page.includes('/support-lockpact/thanks'),
+      filter: (page) => !page.includes('/admin') && !page.includes('/support-lockpact'),
       serialize(item) {
         const match = item.url.match(/\/blog\/([^/]+)\/?$/);
         const lastmod = match ? blogLastmodBySlug.get(match[1]) : null;

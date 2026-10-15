@@ -1,5 +1,5 @@
 ---
-title: "Phone Stacking Game: What It Is, the Rules, and Whether It Works"
+title: "Phone Stacking Game: The Rules and Whether It Works"
 description: "Phone stacking is a dinner game: everyone piles their phones face-down, first to grab theirs pays the bill. Here's whether it actually works."
 pubDate: 2026-05-05
 updatedDate: 2026-09-04

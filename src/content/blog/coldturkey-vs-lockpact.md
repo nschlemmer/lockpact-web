@@ -1,5 +1,5 @@
 ---
-title: "Cold Turkey vs. LockPact: Hardcore Blocking vs. Social Accountability"
+title: "Cold Turkey vs. LockPact: Hard Blocking vs. Accountability"
 description: "Cold Turkey is the most aggressive app blocker available. LockPact uses social accountability instead. Here's how they compare and which fits your situation."
 pubDate: 2026-05-19
 updatedDate: 2026-09-09

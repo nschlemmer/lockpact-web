@@ -1,5 +1,5 @@
 ---
-title: "Can iPhone Focus Mode Block Apps? What It Does, What It Doesn't (2026)"
+title: "Can iPhone Focus Mode Block Apps? What It Does (2026)"
 description: "No — Focus mode filters notifications and can hide Home Screen pages, but it doesn't lock apps. Here's what actually does, and where Focus mode still helps."
 pubDate: 2026-05-10
 updatedDate: 2026-09-09
