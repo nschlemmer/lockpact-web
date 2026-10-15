@@ -1,27 +1,28 @@
 ---
 title: "Lock Screen Time Settings: Give Your Partner the Passcode"
-description: "iOS 26.4 added a Screen Time passcode only your partner holds — so you can't turn off your blocker or delete it. Free setup guide, no subscription."
+description: "Let your partner set your Screen Time passcode so you can't quietly switch off your blocker or delete it. Free setup guide, no subscription."
 pubDate: 2026-09-10
+updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["iOS 26.4", "Screen Time", "accountability", "how-to"]
 faq:
   - q: "Can I set the Screen Time passcode myself?"
-    a: "You can, but it defeats the point. Lock Screen Time Settings only works if the passcode belongs to someone other than you — if you set it, you can always change or remove it yourself, same as any Screen Time passcode."
+    a: "You can, but it defeats the point. Lock Screen Time Settings is where the Screen Time passcode gets set, and it only works as a boundary if someone other than you holds it. If you know the code, you can change or remove it yourself."
   - q: "Does Lock Screen Time Settings stop me deleting the app?"
     a: "Yes — per Opal's help documentation, once it's on, deleting a Screen Time-protected app requires the same passcode as revoking its Screen Time access. Both actions are gated together, not separately."
   - q: "What if my partner forgets the passcode?"
-    a: "Forgot Passcode routes to an Apple ID-based reset if a recovery Apple ID was added during setup — which is exactly why many partners choose to skip that step. Without it, the only recovery is erasing the device."
+    a: "If a recovery Apple Account was added during setup, it can reset the passcode, which is why many partners skip that step. Apple says that without that account you can't remove or reset the passcode, and Apple can't provide it."
 ---
 
-Apple quietly shipped the missing half of every app blocker in iOS 26.4, and almost nobody's using it right. **Settings → Screen Time → Lock Screen Time Settings** lets you gate your Screen Time controls behind a passcode — but it only does anything if someone *other than you* holds that code. Set it yourself, and you've just made a second passcode you also know. This is a free, five-minute setup guide for doing it the way that actually works, plus the honest limits of what it stops.
+Your Screen Time passcode is the weak point in every app blocker: you know it, so you can undo the blocker in a few taps. **Settings → Screen Time → Manage Screen Time → Lock Screen Time Settings** is where Apple has you set that passcode, and it only does anything useful if someone *other than you* holds the code. Set it yourself and you've built a lock you also have the key to. This is a free, five-minute setup guide for doing it the way that actually works, plus the honest limits of what it stops.
 
-## What changed in iOS 26.4
+## What Lock Screen Time Settings is, and what we can confirm
 
-Before iOS 26.4, Screen Time's protections stopped at the app-limit level. You could set a daily limit on Instagram, but turning Screen Time off entirely — Settings → Screen Time → toggle off, or Settings → Apps → [App] → turn off Screen Time access for that one app — needed only your device's regular Screen Time passcode, which you set and you know. Three taps and any restriction was gone.
+It's the Screen Time passcode, not a second one. Apple's current support page walks you through it: open Settings, tap Screen Time, tap Manage Screen Time, tap Lock Screen Time Settings, and enter a four-digit passcode twice. Apple says "the passcode must be entered before you can change any Screen Time settings," and that it isn't the same as the passcode that unlocks your phone.
 
-iOS 26.4 added a second, separate passcode: **Lock Screen Time Settings**. Once it's on, both of the actions above — revoking Screen Time access for a specific app, and (per Opal's help documentation) deleting that app outright — require this new code instead of your regular one. It's off by default. Nothing changes until someone turns it on and, critically, that someone shouldn't be you.
+Starting with iOS 26.4, third-party guides report that this same passcode also gates two exits people use to quit quietly: switching off an app's Screen Time access (Settings → Apps → [App]) and deleting the app. Those reports come from Opal's and one sec's help docs and TechLockdown's iOS 26.4 write-up (updated April 20, 2026), not from Apple's own pages: Apple's iOS 26.4 release notes don't mention Screen Time at all, and the support page above doesn't list what the passcode covers beyond "any Screen Time settings." We think they're right, but test it on your own phone: set it, then try to switch off an app's Screen Time access and see what asks for the code. Per TechLockdown, Content & Privacy Restrictions also has to be on for the app-deletion part.
 
-This is functionally the same thing Opal and one sec now recommend in their own help docs: have a partner set the passcode. It's Apple, not a third-party app, that closed this gap — the missing piece was just knowing it existed and doing it with the right person.
+The practical upshot is the same either way: whoever holds this passcode controls your Screen Time settings, so it shouldn't be you.
 
 ## Setting it up (for your partner to do, not you)
 
@@ -38,7 +39,7 @@ That's the whole setup. No app to install, no subscription, no account to create
 
 ## What this actually locks
 
-Once it's on, two specific things now require your partner's passcode instead of yours:
+Once it's on, third-party guides report that two specific things require your partner's passcode (confirm on your own phone, as above):
 
 - **Revoking Screen Time access for an app.** Settings → Apps → [App name] → the toggle that turns off Screen Time monitoring for that one app — the fastest, quietest way to disable a blocker that relies on Screen Time. Locked.
 - **Deleting the app.** With Content & Privacy Restrictions on, removing a Screen Time-protected app from your phone requires the same code.
@@ -55,7 +56,7 @@ Lock Screen Time Settings answers "can I stop myself from quietly turning this o
 
 ## The honest limits — four loopholes that still exist
 
-No setting from Apple, and no app, makes an iPhone bypass-proof for its own owner. That's Hard Truth #1 of how this actually works, and pretending otherwise would be exactly the kind of overclaim this feature is supposed to fix. Here's what still gets around Lock Screen Time Settings:
+No setting from Apple, and no app, makes an iPhone bypass-proof for its own owner. A device owner can always get around a restriction on their own iPhone, and pretending otherwise would be exactly the kind of overclaim this feature is supposed to fix. Here's what still gets around Lock Screen Time Settings:
 
 **A reported, unconfirmed Face ID path.** Developer forum threads (Apple's own developer forums, thread 821959) describe the Settings → Apps → [App] Screen Time toggle prompting for Face ID instead of the Lock Screen Time Settings passcode on some builds — which, if it reproduces on your device, defeats the gate entirely. This is reported and community-discussed, not something Apple has formally confirmed as fixed or as intended behavior in every build. Treat it as a live risk to check on your own device, not a settled fact either way.
 
@@ -67,7 +68,7 @@ No setting from Apple, and no app, makes an iPhone bypass-proof for its own owne
 
 ## What to pair this with
 
-If you also need the basics (how to change, reset, or turn off the regular Screen Time passcode), [the Screen Time passcode guide](/blog/screen-time-passcode/) covers each step.
+If you also need the basics (how to change, reset, or turn off the Screen Time passcode), [the Screen Time passcode guide](/blog/screen-time-passcode/) covers each step.
 
 Lock Screen Time Settings is a one-time setting, not an app — it doesn't tell anyone if you try to get around it, and it only covers the two exits described above. If you want the full picture of what happens when someone does get past a lock, including how to handle it as a couple, [what to do when your partner bypasses the lock](/blog/what-to-do-when-partner-bypasses-lock/) covers that conversation directly. And if the goal is ranking how hard various blockers actually are to get around — this setting included — [see the honest ranking of app blockers by bypass difficulty](/blog/app-blockers-you-cant-bypass-iphone/).
 

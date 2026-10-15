@@ -7,9 +7,11 @@ const { code } = Astro.params;
 const isValid = /^\d{6}$/.test(code ?? '');
 const digits = isValid ? (code as string).split('') : [];
 const appStoreUrl = 'https://apps.apple.com/app/lockpact/id6759302382';
+if (!isValid) Astro.response.status = 404;
 ---
 
 <BaseLayout
+  noindex
   title={isValid ? 'Join me on LockPact' : 'Invalid Invite Link — LockPact'}
   description={isValid
     ? 'Your partner wants to hold each other accountable for screen time. Download LockPact and enter the invite code to get started.'

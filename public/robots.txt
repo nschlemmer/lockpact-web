@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin
+Disallow: /go/
+Disallow: /api/
 
 Sitemap: https://lockpact.app/sitemap-index.xml
