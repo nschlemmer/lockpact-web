@@ -19,7 +19,7 @@ interface Props {
 const {
   title,
   description,
-  canonicalURL = Astro.url.href,
+  canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
   ogImage = '/og-image.png',
   ogType = 'website',
   structuredData,
