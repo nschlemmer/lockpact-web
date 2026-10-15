@@ -6,6 +6,8 @@ updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["Focus mode", "iPhone", "Do Not Disturb", "app blockers", "comparison"]
 faq:
+  - q: "How do I block apps during Focus on iPhone?"
+    a: "Focus can't. It silences notifications from apps and people you choose and can hide Home Screen pages, but every app still opens. To block an app on a schedule, use Screen Time: Downtime or App Limits, ideally with someone else holding the passcode."
   - q: "Does Focus mode block apps?"
     a: "No. Focus mode filters which notifications reach you and can hide chosen Home Screen pages, but every app stays fully openable. If you want an app actually locked, you need Screen Time App Limits or a partner-held lock like LockPact."
   - q: "Focus mode vs Do Not Disturb — what's the difference?"
@@ -77,6 +79,10 @@ These aren't mutually exclusive. A Sleep Focus that silences notifications, comb
 ---
 
 ## Frequently Asked Questions
+
+### How do I block apps during Focus on iPhone?
+
+Focus can't. It silences notifications from the apps and people you choose and can hide Home Screen pages, but every app still opens if you tap it. To block an app on a schedule, use Screen Time's Downtime or App Limits instead, and have someone else hold the passcode. [How to lock (or block) apps on iPhone](/blog/how-to-lock-apps-on-iphone/) walks through each built-in method.
 
 ### Does Focus mode block apps?
 
