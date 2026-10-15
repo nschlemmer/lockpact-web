@@ -93,6 +93,8 @@ The goal isn't to use your phone less in any absolute sense. It's to use it more
 
 ---
 
+If you're also choosing apps for the other parts of the relationship, our list of the [best apps for long-distance couples](/blog/long-distance-relationship-apps/) covers staying in touch, shared calendars and watching together.
+
 ## Frequently Asked Questions
 
 ### How do phone habits affect long-distance relationships differently than co-located ones?

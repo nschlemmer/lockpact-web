@@ -63,6 +63,8 @@ Do three quick things first. Write down which Apple Account you used for recover
 
 That last point is the one people skip. A passcode without an agreed rule turns into an argument the first time it's used.
 
+The same passcode protects Screen Time's website rules, so if you're blocking sites, [how to block websites on iPhone](/blog/how-to-block-websites-on-iphone/) shows the setting and why who holds the code matters.
+
 ## Where LockPact fits
 
 A passcode answers "can I quietly turn this off?" It doesn't tell anyone when you do. LockPact is a free, mutual lock: you each lock your own apps, your partner approves your unlock requests, and if either of you bypasses the lock, the other is notified. It sits on top of the passcode rather than replacing it, and it's free, with no premium tier gating the lock.

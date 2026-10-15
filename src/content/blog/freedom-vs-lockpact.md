@@ -2,9 +2,16 @@
 title: "Freedom vs. LockPact: Which Screen Time App Fits You?"
 description: "Freedom blocks apps and websites across all your devices. LockPact uses partner accountability on iPhone. Different problems, different fix — how to choose."
 pubDate: 2026-05-02
-updatedDate: 2026-09-09
+updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["comparison", "Freedom", "screen time apps", "cross-device blocker"]
+faq:
+  - q: "Does LockPact block websites?"
+    a: "LockPact can lock websites you pick in Apple's picker, and Apple says an app can shield up to 50 web domains. Apple doesn't document which browsers the shield covers, so if you need website blocking across browsers, Freedom is the safer choice."
+  - q: "Is Freedom free?"
+    a: "Freedom has a free plan that blocks apps, websites or the whole internet on unlimited devices, without scheduling or Locked Mode. Premium is $3.33 a month billed yearly, $8.99 monthly, or $99.50 lifetime, per freedom.to/pricing on October 15, 2026."
+  - q: "Freedom or LockPact: which holds up better against bypass?"
+    a: "Neither is bypass-proof, because an iPhone owner can always revoke Screen Time access in Settings. Freedom's Locked Mode is Premium. LockPact puts a partner in the unlock path and tells them if you bypass it."
 ---
 
 Freedom is the incumbent. Since 2011, it's been the standard answer for people who want to block apps and websites across *all* their devices—phone, tablet, Mac, Windows, even Chrome extensions. Set a schedule once. Works everywhere.
@@ -85,7 +92,7 @@ If paying for cross-device focus is worth the certainty, Freedom is the safer ch
 
 - **You work across multiple devices.** If your workday involves phone, Mac, and Windows in equal measure, Freedom covers all three. LockPact only covers iPhone.
 - **You prefer solo discipline.** You'd rather set a schedule and stick to it than ask your partner for permission every time you want to unlock.
-- **You need website blocking.** Freedom blocks websites in browsers. LockPact only blocks apps (for now).
+- **You need website blocking.** Freedom blocks websites in browsers. LockPact can lock websites you pick in Apple's picker, but Apple doesn't document which browsers its shield covers, so Freedom is the safer choice if you need website blocking across browsers.
 - **You have strong focus intent but need architecture to support it.** You know you'll honor a schedule if it's enforced on every device. You just need the tool.
 - **You're a parent setting device rules for your kids.** Freedom's cross-platform reach makes it easier to enforce rules across your child's entire device ecosystem.
 
