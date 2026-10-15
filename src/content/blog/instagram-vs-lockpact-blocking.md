@@ -2,7 +2,7 @@
 title: "How to Lock Instagram After a Time Limit on iPhone"
 description: "The three real ways to lock Instagram — after a time limit, during set hours, or so you can't override it yourself. Free, no subscription."
 pubDate: 2026-05-27
-updatedDate: 2026-09-08
+updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["Instagram", "screen time", "app limits", "social media", "behavior change"]
 faq:
@@ -16,7 +16,9 @@ faq:
     a: "No. It's a notification with a one-tap 'Ignore Limit' button. It adds awareness, not friction — most people who set it override it more than half the time."
 ---
 
-Three questions come up constantly about locking Instagram on iPhone: can you lock it after you hit a time limit, can you lock it during specific hours, and can you set it up so you can't just tap your way back in. The short answers: Screen Time can do the first two if someone else holds the passcode, and as of iOS 26.4 there's finally a real answer to the third. Here's all three, plus where LockPact — free, no subscription — fits.
+To lock Instagram after a certain time on iPhone, open **Settings → Screen Time → App Limits → Add Limit**, open the social category, select Instagram, tap **Next**, and set the time. To lock it for certain hours instead, use **Settings → Screen Time → Downtime**. Either one only holds if someone else sets the Screen Time passcode.
+
+Three questions come up constantly about locking Instagram on iPhone: after a time limit, during specific hours, and in a way you can't tap your way out of. Screen Time can do the first two, and as of iOS 26.4 there's a real answer to the third. Here's all three, plus where LockPact — free to use, no subscription — fits. If you're comparing tools rather than looking for steps, see our [best Instagram blocker for iPhone](/blog/best-instagram-blocker-iphone/) roundup.
 
 ---
 
@@ -38,7 +40,7 @@ Also not natively — Instagram has no concept of "off during these hours." Two 
 
 ## Can I set a password so I can't override it myself?
 
-This is the one that changed. As of **iOS 26.4**, Settings → Screen Time has a new toggle: **Lock Screen Time Settings**. It's a separate passcode from your device passcode, off by default, and once it's on, it gates *revoking any app's Screen Time access* — and, per Opal's help documentation, deleting the app outright. The person setting it up enters and confirms a passcode; there's an optional Apple ID backup step they can skip if they don't want a recovery path that leads back to you.
+This is the one that changed. As of **iOS 26.4**, Settings → Screen Time has a new toggle: **Lock Screen Time Settings**. Apple's documentation describes it as the path for setting the Screen Time passcode (not a second passcode): that passcode "must be entered before you can change any Screen Time settings." Third-party guides, including Opal's help documentation, report that since 26.4 it also gates *revoking any app's Screen Time access* and deleting the app outright, so test that on your phone. The person setting it up enters and confirms a passcode; there's an optional Apple ID backup step they can skip if they don't want a recovery path that leads back to you.
 
 The setup, in short: have your partner (not you) go to Settings → Screen Time → Lock Screen Time Settings and choose the passcode. From that point, turning off Instagram's Screen Time access, or deleting Instagram, requires that code.
 

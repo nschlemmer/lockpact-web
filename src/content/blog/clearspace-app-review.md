@@ -16,7 +16,7 @@ faq:
 
 Search "Clearspace app review" and you mostly get App Store screenshots reformatted into listicles. Nobody's actually gone through what it does, what it costs today, and — the part most reviews skip entirely — what its "accountability partner" feature actually lets a partner do. That last part matters more than it sounds, so this review spends real time on it.
 
-Everything below — the mechanics, the pricing, the accountability feature — checked against Clearspace's live App Store listing and its own site this week, not recalled from memory or an old review. Where sources disagreed slightly (regional pricing does shift), we say so.
+Everything below — the mechanics, the pricing, the accountability feature — checked against Clearspace's live App Store listing and its own site this week, not recalled from memory or an old review. Where sources disagreed slightly (regional pricing does shift), we say so. If you're comparing Clearspace with locks that use a physical device, see [Brick alternatives with no hardware](/blog/brick-alternative/).
 
 ## Is Clearspace free?
 

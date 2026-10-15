@@ -34,7 +34,7 @@ Search "apps that let a friend control your screen time" and you'll find TikToks
 
 Apps that let a friend control your screen time are apps where someone else — a friend, partner, or designated "Controller" — has to approve unlocking a blocked app on your phone, not just you.
 
-This is that comparison. Every app below, every price, every mechanic — checked against its live App Store listing or website this week, not recalled from memory. Where we couldn't confirm something, we say so.
+This is that comparison. Every app below, every price, every mechanic — checked against its live App Store listing or website this week, not recalled from memory. Where we couldn't confirm something, we say so. If you're weighing this against a hardware lock, see [Brick alternatives that need no hardware](/blog/brick-alternative/); if the thing you want a friend to hold the key to is the late-night scroll, [how to stop doomscrolling](/blog/how-to-stop-doomscrolling/) covers the settings first.
 
 ## Why self-controlled blockers fail
 

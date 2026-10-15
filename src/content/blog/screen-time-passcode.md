@@ -45,7 +45,7 @@ It's the code Apple asks for when someone opens your Screen Time restriction set
 
 You'll also see a menu item called **Lock Screen Time Settings**. It isn't a second passcode: in Apple's current documentation it's the path for setting the Screen Time passcode in the first place (**Settings → Screen Time → Manage Screen Time → Lock Screen Time Settings**, then a four-digit passcode entered twice). Apple says the passcode "must be entered before you can change any Screen Time settings." Third-party guides report that since iOS 26.4 the same passcode also gates switching off an app's Screen Time access and deleting the app; Apple's own pages don't spell that out, so test it on your phone. [Our deep dive](/blog/lock-screen-time-settings-partner-passcode/) covers it.
 
-What it doesn't protect is simple: it can't stop a determined phone owner. Apple gives third-party apps no way to prevent that, and there's no setting that makes it impossible. What a passcode does is make quitting slower, and, if it isn't yours, make it a conversation.
+If you want the whole picture of what each built-in lock does and who can undo it, [how to lock (or block) apps on iPhone](/blog/how-to-lock-apps-on-iphone/) covers every one. What it doesn't protect is simple: it can't stop a determined phone owner. Apple gives third-party apps no way to prevent that, and there's no setting that makes it impossible. What a passcode does is make quitting slower, and, if it isn't yours, make it a conversation.
 
 ## Why shouldn't you be the one who holds it?
 

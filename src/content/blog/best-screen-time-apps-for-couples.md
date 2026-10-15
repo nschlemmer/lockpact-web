@@ -11,7 +11,7 @@ Search "best screen time apps for couples" and most of what comes back is either
 
 This is that comparison. We checked each app's live App Store listing and site this week — pricing, ratings, and what "couples feature" actually means for each one, since that phrase covers everything from "synchronized do-not-disturb" to "your partner holds a real key."
 
-One note before the list: everything here works the same way for any two people who want mutual phone accountability, not just romantic couples. Roommates, best friends, siblings — the mechanics (and the apps) don't care what the relationship is. We're using "couples" because that's the term people search, but don't skip this if you're pairing with a roommate instead of a partner.
+One note before the list: everything here works the same way for any two people who want mutual phone accountability, not just romantic couples. Roommates, best friends, siblings — the mechanics (and the apps) don't care what the relationship is. If the problem you share is the late-night scroll, start with [how to stop doomscrolling](/blog/how-to-stop-doomscrolling/). We're using "couples" because that's the term people search, but don't skip this if you're pairing with a roommate instead of a partner.
 
 ## What "screen time app for couples" actually means
 

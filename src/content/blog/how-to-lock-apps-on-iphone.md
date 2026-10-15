@@ -1,7 +1,7 @@
 ---
-title: "How to Lock Apps on iPhone (Every Built-In Way, 2026)"
-description: "Every built-in way to lock apps on iPhone: Face ID, App Limits, Downtime, Content & Privacy, Guided Access. Exact steps, and who can turn each one off."
-pubDate: 2026-10-22T09:00:00-07:00
+title: "How to Lock (or Block) Apps on iPhone: Every Built-In Way"
+description: "Every built-in way to lock or block apps on iPhone: Face ID, App Limits, Downtime, Content & Privacy, Guided Access. Exact steps, and who can turn each one off."
+pubDate: 2026-10-15T09:00:00-07:00
 author: "LockPact"
 tags: ["iPhone", "Screen Time", "iOS 27", "how-to"]
 faq:
@@ -15,7 +15,7 @@ faq:
     a: "Only if someone else controls the code. Every built-in lock opens for whoever knows the passcode or owns the face. Giving a partner the Screen Time passcode, or using a mutual lock app, puts another person in the decision."
 ---
 
-Every iPhone can lock an app four or five different ways, and all of them are free, built in, and honest about one limit: you can turn each one off yourself. This guide covers **every built-in method with exact steps and its real off-switch**, so you can pick the right one, then explains why they all fail the same way and what to do about it. If you want a lock that someone else has to approve, [LockPact](/) is a free iOS app where your partner decides when you get back in.
+Every iPhone can lock or block an app four or five different ways, and all of them are free, built in, and honest about one limit: you can turn each one off yourself. This guide covers **every built-in method with exact steps and its real off-switch**, so you can pick the right one, then explains why they all fail the same way and what to do about it. If you want a lock that someone else has to approve, [LockPact](/) is a free iOS app where your partner decides when you get back in.
 
 The steps are written for iOS 27, which Apple released on September 14, 2026. Apple's menu names for a few Screen Time items have moved around between versions, so where we couldn't confirm an exact label on Apple's current pages, we point you to the Screen Time menu and say so.
 
