@@ -2,16 +2,20 @@
 export const prerender = false;
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import pairUp from '../../assets/screens/invite/pair-up.webp';
 
 const { code } = Astro.params;
 const isValid = /^\d{6}$/.test(code ?? '');
 const digits = isValid ? (code as string).split('') : [];
 const appStoreUrl = 'https://apps.apple.com/app/lockpact/id6759302382';
 if (!isValid) Astro.response.status = 404;
+// Smart App Banner: pass the invite URL so the banner's Open button hands the code to the app.
+const appArgument = isValid ? `https://lockpact.app/invite/${code}/` : undefined;
 ---
 
 <BaseLayout
   noindex
+  appArgument={appArgument}
   title={isValid ? 'Join me on LockPact' : 'Invalid Invite Link — LockPact'}
   description={isValid
     ? 'Your partner wants to hold each other accountable for screen time. Download LockPact and enter the invite code to get started.'
@@ -37,7 +41,7 @@ if (!isValid) Astro.response.status = 404;
             You've been invited to LockPact
           </h1>
           <p class="text-base mb-8" style="color: var(--color-text-secondary);">
-            Your partner wants to hold each other accountable for screen time.
+            Your friend wants to lock apps together. You each pick apps; only the other can approve an unlock. Free.
           </p>
 
           {/* Code Display */}
@@ -76,6 +80,42 @@ if (!isValid) Astro.response.status = 404;
                 </div>
               </div>
             </a>
+          </div>
+
+          {/* What happens next */}
+          <div class="text-left mt-10 mb-8">
+            <h2 class="text-base font-bold mb-3" style="color: var(--color-text-primary);">What happens next</h2>
+            <ol class="list-decimal pl-5 space-y-2 text-sm leading-relaxed" style="color: var(--color-text-secondary);">
+              <li>Install LockPact from the App Store. It's free.</li>
+              <li>Open it and enter the 6-digit code above to pair with your friend.</li>
+              <li>You each choose apps to lock on your own phone. To open a locked app, you ask the other person to approve.</li>
+            </ol>
+          </div>
+
+          <div class="flex justify-center mb-8">
+            <img
+              src={pairUp.src}
+              width={pairUp.width}
+              height={pairUp.height}
+              alt="The LockPact pairing screen, where you enter the invite code."
+              loading="lazy"
+              decoding="async"
+              class="rounded-2xl"
+              style="max-width: 220px; height: auto; border: 1px solid var(--color-card-border);"
+            />
+          </div>
+
+          {/* FAQ */}
+          <div class="text-left mb-8">
+            <h2 class="text-base font-bold mb-3" style="color: var(--color-text-primary);">Questions</h2>
+            <h3 class="text-sm font-semibold mb-1" style="color: var(--color-text-primary);">Can my partner see my screen time?</h3>
+            <p class="text-sm leading-relaxed mb-4" style="color: var(--color-text-secondary);">
+              No. They can see that you're locked, how many apps and categories you chose, and if the lock is turned off. They can't see which apps, and they can't see your usage. Apple keeps app choices private from every app, and LockPact doesn't send them anywhere.
+            </p>
+            <h3 class="text-sm font-semibold mb-1" style="color: var(--color-text-primary);">Do we both need an iPhone?</h3>
+            <p class="text-sm leading-relaxed m-0" style="color: var(--color-text-secondary);">
+              Yes. LockPact uses Apple's Screen Time features, so both people need an iPhone.
+            </p>
           </div>
 
           {/* Already have the app note */}

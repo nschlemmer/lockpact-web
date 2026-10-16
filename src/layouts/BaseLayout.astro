@@ -10,6 +10,8 @@ interface Props {
   ogType?: string;
   structuredData?: object;
   noindex?: boolean;
+  // Smart App Banner `app-argument` (e.g. the invite URL, so the banner's Open button receives it).
+  appArgument?: string;
   // Meta-only (2026-09-09, docs/content-plan-60d-2026-08.md §4 "Dates" rule) — only
   // BlogLayout ever passes these; presence-gated rather than ogType-gated below.
   pubDate?: Date;
@@ -24,6 +26,7 @@ const {
   ogType = 'website',
   structuredData,
   noindex = false,
+  appArgument,
   pubDate,
   updatedDate,
 } = Astro.props;
@@ -69,7 +72,7 @@ const twitterHandle = '@lockpact';
     <meta name="twitter:image" content={new URL(ogImage, Astro.site).href} />
 
     <!-- Apple Smart App Banner -->
-    <meta name="apple-itunes-app" content="app-id=6759302382" />
+    <meta name="apple-itunes-app" content={`app-id=6759302382${appArgument ? `, app-argument=${appArgument}` : ''}`} />
 
     <!-- Structured Data -->
     {structuredData && (
