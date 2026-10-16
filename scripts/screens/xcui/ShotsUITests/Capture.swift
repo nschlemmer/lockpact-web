@@ -133,29 +133,51 @@ final class Capture: XCTestCase {
         try? all2.sorted().joined(separator: "\n").write(toFile: "\(out)/diag-display-text.txt", atomically: true, encoding: .utf8)
     }
 
-    /// Sets a throwaway passcode (skipping recovery), captures where Change / Turn Off live, then removes it.
-    func testPasscodeLifecycle() {
-        // Clear any leftover sheet from a previous run.
-        for _ in 0..<2 { let x = settings.buttons.matching(NSPredicate(format: "label IN {'Close','Cancel','Dismiss'}")).firstMatch; if x.exists { x.tap(); sleep(1) } }
-        resetToRoot(); step(nil, "Screen Time")
+    /// Fresh-device flow: sets a throwaway passcode (skipping recovery), records where "Change Screen Time
+    /// Passcode" appears (Screen Time root vs Manage Screen Time), and captures that path.
+    func labels() -> String {
+        settings.staticTexts.allElementsBoundByIndex.map { $0.label }.joined(separator: " | ")
+    }
+
+    func testPasscodeFresh() {
+        resetToRoot()
+        step("80-open-screen-time", "Screen Time")
         step(nil, "Manage Screen Time")
-        if find("Change Screen Time Passcode").exists { write("60-already-set", frame: nil) }
-        else {
-            step(nil, "Lock Screen Time Settings", scroll: false); sleep(1)
-            settings.typeText("1234"); sleep(2)
-            settings.typeText("1234"); sleep(3)
-            write("61-skip-dialog", frame: nil)
-            let skip = settings.buttons["Skip"]
-            if skip.waitForExistence(timeout: 5) { write("62-skip-highlight", frame: skip.frame); skip.tap(); sleep(3) }
+        step("81-open-lock-settings", "Lock Screen Time Settings", scroll: false); sleep(1)
+        settings.typeText("1234"); sleep(2)
+        write("82-reenter", frame: nil)
+        settings.typeText("1234"); sleep(3)
+        write("83-recovery-sheet", frame: nil)
+        if settings.buttons["Continue"].exists { settings.buttons["Continue"].tap(); sleep(1) }   // keyboard-tips card
+        // Closing the Passcode Recovery sheet raises the "Are you sure?" prompt (Skip / Provide Apple Account).
+        let close = settings.buttons.matching(NSPredicate(format: "label IN {'Close','Cancel','Dismiss'}")).firstMatch
+        if close.exists { close.tap() } else { settings.coordinate(withNormalizedOffset: CGVector(dx: 0.095, dy: 0.14)).tap() }
+        sleep(2)
+        write("83b-skip-prompt", frame: nil)
+        let skip = settings.descendants(matching: .any).matching(NSPredicate(format: "label == 'Skip'")).firstMatch
+        if skip.waitForExistence(timeout: 5) { write("84-skip-highlight", frame: skip.frame); skip.tap() }
+        else { settings.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.556)).tap() }
+        sleep(3)
+        write("85-after-skip", frame: nil)
+        let inManage = find("Change Screen Time Passcode").exists
+        try? "after set, on Manage Screen Time: \(labels())".write(toFile: "\(out)/diag-manage.txt", atomically: true, encoding: .utf8)
+        write("86-manage-after-set", frame: nil)
+        if inManage {
+            if step("90-open-change-passcode", "Change Screen Time Passcode", scroll: false) {
+                write("91-change-options", frame: nil)
+                if step("92-open-change-again", "Change Screen Time Passcode", scroll: false) { write("93-enter-current", frame: nil) }
+            }
         }
-        write("63-manage-after-set", frame: nil)
-        resetToRoot(); step(nil, "Screen Time")
-        write("64-screen-time-after-set", frame: nil)
-        for _ in 0..<3 { settings.swipeUp() }
-        write("65-screen-time-after-set-bottom", frame: nil)
-        if step("66-open-change-passcode", "Change Screen Time Passcode") {
-            write("67-change-passcode-options", frame: nil)
-            if step("68-open-turn-off", "Turn Off Screen Time Passcode", scroll: false) { sleep(1); settings.typeText("1234"); sleep(3); write("69-after-turn-off", frame: nil) }
+        resetToRoot(); step(nil, "Screen Time"); sleep(1)
+        var atRoot = find("Change Screen Time Passcode").exists
+        if !atRoot { for _ in 0..<4 { settings.swipeUp(); sleep(1); if find("Change Screen Time Passcode").exists { atRoot = true; break } } }
+        try? "inManage=\(inManage) atRoot=\(atRoot)\nroot labels: \(labels())".write(toFile: "\(out)/diag-root.txt", atomically: true, encoding: .utf8)
+        write("87-screen-time-after-set", frame: nil)
+        if atRoot {
+            if step("90-open-change-passcode", "Change Screen Time Passcode", scroll: false) {
+                write("91-change-options", frame: nil)
+                if step("92-open-change-again", "Change Screen Time Passcode", scroll: false) { write("93-enter-current", frame: nil) }
+            }
         }
     }
 
@@ -219,5 +241,18 @@ final class Capture: XCTestCase {
             step(nil, "Always Allowed", scroll: false); sleep(3); back(); sleep(1)
             step(nil, "Apps & Websites", scroll: false); sleep(3); back(); sleep(1)
         }
+    }
+
+    /// Runs after testPasscodeFresh (passcode "1234" is set): captures the Change / Turn Off screens.
+    func testChangeFlow() {
+        resetToRoot(); step(nil, "Screen Time")
+        step(nil, "Manage Screen Time"); sleep(1)
+        step("90-open-change-passcode", "Change Screen Time Passcode", scroll: false); sleep(2)
+        write("91-change-options", frame: nil)
+        let turnOff = settings.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH 'Turn Off Screen Time Passcode'")).firstMatch
+        if turnOff.waitForExistence(timeout: 4) { write("92-turn-off-highlight", frame: turnOff.frame) }
+        let change = settings.descendants(matching: .any).matching(NSPredicate(format: "label == 'Change Screen Time Passcode'")).element(boundBy: 1)
+        if change.exists { write("93-change-again-highlight", frame: change.frame); change.tap(); sleep(2); write("94-enter-current", frame: nil) }
+        try? labels().write(toFile: "\(out)/diag-change.txt", atomically: true, encoding: .utf8)
     }
 }

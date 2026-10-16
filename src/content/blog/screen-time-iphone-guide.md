@@ -157,7 +157,7 @@ A Screen Time passcode is a four-digit code you must enter before changing your 
 
 ![The Enter Screen Time Passcode screen, which asks for four digits](../../assets/screens/screen-time-iphone-guide/14-passcode-entry.webp)
 
-To change or remove it, use **Settings → Screen Time → Change Screen Time Passcode**. Our guide to [changing, resetting or handing off your Screen Time passcode](/blog/screen-time-passcode/) covers recovery and what to do if you forget it.
+To change or remove it, use **Settings → Screen Time → Manage Screen Time → Change Screen Time Passcode**, then pick Change or Turn Off in the sheet. Our guide to [changing, resetting or handing off your Screen Time passcode](/blog/screen-time-passcode/) covers recovery and what to do if you forget it.
 
 ## How do you lock or hide a single app?
 

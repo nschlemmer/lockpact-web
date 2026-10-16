@@ -358,5 +358,23 @@
   "out": "05-block-website-sheet",
   "raw": "14-add-website-sheet",
   "alt": "The Block Website sheet, where you type the address to block"
+ },
+ {
+  "slug": "screen-time-passcode",
+  "out": "08-open-change-passcode",
+  "raw": "90-open-change-passcode",
+  "alt": "Change Screen Time Passcode highlighted on the Manage Screen Time screen once a passcode is set"
+ },
+ {
+  "slug": "screen-time-passcode",
+  "out": "09-change-options",
+  "raw": "93-change-again-highlight",
+  "alt": "The sheet that opens, with Change Screen Time Passcode highlighted above Turn Off Screen Time Passcode"
+ },
+ {
+  "slug": "screen-time-passcode",
+  "out": "10-turn-off-passcode",
+  "raw": "92-turn-off-highlight",
+  "alt": "The same sheet with Turn Off Screen Time Passcode highlighted"
  }
 ]

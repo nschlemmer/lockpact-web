@@ -20,7 +20,7 @@ faq:
   - q: "How do I set a Screen Time passcode on iOS 27?"
     a: "Open Settings, Screen Time, Manage Screen Time, then Lock Screen Time Settings. Enter a four-digit passcode twice. Afterwards you can add Screen Time Passcode Recovery with an Apple Account, or skip it."
   - q: "What if I forgot my Screen Time passcode?"
-    a: "Use the Change Screen Time Passcode screen and sign in with the Apple Account you set up for recovery. Apple says that without that account you can't remove or reset the passcode, and Apple can't recover it for you."
+    a: "Go to Manage Screen Time, tap Change Screen Time Passcode, and sign in with the Apple Account you set up for recovery. Apple says that without that account you can't remove or reset the passcode, and Apple can't recover it for you."
   - q: "Is a Screen Time passcode four digits or six?"
     a: "Four. Apple's iOS 27 guide says to enter a four-digit passcode, then enter it again to verify. The six-digit passcode is the one that unlocks your iPhone, which is a different code."
   - q: "Does a Screen Time passcode stop me bypassing my own limits?"
@@ -76,19 +76,25 @@ Apple's support article notes the recovery account might be different from the o
 
 ## How do you change a Screen Time passcode?
 
-To change it, open Settings, tap Screen Time, tap Change Screen Time Passcode, then tap Change Screen Time Passcode again. Enter your current passcode, then a new four-digit passcode twice. Apple's iPhone User Guide for iOS 27 lists this directly under Screen Time; Apple's support article lists the same option under Manage Screen Time. Look in both places if you don't see it.
+To change your Screen Time passcode on iOS 27, open Settings, tap Screen Time, tap Manage Screen Time, and tap Change Screen Time Passcode. A sheet opens with Change Screen Time Passcode, Turn Off Screen Time Passcode and Cancel. Tap Change Screen Time Passcode again, enter your current passcode, then a new four-digit passcode twice. The option only appears once a passcode is set.
 
-1. Open **Settings → Screen Time → Change Screen Time Passcode**, then tap **Change Screen Time Passcode**. If it isn't there, open **Manage Screen Time** and look for it.
-2. If asked, enter the Apple Account email and password you used to set up the passcode.
-3. Enter your current passcode if prompted, then a new four-digit passcode, then the new one again.
+1. Open **Settings → Screen Time → Manage Screen Time**.
+2. Tap **Change Screen Time Passcode**. (Before a passcode is set, this row reads **Lock Screen Time Settings** instead.)
+3. In the sheet that opens, tap **Change Screen Time Passcode**.
+4. If asked, enter the Apple Account email and password you used to set up the passcode, and your current passcode.
+5. Enter a new four-digit passcode, then enter it again to confirm.
 
-We couldn't confirm in the Simulator which of Apple's two locations iOS 27 uses, because the option only appears once a passcode is set, and we didn't keep one set. That's why we give both.
+![Change Screen Time Passcode highlighted on the Manage Screen Time screen once a passcode is set](../../assets/screens/screen-time-passcode/08-open-change-passcode.webp)
+
+![The sheet that opens, with Change Screen Time Passcode highlighted above Turn Off Screen Time Passcode](../../assets/screens/screen-time-passcode/09-change-options.webp)
+
+We checked this on a freshly erased iOS 27.0 Simulator with a throwaway passcode on October 16, 2026: **Change Screen Time Passcode** appeared under **Manage Screen Time**, and it did not appear on the main Screen Time screen. Apple's iPhone User Guide for iOS 27 words the same steps as "Tap Screen Time, tap Change Screen Time Passcode" ([Create, change, or remove a Screen Time passcode](https://support.apple.com/guide/iphone/iph272b4c4bd/27/ios/27)); Apple's support article, [Change your Screen Time passcode](https://support.apple.com/en-us/102677), lists it under Manage Screen Time, which is what we saw.
 
 ## What if you forgot your Screen Time passcode?
 
 Use the same Change Screen Time Passcode screen and sign in with the Apple Account you used for Screen Time Passcode Recovery. Apple says that without that account you can't remove or reset the passcode, and Apple won't be able to provide it. If the reset fails, check you're using exactly the email and password from setup, which may not be the account on your phone.
 
-1. Open **Settings → Screen Time**, then **Change Screen Time Passcode** (or **Manage Screen Time → Change Screen Time Passcode**).
+1. Open **Settings → Screen Time → Manage Screen Time**, then tap **Change Screen Time Passcode**, and tap **Change Screen Time Passcode** again in the sheet.
 2. When asked, enter the Apple Account email and password you used for recovery.
 3. Enter a new four-digit passcode, then enter it again.
 
@@ -98,11 +104,13 @@ Apple doesn't document a lockout timer for the Screen Time passcode. What it doc
 
 ## How do you remove a Screen Time passcode?
 
-To remove it, open Settings, tap Screen Time, tap Change Screen Time Passcode, select Turn Off Screen Time Passcode, and enter your current passcode. Removing it means anyone with your phone can change your Screen Time settings, so only do it when that's what you want. If you've forgotten the code, use recovery first.
+To remove it, open Settings, tap Screen Time, tap Manage Screen Time, tap Change Screen Time Passcode, choose Turn Off Screen Time Passcode in the sheet, and enter your current passcode. Removing it means anyone with your phone can change your Screen Time settings, so only do it when that's what you want. If you've forgotten the code, use recovery first.
 
-1. Open **Settings → Screen Time → Change Screen Time Passcode**.
-2. Tap **Turn Off Screen Time Passcode**.
+1. Open **Settings → Screen Time → Manage Screen Time → Change Screen Time Passcode**.
+2. In the sheet, tap **Turn Off Screen Time Passcode** (shown in red).
 3. Enter your current passcode.
+
+![The same sheet with Turn Off Screen Time Passcode highlighted](../../assets/screens/screen-time-passcode/10-turn-off-passcode.webp)
 
 ## What does the passcode actually protect?
 
