@@ -6,12 +6,12 @@ updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["iOS 26.4", "Screen Time", "accountability", "how-to"]
 faq:
-  - q: "Can I set the Screen Time passcode myself?"
-    a: "You can, but it defeats the point. Lock Screen Time Settings is where the Screen Time passcode gets set, and it only works as a boundary if someone other than you holds it. If you know the code, you can change or remove it yourself."
-  - q: "Does Lock Screen Time Settings stop me deleting the app?"
-    a: "Yes — per Opal's help documentation, once it's on, deleting a Screen Time-protected app requires the same passcode as revoking its Screen Time access. Both actions are gated together, not separately."
-  - q: "What if my partner forgets the passcode?"
-    a: "If a recovery Apple Account was added during setup, it can reset the passcode, which is why many partners skip that step. Apple says that without that account you can't remove or reset the passcode, and Apple can't provide it."
+- q: Can I set the Screen Time passcode myself?
+  a: You can, but it defeats the point. Lock Screen Time Settings is where the Screen Time passcode gets set, and it only works as a boundary if someone other than you holds it. If you know the code, you can change or remove it yourself.
+- q: Does Lock Screen Time Settings stop me deleting the app?
+  a: Yes — per Opal's help documentation, once it's on, deleting a Screen Time-protected app requires the same passcode as revoking its Screen Time access. Both actions are gated together, not separately.
+- q: What if my partner forgets the passcode?
+  a: If a recovery Apple Account was added during setup, it can reset the passcode, which is why many partners skip that step. Apple says that without that account you can't remove or reset the passcode, and Apple can't provide it.
 ---
 
 Your Screen Time passcode is the weak point in every app blocker: you know it, so you can undo the blocker in a few taps. **Settings → Screen Time → Manage Screen Time → Lock Screen Time Settings** is where Apple has you set that passcode, and it only does anything useful if someone *other than you* holds the code. Set it yourself and you've built a lock you also have the key to. This is a free, five-minute setup guide for doing it the way that actually works, plus the honest limits of what it stops.
@@ -73,20 +73,6 @@ If you also need the basics (how to change, reset, or turn off the Screen Time p
 Lock Screen Time Settings is a one-time setting, not an app — it doesn't tell anyone if you try to get around it, and it only covers the two exits described above. If you want the full picture of what happens when someone does get past a lock, including how to handle it as a couple, [what to do when your partner bypasses the lock](/blog/what-to-do-when-partner-bypasses-lock/) covers that conversation directly. And if the goal is ranking how hard various blockers actually are to get around — this setting included — [see the honest ranking of app blockers by bypass difficulty](/blog/app-blockers-you-cant-bypass-iphone/).
 
 If you don't currently have a specific app you're trying to lock so much as a general "I want someone else to hold the key" arrangement, [the category of apps built around exactly that](/blog/apps-that-let-a-friend-control-your-screen-time/) is a reasonable next stop.
-
-## Frequently Asked Questions
-
-### Can I set the Screen Time passcode myself?
-
-You can, but it defeats the point. Lock Screen Time Settings only works if the passcode belongs to someone other than you — if you set it, you can always change or remove it yourself, same as any Screen Time passcode.
-
-### Does Lock Screen Time Settings stop me deleting the app?
-
-Yes — per Opal's help documentation, once it's on (and Content & Privacy Restrictions is enabled), deleting a Screen Time-protected app requires the same passcode as revoking its Screen Time access. Both actions are gated together, not separately.
-
-### What if my partner forgets the passcode?
-
-Forgot Passcode routes to an Apple ID-based reset if a recovery Apple ID was added during setup — which is exactly why many partners choose to skip that step. Without it, the only recovery is erasing the device.
 
 ---
 

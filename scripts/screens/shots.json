@@ -1,0 +1,380 @@
+[
+ {
+  "slug": "screen-time-iphone-guide",
+  "out": "01-open-screen-time",
+  "raw": "01-open-screen-time",
+  "alt": "The Settings app with the Screen Time row highlighted"
+ },
+ {
+  "slug": "screen-time-iphone-guide",
+  "out": "02-screen-time",
+  "raw": "02-screen-time",
+  "alt": "The iOS 27 Screen Time screen, with Apps & Websites, Screen Time Schedule and Time Allowances"
+ },
+ {
+  "slug": "screen-time-iphone-guide",
+  "out": "03-open-schedule",
+  "raw": "20-open-schedule",
+  "alt": "The Screen Time Schedule row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "screen-time-iphone-guide",
+  "out": "04-schedule",
+  "raw": "21-schedule",
+  "alt": "The Screen Time Schedule screen"
+ },
+ {
+  "slug": "screen-time-iphone-guide",
+  "out": "05-open-time-allowances",
+  "raw": "22-open-time-allowances",
+  "alt": "The Time Allowances row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "screen-time-iphone-guide",
+  "out": "06-time-allowances",
+  "raw": "23-time-allowances",
+  "alt": "The Time Allowances screen"
+ },
+ {
+  "slug": "screen-time-iphone-guide",
+  "out": "07-open-always-allowed",
+  "raw": "24-open-always-allowed",
+  "alt": "The Always Allowed row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "screen-time-iphone-guide",
+  "out": "09-open-content-privacy",
+  "raw": "26-open-content-privacy",
+  "alt": "The Content & Privacy Restrictions row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "screen-time-iphone-guide",
+  "out": "10-open-apps-websites",
+  "raw": "10-open-apps-websites",
+  "alt": "The Apps & Websites row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "screen-time-iphone-guide",
+  "out": "11-open-manage",
+  "raw": "30-open-manage",
+  "alt": "Manage Screen Time highlighted at the bottom of the Screen Time screen"
+ },
+ {
+  "slug": "screen-time-iphone-guide",
+  "out": "14-passcode-entry",
+  "raw": "33-passcode-entry",
+  "alt": "The Enter Screen Time Passcode screen, which asks for four digits"
+ },
+ {
+  "slug": "how-to-block-websites-on-iphone",
+  "out": "01-open-screen-time",
+  "raw": "01-open-screen-time",
+  "alt": "The Settings app with the Screen Time row highlighted"
+ },
+ {
+  "slug": "how-to-block-websites-on-iphone",
+  "out": "02-open-apps-websites",
+  "raw": "10-open-apps-websites",
+  "alt": "The Apps & Websites row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-block-websites-on-iphone",
+  "out": "03-apps-websites",
+  "raw": "11-apps-websites",
+  "alt": "The Apps & Websites screen with Allowed and Blocked tabs and a Restrictions row"
+ },
+ {
+  "slug": "how-to-block-websites-on-iphone",
+  "out": "04-open-blocked-tab",
+  "raw": "12-open-blocked-tab",
+  "alt": "The Blocked tab highlighted on the Apps & Websites screen"
+ },
+ {
+  "slug": "how-to-block-websites-on-iphone",
+  "out": "05-tap-add",
+  "raw": "13-tap-add",
+  "alt": "The add button highlighted on the Blocked tab"
+ },
+ {
+  "slug": "how-to-block-websites-on-iphone",
+  "out": "06-block-website-sheet",
+  "raw": "14-add-website-sheet",
+  "alt": "The Block Website sheet, with a field for website URLs"
+ },
+ {
+  "slug": "how-to-block-websites-on-iphone",
+  "out": "07-open-restrictions",
+  "raw": "15-open-restrictions",
+  "alt": "The Restrictions row highlighted on the Apps & Websites screen"
+ },
+ {
+  "slug": "how-to-block-websites-on-iphone",
+  "out": "08-restrictions",
+  "raw": "16-restrictions",
+  "alt": "The Restrictions screen showing the website filter"
+ },
+ {
+  "slug": "how-to-block-youtube-on-iphone",
+  "out": "01-open-time-allowances",
+  "raw": "22-open-time-allowances",
+  "alt": "The Time Allowances row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-block-youtube-on-iphone",
+  "out": "02-time-allowances",
+  "raw": "23-time-allowances",
+  "alt": "The Time Allowances screen"
+ },
+ {
+  "slug": "how-to-block-youtube-on-iphone",
+  "out": "04-block-website-sheet",
+  "raw": "14-add-website-sheet",
+  "alt": "The Block Website sheet, where you type the address to block"
+ },
+ {
+  "slug": "how-to-block-youtube-on-iphone",
+  "out": "03-open-apps-websites",
+  "raw": "10-open-apps-websites",
+  "alt": "The Apps & Websites row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-block-tiktok-on-iphone",
+  "out": "01-open-time-allowances",
+  "raw": "22-open-time-allowances",
+  "alt": "The Time Allowances row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-block-tiktok-on-iphone",
+  "out": "02-open-apps-websites",
+  "raw": "10-open-apps-websites",
+  "alt": "The Apps & Websites row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-block-tiktok-on-iphone",
+  "out": "03-block-website-sheet",
+  "raw": "14-add-website-sheet",
+  "alt": "The Block Website sheet, where you type the address to block"
+ },
+ {
+  "slug": "how-to-block-snapchat-on-iphone",
+  "out": "01-open-time-allowances",
+  "raw": "22-open-time-allowances",
+  "alt": "The Time Allowances row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-block-snapchat-on-iphone",
+  "out": "02-open-apps-websites",
+  "raw": "10-open-apps-websites",
+  "alt": "The Apps & Websites row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-block-snapchat-on-iphone",
+  "out": "03-block-website-sheet",
+  "raw": "14-add-website-sheet",
+  "alt": "The Block Website sheet, where you type the address to block"
+ },
+ {
+  "slug": "how-to-block-reddit-on-iphone",
+  "out": "01-open-time-allowances",
+  "raw": "22-open-time-allowances",
+  "alt": "The Time Allowances row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-block-reddit-on-iphone",
+  "out": "02-open-apps-websites",
+  "raw": "10-open-apps-websites",
+  "alt": "The Apps & Websites row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-block-reddit-on-iphone",
+  "out": "03-block-website-sheet",
+  "raw": "14-add-website-sheet",
+  "alt": "The Block Website sheet, where you type the address to block"
+ },
+ {
+  "slug": "screen-time-passcode",
+  "out": "01-open-screen-time",
+  "raw": "01-open-screen-time",
+  "alt": "The Settings app with the Screen Time row highlighted"
+ },
+ {
+  "slug": "screen-time-passcode",
+  "out": "02-open-manage",
+  "raw": "30-open-manage",
+  "alt": "Manage Screen Time highlighted at the bottom of the Screen Time screen"
+ },
+ {
+  "slug": "screen-time-passcode",
+  "out": "03-manage-screen-time",
+  "raw": "31-manage-screen-time",
+  "alt": "The Manage Screen Time screen"
+ },
+ {
+  "slug": "screen-time-passcode",
+  "out": "04-open-lock-settings",
+  "raw": "32-open-lock-settings",
+  "alt": "Lock Screen Time Settings highlighted on the Manage Screen Time screen"
+ },
+ {
+  "slug": "screen-time-passcode",
+  "out": "05-passcode-entry",
+  "raw": "33-passcode-entry",
+  "alt": "The Enter Screen Time Passcode screen, which asks for four digits"
+ },
+ {
+  "slug": "screen-time-passcode",
+  "out": "06-skip-or-provide-account",
+  "raw": "61-skip-dialog",
+  "alt": "The Are you sure prompt, offering Skip or Provide Apple Account for passcode recovery"
+ },
+ {
+  "slug": "screen-time-passcode",
+  "out": "07-passcode-recovery",
+  "raw": "51-after-confirm",
+  "alt": "The Screen Time Passcode Recovery sheet, which asks for an Apple Account email or phone number"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "01-open-screen-time",
+  "raw": "01-open-screen-time",
+  "alt": "The Settings app with the Screen Time row highlighted"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "02-screen-time",
+  "raw": "02-screen-time",
+  "alt": "The iOS 27 Screen Time screen, with Apps & Websites, Screen Time Schedule and Time Allowances"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "03-open-time-allowances",
+  "raw": "22-open-time-allowances",
+  "alt": "The Time Allowances row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "04-time-allowances",
+  "raw": "23-time-allowances",
+  "alt": "The Time Allowances screen"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "05-open-schedule",
+  "raw": "20-open-schedule",
+  "alt": "The Screen Time Schedule row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "06-schedule",
+  "raw": "21-schedule",
+  "alt": "The Screen Time Schedule screen"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "07-open-always-allowed",
+  "raw": "24-open-always-allowed",
+  "alt": "The Always Allowed row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "08-open-apps-websites",
+  "raw": "10-open-apps-websites",
+  "alt": "The Apps & Websites row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "09-open-content-privacy",
+  "raw": "26-open-content-privacy",
+  "alt": "The Content & Privacy Restrictions row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "10-content-privacy",
+  "raw": "27-content-privacy",
+  "alt": "The Content & Privacy Restrictions screen"
+ },
+ {
+  "slug": "apple-screen-time-doesnt-work",
+  "out": "01-open-always-allowed",
+  "raw": "24-open-always-allowed",
+  "alt": "The Always Allowed row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "apple-screen-time-doesnt-work",
+  "out": "02-open-time-allowances",
+  "raw": "22-open-time-allowances",
+  "alt": "The Time Allowances row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "apple-screen-time-doesnt-work",
+  "out": "03-time-allowances",
+  "raw": "23-time-allowances",
+  "alt": "The Time Allowances screen"
+ },
+ {
+  "slug": "apple-screen-time-doesnt-work",
+  "out": "04-open-schedule",
+  "raw": "20-open-schedule",
+  "alt": "The Screen Time Schedule row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "apple-screen-time-doesnt-work",
+  "out": "05-schedule",
+  "raw": "21-schedule",
+  "alt": "The Screen Time Schedule screen"
+ },
+ {
+  "slug": "apple-screen-time-doesnt-work",
+  "out": "06-open-manage",
+  "raw": "30-open-manage",
+  "alt": "Manage Screen Time highlighted at the bottom of the Screen Time screen"
+ },
+ {
+  "slug": "best-instagram-blocker-iphone",
+  "out": "01-open-time-allowances",
+  "raw": "22-open-time-allowances",
+  "alt": "The Time Allowances row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "best-instagram-blocker-iphone",
+  "out": "02-time-allowances",
+  "raw": "23-time-allowances",
+  "alt": "The Time Allowances screen"
+ },
+ {
+  "slug": "best-instagram-blocker-iphone",
+  "out": "03-open-schedule",
+  "raw": "20-open-schedule",
+  "alt": "The Screen Time Schedule row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "best-instagram-blocker-iphone",
+  "out": "04-open-apps-websites",
+  "raw": "10-open-apps-websites",
+  "alt": "The Apps & Websites row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "best-instagram-blocker-iphone",
+  "out": "05-block-website-sheet",
+  "raw": "14-add-website-sheet",
+  "alt": "The Block Website sheet, where you type the address to block"
+ },
+ {
+  "slug": "screen-time-passcode",
+  "out": "08-open-change-passcode",
+  "raw": "90-open-change-passcode",
+  "alt": "Change Screen Time Passcode highlighted on the Manage Screen Time screen once a passcode is set"
+ },
+ {
+  "slug": "screen-time-passcode",
+  "out": "09-change-options",
+  "raw": "93-change-again-highlight",
+  "alt": "The sheet that opens, with Change Screen Time Passcode highlighted above Turn Off Screen Time Passcode"
+ },
+ {
+  "slug": "screen-time-passcode",
+  "out": "10-turn-off-passcode",
+  "raw": "92-turn-off-highlight",
+  "alt": "The same sheet with Turn Off Screen Time Passcode highlighted"
+ }
+]

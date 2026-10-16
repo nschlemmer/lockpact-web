@@ -7,3 +7,6 @@ dist/
 !.env.example
 *.log
 .DS_Store
+scripts/screens/xcui/LPShots.xcodeproj/
+scripts/screens/out/
+scripts/screens/xcui/build/

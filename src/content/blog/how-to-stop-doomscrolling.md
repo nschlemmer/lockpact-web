@@ -2,18 +2,28 @@
 title: "Doomscrolling: What It Is and How to Stop (2026)"
 description: "What doomscrolling means, why it's hard to stop, and how to stop it on iPhone: remove the trigger, set limits that hold, switch to grayscale, and hand the off-switch to someone else. Free options included."
 pubDate: 2026-10-15T09:00:00-07:00
-updatedDate: 2026-10-15
+updatedDate: 2026-10-16
 author: "LockPact"
 tags: ["doomscrolling", "how-to", "phone habits", "screen time", "iPhone"]
 faq:
-  - q: "How do I stop doomscrolling on my iPhone?"
-    a: "Lock the apps that pull you in with Screen Time: App Limits for a daily budget, Downtime for hours when they're off. Then give the Screen Time passcode to someone else, so the limit can't be tapped through. Grayscale makes the feed less rewarding."
-  - q: "Is there an app that stops doomscrolling?"
-    a: "Several apps add friction or locks, but any app you control can be turned off by you in Settings. LockPact is free to use and puts a partner in the unlock path, so ending a lock early means asking someone."
-  - q: "Does grayscale help with doomscrolling?"
-    a: "It can make a feed less visually rewarding, and on iPhone it's free: Settings, Accessibility, Display & Text Size, Color Filters, Grayscale. It's a nudge you can undo in seconds, so pair it with a limit someone else controls."
-  - q: "Why can't I stop doomscrolling with willpower?"
-    a: "The feed is built to remove stopping points, and you decide to stop when your resistance is lowest. A rule set in advance, and held by someone else, doesn't depend on how you feel mid-scroll."
+- q: How do I stop doomscrolling on my iPhone?
+  a: 'Lock the apps that pull you in with Screen Time: Time Allowances for a daily budget and a Screen Time Schedule for hours when they''re off (App Limits and Downtime on iOS 26). Then give the Screen Time passcode to someone else, so the limit can''t be tapped through. Grayscale makes the feed less rewarding.'
+- q: Is there an app that stops doomscrolling?
+  a: Several apps add friction or locks, but any app you control can be turned off by you in Settings. LockPact is free to use and puts a partner in the unlock path, so ending a lock early means asking someone.
+- q: Does grayscale help with doomscrolling?
+  a: 'It can make a feed less visually rewarding, and on iPhone it''s free: Settings, Accessibility, Display & Text Size, Color Filters, Grayscale. It''s a nudge you can undo in seconds, so pair it with a limit someone else controls.'
+- q: Why can't I stop doomscrolling with willpower?
+  a: The feed is built to remove stopping points, and you decide to stop when your resistance is lowest. A rule set in advance, and held by someone else, doesn't depend on how you feel mid-scroll.
+howWeTested: true
+sources:
+- label: 'Apple: Set Screen Time Schedules and Time Allowances (iOS 27)'
+  url: https://support.apple.com/guide/iphone/set-schedules-and-time-allowances-iphb0c7313c9/27/ios/27
+- label: 'Apple: Set schedules with Screen Time (iOS 26)'
+  url: https://support.apple.com/guide/iphone/set-schedules-with-screen-time-iphb0c7313c9/26/ios/26
+- label: 'Apple: Adjust display and text settings, Color Filters (iOS 27)'
+  url: https://support.apple.com/guide/iphone/iph3e2e1fb0/27/ios/27
+- label: 'Merriam-Webster: doomscroll'
+  url: https://www.merriam-webster.com/dictionary/doomscroll
 ---
 
 You can stop doomscrolling by taking the decision out of the moment: lock the apps that pull you in, set the lock ahead of time, and give the off-switch to someone else. The built-in version is free, and so is [LockPact](/go/b-how-to-stop-doomscrolling/), an iOS app where a partner approves any unlock. This guide covers what actually works on an iPhone, and the honest limits of each method.
@@ -38,23 +48,25 @@ Decide the replacement before the evening you need it, and tie it to the trigger
 
 ## How do you stop doomscrolling on iPhone?
 
-To stop doomscrolling on iPhone, find your trigger, set an App Limit, schedule Downtime for the hours that hurt, switch the screen to grayscale, and give the off-switch to someone else. Each step is stronger than the one before it, and only the last two survive a bad night.
+To stop doomscrolling on iPhone, find your trigger, set a Time Allowance, schedule the hours that hurt, switch the screen to grayscale, and give the off-switch to someone else. Each step is stronger than the one before it, and only the last two survive a bad night.
 
 ### 1. Find the trigger
 
 For a week, note when you open the feed without deciding to. It's usually a pattern: first thing in bed, waiting for something, after a stressful message, or the last ten minutes before sleep. Open **Settings → Screen Time** to see which apps you use and when (if the usage charts are empty, tap **App & Website Activity** and turn it on). Knowing the time of day tells you which hours to lock.
 
-### 2. Set an App Limit
+### 2. Set a Time Allowance
 
-Go to **Settings → Screen Time → App Limits → Add Limit**, choose the category or the individual apps, tap **Next**, and set a daily time. Apple notes the limit applies to everything you select together, so one shared budget runs out faster than you'd expect.
+On iOS 27, go to **Settings → Screen Time → Time Allowances**, drag the slider to set a daily total, or tap a category such as Social Media and set its own allowance. Tap **Manage Categories** to see which apps sit in each. Apple says you can use apps in a category until they reach the category's allowance or the daily total. If an app has a website, the allowance covers both.
 
-Here's the honest part. Apple's own documentation says that by default, Screen Time limits can be ignored once they're reached. That's why a limit you set for yourself feels like a suggestion: one tap and you're back in. It's a good diagnostic and a weak lock.
+**On iOS 26 and earlier,** it's **Settings → Screen Time → App Limits → Add Limit**, and Apple's note is that by default those limits can be ignored once reached.
 
-### 3. Schedule Downtime for the hours that hurt
+Here's the honest part. A limit you set for yourself feels like a suggestion: you know the passcode, so one tap and you're back in. It's a good diagnostic and a weak lock.
 
-If your scrolling is a late-night habit, a daily budget is the wrong shape. Use **Settings → Screen Time → Downtime**, set the hours, and put the feed apps outside your Always Allowed list. With a Screen Time passcode set, turn on **Block at Downtime**: Apple says restricted apps then can't be opened during downtime and appear dimmed with an hourglass icon. With it off, you get a reminder and can continue anyway.
+### 3. Schedule the hours that hurt
 
-Apple also sends a reminder five minutes before scheduled Downtime begins, which is a decent cue to put the phone down on purpose.
+If your scrolling is a late-night habit, a daily budget is the wrong shape. Use **Settings → Screen Time → Screen Time Schedule**, turn on **Schedule**, and set a window for the evening. Each window shows which Time Allowance categories are available during it, so leave the feed apps out of the evening window. Check **Always Allowed** so a feed app isn't exempt.
+
+**On iOS 26 and earlier,** it's **Downtime**. With a Screen Time passcode set, **Block at Downtime** makes restricted apps unavailable instead of dimmed, and Apple sends a reminder five minutes before scheduled Downtime begins, a decent cue to put the phone down on purpose.
 
 ### 4. Switch the screen to grayscale
 
@@ -82,26 +94,8 @@ Start with that app, not the whole phone. We have app-specific guides for the tw
 
 If steps 2 to 4 work for you, you don't need anything else, and we'd rather you hadn't downloaded us. They work best for people who already want to stop and just need a nudge.
 
-LockPact is for the people those steps keep failing: the ones who set the limit, hit it, and tap through. The feature is a person. Texting your partner "can you unlock this for me?" is slightly embarrassing, and that's the point. It's free to use, with no premium tier gating the partner features; optional tips and Willpower Waivers exist if you want them. [Get LockPact on the App Store](/go/b-how-to-stop-doomscrolling/).
+LockPact is for the people those steps keep failing: the ones who set the limit, hit it, and tap through. The feature is a person. Texting your partner "can you unlock this for me?" is slightly embarrassing, and that's the point. It's free to use, with no premium tier gating the partner features; optional Support LockPact and Willpower Waivers ($1.99–$9.99) exist if you want them. [Get LockPact on the App Store](/go/b-how-to-stop-doomscrolling/).
 
 ## What should you not expect?
 
 No method makes it impossible. An iPhone owner can always revoke an app's Screen Time access or erase the phone, and no app can change that. What you're doing is making quitting slower, more visible, and a conversation instead of a tap. For most people that's the difference between a habit that holds and one that doesn't.
-
-## Frequently Asked Questions
-
-### How do I stop doomscrolling on my iPhone?
-
-Lock the apps that pull you in with Screen Time: App Limits for a daily budget, Downtime for hours when they're off. Then give the Screen Time passcode to someone else, so the limit can't be tapped through. Grayscale makes the feed less rewarding.
-
-### Is there an app that stops doomscrolling?
-
-Several apps add friction or locks, but any app you control can be turned off by you in Settings. LockPact is free to use and puts a partner in the unlock path, so ending a lock early means asking someone.
-
-### Does grayscale help with doomscrolling?
-
-It can make a feed less visually rewarding, and on iPhone it's free: Settings, Accessibility, Display & Text Size, Color Filters, Grayscale. It's a nudge you can undo in seconds, so pair it with a limit someone else controls.
-
-### Why can't I stop doomscrolling with willpower?
-
-The feed is built to remove stopping points, and you decide to stop when your resistance is lowest. A rule set in advance, and held by someone else, doesn't depend on how you feel mid-scroll.

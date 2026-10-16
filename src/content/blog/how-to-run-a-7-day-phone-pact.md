@@ -5,6 +5,17 @@ pubDate: 2026-05-03
 updatedDate: 2026-07-23
 author: "LockPact"
 tags: ["how-to", "phone pact", "screen time", "accountability"]
+faq:
+- q: What is a phone pact?
+  a: A phone pact is a mutual agreement between two people to lock specific apps on their own phone and only allow their partner to unlock them. Unlike solo blocking, where one person tries to restrict themselves, a phone pact is two people holding each other accountable simultaneously.
+- q: How long should a phone pact last?
+  a: Seven days is the sweet spot. It's long enough to break muscle memory and actually rewire habit (24 hours is just a test, 30 days is often too ambitious to commit to), but short enough that you can see the finish line and maintain the momentum.
+- q: What apps should you block during a phone pact?
+  a: Pick 2-4 apps maximum — the ones that actually hijack your attention most (usually Instagram, TikTok, Reddit). Don't block utilities like Maps, Messages, Banking, or Mail unless you have a genuine problem with them. You're testing discipline, not punishing yourself.
+- q: What happens if you bypass the lock?
+  a: The device owner can always bypass via Settings and Face ID because Apple makes it architecturally impossible to prevent. LockPact detects the bypass and notifies your partner. The accountability is social, not technical — the point is that your partner knows, and that creates the real commitment.
+- q: Do both partners have to participate?
+  a: Yes. That's the design. Mutual locks make the commitment stable. One-way accountability tends to feel like surveillance and usually breaks down. Both of you need to have skin in the game.
 ---
 
 ## The Setup
@@ -219,30 +230,6 @@ It's about experiencing what focused time feels like. Conversation without the t
 It's about admitting, to another person, that your phone has power over you. And having them admit the same. And finding out that you're both normal. You're not broken. Technology is just really good at what it does.
 
 And it's about sitting on that couch at the end of the week, both of you phone-free for an evening, actually talking to each other. Not because you're disciplined. But because you promised someone you trusted that you would.
-
----
-
-## Frequently Asked Questions
-
-### What is a phone pact?
-
-A phone pact is a mutual agreement between two people to lock specific apps on their own phone and only allow their partner to unlock them. Unlike solo blocking, where one person tries to restrict themselves, a phone pact is two people holding each other accountable simultaneously.
-
-### How long should a phone pact last?
-
-Seven days is the sweet spot. It's long enough to break muscle memory and actually rewire habit (24 hours is just a test, 30 days is often too ambitious to commit to), but short enough that you can see the finish line and maintain the momentum.
-
-### What apps should you block during a phone pact?
-
-Pick 2-4 apps maximum — the ones that actually hijack your attention most (usually Instagram, TikTok, Reddit). Don't block utilities like Maps, Messages, Banking, or Mail unless you have a genuine problem with them. You're testing discipline, not punishing yourself.
-
-### What happens if you bypass the lock?
-
-The device owner can always bypass via Settings and Face ID because Apple makes it architecturally impossible to prevent. LockPact detects the bypass and notifies your partner. The accountability is social, not technical — the point is that your partner knows, and that creates the real commitment.
-
-### Do both partners have to participate?
-
-Yes. That's the design. Mutual locks make the commitment stable. One-way accountability tends to feel like surveillance and usually breaks down. Both of you need to have skin in the game.
 
 ---
 

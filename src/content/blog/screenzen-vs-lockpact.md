@@ -5,6 +5,16 @@ pubDate: 2026-04-25
 updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "ScreenZen", "accountability"]
+faq:
+- q: Can ScreenZen's friction actually stop compulsive phone use?
+  a: For some people, yes — the pause is often enough to interrupt an automatic reach for the phone. For people whose usage is more compulsive or habitual, friction alone tends to get overridden once the delay becomes familiar, which is where a hard block changes the equation.
+- q: Does ScreenZen's social sharing count as accountability?
+  a: The stats-sharing feature is visibility, not accountability — friends can see your numbers after the fact, but nobody has to approve anything before you open an app. Separately, ScreenZen 4.0 (September 2026) added Lock Settings, a real accountability-partner gate — but it protects your *configuration*, not individual app opens; see the section above for the distinction. LockPact's model requires active partner approval before every unlock of an app itself, which is still the structurally different — and stronger — mechanism for the moment that actually matters.
+- q: Is the Halo hardware device worth it?
+  a: It's optional. ScreenZen is fully functional without it — the Halo just adds an ambient physical notification layer on top of the app. It doesn't change the core friction-vs-accountability comparison with LockPact either way.
+- q: Can I use ScreenZen and LockPact together?
+  a: Yes, and some people do — ScreenZen's delays on apps you're trying to moderate, LockPact's hard lock on the one or two apps you're trying to eliminate entirely during specific hours.
+disclosure: true
 ---
 ScreenZen and LockPact answer the same problem—you check your phone too much—with fundamentally different solutions.
 
@@ -108,24 +118,6 @@ To give ScreenZen its due, there are real situations where it's the smarter choi
 **You're testing whether friction alone is enough before involving someone else.** Some people try friction first, find it insufficient, and move to a harder mechanism after. ScreenZen is a reasonable first step on that path.
 
 If your problem has resisted friction before — you already know you'll wait out a 30-second delay if you want something badly enough — a hard block with a real person on the other end solves a different, harder version of the same problem.
-
-## Frequently Asked Questions
-
-### Can ScreenZen's friction actually stop compulsive phone use?
-
-For some people, yes — the pause is often enough to interrupt an automatic reach for the phone. For people whose usage is more compulsive or habitual, friction alone tends to get overridden once the delay becomes familiar, which is where a hard block changes the equation.
-
-### Does ScreenZen's social sharing count as accountability?
-
-The stats-sharing feature is visibility, not accountability — friends can see your numbers after the fact, but nobody has to approve anything before you open an app. Separately, ScreenZen 4.0 (September 2026) added Lock Settings, a real accountability-partner gate — but it protects your *configuration*, not individual app opens; see the section above for the distinction. LockPact's model requires active partner approval before every unlock of an app itself, which is still the structurally different — and stronger — mechanism for the moment that actually matters.
-
-### Is the Halo hardware device worth it?
-
-It's optional. ScreenZen is fully functional without it — the Halo just adds an ambient physical notification layer on top of the app. It doesn't change the core friction-vs-accountability comparison with LockPact either way.
-
-### Can I use ScreenZen and LockPact together?
-
-Yes, and some people do — ScreenZen's delays on apps you're trying to moderate, LockPact's hard lock on the one or two apps you're trying to eliminate entirely during specific hours.
 
 ## Download LockPact
 

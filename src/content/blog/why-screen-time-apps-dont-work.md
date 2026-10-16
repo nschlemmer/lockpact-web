@@ -5,6 +5,13 @@ pubDate: 2026-04-13
 updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["screen time", "accountability", "behavior change"]
+faq:
+- q: Why don't screen time apps work?
+  a: 'Most are solo tools you can turn off yourself, so they ask the person who wants out to enforce the rule. The problem is social, not technical: the missing piece is another person who decides, not a stricter setting.'
+- q: What does work instead of a screen time app?
+  a: Putting the off-switch in someone else's hands. That can be a partner who holds your Screen Time passcode or an app where a partner approves unlocks. It makes quitting slower and visible, though never impossible.
+- q: Is phone overuse an addiction or a habit?
+  a: For most people it's a habit loop reinforced by design, which this post explains without medical claims. If phone use is harming your health, work or relationships, talk to a qualified professional.
 ---
 
 ## The Pattern Everyone Recognizes
@@ -13,7 +20,7 @@ You install a screen time app. You feel virtuous.
 
 Three days later, you disable it. Maybe you tell yourself you'll turn it back on tomorrow. Or you delete the app and feel guilty about it for exactly twelve hours.
 
-This happens to most people. Not because they lack willpower. Not because the app is poorly designed. It happens because **the app is solving the wrong problem**.
+This happens to most people. If you're comparing apps, [best screen time apps for iPhone](/blog/best-screen-time-apps/) lists what each costs and who can turn it off. Not because they lack willpower. Not because the app is poorly designed. It happens because **the app is solving the wrong problem**.
 
 The problem isn't technical. It's behavioral.
 

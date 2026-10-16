@@ -5,6 +5,14 @@ pubDate: 2026-07-24
 updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "Friend Controls", "accountability"]
+faq:
+- q: What is the difference between Friend Controls and LockPact?
+  a: 'Friend Controls has you set limits, and friends you invite as Controllers approve requests when you hit them. LockPact is mutual: you and a partner each lock your own apps, and each approves the other''s unlock requests.'
+- q: Is Friend Controls free?
+  a: Blocking a single app is free; more than one needs a paid tier. Its App Store listing shows several in-app price points, with a monthly subscription from $2.99 and a $29.99 lifetime purchase, checked October 15, 2026.
+- q: Can you bypass Friend Controls?
+  a: Yes. An iPhone owner can always revoke an app's Screen Time access in Settings, and we found no bypass-detection feature on its listing. LockPact has the same limit but alerts your partner when it happens.
+disclosure: true
 ---
 
 Friend Controls and LockPact are the two apps closest to actually being in the same category: both replace a self-controlled screen time limit with a real person deciding whether you get more time. That's rare — most "screen time" apps are still just you versus a setting. (For the wider field, including a couple of apps that only sound like they belong here, see our roundup of [apps that let a friend control your screen time](/blog/apps-that-let-a-friend-control-your-screen-time/).)
@@ -21,7 +29,7 @@ Blocking a single app is free. Blocking more than one app requires a paid tier: 
 
 LockPact starts from the opposite direction. Instead of you setting your own limit and asking a friend for an extension when you break it, you and a partner pair up and each lock apps *on each other's* phones from the start. There's no moment where you're negotiating your own rule with yourself — the lock is already theirs to hold. When you want back in, you send an unlock request and your partner approves or declines it. It works the same way in reverse for whatever they've locked on your phone.
 
-It's free — the core mutual-lock-and-approve mechanic isn't a teaser for a subscription, it's the whole app. There's an optional one-time "Support LockPact" tip and a rewarded ad shown before some unlock requests, but no recurring paywall gates the core feature. LockPact also detects if you turn off Screen Time access to sidestep the lock entirely and notifies your partner when that happens — Friend Controls' public materials don't describe an equivalent bypass-detection mechanism.
+It's free — the core mutual-lock-and-approve mechanic isn't a teaser for a subscription, it's the whole app. There's an optional one-time "Support LockPact" purchase and a rewarded ad shown before some unlock requests, but no recurring paywall gates the core feature. LockPact also detects if you turn off Screen Time access to sidestep the lock entirely and notifies your partner when that happens — Friend Controls' public materials don't describe an equivalent bypass-detection mechanism.
 
 ## Quick comparison table
 
@@ -31,7 +39,7 @@ It's free — the core mutual-lock-and-approve mechanic isn't a teaser for a sub
 | **Direction of control** | One-way per request (you ask, a Controller decides) | Mutual (both people hold a real lock on the other) |
 | **Number of approvers** | Multiple friends as "Controllers" | One partner |
 | **Free tier** | 1 app blocked | Full mutual-lock feature, no subscription |
-| **Paid tier** | ~$3–$60 (weekly/monthly/yearly) or $29.99 lifetime, to block more than 1 app | None required — optional support tip |
+| **Paid tier** | ~$3–$60 (weekly/monthly/yearly) or $29.99 lifetime, to block more than 1 app | None required — optional Support LockPact purchase |
 | **Bypass detection** | Not described in current listing | Yes — partner is notified |
 | **Platform** | iOS only | iOS only |
 | **Rating (as of September 2026)** | 4.7★, 569 ratings | New — building its own rating history |

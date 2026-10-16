@@ -5,14 +5,15 @@ pubDate: 2026-09-22
 author: "LockPact"
 tags: ["comparison", "AppBlock", "BlockSite", "app blockers"]
 faq:
-  - q: "Is AppBlock or BlockSite free?"
-    a: "Both are free to download with core blocking included, and both gate their strongest anti-bypass features behind a paid tier — AppBlock's Premium (~$4.99/mo or ~$29.99/yr) and BlockSite's Unlimited plan (roughly $10.99/mo or ~$47.88/yr, per its own pricing page)."
-  - q: "Which is stricter — AppBlock's Strict Mode or BlockSite's password protection?"
-    a: "AppBlock's Strict Mode is built specifically to prevent in-app bypass while active, per its own App Store description. BlockSite's Password Protection gates the same toggle, though some user reviews describe inconsistent enforcement — worth testing on your own device before relying on it."
-  - q: "Does AppBlock or BlockSite have an accountability partner?"
-    a: "AppBlock does, in a limited sense: Approval Access, a Premium feature where a named approver gets an email request. BlockSite has nothing comparable — no partner, approver, or notification feature for a second person."
-  - q: "AppBlock vs BlockSite — which works on more platforms?"
-    a: "BlockSite covers more surfaces: iOS, Android, and browser extensions for Chrome, Safari, and Edge, syncing blocklists across all of them. AppBlock covers iOS and Android but not the browser directly."
+- q: Is AppBlock or BlockSite free?
+  a: Both are free to download with core blocking included, and both gate their strongest anti-bypass features behind a paid tier — AppBlock's Premium (~$4.99/mo or ~$29.99/yr) and BlockSite's Unlimited plan (roughly $10.99/mo or ~$47.88/yr, per its own pricing page).
+- q: Which is stricter — AppBlock's Strict Mode or BlockSite's password protection?
+  a: AppBlock's Strict Mode is built specifically to prevent in-app bypass while active, per its own App Store description. BlockSite's Password Protection gates the same toggle, though some user reviews describe inconsistent enforcement — worth testing on your own device before relying on it.
+- q: Does AppBlock or BlockSite have an accountability partner?
+  a: 'AppBlock does, in a limited sense: Approval Access, a Premium feature where a named approver gets an email request. BlockSite has nothing comparable — no partner, approver, or notification feature for a second person.'
+- q: AppBlock vs BlockSite — which works on more platforms?
+  a: 'BlockSite covers more surfaces: iOS, Android, and browser extensions for Chrome, Safari, and Edge, syncing blocklists across all of them. AppBlock covers iOS and Android but not the browser directly.'
+disclosure: true
 ---
 
 AppBlock and BlockSite show up in the same searches because they solve overlapping problems — block distracting apps, block distracting websites, add enough friction that you don't just tap through. Both are free to start. Both save their real strictness for a paid tier. And neither one, once you look closely at what "accountability" means in their own marketing, actually puts a second person in the loop the way a mutual lock does. Here's the honest comparison, checked against both apps' current listings.
@@ -60,24 +61,6 @@ This is worth being precise about, because "accountability" gets used loosely in
 BlockSite has nothing in this category at all. Its closest social feature is a Slack integration that blocks distracting messages during a focus session — useful for a coworking context, but it's blocking a notification source, not putting a person in your unlock path.
 
 Neither app is built around the idea that the person best positioned to stop you from quietly disabling your own restriction is someone who cares whether you do — which is the entire premise LockPact is built on, for free, with no approver-only, one-way, or Premium-gated version of it.
-
-## Frequently Asked Questions
-
-### Is AppBlock or BlockSite free?
-
-Both are free to download with core blocking included, and both gate their strongest anti-bypass features behind a paid tier — AppBlock's Premium (~$4.99/mo or ~$29.99/yr) and BlockSite's Unlimited plan (roughly $10.99/mo or ~$47.88/yr, per its own pricing page).
-
-### Which is stricter — AppBlock's Strict Mode or BlockSite's password protection?
-
-AppBlock's Strict Mode is built specifically to prevent in-app bypass while active, per its own App Store description and user reviews. BlockSite's Password Protection gates the same toggle, though some user reviews describe inconsistent enforcement — worth testing on your own device before relying on it.
-
-### Does AppBlock or BlockSite have an accountability partner?
-
-AppBlock does, in a limited sense: Approval Access, a Premium feature where a named approver gets an email request and decides whether to unlock you. BlockSite has nothing comparable — no partner, approver, or notification feature for a second person.
-
-### AppBlock vs BlockSite — which works on more platforms?
-
-BlockSite covers more surfaces: iOS, Android, and browser extensions for Chrome, Safari, and Edge, syncing blocklists across all of them. AppBlock covers iOS and Android but not the browser directly.
 
 ---
 

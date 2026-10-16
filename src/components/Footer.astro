@@ -1,15 +1,23 @@
 ---
+import { guides } from '../lib/guides';
 ---
 
 <footer class="border-t section-sm px-6 text-center" style="border-color: var(--color-card-border);">
   <div class="font-extrabold text-card-title mb-4" style="color: var(--color-text-primary);">
     <span style="color: var(--color-accent);">Lock</span>Pact
   </div>
-  <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8 max-w-[520px] mx-auto text-left sm:text-center">
+  <div class="grid grid-cols-1 sm:grid-cols-4 gap-8 mb-8 max-w-[760px] mx-auto text-left sm:text-center">
     <div>
       <h3 class="text-[11px] font-bold uppercase tracking-widest mb-3" style="color: var(--color-text-tertiary);">About</h3>
       <a href="/blog/" class="block text-sm transition-opacity hover:opacity-80 mb-2" style="color: var(--color-text-secondary);">Blog</a>
+      <a href="/editorial-policy/" class="block text-sm transition-opacity hover:opacity-80 mb-2" style="color: var(--color-text-secondary);">Editorial policy</a>
       <a href="/support-lockpact/" class="block text-sm transition-opacity hover:opacity-80" style="color: var(--color-text-secondary);">Support LockPact</a>
+    </div>
+    <div>
+      <h3 class="text-[11px] font-bold uppercase tracking-widest mb-3" style="color: var(--color-text-tertiary);">Guides</h3>
+      {guides.map((g) => (
+        <a href={g.href} class="block text-sm transition-opacity hover:opacity-80 mb-2" style="color: var(--color-text-secondary);">{g.short}</a>
+      ))}
     </div>
     <div>
       <h3 class="text-[11px] font-bold uppercase tracking-widest mb-3" style="color: var(--color-text-tertiary);">Help</h3>

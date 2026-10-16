@@ -39,6 +39,16 @@
     { "source": "/blog/how-to-be-more-present", "destination": "/blog/phubbing-how-to-stop/", "permanent": true },
     { "source": "/blog/phone-addiction-vs-phone-habit/", "destination": "/blog/why-screen-time-apps-dont-work/", "permanent": true },
     { "source": "/blog/phone-addiction-vs-phone-habit", "destination": "/blog/why-screen-time-apps-dont-work/", "permanent": true },
+    { "source": "/blog/apps-let-a-friend-control-your-screen-time/", "destination": "/blog/apps-that-let-a-friend-control-your-screen-time/", "permanent": true },
+    { "source": "/blog/apps-let-a-friend-control-your-screen-time", "destination": "/blog/apps-that-let-a-friend-control-your-screen-time/", "permanent": true },
+    { "source": "/blog/apps-let-friend-control-your-screen-time/", "destination": "/blog/apps-that-let-a-friend-control-your-screen-time/", "permanent": true },
+    { "source": "/blog/apps-let-friend-control-your-screen-time", "destination": "/blog/apps-that-let-a-friend-control-your-screen-time/", "permanent": true },
+    { "source": "/blog/apps-that-let-your-screen-time/", "destination": "/blog/apps-that-let-a-friend-control-your-screen-time/", "permanent": true },
+    { "source": "/blog/apps-that-let-your-screen-time", "destination": "/blog/apps-that-let-a-friend-control-your-screen-time/", "permanent": true },
+    { "source": "/blob/apps-that-let-a-friend-control-your-screen-time/", "destination": "/blog/apps-that-let-a-friend-control-your-screen-time/", "permanent": true },
+    { "source": "/blob/apps-that-let-a-friend-control-your-screen-time", "destination": "/blog/apps-that-let-a-friend-control-your-screen-time/", "permanent": true },
+    { "source": "/blog/best-screen-time-apps-for-coples/", "destination": "/blog/best-screen-time-apps-for-couples/", "permanent": true },
+    { "source": "/blog/best-screen-time-apps-for-coples", "destination": "/blog/best-screen-time-apps-for-couples/", "permanent": true },
     { "source": "/tip", "destination": "/support-lockpact/", "permanent": true },
     { "source": "/tip/thanks", "destination": "/support-lockpact/thanks/", "permanent": true }
   ]

@@ -5,6 +5,15 @@ pubDate: 2026-05-17
 updatedDate: 2026-07-23
 author: "LockPact"
 tags: ["long distance", "relationships", "phone use", "couples", "screen time"]
+faq:
+- q: How do phone habits affect long-distance relationships differently than co-located ones?
+  a: In co-located relationships, phones compete with your partner's physical presence. In long-distance, the phone is both the medium for your relationship and the default behavior when the relationship isn't available. This creates a more ambiguous relationship with phone use — it's harder to distinguish connection from avoidance.
+- q: What's the most common phone problem in long-distance relationships?
+  a: Distracted calls — where one or both partners are partially present on FaceTime or phone calls. This is fixable through explicit mutual agreement rather than hoping the other person will notice and change.
+- q: Does mutual app locking work across distance?
+  a: Yes. The lock is enforced on each person's device. Distance doesn't affect how the block works. The commitment and accountability are real regardless of location.
+- q: How do you handle the emotional drop after a call ends?
+  a: Name it first — knowing that the post-call scroll is a response to the emotional drop makes it easier to interrupt. Building a brief non-scroll ritual (quiet time, journaling, making something, a short walk) helps create a buffer that prevents the automatic scroll from firing.
 ---
 
 Long distance relationship phone habits have a particular problem that doesn't get discussed enough.
@@ -94,24 +103,6 @@ The goal isn't to use your phone less in any absolute sense. It's to use it more
 ---
 
 If you're also choosing apps for the other parts of the relationship, our list of the [best apps for long-distance couples](/blog/long-distance-relationship-apps/) covers staying in touch, shared calendars and watching together.
-
-## Frequently Asked Questions
-
-### How do phone habits affect long-distance relationships differently than co-located ones?
-
-In co-located relationships, phones compete with your partner's physical presence. In long-distance, the phone is both the medium for your relationship and the default behavior when the relationship isn't available. This creates a more ambiguous relationship with phone use — it's harder to distinguish connection from avoidance.
-
-### What's the most common phone problem in long-distance relationships?
-
-Distracted calls — where one or both partners are partially present on FaceTime or phone calls. This is fixable through explicit mutual agreement rather than hoping the other person will notice and change.
-
-### Does mutual app locking work across distance?
-
-Yes. The lock is enforced on each person's device. Distance doesn't affect how the block works. The commitment and accountability are real regardless of location.
-
-### How do you handle the emotional drop after a call ends?
-
-Name it first — knowing that the post-call scroll is a response to the emotional drop makes it easier to interrupt. Building a brief non-scroll ritual (quiet time, journaling, making something, a short walk) helps create a buffer that prevents the automatic scroll from firing.
 
 ---
 

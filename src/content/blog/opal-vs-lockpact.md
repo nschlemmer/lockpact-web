@@ -2,12 +2,29 @@
 title: "Free Opal Alternative? Opal vs. LockPact (2026)"
 description: "Looking for a free Opal alternative? A fair comparison of Opal and LockPact — the real cost of Opal's $100/year plan, what each app actually enforces, and when Opal is the better pick."
 pubDate: 2026-04-21
-updatedDate: 2026-10-15
+updatedDate: 2026-10-16
 author: "LockPact"
 tags: ["comparison", "Opal", "screen time"]
 faq:
-  - q: "Is there a free alternative to Opal?"
-    a: "Yes. Opal itself has a free plan with one rule, and LockPact is a free alternative built for a different job: you and a partner lock each other's apps, and neither can unlock without the other. It's free to use, but it only works with another person."
+- q: "Is Opal free?"
+  a: "Partly. Opal's free plan has one rule, basic timers, app blocking and today's Opal Score. Pro adds unlimited rules, Hard Mode and Allow Only for $99.99 a year, $19.99 a month or $399 lifetime, per opalapp.com on October 16, 2026."
+- q: Is there a free alternative to Opal?
+  a: 'Yes. Opal itself has a free plan with one rule, and LockPact is a free alternative built for a different job: you and a partner lock each other''s apps, and neither can unlock without the other. It''s free to use, but it only works with another person.'
+- q: Is Opal worth $100 a year?
+  a: For the right person, yes. If you're iPhone-and-Mac and respond well to a polished, gamified solo experience, Opal is one of the best-designed tools in the category. If you have a willing accountability partner, the same $100/year buys you nothing that a free mutual lock doesn't already do.
+- q: Does Opal's Deep Focus mode actually stop you from bypassing it?
+  a: 'It makes bypassing more difficult than the free tier, but Opal is still a solo tool — you set it, and ultimately you''re the one deciding whether to override it, even if the override is harder to reach. LockPact''s model is different: the override still exists (Apple requires it), but your partner is notified when it happens, so the cost isn''t "was it hard to click," it''s "will someone find out."'
+- q: Can I use Opal and LockPact together?
+  a: Some people do — Opal for cross-device focus sessions on a laptop, LockPact for the phone-specific apps where a partner's involvement matters most. They're not mutually exclusive, though most people end up preferring one primary system once they see which one actually holds.
+- q: Which one is better for couples?
+  a: LockPact, if both people are willing to participate — the mutual structure (you each hold the other's key) is built for exactly that. Opal's Buddies feature offers visibility to a partner, but doesn't give them any actual control, which is a meaningfully weaker form of accountability for two people trying to change together.
+disclosure: true
+howWeTested: true
+sources:
+- label: Opal pricing (opalapp.com), checked October 16, 2026
+  url: https://opalapp.com/pricing
+- label: Opal on the App Store (US listing), checked October 16, 2026
+  url: https://apps.apple.com/us/app/id1497465230
 ---
 ## Quick Comparison Table
 
@@ -23,6 +40,12 @@ faq:
 | **Social Cost** | Low (you can silently fail) | High (partner sees and must approve unlock) |
 | **Best For** | Solo users who want beautiful UX and Mac support | Pairs who want mutual accountability without paying |
 
+## Is Opal free?
+
+Opal has a free plan, but it's limited: one rule covering schedules, time limits or open limits, basic timers, app blocking and today's Opal Score, on iOS, Android and Mac. Pro adds unlimited rules, Hard Mode and Allow Only for $99.99 a year, $19.99 a month or $399 lifetime, per opalapp.com on October 16, 2026. Pro has a one-week trial on the yearly plan and three days on monthly.
+
+On the same page, Opal describes Hard Mode as the setting that means you can't turn Opal off. It's the part of Opal that costs money, and it's the closest Opal gets to a lock someone else controls, though it's still a solo setting. If you only need to block apps with one rule, the free plan is real. If you want unlimited rules, you pay.
+
 ## Is there a free alternative to Opal?
 
 Yes. Opal has a free plan (one rule, app blocking, iOS, Android and Mac), and LockPact is a free alternative built for a different job: you and a partner lock each other's apps, and neither can unlock without the other. LockPact is free to use and never gates the partner features, but it needs another person.
@@ -37,7 +60,7 @@ Opal's pricing isn't hidden, but it's worth laying out plainly next to what you 
 | **Annual** | $99.99/yr (roughly $8.33/mo) | $0 |
 | **Lifetime** | $399 one-time | $0 |
 | **3-year cost** | ~$300 on the annual plan | $0 |
-| **What's gated behind payment** | Per Opal's pricing page, Pro adds unlimited rules, Hard Mode, Allow Only and advanced timers; the free plan is limited to one rule and works on iOS, Android and Mac | No premium tier — pairing, unlock requests, bypass detection, and mutual locking are all included. Optional extras: tips and Willpower Waivers (skip the video before an unlock request) |
+| **What's gated behind payment** | Per Opal's pricing page, Pro adds unlimited rules, Hard Mode, Allow Only and advanced timers; the free plan is limited to one rule and works on iOS, Android and Mac | No premium tier — pairing, unlock requests, bypass detection, and mutual locking are all included. Optional extras: Support LockPact and Willpower Waivers (skip the video before an unlock request) |
 | **Free tier ceiling** | One rule of basic blocking you can turn off anytime — no real enforcement | Not applicable; the partner features have no paid tier |
 
 Over three years, Opal's paid tier costs roughly what a mid-range iPhone case costs every few months, forever, for as long as you keep paying to stay accountable to yourself — more than double that if you stay on month-to-month billing instead of committing to the annual plan. That's not a knock on Opal's engineering — Deep Focus is a genuinely well-built feature. It's a question of whether you want to keep paying a subscription to enforce a boundary a free, mutual system enforces for nothing.
@@ -98,24 +121,6 @@ If you want someone else to care about your commitment: LockPact.
 There's no objectively right answer. It depends on how you actually change behavior. Most people change behavior with accountability. Some people thrive solo.
 
 Know yourself.
-
-## Frequently Asked Questions
-
-### Is Opal worth $100 a year?
-
-For the right person, yes. If you're iPhone-and-Mac and respond well to a polished, gamified solo experience, Opal is one of the best-designed tools in the category. If you have a willing accountability partner, the same $100/year buys you nothing that a free mutual lock doesn't already do.
-
-### Does Opal's Deep Focus mode actually stop you from bypassing it?
-
-It makes bypassing more difficult than the free tier, but Opal is still a solo tool — you set it, and ultimately you're the one deciding whether to override it, even if the override is harder to reach. LockPact's model is different: the override still exists (Apple requires it), but your partner is notified when it happens, so the cost isn't "was it hard to click," it's "will someone find out."
-
-### Can I use Opal and LockPact together?
-
-Some people do — Opal for cross-device focus sessions on a laptop, LockPact for the phone-specific apps where a partner's involvement matters most. They're not mutually exclusive, though most people end up preferring one primary system once they see which one actually holds.
-
-### Which one is better for couples?
-
-LockPact, if both people are willing to participate — the mutual structure (you each hold the other's key) is built for exactly that. Opal's Buddies feature offers visibility to a partner, but doesn't give them any actual control, which is a meaningfully weaker form of accountability for two people trying to change together.
 
 ## Read Next
 

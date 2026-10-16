@@ -4,6 +4,15 @@ description: "Cal Newport's Digital Minimalism nails the 'why' but leaves a gap 
 pubDate: 2026-05-09
 author: "LockPact"
 tags: ["digital minimalism", "Cal Newport", "phone habits", "book review", "behavior change"]
+faq:
+- q: Is Digital Minimalism worth reading?
+  a: Yes, particularly if you want to understand why phone overuse happens and why it's hard to stop. Newport is especially strong on the business model problem — platforms are designed to capture time, not serve users. The "how to change" section is less reliable.
+- q: What's the main weakness of the Digital Minimalism approach?
+  a: It treats phone overuse as a values and clarity problem, when research suggests it's primarily a habit and environment design problem. Clarity about what you want doesn't automatically produce the friction needed to override a strong habit.
+- q: What's more effective than a 30-day digital declutter?
+  a: 'Structural changes that reduce friction in the right places: removing apps from your phone, charging your device outside the bedroom, and — most powerfully — adding external accountability from a person who shares the same commitment.'
+- q: Can Digital Minimalism and social accountability work together?
+  a: Yes, and this combination is probably the most effective approach. Newport's framework provides the values and intention. Mutual accountability with a partner provides the behavioral friction. Together they address both the "why" and the "how."
 ---
 
 Cal Newport's *Digital Minimalism* is probably the best book written about intentional technology use. It's clear-headed, research-grounded, and makes an honest case for reducing the role phones and social media play in daily life.
@@ -75,26 +84,6 @@ If you read *Digital Minimalism* and found yourself agreeing with everything and
 **Structural changes that don't require daily willpower.** Remove social apps from your home screen. Charge your phone outside the bedroom. Use a tool that requires someone else's approval to unlock apps during the times you most want to use them.
 
 **Low stakes experimentation, not a 30-day purge.** Try one change for one week. If it doesn't stick, analyze why. Adjust. Newport's declutter is valuable as a thinking exercise, but seven days of one specific change produces more useful data about your actual behavior than 30 days of extreme abstinence.
-
----
-
-## Frequently Asked Questions
-
-### Is Digital Minimalism worth reading?
-
-Yes, particularly if you want to understand why phone overuse happens and why it's hard to stop. Newport is especially strong on the business model problem — platforms are designed to capture time, not serve users. The "how to change" section is less reliable.
-
-### What's the main weakness of the Digital Minimalism approach?
-
-It treats phone overuse as a values and clarity problem, when research suggests it's primarily a habit and environment design problem. Clarity about what you want doesn't automatically produce the friction needed to override a strong habit.
-
-### What's more effective than a 30-day digital declutter?
-
-Structural changes that reduce friction in the right places: removing apps from your phone, charging your device outside the bedroom, and — most powerfully — adding external accountability from a person who shares the same commitment.
-
-### Can Digital Minimalism and social accountability work together?
-
-Yes, and this combination is probably the most effective approach. Newport's framework provides the values and intention. Mutual accountability with a partner provides the behavioral friction. Together they address both the "why" and the "how."
 
 ---
 

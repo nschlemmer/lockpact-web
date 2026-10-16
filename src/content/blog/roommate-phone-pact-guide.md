@@ -4,6 +4,17 @@ description: "Why roommate phone pacts often work better than solo blockers — 
 pubDate: 2026-05-04
 author: "LockPact"
 tags: ["roommates", "phone pact", "screen time", "co-living"]
+faq:
+- q: Why do roommate phone pacts work better than solo blockers?
+  a: Lower emotional stakes than couples pacts, but built-in accountability via shared physical space. A roommate saying "you want me to unlock this at 11pm?" is directness without judgment, and that awkwardness is the feature—it makes you not ask. Solo blockers lack this friction; you just disable them when tempted.
+- q: How do you propose a phone pact to your roommate?
+  a: 'Lead with the specific shared friction (sleep, focus, time waste), not the app. Don''t say "we should use less phone." Instead: "I''ve noticed I''m staying up until 1am and hate how I feel the next morning. Do you experience that too? I found this tool that might help if you''re interested." Direct and real—no sales pitch.'
+- q: What apps should roommates block together?
+  a: 'Start with 2–3 apps that hijack focus: Instagram, TikTok, Reddit, or YouTube depending on what drains you most. Avoid blocking communication apps, email, or utilities. Just the apps that keep you scrolling when you know you shouldn''t.'
+- q: Is a roommate phone pact awkward?
+  a: A little, by design. The awkwardness of asking for an unlock is the feature—it makes you not ask. That discomfort is what makes it work. By night three, it becomes invisible.
+- q: Do you need to be close friends to do a phone pact with a roommate?
+  a: No. Roommate pacts often work better with neutral roommates than close friends because there's no emotional baggage attached to the unlock conversation. It's just practical accountability, not relationship management.
 ---
 
 ## The 12:30am Problem
@@ -214,30 +225,6 @@ You'll also probably have one night where you both bypass and feel a little sill
 By a month, if it's working, you might extend it to other times or apps. Or you might realize this specific one is enough, and keep it simple.
 
 The goal isn't perfection. It's friction. Just enough friction that you both opt in to paying attention.
-
----
-
-## Frequently Asked Questions
-
-### Why do roommate phone pacts work better than solo blockers?
-
-Lower emotional stakes than couples pacts, but built-in accountability via shared physical space. A roommate saying "you want me to unlock this at 11pm?" is directness without judgment, and that awkwardness is the feature—it makes you not ask. Solo blockers lack this friction; you just disable them when tempted.
-
-### How do you propose a phone pact to your roommate?
-
-Lead with the specific shared friction (sleep, focus, time waste), not the app. Don't say "we should use less phone." Instead: "I've noticed I'm staying up until 1am and hate how I feel the next morning. Do you experience that too? I found this tool that might help if you're interested." Direct and real—no sales pitch.
-
-### What apps should roommates block together?
-
-Start with 2–3 apps that hijack focus: Instagram, TikTok, Reddit, or YouTube depending on what drains you most. Avoid blocking communication apps, email, or utilities. Just the apps that keep you scrolling when you know you shouldn't.
-
-### Is a roommate phone pact awkward?
-
-A little, by design. The awkwardness of asking for an unlock is the feature—it makes you not ask. That discomfort is what makes it work. By night three, it becomes invisible.
-
-### Do you need to be close friends to do a phone pact with a roommate?
-
-No. Roommate pacts often work better with neutral roommates than close friends because there's no emotional baggage attached to the unlock conversation. It's just practical accountability, not relationship management.
 
 ---
 

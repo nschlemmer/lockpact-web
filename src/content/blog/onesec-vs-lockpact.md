@@ -5,6 +5,18 @@ pubDate: 2026-05-02
 updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "one sec", "screen time apps", "accountability"]
+faq:
+- q: Is one sec or LockPact better for breaking phone addiction?
+  a: It depends on whether the problem is impulsive or compulsive. If you're reflexively checking apps and a moment to pause helps, one sec works. If you're opening apps because you need to escape something, you need accountability—one sec won't stop you.
+- q: Can you use one sec and LockPact together?
+  a: 'Yes. You can set one sec delays on some apps and use LockPact to block others entirely. Both tools work together: when you request an unlock in LockPact, you still see one sec''s breathing animation, adding layers of friction and social accountability.'
+- q: Does one sec actually block apps?
+  a: No. one sec adds a delay before apps open, but you can tap through it. It's friction-based, not enforcement. LockPact is different—apps don't open until your partner approves the unlock. It's a complete block with social gatekeeping.
+- q: How is LockPact's accountability different from one sec's mindfulness?
+  a: one sec assumes you'll reconsider if you pause. LockPact assumes you'll change behavior because someone you trust is making the decision. LockPact requires partner approval for every unlock; one sec is a solo decision about whether to breathe through the pause.
+- q: Is LockPact really free?
+  a: Yes. Solo testing and partner mode are both free. LockPact's value is the accountability between two people, not paid features.
+disclosure: true
 ---
 
 one sec and LockPact solve the same problem—impulsive app opens—with fundamentally different approaches.
@@ -69,7 +81,7 @@ LockPact doesn't use friction. It uses gatekeeping.
 
 **Scenario 1: The Impulsive Opener**
 
-You catch yourself opening Instagram five times a day without consciously deciding to. You don't hate Instagram. You just check it reflexively.
+You catch yourself opening Instagram five times a day without consciously deciding to. You don't hate Instagram. You just check it reflexively. If you're choosing between more than these two, [best screen time apps for iPhone](/blog/best-screen-time-apps/) compares ten.
 
 With one sec, you see the breathing animation, and four out of five times, you realize you didn't actually want to be there. You close the app and move on.
 
@@ -151,28 +163,6 @@ If you want to eliminate usage through partnership: LockPact.
 There's no objectively right answer. It depends on what actually works for you. Some people change through friction. Most people change through accountability. Know which one you are.
 
 The deeper truth is this: friction works for impulsive behavior. Accountability works for compulsive behavior. If you're reflexively opening apps, one sec's delay might interrupt the impulse. If you're opening apps because you genuinely want to escape or avoid something, friction won't fix it. You need someone else to say no.
-
-## Frequently Asked Questions
-
-### Is one sec or LockPact better for breaking phone addiction?
-
-It depends on whether the problem is impulsive or compulsive. If you're reflexively checking apps and a moment to pause helps, one sec works. If you're opening apps because you need to escape something, you need accountability—one sec won't stop you.
-
-### Can you use one sec and LockPact together?
-
-Yes. You can set one sec delays on some apps and use LockPact to block others entirely. Both tools work together: when you request an unlock in LockPact, you still see one sec's breathing animation, adding layers of friction and social accountability.
-
-### Does one sec actually block apps?
-
-No. one sec adds a delay before apps open, but you can tap through it. It's friction-based, not enforcement. LockPact is different—apps don't open until your partner approves the unlock. It's a complete block with social gatekeeping.
-
-### How is LockPact's accountability different from one sec's mindfulness?
-
-one sec assumes you'll reconsider if you pause. LockPact assumes you'll change behavior because someone you trust is making the decision. LockPact requires partner approval for every unlock; one sec is a solo decision about whether to breathe through the pause.
-
-### Is LockPact really free?
-
-Yes. Solo testing and partner mode are both free. LockPact's value is the accountability between two people, not paid features.
 
 ## Read Next
 

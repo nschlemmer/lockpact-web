@@ -5,6 +5,15 @@ pubDate: 2026-05-13
 updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["friendship", "phone pact", "accountability", "how-to"]
+faq:
+- q: Why would a friend pact work better than solo discipline?
+  a: Because solo discipline fails when the cost of breaking the commitment is only internal. With a friend, you're breaking a commitment to another person — someone who knows, someone you respect, someone who will find out. That external cost is consistently more effective than internal motivation.
+- q: What if my friend is in a different time zone?
+  a: It still works. The lock is enforced on your own device — your friend is holding the key, not monitoring in real time. A five-hour time difference doesn't affect the evening lock on your phone. You'd just coordinate slightly differently on what "evening" means for each of you.
+- q: What if one person is more committed than the other?
+  a: This is common. If you care more than your friend does, the pact will still help you — as long as they're willing to hold your key. Even asymmetric commitment provides behavioral friction. But if they're genuinely indifferent and won't engage when you bypass, it loses effectiveness. Revisit the commitment together.
+- q: Can we do this without an app?
+  a: You can try, but enforcement relies on willpower without an app, which is the thing you're trying to replace. A shared honor system with a trusted friend has some value — the social commitment is real — but the bypass detection and lock mechanics that LockPact provides make the commitment tangible in a way a handshake doesn't.
 ---
 
 If you're searching for an accountability partner app with friends rather than a romantic partner or roommate, close friends are actually one of the best-kept secrets in phone accountability. Partners and roommates get most of the attention when it comes to phone accountability. But close friends are often the best pairing for a phone pact — and dramatically underused.
@@ -112,26 +121,6 @@ If no: why not? Was the window wrong? Was the app not actually the problem? Was 
 Either answer is useful. If the pact worked, you continue it with mutual agreement. If it didn't, you've learned something about your actual habit structure and can try something different.
 
 Don't let the pact just silently expire. The ending conversation is part of the value.
-
----
-
-## Frequently Asked Questions
-
-### Why would a friend pact work better than solo discipline?
-
-Because solo discipline fails when the cost of breaking the commitment is only internal. With a friend, you're breaking a commitment to another person — someone who knows, someone you respect, someone who will find out. That external cost is consistently more effective than internal motivation.
-
-### What if my friend is in a different time zone?
-
-It still works. The lock is enforced on your own device — your friend is holding the key, not monitoring in real time. A five-hour time difference doesn't affect the evening lock on your phone. You'd just coordinate slightly differently on what "evening" means for each of you.
-
-### What if one person is more committed than the other?
-
-This is common. If you care more than your friend does, the pact will still help you — as long as they're willing to hold your key. Even asymmetric commitment provides behavioral friction. But if they're genuinely indifferent and won't engage when you bypass, it loses effectiveness. Revisit the commitment together.
-
-### Can we do this without an app?
-
-You can try, but enforcement relies on willpower without an app, which is the thing you're trying to replace. A shared honor system with a trusted friend has some value — the social commitment is real — but the bypass detection and lock mechanics that LockPact provides make the commitment tangible in a way a handshake doesn't.
 
 ---
 

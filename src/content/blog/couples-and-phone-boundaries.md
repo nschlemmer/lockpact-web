@@ -4,11 +4,22 @@ description: "How phones quietly erode presence in relationships, and a practica
 pubDate: 2026-05-04
 author: "LockPact"
 tags: ["couples", "relationships", "phone use", "screen time"]
+faq:
+- q: How do phones affect relationships?
+  a: Phantom presence—being together but elsewhere—erodes the availability that relationships need to stay connected. When your phone wins over the person next to you, conversations don't happen, moments pass unnoticed, and the person across from you feels half-ignored.
+- q: What is a phone-free bedroom rule?
+  a: A phone-free bedroom rule means no phones in the bedroom after a set time. When your phone isn't there, your brain stops reaching for it within about four days. After two weeks, you won't miss it—and you'll notice the difference in sleep and intimacy.
+- q: Can phone boundaries actually improve relationships?
+  a: Yes, but as one variable. Better presence creates real space for connection—noticing funny moments, spontaneous conversations, physical closeness. But phone rules alone don't fix deeper relationship issues. They're friction in the right place, not a magic fix.
+- q: What if one partner cares more about phone use than the other?
+  a: Ask the partner to join you, not change for you. Position it as "I'm going to work on being more present, and I need you to do the same so I'm not alone in this"—not as criticism. If they still won't engage, you have real choices to make, but you can't force someone to care about being present.
+- q: How long do new phone boundaries take to feel natural?
+  a: Most couples report a noticeable shift by day four or five, with the rule feeling normal by week two. The first few days are the hardest; after that, the wanting passes and the boundary becomes background habit.
 ---
 
 It's 11:47pm. You're both in bed. The lights are off. The room is quiet.
 
-Your partner is scrolling through something. You're scrolling through something else. Neither of you is speaking. Neither of you has moved in five minutes. You're lying three feet apart, present and absent at the same time.
+Your partner is scrolling through something. You're scrolling through something else. Neither of you is speaking. Neither of you has moved in five minutes. You're lying three feet apart, present and absent at the same time. If you're in different cities, [apps for long-distance couples](/blog/long-distance-relationship-apps/) covers staying in touch, calendars and watching together.
 
 This is phantom presence. The phone hasn't replaced your partner. It's just replaced the conversation that would have happened otherwise.
 
@@ -159,30 +170,6 @@ The point isn't to become a couple that never uses phones. It's to become a coup
 That bedroom where you're both scrolling at 11:47pm? You can change that. Not by force. By agreement. By one small rule that says: this time, this place, is for us.
 
 When the boundary is mutual, it stops feeling like restriction. It feels like reclamation.
-
----
-
-## Frequently Asked Questions
-
-### How do phones affect relationships?
-
-Phantom presence—being together but elsewhere—erodes the availability that relationships need to stay connected. When your phone wins over the person next to you, conversations don't happen, moments pass unnoticed, and the person across from you feels half-ignored.
-
-### What is a phone-free bedroom rule?
-
-A phone-free bedroom rule means no phones in the bedroom after a set time. When your phone isn't there, your brain stops reaching for it within about four days. After two weeks, you won't miss it—and you'll notice the difference in sleep and intimacy.
-
-### Can phone boundaries actually improve relationships?
-
-Yes, but as one variable. Better presence creates real space for connection—noticing funny moments, spontaneous conversations, physical closeness. But phone rules alone don't fix deeper relationship issues. They're friction in the right place, not a magic fix.
-
-### What if one partner cares more about phone use than the other?
-
-Ask the partner to join you, not change for you. Position it as "I'm going to work on being more present, and I need you to do the same so I'm not alone in this"—not as criticism. If they still won't engage, you have real choices to make, but you can't force someone to care about being present.
-
-### How long do new phone boundaries take to feel natural?
-
-Most couples report a noticeable shift by day four or five, with the rule feeling normal by week two. The first few days are the hardest; after that, the wanting passes and the boundary becomes background habit.
 
 ---
 

@@ -6,25 +6,32 @@ updatedDate: 2026-09-04
 author: "LockPact"
 tags: ["Clearspace", "app review", "screen time", "accountability", "comparison"]
 faq:
-  - q: "Is Clearspace free?"
-    a: "Yes, with a limited free tier (core blocking and budgets) plus free access for verified students. Premium — deeper reporting, full customization, and the accountability/teammates layer — costs $6.99/month or $44.99/year on its current App Store listing."
-  - q: "What does Clearspace cost?"
-    a: "$6.99/month, $44.99/year individually, or $79.99/year for the Family plan, per its current App Store listing (checked 2026-09-04). That puts it cheaper than Opal (~$100/year) and pricier than one sec's base annual plan (~$20/year)."
-  - q: "Clearspace vs LockPact — which is free?"
-    a: "LockPact is free, no subscription. Clearspace's core blocking and budgets are free, but its accountability/teammates layer — the feature closest to what LockPact does — requires the paid Premium tier."
+- q: Is Clearspace free?
+  a: Yes, with a limited free tier (core blocking and budgets) plus free access for verified students. Premium — deeper reporting, full customization, and the accountability/teammates layer — costs $6.99/month or $44.99/year on its current App Store listing.
+- q: What does Clearspace cost?
+  a: $6.99/month, $44.99/year individually, or $79.99/year for the Family plan, per its current App Store listing (checked 2026-09-04). That puts it cheaper than Opal (~$100/year) and pricier than one sec's base annual plan (~$20/year).
+- q: Clearspace vs LockPact — which is free?
+  a: LockPact is free, no subscription. Clearspace's core blocking and budgets are free, but its accountability/teammates layer — the feature closest to what LockPact does — requires the paid Premium tier.
+- q: Does Clearspace's accountability partner feature actually stop you from using an app?
+  a: No. A partner or teammate gets notified when you exceed your budget or pause your goals — they don't have to approve anything before you're back in the app. The block, and the ability to lift it, both stay with you.
+- q: What's the pushup-to-unlock feature actually like?
+  a: Clearspace uses your phone's motion sensor to verify a set of pushups before granting extra time on a blocked app — a physical-effort alternative to waiting out a timer, and a genuinely distinctive mechanic among screen time apps.
+- q: Is Clearspace better than Opal?
+  a: They're closer to each other than either is to a partner-accountability app — both are solo tools with an optional social-visibility layer, not partner approval. Clearspace is cheaper and cross-platform; Opal has a longer track record and a more built-out focus-session system.
+disclosure: true
 ---
 
 Search "Clearspace app review" and you mostly get App Store screenshots reformatted into listicles. Nobody's actually gone through what it does, what it costs today, and — the part most reviews skip entirely — what its "accountability partner" feature actually lets a partner do. That last part matters more than it sounds, so this review spends real time on it.
 
-Everything below — the mechanics, the pricing, the accountability feature — checked against Clearspace's live App Store listing and its own site this week, not recalled from memory or an old review. Where sources disagreed slightly (regional pricing does shift), we say so. If you're comparing Clearspace with locks that use a physical device, see [Brick alternatives with no hardware](/blog/brick-alternative/).
+Everything below — the mechanics, the pricing, the accountability feature — checked against Clearspace's live App Store listing and its own site this week, not recalled from memory or an old review. Where sources disagreed slightly (regional pricing does shift), we say so. If you're comparing Clearspace with locks that use a physical device, see [Brick alternatives with no hardware](/blog/brick-alternative/). Clearspace's partner notifications can't stop you if you hold your own Screen Time passcode; [how the passcode works](/blog/screen-time-passcode/) explains why.
 
 ## Is Clearspace free?
 
-Yes — there's a real free tier, not just a trial. It covers core app blocking and time budgets, plus full free access for verified students. What sits behind the paid **Premium** tier ($6.99/month, $44.99/year individually, or $79.99/year for Family — current App Store listing, checked 2026-09-04) is deeper reporting, full customization, and the accountability/teammates layer this review focuses on next. So the honest short version: free to use, but the specific feature most people search "Clearspace" for — the accountability partner piece — is a paid feature.
+Yes — there's a real free tier, not just a trial. It covers core app blocking and time budgets, plus full free access for verified students. What sits behind the paid **Premium** tier ($6.99/month, $44.99/year individually, or $79.99/year for Family — current App Store listing, checked 2026-09-04) is deeper reporting, full customization, and the accountability/teammates layer this review focuses on next. So the honest short version: free to use, but the specific feature most people search "Clearspace" for — the accountability partner piece — is a paid feature. For Apple's own free option, see the [complete iOS 27 Screen Time guide](/blog/screen-time-iphone-guide/).
 
 ## What Clearspace actually does
 
-Clearspace is a screen time app built around a simple idea: make opening a distracting app cost a little friction, and give you data on how well you're sticking to your own limits.
+Clearspace is a screen time app built around a simple idea: make opening a distracting app cost a little friction, and give you data on how well you're sticking to your own limits. If you're still choosing, [best screen time apps for iPhone](/blog/best-screen-time-apps/) compares it with nine others.
 
 The mechanics, per its current App Store listing:
 
@@ -104,20 +111,6 @@ To be fair about this comparison, there are real situations where Clearspace is 
 **You want detailed usage analytics.** Clearspace's reporting is more built-out than LockPact's, which deliberately doesn't track or surface your usage patterns — LockPact only handles lock and unlock requests, not analytics.
 
 If none of those describe you — you're iPhone-primary, you have a willing partner, and what you actually need is someone who can say no before you get back into the app, not after — the free, mutual option is hard to beat on the specific mechanism that matters.
-
-## Frequently Asked Questions
-
-### Does Clearspace's accountability partner feature actually stop you from using an app?
-
-No. A partner or teammate gets notified when you exceed your budget or pause your goals — they don't have to approve anything before you're back in the app. The block, and the ability to lift it, both stay with you.
-
-### What's the pushup-to-unlock feature actually like?
-
-Clearspace uses your phone's motion sensor to verify a set of pushups before granting extra time on a blocked app — a physical-effort alternative to waiting out a timer, and a genuinely distinctive mechanic among screen time apps.
-
-### Is Clearspace better than Opal?
-
-They're closer to each other than either is to a partner-accountability app — both are solo tools with an optional social-visibility layer, not partner approval. Clearspace is cheaper and cross-platform; Opal has a longer track record and a more built-out focus-session system.
 
 ## Read Next
 

@@ -1,0 +1,20 @@
+---
+interface Props {
+  testedOn?: string;
+  sources?: { label: string; url: string }[];
+}
+const { testedOn, sources = [] } = Astro.props;
+---
+
+<aside class="mt-12 px-5 py-4 rounded-xl text-sm" style="background: var(--color-bg-secondary); border: 1px solid var(--color-card-border); color: var(--color-text-secondary);">
+  <h2 class="text-base font-bold mb-2" style="color: var(--color-text-primary);">How we tested this</h2>
+  <p class="m-0 mb-2">
+    {testedOn ? <>Checked on {testedOn}. </> : null}Every price, menu path and claim here was checked against the sources below on the date shown, and we re-check pages every 90 days.
+    LockPact is the publisher and is listed in our own comparisons; see our <a href="/editorial-policy/">editorial policy</a>.
+  </p>
+  {sources.length > 0 && (
+    <ul class="m-0 pl-5 list-disc">
+      {sources.map((s) => <li><a href={s.url} rel="noopener">{s.label}</a></li>)}
+    </ul>
+  )}
+</aside>

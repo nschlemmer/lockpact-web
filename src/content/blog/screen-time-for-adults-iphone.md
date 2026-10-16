@@ -5,12 +5,12 @@ pubDate: 2026-09-17
 author: "LockPact"
 tags: ["Screen Time", "self control", "iPhone", "how-to"]
 faq:
-  - q: "Can adults use Screen Time on themselves?"
-    a: "Yes, but it was designed for a parent managing a child's device, not one person managing their own. When you set your own passcode, you're both the restriction and the person who can remove it — which is the actual design gap, not a bug."
-  - q: "How do I remove the Ignore Limit button for myself?"
-    a: "You can't, permanently, if you're the one who set the Screen Time passcode. Settings → Screen Time → Lock Screen Time Settings gates it behind a second passcode — but only works if someone other than you sets that code."
-  - q: "Is there a Screen Time for adults app?"
-    a: "Not from Apple specifically, but partner-based apps like LockPact fill the gap: you lock apps on your own phone, and only your partner — not you — can approve unlocking them. Free, no subscription."
+- q: Can adults use Screen Time on themselves?
+  a: Yes, but it was designed for a parent managing a child's device, not one person managing their own. When you set your own passcode, you're both the restriction and the person who can remove it — which is the actual design gap, not a bug.
+- q: How do I remove the Ignore Limit button for myself?
+  a: You can't, permanently, if you're the one who set the Screen Time passcode. Settings → Screen Time → Lock Screen Time Settings gates it behind a second passcode — but only works if someone other than you sets that code.
+- q: Is there a Screen Time for adults app?
+  a: 'Not from Apple specifically, but partner-based apps like LockPact fill the gap: you lock apps on your own phone, and only your partner — not you — can approve unlocking them. Free, no subscription.'
 ---
 
 Apple's Screen Time has one glaring design assumption baked into it: there are two people involved. One sets the rules. One lives under them. That's exactly right for a parent and a ten-year-old. It falls apart the moment you try to use it on yourself, because now you're both people — the one setting the limit and the one who gets to remove it, in the same body, five minutes apart. The free fix, covered below, is reintroducing that second person — just not as a parent.
@@ -60,20 +60,6 @@ The actual fix for "Screen Time assumes two people and I only have one" is to in
 ## The partner-locked alternative, in practice
 
 If a Screen Time passcode held by a partner (the iOS 26.4 route) feels like enough friction on its own, that's a legitimate, free choice — [the setup guide is here](/blog/lock-screen-time-settings-partner-passcode/). If you want the accountability to run both ways instead of one person quietly holding the other's code, a mutual lock does the same underlying thing Apple's design always assumed: a real second party who isn't the one being restricted. That's the entire difference between "Screen Time for a child" and "Screen Time that actually works for an adult."
-
-## Frequently Asked Questions
-
-### Can adults use Screen Time on themselves?
-
-Yes, but it was designed for a parent managing a child's device, not one person managing their own. When you set your own passcode, you're both the restriction and the person who can remove it — which is the actual design gap, not a bug.
-
-### How do I remove the Ignore Limit button for myself?
-
-You can't, permanently, if you're the one who set the Screen Time passcode. Settings → Screen Time → Lock Screen Time Settings gates it behind a second passcode — but only works if someone other than you sets that code.
-
-### Is there a Screen Time for adults app?
-
-Not from Apple specifically, but partner-based apps like LockPact fill the gap: you lock apps on your own phone, and only your partner — not you — can approve unlocking them. Free, no subscription.
 
 ---
 

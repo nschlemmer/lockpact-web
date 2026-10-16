@@ -5,6 +5,15 @@ pubDate: 2026-05-05
 updatedDate: 2026-09-04
 author: "LockPact"
 tags: ["phone habits", "social accountability", "dinner", "behavior change"]
+faq:
+- q: Does the phone stacking game actually work?
+  a: It works for the duration of a meal. The social stakes make phone use temporarily more costly than the habit. But it doesn't change the underlying behavior outside that specific context, so it doesn't produce lasting habit change.
+- q: Why do social accountability tricks work in the moment?
+  a: Because your brain weighs costs and benefits. When using your phone has no visible social cost, the cost-benefit calculation tips toward using it. When phone use becomes visible and consequential to people you care about, the calculation shifts.
+- q: What's the difference between phone stacking and a real accountability commitment?
+  a: Frequency and duration. Phone stacking is opt-in, occasional, and ends with the meal. A real accountability commitment is consistent, mutual, and covers the actual windows where phone overuse happens — evenings, bedtime, mornings.
+- q: Who works best as an accountability partner?
+  a: Someone you already have a relationship with, who has their own phone habits they want to change, and who you'd genuinely feel uncomfortable disappointing. The stronger the pre-existing trust, the stronger the accountability effect.
 ---
 
 The phone stacking game rules are almost embarrassingly simple: everyone at the table stacks their phones face-down in the middle, and the first person to pick theirs up pays the bill. You've seen it. Maybe you've done it.
@@ -45,7 +54,7 @@ The useful insight from phone stacking isn't the game mechanics. It's the princi
 
 The game externalizes accountability. It makes your behavior visible to people who matter to you. That's the mechanism that works.
 
-What doesn't work is the once-in-a-while, opt-in, game-format version of it. Behavior change happens through consistent repetition, not occasional events. You can't change a daily habit with a weekly dinner game.
+What doesn't work is the once-in-a-while, opt-in, game-format version of it. Behavior change happens through consistent repetition, not occasional events. You can't change a daily habit with a weekly dinner game. If you'd rather lock the phone itself, [how to lock apps on iPhone](/blog/how-to-lock-apps-on-iphone/) shows the built-in ways. Partners who are apart can use the same idea; see [apps for long-distance couples](/blog/long-distance-relationship-apps/).
 
 What works is applying that same externalizing principle — making your phone use visible to someone who matters to you — consistently, not just when you happen to be at a restaurant with the right group of friends.
 
@@ -55,7 +64,7 @@ What works is applying that same externalizing principle — making your phone u
 
 The phone stacking game is a good idea with a delivery problem. The idea (social stakes change behavior) is solid. The delivery (a voluntary game that ends with the meal) doesn't stick.
 
-The version that works long-term: you and one other person — a partner, a roommate, a friend — make a persistent, mutual agreement to lock specific apps for each other. Not for the duration of a dinner. Every night between 8pm and 10pm, or whatever window matters to you.
+The version that works long-term: you and one other person — a partner, a roommate, a friend — make a persistent, mutual agreement to lock specific apps for each other. Not for the duration of a dinner. Every night between 8pm and 10pm, or whatever window matters to you. Apps that help a couple keep this going are compared in [best screen time apps for iPhone](/blog/best-screen-time-apps/).
 
 Your partner holds the lock on your Instagram. You hold the lock on their Reddit. Neither of you can unilaterally unblock it. And if one of you forces through a bypass, the other finds out.
 
@@ -76,26 +85,6 @@ You don't have to frame it as a problem. You can frame it as: "I want to be more
 Most people say yes. Especially if they've already played the phone stacking game with you — because that means they already know the dynamic works.
 
 The first month is the experiment. You're not committing to a lifestyle. You're testing whether it changes anything. After 30 days, you'll know. Most people find it changes quite a bit.
-
----
-
-## Frequently Asked Questions
-
-### Does the phone stacking game actually work?
-
-It works for the duration of a meal. The social stakes make phone use temporarily more costly than the habit. But it doesn't change the underlying behavior outside that specific context, so it doesn't produce lasting habit change.
-
-### Why do social accountability tricks work in the moment?
-
-Because your brain weighs costs and benefits. When using your phone has no visible social cost, the cost-benefit calculation tips toward using it. When phone use becomes visible and consequential to people you care about, the calculation shifts.
-
-### What's the difference between phone stacking and a real accountability commitment?
-
-Frequency and duration. Phone stacking is opt-in, occasional, and ends with the meal. A real accountability commitment is consistent, mutual, and covers the actual windows where phone overuse happens — evenings, bedtime, mornings.
-
-### Who works best as an accountability partner?
-
-Someone you already have a relationship with, who has their own phone habits they want to change, and who you'd genuinely feel uncomfortable disappointing. The stronger the pre-existing trust, the stronger the accountability effect.
 
 ---
 

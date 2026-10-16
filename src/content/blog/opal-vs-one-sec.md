@@ -5,6 +5,18 @@ pubDate: 2026-07-24
 updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "Opal", "one sec", "screen time apps"]
+faq:
+- q: Which is better, Opal or one sec?
+  a: Neither is objectively better — they solve different problems. Opal is closer to real enforcement (Deep Focus is a hard block); one sec is closer to pure awareness (a pause you can always breathe through). If you need something that physically stops you during set hours, Opal fits. If your problem is impulsive, unconscious opens you'd catch yourself on with a moment's pause, one sec is the more precise (and far cheaper) tool.
+- q: Is Opal worth $99.99/year over one sec's $19.99/year?
+  a: Only if you specifically need Deep Focus's hard-block enforcement or the cross-device leaderboard/social layer. If awareness-level friction is enough for your use case, one sec does the job for about a fifth of the price.
+- q: Can you use Opal and one sec together?
+  a: Yes — some people run one sec's friction on apps they're trying to moderate and Opal's Deep Focus on apps during scheduled work blocks. They're not mutually exclusive, though most people settle on one primary tool once they see which mechanism actually holds for them.
+- q: Do either of these apps involve another person?
+  a: Not in an approval sense. Opal's leaderboards and one sec's lack of any social feature both mean the decision to override stays entirely with you. Neither app hands anyone else a key. For that, see our comparisons of [Opal vs. LockPact](/blog/opal-vs-lockpact/) and [one sec vs. LockPact](/blog/onesec-vs-lockpact/).
+- q: Which is cheaper long-term?
+  a: one sec, by a wide margin. Its $99.99 individual lifetime purchase costs about what one year of Opal's subscription does, and its $19.99/year plan is roughly a fifth of Opal's $99.99/year.
+disclosure: true
 ---
 
 Opal and one sec are the two apps people actually argue about when they ask "what's the best screen time app." Both show up constantly in the same threads, the same App Store category pages, the same "best app blocker" roundups — and almost nobody puts them head-to-head, because most of the sites ranking for these terms sell one of them, or neither.
@@ -76,28 +88,6 @@ Opal and one sec solve different halves of the same problem — one restricts, o
 That's the piece [apps that let a friend control your screen time](/blog/apps-that-let-a-friend-control-your-screen-time/) are built around: instead of engineering a better lock for you to pick, a real person — a partner, not a setting — decides whether you get back in. LockPact is the mutual version of that idea: you and a partner each lock apps on your own device, and only the other person can approve an unlock request. It's not a harder version of Opal or a smarter version of one sec. It's a different lever entirely — social cost instead of engineering.
 
 If you've tried both Opal and one sec and still find yourself overriding whatever's in your way at 11pm, that's worth noticing. It's not that you need a stricter block or a longer breathing animation. It's that the enforcer and the person being enforced are still the same person, no matter which of the two you pick.
-
-## Frequently Asked Questions
-
-### Which is better, Opal or one sec?
-
-Neither is objectively better — they solve different problems. Opal is closer to real enforcement (Deep Focus is a hard block); one sec is closer to pure awareness (a pause you can always breathe through). If you need something that physically stops you during set hours, Opal fits. If your problem is impulsive, unconscious opens you'd catch yourself on with a moment's pause, one sec is the more precise (and far cheaper) tool.
-
-### Is Opal worth $99.99/year over one sec's $19.99/year?
-
-Only if you specifically need Deep Focus's hard-block enforcement or the cross-device leaderboard/social layer. If awareness-level friction is enough for your use case, one sec does the job for about a fifth of the price.
-
-### Can you use Opal and one sec together?
-
-Yes — some people run one sec's friction on apps they're trying to moderate and Opal's Deep Focus on apps during scheduled work blocks. They're not mutually exclusive, though most people settle on one primary tool once they see which mechanism actually holds for them.
-
-### Do either of these apps involve another person?
-
-Not in an approval sense. Opal's leaderboards and one sec's lack of any social feature both mean the decision to override stays entirely with you. Neither app hands anyone else a key. For that, see our comparisons of [Opal vs. LockPact](/blog/opal-vs-lockpact/) and [one sec vs. LockPact](/blog/onesec-vs-lockpact/).
-
-### Which is cheaper long-term?
-
-one sec, by a wide margin. Its $99.99 individual lifetime purchase costs about what one year of Opal's subscription does, and its $19.99/year plan is roughly a fifth of Opal's $99.99/year.
 
 ## Read Next
 

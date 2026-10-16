@@ -6,14 +6,23 @@ updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["comparison", "AppBlock", "app blockers"]
 faq:
-  - q: "Is AppBlock free? What's in Premium?"
-    a: "AppBlock is free to download with core blocking included. Premium (roughly $4.99/month or ~$29.99/year, per its current App Store listing) adds unlimited Quick Block duration, unlimited Strict Mode, Approval Access, and full statistics."
-  - q: "Does AppBlock have an accountability partner feature?"
-    a: "Yes — Approval Access, part of Strict Mode. You name one approver, who gets an email request when you try to unlock and can approve or deny it. It's one person approving one other person's requests, not a mutual lock, and it requires Premium."
-  - q: "AppBlock vs LockPact — which is free?"
-    a: "LockPact is free, full stop — mutual lock included. AppBlock's core blocking is free, but Approval Access (its accountability-partner feature) sits behind the paid Premium tier."
+- q: Is AppBlock free? What's in Premium?
+  a: AppBlock is free to download with core blocking included. Premium (roughly $4.99/month or ~$29.99/year, per its current App Store listing) adds unlimited Quick Block duration, unlimited Strict Mode, Approval Access, and full statistics.
+- q: Does AppBlock have an accountability partner feature?
+  a: Yes — Approval Access, part of Strict Mode. You name one approver, who gets an email request when you try to unlock and can approve or deny it. It's one person approving one other person's requests, not a mutual lock, and it requires Premium.
+- q: AppBlock vs LockPact — which is free?
+  a: LockPact is free, full stop — mutual lock included. AppBlock's core blocking is free, but Approval Access (its accountability-partner feature) sits behind the paid Premium tier.
+- q: Is AppBlock's partner feature the same as LockPact's mutual lock?
+  a: 'No. AppBlock''s Approval Access is one-directional and requires Premium (~$4.99/month or ~$29.99/year) — one person sets rules, the other approves unlocks by email. LockPact is mutual by default and free: you each hold the other''s key, for nothing.'
+- q: Does AppBlock detect if I turn off Screen Time myself?
+  a: No. AppBlock has no bypass detection — if you disable Screen Time access from Settings, neither AppBlock nor your partner is notified. LockPact detects this and alerts your partner immediately, which is the core of how it enforces accountability rather than just scheduling.
+- q: Which is better for a couple who both want to be held accountable?
+  a: LockPact, if you both want equal, mutual control. AppBlock's Approval Access would require both of you to pay for and configure two separate one-way relationships to get the same result LockPact does by default for free.
+- q: Can AppBlock and LockPact be used together?
+  a: Some people run AppBlock for its scheduling, location rules, and website blocking, and use LockPact specifically for the handful of apps where partner accountability matters most. They're not mutually exclusive — they're solving adjacent problems.
+disclosure: true
 ---
-AppBlock is the most feature-rich app blocker on iOS. If you want granular control—scheduled blocking, location-based rules, Pomodoro timers, Strict Mode, website blocking—AppBlock delivers. It's a solid solo tool.
+AppBlock is the most feature-rich app blocker on iOS. If you want granular control—scheduled blocking, location-based rules, Pomodoro timers, Strict Mode, website blocking—AppBlock delivers. It's a solid solo tool. For the built-in alternatives, see [how to lock apps on iPhone](/blog/how-to-lock-apps-on-iphone/) and [how to block websites on iPhone](/blog/how-to-block-websites-on-iphone/).
 
 But if you're looking for partner accountability, AppBlock's approach is different from LockPact's. Both have partner features. Only one of them is designed for mutual commitment. (Weighing AppBlock against website-focused blockers instead? See [AppBlock vs. BlockSite](/blog/appblock-vs-blocksite/).)
 
@@ -37,7 +46,7 @@ But if you're looking for partner accountability, AppBlock's approach is differe
 
 Verified against appblock.app's own help documentation and its App Store listing (checked 2026-09-04): AppBlock's accountability-partner feature is called **Approval Access**, and it lives inside Strict Mode. You designate one trusted person as your approver — they don't need AppBlock installed, and don't need to do anything until you try to unlock. When you request an unlock, they get an **email** and can approve it with one click or leave your block in place. AppBlock's own site frames it plainly: a way to "ask a trusted person to approve your unlock request" when you can't trust yourself to.
 
-Two things matter here that AppBlock's marketing doesn't lead with. First, it's **one-way by design** — you request, they approve; there's no symmetrical arrangement where they're also locked and you're also approving their requests, short of both of you separately setting it up and paying for Premium. Second, **Approval Access is a Premium feature.** AppBlock is free to use for its core blocking, but the accountability layer — the thing this comparison is actually about — sits behind the paid tier, at roughly $4.99/month or $29.99/year on its current App Store listing (regional pricing and promotions vary; check the app for your exact number).
+Two things matter here that AppBlock's marketing doesn't lead with. First, it's **one-way by design** — you request, they approve; there's no symmetrical arrangement where they're also locked and you're also approving their requests, short of both of you separately setting it up and paying for Premium. Second, **Approval Access is a Premium feature.** AppBlock is free to use for its core blocking, but the accountability layer — the thing this comparison is actually about — sits behind the paid tier, at roughly $4.99/month or $29.99/year on its current App Store listing (regional pricing and promotions vary; check the app for your exact number). Both apps sit on top of the same Apple settings, which our [complete iOS 27 Screen Time guide](/blog/screen-time-iphone-guide/) explains. Other apps that put a friend in the decision are compared in [apps that let a friend control your screen time](/blog/apps-that-let-a-friend-control-your-screen-time/).
 
 LockPact's mutual lock is the opposite on both counts: each partner locks apps on their own device and approves the other's unlock requests, so the relationship is symmetrical from the start, and it's free — no Premium tier gating the part that matters.
 
@@ -112,24 +121,6 @@ If the reason you're reading this is the accountability-partner angle, not the s
 [Get LockPact on the App Store →](/go/b-appblock-vs-lockpact/)
 
 ---
-
-## Frequently Asked Questions
-
-### Is AppBlock's partner feature the same as LockPact's mutual lock?
-
-No. AppBlock's Approval Access is one-directional and requires Premium (~$4.99/month or ~$29.99/year) — one person sets rules, the other approves unlocks by email. LockPact is mutual by default and free: you each hold the other's key, for nothing.
-
-### Does AppBlock detect if I turn off Screen Time myself?
-
-No. AppBlock has no bypass detection — if you disable Screen Time access from Settings, neither AppBlock nor your partner is notified. LockPact detects this and alerts your partner immediately, which is the core of how it enforces accountability rather than just scheduling.
-
-### Which is better for a couple who both want to be held accountable?
-
-LockPact, if you both want equal, mutual control. AppBlock's Approval Access would require both of you to pay for and configure two separate one-way relationships to get the same result LockPact does by default for free.
-
-### Can AppBlock and LockPact be used together?
-
-Some people run AppBlock for its scheduling, location rules, and website blocking, and use LockPact specifically for the handful of apps where partner accountability matters most. They're not mutually exclusive — they're solving adjacent problems.
 
 ## Download LockPact
 

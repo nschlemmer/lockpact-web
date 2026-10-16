@@ -5,6 +5,14 @@ pubDate: 2026-07-24
 updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "FriendLock", "accountability"]
+faq:
+- q: What does FriendLock do?
+  a: 'FriendLock lets you earn screen time by taking a selfie with a friend: one hour of usable time per selfie, bankable up to three hours. The friend''s role is to be present for the photo, not to approve anything.'
+- q: Does FriendLock need my friend's approval?
+  a: 'No. Once you''ve earned time with a selfie it''s yours, and your friend doesn''t review it. LockPact works the other way: you can''t open a locked app until your partner approves the unlock request.'
+- q: Is FriendLock free?
+  a: It's free with an optional FriendLock Pro upgrade that adds unlimited time banking, daily goals and detailed stats. The comparison table in this post lists the Pro price points from its App Store listing.
+disclosure: true
 ---
 
 FriendLock shows up in searches for "friend controls your screen time" apps, and the name invites the comparison to LockPact directly. Worth being precise about it, though: FriendLock is a real, current app — live on the App Store, developed by Mitness Limited, 4.8 stars off 27 ratings as of September 2026 — but its "friend" role isn't what the name suggests. Its most recent App Store update shipped in early January 2026, so it's been a quiet stretch since a new version went out. There's no approval, no gatekeeping, no one saying yes or no to your request. It's a different mechanic entirely, and the two apps end up solving fairly different problems — see our full roundup of [apps that let a friend control your screen time](/blog/apps-that-let-a-friend-control-your-screen-time/) for how it stacks up against the ones that actually gatekeep.
@@ -32,7 +40,7 @@ It's free with no subscription — the mutual lock-and-approve mechanic is the w
 | **Who sets the block** | You | Your partner (mutually — you set theirs too) |
 | **Mechanic** | Selfie earns 1 hour, bankable up to 3 | Lock + unlock request + partner approval |
 | **Free tier** | Core earn-and-bank feature | Full mutual-lock feature, no subscription |
-| **Paid tier** | Pro: $1.99/mo, $14.99/yr, or $49.99 lifetime | None required — optional support tip |
+| **Paid tier** | Pro: $1.99/mo, $14.99/yr, or $49.99 lifetime | None required — optional Support LockPact purchase |
 | **Bypass detection** | Not part of the app's described mechanic | Yes — partner is notified |
 | **Rating (as of September 2026)** | 4.8★, 27 ratings | New — building its own rating history |
 | **Platform** | iOS 16+ | iOS |
