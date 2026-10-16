@@ -18,6 +18,13 @@ faq:
   a: Some people do — Opal for cross-device focus sessions on a laptop, LockPact for the phone-specific apps where a partner's involvement matters most. They're not mutually exclusive, though most people end up preferring one primary system once they see which one actually holds.
 - q: Which one is better for couples?
   a: LockPact, if both people are willing to participate — the mutual structure (you each hold the other's key) is built for exactly that. Opal's Buddies feature offers visibility to a partner, but doesn't give them any actual control, which is a meaningfully weaker form of accountability for two people trying to change together.
+disclosure: true
+howWeTested: true
+sources:
+- label: Opal pricing (opalapp.com), checked October 16, 2026
+  url: https://opalapp.com/pricing
+- label: Opal on the App Store (US listing), checked October 16, 2026
+  url: https://apps.apple.com/us/app/id1497465230
 ---
 ## Quick Comparison Table
 

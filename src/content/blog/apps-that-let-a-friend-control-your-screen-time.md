@@ -28,6 +28,7 @@ faq:
   a: Yes. Useless posts requests to a friend feed, Snitch shares a group time pool, SelfBlock routes to a buddy or an anonymous community vote, and Screen Freedom's accountability-lock mode gives a partner a real veto. LockPact is the only one where the password-holding runs both directions.
 - q: Which of these are mutual — both people locked?
   a: Just LockPact. Every other app here, including Useless, Snitch, SelfBlock, and Screen Freedom, pairs one person's limits with a separate approver who isn't also locked by you in return.
+disclosure: true
 ---
 
 Search "apps that let a friend control your screen time" and you'll find TikToks about it, a handful of raw App Store listings, and basically no one who's actually compared them. That's strange, because the category is real, it's growing, and the apps in it work nothing alike.

@@ -13,6 +13,7 @@ faq:
   a: 'AppBlock does, in a limited sense: Approval Access, a Premium feature where a named approver gets an email request. BlockSite has nothing comparable — no partner, approver, or notification feature for a second person.'
 - q: AppBlock vs BlockSite — which works on more platforms?
   a: 'BlockSite covers more surfaces: iOS, Android, and browser extensions for Chrome, Safari, and Edge, syncing blocklists across all of them. AppBlock covers iOS and Android but not the browser directly.'
+disclosure: true
 ---
 
 AppBlock and BlockSite show up in the same searches because they solve overlapping problems — block distracting apps, block distracting websites, add enough friction that you don't just tap through. Both are free to start. Both save their real strictness for a paid tier. And neither one, once you look closely at what "accountability" means in their own marketing, actually puts a second person in the loop the way a mutual lock does. Here's the honest comparison, checked against both apps' current listings.

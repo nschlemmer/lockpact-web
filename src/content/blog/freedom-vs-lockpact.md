@@ -22,6 +22,7 @@ faq:
   a: Yes. You could use Freedom for cross-device focus blocks during work hours and LockPact for evening accountability on your iPhone with your partner. They solve different parts of the problem.
 - q: How much does Freedom cost compared to LockPact?
   a: Freedom costs $39.99/year or $8.99/month (or $199 one-time for the Forever plan), regardless of how many devices you use it on. LockPact is free, including all core features.
+disclosure: true
 ---
 
 Freedom is the incumbent. Since 2011, it's been the standard answer for people who want to block apps and websites across *all* their devices—phone, tablet, Mac, Windows, even Chrome extensions. Set a schedule once. Works everywhere.

@@ -18,6 +18,7 @@ faq:
   a: Clearspace uses your phone's motion sensor to verify a set of pushups before granting extra time on a blocked app — a physical-effort alternative to waiting out a timer, and a genuinely distinctive mechanic among screen time apps.
 - q: Is Clearspace better than Opal?
   a: They're closer to each other than either is to a partner-accountability app — both are solo tools with an optional social-visibility layer, not partner approval. Clearspace is cheaper and cross-platform; Opal has a longer track record and a more built-out focus-session system.
+disclosure: true
 ---
 
 Search "Clearspace app review" and you mostly get App Store screenshots reformatted into listicles. Nobody's actually gone through what it does, what it costs today, and — the part most reviews skip entirely — what its "accountability partner" feature actually lets a partner do. That last part matters more than it sounds, so this review spends real time on it.

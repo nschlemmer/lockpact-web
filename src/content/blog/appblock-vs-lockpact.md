@@ -20,6 +20,7 @@ faq:
   a: LockPact, if you both want equal, mutual control. AppBlock's Approval Access would require both of you to pay for and configure two separate one-way relationships to get the same result LockPact does by default for free.
 - q: Can AppBlock and LockPact be used together?
   a: Some people run AppBlock for its scheduling, location rules, and website blocking, and use LockPact specifically for the handful of apps where partner accountability matters most. They're not mutually exclusive — they're solving adjacent problems.
+disclosure: true
 ---
 AppBlock is the most feature-rich app blocker on iOS. If you want granular control—scheduled blocking, location-based rules, Pomodoro timers, Strict Mode, website blocking—AppBlock delivers. It's a solid solo tool.
 

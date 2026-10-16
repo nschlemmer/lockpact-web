@@ -16,6 +16,7 @@ faq:
   a: one sec assumes you'll reconsider if you pause. LockPact assumes you'll change behavior because someone you trust is making the decision. LockPact requires partner approval for every unlock; one sec is a solo decision about whether to breathe through the pause.
 - q: Is LockPact really free?
   a: Yes. Solo testing and partner mode are both free. LockPact's value is the accountability between two people, not paid features.
+disclosure: true
 ---
 
 one sec and LockPact solve the same problem—impulsive app opens—with fundamentally different approaches.

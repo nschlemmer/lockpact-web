@@ -16,6 +16,7 @@ faq:
   a: Yes — and you should read that as the default, not an exception. LockPact, Jolt, and Habi all work the same way for roommates, close friends, or siblings as they do for romantic partners. "Couples" is just the term most people search when they're picturing a two-person accountability setup; the mechanics don't require a relationship label.
 - q: Does bypassing these apps just mean turning Screen Time off in Settings?
   a: For any app built on Apple's Screen Time API, yes — the device owner can revoke access through Settings and Face ID in a few taps, and no third-party app can prevent that; it's a platform limit, not a bug in any one app. What varies is whether the app notices. LockPact detects the bypass and notifies your partner when it happens.
+disclosure: true
 ---
 
 Search "best screen time apps for couples" and most of what comes back is either a generic "best screen time apps" listicle with "great for couples too!" bolted onto the intro, or a couples app (shared calendar, date-night planner) that mentions screen time once in passing. Very few pages actually compare apps *built* for two people managing phone use together.

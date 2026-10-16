@@ -5,6 +5,14 @@ pubDate: 2026-07-24
 updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "Friend Controls", "accountability"]
+faq:
+- q: What is the difference between Friend Controls and LockPact?
+  a: 'Friend Controls has you set limits, and friends you invite as Controllers approve requests when you hit them. LockPact is mutual: you and a partner each lock your own apps, and each approves the other''s unlock requests.'
+- q: Is Friend Controls free?
+  a: Blocking a single app is free; more than one needs a paid tier. Its App Store listing shows several in-app price points, with a monthly subscription from $2.99 and a $29.99 lifetime purchase, checked October 15, 2026.
+- q: Can you bypass Friend Controls?
+  a: Yes. An iPhone owner can always revoke an app's Screen Time access in Settings, and we found no bypass-detection feature on its listing. LockPact has the same limit but alerts your partner when it happens.
+disclosure: true
 ---
 
 Friend Controls and LockPact are the two apps closest to actually being in the same category: both replace a self-controlled screen time limit with a real person deciding whether you get more time. That's rare — most "screen time" apps are still just you versus a setting. (For the wider field, including a couple of apps that only sound like they belong here, see our roundup of [apps that let a friend control your screen time](/blog/apps-that-let-a-friend-control-your-screen-time/).)

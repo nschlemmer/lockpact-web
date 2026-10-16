@@ -16,6 +16,7 @@ faq:
   a: For most users, Apple Screen Time provides enough data without requiring an additional app — it's literally what replaced Moment for most people. A dedicated tracker like RescueTime is worth the subscription mainly if you want cross-device analytics beyond just phone use.
 - q: Can I use Apple Screen Time and LockPact together?
   a: Yes. Use Screen Time to identify which apps you're overusing and during which hours. Then set those apps as your LockPact targets for those windows. Diagnosis plus enforcement is more effective than either alone — it's the same logic that used to point people from Moment toward a locking app.
+disclosure: true
 ---
 
 If you're asking what happened to the Moment app, here's the honest answer: the original Moment — the app that put phone-time tracking on the map before Apple ever built Screen Time into iOS — shut down in the summer of 2021 and is delisted from the App Store today. It isn't quietly still around, and any page telling you otherwise is out of date.

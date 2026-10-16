@@ -16,6 +16,7 @@ faq:
   a: Not in an approval sense. Opal's leaderboards and one sec's lack of any social feature both mean the decision to override stays entirely with you. Neither app hands anyone else a key. For that, see our comparisons of [Opal vs. LockPact](/blog/opal-vs-lockpact/) and [one sec vs. LockPact](/blog/onesec-vs-lockpact/).
 - q: Which is cheaper long-term?
   a: one sec, by a wide margin. Its $99.99 individual lifetime purchase costs about what one year of Opal's subscription does, and its $19.99/year plan is roughly a fifth of Opal's $99.99/year.
+disclosure: true
 ---
 
 Opal and one sec are the two apps people actually argue about when they ask "what's the best screen time app." Both show up constantly in the same threads, the same App Store category pages, the same "best app blocker" roundups — and almost nobody puts them head-to-head, because most of the sites ranking for these terms sell one of them, or neither.

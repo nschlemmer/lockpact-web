@@ -14,6 +14,7 @@ faq:
   a: Yes. Cold Turkey for laptop-based work blocks. LockPact for phone-based evening accountability. They're complementary, not competing.
 - q: Does LockPact work without a partner?
   a: 'LockPact does have a solo lock, available when you''re unpaired — you can lock your own apps and hold yourself to a timer before you have a partner. But that''s the setup ramp, not the product: the actual value is the mutual, paired lock, where your partner holds your unlock key and you hold theirs. Pairing cancels any active solo lock, and the app is built around two willing participants holding each other accountable.'
+disclosure: true
 ---
 
 Cold Turkey earns its name. It's one of the most aggressive blocking tools available — designed explicitly to make it impossible for you to override the block yourself. No grace periods, no "I really need this for work" exceptions, no sneaking around it.

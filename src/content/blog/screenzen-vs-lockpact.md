@@ -14,6 +14,7 @@ faq:
   a: It's optional. ScreenZen is fully functional without it — the Halo just adds an ambient physical notification layer on top of the app. It doesn't change the core friction-vs-accountability comparison with LockPact either way.
 - q: Can I use ScreenZen and LockPact together?
   a: Yes, and some people do — ScreenZen's delays on apps you're trying to moderate, LockPact's hard lock on the one or two apps you're trying to eliminate entirely during specific hours.
+disclosure: true
 ---
 ScreenZen and LockPact answer the same problem—you check your phone too much—with fundamentally different solutions.
 

@@ -12,6 +12,7 @@ faq:
   a: Yes, instantly, if you set your own Screen Time passcode — Ask for More Time or a Settings toggle undoes it in seconds. iOS 26.4's Lock Screen Time Settings closes most of that gap, but only if someone other than you holds the code.
 - q: What happens when you bypass LockPact?
   a: Your partner gets notified immediately. LockPact doesn't claim to make bypass impossible — no iOS app can — it makes bypass visible the moment it happens, instead of silent.
+disclosure: true
 ---
 
 Every "unbypassable" claim from an iOS app blocker is, technically, false — Apple's Screen Time API is built so the device owner can always regain access to their own phone. That's not a marketing failure, it's the platform. What actually differs between blockers is the *off-switch*: how it's triggered, how long it takes, and whether anyone besides you ever finds out. This is that comparison, done honestly, for Opal, one sec, ScreenZen, Brick, Cold Turkey, AppBlock's Strict Mode, and Screen Time itself — free to read, no signup.

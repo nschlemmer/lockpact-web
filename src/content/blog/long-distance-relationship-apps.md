@@ -13,6 +13,7 @@ faq:
   a: LockPact is the one in this list built for it. You each lock your own distracting apps, and unlocking needs your partner's approval, even from far away. It's iPhone only, so both of you need an iPhone.
 - q: Can long-distance couples watch movies together on iPhone?
   a: Yes. FaceTime's SharePlay lets you watch in sync during a call, if each person has access to the title. Apple lists playback controls as shared. Teleparty is a paid alternative for some streaming sites.
+disclosure: true
 ---
 
 Long-distance couples don't need one app. They need a few, each doing one job: keeping in touch, sharing a calendar, watching something together, and agreeing how much of the day goes to the phone. Most apps below are free to download, and [LockPact](/go/b-long-distance-relationship-apps/), the one built for phone boundaries, is free to use. Prices were checked on App Store listings on October 15, 2026.
