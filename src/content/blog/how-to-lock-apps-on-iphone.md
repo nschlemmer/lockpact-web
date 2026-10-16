@@ -134,7 +134,7 @@ No setting changes that completely. A device owner can always get around an iPho
 
 LockPact is the version where unlocking isn't your decision. You and a partner each choose apps to lock on your own phones, and opening one means asking the other person to approve it. If either of you bypasses it in Settings, which Apple always allows, the other is told straight away. It needs someone you trust, and it's iPhone only.
 
-It's free to use, with no premium tier gating the partner features. The only optional purchases are tips and Willpower Waivers, which skip the short video before an unlock request. [Get LockPact on the App Store](/go/b-how-to-lock-apps-on-iphone/).
+It's free to use, with no premium tier gating the partner features. The only optional purchases are Support LockPact and Willpower Waivers ($1.99–$9.99), which skip the short video before an unlock request. [Get LockPact on the App Store](/go/b-how-to-lock-apps-on-iphone/).
 
 ## Which built-in method should you use?
 

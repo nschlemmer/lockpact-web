@@ -196,7 +196,7 @@ What changes things is a second person. If a partner sets the Screen Time passco
 
 LockPact is for the cases where handing over a passcode is awkward, or where you want the other person to decide each time. You and a partner each choose apps to lock on your own phones, and unlocking needs the other person's approval. If either of you bypasses it in Settings, which Apple always allows, the other is told straight away.
 
-It's free to use. The only optional purchases are tips and Willpower Waivers, which skip the short video before an unlock request. It's iPhone only and needs someone willing to be your partner. [Get LockPact on the App Store](/go/b-screen-time-iphone-guide/).
+It's free to use. The only optional purchases are Support LockPact and Willpower Waivers ($1.99–$9.99), which skip the short video before an unlock request. It's iPhone only and needs someone willing to be your partner. [Get LockPact on the App Store](/go/b-screen-time-iphone-guide/).
 
 ## Which Screen Time guide do you need next?
 

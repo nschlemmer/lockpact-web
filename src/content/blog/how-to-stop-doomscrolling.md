@@ -94,7 +94,7 @@ Start with that app, not the whole phone. We have app-specific guides for the tw
 
 If steps 2 to 4 work for you, you don't need anything else, and we'd rather you hadn't downloaded us. They work best for people who already want to stop and just need a nudge.
 
-LockPact is for the people those steps keep failing: the ones who set the limit, hit it, and tap through. The feature is a person. Texting your partner "can you unlock this for me?" is slightly embarrassing, and that's the point. It's free to use, with no premium tier gating the partner features; optional tips and Willpower Waivers exist if you want them. [Get LockPact on the App Store](/go/b-how-to-stop-doomscrolling/).
+LockPact is for the people those steps keep failing: the ones who set the limit, hit it, and tap through. The feature is a person. Texting your partner "can you unlock this for me?" is slightly embarrassing, and that's the point. It's free to use, with no premium tier gating the partner features; optional Support LockPact and Willpower Waivers ($1.99–$9.99) exist if you want them. [Get LockPact on the App Store](/go/b-how-to-stop-doomscrolling/).
 
 ## What should you not expect?
 

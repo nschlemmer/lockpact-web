@@ -92,7 +92,7 @@ Here are five, with the honest off-switch for each. Prices are from each app's A
 
 LockPact puts another person where Brick puts a device. You and a partner each choose apps to lock on your own phones, and neither of you can unlock without the other approving. If either of you bypasses it in Settings, which Apple's design always allows, the other person is told right away.
 
-That's the part a drawer can't do: your partner doesn't get left at home, and asking them for a favor costs something a tap doesn't. It needs a second person who's willing, and it's free to use; the only optional purchases are tips and Willpower Waivers, which skip the short video before an unlock request. If you'd rather start solo, LockPact has a solo mode with timers, and you can add a partner when you're ready. [Get LockPact on the App Store](/go/b-brick-alternative/).
+That's the part a drawer can't do: your partner doesn't get left at home, and asking them for a favor costs something a tap doesn't. It needs a second person who's willing, and it's free to use; the only optional purchases are Support LockPact and Willpower Waivers ($1.99–$9.99), which skip the short video before an unlock request. If you'd rather start solo, LockPact has a solo mode with timers, and you can add a partner when you're ready. [Get LockPact on the App Store](/go/b-brick-alternative/).
 
 ### 2. Opal: the polished solo option
 
@@ -118,7 +118,7 @@ That sorts the five into four kinds of friction: a delay (one sec), a task (Clea
 
 ## How does the cost compare over three years?
 
-Hardware is cheaper than most paid blockers over three years, and free is cheaper than both. Brick is a one-time $59 and Bloom is $39. Among the app-only options with a paid tier, the annual prices on their App Store listings add up quickly. LockPact is free to use, though its optional tips and Willpower Waivers would add to that if you chose them.
+Hardware is cheaper than most paid blockers over three years, and free is cheaper than both. Brick is a one-time $59 and Bloom is $39. Among the app-only options with a paid tier, the annual prices on their App Store listings add up quickly. LockPact is free to use, though its optional Support LockPact and Willpower Waiver purchases would add to that if you chose them.
 
 | Option | Price (checked October 15 and 16, 2026) | Three years |
 |---|---|---|

@@ -97,7 +97,7 @@ Opal schedules blocking sessions and has the most polished design here. Its free
 
 LockPact is the one on this list built around a person. You and a partner each choose apps to lock on your own phones, and unlocking Instagram means asking your partner to approve it. If you bypass the lock in Settings, which Apple always allows, your partner is told straight away. We list it last because it needs someone else, and for the right pair that's the point.
 
-The free-to-use part is the whole partner flow; the only optional purchases are tips and Willpower Waivers, which skip the short video before an unlock request. [Get LockPact on the App Store](/go/b-best-instagram-blocker-iphone/).
+The free-to-use part is the whole partner flow; the only optional purchases are Support LockPact and Willpower Waivers ($1.99–$9.99), which skip the short video before an unlock request. [Get LockPact on the App Store](/go/b-best-instagram-blocker-iphone/).
 
 **What it stops:** Instagram, until your partner says yes. **Who turns it off:** you, from Settings, and your partner finds out. **Cost:** free to use.
 

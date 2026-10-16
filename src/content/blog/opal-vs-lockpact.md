@@ -60,7 +60,7 @@ Opal's pricing isn't hidden, but it's worth laying out plainly next to what you 
 | **Annual** | $99.99/yr (roughly $8.33/mo) | $0 |
 | **Lifetime** | $399 one-time | $0 |
 | **3-year cost** | ~$300 on the annual plan | $0 |
-| **What's gated behind payment** | Per Opal's pricing page, Pro adds unlimited rules, Hard Mode, Allow Only and advanced timers; the free plan is limited to one rule and works on iOS, Android and Mac | No premium tier — pairing, unlock requests, bypass detection, and mutual locking are all included. Optional extras: tips and Willpower Waivers (skip the video before an unlock request) |
+| **What's gated behind payment** | Per Opal's pricing page, Pro adds unlimited rules, Hard Mode, Allow Only and advanced timers; the free plan is limited to one rule and works on iOS, Android and Mac | No premium tier — pairing, unlock requests, bypass detection, and mutual locking are all included. Optional extras: Support LockPact and Willpower Waivers (skip the video before an unlock request) |
 | **Free tier ceiling** | One rule of basic blocking you can turn off anytime — no real enforcement | Not applicable; the partner features have no paid tier |
 
 Over three years, Opal's paid tier costs roughly what a mid-range iPhone case costs every few months, forever, for as long as you keep paying to stay accountable to yourself — more than double that if you stay on month-to-month billing instead of committing to the annual plan. That's not a knock on Opal's engineering — Deep Focus is a genuinely well-built feature. It's a question of whether you want to keep paying a subscription to enforce a boundary a free, mutual system enforces for nothing.

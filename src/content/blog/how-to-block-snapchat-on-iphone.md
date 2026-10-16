@@ -57,4 +57,4 @@ The same reason as any limit you set for yourself: you know the passcode, and th
 
 Have a partner set your Screen Time passcode under **Manage Screen Time → Lock Screen Time Settings**, or lock Snapchat in [LockPact](/go/b-how-to-block-snapchat-on-iphone/), where a partner approves each unlock. If you bypass it in Settings, which Apple always allows, your partner is told.
 
-It's free to use, with optional tips and Willpower Waivers, and it needs a partner with an iPhone. For other apps, see [how to lock apps on iPhone](/blog/how-to-lock-apps-on-iphone/) and [how to block websites on iPhone](/blog/how-to-block-websites-on-iphone/).
+It's free to use, with optional Support LockPact and Willpower Waivers ($1.99–$9.99), and it needs a partner with an iPhone. For other apps, see [how to lock apps on iPhone](/blog/how-to-lock-apps-on-iphone/) and [how to block websites on iPhone](/blog/how-to-block-websites-on-iphone/).

@@ -65,4 +65,4 @@ Because the code is yours. TikTok's limit ends with a passcode you can enter, an
 
 Have a partner set your Screen Time passcode under **Manage Screen Time → Lock Screen Time Settings**, so removing a limit means asking. Or lock TikTok in [LockPact](/go/b-how-to-block-tiktok-on-iphone/), where a partner approves each unlock and is told if you bypass it in Settings, which Apple always allows.
 
-It's free to use, with optional tips and Willpower Waivers, and it needs a partner with an iPhone. If blocking outright is too much and you want to cut back, read [how to reduce your TikTok use](/blog/how-to-reduce-tiktok-use/). For the built-in methods side by side, see [how to lock apps on iPhone](/blog/how-to-lock-apps-on-iphone/).
+It's free to use, with optional Support LockPact and Willpower Waivers ($1.99–$9.99), and it needs a partner with an iPhone. If blocking outright is too much and you want to cut back, read [how to reduce your TikTok use](/blog/how-to-reduce-tiktok-use/). For the built-in methods side by side, see [how to lock apps on iPhone](/blog/how-to-lock-apps-on-iphone/).

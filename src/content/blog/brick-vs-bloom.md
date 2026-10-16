@@ -62,7 +62,7 @@ You use an emergency exit, and then you run out. Brick lists five Emergency Unbr
 
 Yes. An app-only lock can't be a physical barrier, so it has to replace the device with something else. [Our Brick alternatives guide](/blog/brick-alternative/) compares five app-only options and who can turn each one off. The short version: most are apps you control, so you can switch them off in Settings. LockPact swaps the device for a person.
 
-[LockPact](/go/b-brick-vs-bloom/) is free to use. You and a partner each choose apps to lock on your own phones, and unlocking needs the other person's approval. If either of you bypasses it in Settings, which Apple always allows, the other is told. It's iPhone only, and it needs someone willing to be your partner. There are optional tips and Willpower Waivers, which skip the short video before an unlock request, but you never need either to use it.
+[LockPact](/go/b-brick-vs-bloom/) is free to use. You and a partner each choose apps to lock on your own phones, and unlocking needs the other person's approval. If either of you bypasses it in Settings, which Apple always allows, the other is told. It's iPhone only, and it needs someone willing to be your partner. There are optional purchases, Support LockPact and Willpower Waivers ($1.99–$9.99), which skip the short video before an unlock request, but you never need either to use it.
 
 ## Which should you choose?
 

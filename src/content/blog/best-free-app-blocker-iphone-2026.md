@@ -45,7 +45,7 @@ Here are 11 options worth knowing, starting with the one already on your iPhone,
 | App | Approach | Bypass difficulty | Actually Free? | Paid Tier | Best For |
 |---|---|---|---|---|---|
 | **Apple Screen Time** | Schedules, Time Allowances, Always Allowed | You, or whoever knows the Screen Time passcode | Everything | None | Seeing where the time goes |
-| **LockPact** | Mutual partner locking | Same OS-level route as any Screen Time app — but bypass is always detected, partner notified | Core flow: pairing, unlock requests, bypass detection, mutual locking | Optional: tips and Willpower Waivers ($1.99–$9.99, skip the pre-request video) | Two people who trust each other |
+| **LockPact** | Mutual partner locking | Same OS-level route as any Screen Time app — but bypass is always detected, partner notified | Core flow: pairing, unlock requests, bypass detection, mutual locking | Optional: Support LockPact and Willpower Waivers ($1.99–$9.99, skip the pre-request video) | Two people who trust each other |
 | **One Sec** | Friction / pause before opening | Same OS-level route, unless a partner holds the Lock Screen Time Settings passcode; no bypass notification | Essentials | Pro: $6.99/mo, $19.99/yr, or $99.99 lifetime | People already trying to change |
 | **ScreenZen** | Friction + streak sharing | Same OS-level route; no bypass-detection feature found on its listing | Core features | None currently | Friends who like gamified stats |
 | **Opal** | Solo blocking | Same OS-level route unless "Make Opal Foolproof" is set up with a partner's passcode; Buddies is visibility, not an alert | Basic blocking only | $19.99/mo (~$100/yr with the annual plan) | People who'll pay for polish |
@@ -70,7 +70,7 @@ Before you install anything, Apple's Screen Time is already on your phone. On iO
 
 ## 2. LockPact
 
-**Price:** Free to use, with optional in-app purchases (tips, and Willpower Waivers at $1.99, $4.99 or $9.99)
+**Price:** Free to use, with optional in-app purchases (Support LockPact, and Willpower Waivers at $1.99, $4.99 or $9.99)
 **What's Free:** The whole partner flow — pairing, unlock requests, bypass detection, mutual locking
 **The Catch:** You need another person
 
@@ -78,7 +78,7 @@ LockPact is built around one idea: you can't do this alone. So don't try.
 
 You pair with someone you trust (a partner, roommate, sibling, or friend). You each select apps to block. When you want to unlock an app, your partner has to approve it. If you bypass (Apple lets you), your partner gets alerted immediately.
 
-It's free to use because the enforcement mechanism is the relationship, not the software. There's no premium tier gating the partner features. The optional purchases are a tip jar and Willpower Waivers, which skip the short video before an unlock request; you never need either to use the app.
+It's free to use because the enforcement mechanism is the relationship, not the software. There's no premium tier gating the partner features. The optional purchases are Support LockPact and Willpower Waivers, which skip the short video before an unlock request; you never need either to use the app.
 
 **The social cost is the feature.** Texting your partner "Can you unlock Instagram?" is uncomfortable. So you don't do it unless you really need it. And you probably don't.
 

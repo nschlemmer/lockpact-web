@@ -40,7 +40,7 @@ It's free with no subscription — the mutual lock-and-approve mechanic is the w
 | **Who sets the block** | You | Your partner (mutually — you set theirs too) |
 | **Mechanic** | Selfie earns 1 hour, bankable up to 3 | Lock + unlock request + partner approval |
 | **Free tier** | Core earn-and-bank feature | Full mutual-lock feature, no subscription |
-| **Paid tier** | Pro: $1.99/mo, $14.99/yr, or $49.99 lifetime | None required — optional support tip |
+| **Paid tier** | Pro: $1.99/mo, $14.99/yr, or $49.99 lifetime | None required — optional Support LockPact purchase |
 | **Bypass detection** | Not part of the app's described mechanic | Yes — partner is notified |
 | **Rating (as of September 2026)** | 4.8★, 27 ratings | New — building its own rating history |
 | **Platform** | iOS 16+ | iOS |

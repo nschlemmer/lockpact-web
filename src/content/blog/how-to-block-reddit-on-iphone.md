@@ -57,4 +57,4 @@ You set the rule and you hold the passcode, so you can undo it at the moment the
 
 Have a partner set your Screen Time passcode under **Manage Screen Time → Lock Screen Time Settings**, or lock Reddit in [LockPact](/go/b-how-to-block-reddit-on-iphone/), where a partner approves each unlock. LockPact can lock websites you choose as well as apps; Apple doesn't document which browsers its shield covers, so test it in the browser you use.
 
-If you bypass it in Settings, which Apple always allows, your partner is told. It's free to use, with optional tips and Willpower Waivers, and it needs a partner with an iPhone. For more, see [how to lock apps on iPhone](/blog/how-to-lock-apps-on-iphone/).
+If you bypass it in Settings, which Apple always allows, your partner is told. It's free to use, with optional Support LockPact and Willpower Waivers ($1.99–$9.99), and it needs a partner with an iPhone. For more, see [how to lock apps on iPhone](/blog/how-to-lock-apps-on-iphone/).

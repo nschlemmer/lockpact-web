@@ -59,7 +59,7 @@ Below are the apps we could verify are live, on iOS, and built around a friend o
 
 ### LockPact — mutual, not one-way
 
-LockPact pairs two people for **mutual** accountability: you each pick apps to lock on your own phone, and only your partner can approve your unlock requests (and vice versa, if you've paired). There's no "controller" and "controlled" — both people hold a key to the other's lock. The app also detects if you disable Screen Time access to bypass it and notifies your partner. It's free, with no subscription — a one-time Support LockPact tip or a rewarded ad on unlock is how it sustains itself. iOS only.
+LockPact pairs two people for **mutual** accountability: you each pick apps to lock on your own phone, and only your partner can approve your unlock requests (and vice versa, if you've paired). There's no "controller" and "controlled" — both people hold a key to the other's lock. The app also detects if you disable Screen Time access to bypass it and notifies your partner. It's free, with no subscription — an optional Support LockPact purchase or a rewarded ad on unlock is how it sustains itself. iOS only.
 
 ### Friend Controls — you set the limit, friends approve going over it
 
@@ -105,7 +105,7 @@ Opal, one sec, and ScreenZen are excellent at what they do, but they're not in t
 
 | App | Who decides | Free tier | Paid tier | Platform |
 |---|---|---|---|---|
-| **LockPact** | Partner (mutual, both directions) | Full features, forever | None — Support LockPact tip is optional | iOS |
+| **LockPact** | Partner (mutual, both directions) | Full features, forever | None — Support LockPact is optional | iOS |
 | **Friend Controls** | Friends you invite as "Controllers" | 1 app blocked | ~$3–$60 (weekly/monthly/yearly) or $29.99 lifetime | iOS |
 | **FriendLock** | No one — selfie earns time automatically | Core earn-and-bank mechanic | $1.99/mo, $14.99/yr, or $49.99 lifetime (Pro) | iOS |
 | **PeerPause** | "Time Buddy" (buddy role is free) | Core blocking + requests | $3.99/wk, $5.99/mo, $24.99/yr | iOS |

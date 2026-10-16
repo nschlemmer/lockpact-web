@@ -39,7 +39,7 @@ Most "couples screen time" tools live in category 1 or 2. Category 3 is much rar
 
 ### LockPact — mutual key-holding, free
 
-LockPact is built around category 3: you each pick apps to lock on your own phone, and only your partner can approve your unlock requests (and you approve theirs, if you've paired). Neither person is the "controller" — pairing creates two locks, one per person, from the moment you connect. If you turn off Screen Time access to sidestep your own lock, the app detects it and notifies your partner. It's free with no subscription tier — an optional one-time Support LockPact tip and a rewarded ad shown before some unlock requests are how it sustains itself, not a paywall on the core feature. iOS only, and — worth repeating — it works identically for any two people, not just romantic partners.
+LockPact is built around category 3: you each pick apps to lock on your own phone, and only your partner can approve your unlock requests (and you approve theirs, if you've paired). Neither person is the "controller" — pairing creates two locks, one per person, from the moment you connect. If you turn off Screen Time access to sidestep your own lock, the app detects it and notifies your partner. It's free with no subscription tier — an optional one-time Support LockPact purchase and a rewarded ad shown before some unlock requests are how it sustains itself, not a paywall on the core feature. iOS only, and — worth repeating — it works identically for any two people, not just romantic partners.
 
 ### Jolt — synchronized blocking with a dedicated couples page
 
@@ -61,7 +61,7 @@ Opal, one sec, and ScreenZen are strong solo friction tools, and some let you ad
 
 | App | Couples mechanic | Who decides your unlock | Free tier | Paid tier | Platform |
 |---|---|---|---|---|---|
-| **LockPact** | Mutual lock, both directions | Your partner | Full features, forever | None — Support LockPact tip optional | iOS |
+| **LockPact** | Mutual lock, both directions | Your partner | Full features, forever | None — Support LockPact optional | iOS |
 | **Jolt** | Synchronized self-blocking + partner challenges + new one-way Accountability Partner mode | You, or a partner if Accountability Partner mode is on | Limited | App Store: $5.99–$60/wk-yr + $3 SOS · Website: $20/mo, $100/yr, $250 lifetime (sources disagree) | iOS |
 | **Habi** | Shared habit visibility, not unlock control | You | Core features | $1.99–$89.99 (Pro) | iOS only |
 | Cupla | Not a screen time app (shared calendar) | N/A | Core features | N/A | iOS + Android |

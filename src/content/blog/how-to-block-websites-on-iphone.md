@@ -110,7 +110,7 @@ Apple designed Screen Time around two people, a parent and a child, and no setti
 
 ## Where does LockPact fit?
 
-LockPact is for the moment the built-in block loses. You and a partner each choose what to lock on your own phones, apps and websites alike, and unlocking needs the other person's approval. If either of you bypasses it in Settings, which Apple always allows, the other is told straight away. It's free to use, with optional tips and Willpower Waivers that skip the short video before an unlock request.
+LockPact is for the moment the built-in block loses. You and a partner each choose what to lock on your own phones, apps and websites alike, and unlocking needs the other person's approval. If either of you bypasses it in Settings, which Apple always allows, the other is told straight away. It's free to use, with optional Support LockPact and Willpower Waivers ($1.99–$9.99) that skip the short video before an unlock request.
 
 It's iPhone only and needs a partner you trust. [Get LockPact on the App Store](/go/b-how-to-block-websites-on-iphone/). The next two sections cover the other way to move the off-switch, and exactly what LockPact does with websites.
 

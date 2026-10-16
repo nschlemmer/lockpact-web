@@ -103,7 +103,7 @@ BePresent mixes app blocking with rewards and competition with friends. Its list
 
 LockPact is the one built around a person. You and a partner each choose apps to lock on your own phones, and unlocking needs the other person's approval. If either of you bypasses it in Settings, which Apple always allows, the other is told straight away. It needs someone you trust, it's iPhone only, and it's the newest and smallest app here: its US listing shows 6 ratings at 4.2, so judge it on whether the idea fits you.
 
-It's free to use, with no premium tier gating the partner features. The only optional purchases are tips and Willpower Waivers, which skip the short video before an unlock request. [Get LockPact on the App Store](/go/b-best-screen-time-apps/). If you're comparing it with blockers, read [the best free app blocker for iPhone](/blog/best-free-app-blocker-iphone-2026/); for couples, [best screen time apps for couples](/blog/best-screen-time-apps-for-couples/).
+It's free to use, with no premium tier gating the partner features. The only optional purchases are Support LockPact and Willpower Waivers ($1.99–$9.99), which skip the short video before an unlock request. [Get LockPact on the App Store](/go/b-best-screen-time-apps/). If you're comparing it with blockers, read [the best free app blocker for iPhone](/blog/best-free-app-blocker-iphone-2026/); for couples, [best screen time apps for couples](/blog/best-screen-time-apps-for-couples/).
 
 ## Which screen time app should you choose?
 

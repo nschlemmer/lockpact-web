@@ -120,6 +120,6 @@ Keep it adult-to-adult. This only works when you chose it. A passcode imposed on
 
 ## Where does LockPact fit?
 
-A passcode answers "can I quietly turn this off?" It doesn't tell anyone when you do. LockPact is a mutual lock: you each lock your own apps, your partner approves your unlock requests, and if either of you bypasses the lock in Settings, which Apple always allows, the other is told. It's free to use, with optional tips and Willpower Waivers that skip the short video before an unlock request.
+A passcode answers "can I quietly turn this off?" It doesn't tell anyone when you do. LockPact is a mutual lock: you each lock your own apps, your partner approves your unlock requests, and if either of you bypasses the lock in Settings, which Apple always allows, the other is told. It's free to use, with optional Support LockPact and Willpower Waivers ($1.99–$9.99) that skip the short video before an unlock request.
 
 [Get LockPact on the App Store](/go/b-screen-time-passcode/). If you're blocking websites too, [how to block websites on iPhone](/blog/how-to-block-websites-on-iphone/) shows the setting and why who holds the code matters, and our [complete Screen Time guide](/blog/screen-time-iphone-guide/) covers every setting.

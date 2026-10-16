@@ -8,7 +8,7 @@ faq:
 - q: What are the best apps for long-distance relationships?
   a: 'It depends on the job: Between for a private chat and memories, Paired for daily questions, Tethered for small moments and games, OurCal for a shared calendar, FaceTime SharePlay to watch together, and LockPact for phone boundaries. Most have a free tier.'
 - q: Are there free apps for long-distance couples?
-  a: Yes. FaceTime and SharePlay are built into iPhone, and Between, Paired, Tethered, OurCal and Loveit are free to download with paid upgrades. LockPact is free to use, with optional tips and Willpower Waivers. Check each listing, as prices change.
+  a: Yes. FaceTime and SharePlay are built into iPhone, and Between, Paired, Tethered, OurCal and Loveit are free to download with paid upgrades. LockPact is free to use, with optional Support LockPact and Willpower Waivers. Check each listing, as prices change.
 - q: Which app helps long-distance couples with phone habits?
   a: LockPact is the one in this list built for it. You each lock your own distracting apps, and unlocking needs your partner's approval, even from far away. It's iPhone only, so both of you need an iPhone.
 - q: Can long-distance couples watch movies together on iPhone?
@@ -92,7 +92,7 @@ The honest reason long-distance couples need this: the phone is the relationship
 
 LockPact is the phone-boundaries pick. Each of you chooses apps to lock on your own phone, say social apps during your nightly call, and unlocking needs the other person's approval. If either of you bypasses it in Settings, which Apple always allows, the other is told. Distance doesn't matter: the approval travels over the internet.
 
-It's iPhone only, so you both need an iPhone, and it works best when you agree on the rules first. It's free to use; the only optional purchases are tips and Willpower Waivers, which skip the short video before an unlock request. [Get LockPact on the App Store](/go/b-long-distance-relationship-apps/).
+It's iPhone only, so you both need an iPhone, and it works best when you agree on the rules first. It's free to use; the only optional purchases are Support LockPact and Willpower Waivers ($1.99–$9.99), which skip the short video before an unlock request. [Get LockPact on the App Store](/go/b-long-distance-relationship-apps/).
 
 For how to set the rules together, read [phone boundaries for long-distance relationships](/blog/long-distance-relationship-phone-boundaries/), the [best screen time apps for couples](/blog/best-screen-time-apps-for-couples/) and our [couples screen time contract template](/blog/couples-screen-time-contract-template/).
 
