@@ -328,5 +328,35 @@
   "out": "06-open-manage",
   "raw": "30-open-manage",
   "alt": "Manage Screen Time highlighted at the bottom of the Screen Time screen"
+ },
+ {
+  "slug": "best-instagram-blocker-iphone",
+  "out": "01-open-time-allowances",
+  "raw": "22-open-time-allowances",
+  "alt": "The Time Allowances row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "best-instagram-blocker-iphone",
+  "out": "02-time-allowances",
+  "raw": "23-time-allowances",
+  "alt": "The Time Allowances screen"
+ },
+ {
+  "slug": "best-instagram-blocker-iphone",
+  "out": "03-open-schedule",
+  "raw": "20-open-schedule",
+  "alt": "The Screen Time Schedule row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "best-instagram-blocker-iphone",
+  "out": "04-open-apps-websites",
+  "raw": "10-open-apps-websites",
+  "alt": "The Apps & Websites row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "best-instagram-blocker-iphone",
+  "out": "05-block-website-sheet",
+  "raw": "14-add-website-sheet",
+  "alt": "The Block Website sheet, where you type the address to block"
  }
 ]
