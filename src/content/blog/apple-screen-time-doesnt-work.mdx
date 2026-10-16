@@ -59,13 +59,6 @@ This is the core problem with Apple Screen Time for adults. You're not restricte
 
 Most "not working" limits on iOS 27 come down to six checks: an app in Always Allowed, a shared Time Allowance running out sooner than you expect, a Screen Time Schedule that's off, devices that aren't all on iOS 27, a passcode you can use to override everything, and apps that aren't in the category you think. Work through them in order; each takes a minute.
 
-1. **Check Always Allowed.** Apps in **Settings → Screen Time → Always Allowed** stay available regardless of any schedule or allowance, so a limit can't catch them. Remove the app from that list, or it will never be limited. Apple describes Always Allowed as apps and contacts you can use "at all times", even during a schedule.
-2. **Check which category the app is in.** On iOS 27, Time Allowances work by category (Entertainment, Games, Social Media). Open **Settings → Screen Time → Time Allowances → Manage Categories**, tap a category, and look for the app. If it isn't in a category with an allowance, nothing limits it. Apple says apps use up their category's allowance or the daily total, whichever comes first.
-3. **Check that the schedule is on.** Open **Settings → Screen Time → Screen Time Schedule** and make sure **Schedule** is switched on, and that the time window you expect covers the hours you're checking. To apply allowances only during schedule windows, turn on **Match Screen Time Schedule** in Time Allowances.
-4. **Update every device.** Apple says Screen Time Schedules and Time Allowances need iOS 27, iPadOS 27 or macOS 27 or later on all your Apple devices. If one device is behind, settings you made may not behave as you expect. Check **Settings → General → Software Update**, and turn on **Share Across Devices** under **Manage Screen Time** if you want one set of settings.
-5. **Check who knows the passcode.** If you set the Screen Time passcode, you can change any of the above. Nothing is "broken" when you override a limit with a code you know.
-6. **Restart and update.** If all of the above is right and a limit still doesn't trigger, restart the iPhone and install any iOS update. Apple's Screen Time pages don't list a specific bug here, so treat this as general troubleshooting, not a documented fix.
-
 <StepGuide
   title="Where to check each setting"
   steps={[
@@ -76,6 +69,12 @@ Most "not working" limits on iOS 27 come down to six checks: an app in Always Al
   ]}
 />
 
+1. **Check Always Allowed.** Apps in **Settings → Screen Time → Always Allowed** stay available regardless of any schedule or allowance, so a limit can't catch them. Remove the app from that list, or it will never be limited. Apple describes Always Allowed as apps and contacts you can use "at all times", even during a schedule.
+2. **Check which category the app is in.** On iOS 27, Time Allowances work by category (Entertainment, Games, Social Media). Open **Settings → Screen Time → Time Allowances → Manage Categories**, tap a category, and look for the app. If it isn't in a category with an allowance, nothing limits it. Apple says apps use up their category's allowance or the daily total, whichever comes first.
+3. **Check that the schedule is on.** Open **Settings → Screen Time → Screen Time Schedule** and make sure **Schedule** is switched on, and that the time window you expect covers the hours you're checking. To apply allowances only during schedule windows, turn on **Match Screen Time Schedule** in Time Allowances.
+4. **Update every device.** Apple says Screen Time Schedules and Time Allowances need iOS 27, iPadOS 27 or macOS 27 or later on all your Apple devices. If one device is behind, settings you made may not behave as you expect. Check **Settings → General → Software Update**, and turn on **Share Across Devices** under **Manage Screen Time** if you want one set of settings.
+5. **Check who knows the passcode.** If you set the Screen Time passcode, you can change any of the above. Nothing is "broken" when you override a limit with a code you know.
+6. **Restart and update.** If all of the above is right and a limit still doesn't trigger, restart the iPhone and install any iOS update. Apple's Screen Time pages don't list a specific bug here, so treat this as general troubleshooting, not a documented fix.
 ## What if your phone is on iOS 26 or earlier?
 
 On iOS 26 and earlier, the checklist is different. Apple's iOS 26 guide says that by default, Screen Time limits can be ignored once they're reached, so the first fix is a Screen Time passcode plus **Block at Downtime** (Settings → Screen Time → Downtime). Then check Always Allowed, whether the limit covers the app or only its category, and your iOS version.
