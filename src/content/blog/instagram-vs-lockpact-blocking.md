@@ -1,22 +1,27 @@
 ---
-title: "How to Lock Instagram After a Time Limit on iPhone"
-description: "The three real ways to lock Instagram — after a time limit, during set hours, or so you can't override it yourself. Free, no subscription."
+title: How to Lock Instagram After a Time Limit on iPhone
+description: The three real ways to lock Instagram — after a time limit, during set hours, or so you can't override it yourself. Free, no subscription.
 pubDate: 2026-05-27
-updatedDate: 2026-10-15
-author: "LockPact"
-tags: ["Instagram", "screen time", "app limits", "social media", "behavior change"]
+updatedDate: '2026-10-16'
+author: LockPact
+tags:
+- Instagram
+- screen time
+- app limits
+- social media
+- behavior change
 faq:
 - q: Can I lock Instagram for certain hours?
-  a: 'Yes, two honest ways: iOS Screen Time App Limits set through Downtime for those hours (with a partner holding the override passcode), or a LockPact window your partner locks with you. Neither is a native Instagram feature.'
+  a: 'Yes, two honest ways: iOS Screen Time''s Schedule (Downtime on iOS 26) for those hours (with a partner holding the override passcode), or a LockPact window your partner locks with you. Neither is a native Instagram feature.'
 - q: Can I set an Instagram time limit that needs a password to override?
-  a: Yes — Screen Time's App Limit, if the passcode is set by someone else. As of iOS 26.4, pair it with Lock Screen Time Settings so the passcode itself can't be turned off from Settings without that same code.
+  a: Yes — Screen Time's Time Allowance (App Limit on iOS 26), if the passcode is set by someone else. As of iOS 26.4, pair it with Lock Screen Time Settings so the passcode itself can't be turned off from Settings without that same code.
 - q: Can I lock Instagram after a time limit?
   a: Screen Time's built-in limit lets you tap through instantly. To make it stick after the limit hits, the passcode needs to belong to someone other than you — a partner, using Screen Time or a mutual lock like LockPact.
 - q: Does Instagram's built-in daily limit actually lock the app?
   a: No. It's a notification with a one-tap 'Ignore Limit' button. It adds awareness, not friction — most people who set it override it more than half the time.
 ---
 
-To lock Instagram after a certain time on iPhone, open **Settings → Screen Time → App Limits → Add Limit**, open the social category, select Instagram, tap **Next**, and set the time. To lock it for certain hours instead, use **Settings → Screen Time → Downtime**. Either one only holds if someone else sets the Screen Time passcode.
+To lock Instagram after a certain time on iPhone with iOS 27, open **Settings → Screen Time → Time Allowances → Manage Categories**, find the category Instagram sits in, and set its allowance. For certain hours, use **Screen Time Schedule**. Either only holds if someone else sets the Screen Time passcode. On iOS 26 and earlier it's **App Limits → Add Limit** and **Downtime**.
 
 Three questions come up constantly about locking Instagram on iPhone: after a time limit, during specific hours, and in a way you can't tap your way out of. Screen Time can do the first two, and as of iOS 26.4 there's a real answer to the third. Here's all three, plus where LockPact — free to use, no subscription — fits. If you're comparing tools rather than looking for steps, see our [best Instagram blocker for iPhone](/blog/best-instagram-blocker-iphone/) roundup.
 
@@ -28,13 +33,13 @@ Not with Instagram's own tool. Inside Instagram's settings you can set a "Daily 
 
 This isn't an oversight. Instagram is required by some regulators to offer usage-management tools, and this implementation technically complies while preserving engagement. A 2023 study found most people who set the limit override it more than half the time, and the notification fires at the worst possible moment — mid-scroll, when your resistance is lowest.
 
-The fix isn't inside Instagram. It's iOS Screen Time: set an App Limit on Instagram, and when the passcode prompt appears, have someone *other than you* set it. Now "Ask for More Time" actually requires asking someone.
+The fix isn't inside Instagram. It's iOS Screen Time: set a Time Allowance (an App Limit on iOS 26) for Instagram's category, and when the passcode prompt appears, have someone *other than you* set it. Now "Ask for More Time" actually requires asking someone.
 
 ## Can I lock Instagram during certain hours?
 
 Also not natively — Instagram has no concept of "off during these hours." Two things get you there today:
 
-**iOS Screen Time + Downtime.** Set a Downtime schedule for the hours you want Instagram unavailable (e.g., 9pm–7am), and add Instagram to "Always Allowed" only if you want exceptions. Same rule as above: the Screen Time passcode has to belong to someone else, or Downtime is just a suggestion you can dismiss.
+**iOS Screen Time Schedule (Downtime on iOS 26).** Set a Screen Time Schedule for the hours you want Instagram unavailable (e.g., 9pm–7am), and add Instagram to "Always Allowed" only if you want exceptions. Same rule as above: the Screen Time passcode has to belong to someone else, or Downtime is just a suggestion you can dismiss.
 
 **A LockPact window.** You and a partner start a lock together covering the block you want — typically an evening. Neither of you can end it unilaterally; your partner holds the unlock. It's not an automatic daily schedule you set once and forget (that's a different feature, not shipped yet) — you and your partner start each window together, which for a lot of couples and roommates is actually the point: it's a conversation, not a setting.
 
