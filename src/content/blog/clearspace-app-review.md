@@ -23,15 +23,15 @@ disclosure: true
 
 Search "Clearspace app review" and you mostly get App Store screenshots reformatted into listicles. Nobody's actually gone through what it does, what it costs today, and — the part most reviews skip entirely — what its "accountability partner" feature actually lets a partner do. That last part matters more than it sounds, so this review spends real time on it.
 
-Everything below — the mechanics, the pricing, the accountability feature — checked against Clearspace's live App Store listing and its own site this week, not recalled from memory or an old review. Where sources disagreed slightly (regional pricing does shift), we say so. If you're comparing Clearspace with locks that use a physical device, see [Brick alternatives with no hardware](/blog/brick-alternative/).
+Everything below — the mechanics, the pricing, the accountability feature — checked against Clearspace's live App Store listing and its own site this week, not recalled from memory or an old review. Where sources disagreed slightly (regional pricing does shift), we say so. If you're comparing Clearspace with locks that use a physical device, see [Brick alternatives with no hardware](/blog/brick-alternative/). Clearspace's partner notifications can't stop you if you hold your own Screen Time passcode; [how the passcode works](/blog/screen-time-passcode/) explains why.
 
 ## Is Clearspace free?
 
-Yes — there's a real free tier, not just a trial. It covers core app blocking and time budgets, plus full free access for verified students. What sits behind the paid **Premium** tier ($6.99/month, $44.99/year individually, or $79.99/year for Family — current App Store listing, checked 2026-09-04) is deeper reporting, full customization, and the accountability/teammates layer this review focuses on next. So the honest short version: free to use, but the specific feature most people search "Clearspace" for — the accountability partner piece — is a paid feature.
+Yes — there's a real free tier, not just a trial. It covers core app blocking and time budgets, plus full free access for verified students. What sits behind the paid **Premium** tier ($6.99/month, $44.99/year individually, or $79.99/year for Family — current App Store listing, checked 2026-09-04) is deeper reporting, full customization, and the accountability/teammates layer this review focuses on next. So the honest short version: free to use, but the specific feature most people search "Clearspace" for — the accountability partner piece — is a paid feature. For Apple's own free option, see the [complete iOS 27 Screen Time guide](/blog/screen-time-iphone-guide/).
 
 ## What Clearspace actually does
 
-Clearspace is a screen time app built around a simple idea: make opening a distracting app cost a little friction, and give you data on how well you're sticking to your own limits.
+Clearspace is a screen time app built around a simple idea: make opening a distracting app cost a little friction, and give you data on how well you're sticking to your own limits. If you're still choosing, [best screen time apps for iPhone](/blog/best-screen-time-apps/) compares it with nine others.
 
 The mechanics, per its current App Store listing:
 

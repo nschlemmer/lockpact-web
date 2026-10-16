@@ -16,7 +16,7 @@ faq:
   a: 'Give it two weeks of active effort before concluding it failed. If nothing changes after genuine effort from both of you, revisit with more directness: "We agreed to try this and I haven''t felt a change. Can we talk about why?" This is now a conversation about follow-through on an agreement, which is clearer to address.'
 ---
 
-"My partner is always on their phone" is one of the most common relationship complaints there is — and also one of the most common ways to start a fight without meaning to. The conversation usually starts with something like: "You're always on your phone."
+"My partner is always on their phone" is one of the most common relationship complaints there is — and also one of the most common ways to start a fight without meaning to. The conversation usually starts with something like: "You're always on your phone." If the two of you live apart, [apps for long-distance couples](/blog/long-distance-relationship-apps/) can help with the other parts of the relationship.
 
 And then it becomes a fight about whether "always" is an accurate description, and whether they're "allowed" to use their phone, and why you're being controlling. The original issue — that you feel ignored, disconnected, less important than Instagram — never gets resolved.
 

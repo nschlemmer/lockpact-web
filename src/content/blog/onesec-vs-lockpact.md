@@ -81,7 +81,7 @@ LockPact doesn't use friction. It uses gatekeeping.
 
 **Scenario 1: The Impulsive Opener**
 
-You catch yourself opening Instagram five times a day without consciously deciding to. You don't hate Instagram. You just check it reflexively.
+You catch yourself opening Instagram five times a day without consciously deciding to. You don't hate Instagram. You just check it reflexively. If you're choosing between more than these two, [best screen time apps for iPhone](/blog/best-screen-time-apps/) compares ten.
 
 With one sec, you see the breathing animation, and four out of five times, you realize you didn't actually want to be there. You close the app and move on.
 

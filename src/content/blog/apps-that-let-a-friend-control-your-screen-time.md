@@ -35,7 +35,7 @@ Search "apps that let a friend control your screen time" and you'll find TikToks
 
 Apps that let a friend control your screen time are apps where someone else — a friend, partner, or designated "Controller" — has to approve unlocking a blocked app on your phone, not just you.
 
-This is that comparison. Every app below, every price, every mechanic — checked against its live App Store listing or website this week, not recalled from memory. Where we couldn't confirm something, we say so. If you're weighing this against a hardware lock, see [Brick alternatives that need no hardware](/blog/brick-alternative/); if the thing you want a friend to hold the key to is the late-night scroll, [how to stop doomscrolling](/blog/how-to-stop-doomscrolling/) covers the settings first.
+This is that comparison. Every app below, every price, every mechanic — checked against its live App Store listing or website this week, not recalled from memory. Where we couldn't confirm something, we say so. If you're weighing this against a hardware lock, see [Brick alternatives that need no hardware](/blog/brick-alternative/); if the thing you want a friend to hold the key to is the late-night scroll, [how to stop doomscrolling](/blog/how-to-stop-doomscrolling/) covers the settings first. For a broader roundup that includes solo apps, see [best screen time apps for iPhone](/blog/best-screen-time-apps/).
 
 ## Why self-controlled blockers fail
 
@@ -51,7 +51,7 @@ The apps in this roundup take a different approach: they hand the override decis
 
 The mechanic varies app to app, but the shared idea is simple: when you want past your limit, a real person — not a setting — decides whether you get through.
 
-That changes the psychology in a way friction alone doesn't. It's not "am I strong enough to wait 10 seconds," it's "am I willing to ask my partner, at 11pm, why I need Instagram back." For a lot of people, the second question is the one that actually works. The lowest-tech version needs no app at all: [give your partner the Screen Time passcode](/blog/lock-screen-time-settings-partner-passcode/) so that they're the only one who can change it, and [how to change or hand off the Screen Time passcode](/blog/screen-time-passcode/) covers the basics.
+That changes the psychology in a way friction alone doesn't. It's not "am I strong enough to wait 10 seconds," it's "am I willing to ask my partner, at 11pm, why I need Instagram back." For a lot of people, the second question is the one that actually works. The lowest-tech version needs no app at all: [give your partner the Screen Time passcode](/blog/lock-screen-time-settings-partner-passcode/) so that they're the only one who can change it, and [how to change or hand off the Screen Time passcode](/blog/screen-time-passcode/) covers the basics. If your friend is far away, [apps for long-distance couples](/blog/long-distance-relationship-apps/) covers the rest of the stack, and [how to block websites on iPhone](/blog/how-to-block-websites-on-iphone/) covers sites.
 
 Below are the apps we could verify are live, on iOS, and built around a friend or partner in the approval loop — plus where the popular "solo" tools fit for contrast.
 

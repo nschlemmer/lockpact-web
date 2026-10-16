@@ -18,7 +18,7 @@ faq:
   a: Yes — nearly everyone does it sometimes, and that's not a crisis on its own. What's worth addressing is a repeated pattern in the same moments, since that's a habit loop rather than a one-off distraction.
 ---
 
-You're mid-sentence. Your partner glances at their phone. Just for a second — a notification, probably nothing. But you notice the second, and you notice that they didn't come back to your sentence, and you notice that you've stopped talking without really deciding to.
+You're mid-sentence. Your partner glances at their phone. Just for a second — a notification, probably nothing. But you notice the second, and you notice that they didn't come back to your sentence, and you notice that you've stopped talking without really deciding to. If your partner is the one far away, [apps for long-distance couples](/blog/long-distance-relationship-apps/) covers the rest.
 
 That's phubbing. You've almost certainly done it to someone this week, and someone has almost certainly done it to you. It's common enough to have its own word and specific enough that once you know the word, you start seeing it everywhere — including in the mirror.
 

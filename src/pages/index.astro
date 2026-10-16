@@ -10,29 +10,7 @@ import SocialProof from '../components/SocialProof.astro';
 import FAQ from '../components/FAQ.astro';
 import BlogPreview from '../components/BlogPreview.astro';
 import DownloadCTA from '../components/DownloadCTA.astro';
-
-const startHere = [
-  {
-    href: '/blog/accountability-partner-app-phone-addiction/',
-    title: 'Accountability partner apps',
-    desc: 'How a partner-held lock works, and who it suits.',
-  },
-  {
-    href: '/blog/best-free-app-blocker-iphone-2026/',
-    title: 'Best free app blockers for iPhone',
-    desc: 'Honest reviews of every major free option.',
-  },
-  {
-    href: '/blog/lock-screen-time-settings-partner-passcode/',
-    title: 'Give your partner the passcode',
-    desc: 'Use iOS Lock Screen Time Settings so someone else holds the key.',
-  },
-  {
-    href: '/blog/apps-that-let-a-friend-control-your-screen-time/',
-    title: 'Apps where a friend controls your screen time',
-    desc: 'Every app that puts another person in the approval loop.',
-  },
-];
+import { guides } from '../lib/guides';
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -70,15 +48,15 @@ const structuredData = {
   <WhatLockPactIs />
   <SocialProof />
   <FAQ />
-  <section class="max-w-[1200px] mx-auto px-6 section-sm" id="start-here">
+  <section class="max-w-[1200px] mx-auto px-6 section-sm" id="guides">
     <p class="text-label uppercase text-center mb-3" style="color: var(--color-accent);">
-      Start here
+      Guides
     </p>
     <h2 class="text-section-title text-center mb-10" style="color: var(--color-text-primary);">
-      New to screen time accountability?
+      Start with the guides people use most
     </h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-[900px] mx-auto">
-      {startHere.map((item) => (
+      {guides.map((item) => (
         <a href={item.href} class="lp-card block rounded-2xl p-6 transition-all group">
           <h3 class="text-card-title leading-snug mb-2 group-hover:opacity-80 transition-opacity" style="color: var(--color-text-primary);">
             {item.title}

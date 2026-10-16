@@ -18,7 +18,7 @@ faq:
   a: Yes — a swipe and a tap in Control Center. That ease is appropriate for notification management, but it's exactly why Focus mode is insufficient as an enforcement tool on its own.
 ---
 
-Short answer: no, Focus mode doesn't block apps. It filters notifications and can hide Home Screen pages, but every app on your phone stays one tap away, Focus on or off. What actually stops you from opening an app is Screen Time App Limits (with someone else holding the passcode) or a partner-held lock like LockPact — Focus mode is a genuinely good tool, just not that tool.
+Short answer: no, Focus mode doesn't block apps. It filters notifications and can hide Home Screen pages, but every app on your phone stays one tap away, Focus on or off. What actually stops you from opening an app is Screen Time App Limits (with someone else holding the passcode) or a partner-held lock like LockPact — Focus mode is a genuinely good tool, just not that tool. The [complete iOS 27 Screen Time guide](/blog/screen-time-iphone-guide/) covers every setting that does.
 
 ---
 
@@ -46,7 +46,7 @@ They're also useful for signaling context. When your phone knows you're in Work 
 
 ## Where Focus Modes Fall Short
 
-Focus modes do not block apps. This is the critical limitation.
+Focus modes do not block apps. This is the critical limitation. Focus also can't block websites; [how to block websites on iPhone](/blog/how-to-block-websites-on-iphone/) shows what can.
 
 You can be in Sleep Focus at 11pm and still open Instagram, TikTok, and Twitter. The notifications are silenced, but the apps are available. If your problem is that you reach for your phone and mindlessly scroll, Focus mode provides no friction. You open the app. The app opens.
 
@@ -84,4 +84,4 @@ Focus modes are a good tool solving a specific problem (interruption management)
 
 **Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work/) · [Instagram's Built-In Time Limit vs. Blocking It Entirely](/blog/instagram-vs-lockpact-blocking/) · [Opal vs. LockPact](/blog/opal-vs-lockpact/) · [Screen Time for Adults on iPhone](/blog/screen-time-for-adults-iphone/)
 
-For the bigger problem: [LockPact](/) with a partner, or Screen Time limits with a partner-set passcode. The key ingredient in both is external accountability. [Get it on the App Store](/go/b-do-not-disturb-modes-comparison/).
+For the bigger problem: [LockPact](/) with a partner, or Screen Time limits with a partner-set passcode. The key ingredient in both is external accountability. [Get it on the App Store](/go/b-do-not-disturb-modes-comparison/). [How to lock apps on iPhone](/blog/how-to-lock-apps-on-iphone/) compares every built-in method, and our [best screen time apps](/blog/best-screen-time-apps/) roundup compares the apps if you want more than the built-in tools.

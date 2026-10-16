@@ -20,7 +20,7 @@ You install a screen time app. You feel virtuous.
 
 Three days later, you disable it. Maybe you tell yourself you'll turn it back on tomorrow. Or you delete the app and feel guilty about it for exactly twelve hours.
 
-This happens to most people. Not because they lack willpower. Not because the app is poorly designed. It happens because **the app is solving the wrong problem**.
+This happens to most people. If you're comparing apps, [best screen time apps for iPhone](/blog/best-screen-time-apps/) lists what each costs and who can turn it off. Not because they lack willpower. Not because the app is poorly designed. It happens because **the app is solving the wrong problem**.
 
 The problem isn't technical. It's behavioral.
 

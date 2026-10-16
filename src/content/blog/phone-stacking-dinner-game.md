@@ -54,7 +54,7 @@ The useful insight from phone stacking isn't the game mechanics. It's the princi
 
 The game externalizes accountability. It makes your behavior visible to people who matter to you. That's the mechanism that works.
 
-What doesn't work is the once-in-a-while, opt-in, game-format version of it. Behavior change happens through consistent repetition, not occasional events. You can't change a daily habit with a weekly dinner game.
+What doesn't work is the once-in-a-while, opt-in, game-format version of it. Behavior change happens through consistent repetition, not occasional events. You can't change a daily habit with a weekly dinner game. If you'd rather lock the phone itself, [how to lock apps on iPhone](/blog/how-to-lock-apps-on-iphone/) shows the built-in ways. Partners who are apart can use the same idea; see [apps for long-distance couples](/blog/long-distance-relationship-apps/).
 
 What works is applying that same externalizing principle — making your phone use visible to someone who matters to you — consistently, not just when you happen to be at a restaurant with the right group of friends.
 
@@ -64,7 +64,7 @@ What works is applying that same externalizing principle — making your phone u
 
 The phone stacking game is a good idea with a delivery problem. The idea (social stakes change behavior) is solid. The delivery (a voluntary game that ends with the meal) doesn't stick.
 
-The version that works long-term: you and one other person — a partner, a roommate, a friend — make a persistent, mutual agreement to lock specific apps for each other. Not for the duration of a dinner. Every night between 8pm and 10pm, or whatever window matters to you.
+The version that works long-term: you and one other person — a partner, a roommate, a friend — make a persistent, mutual agreement to lock specific apps for each other. Not for the duration of a dinner. Every night between 8pm and 10pm, or whatever window matters to you. Apps that help a couple keep this going are compared in [best screen time apps for iPhone](/blog/best-screen-time-apps/).
 
 Your partner holds the lock on your Instagram. You hold the lock on their Reddit. Neither of you can unilaterally unblock it. And if one of you forces through a bypass, the other finds out.
 

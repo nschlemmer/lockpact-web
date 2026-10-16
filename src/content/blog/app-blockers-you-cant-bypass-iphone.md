@@ -15,7 +15,7 @@ faq:
 disclosure: true
 ---
 
-Every "unbypassable" claim from an iOS app blocker is, technically, false — Apple's Screen Time API is built so the device owner can always regain access to their own phone. That's not a marketing failure, it's the platform. What actually differs between blockers is the *off-switch*: how it's triggered, how long it takes, and whether anyone besides you ever finds out. This is that comparison, done honestly, for Opal, one sec, ScreenZen, Brick, Cold Turkey, AppBlock's Strict Mode, and Screen Time itself — free to read, no signup.
+Every "unbypassable" claim from an iOS app blocker is, technically, false — Apple's Screen Time API is built so the device owner can always regain access to their own phone. That's not a marketing failure, it's the platform. What actually differs between blockers is the *off-switch*: how it's triggered, how long it takes, and whether anyone besides you ever finds out. This is that comparison, done honestly, for Opal, one sec, ScreenZen, Brick, Cold Turkey, AppBlock's Strict Mode, and Screen Time itself — free to read, no signup. For a wider comparison across more apps, see [best screen time apps for iPhone](/blog/best-screen-time-apps/).
 
 ## The off-switch taxonomy
 

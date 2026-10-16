@@ -19,7 +19,7 @@ faq:
 
 It's 11:47pm. You're both in bed. The lights are off. The room is quiet.
 
-Your partner is scrolling through something. You're scrolling through something else. Neither of you is speaking. Neither of you has moved in five minutes. You're lying three feet apart, present and absent at the same time.
+Your partner is scrolling through something. You're scrolling through something else. Neither of you is speaking. Neither of you has moved in five minutes. You're lying three feet apart, present and absent at the same time. If you're in different cities, [apps for long-distance couples](/blog/long-distance-relationship-apps/) covers staying in touch, calendars and watching together.
 
 This is phantom presence. The phone hasn't replaced your partner. It's just replaced the conversation that would have happened otherwise.
 

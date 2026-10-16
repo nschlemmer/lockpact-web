@@ -16,7 +16,7 @@ faq:
   a: Consistently, yes. Shared accountability produces stronger commitment than individual commitment across multiple behavior domains. A mutual streak combines the motivational properties of streaks with the social dynamics of accountability. Both mechanisms reinforce each other.
 ---
 
-Streaks are everywhere in behavior change design. Duolingo is built on them. Snapchat made them a core social mechanic. Fitness apps track days-in-a-row. Habit apps make the unbroken chain visible.
+Streaks are everywhere in behavior change design. Duolingo is built on them. Snapchat made them a core social mechanic. Fitness apps track days-in-a-row. Habit apps make the unbroken chain visible. The Screen Time settings behind a streak are in the [complete iOS 27 Screen Time guide](/blog/screen-time-iphone-guide/).
 
 They work — sometimes dramatically. They also fail in predictable ways. Understanding both makes you a better designer of your own behavior change.
 
@@ -64,7 +64,7 @@ The most durable streaks are connected to outcomes you can perceive. "Sixteen da
 
 LockPact tracks bypass streaks — how many days in a row neither you nor your partner bypassed the lock.
 
-This is a specific design choice. The streak isn't measuring phone use broadly. It's measuring the one behavior the pact is designed to change: resisting the urge to unlock the blocked app during the agreed window.
+This is a specific design choice. The streak isn't measuring phone use broadly. It's measuring the one behavior the pact is designed to change: resisting the urge to unlock the blocked app during the agreed window. A couple in different cities can use the same idea; see [apps for long-distance couples](/blog/long-distance-relationship-apps/). Who holds the code matters as much as the streak: [the Screen Time passcode explained](/blog/screen-time-passcode/).
 
 The visible streak creates a shared stake. You've built something together. Breaking it isn't just a personal failure — it's dissolving a shared record. That mutual ownership makes the streak more motivating than a personal one.
 

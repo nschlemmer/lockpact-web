@@ -17,7 +17,7 @@ faq:
   a: 'Decide that in advance, which is exactly what Section 4 of the template is for. Most couples do best with a simple rule: tell each other honestly within 24 hours, talk about why, and don''t use it as ammunition later. Repeated slips are information that the rules need adjusting, not a sign to give up.'
 ---
 
-Search "screen time contract template" and almost everything that comes back is written for a parent to hand to a child — chore charts, gold stars, a parent's signature at the bottom as the enforcer. If you're two adults trying to set a written agreement about phone use between yourselves, none of that fits, and there's very little built for you instead. This is that template: adult language, no parent/child framing, no PDF to download and print — just the full text below, ready to copy into a notes app, a doc, or an actual printed page you both sign.
+Search "screen time contract template" and almost everything that comes back is written for a parent to hand to a child — chore charts, gold stars, a parent's signature at the bottom as the enforcer. If you're two adults trying to set a written agreement about phone use between yourselves, none of that fits, and there's very little built for you instead. This is that template: adult language, no parent/child framing, no PDF to download and print — just the full text below, ready to copy into a notes app, a doc, or an actual printed page you both sign. Couples who live apart can pair it with [apps for long-distance couples](/blog/long-distance-relationship-apps/).
 
 ## Why bother writing it down
 
