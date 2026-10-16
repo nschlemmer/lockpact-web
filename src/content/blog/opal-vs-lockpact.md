@@ -2,10 +2,12 @@
 title: "Free Opal Alternative? Opal vs. LockPact (2026)"
 description: "Looking for a free Opal alternative? A fair comparison of Opal and LockPact — the real cost of Opal's $100/year plan, what each app actually enforces, and when Opal is the better pick."
 pubDate: 2026-04-21
-updatedDate: 2026-10-15
+updatedDate: 2026-10-16
 author: "LockPact"
 tags: ["comparison", "Opal", "screen time"]
 faq:
+- q: "Is Opal free?"
+  a: "Partly. Opal's free plan has one rule, basic timers, app blocking and today's Opal Score. Pro adds unlimited rules, Hard Mode and Allow Only for $99.99 a year, $19.99 a month or $399 lifetime, per opalapp.com on October 16, 2026."
 - q: Is there a free alternative to Opal?
   a: 'Yes. Opal itself has a free plan with one rule, and LockPact is a free alternative built for a different job: you and a partner lock each other''s apps, and neither can unlock without the other. It''s free to use, but it only works with another person.'
 - q: Is Opal worth $100 a year?
@@ -30,6 +32,12 @@ faq:
 | **Platforms** | iOS, Android and Mac | iOS only |
 | **Social Cost** | Low (you can silently fail) | High (partner sees and must approve unlock) |
 | **Best For** | Solo users who want beautiful UX and Mac support | Pairs who want mutual accountability without paying |
+
+## Is Opal free?
+
+Opal has a free plan, but it's limited: one rule covering schedules, time limits or open limits, basic timers, app blocking and today's Opal Score, on iOS, Android and Mac. Pro adds unlimited rules, Hard Mode and Allow Only for $99.99 a year, $19.99 a month or $399 lifetime, per opalapp.com on October 16, 2026. Pro has a one-week trial on the yearly plan and three days on monthly.
+
+On the same page, Opal describes Hard Mode as the setting that means you can't turn Opal off. It's the part of Opal that costs money, and it's the closest Opal gets to a lock someone else controls, though it's still a solo setting. If you only need to block apps with one rule, the free plan is real. If you want unlimited rules, you pay.
 
 ## Is there a free alternative to Opal?
 

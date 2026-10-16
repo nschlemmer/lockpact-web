@@ -292,5 +292,41 @@
   "out": "10-content-privacy",
   "raw": "27-content-privacy",
   "alt": "The Content & Privacy Restrictions screen"
+ },
+ {
+  "slug": "apple-screen-time-doesnt-work",
+  "out": "01-open-always-allowed",
+  "raw": "24-open-always-allowed",
+  "alt": "The Always Allowed row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "apple-screen-time-doesnt-work",
+  "out": "02-open-time-allowances",
+  "raw": "22-open-time-allowances",
+  "alt": "The Time Allowances row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "apple-screen-time-doesnt-work",
+  "out": "03-time-allowances",
+  "raw": "23-time-allowances",
+  "alt": "The Time Allowances screen"
+ },
+ {
+  "slug": "apple-screen-time-doesnt-work",
+  "out": "04-open-schedule",
+  "raw": "20-open-schedule",
+  "alt": "The Screen Time Schedule row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "apple-screen-time-doesnt-work",
+  "out": "05-schedule",
+  "raw": "21-schedule",
+  "alt": "The Screen Time Schedule screen"
+ },
+ {
+  "slug": "apple-screen-time-doesnt-work",
+  "out": "06-open-manage",
+  "raw": "30-open-manage",
+  "alt": "Manage Screen Time highlighted at the bottom of the Screen Time screen"
  }
 ]
