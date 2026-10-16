@@ -46,6 +46,8 @@ final class Capture: XCTestCase {
         q.tap(); sleep(2); return true
     }
 
+    func back() { settings.navigationBars.buttons.firstMatch.tap(); sleep(2) }
+
     func resetToRoot() {
         for _ in 0..<6 {
             let bar = settings.navigationBars.firstMatch
@@ -169,6 +171,53 @@ final class Capture: XCTestCase {
             let req = sb.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Require'")).firstMatch
             write("71-quick-actions", frame: req.exists ? req.frame : nil)
             try? sb.debugDescription.write(toFile: "\(out)/diag-springboard.txt", atomically: true, encoding: .utf8)
+        }
+    }
+
+    // MARK: paced flows for screen recordings. Each writes "<startEpoch> <endEpoch>" to $out/video-<name>.txt
+    // so the shell can trim the recording to exactly the flow.
+
+    func timed(_ name: String, _ flow: () -> Void) {
+        let t0 = Date().timeIntervalSince1970
+        flow()
+        let t1 = Date().timeIntervalSince1970
+        try? "\(t0) \(t1)".write(toFile: "\(out)/video-\(name).txt", atomically: true, encoding: .utf8)
+    }
+
+    func testVideoWebsites() {
+        resetToRoot()
+        timed("websites") {
+            sleep(2); step(nil, "Screen Time"); sleep(2)
+            step(nil, "Apps & Websites", scroll: false); sleep(2)
+            step(nil, "Blocked", scroll: false); sleep(2)
+            let add = settings.buttons.matching(NSPredicate(format: "label CONTAINS 'Add'")).firstMatch
+            if add.exists { add.tap(); sleep(2)
+                let f = settings.textFields.firstMatch; if f.waitForExistence(timeout: 4) { f.tap(); sleep(1); settings.typeText("example.com") }
+                sleep(3) }
+        }
+    }
+
+    func testVideoPasscode() {
+        resetToRoot()
+        timed("passcode") {
+            sleep(2); step(nil, "Screen Time"); sleep(2)
+            step(nil, "Manage Screen Time"); sleep(2)
+            step(nil, "Lock Screen Time Settings", scroll: false); sleep(2)
+            settings.typeText("1234"); sleep(3)
+            let x = settings.buttons.matching(NSPredicate(format: "label IN {'Close','Cancel','Dismiss'}")).firstMatch
+            if x.exists { x.tap() } else { settings.coordinate(withNormalizedOffset: CGVector(dx: 0.095, dy: 0.115)).tap() }
+            sleep(2)
+        }
+    }
+
+    func testVideoTour() {
+        resetToRoot()
+        timed("tour") {
+            sleep(2); step(nil, "Screen Time"); sleep(2)
+            step(nil, "Time Allowances", scroll: false); sleep(3); back(); sleep(1)
+            step(nil, "Screen Time Schedule", scroll: false); sleep(3); back(); sleep(1)
+            step(nil, "Always Allowed", scroll: false); sleep(3); back(); sleep(1)
+            step(nil, "Apps & Websites", scroll: false); sleep(3); back(); sleep(1)
         }
     }
 }

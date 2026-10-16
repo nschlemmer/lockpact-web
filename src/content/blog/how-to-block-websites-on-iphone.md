@@ -43,6 +43,13 @@ On iOS 27, block a website from Apps & Websites in Screen Time. Open Settings, t
 4. Tap the **add button** at the bottom right.
 5. On the **Block Website** sheet, type one URL or paste several, then tap the checkmark.
 
+<figure class="lp-video" style="margin: 1.5rem auto; max-width: 270px;">
+<video controls muted playsinline preload="metadata" poster="/videos/how-to-block-websites-on-iphone.webp" width="270" height="587" style="width: 100%; height: auto; border-radius: 16px;">
+<source src="/videos/how-to-block-websites-on-iphone.mp4" type="video/mp4">
+</video>
+<figcaption style="font-size: 0.8125rem; margin-top: 0.5rem; color: var(--color-text-tertiary);">Screen recording: blocking a website in Screen Time on an iOS 27.0 Simulator, 36 seconds, no sound.</figcaption>
+</figure>
+
 ![The Settings app with the Screen Time row highlighted](../../assets/screens/how-to-block-websites-on-iphone/01-open-screen-time.webp)
 
 ![The Apps & Websites row highlighted on the Screen Time screen](../../assets/screens/how-to-block-websites-on-iphone/02-open-apps-websites.webp)

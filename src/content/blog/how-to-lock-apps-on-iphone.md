@@ -65,6 +65,13 @@ On iOS 27, open Settings, tap Screen Time, and choose the tool that matches what
 2. Pick the tool: **Screen Time Schedule**, **Time Allowances**, **Apps & Websites**, or **Content & Privacy Restrictions**.
 3. Set it up as the sections below describe.
 
+<figure class="lp-video" style="margin: 1.5rem auto; max-width: 270px;">
+<video controls muted playsinline preload="metadata" poster="/videos/how-to-lock-apps-on-iphone.webp" width="270" height="587" style="width: 100%; height: auto; border-radius: 16px;">
+<source src="/videos/how-to-lock-apps-on-iphone.mp4" type="video/mp4">
+</video>
+<figcaption style="font-size: 0.8125rem; margin-top: 0.5rem; color: var(--color-text-tertiary);">Screen recording: a tour of Time Allowances, Screen Time Schedule and Always Allowed on an iOS 27.0 Simulator, 42 seconds, no sound.</figcaption>
+</figure>
+
 ![The Settings app with the Screen Time row highlighted](../../assets/screens/how-to-lock-apps-on-iphone/01-open-screen-time.webp)
 
 ![The iOS 27 Screen Time screen, with Apps & Websites, Screen Time Schedule and Time Allowances](../../assets/screens/how-to-lock-apps-on-iphone/02-screen-time.webp)
