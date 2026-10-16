@@ -4,6 +4,17 @@ description: "The research on blue light, phone use before sleep, and why most a
 pubDate: 2026-05-07
 author: "LockPact"
 tags: ["sleep", "screen time", "phone habits", "health"]
+faq:
+- q: How long before bed should I stop using my phone?
+  a: Research suggests the biggest benefits come from stopping at least 60 minutes before sleep. Thirty minutes still helps. The closer to bedtime, the worse the effect on sleep onset and quality.
+- q: Is it the blue light or the content that hurts sleep more?
+  a: Content type is a stronger predictor of sleep disruption than blue light alone. Emotionally activating content — social media, news, arguments — has a larger effect than passive video. Blue light filters help but don't address the cognitive arousal component.
+- q: Why is it so hard to stop scrolling before bed?
+  a: Habit, FOMO, and the design of the apps. Social feeds are designed to be hard to stop. The "one more scroll" loop is intentional. Willpower at bedtime — when you're tired and depleted — is particularly weak.
+- q: Does phone use before bed affect deep sleep?
+  a: Yes. Studies show people who use phones in the 30 minutes before sleep spend less time in slow-wave (deep) sleep, even when total sleep duration is similar. The sleep they get is less restorative.
+- q: What's the most effective way to stop late-night phone use?
+  a: 'The interventions with the strongest evidence are structural, not willpower-based: phone out of the bedroom, hard app blocks during a nightly window, and external accountability from a partner. Information alone rarely changes the behavior.'
 ---
 
 You've been told the problem is blue light. Get blue light glasses. Turn on Night Shift. You'll sleep better.
@@ -89,30 +100,6 @@ Night Shift on iPhone and f.lux on Android are better than nothing. If you're go
 But they don't fix the cognitive activation problem. They don't make Twitter calming. They don't make the slot-machine scroll non-addictive. They don't prevent the 45-minute doom scroll that you didn't intend to start.
 
 They're a harm reduction tool. Useful, but not a solution.
-
----
-
-## Frequently Asked Questions
-
-### How long before bed should I stop using my phone?
-
-Research suggests the biggest benefits come from stopping at least 60 minutes before sleep. Thirty minutes still helps. The closer to bedtime, the worse the effect on sleep onset and quality.
-
-### Is it the blue light or the content that hurts sleep more?
-
-Content type is a stronger predictor of sleep disruption than blue light alone. Emotionally activating content — social media, news, arguments — has a larger effect than passive video. Blue light filters help but don't address the cognitive arousal component.
-
-### Why is it so hard to stop scrolling before bed?
-
-Habit, FOMO, and the design of the apps. Social feeds are designed to be hard to stop. The "one more scroll" loop is intentional. Willpower at bedtime — when you're tired and depleted — is particularly weak.
-
-### Does phone use before bed affect deep sleep?
-
-Yes. Studies show people who use phones in the 30 minutes before sleep spend less time in slow-wave (deep) sleep, even when total sleep duration is similar. The sleep they get is less restorative.
-
-### What's the most effective way to stop late-night phone use?
-
-The interventions with the strongest evidence are structural, not willpower-based: phone out of the bedroom, hard app blocks during a nightly window, and external accountability from a partner. Information alone rarely changes the behavior.
 
 ---
 

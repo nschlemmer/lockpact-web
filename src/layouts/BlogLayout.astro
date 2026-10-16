@@ -3,6 +3,8 @@ import BaseLayout from './BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import DownloadCTA from '../components/DownloadCTA.astro';
+import FAQ from '../components/FAQ.astro';
+import HowWeTested from '../components/HowWeTested.astro';
 
 interface FaqItem {
   q: string;
@@ -20,12 +22,16 @@ interface Props {
   imageAlt?: string;
   readTime?: string;
   faq?: FaqItem[];
+  testedOn?: string;
+  sources?: { label: string; url: string }[];
+  howWeTested?: boolean;
+  disclosure?: boolean;
   // Post slug — used to build the per-post Apple campaign-link token (`b-<slug>`) for
   // the bottom DownloadCTA. See src/lib/campaigns.ts.
   slug?: string;
 }
 
-const { title, description, pubDate, updatedDate, author, tags = [], image, imageAlt, readTime, faq, slug } = Astro.props;
+const { title, description, pubDate, updatedDate, author, tags = [], image, imageAlt, readTime, faq, slug, testedOn, sources = [], howWeTested = false, disclosure = false } = Astro.props;
 
 const formattedDate = pubDate.toLocaleDateString('en-US', {
   year: 'numeric',
@@ -44,23 +50,24 @@ const formattedUpdatedDate = shownUpdatedDate
   ? shownUpdatedDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
   : '';
 
+// Official profiles only: the App Store listing. Add others here only once they exist.
+const orgNode = {
+  '@type': 'Organization',
+  name: 'LockPact',
+  url: 'https://lockpact.app',
+  sameAs: ['https://apps.apple.com/app/lockpact/id6759302382'],
+};
+
 const blogPostingData = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline: title,
   description: description,
-  author: {
-    '@type': 'Organization',
-    name: 'LockPact',
-    url: 'https://lockpact.app',
-  },
+  author: orgNode,
   datePublished: pubDate.toISOString(),
-  dateModified: (updatedDate ?? pubDate).toISOString(),
-  publisher: {
-    '@type': 'Organization',
-    name: 'LockPact',
-    url: 'https://lockpact.app',
-  },
+  // dateModified can never precede datePublished (a mis-set updatedDate used to produce that).
+  dateModified: new Date(Math.max((updatedDate ?? pubDate).valueOf(), pubDate.valueOf())).toISOString(),
+  publisher: orgNode,
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': Astro.url.href,
@@ -72,7 +79,7 @@ const breadcrumbData = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://lockpact.app/' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://lockpact.app/blog/' },
+    { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://lockpact.app/blog/' },
     { '@type': 'ListItem', position: 3, name: title, item: Astro.url.href },
   ],
 };
@@ -84,6 +91,8 @@ const breadcrumbData = {
 // Claude) that still parse FAQPage for extraction. BaseLayout renders `structuredData`
 // as a single <script type="application/ld+json"> containing a JSON array of root
 // nodes (not a @graph wrapper) — appending here follows that existing convention.
+const plainAnswer = (v: string) => v.replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '$1');
+
 const faqPageData = faq && faq.length > 0
   ? {
       '@context': 'https://schema.org',
@@ -93,7 +102,8 @@ const faqPageData = faq && faq.length > 0
         name: item.q,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: item.a,
+          // Same text the visible FAQ shows, with [text](url) link syntax and ** stripped.
+          text: plainAnswer(item.a),
         },
       })),
     }
@@ -115,6 +125,13 @@ const structuredData = faqPageData
   <Nav />
   <main class="max-w-[720px] mx-auto px-6 py-16 md:py-24">
     <article>
+      <nav aria-label="Breadcrumb" class="text-sm mb-6" style="color: var(--color-text-tertiary);">
+        <a href="/" style="color: var(--color-text-tertiary);">Home</a>
+        <span aria-hidden="true"> &rsaquo; </span>
+        <a href="/blog/" style="color: var(--color-text-tertiary);">Guides</a>
+        <span aria-hidden="true"> &rsaquo; </span>
+        <span aria-current="page">{title}</span>
+      </nav>
       <header class="mb-10">
         <div class="flex flex-wrap items-center gap-3 text-sm mb-4" style="color: var(--color-text-tertiary);">
           {shownUpdatedDate ? (
@@ -138,6 +155,12 @@ const structuredData = faqPageData
         <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight mb-4" style="color: var(--color-text-primary);">
           {title}
         </h1>
+        {testedOn && (
+          <p class="text-sm mb-4" style="color: var(--color-text-secondary);">
+            Tested on {testedOn}
+            {shownUpdatedDate && <> &middot; Updated {formattedUpdatedDate}</>}
+          </p>
+        )}
         {tags.length > 0 && (
           <div class="flex flex-wrap gap-2">
             {tags.map((tag) => (
@@ -152,9 +175,23 @@ const structuredData = faqPageData
         )}
       </header>
 
+      {disclosure && (
+        <p class="text-sm mb-8 px-4 py-3 rounded-lg" style="background: var(--color-accent-soft); color: var(--color-text-secondary);">
+          We make LockPact. Here's how we tested and why it's listed where it is: see our <a href="/editorial-policy/">editorial policy</a>.
+        </p>
+      )}
+
       <div class="prose max-w-none">
         <slot />
       </div>
+
+      {howWeTested && <HowWeTested testedOn={testedOn} sources={sources} />}
+
+      {faq && faq.length > 0 && (
+        <div class="prose max-w-none">
+          <FAQ variant="post" items={faq.map((f) => ({ question: f.q, answer: f.a }))} />
+        </div>
+      )}
     </article>
 
     <div class="mt-16">

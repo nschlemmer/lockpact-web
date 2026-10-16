@@ -4,6 +4,15 @@ description: "Phone use and anxiety feed each other in a cycle that's hard to se
 pubDate: 2026-05-23
 author: "LockPact"
 tags: ["anxiety", "phone use", "mental health", "behavior change", "psychology"]
+faq:
+- q: Why does scrolling feel like it helps anxiety when it doesn't?
+  a: It provides brief distraction that temporarily reduces awareness of the anxious feeling. This is real in the moment. But it doesn't resolve the underlying activation, adds new stimulation to an already-activated nervous system, and reinforces the habit of reaching for the phone as an anxiety response.
+- q: Can phone use actually cause anxiety?
+  a: Yes. Notifications create a vigilance state even when you're not actively checking. Social media comparison tends to decrease mood. News feeds expose your nervous system to a stream of threatening content. These inputs create and maintain anxiety, not just respond to it.
+- q: What's the fastest way to interrupt the anxiety-phone loop?
+  a: Physical movement. A brief walk — even five minutes — gives the nervous system's activated state a channel that scrolling doesn't. Slow exhalation (breathe in for 4 counts, out for 8) activates the parasympathetic system directly. Neither requires much time; both work faster than the phone's temporary distraction.
+- q: Is it bad to use your phone when you're anxious?
+  a: Not inherently. Using your phone to contact someone, listen to something calming, or genuinely distract yourself briefly is different from the scroll loop. The problem is the automatic, reflexive reach that leads to a stimulus-rich feed — not the phone itself.
 ---
 
 Most people who reach for their phone when they're anxious think they're doing something about the anxiety. They're not. They're postponing it and making it slightly worse.
@@ -78,26 +87,6 @@ For some people, the anxiety is more significant — not a phone habit problem w
 - The phone scrolling is one of many avoidance behaviors, not an isolated habit
 
 This isn't to pathologize normal phone use — most people reading this have a habit pattern, not a disorder. But if several of those describe you, professional support addresses the underlying anxiety, not just the phone as a coping mechanism.
-
----
-
-## Frequently Asked Questions
-
-### Why does scrolling feel like it helps anxiety when it doesn't?
-
-It provides brief distraction that temporarily reduces awareness of the anxious feeling. This is real in the moment. But it doesn't resolve the underlying activation, adds new stimulation to an already-activated nervous system, and reinforces the habit of reaching for the phone as an anxiety response.
-
-### Can phone use actually cause anxiety?
-
-Yes. Notifications create a vigilance state even when you're not actively checking. Social media comparison tends to decrease mood. News feeds expose your nervous system to a stream of threatening content. These inputs create and maintain anxiety, not just respond to it.
-
-### What's the fastest way to interrupt the anxiety-phone loop?
-
-Physical movement. A brief walk — even five minutes — gives the nervous system's activated state a channel that scrolling doesn't. Slow exhalation (breathe in for 4 counts, out for 8) activates the parasympathetic system directly. Neither requires much time; both work faster than the phone's temporary distraction.
-
-### Is it bad to use your phone when you're anxious?
-
-Not inherently. Using your phone to contact someone, listen to something calming, or genuinely distract yourself briefly is different from the scroll loop. The problem is the automatic, reflexive reach that leads to a stimulus-rich feed — not the phone itself.
 
 ---
 

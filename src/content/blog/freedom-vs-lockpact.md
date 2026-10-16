@@ -6,12 +6,22 @@ updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["comparison", "Freedom", "screen time apps", "cross-device blocker"]
 faq:
-  - q: "Does LockPact block websites?"
-    a: "LockPact can lock websites you pick in Apple's picker, and Apple says an app can shield up to 50 web domains. Apple doesn't document which browsers the shield covers, so if you need website blocking across browsers, Freedom is the safer choice."
-  - q: "Is Freedom free?"
-    a: "Freedom has a free plan that blocks apps, websites or the whole internet on unlimited devices, without scheduling or Locked Mode. Premium is $3.33 a month billed yearly, $8.99 monthly, or $99.50 lifetime, per freedom.to/pricing on October 15, 2026."
-  - q: "Freedom or LockPact: which holds up better against bypass?"
-    a: "Neither is bypass-proof, because an iPhone owner can always revoke Screen Time access in Settings. Freedom's Locked Mode is Premium. LockPact puts a partner in the unlock path and tells them if you bypass it."
+- q: Does LockPact block websites?
+  a: LockPact can lock websites you pick in Apple's picker, and Apple says an app can shield up to 50 web domains. Apple doesn't document which browsers the shield covers, so if you need website blocking across browsers, Freedom is the safer choice.
+- q: Is Freedom free?
+  a: Freedom has a free plan that blocks apps, websites or the whole internet on unlimited devices, without scheduling or Locked Mode. Premium is $3.33 a month billed yearly, $8.99 monthly, or $99.50 lifetime, per freedom.to/pricing on October 15, 2026.
+- q: 'Freedom or LockPact: which holds up better against bypass?'
+  a: Neither is bypass-proof, because an iPhone owner can always revoke Screen Time access in Settings. Freedom's Locked Mode is Premium. LockPact puts a partner in the unlock path and tells them if you bypass it.
+- q: Is Freedom or LockPact better for screen time control?
+  a: It depends on your problem. Freedom wins if you need consistent blocks across phone, Mac, and Windows. LockPact wins if your iPhone is the main distraction and you have a partner willing to hold the unlock key.
+- q: Does LockPact work on Mac or Windows?
+  a: No. LockPact is iPhone-only. It doesn't extend to Mac, Android, or Windows.
+- q: Can Freedom block apps with partner approval?
+  a: No. Freedom is designed for solo users to set schedules and enforce them across devices. LockPact is the option if you want partner gatekeeping.
+- q: Can you use Freedom and LockPact together?
+  a: Yes. You could use Freedom for cross-device focus blocks during work hours and LockPact for evening accountability on your iPhone with your partner. They solve different parts of the problem.
+- q: How much does Freedom cost compared to LockPact?
+  a: Freedom costs $39.99/year or $8.99/month (or $199 one-time for the Forever plan), regardless of how many devices you use it on. LockPact is free, including all core features.
 ---
 
 Freedom is the incumbent. Since 2011, it's been the standard answer for people who want to block apps and websites across *all* their devices—phone, tablet, Mac, Windows, even Chrome extensions. Set a schedule once. Works everywhere.
@@ -130,28 +140,6 @@ If you're a solo user with strong intent and multi-device setup, Freedom is the 
 If you're someone who's tried solo discipline and bounced off, and you have a partner willing to be the accountability engine, LockPact is the answer.
 
 Know which question you're actually asking. The answer depends on it.
-
-## Frequently Asked Questions
-
-### Is Freedom or LockPact better for screen time control?
-
-It depends on your problem. Freedom wins if you need consistent blocks across phone, Mac, and Windows. LockPact wins if your iPhone is the main distraction and you have a partner willing to hold the unlock key.
-
-### Does LockPact work on Mac or Windows?
-
-No. LockPact is iPhone-only. It doesn't extend to Mac, Android, or Windows.
-
-### Can Freedom block apps with partner approval?
-
-No. Freedom is designed for solo users to set schedules and enforce them across devices. LockPact is the option if you want partner gatekeeping.
-
-### Can you use Freedom and LockPact together?
-
-Yes. You could use Freedom for cross-device focus blocks during work hours and LockPact for evening accountability on your iPhone with your partner. They solve different parts of the problem.
-
-### How much does Freedom cost compared to LockPact?
-
-Freedom costs $39.99/year or $8.99/month (or $199 one-time for the Forever plan), regardless of how many devices you use it on. LockPact is free, including all core features.
 
 ## Read Next
 

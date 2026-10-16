@@ -5,6 +5,15 @@ pubDate: 2026-05-22
 updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["work", "phone habits", "productivity", "professional", "focus"]
+faq:
+- q: Is personal phone use at work a fireable offense?
+  a: In most workplaces, moderate personal phone use is tolerated. Excessive use that visibly affects productivity or looks bad in client-facing situations can have professional consequences. The actual threshold varies by workplace culture, role, and visibility of the behavior.
+- q: How much personal phone use is typical during a work day?
+  a: Studies consistently find one to three hours, though most people estimate their own use as lower than it actually is. The number includes all personal phone interaction, not just social media.
+- q: What's the single most effective change for reducing phone use at work?
+  a: Physical separation during focused work periods. Phone in another room (or bag) during your highest-priority blocks. The barrier needs to be physical — face-down on the desk doesn't provide enough friction.
+- q: How do you reduce phone use at work without it feeling like deprivation?
+  a: 'Define intentional check windows so you''re not eliminating phone use, just scheduling it. When you know you''ll check at 12:30 and 3:30, the urge to check at 10:45 has somewhere to go: later. Batched access feels less restrictive than a blanket ban.'
 ---
 
 Nobody talks about personal phone use at work openly, which is why everyone does more of it than they'd comfortably admit.
@@ -76,24 +85,6 @@ Adding a partner-held app lock during your core work hours provides accountabili
 Working from home takes away the commute, and with it the natural stopping point. Slack and email keep arriving, and you end up half-present with the people you live with while still mentally at work.
 
 Use the phone as the boundary marker instead. At your stopping time, close the work apps, turn on Do Not Disturb for work notifications, and do one personal thing that tells your brain the day is over. The ritual is the point: it only works if the phone behaves differently after five than it did at two.
-
-## Frequently Asked Questions
-
-### Is personal phone use at work a fireable offense?
-
-In most workplaces, moderate personal phone use is tolerated. Excessive use that visibly affects productivity or looks bad in client-facing situations can have professional consequences. The actual threshold varies by workplace culture, role, and visibility of the behavior.
-
-### How much personal phone use is typical during a work day?
-
-Studies consistently find one to three hours, though most people estimate their own use as lower than it actually is. The number includes all personal phone interaction, not just social media.
-
-### What's the single most effective change for reducing phone use at work?
-
-Physical separation during focused work periods. Phone in another room (or bag) during your highest-priority blocks. The barrier needs to be physical — face-down on the desk doesn't provide enough friction.
-
-### How do you reduce phone use at work without it feeling like deprivation?
-
-Define intentional check windows so you're not eliminating phone use, just scheduling it. When you know you'll check at 12:30 and 3:30, the urge to check at 10:45 has somewhere to go: later. Batched access feels less restrictive than a blanket ban.
 
 ---
 

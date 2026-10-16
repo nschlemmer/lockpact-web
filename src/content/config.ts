@@ -18,6 +18,13 @@ const blog = defineCollection({
     // machine-readable answer set for answer engines (AI Overviews, ChatGPT/Bing
     // retrieval, Perplexity), not the visible article prose.
     faq: z.array(z.object({ q: z.string(), a: z.string() })).optional(),
+    // Round 6 trust fields (docs: /editorial-policy/). `testedOn` is shown under the H1 only where a
+    // check was actually run (e.g. "iOS 27.0 Simulator · October 16, 2026"). `sources` feeds the
+    // HowWeTested box. `disclosure` adds the "We make LockPact" line to listicles and comparisons.
+    testedOn: z.string().optional(),
+    sources: z.array(z.object({ label: z.string(), url: z.string() })).optional(),
+    howWeTested: z.boolean().default(false),
+    disclosure: z.boolean().default(false),
   }),
 });
 

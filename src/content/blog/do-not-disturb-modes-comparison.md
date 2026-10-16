@@ -6,14 +6,16 @@ updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["Focus mode", "iPhone", "Do Not Disturb", "app blockers", "comparison"]
 faq:
-  - q: "How do I block apps during Focus on iPhone?"
-    a: "Focus can't. It silences notifications from apps and people you choose and can hide Home Screen pages, but every app still opens. To block an app on a schedule, use Screen Time: Downtime or App Limits, ideally with someone else holding the passcode."
-  - q: "Does Focus mode block apps?"
-    a: "No. Focus mode filters which notifications reach you and can hide chosen Home Screen pages, but every app stays fully openable. If you want an app actually locked, you need Screen Time App Limits or a partner-held lock like LockPact."
-  - q: "Focus mode vs Do Not Disturb — what's the difference?"
-    a: "Do Not Disturb is one specific Focus (silence almost everything). Focus mode is the broader system — Work, Personal, Sleep, and custom Focuses, each with its own allowed people, apps, and Home Screen pages. DND is a Focus; Focus isn't only DND."
-  - q: "What is Reduce Interruptions?"
-    a: "An Apple Intelligence–powered Focus (Apple Intelligence-compatible devices only) that uses on-device understanding of notification content to let through only what it judges genuinely time-sensitive, instead of you picking apps and people manually."
+- q: How do I block apps during Focus on iPhone?
+  a: 'Focus can''t. It silences notifications from apps and people you choose and can hide Home Screen pages, but every app still opens. To block an app on a schedule, use Screen Time: Downtime or App Limits, ideally with someone else holding the passcode.'
+- q: Does Focus mode block apps?
+  a: No. Focus mode filters which notifications reach you and can hide chosen Home Screen pages, but every app stays fully openable. If you want an app actually locked, you need Screen Time App Limits or a partner-held lock like LockPact.
+- q: Focus mode vs Do Not Disturb — what's the difference?
+  a: Do Not Disturb is one specific Focus (silence almost everything). Focus mode is the broader system — Work, Personal, Sleep, and custom Focuses, each with its own allowed people, apps, and Home Screen pages. DND is a Focus; Focus isn't only DND.
+- q: What is Reduce Interruptions?
+  a: An Apple Intelligence–powered Focus (Apple Intelligence-compatible devices only) that uses on-device understanding of notification content to let through only what it judges genuinely time-sensitive, instead of you picking apps and people manually.
+- q: Can Focus modes be turned off easily?
+  a: Yes — a swipe and a tap in Control Center. That ease is appropriate for notification management, but it's exactly why Focus mode is insufficient as an enforcement tool on its own.
 ---
 
 Short answer: no, Focus mode doesn't block apps. It filters notifications and can hide Home Screen pages, but every app on your phone stays one tap away, Focus on or off. What actually stops you from opening an app is Screen Time App Limits (with someone else holding the passcode) or a partner-held lock like LockPact — Focus mode is a genuinely good tool, just not that tool.
@@ -75,30 +77,6 @@ There's also the engagement problem. Focus modes make it easy to open your phone
 **Add LockPact if:** Your problem is evening/nighttime scrolling and you have a partner willing to participate in mutual accountability. The social layer is what differentiates it from the other tools.
 
 These aren't mutually exclusive. A Sleep Focus that silences notifications, combined with a partner-held LockPact lock on Instagram from 9pm–7am, addresses both the notification problem and the app access problem simultaneously.
-
----
-
-## Frequently Asked Questions
-
-### How do I block apps during Focus on iPhone?
-
-Focus can't. It silences notifications from the apps and people you choose and can hide Home Screen pages, but every app still opens if you tap it. To block an app on a schedule, use Screen Time's Downtime or App Limits instead, and have someone else hold the passcode. [How to lock (or block) apps on iPhone](/blog/how-to-lock-apps-on-iphone/) walks through each built-in method.
-
-### Does Focus mode block apps?
-
-No. It filters notifications and can hide Home Screen pages, but it never prevents you from opening an app. If your problem is impulsively opening an app, not being interrupted by one, Focus mode isn't the tool.
-
-### Focus mode vs Do Not Disturb — what's the difference?
-
-Do Not Disturb is a specific, built-in Focus that silences almost everything. "Focus mode" is the umbrella system: Work, Personal, Sleep, DND, and any custom Focus you build, each with its own allowed people, apps, and Home Screen layout. DND is one Focus among several, not a separate system.
-
-### What is Reduce Interruptions?
-
-A newer, Apple Intelligence–powered Focus (requires an Apple Intelligence–compatible device) that reads the content of incoming notifications and decides in the moment which ones are actually time-sensitive, rather than you pre-selecting apps and contacts. It sits between "let everything through" and full DND.
-
-### Can Focus modes be turned off easily?
-
-Yes — a swipe and a tap in Control Center. That ease is appropriate for notification management, but it's exactly why Focus mode is insufficient as an enforcement tool on its own.
 
 ---
 

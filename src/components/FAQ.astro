@@ -1,6 +1,9 @@
 ---
 interface Props {
   items?: { question: string; answer: string }[];
+  /** 'home' = the landing-page accordion (emits its own FAQPage JSON-LD).
+   *  'post' = the visible end-of-post FAQ; the layout emits the JSON-LD, so this renders text only. */
+  variant?: 'home' | 'post';
 }
 
 const defaultItems = [
@@ -34,7 +37,15 @@ const defaultItems = [
   },
 ];
 
-const { items = defaultItems } = Astro.props;
+const { items = defaultItems, variant = 'home' } = Astro.props;
+
+// Post answers may carry [text](url) links (from the old hand-written FAQ sections). Render them as
+// links; the JSON-LD gets the same text with the link syntax stripped, so visible text === schema text.
+const escapeHtml = (v: string) => v.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const renderAnswer = (v: string) =>
+  escapeHtml(v)
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2">$1</a>');
 
 const faqStructuredData = {
   '@context': 'https://schema.org',
@@ -50,6 +61,17 @@ const faqStructuredData = {
 };
 ---
 
+{variant === 'post' ? (
+<section class="mt-16" id="faq" aria-labelledby="faq-heading">
+  <h2 id="faq-heading">Frequently Asked Questions</h2>
+  {items.map((item) => (
+    <div class="faq-post-item">
+      <h3>{item.question}</h3>
+      <p set:html={renderAnswer(item.answer)} />
+    </div>
+  ))}
+</section>
+) : (
 <section class="scroll-fade-up section-sm px-6 transition-colors" style="background: var(--color-bg-secondary);">
   <div class="max-w-[680px] mx-auto">
     <p class="text-label uppercase text-center mb-3" style="color: var(--color-accent);">
@@ -80,6 +102,8 @@ const faqStructuredData = {
   </div>
   <script type="application/ld+json" set:html={JSON.stringify(faqStructuredData)} />
 </section>
+
+)}
 
 <script is:inline>
   document.querySelectorAll('.faq-toggle').forEach(function(btn) {

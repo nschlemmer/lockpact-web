@@ -5,6 +5,17 @@ pubDate: 2026-05-01
 updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["psychology", "accountability partner", "behavior change", "screen time"]
+faq:
+- q: What is an accountability partner for screen time?
+  a: An accountability partner is someone who mutually agrees to help you stick to phone use boundaries by holding keys to app blocks on your device. Instead of relying on willpower alone, you trade the friction of explaining yourself to them with the friction of using a blocked app.
+- q: Does mutual accountability work better than solo willpower?
+  a: 'Yes. The behavioral science on this is consistent: when both players have skin in the game and can''t hide defection, commitment sticks better than solo discipline. It''s not about having more willpower — it''s about changing the cost structure of breaking the commitment.'
+- q: Who shouldn't use an accountability partner app?
+  a: If you don't have a willing, trusted partner or if you prefer to solve this problem entirely alone, mutual accountability isn't for you. Solo strategies are still valid — they just have higher failure rates based on the research.
+- q: How long does it take for accountability to change phone habits?
+  a: 'Most people see a shift in the first week — the awkwardness of asking your partner usually wins over the urge to unlock. By week three or four, the behavior becomes automatic, and the craving often follows. The pattern is: behavior changes first, then cravings and habits adjust.'
+- q: Can my accountability partner see what apps I use?
+  a: No. LockPact does not share any usage data or app activity with your partner. Your partner only sees lock requests, unlock requests, and if the app detects that you bypassed the lock. This separation is intentional — it builds trust without surveillance.
 ---
 
 ## The Gym Buddy Effect
@@ -140,30 +151,6 @@ Some people would rather solve this alone. Some people would rather not involve 
 But if you've tried solo blockers and they failed, and you have someone in your life willing to try this with you, the research is clear: mutual accountability works better than willpower. Not because you'll suddenly have more discipline. But because the incentive structure will change.
 
 And incentive structures are more powerful than discipline.
-
----
-
-## Frequently Asked Questions
-
-### What is an accountability partner for screen time?
-
-An accountability partner is someone who mutually agrees to help you stick to phone use boundaries by holding keys to app blocks on your device. Instead of relying on willpower alone, you trade the friction of explaining yourself to them with the friction of using a blocked app.
-
-### Does mutual accountability work better than solo willpower?
-
-Yes. The behavioral science on this is consistent: when both players have skin in the game and can't hide defection, commitment sticks better than solo discipline. It's not about having more willpower — it's about changing the cost structure of breaking the commitment.
-
-### Who shouldn't use an accountability partner app?
-
-If you don't have a willing, trusted partner or if you prefer to solve this problem entirely alone, mutual accountability isn't for you. Solo strategies are still valid — they just have higher failure rates based on the research.
-
-### How long does it take for accountability to change phone habits?
-
-Most people see a shift in the first week — the awkwardness of asking your partner usually wins over the urge to unlock. By week three or four, the behavior becomes automatic, and the craving often follows. The pattern is: behavior changes first, then cravings and habits adjust.
-
-### Can my accountability partner see what apps I use?
-
-No. LockPact does not share any usage data or app activity with your partner. Your partner only sees lock requests, unlock requests, and if the app detects that you bypassed the lock. This separation is intentional — it builds trust without surveillance.
 
 ---
 

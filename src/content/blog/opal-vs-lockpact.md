@@ -6,8 +6,16 @@ updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["comparison", "Opal", "screen time"]
 faq:
-  - q: "Is there a free alternative to Opal?"
-    a: "Yes. Opal itself has a free plan with one rule, and LockPact is a free alternative built for a different job: you and a partner lock each other's apps, and neither can unlock without the other. It's free to use, but it only works with another person."
+- q: Is there a free alternative to Opal?
+  a: 'Yes. Opal itself has a free plan with one rule, and LockPact is a free alternative built for a different job: you and a partner lock each other''s apps, and neither can unlock without the other. It''s free to use, but it only works with another person.'
+- q: Is Opal worth $100 a year?
+  a: For the right person, yes. If you're iPhone-and-Mac and respond well to a polished, gamified solo experience, Opal is one of the best-designed tools in the category. If you have a willing accountability partner, the same $100/year buys you nothing that a free mutual lock doesn't already do.
+- q: Does Opal's Deep Focus mode actually stop you from bypassing it?
+  a: 'It makes bypassing more difficult than the free tier, but Opal is still a solo tool — you set it, and ultimately you''re the one deciding whether to override it, even if the override is harder to reach. LockPact''s model is different: the override still exists (Apple requires it), but your partner is notified when it happens, so the cost isn''t "was it hard to click," it''s "will someone find out."'
+- q: Can I use Opal and LockPact together?
+  a: Some people do — Opal for cross-device focus sessions on a laptop, LockPact for the phone-specific apps where a partner's involvement matters most. They're not mutually exclusive, though most people end up preferring one primary system once they see which one actually holds.
+- q: Which one is better for couples?
+  a: LockPact, if both people are willing to participate — the mutual structure (you each hold the other's key) is built for exactly that. Opal's Buddies feature offers visibility to a partner, but doesn't give them any actual control, which is a meaningfully weaker form of accountability for two people trying to change together.
 ---
 ## Quick Comparison Table
 
@@ -98,24 +106,6 @@ If you want someone else to care about your commitment: LockPact.
 There's no objectively right answer. It depends on how you actually change behavior. Most people change behavior with accountability. Some people thrive solo.
 
 Know yourself.
-
-## Frequently Asked Questions
-
-### Is Opal worth $100 a year?
-
-For the right person, yes. If you're iPhone-and-Mac and respond well to a polished, gamified solo experience, Opal is one of the best-designed tools in the category. If you have a willing accountability partner, the same $100/year buys you nothing that a free mutual lock doesn't already do.
-
-### Does Opal's Deep Focus mode actually stop you from bypassing it?
-
-It makes bypassing more difficult than the free tier, but Opal is still a solo tool — you set it, and ultimately you're the one deciding whether to override it, even if the override is harder to reach. LockPact's model is different: the override still exists (Apple requires it), but your partner is notified when it happens, so the cost isn't "was it hard to click," it's "will someone find out."
-
-### Can I use Opal and LockPact together?
-
-Some people do — Opal for cross-device focus sessions on a laptop, LockPact for the phone-specific apps where a partner's involvement matters most. They're not mutually exclusive, though most people end up preferring one primary system once they see which one actually holds.
-
-### Which one is better for couples?
-
-LockPact, if both people are willing to participate — the mutual structure (you each hold the other's key) is built for exactly that. Opal's Buddies feature offers visibility to a partner, but doesn't give them any actual control, which is a meaningfully weaker form of accountability for two people trying to change together.
 
 ## Read Next
 

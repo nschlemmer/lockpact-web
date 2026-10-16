@@ -5,12 +5,12 @@ pubDate: 2026-09-15
 author: "LockPact"
 tags: ["accountability partner", "comparison", "phone addiction", "screen time apps"]
 faq:
-  - q: "What is an accountability partner app?"
-    a: "An app that puts a real person — not just a timer or a streak — between you and your locked apps. The strongest versions require your partner to actively approve before you get back in; the weakest just tell them you did."
-  - q: "Is there a free accountability app for phone addiction?"
-    a: "Yes. LockPact is free with no subscription tier. Several others (Screen Freedom, Friend Controls, PeerPause, Useless, Snitch) are free to start but paywall extra apps, unlimited requests, or stricter modes behind a subscription."
-  - q: "Does my partner have to use the app too?"
-    a: "For every app in this roundup, yes — the partner, buddy, or group needs the app installed to approve or get notified. None of them work over text or a verbal promise alone; the approval happens inside the app."
+- q: What is an accountability partner app?
+  a: An app that puts a real person — not just a timer or a streak — between you and your locked apps. The strongest versions require your partner to actively approve before you get back in; the weakest just tell them you did.
+- q: Is there a free accountability app for phone addiction?
+  a: Yes. LockPact is free with no subscription tier. Several others (Screen Freedom, Friend Controls, PeerPause, Useless, Snitch) are free to start but paywall extra apps, unlimited requests, or stricter modes behind a subscription.
+- q: Does my partner have to use the app too?
+  a: For every app in this roundup, yes — the partner, buddy, or group needs the app installed to approve or get notified. None of them work over text or a verbal promise alone; the approval happens inside the app.
 ---
 
 Search "accountability partner" on the App Store and you'll find dozens of apps claiming the word — LockPact, which is free, among them. Almost none of them mean "partner" the same way. Most "accountability" apps are really streak trackers or leaderboards — a number that goes up, a friend who can see it. That's social pressure, and it helps some people. But it's not the same as a partner who actually gets a say.
@@ -66,20 +66,6 @@ If what you actually want is a partner who's genuinely in the loop — not a fri
 ## How to find a partner if you don't have one
 
 The apps above assume you already have someone to pair with — a partner, roommate, or friend willing to hold your key. If you don't, that's the actual first step, and it's less awkward than it sounds. [Best friends make surprisingly effective accountability partners](/blog/best-friends-phone-pact-guide/) precisely because the ask is low-stakes: "want to lock each other's Instagram for a week and see what happens?" is an easy yes from someone who already likes you. If you're looking for a lower-commitment starting point, [running a 7-day phone pact](/blog/how-to-run-a-7-day-phone-pact/) is a fixed-length trial that doesn't require deciding upfront that this is forever.
-
-## Frequently Asked Questions
-
-### What is an accountability partner app?
-
-An app that puts a real person — not just a timer or a streak — between you and your locked apps. The strongest versions require your partner to actively approve before you get back in; the weakest just tell them you did.
-
-### Is there a free accountability app for phone addiction?
-
-Yes. LockPact is free with no subscription tier. Several others (Screen Freedom, Friend Controls, PeerPause, Useless, Snitch) are free to start but paywall extra apps, unlimited requests, or stricter modes behind a subscription.
-
-### Does my partner have to use the app too?
-
-For every app in this roundup, yes — the partner, buddy, or group needs the app installed to approve or get notified. None of them work over text or a verbal promise alone; the approval happens inside the app.
 
 ---
 

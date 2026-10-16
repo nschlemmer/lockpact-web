@@ -5,6 +5,17 @@ pubDate: 2026-05-15
 updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["Moment", "app review", "screen time tracking", "behavior change", "comparison"]
+faq:
+- q: What actually happened to the Moment app?
+  a: The original Moment — built by Kevin Holesh, later co-run with Tim Kendall — shut down in the summer of 2021. Holesh has said declining downloads, driven largely by Apple building Screen Time into iOS in 2018, were the main reason. It's delisted from the App Store; its old listing returns nothing today.
+- q: Is the "Moment" app on the App Store now the same one?
+  a: No. A different, unrelated app also called "Moment – Screen Time Blocker," built by a company called Meaningful Things GmbH, launched in April 2026. It has no connection to the original team, product, or company. Don't assume reviews or history of one apply to the other.
+- q: Does screen time tracking actually reduce phone use?
+  a: For some people, yes — particularly when the data is genuinely surprising. For people who already know they're overusing their phones, tracking adds information without adding friction, and doesn't reliably change behavior.
+- q: 'What''s better: Apple''s built-in Screen Time or a separate tracker?'
+  a: For most users, Apple Screen Time provides enough data without requiring an additional app — it's literally what replaced Moment for most people. A dedicated tracker like RescueTime is worth the subscription mainly if you want cross-device analytics beyond just phone use.
+- q: Can I use Apple Screen Time and LockPact together?
+  a: Yes. Use Screen Time to identify which apps you're overusing and during which hours. Then set those apps as your LockPact targets for those windows. Diagnosis plus enforcement is more effective than either alone — it's the same logic that used to point people from Moment toward a locking app.
 ---
 
 If you're asking what happened to the Moment app, here's the honest answer: the original Moment — the app that put phone-time tracking on the map before Apple ever built Screen Time into iOS — shut down in the summer of 2021 and is delisted from the App Store today. It isn't quietly still around, and any page telling you otherwise is out of date.
@@ -94,30 +105,6 @@ At that point, the question is: what provides enough friction, or enough social 
 **LockPact** (free): Doesn't track usage. Provides mutual locking between two people. Addresses the enforcement gap that tracking apps — Moment included, in its day — always left open.
 
 These aren't mutually exclusive. Using Apple's Screen Time for awareness and LockPact for enforcement is a sensible combination, and it's functionally the same combination people used to reach for Moment plus a willpower app to get.
-
----
-
-## Frequently Asked Questions
-
-### What actually happened to the Moment app?
-
-The original Moment — built by Kevin Holesh, later co-run with Tim Kendall — shut down in the summer of 2021. Holesh has said declining downloads, driven largely by Apple building Screen Time into iOS in 2018, were the main reason. It's delisted from the App Store; its old listing returns nothing today.
-
-### Is the "Moment" app on the App Store now the same one?
-
-No. A different, unrelated app also called "Moment – Screen Time Blocker," built by a company called Meaningful Things GmbH, launched in April 2026. It has no connection to the original team, product, or company. Don't assume reviews or history of one apply to the other.
-
-### Does screen time tracking actually reduce phone use?
-
-For some people, yes — particularly when the data is genuinely surprising. For people who already know they're overusing their phones, tracking adds information without adding friction, and doesn't reliably change behavior.
-
-### What's better: Apple's built-in Screen Time or a separate tracker?
-
-For most users, Apple Screen Time provides enough data without requiring an additional app — it's literally what replaced Moment for most people. A dedicated tracker like RescueTime is worth the subscription mainly if you want cross-device analytics beyond just phone use.
-
-### Can I use Apple Screen Time and LockPact together?
-
-Yes. Use Screen Time to identify which apps you're overusing and during which hours. Then set those apps as your LockPact targets for those windows. Diagnosis plus enforcement is more effective than either alone — it's the same logic that used to point people from Moment toward a locking app.
 
 ---
 

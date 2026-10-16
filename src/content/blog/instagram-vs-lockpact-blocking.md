@@ -6,14 +6,14 @@ updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["Instagram", "screen time", "app limits", "social media", "behavior change"]
 faq:
-  - q: "Can I lock Instagram for certain hours?"
-    a: "Yes, two honest ways: iOS Screen Time App Limits set through Downtime for those hours (with a partner holding the override passcode), or a LockPact window your partner locks with you. Neither is a native Instagram feature."
-  - q: "Can I set an Instagram time limit that needs a password to override?"
-    a: "Yes — Screen Time's App Limit, if the passcode is set by someone else. As of iOS 26.4, pair it with Lock Screen Time Settings so the passcode itself can't be turned off from Settings without that same code."
-  - q: "Can I lock Instagram after a time limit?"
-    a: "Screen Time's built-in limit lets you tap through instantly. To make it stick after the limit hits, the passcode needs to belong to someone other than you — a partner, using Screen Time or a mutual lock like LockPact."
-  - q: "Does Instagram's built-in daily limit actually lock the app?"
-    a: "No. It's a notification with a one-tap 'Ignore Limit' button. It adds awareness, not friction — most people who set it override it more than half the time."
+- q: Can I lock Instagram for certain hours?
+  a: 'Yes, two honest ways: iOS Screen Time App Limits set through Downtime for those hours (with a partner holding the override passcode), or a LockPact window your partner locks with you. Neither is a native Instagram feature.'
+- q: Can I set an Instagram time limit that needs a password to override?
+  a: Yes — Screen Time's App Limit, if the passcode is set by someone else. As of iOS 26.4, pair it with Lock Screen Time Settings so the passcode itself can't be turned off from Settings without that same code.
+- q: Can I lock Instagram after a time limit?
+  a: Screen Time's built-in limit lets you tap through instantly. To make it stick after the limit hits, the passcode needs to belong to someone other than you — a partner, using Screen Time or a mutual lock like LockPact.
+- q: Does Instagram's built-in daily limit actually lock the app?
+  a: No. It's a notification with a one-tap 'Ignore Limit' button. It adds awareness, not friction — most people who set it override it more than half the time.
 ---
 
 To lock Instagram after a certain time on iPhone, open **Settings → Screen Time → App Limits → Add Limit**, open the social category, select Instagram, tap **Next**, and set the time. To lock it for certain hours instead, use **Settings → Screen Time → Downtime**. Either one only holds if someone else sets the Screen Time passcode.
@@ -74,26 +74,6 @@ Lock Screen Time Settings answers "can I stop myself from turning it off" for In
 **Deleting Instagram:** most effective if the goal is quitting, not reducing. The first three days are the hard part; most people report it easier than expected after a week.
 
 Looking beyond Instagram? [Best Free App Blockers for iPhone (2026)](/blog/best-free-app-blocker-iphone-2026/) covers the free options, and [the ranking of app blockers you can't easily bypass](/blog/app-blockers-you-cant-bypass-iphone/) shows how hard each one is to get around.
-
----
-
-## Frequently Asked Questions
-
-### Can I lock Instagram for certain hours?
-
-Yes — either iOS Screen Time's Downtime scheduled for those hours (partner-held passcode) or a LockPact window you and a partner start together. Neither is built into Instagram itself.
-
-### Can I set an Instagram time limit that needs a password to override?
-
-Yes. Set the App Limit through Screen Time, have your partner set the passcode, and as of iOS 26.4 turn on Lock Screen Time Settings so the passcode can't be quietly disabled either.
-
-### Can I lock Instagram after a time limit?
-
-Only if the override requires someone else's passcode. Instagram's own "Ignore Limit" is a single tap with nothing behind it.
-
-### Does Instagram's built-in daily limit actually lock the app?
-
-No — it's a notification, not a lock. Most people who set it override it more than half the time, because there's no real cost to tapping through.
 
 ---
 

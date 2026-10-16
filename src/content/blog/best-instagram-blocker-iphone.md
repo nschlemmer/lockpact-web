@@ -5,14 +5,14 @@ pubDate: 2026-10-15T09:00:00-07:00
 author: "LockPact"
 tags: ["Instagram", "app blockers", "comparison", "iPhone", "social media"]
 faq:
-  - q: "What is the best free Instagram blocker for iPhone?"
-    a: "For a free lock that holds, Screen Time with someone else holding the passcode, or LockPact, which is free to use and needs a partner's approval to unlock. ScreenZen and one sec's essentials are free friction tools. You can turn all of them off unless another person is involved."
-  - q: "Can I block Instagram on iPhone without an app?"
-    a: "Yes. Settings, Screen Time, App Limits sets a daily budget for Instagram, and Downtime sets hours when it's off. Apple says limits can be ignored by default, so the passcode matters: someone else should set it, or the limit is a suggestion."
-  - q: "Does Instagram have its own blocker?"
-    a: "Instagram offers a daily reminder from your activity settings, which tells you how long you've been on. It's a reminder, not a lock. For a lock, use iOS Screen Time or a partner-held lock app."
-  - q: "Can an Instagram blocker be bypassed?"
-    a: "Yes, by the phone's owner. Any iPhone owner can revoke an app's Screen Time access in Settings. What changes is the cost: an app that tells a partner when you do, or needs their approval, makes quitting quietly much harder."
+- q: What is the best free Instagram blocker for iPhone?
+  a: For a free lock that holds, Screen Time with someone else holding the passcode, or LockPact, which is free to use and needs a partner's approval to unlock. ScreenZen and one sec's essentials are free friction tools. You can turn all of them off unless another person is involved.
+- q: Can I block Instagram on iPhone without an app?
+  a: 'Yes. Settings, Screen Time, App Limits sets a daily budget for Instagram, and Downtime sets hours when it''s off. Apple says limits can be ignored by default, so the passcode matters: someone else should set it, or the limit is a suggestion.'
+- q: Does Instagram have its own blocker?
+  a: Instagram offers a daily reminder from your activity settings, which tells you how long you've been on. It's a reminder, not a lock. For a lock, use iOS Screen Time or a partner-held lock app.
+- q: Can an Instagram blocker be bypassed?
+  a: 'Yes, by the phone''s owner. Any iPhone owner can revoke an app''s Screen Time access in Settings. What changes is the cost: an app that tells a partner when you do, or needs their approval, makes quitting quietly much harder.'
 ---
 
 The best Instagram blocker for iPhone is the one you can't talk yourself out of. Seven options are below, most of them free, from Instagram's own reminder to Apple's Screen Time to [LockPact](/go/b-best-instagram-blocker-iphone/), a free-to-use app where a partner approves any unlock. For each: what it stops, who can turn it off, and what it costs. Prices were checked October 15, 2026.
@@ -86,21 +86,3 @@ The free-to-use part is the whole partner flow; the only optional purchases are 
 If you want awareness, use Instagram's reminder or one sec. If you want a hard stop with no one else involved, use Screen Time Downtime and accept that you hold the passcode. If you've set limits before and tapped through every time, you need the off-switch to belong to someone else, either through a Screen Time passcode they hold or through LockPact.
 
 No Instagram blocker makes quitting impossible. The best ones make it slower, more visible, and a conversation. For the exact taps on the built-in route, read [how to lock Instagram after a time limit](/blog/instagram-vs-lockpact-blocking/), and for a version that covers every app, [how to lock (or block) apps on iPhone](/blog/how-to-lock-apps-on-iphone/).
-
-## Frequently Asked Questions
-
-### What is the best free Instagram blocker for iPhone?
-
-For a free lock that holds, Screen Time with someone else holding the passcode, or LockPact, which is free to use and needs a partner's approval to unlock. ScreenZen and one sec's essentials are free friction tools. All of them can be turned off by you unless another person is involved.
-
-### Can I block Instagram on iPhone without an app?
-
-Yes. Settings, Screen Time, App Limits sets a daily budget for Instagram, and Downtime sets hours when it's off. Apple says limits can be ignored by default, so the passcode matters: someone else should set it, or the limit is a suggestion.
-
-### Does Instagram have its own blocker?
-
-Instagram offers a daily reminder from your activity settings, which tells you how long you've been on. It's a reminder, not a lock. For a lock, use iOS Screen Time or a partner-held lock app.
-
-### Can an Instagram blocker be bypassed?
-
-Yes, by the phone's owner. Any iPhone owner can revoke an app's Screen Time access in Settings. What changes is the cost: an app that tells a partner when you do, or needs their approval, makes quitting quietly much harder.

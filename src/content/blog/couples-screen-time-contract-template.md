@@ -4,6 +4,17 @@ description: "A free screen time contract template for adult couples — not the
 pubDate: 2026-07-24
 author: "LockPact"
 tags: ["couples", "template", "how-to", "screen time"]
+faq:
+- q: Is a screen time contract for couples actually legally binding?
+  a: No, and it isn't meant to be. It's a written agreement in the same spirit as a roommate chore chart — its value is making the boundary specific and giving you something to point back to, not legal enforceability.
+- q: Where can I find a screen time contract template that isn't for kids?
+  a: That's what this page is — most templates online are written for a parent-child dynamic (chore charts, a parent's signature as enforcer). The template above uses adult language and assumes two equal partners agreeing to the same rules, with neither one positioned as the enforcer of the other.
+- q: How do we make sure we actually stick to the contract?
+  a: Writing it down helps, but the honest answer is that a piece of paper can't stop you from opening a locked app at 11pm — only another person, in the moment, can. Pairing the written agreement with a tool where your partner has to approve your unlock (like LockPact) turns the contract's unlock rules into something enforced in real time instead of remembered on your own.
+- q: What apps should we put in the contract?
+  a: Two to four, not everything. Pick the ones that actually eat time you'd rather spend together — usually the same one or two apps come up if you're honest about it. A contract that tries to cover your whole phone gets ignored within a week.
+- q: What if one of us breaks the agreement?
+  a: 'Decide that in advance, which is exactly what Section 4 of the template is for. Most couples do best with a simple rule: tell each other honestly within 24 hours, talk about why, and don''t use it as ammunition later. Repeated slips are information that the rules need adjusting, not a sign to give up.'
 ---
 
 Search "screen time contract template" and almost everything that comes back is written for a parent to hand to a child — chore charts, gold stars, a parent's signature at the bottom as the enforcer. If you're two adults trying to set a written agreement about phone use between yourselves, none of that fits, and there's very little built for you instead. This is that template: adult language, no parent/child framing, no PDF to download and print — just the full text below, ready to copy into a notes app, a doc, or an actual printed page you both sign.
@@ -111,25 +122,3 @@ The contract is the plan. The pact is what makes the plan hold on a bad night.
 ## Related reading
 
 If you want the reasoning behind why written, mutual agreements beat solo willpower in the first place, [Couples and Phone Boundaries: A Field Guide](/blog/couples-and-phone-boundaries/) covers the psychology and a handful of specific boundary examples beyond what's in this template. And if you're comparing tools that could actually enforce Section 3, [Best Screen Time Apps for Couples](/blog/best-screen-time-apps-for-couples/) breaks down the real options, including where LockPact does and doesn't fit — or, if you're setting this up with a friend rather than a romantic partner, [Apps That Let a Friend Control Your Screen Time (2026)](/blog/apps-that-let-a-friend-control-your-screen-time/) covers the same mutual-lock idea for that pairing.
-
-## Frequently Asked Questions
-
-### Is a screen time contract for couples actually legally binding?
-
-No, and it isn't meant to be. It's a written agreement in the same spirit as a roommate chore chart — its value is making the boundary specific and giving you something to point back to, not legal enforceability.
-
-### Where can I find a screen time contract template that isn't for kids?
-
-That's what this page is — most templates online are written for a parent-child dynamic (chore charts, a parent's signature as enforcer). The template above uses adult language and assumes two equal partners agreeing to the same rules, with neither one positioned as the enforcer of the other.
-
-### How do we make sure we actually stick to the contract?
-
-Writing it down helps, but the honest answer is that a piece of paper can't stop you from opening a locked app at 11pm — only another person, in the moment, can. Pairing the written agreement with a tool where your partner has to approve your unlock (like LockPact) turns the contract's unlock rules into something enforced in real time instead of remembered on your own.
-
-### What apps should we put in the contract?
-
-Two to four, not everything. Pick the ones that actually eat time you'd rather spend together — usually the same one or two apps come up if you're honest about it. A contract that tries to cover your whole phone gets ignored within a week.
-
-### What if one of us breaks the agreement?
-
-Decide that in advance, which is exactly what Section 4 of the template is for. Most couples do best with a simple rule: tell each other honestly within 24 hours, talk about why, and don't use it as ammunition later. Repeated slips are information that the rules need adjusting, not a sign to give up.

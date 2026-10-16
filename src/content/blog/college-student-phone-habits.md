@@ -5,6 +5,15 @@ pubDate: 2026-05-14
 updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["college", "students", "phone habits", "studying", "productivity"]
+faq:
+- q: How much does phone use during studying actually hurt grades?
+  a: Substantially. The research consistently shows that phone presence during study (even without active use) reduces recall. Actual phone use during study sessions degrades both learning efficiency and material retention significantly more than most students expect.
+- q: What's the most effective single change a college student can make?
+  a: Physical removal from the study space. Phone in another room during study sessions, consistently, produces the most reliable improvement in study quality. It's inconvenient and works better than anything that keeps the phone present.
+- q: Can mutual accountability work between roommates?
+  a: Yes, often better than between people who don't share a space. The observation is built in, the social dynamic is natural, and the shared context (same exams, same pressures) creates genuine mutual interest in making it work.
+- q: Is it unrealistic to be phone-free during studying when you need your phone for school?
+  a: No. Most actual school tasks (reading PDFs, accessing the LMS, research) can be done on a laptop. The "I need my phone for school" argument usually refers to the handful of genuine phone-specific tools (certain apps, two-factor authentication) — not social media, texting, or the apps that consume most phone time.
 ---
 
 If you're trying to figure out how to stop scrolling in class or during a study session, you're dealing with a particular phone environment. Your schedule is your own — no one is watching when you check your phone during lecture or when you fall into a three-hour Reddit spiral at 11pm. The phone is also genuinely necessary: syllabuses, group chats, research, campus apps, everything runs through it.
@@ -90,26 +99,6 @@ This works especially well applied to [a roommate pact](/blog/roommate-phone-pac
 All-nighters are a particular phone trap. You're tired, motivation is low, the work is hard, the phone is the easiest thing in the room. All-nighter phone use is among the most destructive in terms of academic outcomes — you're already cognitively depleted, the phone depletes you further, and the work you produce reflects it.
 
 If all-nighters are unavoidable, the most useful rule is phone-free periods *within* the all-nighter: 45 minutes focused, phone in another room, then 10-minute break with phone. The Pomodoro structure applied to late-night studying reduces overall phone use while preserving a release valve.
-
----
-
-## Frequently Asked Questions
-
-### How much does phone use during studying actually hurt grades?
-
-Substantially. The research consistently shows that phone presence during study (even without active use) reduces recall. Actual phone use during study sessions degrades both learning efficiency and material retention significantly more than most students expect.
-
-### What's the most effective single change a college student can make?
-
-Physical removal from the study space. Phone in another room during study sessions, consistently, produces the most reliable improvement in study quality. It's inconvenient and works better than anything that keeps the phone present.
-
-### Can mutual accountability work between roommates?
-
-Yes, often better than between people who don't share a space. The observation is built in, the social dynamic is natural, and the shared context (same exams, same pressures) creates genuine mutual interest in making it work.
-
-### Is it unrealistic to be phone-free during studying when you need your phone for school?
-
-No. Most actual school tasks (reading PDFs, accessing the LMS, research) can be done on a laptop. The "I need my phone for school" argument usually refers to the handful of genuine phone-specific tools (certain apps, two-factor authentication) — not social media, texting, or the apps that consume most phone time.
 
 ---
 

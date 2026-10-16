@@ -5,6 +5,17 @@ pubDate: 2026-07-24
 updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["relationships", "phone use", "couples", "how-to"]
+faq:
+- q: What does phubbing mean?
+  a: Phubbing — a blend of "phone" and "snubbing" — means ignoring the person you're with in favor of your phone, in a moment where your attention was reasonably expected. It was coined in 2012 by Australian ad agency McCann Melbourne for a Macquarie Dictionary "Stop Phubbing" campaign.
+- q: Is phubbing bad for relationships?
+  a: Research on "partner phubbing," notably a 2016 Baylor University study published in *Computers in Human Behavior*, found it predicts lower relationship satisfaction, which in turn is linked to lower personal well-being and higher depression. It's specifically being phubbed by a close partner — not general phone use — that the research connects to relationship harm.
+- q: How do I stop phubbing my partner?
+  a: Target specific windows (dinner, bedtime, the first ten minutes home) rather than "using my phone less" in general. Put the phone out of reach, not just face-down on the table, and expect the urge to check it to fade within days once the habit breaks.
+- q: How do I tell my partner they're phubbing me?
+  a: Name a specific moment and how it made you feel, instead of a general accusation like "you're always on your phone." Specificity keeps the conversation about the moment, not a referendum on their whole relationship with their phone.
+- q: Is occasional phubbing normal?
+  a: Yes — nearly everyone does it sometimes, and that's not a crisis on its own. What's worth addressing is a repeated pattern in the same moments, since that's a habit loop rather than a one-off distraction.
 ---
 
 You're mid-sentence. Your partner glances at their phone. Just for a second — a notification, probably nothing. But you notice the second, and you notice that they didn't come back to your sentence, and you notice that you've stopped talking without really deciding to.
@@ -72,25 +83,3 @@ That discomfort is the habit pushing back. It doesn't mean the change is wrong. 
 Individual willpower is the weakest lever here, for the same reason solo screen-time limits tend to fail: the person who's tempted to check their phone is also the person who decides whether the rule applies right now. "I won't check my phone at dinner" is easy to override at 7:42pm when you're actually at dinner and genuinely bored.
 
 What works better is making the boundary mutual and a little bit externally enforced — both people agree to the same window, and there's some friction (a partner who notices, a lock that requires asking) between wanting the phone and getting it. That's most of what [Couples and Phone Boundaries: A Field Guide](/blog/couples-and-phone-boundaries/) walks through in detail, and it's the same principle behind pairing up for a real trial — see [Best Screen Time Apps for Couples](/blog/best-screen-time-apps-for-couples/) if you want to see what a mutual, partner-held boundary actually looks like as a tool rather than just an agreement you both intend to keep.
-
-## Frequently Asked Questions
-
-### What does phubbing mean?
-
-Phubbing — a blend of "phone" and "snubbing" — means ignoring the person you're with in favor of your phone, in a moment where your attention was reasonably expected. It was coined in 2012 by Australian ad agency McCann Melbourne for a Macquarie Dictionary "Stop Phubbing" campaign.
-
-### Is phubbing bad for relationships?
-
-Research on "partner phubbing," notably a 2016 Baylor University study published in *Computers in Human Behavior*, found it predicts lower relationship satisfaction, which in turn is linked to lower personal well-being and higher depression. It's specifically being phubbed by a close partner — not general phone use — that the research connects to relationship harm.
-
-### How do I stop phubbing my partner?
-
-Target specific windows (dinner, bedtime, the first ten minutes home) rather than "using my phone less" in general. Put the phone out of reach, not just face-down on the table, and expect the urge to check it to fade within days once the habit breaks.
-
-### How do I tell my partner they're phubbing me?
-
-Name a specific moment and how it made you feel, instead of a general accusation like "you're always on your phone." Specificity keeps the conversation about the moment, not a referendum on their whole relationship with their phone.
-
-### Is occasional phubbing normal?
-
-Yes — nearly everyone does it sometimes, and that's not a crisis on its own. What's worth addressing is a repeated pattern in the same moments, since that's a habit loop rather than a one-off distraction.

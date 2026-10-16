@@ -6,14 +6,14 @@ updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["doomscrolling", "how-to", "phone habits", "screen time", "iPhone"]
 faq:
-  - q: "How do I stop doomscrolling on my iPhone?"
-    a: "Lock the apps that pull you in with Screen Time: App Limits for a daily budget, Downtime for hours when they're off. Then give the Screen Time passcode to someone else, so the limit can't be tapped through. Grayscale makes the feed less rewarding."
-  - q: "Is there an app that stops doomscrolling?"
-    a: "Several apps add friction or locks, but any app you control can be turned off by you in Settings. LockPact is free to use and puts a partner in the unlock path, so ending a lock early means asking someone."
-  - q: "Does grayscale help with doomscrolling?"
-    a: "It can make a feed less visually rewarding, and on iPhone it's free: Settings, Accessibility, Display & Text Size, Color Filters, Grayscale. It's a nudge you can undo in seconds, so pair it with a limit someone else controls."
-  - q: "Why can't I stop doomscrolling with willpower?"
-    a: "The feed is built to remove stopping points, and you decide to stop when your resistance is lowest. A rule set in advance, and held by someone else, doesn't depend on how you feel mid-scroll."
+- q: How do I stop doomscrolling on my iPhone?
+  a: 'Lock the apps that pull you in with Screen Time: App Limits for a daily budget, Downtime for hours when they''re off. Then give the Screen Time passcode to someone else, so the limit can''t be tapped through. Grayscale makes the feed less rewarding.'
+- q: Is there an app that stops doomscrolling?
+  a: Several apps add friction or locks, but any app you control can be turned off by you in Settings. LockPact is free to use and puts a partner in the unlock path, so ending a lock early means asking someone.
+- q: Does grayscale help with doomscrolling?
+  a: 'It can make a feed less visually rewarding, and on iPhone it''s free: Settings, Accessibility, Display & Text Size, Color Filters, Grayscale. It''s a nudge you can undo in seconds, so pair it with a limit someone else controls.'
+- q: Why can't I stop doomscrolling with willpower?
+  a: The feed is built to remove stopping points, and you decide to stop when your resistance is lowest. A rule set in advance, and held by someone else, doesn't depend on how you feel mid-scroll.
 ---
 
 You can stop doomscrolling by taking the decision out of the moment: lock the apps that pull you in, set the lock ahead of time, and give the off-switch to someone else. The built-in version is free, and so is [LockPact](/go/b-how-to-stop-doomscrolling/), an iOS app where a partner approves any unlock. This guide covers what actually works on an iPhone, and the honest limits of each method.
@@ -87,21 +87,3 @@ LockPact is for the people those steps keep failing: the ones who set the limit,
 ## What should you not expect?
 
 No method makes it impossible. An iPhone owner can always revoke an app's Screen Time access or erase the phone, and no app can change that. What you're doing is making quitting slower, more visible, and a conversation instead of a tap. For most people that's the difference between a habit that holds and one that doesn't.
-
-## Frequently Asked Questions
-
-### How do I stop doomscrolling on my iPhone?
-
-Lock the apps that pull you in with Screen Time: App Limits for a daily budget, Downtime for hours when they're off. Then give the Screen Time passcode to someone else, so the limit can't be tapped through. Grayscale makes the feed less rewarding.
-
-### Is there an app that stops doomscrolling?
-
-Several apps add friction or locks, but any app you control can be turned off by you in Settings. LockPact is free to use and puts a partner in the unlock path, so ending a lock early means asking someone.
-
-### Does grayscale help with doomscrolling?
-
-It can make a feed less visually rewarding, and on iPhone it's free: Settings, Accessibility, Display & Text Size, Color Filters, Grayscale. It's a nudge you can undo in seconds, so pair it with a limit someone else controls.
-
-### Why can't I stop doomscrolling with willpower?
-
-The feed is built to remove stopping points, and you decide to stop when your resistance is lowest. A rule set in advance, and held by someone else, doesn't depend on how you feel mid-scroll.

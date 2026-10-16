@@ -6,14 +6,14 @@ updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["Brick", "alternatives", "app blockers", "comparison", "iPhone"]
 faq:
-  - q: "Is there a free alternative to Brick?"
-    a: "Yes. LockPact is free to use and needs no hardware: a partner holds the unlock key instead of a device. Opal and Clearspace also have free tiers, but their off-switch is still you, from Settings."
-  - q: "Do any Brick alternatives work without a physical device?"
-    a: "Yes. Every app here is app-only: LockPact, Opal, AppBlock, Clearspace and one sec. The difference is who can turn the block off, not whether hardware is involved."
-  - q: "How much does Brick cost?"
-    a: "Brick lists the device at $59, with no subscription and a 30-day money-back guarantee, on getbrick.com as of October 15, 2026. It comes with five Emergency Unbricks that unblock all apps."
-  - q: "Is an app as strong as Brick?"
-    a: "Not as a physical barrier. An iPhone owner can always revoke Screen Time access in Settings. An app can make that slower, louder, or someone else's decision, but never impossible."
+- q: Is there a free alternative to Brick?
+  a: 'Yes. LockPact is free to use and needs no hardware: a partner holds the unlock key instead of a device. Opal and Clearspace also have free tiers, but their off-switch is still you, from Settings.'
+- q: Do any Brick alternatives work without a physical device?
+  a: 'Yes. Every app here is app-only: LockPact, Opal, AppBlock, Clearspace and one sec. The difference is who can turn the block off, not whether hardware is involved.'
+- q: How much does Brick cost?
+  a: Brick lists the device at $59, with no subscription and a 30-day money-back guarantee, on getbrick.com as of October 15, 2026. It comes with five Emergency Unbricks that unblock all apps.
+- q: Is an app as strong as Brick?
+  a: Not as a physical barrier. An iPhone owner can always revoke Screen Time access in Settings. An app can make that slower, louder, or someone else's decision, but never impossible.
 ---
 
 If you want what Brick does without buying and carrying a device, there are app-only options, and one of them is free. [LockPact](/go/b-brick-alternative/) is a free iOS app where a partner, not a gadget, holds the key. This guide covers **five app-only Brick alternatives, what each costs, and the honest answer to the only question that matters: who can turn it off?**
@@ -85,21 +85,3 @@ That sorts the five into four kinds of friction: a delay (one sec), a task (Clea
 If your reason for buying Brick was "I need the off-switch to be somewhere other than my thumb," the closest app-only answer is a person. Your partner is the brick you can't leave in a drawer: they're reachable when you travel, there's nothing to lose, and the cost of asking is social, not a gadget fee.
 
 It won't suit everyone. If you'd rather not involve anyone, Brick or a strict solo mode is the better fit, and we'd say so. If you can name one person you trust, [LockPact](/go/b-brick-alternative/) is free and takes a few minutes to set up. To go deeper on app-only options generally, read [apps that let a friend control your screen time](/blog/apps-that-let-a-friend-control-your-screen-time/).
-
-## Frequently Asked Questions
-
-### Is there a free alternative to Brick?
-
-Yes. LockPact is free to use and needs no hardware: a partner holds the unlock key instead of a device. Opal and Clearspace also have free tiers, but their off-switch is still you, from Settings.
-
-### Do any Brick alternatives work without a physical device?
-
-Yes. Every app here is app-only: LockPact, Opal, AppBlock, Clearspace and one sec. The difference is who can turn the block off, not whether hardware is involved.
-
-### How much does Brick cost?
-
-Brick lists the device at $59, with no subscription and a 30-day money-back guarantee, on getbrick.com as of October 15, 2026. It comes with five Emergency Unbricks that unblock all apps.
-
-### Is an app as strong as Brick?
-
-Not as a physical barrier. An iPhone owner can always revoke Screen Time access in Settings. An app can make that slower, louder, or someone else's decision, but never impossible.

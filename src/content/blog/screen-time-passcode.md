@@ -5,14 +5,14 @@ pubDate: 2026-10-15T09:00:00-07:00
 author: "LockPact"
 tags: ["Screen Time", "iOS 27", "how-to", "accountability"]
 faq:
-  - q: "Who should hold my Screen Time passcode?"
-    a: "Someone other than you: a partner or friend you trust to say no. If you know the code, you can change or remove it in a few taps, so it only works as a boundary when somebody else is the only one who holds it."
-  - q: "How do I change my Screen Time passcode?"
-    a: "Open Settings, tap Screen Time, tap Manage Screen Time, then tap Change Screen Time Passcode twice. Enter the Apple Account details if asked, then type the new passcode and confirm it."
-  - q: "What if I forgot my Screen Time passcode?"
-    a: "Use the same Change Screen Time Passcode path and sign in with the Apple Account you set up for Screen Time Passcode Recovery. Apple says that without that account you can't reset the passcode, and Apple can't provide it."
-  - q: "Does a Screen Time passcode stop me bypassing my own limits?"
-    a: "Only if someone else holds it. Even then, a device owner can still get around any iPhone restriction. A passcode makes bypass slower and harder to do quietly; it doesn't make it impossible."
+- q: Who should hold my Screen Time passcode?
+  a: 'Someone other than you: a partner or friend you trust to say no. If you know the code, you can change or remove it in a few taps, so it only works as a boundary when somebody else is the only one who holds it.'
+- q: How do I change my Screen Time passcode?
+  a: Open Settings, tap Screen Time, tap Manage Screen Time, then tap Change Screen Time Passcode twice. Enter the Apple Account details if asked, then type the new passcode and confirm it.
+- q: What if I forgot my Screen Time passcode?
+  a: Use the same Change Screen Time Passcode path and sign in with the Apple Account you set up for Screen Time Passcode Recovery. Apple says that without that account you can't reset the passcode, and Apple can't provide it.
+- q: Does a Screen Time passcode stop me bypassing my own limits?
+  a: Only if someone else holds it. Even then, a device owner can still get around any iPhone restriction. A passcode makes bypass slower and harder to do quietly; it doesn't make it impossible.
 ---
 
 Your Screen Time passcode is the one thing standing between you and every limit you've set, and in most households the person who knows it is the person it was meant to restrain. This guide covers Apple's own steps to **change it, reset it if you forgot it, and turn it off**, then makes the case for handing it to someone else. Everything here is free and built into your iPhone. If you want the mutual version, [LockPact](/) is a free iOS app where your partner approves your unlocks and you approve theirs.
@@ -70,24 +70,6 @@ The same passcode protects Screen Time's website rules, so if you're blocking si
 A passcode answers "can I quietly turn this off?" It doesn't tell anyone when you do. LockPact is a free, mutual lock: you each lock your own apps, your partner approves your unlock requests, and if either of you bypasses the lock, the other is notified. It sits on top of the passcode rather than replacing it, and it's free, with no premium tier gating the lock.
 
 [Get LockPact on the App Store →](/go/b-screen-time-passcode/)
-
-## Frequently Asked Questions
-
-### Who should hold my Screen Time passcode?
-
-Someone other than you: a partner or friend you trust to say no. If you know the code, you can change or remove it in a few taps, so it only works as a boundary when somebody else is the only one who holds it.
-
-### How do I change my Screen Time passcode?
-
-Open Settings, tap Screen Time, tap Manage Screen Time, then tap Change Screen Time Passcode twice. Enter the Apple Account details if asked, then type the new passcode and confirm it.
-
-### What if I forgot my Screen Time passcode?
-
-Use the same Change Screen Time Passcode path and sign in with the Apple Account you set up for Screen Time Passcode Recovery. Apple says that without that account you can't reset the passcode, and Apple can't provide it.
-
-### Does a Screen Time passcode stop me bypassing my own limits?
-
-Only if someone else holds it. Even then, a device owner can still get around any iPhone restriction. A passcode makes bypass slower and harder to do quietly; it doesn't make it impossible.
 
 ---
 

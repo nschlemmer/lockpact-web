@@ -6,12 +6,12 @@ draft: true
 author: "LockPact"
 tags: ["iOS 27", "Screen Time", "Apple"]
 faq:
-  - q: "Does iOS 27 change Screen Time for adults?"
-    a: "Not directly. Every confirmed iOS 27 Screen Time feature — Time Allowances, Schedules, Ask to Browse, quick pause/extend controls — is built for a parent managing a child's device. Nothing in the verified feature list changes how Screen Time behaves for an adult using it on themselves."
-  - q: "Does iOS 27 remove the Ignore Limit button?"
-    a: "Not for adults with a self-set passcode, based on everything verified so far. Ignore Limit still works the same way it has since iOS 26.4: it only goes away if someone other than you holds the Screen Time passcode."
-  - q: "Do app blockers still work on iOS 27?"
-    a: "Nothing in iOS 27's announced changes touches the Screen Time API that third-party blockers rely on. LockPact's own behavior on iOS 27 hasn't been tested on a GA build yet — this will be confirmed once iOS 27 actually ships."
+- q: Does iOS 27 change Screen Time for adults?
+  a: Not directly. Every confirmed iOS 27 Screen Time feature — Time Allowances, Schedules, Ask to Browse, quick pause/extend controls — is built for a parent managing a child's device. Nothing in the verified feature list changes how Screen Time behaves for an adult using it on themselves.
+- q: Does iOS 27 remove the Ignore Limit button?
+  a: 'Not for adults with a self-set passcode, based on everything verified so far. Ignore Limit still works the same way it has since iOS 26.4: it only goes away if someone other than you holds the Screen Time passcode.'
+- q: Do app blockers still work on iOS 27?
+  a: Nothing in iOS 27's announced changes touches the Screen Time API that third-party blockers rely on. LockPact's own behavior on iOS 27 hasn't been tested on a GA build yet — this will be confirmed once iOS 27 actually ships.
 ---
 
 **This post is a draft, written from beta-cycle sources ahead of iOS 27's public release.** Everything below is sourced from Apple's own WWDC 2026 announcement, the public beta, and press coverage current as of early September 2026 — not a GA (general availability) build. Anything that could change between beta and release is marked as such. This post will be re-verified and re-published against the actual shipping release notes once iOS 27 is out.
@@ -50,20 +50,6 @@ If iOS 27 doesn't add anything for solo adult use, the fix is the same one that 
 - **A partner-approved lock** — an app like LockPact, where your partner (not you) approves unlocking apps you've chosen to lock on your own phone, and any bypass gets reported automatically. [See how the major iOS blockers actually compare on bypass difficulty](/blog/app-blockers-you-cant-bypass-iphone/).
 
 Neither of these depends on anything iOS 27 changes or doesn't change — they work the same way today as they will after iOS 27 ships.
-
-## Frequently Asked Questions
-
-### Does iOS 27 change Screen Time for adults?
-
-Not directly. Every confirmed iOS 27 Screen Time feature — Time Allowances, Schedules, Ask to Browse, quick pause/extend controls — is built for a parent managing a child's device. Nothing in the verified feature list changes how Screen Time behaves for an adult using it on themselves.
-
-### Does iOS 27 remove the Ignore Limit button?
-
-Not for adults with a self-set passcode, based on everything verified so far. Ignore Limit still works the same way it has since iOS 26.4: it only goes away if someone other than you holds the Screen Time passcode.
-
-### Do app blockers still work on iOS 27?
-
-Nothing in iOS 27's announced changes touches the Screen Time API that third-party blockers rely on. LockPact's own behavior on iOS 27 hasn't been tested on a GA build yet — this will be confirmed once iOS 27 actually ships.
 
 ---
 

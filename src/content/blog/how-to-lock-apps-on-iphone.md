@@ -5,14 +5,14 @@ pubDate: 2026-10-15T09:00:00-07:00
 author: "LockPact"
 tags: ["iPhone", "Screen Time", "iOS 27", "how-to"]
 faq:
-  - q: "How do I lock an app with Face ID on iPhone?"
-    a: "Press and hold the app icon on your Home Screen, tap Require Face ID, then tap it again and authenticate. To undo it, press and hold the icon and choose Don't Require Face ID. Some built-in apps, such as Settings and Camera, can't be locked."
-  - q: "Can I lock the Settings app on iPhone?"
-    a: "Not with Require Face ID. Apple lists Settings, Camera, Calculator, Clock, Contacts, Find My, Maps and Shortcuts as apps that can't be locked that way. To protect Screen Time settings, set a Screen Time passcode instead."
-  - q: "How do I block apps on iPhone so I can't open them?"
-    a: "Use Screen Time: App Limits and Downtime restrict access by time, and Content & Privacy Restrictions can limit apps outright. All of them can be undone by whoever knows the Screen Time passcode, so the passcode holder matters more than the setting."
-  - q: "Is there a way to lock apps so I can't unlock them myself?"
-    a: "Only if someone else controls the code. Every built-in lock opens for whoever knows the passcode or owns the face. Giving a partner the Screen Time passcode, or using a mutual lock app, puts another person in the decision."
+- q: How do I lock an app with Face ID on iPhone?
+  a: Press and hold the app icon on your Home Screen, tap Require Face ID, then tap it again and authenticate. To undo it, press and hold the icon and choose Don't Require Face ID. Some built-in apps, such as Settings and Camera, can't be locked.
+- q: Can I lock the Settings app on iPhone?
+  a: Not with Require Face ID. Apple lists Settings, Camera, Calculator, Clock, Contacts, Find My, Maps and Shortcuts as apps that can't be locked that way. To protect Screen Time settings, set a Screen Time passcode instead.
+- q: How do I block apps on iPhone so I can't open them?
+  a: 'Use Screen Time: App Limits and Downtime restrict access by time, and Content & Privacy Restrictions can limit apps outright. All of them can be undone by whoever knows the Screen Time passcode, so the passcode holder matters more than the setting.'
+- q: Is there a way to lock apps so I can't unlock them myself?
+  a: Only if someone else controls the code. Every built-in lock opens for whoever knows the passcode or owns the face. Giving a partner the Screen Time passcode, or using a mutual lock app, puts another person in the decision.
 ---
 
 Every iPhone can lock or block an app four or five different ways, and all of them are free, built in, and honest about one limit: you can turn each one off yourself. This guide covers **every built-in method with exact steps and its real off-switch**, so you can pick the right one, then explains why they all fail the same way and what to do about it. If you want a lock that someone else has to approve, [LockPact](/) is a free iOS app where your partner decides when you get back in.
@@ -89,24 +89,6 @@ If the thing you want to lock is a website rather than an app, see [how to block
 Built-in locks ask you to be disciplined at your worst moment. LockPact puts a second person in that moment: you each lock your own apps, your partner approves your unlock requests, you approve theirs, and either of you is notified if the other bypasses the lock. It's free, with no premium tier gating the lock, and it works alongside every Apple tool above rather than replacing them.
 
 [Get LockPact on the App Store →](/go/b-how-to-lock-apps-on-iphone/)
-
-## Frequently Asked Questions
-
-### How do I lock an app with Face ID on iPhone?
-
-Press and hold the app icon on your Home Screen, tap Require Face ID, then tap it again and authenticate. To undo it, press and hold the icon and choose Don't Require Face ID. Some built-in apps, such as Settings and Camera, can't be locked.
-
-### Can I lock the Settings app on iPhone?
-
-Not with Require Face ID. Apple lists Settings, Camera, Calculator, Clock, Contacts, Find My, Maps and Shortcuts as apps that can't be locked that way. To protect Screen Time settings, set a Screen Time passcode instead.
-
-### How do I block apps on iPhone so I can't open them?
-
-Use Screen Time: App Limits and Downtime restrict access by time, and Content & Privacy Restrictions can limit apps outright. All of them can be undone by whoever knows the Screen Time passcode, so the passcode holder matters more than the setting.
-
-### Is there a way to lock apps so I can't unlock them myself?
-
-Only if someone else controls the code. Every built-in lock opens for whoever knows the passcode or owns the face. Giving a partner the Screen Time passcode, or using a mutual lock app, puts another person in the decision.
 
 ---
 

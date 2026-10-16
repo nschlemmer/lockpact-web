@@ -10,24 +10,24 @@ tags: ["comparison", "accountability", "screen time apps", "roundup"]
 # shorter (~50 words) — the body copy is for human readers, this is the machine-readable
 # extraction surface for answer engines. Keep both in sync when either changes.
 faq:
-  - q: "Can someone else control my Screen Time?"
-    a: "Not through Apple's own Screen Time settings — only you or a Family Sharing organizer can change those. These apps add a request-and-approval layer instead: you set the block, but a real person has to approve removing it. LockPact makes the lock mutual, not one-way."
-  - q: "Is there a free app where my friend approves my screen time?"
-    a: "Yes — LockPact is free with no subscription; the mutual lock-and-approve mechanic is the whole product. Friend Controls, PeerPause, and Screen Time Buddy are free to start but paywall extra apps or requests behind a subscription."
-  - q: "What's the difference between these apps and parental control apps?"
-    a: "Parental control apps like Covenant Eyes or Bark are built for one person to monitor another — usually a parent and child — with little control back. These apps are peer-to-peer: you choose a partner or friend, and with LockPact, they're locked by you in return."
-  - q: "Does bypassing these apps just mean turning off Screen Time in Settings?"
-    a: "Yes — any app built on Apple's Screen Time API can be bypassed that way; it's a platform limit, not a bug in any one app. What differs is whether the app notices. LockPact detects the bypass and notifies your partner, making it visible instead of preventing it."
-  - q: "Which one should I actually pick?"
-    a: "Want mutual accountability, free forever? LockPact. Want a wider friend circle over one dedicated partner? Friend Controls. Want a lightweight social nudge with no one gatekeeping you? FriendLock. Want just a solo blocker instead? See our Best Free App Blockers roundup."
-  - q: "Do I need my friend to have the same app installed?"
-    a: "Yes, for every app in this roundup — the friend, partner, Controller, or Time Buddy needs the app installed too, since approval (or, for FriendLock, the selfie) happens inside it. None of these work by text or verbal approval alone."
-  - q: "What if my partner and I both want to be locked, not just one of us?"
-    a: "That's mutual accountability, and it's rare: Friend Controls, PeerPause, and Screen Time Buddy pair one person setting limits with a separate approver, not mirrored locks. LockPact is built so pairing itself creates two locks automatically, one per person, from day one."
-  - q: "Is there an app where someone else holds the password to my apps?"
-    a: "Yes. Useless posts requests to a friend feed, Snitch shares a group time pool, SelfBlock routes to a buddy or an anonymous community vote, and Screen Freedom's accountability-lock mode gives a partner a real veto. LockPact is the only one where the password-holding runs both directions."
-  - q: "Which of these are mutual — both people locked?"
-    a: "Just LockPact. Every other app here, including Useless, Snitch, SelfBlock, and Screen Freedom, pairs one person's limits with a separate approver who isn't also locked by you in return."
+- q: Can someone else control my Screen Time?
+  a: 'Not through Apple''s own Screen Time settings — only you or a Family Sharing organizer can change those. These apps add a request-and-approval layer instead: you set the block, but a real person has to approve removing it. LockPact makes the lock mutual, not one-way.'
+- q: Is there a free app where my friend approves my screen time?
+  a: Yes — LockPact is free with no subscription; the mutual lock-and-approve mechanic is the whole product. Friend Controls, PeerPause, and Screen Time Buddy are free to start but paywall extra apps or requests behind a subscription.
+- q: What's the difference between these apps and parental control apps?
+  a: 'Parental control apps like Covenant Eyes or Bark are built for one person to monitor another — usually a parent and child — with little control back. These apps are peer-to-peer: you choose a partner or friend, and with LockPact, they''re locked by you in return.'
+- q: Does bypassing these apps just mean turning off Screen Time in Settings?
+  a: Yes — any app built on Apple's Screen Time API can be bypassed that way; it's a platform limit, not a bug in any one app. What differs is whether the app notices. LockPact detects the bypass and notifies your partner, making it visible instead of preventing it.
+- q: Which one should I actually pick?
+  a: Want mutual accountability, free forever? LockPact. Want a wider friend circle over one dedicated partner? Friend Controls. Want a lightweight social nudge with no one gatekeeping you? FriendLock. Want just a solo blocker instead? See our Best Free App Blockers roundup.
+- q: Do I need my friend to have the same app installed?
+  a: Yes, for every app in this roundup — the friend, partner, Controller, or Time Buddy needs the app installed too, since approval (or, for FriendLock, the selfie) happens inside it. None of these work by text or verbal approval alone.
+- q: What if my partner and I both want to be locked, not just one of us?
+  a: 'That''s mutual accountability, and it''s rare: Friend Controls, PeerPause, and Screen Time Buddy pair one person setting limits with a separate approver, not mirrored locks. LockPact is built so pairing itself creates two locks automatically, one per person, from day one.'
+- q: Is there an app where someone else holds the password to my apps?
+  a: Yes. Useless posts requests to a friend feed, Snitch shares a group time pool, SelfBlock routes to a buddy or an anonymous community vote, and Screen Freedom's accountability-lock mode gives a partner a real veto. LockPact is the only one where the password-holding runs both directions.
+- q: Which of these are mutual — both people locked?
+  a: Just LockPact. Every other app here, including Useless, Snitch, SelfBlock, and Screen Freedom, pairs one person's limits with a separate approver who isn't also locked by you in return.
 ---
 
 Search "apps that let a friend control your screen time" and you'll find TikToks about it, a handful of raw App Store listings, and basically no one who's actually compared them. That's strange, because the category is real, it's growing, and the apps in it work nothing alike.
@@ -115,44 +115,6 @@ Opal, one sec, and ScreenZen are excellent at what they do, but they're not in t
 | **Screen Freedom** | Partner (optional veto mode) | Full app | None — free, no IAP | iOS |
 
 Prices reflect each app's live App Store listing as of September 2026 and can change without notice — check the listing before you commit to a paid tier.
-
-## FAQ
-
-### Can someone else control my Screen Time?
-
-Not through Apple's own Screen Time settings — those are tied to your device and, for adults, only you can change them (or a Family Sharing organizer, for a child's device). What these apps do instead is build a request-and-approval layer on top: you configure the block yourself, but getting past it requires a real person, not just a passcode, to say yes. LockPact goes a step further and makes the lock itself mutual — your partner sets what's locked on your phone (and you set theirs), so it's not just approval, it's shared control from the start.
-
-### Is there a free app where my friend approves my screen time?
-
-Yes. LockPact is free with no subscription tier — the core mutual-lock-and-approve mechanic is the whole product, not a teaser for a paywall. Friend Controls, PeerPause, and Screen Time Buddy are also free to start but paywall meaningful parts of the experience (more than one blocked app, unlimited Time Buddy requests, or the app outright) behind a subscription.
-
-### What's the difference between these apps and parental control apps?
-
-Parental control apps (Covenant Eyes, Bark, Family Sharing screen time limits) are built for one person to monitor or restrict another — usually a parent and a child — with the watched party having little or no control back. Everything in this roundup is peer-to-peer: you choose to add a friend, partner, or Controller, and in LockPact's case, they're also locked by you in return. It's accountability between equals, not surveillance from above.
-
-### Does bypassing these apps just mean turning off Screen Time in Settings?
-
-Yes — for any app built on Apple's Screen Time API, which is all of these, the device owner can revoke access through Settings and a Face ID prompt in a few taps. Apple doesn't give third-party apps a way to prevent that; it's a platform-level limit, not a bug in any one app. What separates the apps here is whether they notice and tell your partner. LockPact detects the bypass and notifies your partner when it happens — the point isn't making bypass impossible, it's making it visible. If how hard each one is to get around is your deciding factor, [the honest ranking of app blockers you can't easily bypass](/blog/app-blockers-you-cant-bypass-iphone/) compares them side by side.
-
-### Which one should I actually pick?
-
-If you want genuinely mutual accountability — both people hold a real lock on the other, for free, forever — that's [LockPact](/). If you want to set your own limits and lean on a wider circle of friends for extensions rather than one partner, Friend Controls is closer to what you want, and it's worth reading our honest [Friend Controls vs. LockPact](/blog/friend-controls-vs-lockpact/) comparison first. If a lightweight social nudge (earn time with a selfie, no one gatekeeping you) sounds like enough friction, see our [FriendLock vs. LockPact](/blog/friendlock-vs-lockpact/) breakdown. And if none of these partner-based apps sound right and you just want the best solo blocker, we keep an updated list in [Best Free App Blockers for iPhone (2026)](/blog/best-free-app-blocker-iphone-2026/).
-
-### Do I need my friend to have the same app installed?
-
-Yes, for every app in this roundup — the friend, partner, Controller, or Time Buddy needs the app installed too, since the approval (or, for FriendLock, the selfie) happens inside it. None of these work by texting a screenshot or asking verbally; the request-and-response has to run through the app so it can actually re-lock or unlock the relevant apps on your device. Factor that into which one you pick: if the person you have in mind won't download another app, the choice narrows fast.
-
-### What if my partner and I both want to be locked, not just one of us?
-
-That's mutual accountability, and LockPact is the one built for it: pairing itself creates two locks, one per person, from the moment you pair. Friend Controls, PeerPause, and Screen Time Buddy are all built around one person setting limits and a separate friend or buddy approving overages — the friend isn't also locked by you in return unless you set up a second, mirrored account of their own. FriendLock doesn't lock anyone in the approval sense at all.
-
-### Is there an app where someone else holds the password to my apps?
-
-Yes — it's a growing pattern. Useless posts your override requests to a friend group's "Walk of Shame" feed. Snitch pools time with an accountability group. SelfBlock routes requests to a buddy, or an anonymous community member if you haven't set one up. Screen Freedom's optional accountability-lock mode hands your partner a real veto instead of just a notification. LockPact remains the only one where that password-holding runs in both directions.
-
-### Which of these are mutual — both people locked?
-
-Only LockPact. The four newer apps here — Useless, Snitch, SelfBlock, and Screen Freedom — all pair one person's limits with a separate friend, group, or buddy who approves overages, without that approver also being locked by you in return.
 
 ## How to actually choose
 

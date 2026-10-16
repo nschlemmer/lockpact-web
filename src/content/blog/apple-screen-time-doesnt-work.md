@@ -6,16 +6,24 @@ updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["Apple", "Screen Time", "alternatives"]
 faq:
-  - q: "Why is my Screen Time limit not working?"
-    a: "Usually because limits can be ignored once reached by default. Apple's documented fix is a Screen Time passcode plus Block at Downtime. Also check that the app isn't in Always Allowed and that the limit covers the app, not just its category."
-  - q: "What does 'Ignore Until Schedule' mean?"
-    a: "Apple's pages don't use that exact phrase. They describe a reminder five minutes before Downtime starts; you can ignore it, or turn Downtime on early. By default, limits can also be ignored once reached, which is what the phrase usually means."
-  - q: "Can adults bypass their own Screen Time?"
-    a: "Yes, by design — you set the passcode, you know it, and Apple's security model lets the device owner remove restrictions via Settings. iOS 26.4's Lock Screen Time Settings closes most of this, but only if someone else holds that passcode, not you."
-  - q: "What does Lock Screen Time Settings do in iOS 26.4?"
-    a: "It's the menu path for setting the Screen Time passcode, not a second passcode (Apple's wording: the passcode must be entered before you can change any Screen Time settings). Third-party guides report that since iOS 26.4 it also gates turning off an app's Screen Time access. It only helps if someone other than the device owner sets it."
-  - q: "Does Screen Time work if someone else sets the passcode?"
-    a: "It works much better. The device owner can't tap through 'Ask for More Time' anymore — they have to ask the person who holds the code. iOS 26.4 extends that same principle to turning Screen Time off entirely."
+- q: Why is my Screen Time limit not working?
+  a: Usually because limits can be ignored once reached by default. Apple's documented fix is a Screen Time passcode plus Block at Downtime. Also check that the app isn't in Always Allowed and that the limit covers the app, not just its category.
+- q: What does 'Ignore Until Schedule' mean?
+  a: Apple's pages don't use that exact phrase. They describe a reminder five minutes before Downtime starts; you can ignore it, or turn Downtime on early. By default, limits can also be ignored once reached, which is what the phrase usually means.
+- q: Can adults bypass their own Screen Time?
+  a: Yes, by design — you set the passcode, you know it, and Apple's security model lets the device owner remove restrictions via Settings. iOS 26.4's Lock Screen Time Settings closes most of this, but only if someone else holds that passcode, not you.
+- q: What does Lock Screen Time Settings do in iOS 26.4?
+  a: 'It''s the menu path for setting the Screen Time passcode, not a second passcode (Apple''s wording: the passcode must be entered before you can change any Screen Time settings). Third-party guides report that since iOS 26.4 it also gates turning off an app''s Screen Time access. It only helps if someone other than the device owner sets it.'
+- q: Does Screen Time work if someone else sets the passcode?
+  a: It works much better. The device owner can't tap through 'Ask for More Time' anymore — they have to ask the person who holds the code. iOS 26.4 extends that same principle to turning Screen Time off entirely.
+- q: Why doesn't Screen Time actually stop me from using an app?
+  a: Because it isn't designed to. Screen Time is an awareness tool — it nags you after a limit you set yourself, with a passcode you chose. It was never built to enforce a restriction against the person who controls it, because that person is you.
+- q: Can I make Screen Time harder to bypass?
+  a: 'More than before. As of iOS 26.4, Lock Screen Time Settings — set by someone other than you — gates disabling Screen Time behind the Screen Time passcode (per third-party guides; Apple doesn''t spell it out). Not bulletproof: a Face ID bypass path was reported and confirmed on some 26.4/26.5 builds (Apple is fixing it in the 26.6/27 betas), and erasing the device or an Apple ID passcode reset still work. Harder to bypass, never impossible.'
+- q: Does a partner-held lock actually stop bypassing?
+  a: No — and no app can honestly claim otherwise. What it does is make bypassing visible. iOS 26.4's Lock Screen Time Settings raises the bar meaningfully if a partner holds the code, but doesn't eliminate every path. LockPact detects when a bypass happens and tells your partner. The value isn't unbreakable enforcement; it's that you can't quietly cheat your own commitment anymore.
+- q: Is Screen Time worth using at all?
+  a: Yes, as a diagnostic. It's genuinely useful for seeing how much time you're actually spending per app — most people underestimate it. Where it falls short is enforcement for someone who already knows the number is bad and wants a reason not to override their own limit.
 ---
 If Screen Time isn't working on your iPhone the way you hoped, it's not broken — it's working exactly as designed. That's the uncomfortable part. You set a Screen Time limit on Instagram. Thirty minutes a day. You feel responsible.
 
@@ -127,24 +135,6 @@ LockPact isn't the only app built around this idea — see the full roundup of [
 Most people fail at self-imposed limits not from lack of willpower but because willpower is finite — and Apple's own design makes overriding a two-tap process, since it can't tell "I need Maps" from "I'm relapsing on TikTok at midnight."
 
 When someone else is the enforcer, the calculus changes. You still might override. But now there's a conversation about it — not because the technology got stronger, but because the cost of quitting quietly disappeared.
-
-## Frequently Asked Questions
-
-### Why doesn't Screen Time actually stop me from using an app?
-
-Because it isn't designed to. Screen Time is an awareness tool — it nags you after a limit you set yourself, with a passcode you chose. It was never built to enforce a restriction against the person who controls it, because that person is you.
-
-### Can I make Screen Time harder to bypass?
-
-More than before. As of iOS 26.4, Lock Screen Time Settings — set by someone other than you — gates disabling Screen Time behind the Screen Time passcode (per third-party guides; Apple doesn't spell it out). Not bulletproof: a Face ID bypass path was reported and confirmed on some 26.4/26.5 builds (Apple is fixing it in the 26.6/27 betas), and erasing the device or an Apple ID passcode reset still work. Harder to bypass, never impossible.
-
-### Does a partner-held lock actually stop bypassing?
-
-No — and no app can honestly claim otherwise. What it does is make bypassing visible. iOS 26.4's Lock Screen Time Settings raises the bar meaningfully if a partner holds the code, but doesn't eliminate every path. LockPact detects when a bypass happens and tells your partner. The value isn't unbreakable enforcement; it's that you can't quietly cheat your own commitment anymore.
-
-### Is Screen Time worth using at all?
-
-Yes, as a diagnostic. It's genuinely useful for seeing how much time you're actually spending per app — most people underestimate it. Where it falls short is enforcement for someone who already knows the number is bad and wants a reason not to override their own limit.
 
 ## Next Steps
 

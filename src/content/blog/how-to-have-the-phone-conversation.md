@@ -5,6 +5,15 @@ pubDate: 2026-05-20
 updatedDate: 2026-07-23
 author: "LockPact"
 tags: ["relationships", "communication", "phone use", "couples", "how-to"]
+faq:
+- q: How do I bring up phone use without it becoming a fight?
+  a: 'Open with your own experience rather than their behavior. "I feel disconnected from you in the evenings" is different from "You''re always on your phone." Then ask for something specific and mutual: not a change in their general phone use, but one shared experiment.'
+- q: What if my partner doesn't think they have a phone problem?
+  a: Don't try to convince them they do. Invite them to try a shared change because you want more connection — not because they need to fix something. The motivation is the relationship, not their behavior. That framing is usually more persuasive.
+- q: Is it controlling to ask your partner to put their phone away?
+  a: Asking for a shared behavior in a shared time and space is not controlling. Dictating what they do with their phone in general is. The distinction matters. A mutual dinner-time agreement is different from monitoring their usage and criticizing it.
+- q: What if the conversation goes well but nothing changes?
+  a: 'Give it two weeks of active effort before concluding it failed. If nothing changes after genuine effort from both of you, revisit with more directness: "We agreed to try this and I haven''t felt a change. Can we talk about why?" This is now a conversation about follow-through on an agreement, which is clearer to address.'
 ---
 
 "My partner is always on their phone" is one of the most common relationship complaints there is — and also one of the most common ways to start a fight without meaning to. The conversation usually starts with something like: "You're always on your phone."
@@ -78,26 +87,6 @@ You're not telling them to change their phone habits. You're describing an exper
 If they say no — genuinely, after hearing you out — you have a different conversation to have. Not about phones, but about what it means that your need for connection isn't being engaged with. That's a relationship conversation, not a phone conversation.
 
 But most partners, when asked directly and specifically, without accusation, will say yes to one small experiment. The resistance usually comes from feeling criticized or controlled. Remove those elements, and you're often just asking someone to sit next to you for thirty minutes without their phone. Most people can do that.
-
----
-
-## Frequently Asked Questions
-
-### How do I bring up phone use without it becoming a fight?
-
-Open with your own experience rather than their behavior. "I feel disconnected from you in the evenings" is different from "You're always on your phone." Then ask for something specific and mutual: not a change in their general phone use, but one shared experiment.
-
-### What if my partner doesn't think they have a phone problem?
-
-Don't try to convince them they do. Invite them to try a shared change because you want more connection — not because they need to fix something. The motivation is the relationship, not their behavior. That framing is usually more persuasive.
-
-### Is it controlling to ask your partner to put their phone away?
-
-Asking for a shared behavior in a shared time and space is not controlling. Dictating what they do with their phone in general is. The distinction matters. A mutual dinner-time agreement is different from monitoring their usage and criticizing it.
-
-### What if the conversation goes well but nothing changes?
-
-Give it two weeks of active effort before concluding it failed. If nothing changes after genuine effort from both of you, revisit with more directness: "We agreed to try this and I haven't felt a change. Can we talk about why?" This is now a conversation about follow-through on an agreement, which is clearer to address.
 
 ---
 

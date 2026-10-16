@@ -5,6 +5,15 @@ pubDate: 2026-05-25
 updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["phone limits", "how-to", "behavior change", "screen time", "habits"]
+faq:
+- q: Why do phone limits set by Apple's Screen Time fail?
+  a: Because the override is a single tap away. Screen Time limits require you to make a good decision at the exact moment the habit is firing and your willpower is lowest. The limit and the override are both on the same device, controlled by the same person. That's the failure mode.
+- q: What's the minimum effective phone limit to start with?
+  a: 'The smallest change that feels like progress. Commonly: no phone in the bedroom, or one specific app blocked during your highest-use evening window. Start there. Let it stick. Add to it.'
+- q: How do I set a limit that holds when I'm tired and bored?
+  a: Design it for that moment specifically. Structural barriers (phone not in the room, hard app blocks) work when willpower doesn't. External accountability (a person who will find out if you cheat) works when self-motivation doesn't.
+- q: Is it worth setting a phone limit without a partner to help?
+  a: Yes. Solo limits work for some people, especially when combined with structural enforcement. But the failure rate is higher than mutual accountability, and if you've tried and failed before, adding external accountability is the most effective upgrade.
 ---
 
 You've probably set a phone limit before. Maybe Apple's Screen Time. Maybe a promise to yourself. Maybe a specific rule: "no phone after 9pm."
@@ -118,26 +127,6 @@ Based on the research and the principles above, here's the setup that produces t
 5. **Two-week review scheduled** in your calendar before you start
 
 That's it. You don't need ten rules or a complete digital detox. You need one well-designed limit that actually holds.
-
----
-
-## Frequently Asked Questions
-
-### Why do phone limits set by Apple's Screen Time fail?
-
-Because the override is a single tap away. Screen Time limits require you to make a good decision at the exact moment the habit is firing and your willpower is lowest. The limit and the override are both on the same device, controlled by the same person. That's the failure mode.
-
-### What's the minimum effective phone limit to start with?
-
-The smallest change that feels like progress. Commonly: no phone in the bedroom, or one specific app blocked during your highest-use evening window. Start there. Let it stick. Add to it.
-
-### How do I set a limit that holds when I'm tired and bored?
-
-Design it for that moment specifically. Structural barriers (phone not in the room, hard app blocks) work when willpower doesn't. External accountability (a person who will find out if you cheat) works when self-motivation doesn't.
-
-### Is it worth setting a phone limit without a partner to help?
-
-Yes. Solo limits work for some people, especially when combined with structural enforcement. But the failure rate is higher than mutual accountability, and if you've tried and failed before, adding external accountability is the most effective upgrade.
 
 ---
 

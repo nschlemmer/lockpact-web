@@ -5,6 +5,17 @@ pubDate: 2026-07-24
 updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["couples", "comparison", "screen time apps", "roundup"]
+faq:
+- q: Is there a free screen time app for couples?
+  a: Yes. LockPact is free with no subscription — the mutual lock-and-approve mechanic is the whole product. Jolt and Habi are also free to start but paywall meaningful parts of the experience (blocking flexibility, extra tiers) behind a subscription.
+- q: What's the difference between a couples screen time app and a regular screen time app with sharing?
+  a: 'A regular screen time app usually just adds visibility — your partner can see your stats or get notified when you go over a limit, but the decision to unlock stays entirely with you. A true couples screen time app gives your partner an actual say: either synchronized blocking (Jolt''s model, where you''re both locked on the same schedule) or mutual key-holding (LockPact''s model, where your partner approves your specific unlock requests).'
+- q: Do both partners need to install the same app?
+  a: For every app in this comparison, yes. The synchronization, shared visibility, or unlock approval all happen inside the app itself, so both people need it installed for the couples feature to actually function.
+- q: Can I use these apps if I'm not in a romantic relationship?
+  a: Yes — and you should read that as the default, not an exception. LockPact, Jolt, and Habi all work the same way for roommates, close friends, or siblings as they do for romantic partners. "Couples" is just the term most people search when they're picturing a two-person accountability setup; the mechanics don't require a relationship label.
+- q: Does bypassing these apps just mean turning Screen Time off in Settings?
+  a: For any app built on Apple's Screen Time API, yes — the device owner can revoke access through Settings and Face ID in a few taps, and no third-party app can prevent that; it's a platform limit, not a bug in any one app. What varies is whether the app notices. LockPact detects the bypass and notifies your partner when it happens.
 ---
 
 Search "best screen time apps for couples" and most of what comes back is either a generic "best screen time apps" listicle with "great for couples too!" bolted onto the intro, or a couples app (shared calendar, date-night planner) that mentions screen time once in passing. Very few pages actually compare apps *built* for two people managing phone use together.
@@ -61,25 +72,3 @@ Prices and ratings reflect each app's live listing as of September 2026 and can 
 If you want real mutual accountability — a partner who can actually say no to your unlock request, for free, forever — that's LockPact. If you and your partner are both self-disciplined and just want your do-not-disturb windows to line up automatically, Jolt's synchronized blocking is a reasonable fit, with the tradeoff that the accountability is still on you, not each other. If screen time is a minor piece of a bigger shared-habits picture and you'd rather track progress together than gate access, Habi covers that, as long as you're both on iPhone. And if what you actually want is a joint calendar and date-night planner, that's Cupla — just don't expect it to touch your app usage at all.
 
 Whatever you pick, run it for a real trial before deciding it works. [How to Run a 7-Day Phone Pact](/blog/how-to-run-a-7-day-phone-pact/) walks through setting the first shared boundary, and if you want the bigger picture on why phones erode presence in relationships in the first place, [Couples and Phone Boundaries: A Field Guide](/blog/couples-and-phone-boundaries/) is the deeper read. If you haven't raised it with your partner yet, [how to have the conversation about their phone](/blog/how-to-have-the-phone-conversation/) is the place to start, and if you'd rather begin with something free and already on your iPhone, [giving your partner the Screen Time passcode](/blog/lock-screen-time-settings-partner-passcode/) is a real first step.
-
-## Frequently Asked Questions
-
-### Is there a free screen time app for couples?
-
-Yes. LockPact is free with no subscription — the mutual lock-and-approve mechanic is the whole product. Jolt and Habi are also free to start but paywall meaningful parts of the experience (blocking flexibility, extra tiers) behind a subscription.
-
-### What's the difference between a couples screen time app and a regular screen time app with sharing?
-
-A regular screen time app usually just adds visibility — your partner can see your stats or get notified when you go over a limit, but the decision to unlock stays entirely with you. A true couples screen time app gives your partner an actual say: either synchronized blocking (Jolt's model, where you're both locked on the same schedule) or mutual key-holding (LockPact's model, where your partner approves your specific unlock requests).
-
-### Do both partners need to install the same app?
-
-For every app in this comparison, yes. The synchronization, shared visibility, or unlock approval all happen inside the app itself, so both people need it installed for the couples feature to actually function.
-
-### Can I use these apps if I'm not in a romantic relationship?
-
-Yes — and you should read that as the default, not an exception. LockPact, Jolt, and Habi all work the same way for roommates, close friends, or siblings as they do for romantic partners. "Couples" is just the term most people search when they're picturing a two-person accountability setup; the mechanics don't require a relationship label.
-
-### Does bypassing these apps just mean turning Screen Time off in Settings?
-
-For any app built on Apple's Screen Time API, yes — the device owner can revoke access through Settings and Face ID in a few taps, and no third-party app can prevent that; it's a platform limit, not a bug in any one app. What varies is whether the app notices. LockPact detects the bypass and notifies your partner when it happens.

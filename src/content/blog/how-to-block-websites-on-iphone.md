@@ -5,16 +5,16 @@ pubDate: 2026-10-15T09:00:00-07:00
 author: "LockPact"
 tags: ["websites", "how-to", "Safari", "Screen Time", "iPhone"]
 faq:
-  - q: "How do I block a website on iPhone so I can't undo it?"
-    a: "Block it in Screen Time, then have someone else set the Screen Time passcode, because whoever knows the passcode can remove the block. Or lock the site in LockPact, free to use, where a partner has to approve any unlock. Nothing is impossible to bypass; these make it a conversation."
-  - q: "How do I block websites on Safari?"
-    a: "Go to Settings, Screen Time, Content & Privacy Restrictions, App Store, Media, Web & Games, then Web Content. Choose Limit Adult Websites, tap Add Website under Never Allow, and enter each URL. Apple's page says you can block specific websites by URL."
-  - q: "Does blocking a website in Screen Time work in other browsers?"
-    a: "Apple's page doesn't say which browsers the setting covers. Test it in each browser you use rather than assuming. The searches that lead here are about Safari, and that's the one we describe."
-  - q: "How many websites can LockPact lock?"
-    a: "LockPact uses Apple's picker, and Apple's documentation says an app can shield up to 50 web domains at once. You choose sites alongside apps, and unlocking them needs your partner's approval."
-  - q: "Can I block a website on iPhone for free?"
-    a: "Yes. Screen Time is built in and free, and LockPact is free to use. Both are subject to the same limit: you can turn off your own settings unless someone else holds the passcode or has to approve."
+- q: How do I block a website on iPhone so I can't undo it?
+  a: Block it in Screen Time, then have someone else set the Screen Time passcode, because whoever knows the passcode can remove the block. Or lock the site in LockPact, free to use, where a partner has to approve any unlock. Nothing is impossible to bypass; these make it a conversation.
+- q: How do I block websites on Safari?
+  a: Go to Settings, Screen Time, Content & Privacy Restrictions, App Store, Media, Web & Games, then Web Content. Choose Limit Adult Websites, tap Add Website under Never Allow, and enter each URL. Apple's page says you can block specific websites by URL.
+- q: Does blocking a website in Screen Time work in other browsers?
+  a: Apple's page doesn't say which browsers the setting covers. Test it in each browser you use rather than assuming. The searches that lead here are about Safari, and that's the one we describe.
+- q: How many websites can LockPact lock?
+  a: LockPact uses Apple's picker, and Apple's documentation says an app can shield up to 50 web domains at once. You choose sites alongside apps, and unlocking them needs your partner's approval.
+- q: Can I block a website on iPhone for free?
+  a: 'Yes. Screen Time is built in and free, and LockPact is free to use. Both are subject to the same limit: you can turn off your own settings unless someone else holds the passcode or has to approve.'
 ---
 
 To block a website on iPhone, open **Settings → Screen Time → Content & Privacy Restrictions → App Store, Media, Web & Games → Web Content**, choose **Limit Adult Websites**, and add the site under **Never Allow**. It's free and built in. The catch is that you can undo it yourself, so this guide also shows how to lock websites with [LockPact](/go/b-how-to-block-websites-on-iphone/), a free-to-use app where a partner has to approve before a site opens again. It's written for adults managing their own phone.
@@ -74,25 +74,3 @@ When you open a locked website, the system covers it with a shield, and unlockin
 If you want a quick block and trust yourself, Screen Time's Web Content setting is enough: free, built in, a minute to set up. If you've blocked a site before and removed the block the next night, you need the off-switch to belong to someone else, either through a Screen Time passcode they hold or through LockPact.
 
 For the wider picture of what each built-in lock does and who can turn it off, read [how to lock (or block) apps on iPhone](/blog/how-to-lock-apps-on-iphone/). If the site you keep returning to is a feed, [how to stop doomscrolling](/blog/how-to-stop-doomscrolling/) covers the habit as well as the setting.
-
-## Frequently Asked Questions
-
-### How do I block a website on iPhone so I can't undo it?
-
-Block it in Screen Time, then have someone else set the Screen Time passcode, because whoever knows the passcode can remove the block. Or lock the site in LockPact, free to use, where a partner has to approve any unlock. Nothing is impossible to bypass; these make it a conversation.
-
-### How do I block websites on Safari?
-
-Go to Settings, Screen Time, Content & Privacy Restrictions, App Store, Media, Web & Games, then Web Content. Choose Limit Adult Websites, tap Add Website under Never Allow, and enter each URL. Apple's page says you can block specific websites by URL.
-
-### Does blocking a website in Screen Time work in other browsers?
-
-Apple's page doesn't say which browsers the setting covers. Test it in each browser you use rather than assuming. The searches that lead here are about Safari, and that's the one we describe.
-
-### How many websites can LockPact lock?
-
-LockPact uses Apple's picker, and Apple's documentation says an app can shield up to 50 web domains at once. You choose sites alongside apps, and unlocking them needs your partner's approval.
-
-### Can I block a website on iPhone for free?
-
-Yes. Screen Time is built in and free, and LockPact is free to use. Both are subject to the same limit: you can turn off your own settings unless someone else holds the passcode or has to approve.

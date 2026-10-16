@@ -5,6 +5,15 @@ pubDate: 2026-05-19
 updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "Cold Turkey", "app blockers", "accountability"]
+faq:
+- q: Is Cold Turkey actually impossible to bypass?
+  a: On Mac and Windows in Frozen Turkey mode, it's extremely difficult — close to impossible without reformatting your drive. On iOS, Cold Turkey doesn't have equivalent functionality. No iOS blocker can be truly bypass-proof because Apple's Screen Time API always allows the device owner to regain access.
+- q: Which app is better for quitting social media?
+  a: Cold Turkey if you're doing it alone and want technical enforcement on a computer. LockPact if you have a partner and want social accountability, particularly for phone use outside of work hours.
+- q: Can I use Cold Turkey and LockPact together?
+  a: Yes. Cold Turkey for laptop-based work blocks. LockPact for phone-based evening accountability. They're complementary, not competing.
+- q: Does LockPact work without a partner?
+  a: 'LockPact does have a solo lock, available when you''re unpaired — you can lock your own apps and hold yourself to a timer before you have a partner. But that''s the setup ramp, not the product: the actual value is the mutual, paired lock, where your partner holds your unlock key and you hold theirs. Pairing cancels any active solo lock, and the app is built around two willing participants holding each other accountable.'
 ---
 
 Cold Turkey earns its name. It's one of the most aggressive blocking tools available — designed explicitly to make it impossible for you to override the block yourself. No grace periods, no "I really need this for work" exceptions, no sneaking around it.
@@ -86,26 +95,6 @@ Neither is universally better. They're solving different versions of the problem
 **Cold Turkey** — Blocker is free with limited features. Cold Turkey Pro (full features including the Frozen Turkey mode) is $45 one-time, and one key covers both Mac and Windows.
 
 **LockPact** — Free for both partners. No premium tier, no paywalled partner features.
-
----
-
-## Frequently Asked Questions
-
-### Is Cold Turkey actually impossible to bypass?
-
-On Mac and Windows in Frozen Turkey mode, it's extremely difficult — close to impossible without reformatting your drive. On iOS, Cold Turkey doesn't have equivalent functionality. No iOS blocker can be truly bypass-proof because Apple's Screen Time API always allows the device owner to regain access.
-
-### Which app is better for quitting social media?
-
-Cold Turkey if you're doing it alone and want technical enforcement on a computer. LockPact if you have a partner and want social accountability, particularly for phone use outside of work hours.
-
-### Can I use Cold Turkey and LockPact together?
-
-Yes. Cold Turkey for laptop-based work blocks. LockPact for phone-based evening accountability. They're complementary, not competing.
-
-### Does LockPact work without a partner?
-
-LockPact does have a solo lock, available when you're unpaired — you can lock your own apps and hold yourself to a timer before you have a partner. But that's the setup ramp, not the product: the actual value is the mutual, paired lock, where your partner holds your unlock key and you hold theirs. Pairing cancels any active solo lock, and the app is built around two willing participants holding each other accountable.
 
 ---
 

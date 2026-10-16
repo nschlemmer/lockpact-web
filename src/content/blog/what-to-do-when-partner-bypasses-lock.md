@@ -4,6 +4,15 @@ description: "Bypass happens. What you do next determines whether your phone pac
 pubDate: 2026-05-16
 author: "LockPact"
 tags: ["phone pact", "relationships", "accountability", "bypass", "how-to"]
+faq:
+- q: How should I react when my partner bypasses the lock?
+  a: Open a conversation with a curious question, not a judgment. "What happened?" is more effective than "You broke the agreement." The goal is understanding, then recommitment — not punishment.
+- q: Is frequent bypass a sign the pact isn't working?
+  a: It can be. Occasional bypass handled with honest conversation is normal. Frequent bypass without acknowledgment is a sign the structure needs to change, or the mutual commitment isn't as genuine as you both thought. Have a direct conversation about it.
+- q: What if I'm more bothered by bypass than my partner seems to be?
+  a: That's worth naming directly. "I feel like you're not taking this seriously, and that bothers me. Can we talk about whether this is something you actually want to do?" Unspoken resentment erodes pacts more reliably than bypass does.
+- q: Should I tell my partner before they see the bypass notification?
+  a: Yes. Getting ahead of the notification — "I bypassed last night, here's why" — is the most trust-building version of the conversation. It models accountability instead of requiring it.
 ---
 
 You got the notification. Your partner bypassed the lock.
@@ -91,26 +100,6 @@ Counterintuitively, a bypass handled well often strengthens a phone pact.
 You've now had a real conversation about the difficulty of the commitment. You've both acknowledged that the habit is real and strong. You've demonstrated that you can talk about failure without the relationship suffering. That evidence — that you can navigate imperfection together — builds trust in the pact in a way that smooth sailing doesn't.
 
 The pacts that last aren't the ones where nobody ever bypasses. They're the ones where bypass is handled honestly, the structure gets adjusted as needed, and both people recommit to the agreement.
-
----
-
-## Frequently Asked Questions
-
-### How should I react when my partner bypasses the lock?
-
-Open a conversation with a curious question, not a judgment. "What happened?" is more effective than "You broke the agreement." The goal is understanding, then recommitment — not punishment.
-
-### Is frequent bypass a sign the pact isn't working?
-
-It can be. Occasional bypass handled with honest conversation is normal. Frequent bypass without acknowledgment is a sign the structure needs to change, or the mutual commitment isn't as genuine as you both thought. Have a direct conversation about it.
-
-### What if I'm more bothered by bypass than my partner seems to be?
-
-That's worth naming directly. "I feel like you're not taking this seriously, and that bothers me. Can we talk about whether this is something you actually want to do?" Unspoken resentment erodes pacts more reliably than bypass does.
-
-### Should I tell my partner before they see the bypass notification?
-
-Yes. Getting ahead of the notification — "I bypassed last night, here's why" — is the most trust-building version of the conversation. It models accountability instead of requiring it.
 
 ---
 
