@@ -19,9 +19,11 @@ interface Props {
   video?: { src: string; poster: string; seconds: number };
   id?: string;
   eager?: boolean;
+  /** Number the steps. Turn off when the steps are a list of places, not a sequence. */
+  numbered?: boolean;
 }
 
-const { title, steps, video, eager = false } = Astro.props;
+const { title, steps, video, eager = false, numbered = true } = Astro.props;
 const uid =
   Astro.props.id ??
   `g-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
@@ -331,6 +333,13 @@ const css = `
       transition: none;
     }
   }
+
+  .guide.guide--plain .step::before {
+    display: none;
+  }
+  .guide.guide--plain .step {
+    padding-left: 14px;
+  }
 `;
 const minify = (c: string) =>
   c
@@ -342,12 +351,12 @@ const minify = (c: string) =>
 
 ---
 
-<section class="guide" aria-labelledby={`${uid}-title`} data-guide>
+<section class:list={['guide', { 'guide--plain': !numbered }]} aria-labelledby={`${uid}-title`} data-guide>
   <div class="guide-head">
     <h3 id={`${uid}-title`}>{title}</h3>
     <div class="guide-meta">
       {video && <button type="button" class="watch" data-watch hidden>Watch ({video.seconds}s)</button>}
-      <span class="count" aria-live="polite" data-count>Step 1 of {steps.length}</span>
+      <span class="count" aria-live="polite" data-count data-numbered={numbered ? 'true' : 'false'}>{numbered ? `Step 1 of ${steps.length}` : `1 of ${steps.length}`}</span>
     </div>
   </div>
   <div class="guide-body">
@@ -417,6 +426,7 @@ const minify = (c: string) =>
     const strip = root.querySelector<HTMLElement>('[data-screens]');
     const watch = root.querySelector<HTMLButtonElement>('[data-watch]');
     if (!count || !prev || !next || !strip || !steps.length) return;
+    const numbered = count.dataset.numbered !== 'false';
     const mobile = window.matchMedia('(max-width: 760px)');
     const calm = window.matchMedia('(prefers-reduced-motion: reduce)');
     let cur = 0;
@@ -441,7 +451,7 @@ const minify = (c: string) =>
         else s.removeAttribute('aria-current');
       });
       shots.forEach((f, k) => f.classList.toggle('is-active', k === cur));
-      count.textContent = `Step ${cur + 1} of ${steps.length}`;
+      count.textContent = `${numbered ? 'Step ' : ''}${cur + 1} of ${steps.length}`;
       prev.disabled = cur === 0;
       next.disabled = cur === steps.length - 1;
       if (mobile.matches && !fromScroll) centre(shots[cur]);
