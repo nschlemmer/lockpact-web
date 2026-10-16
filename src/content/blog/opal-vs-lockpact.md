@@ -88,7 +88,7 @@ Over three years, Opal's paid tier costs roughly what a mid-range iPhone case co
 - You want the *best-designed* solo blocker, regardless of price
 - You trust yourself to stick with paid tools better than free ones
 
-Opal is a legitimate choice. It's not a failure. Some people *will* stick with it and build focus habits. The design is good enough that it might be the app that finally works for you.
+Opal is a legitimate choice. It's not a failure. Some people *will* stick with it and form focus habits. The design is good enough that it might be the app that finally works for you.
 
 Just go in knowing: if it doesn't work after three months, it's probably not the app. It's that solo blockers don't work for most people. Not a reflection on Opal.
 

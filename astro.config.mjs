@@ -43,8 +43,25 @@ for (const file of readdirSync(blogDir)) {
   if (lastmod) blogLastmodBySlug.set(slug, lastmod);
 }
 
+// Wrap every table in a div that scrolls sideways on its own, so a wide table can never make the page scroll
+// horizontally on a phone. Applies to .md and .mdx alike.
+function rehypeScrollTables() {
+  const walk = (node) => {
+    if (!node.children) return;
+    node.children = node.children.map((child) => {
+      if (child.type === 'element' && child.tagName === 'table') {
+        return { type: 'element', tagName: 'div', properties: { className: ['table-scroll'] }, children: [child] };
+      }
+      walk(child);
+      return child;
+    });
+  };
+  return (tree) => walk(tree);
+}
+
 export default defineConfig({
   site: 'https://lockpact.app',
+  markdown: { rehypePlugins: [rehypeScrollTables] },
   output: 'server',
   trailingSlash: 'always',
   security: {

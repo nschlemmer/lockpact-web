@@ -4,7 +4,6 @@ description: "Every Screen Time setting on iPhone in iOS 27, with exact steps: c
 pubDate: 2026-10-16T07:00:00-07:00
 author: "LockPact"
 tags: ["Screen Time", "iOS 27", "how-to", "iPhone", "guide"]
-testedOn: "iOS 27.0 Simulator, October 16, 2026 (screens shown); other steps follow Apple's iOS 27 guide"
 howWeTested: true
 sources:
   - label: "Apple: Set up Screen Time for yourself on iPhone (iOS 27)"
@@ -26,7 +25,17 @@ faq:
     a: "Go to Settings, Screen Time, Manage Screen Time, then tap Turn Off App & Website Activity. To turn off just your schedule, tap Screen Time Schedule and turn off Schedule. If you set a passcode, you'll need it."
   - q: "Can I stop myself overriding my own Screen Time limits?"
     a: "Only if someone else controls the passcode. You can create a Screen Time passcode under Manage Screen Time, Lock Screen Time Settings, but if you know it you can change anything. Give it to a partner, or use an app that needs their approval."
+platform: iOS 27
 ---
+
+import StepGuide from '../../components/StepGuide.astro';
+import s1 from '../../assets/screens/screen-time-iphone-guide/01-open-screen-time.webp';
+import s2 from '../../assets/screens/screen-time-iphone-guide/03-open-schedule.webp';
+import s3 from '../../assets/screens/screen-time-iphone-guide/05-open-time-allowances.webp';
+import s4 from '../../assets/screens/screen-time-iphone-guide/07-open-always-allowed.webp';
+import s5 from '../../assets/screens/screen-time-iphone-guide/10-open-apps-websites.webp';
+import s6 from '../../assets/screens/screen-time-iphone-guide/09-open-content-privacy.webp';
+import s7 from '../../assets/screens/screen-time-iphone-guide/11-open-manage.webp';
 
 Screen Time is the free tool built into every iPhone for seeing how you use it and setting rules. This guide covers every setting on iOS 27 with the exact taps, then shows why it stops working when you set it for yourself and what to do about that. [LockPact](/go/b-screen-time-iphone-guide/) is a free-to-use app where a partner approves unlocks, for the cases Apple's settings can't cover.
 
@@ -34,22 +43,25 @@ Screen Time is the free tool built into every iPhone for seeing how you use it a
 
 Screen Time is at **Settings → Screen Time**. On iOS 27 that screen lists Screen Time Schedule, Time Allowances, Always Allowed, Apps & Websites, Allowed Contacts, Content & Privacy Restrictions and Manage Screen Time. App Limits and Downtime, which iOS 26 and earlier use, no longer appear there. Apple's iOS 27 guide replaces them with Time Allowances and Screen Time Schedule.
 
-1. Open **Settings**, then tap **Screen Time**.
-2. You'll see the groups of settings described below.
+<StepGuide
+  title="Where everything is in Screen Time"
+  numbered={false}
+  steps={[
+    { title: "Open Settings, then tap Screen Time.", image: s1, alt: "The Screen Time row highlighted in the Settings list" },
+    { title: "Tap Screen Time Schedule.", detail: "Hours when most apps are off.", image: s2, alt: "The Screen Time Schedule row highlighted on the Screen Time screen" },
+    { title: "Tap Time Allowances.", detail: "Daily time for categories of apps.", image: s3, alt: "The Time Allowances row highlighted on the Screen Time screen" },
+    { title: "Tap Always Allowed.", detail: "Apps and people that are never limited.", image: s4, alt: "The Always Allowed row highlighted on the Screen Time screen" },
+    { title: "Tap Apps & Websites.", detail: "Block or allow specific sites.", image: s5, alt: "The Apps and Websites row highlighted on the Screen Time screen" },
+    { title: "Tap Content & Privacy Restrictions.", detail: "Scroll down to find it.", image: s6, alt: "The Content and Privacy Restrictions row highlighted on the Screen Time screen" },
+    { title: "Tap Manage Screen Time.", detail: "Passcode, sharing and turning Screen Time off.", image: s7, alt: "Manage Screen Time highlighted at the bottom of the Screen Time screen" },
+  ]}
+/>
 
-![The Settings app with the Screen Time row highlighted](../../assets/screens/screen-time-iphone-guide/01-open-screen-time.webp)
-
-![The iOS 27 Screen Time screen, with Apps & Websites, Screen Time Schedule and Time Allowances](../../assets/screens/screen-time-iphone-guide/02-screen-time.webp)
 
 If your menus show **App Limits** and **Downtime** instead, you're on iOS 26 or earlier. Each section below has a short note for that version.
-
 ## What do you need to use the iOS 27 Screen Time features?
 
-You need iOS 27 on every Apple device that shares your Screen Time. Apple's note says that to use Screen Time Schedules and Time Allowances you need iOS 27, iPadOS 27, macOS 27, watchOS 27 or visionOS 27 or later on all your Apple devices. If you set these up for a child in a Family Sharing group, every device in the group must be updated too.
-
-Check your version in **Settings → General → About**, and update in **Settings → General → Software Update**. If you can't update every device, the iOS 26 steps in each section below still apply to the phone you're holding.
-
-If you're setting rules for a child rather than for yourself, Apple has a separate guide, "Apple Devices for Kids and Families". This page is about adults managing their own phone.
+You need iOS 27 on every Apple device that shares your Screen Time. Apple says Screen Time Schedules and Time Allowances need iOS 27, iPadOS 27 or macOS 27 or later on all your Apple devices, and every device in a Family Sharing group if you set them up for a child. Check your version in **Settings → General → About**, and update in **Settings → General → Software Update**. If you can't update every device, the iOS 26 steps in each section below still apply to the phone you're holding. This page is for adults managing their own phone; for a child's device, see Apple's "Apple Devices for Kids and Families" guide.
 
 ## How do you turn on Screen Time?
 
@@ -88,10 +100,6 @@ On iOS 27 you set daily time for app categories with Time Allowances. Open Setti
 4. To add a category, tap **Manage Categories**, tap the plus button, then pick one.
 5. To apply allowances only during certain hours, turn on **Match Screen Time Schedule**.
 
-![The Time Allowances row highlighted on the Screen Time screen](../../assets/screens/screen-time-iphone-guide/05-open-time-allowances.webp)
-
-![The Time Allowances screen](../../assets/screens/screen-time-iphone-guide/06-time-allowances.webp)
-
 **On iOS 26 and earlier:** go to **Settings → Screen Time → App Limits → Add Limit**, choose categories or individual apps, tap **Next**, and set the time. Apple's note for those versions: by default, Screen Time limits can be ignored once reached.
 
 ## How do you set Downtime (Screen Time Schedule on iOS 27)?
@@ -103,10 +111,6 @@ On iOS 27 the Downtime idea is the Screen Time Schedule. Open Settings, tap Scre
 3. Tap a **Time Window** to rename it, change its start or stop time, or choose Time Allowance categories.
 4. To remove a window, tap it, then tap **Delete this Time Window**.
 
-![The Screen Time Schedule row highlighted on the Screen Time screen](../../assets/screens/screen-time-iphone-guide/03-open-schedule.webp)
-
-![The Screen Time Schedule screen](../../assets/screens/screen-time-iphone-guide/04-schedule.webp)
-
 **On iOS 26 and earlier:** it's **Settings → Screen Time → Downtime**. Tap **Turn On Downtime Until Tomorrow**, or **Scheduled** to set it ahead of time. Apple sends a reminder five minutes before scheduled Downtime begins, which you can ignore or use to turn Downtime on early. With a Screen Time passcode set, **Block at Downtime** makes restricted apps unavailable, shown dimmed with an hourglass.
 
 ## What is Always Allowed?
@@ -117,18 +121,14 @@ Always Allowed is the list of apps and contacts that stay available regardless o
 2. Tap **Add Apps** or **Add People**.
 3. To remove an item, tap **Edit**, then tap the minus button on it.
 
-![The Always Allowed row highlighted on the Screen Time screen](../../assets/screens/screen-time-iphone-guide/07-open-always-allowed.webp)
-
 ## What is Apps & Websites on iOS 27?
 
-Apps & Websites is the Screen Time screen for allowing or blocking specific apps and websites. On iOS 27 it sits under **Settings → Screen Time → Apps & Websites** and has an Allowed tab and a Blocked tab, a search field and an add button. A Restrictions row at the top shows the website filter, which reads Limit Adult Websites by default on the iOS 27 build we tested.
+Apps & Websites is the Screen Time screen for allowing or blocking specific apps and websites. On iOS 27 it sits under **Settings → Screen Time → Apps & Websites** and has an Allowed tab and a Blocked tab, a search field and an add button. A Restrictions row at the top shows the website filter, which reads Limit Adult Websites by default.
 
 1. Open **Settings → Screen Time → Apps & Websites**.
 2. Tap **Blocked** to see what's blocked, or **Allowed** to see what's allowed.
 3. Tap the add button to add a website to block. The sheet is titled **Block Website** and asks you to type one URL or paste many.
 4. Tap **Restrictions** to see the website filter.
-
-![The Apps & Websites row highlighted on the Screen Time screen](../../assets/screens/screen-time-iphone-guide/10-open-apps-websites.webp)
 
 Our [website blocking guide](/blog/how-to-block-websites-on-iphone/) covers this in full, including why you can undo it yourself.
 
@@ -141,8 +141,6 @@ Content & Privacy Restrictions control what can be played, read or used. On iOS 
 3. Tap **Other Features** to allow or block features such as AirDrop and Camera.
 4. Tap **Siri** to block Siri, or allow it with or without AI capabilities.
 
-![The Content & Privacy Restrictions row highlighted on the Screen Time screen](../../assets/screens/screen-time-iphone-guide/09-open-content-privacy.webp)
-
 For blocking websites, see [how to block websites on iPhone](/blog/how-to-block-websites-on-iphone/). On iOS 27 that setting sits under **Apps & Websites**.
 
 ## How do you set a Screen Time passcode?
@@ -152,13 +150,7 @@ A Screen Time passcode is a four-digit code you must enter before changing your 
 1. Open **Settings → Screen Time → Manage Screen Time**.
 2. Tap **Lock Screen Time Settings**.
 3. Enter a four-digit passcode, then enter it again to confirm.
-
-![Manage Screen Time highlighted at the bottom of the Screen Time screen](../../assets/screens/screen-time-iphone-guide/11-open-manage.webp)
-
-![The Enter Screen Time Passcode screen, which asks for four digits](../../assets/screens/screen-time-iphone-guide/14-passcode-entry.webp)
-
 To change or remove it, use **Settings → Screen Time → Manage Screen Time → Change Screen Time Passcode**, then pick Change or Turn Off in the sheet. Our guide to [changing, resetting or handing off your Screen Time passcode](/blog/screen-time-passcode/) covers recovery and what to do if you forget it.
-
 ## How do you lock or hide a single app?
 
 Locking one app is a separate feature from Screen Time. Touch and hold the app on your Home Screen, tap Require Face ID (or Touch ID or Passcode), then tap it again to lock the app. Opening it needs Face ID, Touch ID or your passcode, and it relocks each time you leave it. Apple says the locked state stays on that iPhone and doesn't sync through iCloud.

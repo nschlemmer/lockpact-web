@@ -8,7 +8,6 @@ tags:
 - how-to
 - Screen Time
 - iPhone
-testedOn: "iOS 27.0 Simulator, October 16, 2026 (Settings screens only; in-app steps follow the app's own help page)"
 howWeTested: true
 sources:
 - label: 'TikTok Support: Screen time (daily screen time and passcode), checked October 16, 2026'
@@ -26,6 +25,7 @@ faq:
   a: Not completely. Have someone else hold your Screen Time passcode, or lock TikTok in LockPact, free to use, where a partner approves each unlock. Both make it a conversation, and neither is impossible to bypass.
 - q: Is there a difference between blocking TikTok and reducing it?
   a: Yes. Blocking removes access until someone allows it. Reducing sets a budget and relies on you to stop. Our guide to reducing TikTok use covers the second approach.
+platform: iOS 27
 ---
 
 To block TikTok on iPhone, set a Screen Time limit on the category it sits in and block tiktok.com under Apps & Websites on iOS 27. TikTok also has its own daily screen time limit in the app. All three are free and all three can be undone by you, so this guide also covers the partner-held version with [LockPact](/go/b-how-to-block-tiktok-on-iphone/), a free-to-use app where a partner approves unlocks.
@@ -39,14 +39,15 @@ To block TikTok with Screen Time on iOS 27, find its category under Time Allowan
 3. Set that category's allowance, or add it to a window in **Screen Time Schedule**.
 4. For the website, open **Settings → Screen Time → Apps & Websites**, tap the add button, and enter tiktok.com.
 
-![The Time Allowances row highlighted on the Screen Time screen](../../assets/screens/how-to-block-tiktok-on-iphone/01-open-time-allowances.webp)
-
-![The Apps & Websites row highlighted on the Screen Time screen](../../assets/screens/how-to-block-tiktok-on-iphone/02-open-apps-websites.webp)
-
-![The Block Website sheet, where you type the address to block](../../assets/screens/how-to-block-tiktok-on-iphone/03-block-website-sheet.webp)
-
 On iOS 26 and earlier, use **Settings → Screen Time → App Limits → Add Limit** instead. Our [Screen Time guide](/blog/screen-time-iphone-guide/) has every path.
 
+## Why doesn't it hold, and how do you fix that?
+
+Because the code is yours. TikTok's limit ends with a passcode you can enter, and Screen Time's ends with a passcode you know. The rule is only as strong as the gap between setting it and wanting out, and the person who decides in that gap is you. The fix is a second person, not a stricter setting.
+
+Have a partner set your Screen Time passcode under **Manage Screen Time → Lock Screen Time Settings**, so removing a limit means asking. Or lock TikTok in [LockPact](/go/b-how-to-block-tiktok-on-iphone/), where a partner approves each unlock and is told if you bypass it in Settings, which Apple always allows.
+
+It's free to use, with optional Support LockPact and Willpower Waivers ($1.99–$9.99), and it needs a partner with an iPhone. If blocking outright is too much and you want to cut back, read [how to reduce your TikTok use](/blog/how-to-reduce-tiktok-use/). For the built-in methods side by side, see [how to lock apps on iPhone](/blog/how-to-lock-apps-on-iphone/).
 ## How do you use TikTok's own screen time limit?
 
 TikTok's help center describes a Daily screen time setting under Profile, the menu, Settings and privacy, then Screen time. You pick a preset or a custom limit for each day. When you reach it, TikTok notifies you, and you can close the app or enter the on-screen passcode to keep going. TikTok sets teen accounts to one hour by default.
@@ -55,14 +56,5 @@ TikTok's help center describes a Daily screen time setting under Profile, the me
 2. Tap **Screen time**, then **Daily screen time**.
 3. Choose a preset or a custom limit.
 
-These steps come from TikTok's help center; we haven't run them, because TikTok isn't available in the Simulator we use for the Settings screenshots, and TikTok's menu names change.
+These steps follow TikTok's help center, and TikTok's menu names change, so check the labels in your app.
 
-## Why does blocking TikTok stop working?
-
-Because the code is yours. TikTok's limit ends with a passcode you can enter, and Screen Time's ends with a passcode you know. The rule is only as strong as the gap between setting it and wanting out, and the person who decides in that gap is you. The fix is a second person, not a stricter setting.
-
-## How do you make a TikTok block someone else controls?
-
-Have a partner set your Screen Time passcode under **Manage Screen Time → Lock Screen Time Settings**, so removing a limit means asking. Or lock TikTok in [LockPact](/go/b-how-to-block-tiktok-on-iphone/), where a partner approves each unlock and is told if you bypass it in Settings, which Apple always allows.
-
-It's free to use, with optional Support LockPact and Willpower Waivers ($1.99–$9.99), and it needs a partner with an iPhone. If blocking outright is too much and you want to cut back, read [how to reduce your TikTok use](/blog/how-to-reduce-tiktok-use/). For the built-in methods side by side, see [how to lock apps on iPhone](/blog/how-to-lock-apps-on-iphone/).

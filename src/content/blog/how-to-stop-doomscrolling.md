@@ -24,6 +24,7 @@ sources:
   url: https://support.apple.com/guide/iphone/iph3e2e1fb0/27/ios/27
 - label: 'Merriam-Webster: doomscroll'
   url: https://www.merriam-webster.com/dictionary/doomscroll
+platform: iOS 27
 ---
 
 You can stop doomscrolling by taking the decision out of the moment: lock the apps that pull you in, set the lock ahead of time, and give the off-switch to someone else. The built-in version is free, and so is [LockPact](/go/b-how-to-stop-doomscrolling/), an iOS app where a partner approves any unlock. This guide covers what actually works on an iPhone, and the honest limits of each method.

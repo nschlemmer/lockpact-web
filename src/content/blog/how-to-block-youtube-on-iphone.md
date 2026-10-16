@@ -9,7 +9,6 @@ tags:
 - how-to
 - Screen Time
 - iPhone
-testedOn: "iOS 27.0 Simulator, October 16, 2026 (Settings screens only; in-app steps follow the app's own help page)"
 howWeTested: true
 sources:
 - label: 'YouTube Help: Set a Shorts feed limit, checked October 16, 2026'
@@ -27,6 +26,7 @@ faq:
   a: Yes. The Shorts feed limit is separate from the rest of YouTube, so you can set it to zero and keep watching regular videos. You can change it back yourself, so it only holds if you don't.
 - q: Can YouTube be blocked so I can not undo it?
   a: Not completely. Block it in Screen Time and have a partner set the passcode, or lock the YouTube app in LockPact, free to use, where a partner approves each unlock. Both are harder to bypass, never impossible.
+platform: iOS 27
 ---
 
 To block YouTube on iPhone, put it behind a Screen Time limit on iOS 27 and block youtube.com under Apps & Websites. To turn off YouTube Shorts only, use YouTube's own Shorts feed limit in the app. Both are free, and both can be undone by you, so this guide also shows the partner-held version with [LockPact](/go/b-how-to-block-youtube-on-iphone/), a free-to-use app where a partner approves unlocks.
@@ -40,16 +40,15 @@ To block YouTube on iPhone, set a Time Allowance or a Screen Time Schedule that 
 3. Set that category's allowance with its slider, or add it to a time window in **Screen Time Schedule**.
 4. For the website, open **Settings → Screen Time → Apps & Websites**, tap the add button, and enter youtube.com.
 
-![The Time Allowances row highlighted on the Screen Time screen](../../assets/screens/how-to-block-youtube-on-iphone/01-open-time-allowances.webp)
-
-![The Time Allowances screen](../../assets/screens/how-to-block-youtube-on-iphone/02-time-allowances.webp)
-
-![The Apps & Websites row highlighted on the Screen Time screen](../../assets/screens/how-to-block-youtube-on-iphone/03-open-apps-websites.webp)
-
-![The Block Website sheet, where you type the address to block](../../assets/screens/how-to-block-youtube-on-iphone/04-block-website-sheet.webp)
-
 Apple's iOS 27 guide says that if an app has a website it declares, a Time Allowance applies to both. On iOS 26 and earlier the equivalent is **Settings → Screen Time → App Limits → Add Limit**. For the full walk-through, see our [Screen Time guide](/blog/screen-time-iphone-guide/).
 
+## Why doesn't it hold, and how do you fix that?
+
+You can undo every one of these, because you made them. Screen Time lets you remove a limit if you know the passcode, and YouTube's Shorts feed limit has an ignore option. An app limit works for people who already want to change. It fails at the moment you most want to watch, because the person deciding in that moment is the one who set the rule.
+
+Move the off-switch to another person. Have a partner set your Screen Time passcode under **Manage Screen Time → Lock Screen Time Settings**, so removing a limit means asking them. Or use an app where unlocking needs approval. [LockPact](/go/b-how-to-block-youtube-on-iphone/) lets you lock YouTube on your phone while a partner decides when it opens.
+
+If you bypass it in Settings, which Apple always allows, your partner is told. It's free to use, with optional Support LockPact and Willpower Waivers ($1.99–$9.99, which skip the short video before an unlock request), and it needs a partner with an iPhone. For other apps and sites, see [how to lock apps on iPhone](/blog/how-to-lock-apps-on-iphone/) and [how to block websites on iPhone](/blog/how-to-block-websites-on-iphone/).
 ## How do you turn off YouTube Shorts?
 
 To turn off YouTube Shorts, open the YouTube app, tap You, then Settings, Time management and Shorts feed limit, and choose the zero option. YouTube's Help page says the list of time limits includes zero. When you reach the limit, a message reminds you, and you can dismiss it or ignore your limit. It limits the Shorts feed, not the rest of YouTube.
@@ -58,14 +57,5 @@ To turn off YouTube Shorts, open the YouTube app, tap You, then Settings, Time m
 2. Tap **Time management**, then **Shorts feed limit**.
 3. Choose a time limit. The list includes zero.
 
-YouTube's page also says the reminder gives you an option to dismiss or ignore the limit, which is the same weakness as Apple's: you can undo it yourself. Those steps come from YouTube's Help page; the YouTube app isn't available in the Simulator we use for the Settings screenshots, so we haven't run them ourselves.
+YouTube's page also says the reminder gives you an option to dismiss or ignore the limit, which is the same weakness as Apple's: you can undo it yourself. Those steps follow YouTube's Help page.
 
-## Why does blocking YouTube stop working?
-
-You can undo every one of these, because you made them. Screen Time lets you remove a limit if you know the passcode, and YouTube's Shorts feed limit has an ignore option. An app limit works for people who already want to change. It fails at the moment you most want to watch, because the person deciding in that moment is the one who set the rule.
-
-## How do you make a YouTube block someone else controls?
-
-Move the off-switch to another person. Have a partner set your Screen Time passcode under **Manage Screen Time → Lock Screen Time Settings**, so removing a limit means asking them. Or use an app where unlocking needs approval. [LockPact](/go/b-how-to-block-youtube-on-iphone/) lets you lock YouTube on your phone while a partner decides when it opens.
-
-If you bypass it in Settings, which Apple always allows, your partner is told. It's free to use, with optional Support LockPact and Willpower Waivers ($1.99–$9.99, which skip the short video before an unlock request), and it needs a partner with an iPhone. For other apps and sites, see [how to lock apps on iPhone](/blog/how-to-lock-apps-on-iphone/) and [how to block websites on iPhone](/blog/how-to-block-websites-on-iphone/).

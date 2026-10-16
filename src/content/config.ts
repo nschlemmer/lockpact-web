@@ -21,6 +21,9 @@ const blog = defineCollection({
     // Round 6 trust fields (docs: /editorial-policy/). `testedOn` is shown under the H1 only where a
     // check was actually run (e.g. "iOS 27.0 Simulator · October 16, 2026"). `sources` feeds the
     // HowWeTested box. `disclosure` adds the "We make LockPact" line to listicles and comparisons.
+    // Platform label shown in the single meta line under the H1 (e.g. "iOS 27"). `testedOn` is deprecated
+    // (Round 6c removed the separate "Tested on" line) and kept optional only so old frontmatter still parses.
+    platform: z.string().optional(),
     testedOn: z.string().optional(),
     sources: z.array(z.object({ label: z.string(), url: z.string() })).optional(),
     howWeTested: z.boolean().default(false),

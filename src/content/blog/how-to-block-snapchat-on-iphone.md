@@ -8,7 +8,6 @@ tags:
 - how-to
 - Screen Time
 - iPhone
-testedOn: "iOS 27.0 Simulator, October 16, 2026 (Settings screens only; in-app steps follow the app's own help page)"
 howWeTested: true
 sources:
 - label: 'Snapchat Help: What is Family Center?, checked October 16, 2026'
@@ -24,6 +23,7 @@ faq:
   a: We couldn't find a Snapchat help article describing a self-set daily limit for adults. Snapchat's Family Center is built for parents of teens. For a limit on your own account, use iPhone's Screen Time.
 - q: Can I block Snapchat so I can not undo it?
   a: Not completely. Have someone else hold your Screen Time passcode, or lock Snapchat in LockPact, free to use, where a partner approves each unlock. Both are harder to bypass, never impossible.
+platform: iOS 27
 ---
 
 To block Snapchat on iPhone, use Screen Time on iOS 27: set a limit on the category it's in and block snapchat.com under Apps & Websites. Snapchat doesn't offer a self-set daily limit that we could find, so Screen Time is the built-in route. It's free, you can undo it, and so this guide also covers the partner-held version with [LockPact](/go/b-how-to-block-snapchat-on-iphone/), a free-to-use app where a partner approves unlocks.
@@ -37,24 +37,16 @@ To block Snapchat, find its category in Time Allowances, set a limit or add it t
 3. Set that category's allowance, or add it to a window in **Screen Time Schedule**.
 4. For the website, open **Settings → Screen Time → Apps & Websites**, tap the add button, and enter snapchat.com.
 
-![The Time Allowances row highlighted on the Screen Time screen](../../assets/screens/how-to-block-snapchat-on-iphone/01-open-time-allowances.webp)
-
-![The Apps & Websites row highlighted on the Screen Time screen](../../assets/screens/how-to-block-snapchat-on-iphone/02-open-apps-websites.webp)
-
-![The Block Website sheet, where you type the address to block](../../assets/screens/how-to-block-snapchat-on-iphone/03-block-website-sheet.webp)
-
 On iOS 26 and earlier, use **Settings → Screen Time → App Limits → Add Limit**. Every path is in our [Screen Time guide](/blog/screen-time-iphone-guide/).
 
-## Does Snapchat have its own time limit?
-
-Not that we could find. Snapchat's Family Center is a tool for parents of teens, with friend and chat visibility, location, content controls and My AI controls. We found no Snapchat help article describing a daily time limit for an adult's own account. This guide is for adults managing their own phone, so Screen Time is the built-in way to put a limit on Snapchat.
-
-## Why does blocking Snapchat stop working?
+## Why doesn't it hold, and how do you fix that?
 
 The same reason as any limit you set for yourself: you know the passcode, and the moment you want Snapchat is the moment you're least likely to honor a rule you wrote earlier. Snapchat also runs on streaks and chats from friends, so the pull is social, which a time limit alone doesn't touch.
-
-## How do you make a Snapchat block someone else controls?
 
 Have a partner set your Screen Time passcode under **Manage Screen Time → Lock Screen Time Settings**, or lock Snapchat in [LockPact](/go/b-how-to-block-snapchat-on-iphone/), where a partner approves each unlock. If you bypass it in Settings, which Apple always allows, your partner is told.
 
 It's free to use, with optional Support LockPact and Willpower Waivers ($1.99–$9.99), and it needs a partner with an iPhone. For other apps, see [how to lock apps on iPhone](/blog/how-to-lock-apps-on-iphone/) and [how to block websites on iPhone](/blog/how-to-block-websites-on-iphone/).
+## Does Snapchat have its own time limit?
+
+Not that we could find. Snapchat's Family Center is a tool for parents of teens, with friend and chat visibility, location, content controls and My AI controls. We found no Snapchat help article describing a daily time limit for an adult's own account. This guide is for adults managing their own phone, so Screen Time is the built-in way to put a limit on Snapchat.
+

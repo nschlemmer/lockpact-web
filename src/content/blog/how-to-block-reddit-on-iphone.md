@@ -9,7 +9,6 @@ tags:
 - Screen Time
 - websites
 - iPhone
-testedOn: "iOS 27.0 Simulator, October 16, 2026 (Settings screens only; in-app steps follow the app's own help page)"
 howWeTested: true
 sources:
 - label: 'Reddit Help: How do I opt in or out of notifications?, checked October 16, 2026'
@@ -25,6 +24,7 @@ faq:
   a: We couldn't find a Reddit help article describing a daily time limit or break reminder. Reddit's notification settings can reduce interruptions, but they aren't a limit. Use iPhone's Screen Time for a limit.
 - q: Why block both the Reddit app and the website?
   a: Blocking only the app leaves reddit.com open in Safari, and blocking only the site leaves the app. Do both, or you'll just switch to the one you left open.
+platform: iOS 27
 ---
 
 To block Reddit on iPhone you have to block two things: the app and the website. On iOS 27, set a Screen Time limit for the app's category and add reddit.com under Apps & Websites. Reddit doesn't offer a daily limit we could find. Both steps are free and you can undo them, so this guide also covers the partner-held version with [LockPact](/go/b-how-to-block-reddit-on-iphone/), a free-to-use app where a partner approves unlocks.
@@ -37,24 +37,16 @@ Block the app through Screen Time's categories and the website through Apps & We
 2. Tap a category and check whether Reddit is listed. Set that category's allowance, or add it to a window in **Screen Time Schedule**.
 3. For the website, open **Settings → Screen Time → Apps & Websites**, tap the add button, and enter reddit.com.
 
-![The Time Allowances row highlighted on the Screen Time screen](../../assets/screens/how-to-block-reddit-on-iphone/01-open-time-allowances.webp)
-
-![The Apps & Websites row highlighted on the Screen Time screen](../../assets/screens/how-to-block-reddit-on-iphone/02-open-apps-websites.webp)
-
-![The Block Website sheet, where you type the address to block](../../assets/screens/how-to-block-reddit-on-iphone/03-block-website-sheet.webp)
-
 On iOS 26 and earlier, use **Settings → Screen Time → App Limits → Add Limit**, plus **Content & Privacy Restrictions → App Store, Media, Web & Games → Web Content** for the site. See our [Screen Time guide](/blog/screen-time-iphone-guide/) for each path, and [how to block websites on iPhone](/blog/how-to-block-websites-on-iphone/) for the website step in detail.
 
-## Does Reddit have its own limit or break reminder?
-
-Not that we could find. Reddit's Help Center has no article we could find describing a daily limit or a take-a-break reminder in the app. What it does describe is notification settings, where you choose which notifications you receive. Turning notifications off can cut interruptions, but it isn't a limit, so Screen Time is the built-in route.
-
-## Why does blocking Reddit stop working?
+## Why doesn't it hold, and how do you fix that?
 
 You set the rule and you hold the passcode, so you can undo it at the moment the thread you want is open. Reddit also has no natural stopping point: one more comment thread is always a tap away. That's why the off-switch should belong to someone else, not to a stricter setting.
-
-## How do you make a Reddit block someone else controls?
 
 Have a partner set your Screen Time passcode under **Manage Screen Time → Lock Screen Time Settings**, or lock Reddit in [LockPact](/go/b-how-to-block-reddit-on-iphone/), where a partner approves each unlock. LockPact can lock websites you choose as well as apps; Apple doesn't document which browsers its shield covers, so test it in the browser you use.
 
 If you bypass it in Settings, which Apple always allows, your partner is told. It's free to use, with optional Support LockPact and Willpower Waivers ($1.99–$9.99), and it needs a partner with an iPhone. For more, see [how to lock apps on iPhone](/blog/how-to-lock-apps-on-iphone/).
+## Does Reddit have its own limit or break reminder?
+
+Not that we could find. Reddit's Help Center has no article we could find describing a daily limit or a take-a-break reminder in the app. What it does describe is notification settings, where you choose which notifications you receive. Turning notifications off can cut interruptions, but it isn't a limit, so Screen Time is the built-in route.
+
