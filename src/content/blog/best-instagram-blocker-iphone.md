@@ -115,14 +115,8 @@ Match the tool to the habit. For late-night scrolling, use a Screen Time Schedul
 To limit Instagram with Screen Time on iOS 27, check which Time Allowance category holds it, set that category's allowance or add it to a Screen Time Schedule window, and block instagram.com under Apps & Websites. Then have someone else hold the passcode so the limit can't be undone in a tap. Each step is below, with the screens.
 
 1. Open **Settings → Screen Time → Time Allowances → Manage Categories**, tap a category, and check whether Instagram is in it.
-
-   ![The Time Allowances row highlighted on the Screen Time screen](../../assets/screens/best-instagram-blocker-iphone/01-open-time-allowances.webp)
 2. Set that category's allowance with its slider, or add it to a window in **Screen Time Schedule**.
-
-   ![The Time Allowances screen](../../assets/screens/best-instagram-blocker-iphone/02-time-allowances.webp)
 3. Open **Settings → Screen Time → Apps & Websites**, tap the add button, and enter instagram.com so the website is covered too.
-
-   ![The Block Website sheet, where you type the address to block](../../assets/screens/best-instagram-blocker-iphone/05-block-website-sheet.webp)
 4. Ask a partner to set the passcode under **Manage Screen Time → Lock Screen Time Settings**.
 
 For a longer version of these steps, see [how to lock Instagram after a time limit](/blog/instagram-vs-lockpact-blocking/).

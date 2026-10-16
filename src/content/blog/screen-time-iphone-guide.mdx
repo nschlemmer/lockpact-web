@@ -28,17 +28,36 @@ faq:
 platform: iOS 27
 ---
 
+import StepGuide from '../../components/StepGuide.astro';
+import s1 from '../../assets/screens/screen-time-iphone-guide/01-open-screen-time.webp';
+import s2 from '../../assets/screens/screen-time-iphone-guide/03-open-schedule.webp';
+import s3 from '../../assets/screens/screen-time-iphone-guide/05-open-time-allowances.webp';
+import s4 from '../../assets/screens/screen-time-iphone-guide/07-open-always-allowed.webp';
+import s5 from '../../assets/screens/screen-time-iphone-guide/10-open-apps-websites.webp';
+import s6 from '../../assets/screens/screen-time-iphone-guide/09-open-content-privacy.webp';
+import s7 from '../../assets/screens/screen-time-iphone-guide/11-open-manage.webp';
+
 Screen Time is the free tool built into every iPhone for seeing how you use it and setting rules. This guide covers every setting on iOS 27 with the exact taps, then shows why it stops working when you set it for yourself and what to do about that. [LockPact](/go/b-screen-time-iphone-guide/) is a free-to-use app where a partner approves unlocks, for the cases Apple's settings can't cover.
 
 ## Where is Screen Time on iPhone, and what changed in iOS 27?
 
 Screen Time is at **Settings → Screen Time**. On iOS 27 that screen lists Screen Time Schedule, Time Allowances, Always Allowed, Apps & Websites, Allowed Contacts, Content & Privacy Restrictions and Manage Screen Time. App Limits and Downtime, which iOS 26 and earlier use, no longer appear there. Apple's iOS 27 guide replaces them with Time Allowances and Screen Time Schedule.
 
-1. Open **Settings**, then tap **Screen Time**.
-2. You'll see the groups of settings described below.
-If your menus show **App Limits** and **Downtime** instead, you're on iOS 26 or earlier. Each section below has a short note for that version.
+<StepGuide
+  title="A tour of Screen Time on iOS 27"
+  steps={[
+    { title: "Open Settings, then tap Screen Time.", image: s1, alt: "The Screen Time row highlighted in the Settings list" },
+    { title: "Screen Time Schedule", detail: "Hours when most apps are off.", image: s2, alt: "The Screen Time Schedule row highlighted on the Screen Time screen" },
+    { title: "Time Allowances", detail: "Daily time for categories of apps.", image: s3, alt: "The Time Allowances row highlighted on the Screen Time screen" },
+    { title: "Always Allowed", detail: "Apps and people that are never limited.", image: s4, alt: "The Always Allowed row highlighted on the Screen Time screen" },
+    { title: "Apps & Websites", detail: "Block or allow specific sites.", image: s5, alt: "The Apps and Websites row highlighted on the Screen Time screen" },
+    { title: "Content & Privacy Restrictions", detail: "Scroll down to find it.", image: s6, alt: "The Content and Privacy Restrictions row highlighted on the Screen Time screen" },
+    { title: "Manage Screen Time", detail: "Passcode, sharing and turning Screen Time off.", image: s7, alt: "Manage Screen Time highlighted at the bottom of the Screen Time screen" },
+  ]}
+/>
 
-   ![The iOS 27 Screen Time screen, with Apps and Websites, Screen Time Schedule and Time Allowances](../../assets/screens/screen-time-iphone-guide/02-screen-time.webp)
+
+If your menus show **App Limits** and **Downtime** instead, you're on iOS 26 or earlier. Each section below has a short note for that version.
 ## What do you need to use the iOS 27 Screen Time features?
 
 You need iOS 27 on every Apple device that shares your Screen Time. Apple says Screen Time Schedules and Time Allowances need iOS 27, iPadOS 27 or macOS 27 or later on all your Apple devices, and every device in a Family Sharing group if you set them up for a child. Check your version in **Settings → General → About**, and update in **Settings → General → Software Update**. If you can't update every device, the iOS 26 steps in each section below still apply to the phone you're holding. This page is for adults managing their own phone; for a child's device, see Apple's "Apple Devices for Kids and Families" guide.
@@ -76,8 +95,6 @@ On iOS 27 you set daily time for app categories with Time Allowances. Open Setti
 
 1. Open **Settings → Screen Time → Time Allowances**.
 2. To change your total time, drag the slider left or right (or tap the minus and plus buttons).
-
-   ![The Time Allowances screen](../../assets/screens/screen-time-iphone-guide/06-time-allowances.webp)
 3. To change a category, tap it under **Time Allowances** and drag its slider.
 4. To add a category, tap **Manage Categories**, tap the plus button, then pick one.
 5. To apply allowances only during certain hours, turn on **Match Screen Time Schedule**.

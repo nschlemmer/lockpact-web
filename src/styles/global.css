@@ -157,52 +157,25 @@
   }
 
 
-  /* Phone screenshots (Round 6c): sized like a phone, never full column width. */
+  /* Images in prose. Procedure screenshots live in <StepGuide>; a lone screenshot is one small phone,
+     left-aligned (.lp-shot), never a full-width block. */
   .prose img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .prose figure.lp-shot {
+    margin: 1rem 0 1.5rem;
+    width: 240px;
+    max-width: 100%;
+  }
+  .prose figure.lp-shot img {
     display: block;
     width: 100%;
-    max-width: 280px;
-    height: auto;
-    margin: 1rem auto;
     border-radius: 16px;
     border: 1px solid var(--color-card-border);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.14);
-  }
-
-  /* A screenshot inside a list step sits beside that step on wider screens. The image is positioned
-     inside its <li> (so the list number stays), and the step reserves room for it. Below 768 px the
-     image simply follows the step text. */
-  .prose li > p:has(> img:only-child) {
-    margin: 0.75rem auto 0.5rem;
-  }
-
-  @media (min-width: 768px) {
-    .prose li:has(> p > img:only-child) {
-      position: relative;
-      padding-right: 304px;
-      min-height: 626px;
-    }
-    .prose li > p:has(> img:only-child) {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 280px;
-      margin: 0;
-    }
-    .prose li > p:has(> img:only-child) img {
-      margin: 0;
-    }
-  }
-
-  @media (max-width: 767px) {
-    .prose img {
-      max-width: 240px;
-    }
-  }
-
-  .lp-video video {
-    display: block;
-    margin: 0 auto;
   }
 
   .prose hr {

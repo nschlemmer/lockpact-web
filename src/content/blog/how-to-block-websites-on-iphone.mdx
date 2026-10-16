@@ -25,29 +25,32 @@ faq:
     a: "Yes. Screen Time is built in and free, and LockPact is free to use. Both are subject to the same limit: you can turn off your own settings unless someone else holds the passcode or has to approve."
 ---
 
+import StepGuide from '../../components/StepGuide.astro';
+import s1 from '../../assets/screens/how-to-block-websites-on-iphone/01-open-screen-time.webp';
+import s2 from '../../assets/screens/how-to-block-websites-on-iphone/02-open-apps-websites.webp';
+import s3 from '../../assets/screens/how-to-block-websites-on-iphone/04-open-blocked-tab.webp';
+import s4 from '../../assets/screens/how-to-block-websites-on-iphone/05-tap-add.webp';
+import s5 from '../../assets/screens/how-to-block-websites-on-iphone/06-block-website-sheet.webp';
+
 To block a website on iPhone with iOS 27, open **Settings → Screen Time → Apps & Websites**, tap **Blocked**, tap the add button, and type the site's address. It's free and built in. The catch is that you can undo it yourself, so this guide also shows how to lock websites with [LockPact](/go/b-how-to-block-websites-on-iphone/), a free-to-use app where a partner has to approve before a site opens again. It's written for adults managing their own phone; for a child's device, see Apple's [Apple Devices for Kids and Families](https://support.apple.com/guide/child-safety/jymj24zqwaek/27/web/1.0) guide.
 
 ## How do you block a website on iPhone?
 
 On iOS 27, block a website from Apps & Websites in Screen Time. Open Settings, tap Screen Time, tap Apps & Websites, tap the Blocked tab, and tap the add button. A sheet titled Block Website asks you to type one URL or paste many. Confirm it and the site joins your Blocked list. This is the setting most people mean by "block a website on Safari."
 
-1. Open **Settings → Screen Time → Apps & Websites**.
+<StepGuide
+  title="Block a website in Screen Time"
+  steps={[
+    { title: "Open Settings, then tap Screen Time.", detail: "Scroll down past Apps if you don't see it.", image: s1, alt: "The Screen Time row highlighted in the Settings list" },
+    { title: "Tap Apps & Websites.", detail: "On iOS 26 and earlier this lives under Content & Privacy Restrictions.", image: s2, alt: "The Apps and Websites row highlighted on the Screen Time screen" },
+    { title: "Tap the Blocked tab.", detail: "Allowed lists sites you always want available.", image: s3, alt: "The Blocked tab highlighted on the Apps and Websites screen" },
+    { title: "Tap the add button.", detail: "It sits at the bottom right of the Blocked list.", image: s4, alt: "The add button highlighted at the bottom right of the Blocked tab" },
+    { title: "Type the address, then tap the checkmark.", detail: "Type one URL, or paste many.", image: s5, alt: "The Block Website sheet, with a field that reads Enter website URLs" },
+  ]}
+  video={{ src: "/videos/how-to-block-websites-on-iphone.mp4", poster: "/videos/how-to-block-websites-on-iphone.webp", seconds: 36 }}
+/>
 
-   ![The Apps and Websites row highlighted on the Screen Time screen](../../assets/screens/how-to-block-websites-on-iphone/02-open-apps-websites.webp)
-2. Tap the **Blocked** tab, then the **add button** at the bottom right.
-
-   ![The add button highlighted at the bottom right of the Blocked tab](../../assets/screens/how-to-block-websites-on-iphone/05-tap-add.webp)
-3. On the **Block Website** sheet, type one URL or paste several, then tap the checkmark.
-
-   ![The Block Website sheet, with a field that reads Enter website URLs](../../assets/screens/how-to-block-websites-on-iphone/06-block-website-sheet.webp)
-4. Check it worked: open the site in Safari and confirm it won't load.
-
-<figure class="lp-video" style="margin: 1.5rem auto; max-width: 270px;">
-<video controls muted playsinline preload="metadata" poster="/videos/how-to-block-websites-on-iphone.webp" width="270" height="587" style="width: 100%; height: auto; border-radius: 16px;">
-<source src="/videos/how-to-block-websites-on-iphone.mp4" type="video/mp4">
-</video>
-<figcaption style="font-size: 0.8125rem; margin-top: 0.5rem; color: var(--color-text-tertiary);">Watch: 36-second walkthrough (no sound)</figcaption>
-</figure>
+Check it worked: open the site in Safari and confirm it won't load.
 
 To unblock a site later, go back to **Blocked** and remove the address. If a Screen Time passcode is set, you'll be asked for it.
 
@@ -76,8 +79,6 @@ It's free to use, with optional Support LockPact and Willpower Waivers ($1.99–
 Apps & Websites has a Restrictions row at the top that shows the website filter, which reads Limit Adult Websites by default. Tap Restrictions to see it. Apple's iOS 27 guide describes three choices for a child's device: unrestricted access, Limit Adult Websites, or Approved Websites Only. Check which options your own screen offers.
 
 1. Open **Settings → Screen Time → Apps & Websites**, tap **Restrictions**, then choose the website filter you want.
-
-   ![The Restrictions screen showing the website filter](../../assets/screens/how-to-block-websites-on-iphone/08-restrictions.webp)
 
 ## Where did the website block move between iOS 26 and iOS 27?
 

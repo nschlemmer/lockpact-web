@@ -35,13 +35,9 @@ To block TikTok on iPhone, set a Screen Time limit on the category it sits in an
 To block TikTok with Screen Time on iOS 27, find its category under Time Allowances, set a limit or schedule for that category, and add tiktok.com to Apps & Websites. Open Settings, tap Screen Time, tap Time Allowances, then Manage Categories, and tap a category to see whether TikTok is in it before you set the limit.
 
 1. Open **Settings → Screen Time → Time Allowances → Manage Categories**.
-
-   ![The Time Allowances row highlighted on the Screen Time screen](../../assets/screens/how-to-block-tiktok-on-iphone/01-open-time-allowances.webp)
 2. Tap a category and check whether TikTok is listed.
 3. Set that category's allowance, or add it to a window in **Screen Time Schedule**.
 4. For the website, open **Settings → Screen Time → Apps & Websites**, tap the add button, and enter tiktok.com.
-
-   ![The Block Website sheet, where you type the address to block](../../assets/screens/how-to-block-tiktok-on-iphone/03-block-website-sheet.webp)
 
 On iOS 26 and earlier, use **Settings → Screen Time → App Limits → Add Limit** instead. Our [Screen Time guide](/blog/screen-time-iphone-guide/) has every path.
 

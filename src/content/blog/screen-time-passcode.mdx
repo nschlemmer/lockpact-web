@@ -26,6 +26,14 @@ faq:
     a: "Only if someone else holds it. Even then, a device owner can still get around any iPhone restriction. A passcode makes bypass slower and harder to do quietly; it doesn't make it impossible."
 platform: iOS 27
 ---
+
+import StepGuide from '../../components/StepGuide.astro';
+import s1 from '../../assets/screens/screen-time-passcode/01-open-screen-time.webp';
+import s2 from '../../assets/screens/screen-time-passcode/02-open-manage.webp';
+import s3 from '../../assets/screens/screen-time-passcode/04-open-lock-settings.webp';
+import s4 from '../../assets/screens/screen-time-passcode/05-passcode-entry.webp';
+import s5 from '../../assets/screens/screen-time-passcode/06-skip-or-provide-account.webp';
+
 Your Screen Time passcode is the one thing standing between you and every limit you've set, and the person who knows it is usually the person it was meant to restrain. This guide covers Apple's iOS 27 steps to set, change, reset and remove it, then why someone else should hold it. [LockPact](/go/b-screen-time-passcode/) is a free-to-use app where a partner approves unlocks, for people who want that without handing over a code.
 
 ## What is the Screen Time passcode?
@@ -36,25 +44,19 @@ The Screen Time passcode is a four-digit code you must enter before changing you
 
 To set a Screen Time passcode on iOS 27, open Settings, tap Screen Time, tap Manage Screen Time, then tap Lock Screen Time Settings. Enter a four-digit passcode, then enter it again to confirm. Afterwards iOS asks whether you want Screen Time Passcode Recovery with an Apple Account. "Lock Screen Time Settings" is Apple's path for setting the passcode; it isn't a second code.
 
-1. Open **Settings → Screen Time**, scroll down and tap **Manage Screen Time**.
+<StepGuide
+  title="Set a Screen Time passcode"
+  steps={[
+    { title: "Open Settings, then tap Screen Time.", image: s1, alt: "The Screen Time row highlighted in the Settings list" },
+    { title: "Tap Manage Screen Time.", detail: "It sits at the bottom of the Screen Time screen.", image: s2, alt: "Manage Screen Time highlighted at the bottom of the Screen Time screen" },
+    { title: "Tap Lock Screen Time Settings.", image: s3, alt: "Lock Screen Time Settings highlighted on the Manage Screen Time screen" },
+    { title: "Enter four digits, then enter them again.", image: s4, alt: "The Enter Screen Time Passcode screen, which asks for four digits" },
+    { title: "Add recovery, or skip it.", detail: "Tap Provide Apple Account to add recovery.", image: s5, alt: "The Are you sure prompt, offering Skip or Provide Apple Account for passcode recovery" },
+  ]}
+  video={{ src: "/videos/screen-time-passcode.mp4", poster: "/videos/screen-time-passcode.webp", seconds: 34 }}
+/>
 
-   ![Manage Screen Time highlighted at the bottom of the Screen Time screen](../../assets/screens/screen-time-passcode/02-open-manage.webp)
-2. Tap **Lock Screen Time Settings**.
-
-   ![Lock Screen Time Settings highlighted on the Manage Screen Time screen](../../assets/screens/screen-time-passcode/04-open-lock-settings.webp)
-3. Enter a four-digit passcode, then enter it again to confirm.
-
-   ![The Enter Screen Time Passcode screen, which asks for four digits](../../assets/screens/screen-time-passcode/05-passcode-entry.webp)
-4. Add recovery: close the **Passcode Recovery** sheet and iOS asks whether you're sure. Tap **Provide Apple Account** to add recovery (enter the email or phone number and password), or **Skip** to go without.
-
-   ![The Are you sure prompt, offering Skip or Provide Apple Account for passcode recovery](../../assets/screens/screen-time-passcode/06-skip-or-provide-account.webp)
-
-<figure class="lp-video" style="margin: 1.5rem auto; max-width: 270px;">
-<video controls muted playsinline preload="metadata" poster="/videos/screen-time-passcode.webp" width="270" height="587" style="width: 100%; height: auto; border-radius: 16px;">
-<source src="/videos/screen-time-passcode.mp4" type="video/mp4">
-</video>
-<figcaption style="font-size: 0.8125rem; margin-top: 0.5rem; color: var(--color-text-tertiary);">Watch: 34-second walkthrough (no sound)</figcaption>
-</figure>
+To finish, close the **Passcode Recovery** sheet and iOS asks whether you're sure. Tap **Provide Apple Account** to add recovery (enter the email or phone number and password), or **Skip** to go without.
 
 Apple recommends you don't skip recovery, because it's how you reset a forgotten passcode. Remember which account you entered: Apple will ask for exactly that one later. Apple's support article notes the recovery account might differ from the one signed in on your phone, including a family member's, which matters if you're handing the passcode to a partner.
 
@@ -77,11 +79,7 @@ To change it on iOS 27, open Settings, tap Screen Time, tap Manage Screen Time, 
 
 1. Open **Settings → Screen Time → Manage Screen Time**.
 2. Tap **Change Screen Time Passcode**.
-
-   ![Change Screen Time Passcode highlighted on the Manage Screen Time screen once a passcode is set](../../assets/screens/screen-time-passcode/08-open-change-passcode.webp)
 3. In the sheet, tap **Change Screen Time Passcode**.
-
-   ![The sheet that opens, with Change Screen Time Passcode highlighted above Turn Off Screen Time Passcode](../../assets/screens/screen-time-passcode/09-change-options.webp)
 4. If asked, enter the Apple Account email and password you used for recovery, then your current passcode. Enter a new four-digit passcode, then enter it again.
 
 Apple's iPhone User Guide for iOS 27 words the same steps as "Tap Screen Time, tap Change Screen Time Passcode" ([Create, change, or remove a Screen Time passcode](https://support.apple.com/guide/iphone/iph272b4c4bd/27/ios/27)). Apple's support article, [Change your Screen Time passcode](https://support.apple.com/en-us/102677), lists it under Manage Screen Time, which is what you'll see on iOS 27.

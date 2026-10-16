@@ -36,13 +36,9 @@ To block YouTube on iPhone, put it behind a Screen Time limit on iOS 27 and bloc
 To block YouTube on iPhone, set a Time Allowance or a Screen Time Schedule that covers the category YouTube sits in, and block youtube.com under Apps & Websites. On iOS 27 these live under Settings, Screen Time. Check which category holds YouTube first: open Time Allowances, tap Manage Categories, tap a category, and look for the app in its list.
 
 1. Open **Settings → Screen Time → Time Allowances**.
-
-   ![The Time Allowances row highlighted on the Screen Time screen](../../assets/screens/how-to-block-youtube-on-iphone/01-open-time-allowances.webp)
 2. Tap **Manage Categories**, tap a category, and check whether YouTube is in it.
 3. Set that category's allowance with its slider, or add it to a time window in **Screen Time Schedule**.
 4. For the website, open **Settings → Screen Time → Apps & Websites**, tap the add button, and enter youtube.com.
-
-   ![The Block Website sheet, where you type the address to block](../../assets/screens/how-to-block-youtube-on-iphone/04-block-website-sheet.webp)
 
 Apple's iOS 27 guide says that if an app has a website it declares, a Time Allowance applies to both. On iOS 26 and earlier the equivalent is **Settings → Screen Time → App Limits → Add Limit**. For the full walk-through, see our [Screen Time guide](/blog/screen-time-iphone-guide/).
 

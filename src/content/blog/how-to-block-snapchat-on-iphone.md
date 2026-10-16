@@ -33,13 +33,9 @@ To block Snapchat on iPhone, use Screen Time on iOS 27: set a limit on the categ
 To block Snapchat, find its category in Time Allowances, set a limit or add it to a Screen Time Schedule window, and block snapchat.com under Apps & Websites. Open Settings, tap Screen Time, then Time Allowances, then Manage Categories, and tap a category to see whether Snapchat is listed. Apple's iOS 27 guide says the allowance applies to an app and its website together.
 
 1. Open **Settings → Screen Time → Time Allowances → Manage Categories**.
-
-   ![The Time Allowances row highlighted on the Screen Time screen](../../assets/screens/how-to-block-snapchat-on-iphone/01-open-time-allowances.webp)
 2. Tap a category and check whether Snapchat is listed.
 3. Set that category's allowance, or add it to a window in **Screen Time Schedule**.
 4. For the website, open **Settings → Screen Time → Apps & Websites**, tap the add button, and enter snapchat.com.
-
-   ![The Block Website sheet, where you type the address to block](../../assets/screens/how-to-block-snapchat-on-iphone/03-block-website-sheet.webp)
 
 On iOS 26 and earlier, use **Settings → Screen Time → App Limits → Add Limit**. Every path is in our [Screen Time guide](/blog/screen-time-iphone-guide/).
 

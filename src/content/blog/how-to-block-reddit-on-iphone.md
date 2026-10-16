@@ -34,12 +34,8 @@ To block Reddit on iPhone you have to block two things: the app and the website.
 Block the app through Screen Time's categories and the website through Apps & Websites, because Reddit works in both places. Open Settings, tap Screen Time, then Time Allowances and Manage Categories to find which category holds Reddit, then add reddit.com in Apps & Websites. Doing only one leaves the other open and you'll simply use that one.
 
 1. Open **Settings → Screen Time → Time Allowances → Manage Categories**.
-
-   ![The Time Allowances row highlighted on the Screen Time screen](../../assets/screens/how-to-block-reddit-on-iphone/01-open-time-allowances.webp)
 2. Tap a category and check whether Reddit is listed. Set that category's allowance, or add it to a window in **Screen Time Schedule**.
 3. For the website, open **Settings → Screen Time → Apps & Websites**, tap the add button, and enter reddit.com.
-
-   ![The Block Website sheet, where you type the address to block](../../assets/screens/how-to-block-reddit-on-iphone/03-block-website-sheet.webp)
 
 On iOS 26 and earlier, use **Settings → Screen Time → App Limits → Add Limit**, plus **Content & Privacy Restrictions → App Store, Media, Web & Games → Web Content** for the site. See our [Screen Time guide](/blog/screen-time-iphone-guide/) for each path, and [how to block websites on iPhone](/blog/how-to-block-websites-on-iphone/) for the website step in detail.
 
