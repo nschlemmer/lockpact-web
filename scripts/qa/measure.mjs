@@ -21,7 +21,9 @@ for (const slug of slugs) {
       await page.setViewport({ width: vp.width, height: vp.height, deviceScaleFactor: 1 });
       await page.evaluateOnNewDocument((t) => { try { localStorage.setItem('theme', t); } catch (e) {} }, theme);
       await page.goto(`${base}/blog/${slug}/`, { waitUntil: 'networkidle0' });
-      // lazy images: scroll through so they load before measuring
+      // lazy images: force-load them all, then scroll through, so nothing is a blank box in the capture
+      await page.evaluate(() => { document.querySelectorAll('img[loading="lazy"]').forEach((i) => { i.loading = 'eager'; }); });
+      await page.evaluate(async () => { await Promise.all([...document.images].map((i) => (i.complete ? 1 : new Promise((r) => { i.onload = i.onerror = r; })))); });
       await page.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 600) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 40)); } window.scrollTo(0, 0); });
       await new Promise((r) => setTimeout(r, 400));
       const m = await page.evaluate(() => {
