@@ -130,4 +130,30 @@ final class Capture: XCTestCase {
         for _ in 0..<10 { for e in settings.staticTexts.allElementsBoundByIndex { all2.insert(e.label) }; settings.swipeUp() }
         try? all2.sorted().joined(separator: "\n").write(toFile: "\(out)/diag-display-text.txt", atomically: true, encoding: .utf8)
     }
+
+    /// Sets a throwaway passcode (skipping recovery), captures where Change / Turn Off live, then removes it.
+    func testPasscodeLifecycle() {
+        // Clear any leftover sheet from a previous run.
+        for _ in 0..<2 { let x = settings.buttons.matching(NSPredicate(format: "label IN {'Close','Cancel','Dismiss'}")).firstMatch; if x.exists { x.tap(); sleep(1) } }
+        resetToRoot(); step(nil, "Screen Time")
+        step(nil, "Manage Screen Time")
+        if find("Change Screen Time Passcode").exists { write("60-already-set", frame: nil) }
+        else {
+            step(nil, "Lock Screen Time Settings", scroll: false); sleep(1)
+            settings.typeText("1234"); sleep(2)
+            settings.typeText("1234"); sleep(3)
+            write("61-skip-dialog", frame: nil)
+            let skip = settings.buttons["Skip"]
+            if skip.waitForExistence(timeout: 5) { write("62-skip-highlight", frame: skip.frame); skip.tap(); sleep(3) }
+        }
+        write("63-manage-after-set", frame: nil)
+        resetToRoot(); step(nil, "Screen Time")
+        write("64-screen-time-after-set", frame: nil)
+        for _ in 0..<3 { settings.swipeUp() }
+        write("65-screen-time-after-set-bottom", frame: nil)
+        if step("66-open-change-passcode", "Change Screen Time Passcode") {
+            write("67-change-passcode-options", frame: nil)
+            if step("68-open-turn-off", "Turn Off Screen Time Passcode", scroll: false) { sleep(1); settings.typeText("1234"); sleep(3); write("69-after-turn-off", frame: nil) }
+        }
+    }
 }

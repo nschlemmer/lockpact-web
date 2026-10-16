@@ -1,7 +1,7 @@
 ---
 title: "Brick vs Bloom: Price, Rules and Losing the Key (2026)"
 description: "Brick vs Bloom compared: price, how each one locks and unlocks, emergency exits, and what happens when you forget or lose it. Plus the no-hardware option."
-pubDate: 2026-10-16T09:00:00-07:00
+pubDate: 2026-10-16T07:00:00-07:00
 author: "LockPact"
 tags: ["Brick", "Bloom", "comparison", "app blockers", "hardware"]
 howWeTested: true

@@ -1,7 +1,7 @@
 ---
 title: "Best Screen Time Apps for iPhone (2026, Prices Checked)"
 description: "The best screen time apps for adults on iPhone, compared on what they do, who can turn each one off, and what they cost. Apple's built-in Screen Time included."
-pubDate: 2026-10-16T09:00:00-07:00
+pubDate: 2026-10-16T07:00:00-07:00
 author: "LockPact"
 tags: ["screen time apps", "app blockers", "comparison", "iPhone", "adults"]
 howWeTested: true
