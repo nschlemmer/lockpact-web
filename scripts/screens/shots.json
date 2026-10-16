@@ -232,5 +232,65 @@
   "out": "07-passcode-recovery",
   "raw": "51-after-confirm",
   "alt": "The Screen Time Passcode Recovery sheet, which asks for an Apple Account email or phone number"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "01-open-screen-time",
+  "raw": "01-open-screen-time",
+  "alt": "The Settings app with the Screen Time row highlighted"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "02-screen-time",
+  "raw": "02-screen-time",
+  "alt": "The iOS 27 Screen Time screen, with Apps & Websites, Screen Time Schedule and Time Allowances"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "03-open-time-allowances",
+  "raw": "22-open-time-allowances",
+  "alt": "The Time Allowances row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "04-time-allowances",
+  "raw": "23-time-allowances",
+  "alt": "The Time Allowances screen"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "05-open-schedule",
+  "raw": "20-open-schedule",
+  "alt": "The Screen Time Schedule row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "06-schedule",
+  "raw": "21-schedule",
+  "alt": "The Screen Time Schedule screen"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "07-open-always-allowed",
+  "raw": "24-open-always-allowed",
+  "alt": "The Always Allowed row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "08-open-apps-websites",
+  "raw": "10-open-apps-websites",
+  "alt": "The Apps & Websites row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "09-open-content-privacy",
+  "raw": "26-open-content-privacy",
+  "alt": "The Content & Privacy Restrictions row highlighted on the Screen Time screen"
+ },
+ {
+  "slug": "how-to-lock-apps-on-iphone",
+  "out": "10-content-privacy",
+  "raw": "27-content-privacy",
+  "alt": "The Content & Privacy Restrictions screen"
  }
 ]

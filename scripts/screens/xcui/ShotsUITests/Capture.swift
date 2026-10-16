@@ -156,4 +156,19 @@ final class Capture: XCTestCase {
             if step("68-open-turn-off", "Turn Off Screen Time Passcode", scroll: false) { sleep(1); settings.typeText("1234"); sleep(3); write("69-after-turn-off", frame: nil) }
         }
     }
+
+    /// Home Screen long-press menu ("Require Face ID"). Needs Face ID enrolled in the Simulator.
+    func testFaceIDMenu() {
+        let sb = XCUIApplication(bundleIdentifier: "com.apple.springboard")
+        sb.activate(); sleep(2)
+        XCUIDevice.shared.press(.home); sleep(2)
+        write("70-home-screen", frame: nil)
+        let icon = sb.icons["Calendar"].firstMatch
+        if icon.waitForExistence(timeout: 5) {
+            icon.press(forDuration: 1.5); sleep(2)
+            let req = sb.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Require'")).firstMatch
+            write("71-quick-actions", frame: req.exists ? req.frame : nil)
+            try? sb.debugDescription.write(toFile: "\(out)/diag-springboard.txt", atomically: true, encoding: .utf8)
+        }
+    }
 }
