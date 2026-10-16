@@ -4,7 +4,6 @@ description: "Screen Time limit not working? Check what Apple documents first, t
 pubDate: 2026-04-09
 updatedDate: 2026-10-16
 author: "LockPact"
-testedOn: "iOS 27.0 Simulator, October 16, 2026 (screens shown); other steps follow Apple's iOS 27 guide"
 howWeTested: true
 sources:
 - label: "Apple: Set Screen Time Schedules and Time Allowances (iOS 27)"
@@ -28,11 +27,12 @@ faq:
 - q: Why doesn't Screen Time actually stop me from using an app?
   a: Because it isn't designed to. Screen Time is an awareness tool — it nags you after a limit you set yourself, with a passcode you chose. It was never built to enforce a restriction against the person who controls it, because that person is you.
 - q: Can I make Screen Time harder to bypass?
-  a: 'More than before. As of iOS 26.4, Lock Screen Time Settings — set by someone other than you — gates disabling Screen Time behind the Screen Time passcode (per third-party guides; Apple doesn''t spell it out). Not bulletproof: a Face ID bypass path was reported and confirmed on some 26.4/26.5 builds (Apple is fixing it in the 26.6/27 betas), and erasing the device or an Apple ID passcode reset still work. Harder to bypass, never impossible.'
+  a: 'More than before. As of iOS 26.4, Lock Screen Time Settings — set by someone other than you — gates disabling Screen Time behind the Screen Time passcode (per third-party guides; Apple doesn''t spell it out). Not bulletproof: a Face ID bypass path was reported and confirmed on some 26.4 and 26.5 versions (Apple is fixing it in the 26.6/27 betas), and erasing the device or an Apple ID passcode reset still work. Harder to bypass, never impossible.'
 - q: Does a partner-held lock actually stop bypassing?
   a: No — and no app can honestly claim otherwise. What it does is make bypassing visible. iOS 26.4's Lock Screen Time Settings raises the bar meaningfully if a partner holds the code, but doesn't eliminate every path. LockPact detects when a bypass happens and tells your partner. The value isn't unbreakable enforcement; it's that you can't quietly cheat your own commitment anymore.
 - q: Is Screen Time worth using at all?
   a: Yes, as a diagnostic. It's genuinely useful for seeing how much time you're actually spending per app — most people underestimate it. Where it falls short is enforcement for someone who already knows the number is bad and wants a reason not to override their own limit.
+platform: iOS 27
 ---
 If Screen Time isn't working on your iPhone the way you hoped, it's not broken — it's working exactly as designed. That's the uncomfortable part. You set a Screen Time limit on Instagram. Thirty minutes a day. You feel responsible.
 
@@ -48,29 +48,24 @@ Except nothing changed. You just overrode your own rules.
 
 This is the core problem with Apple Screen Time for adults. You're not restricted by technology. You're restricted by yourself. And you already know how to convince yourself.
 
-
 ## Screen Time limit not working? Check these first
 
 Most "not working" limits on iOS 27 come down to six checks: an app in Always Allowed, a shared Time Allowance running out sooner than you expect, a Screen Time Schedule that's off, devices that aren't all on iOS 27, a passcode you can use to override everything, and apps that aren't in the category you think. Work through them in order; each takes a minute.
 
 1. **Check Always Allowed.** Apps in **Settings → Screen Time → Always Allowed** stay available regardless of any schedule or allowance, so a limit can't catch them. Remove the app from that list, or it will never be limited. Apple describes Always Allowed as apps and contacts you can use "at all times", even during a schedule.
+
+   ![The Always Allowed row highlighted on the Screen Time screen](../../assets/screens/apple-screen-time-doesnt-work/01-open-always-allowed.webp)
 2. **Check which category the app is in.** On iOS 27, Time Allowances work by category (Entertainment, Games, Social Media). Open **Settings → Screen Time → Time Allowances → Manage Categories**, tap a category, and look for the app. If it isn't in a category with an allowance, nothing limits it. Apple says apps use up their category's allowance or the daily total, whichever comes first.
+
+   ![The Time Allowances row highlighted on the Screen Time screen](../../assets/screens/apple-screen-time-doesnt-work/02-open-time-allowances.webp)
 3. **Check that the schedule is on.** Open **Settings → Screen Time → Screen Time Schedule** and make sure **Schedule** is switched on, and that the time window you expect covers the hours you're checking. To apply allowances only during schedule windows, turn on **Match Screen Time Schedule** in Time Allowances.
+
+   ![The Screen Time Schedule row highlighted on the Screen Time screen](../../assets/screens/apple-screen-time-doesnt-work/04-open-schedule.webp)
 4. **Update every device.** Apple says Screen Time Schedules and Time Allowances need iOS 27, iPadOS 27 or macOS 27 or later on all your Apple devices. If one device is behind, settings you made may not behave as you expect. Check **Settings → General → Software Update**, and turn on **Share Across Devices** under **Manage Screen Time** if you want one set of settings.
+
+   ![Manage Screen Time highlighted at the bottom of the Screen Time screen](../../assets/screens/apple-screen-time-doesnt-work/06-open-manage.webp)
 5. **Check who knows the passcode.** If you set the Screen Time passcode, you can change any of the above. Nothing is "broken" when you override a limit with a code you know.
 6. **Restart and update.** If all of the above is right and a limit still doesn't trigger, restart the iPhone and install any iOS update. Apple's Screen Time pages don't list a specific bug here, so treat this as general troubleshooting, not a documented fix.
-
-![The Always Allowed row highlighted on the Screen Time screen](../../assets/screens/apple-screen-time-doesnt-work/01-open-always-allowed.webp)
-
-![The Time Allowances row highlighted on the Screen Time screen](../../assets/screens/apple-screen-time-doesnt-work/02-open-time-allowances.webp)
-
-![The Time Allowances screen](../../assets/screens/apple-screen-time-doesnt-work/03-time-allowances.webp)
-
-![The Screen Time Schedule row highlighted on the Screen Time screen](../../assets/screens/apple-screen-time-doesnt-work/04-open-schedule.webp)
-
-![The Screen Time Schedule screen](../../assets/screens/apple-screen-time-doesnt-work/05-schedule.webp)
-
-![Manage Screen Time highlighted at the bottom of the Screen Time screen](../../assets/screens/apple-screen-time-doesnt-work/06-open-manage.webp)
 
 ## What if your phone is on iOS 26 or earlier?
 
@@ -106,14 +101,13 @@ The system is designed for *awareness*, not *enforcement*. It's a speed bump, no
 
 If you're trying to change your behavior, awareness sometimes works. For most people, most of the time, it doesn't. You already know you're spending too much time on Instagram. That knowledge hasn't changed your behavior yet.
 
-
 ## What changed in iOS 26.4
 
 Before 26.4, the six-step walkthrough above was the whole story: even a partner-set App Limit passcode didn't stop you from going around it entirely by disabling Screen Time in Settings.
 
 After 26.4, Settings → Screen Time → Manage Screen Time has **Lock Screen Time Settings** — Apple's path for setting the Screen Time passcode (not a second one): the passcode "must be entered before you can change any Screen Time settings." Third-party guides report that since 26.4 the same passcode also gates *turning off Screen Time itself* (disabling an app's access, or deleting it); Apple's own pages don't spell that out, so test it on your phone. The catch: **it only helps if someone else sets it.** Set your own, and you're back to square one — you know it, you can undo it.
 
-It's also not airtight yet. Developer forum reports (developer.apple.com/forums/thread/821959) documented a real bug on 26.4/26.5: the Settings → Apps → [App] toggle could still be disabled with Face ID instead of the Screen Time passcode. Apple confirmed it in May 2026; the fix is showing up in the 26.6 and iOS 27 betas as of this writing, so on an unpatched 26.4/26.5 build that gap may still be open. Erasing the device, and a passcode-forgot flow that falls back to Apple ID recovery (if that backup was set up), still work too.
+It's also not airtight yet. Developer forum reports (developer.apple.com/forums/thread/821959) documented a real bug on 26.4/26.5: the Settings → Apps → [App] toggle could still be disabled with Face ID instead of the Screen Time passcode. Apple confirmed it in May 2026; the fix is showing up in the 26.6 and iOS 27 betas as of this writing, so on an unpatched 26.4 or 26.5 that gap may still be open. Erasing the device, and a passcode-forgot flow that falls back to Apple ID recovery (if that backup was set up), still work too.
 
 None of that makes the setting pointless — it's a real increase in friction, and the honest summary is the same as everywhere else in this post: harder to bypass, never impossible. A partner-approved lock on top of it adds the one thing Apple's setting still can't: someone finding out when you try.
 
@@ -126,7 +120,6 @@ None of that makes the setting pointless — it's a real increase in friction, a
 **Detect or report bypasses.** Disable Screen Time entirely from Settings and nothing happens — no notification, no record.
 
 **Stop you from using an app.** It limits *usage time*, not access — it nags you after your limit, but you can still open the app.
-
 
 ## Why You Can't Fix This By Yourself
 
@@ -158,7 +151,6 @@ LockPact isn't the only app built around this idea — see the full roundup of [
 | **ScreenZen** | Friction | Low barrier to entry | Adaptation & frustration | Free |
 | **AppBlock/Opal** | Solo blocking | Hard enforcement | Still requires willpower to not override | $2–5/mo |
 | **LockPact** | Partner accountability | Social enforcement | Requires mutual commitment | Free |
-
 
 ## The Uncomfortable Truth
 

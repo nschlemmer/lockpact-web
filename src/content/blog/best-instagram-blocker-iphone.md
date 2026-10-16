@@ -19,7 +19,6 @@ faq:
 - q: Can an Instagram blocker be bypassed?
   a: 'Yes, by the phone''s owner. Any iPhone owner can revoke an app''s Screen Time access in Settings. What changes is the cost: an app that tells a partner when you do, or needs their approval, makes quitting quietly much harder.'
 updatedDate: '2026-10-16'
-testedOn: iOS 27.0 Simulator, October 16, 2026 (Screen Time screens shown); other steps follow Apple's iOS 27 guide
 howWeTested: true
 disclosure: true
 sources:
@@ -33,6 +32,7 @@ sources:
   url: https://opalapp.com/pricing
 - label: App Store US listings for one sec, ScreenZen and LockPact, checked October 15 and 16, 2026
   url: https://apps.apple.com/us/
+platform: iOS 27
 ---
 
 The best Instagram blocker for iPhone is the one you can't talk yourself out of. Seven options are below, most of them free, from Instagram's own reminder to Apple's Screen Time to [LockPact](/go/b-best-instagram-blocker-iphone/), a free-to-use app where a partner approves any unlock. For each: what it stops, who can turn it off, and what it costs. Prices were checked October 15, 2026.
@@ -115,19 +115,15 @@ Match the tool to the habit. For late-night scrolling, use a Screen Time Schedul
 To limit Instagram with Screen Time on iOS 27, check which Time Allowance category holds it, set that category's allowance or add it to a Screen Time Schedule window, and block instagram.com under Apps & Websites. Then have someone else hold the passcode so the limit can't be undone in a tap. Each step is below, with the screens.
 
 1. Open **Settings → Screen Time → Time Allowances → Manage Categories**, tap a category, and check whether Instagram is in it.
+
+   ![The Time Allowances row highlighted on the Screen Time screen](../../assets/screens/best-instagram-blocker-iphone/01-open-time-allowances.webp)
 2. Set that category's allowance with its slider, or add it to a window in **Screen Time Schedule**.
+
+   ![The Time Allowances screen](../../assets/screens/best-instagram-blocker-iphone/02-time-allowances.webp)
 3. Open **Settings → Screen Time → Apps & Websites**, tap the add button, and enter instagram.com so the website is covered too.
+
+   ![The Block Website sheet, where you type the address to block](../../assets/screens/best-instagram-blocker-iphone/05-block-website-sheet.webp)
 4. Ask a partner to set the passcode under **Manage Screen Time → Lock Screen Time Settings**.
-
-![The Time Allowances row highlighted on the Screen Time screen](../../assets/screens/best-instagram-blocker-iphone/01-open-time-allowances.webp)
-
-![The Time Allowances screen](../../assets/screens/best-instagram-blocker-iphone/02-time-allowances.webp)
-
-![The Screen Time Schedule row highlighted on the Screen Time screen](../../assets/screens/best-instagram-blocker-iphone/03-open-schedule.webp)
-
-![The Apps & Websites row highlighted on the Screen Time screen](../../assets/screens/best-instagram-blocker-iphone/04-open-apps-websites.webp)
-
-![The Block Website sheet, where you type the address to block](../../assets/screens/best-instagram-blocker-iphone/05-block-website-sheet.webp)
 
 For a longer version of these steps, see [how to lock Instagram after a time limit](/blog/instagram-vs-lockpact-blocking/).
 

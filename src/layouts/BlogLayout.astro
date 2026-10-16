@@ -22,7 +22,7 @@ interface Props {
   imageAlt?: string;
   readTime?: string;
   faq?: FaqItem[];
-  testedOn?: string;
+  platform?: string;
   sources?: { label: string; url: string }[];
   howWeTested?: boolean;
   disclosure?: boolean;
@@ -31,9 +31,10 @@ interface Props {
   slug?: string;
 }
 
-const { title, description, pubDate, updatedDate, author, tags = [], image, imageAlt, readTime, faq, slug, testedOn, sources = [], howWeTested = false, disclosure = false } = Astro.props;
+const { title, description, pubDate, updatedDate, author, tags = [], image, imageAlt, readTime, faq, slug, platform, sources = [], howWeTested = false, disclosure = false } = Astro.props;
 
 const formattedDate = pubDate.toLocaleDateString('en-US', {
+  timeZone: 'UTC', // date-only frontmatter values parse as UTC midnight; format in UTC so the day never slips
   year: 'numeric',
   month: 'long',
   day: 'numeric',
@@ -47,7 +48,7 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
 const shownUpdatedDate: Date | null =
   updatedDate && updatedDate.valueOf() > pubDate.valueOf() ? updatedDate : null;
 const formattedUpdatedDate = shownUpdatedDate
-  ? shownUpdatedDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+  ? shownUpdatedDate.toLocaleDateString('en-US', { timeZone: 'UTC', year: 'numeric', month: 'long', day: 'numeric' })
   : '';
 
 // Official profiles only: the App Store listing. Add others here only once they exist.
@@ -133,34 +134,18 @@ const structuredData = faqPageData
         <span aria-current="page">{title}</span>
       </nav>
       <header class="mb-10">
-        <div class="flex flex-wrap items-center gap-3 text-sm mb-4" style="color: var(--color-text-tertiary);">
+        <p class="text-sm mb-4" style="color: var(--color-text-tertiary);">
           {shownUpdatedDate ? (
-            <>
-              <span>Published <time datetime={pubDate.toISOString()}>{formattedDate}</time></span>
-              <span>&middot;</span>
-              <span>Updated <time datetime={shownUpdatedDate.toISOString()}>{formattedUpdatedDate}</time></span>
-            </>
+            <>Updated <time datetime={shownUpdatedDate.toISOString()}>{formattedUpdatedDate}</time></>
           ) : (
-            <time datetime={pubDate.toISOString()}>{formattedDate}</time>
+            <>Published <time datetime={pubDate.toISOString()}>{formattedDate}</time></>
           )}
-          {readTime && (
-            <>
-              <span>&middot;</span>
-              <span>{readTime}</span>
-            </>
-          )}
-          <span>&middot;</span>
-          <span>{author}</span>
-        </div>
+          {platform && <> &middot; {platform}</>}
+          {readTime && <> &middot; {readTime}</>}
+        </p>
         <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight mb-4" style="color: var(--color-text-primary);">
           {title}
         </h1>
-        {testedOn && (
-          <p class="text-sm mb-4" style="color: var(--color-text-secondary);">
-            Tested on {testedOn}
-            {shownUpdatedDate && <> &middot; Updated {formattedUpdatedDate}</>}
-          </p>
-        )}
         {tags.length > 0 && (
           <div class="flex flex-wrap gap-2">
             {tags.map((tag) => (
@@ -177,7 +162,7 @@ const structuredData = faqPageData
 
       {disclosure && (
         <p class="text-sm mb-8 px-4 py-3 rounded-lg" style="background: var(--color-accent-soft); color: var(--color-text-secondary);">
-          We make LockPact. Here's how we tested and why it's listed where it is: see our <a href="/editorial-policy/">editorial policy</a>.
+          We make LockPact, one of the apps listed. <a href="/editorial-policy/">How we review</a>.
         </p>
       )}
 
@@ -185,7 +170,7 @@ const structuredData = faqPageData
         <slot />
       </div>
 
-      {howWeTested && <HowWeTested testedOn={testedOn} sources={sources} />}
+      {howWeTested && <HowWeTested checkedOn={shownUpdatedDate ? formattedUpdatedDate : formattedDate} sources={sources} />}
 
       {faq && faq.length > 0 && (
         <div class="prose max-w-none">

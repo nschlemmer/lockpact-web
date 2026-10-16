@@ -25,7 +25,7 @@ faq:
   - q: "Do screen time apps stop me from using my phone?"
     a: "Not completely. An iPhone owner can always revoke an app's Screen Time access in Settings. Apps can make that slower, add a pause, or involve another person, but no app makes quitting impossible."
   - q: "What is the difference between a screen time app and a parental control app?"
-    a: "Parental control apps are built for an adult managing a child's device. The apps here are for adults managing their own screen time, so the main question is who can turn the limit off."
+    a: "Parental control apps are built to manage a child's device. The apps here are for your own phone, so the main question is who can turn the limit off."
 ---
 
 The best screen time app for an adult on iPhone is the one you can't talk yourself out of, and that depends on who holds the off-switch. This guide compares ten, from Apple's free built-in Screen Time to [LockPact](/go/b-best-screen-time-apps/), a free-to-use app where a partner approves unlocks. For each: what it does, who can turn it off, and what it costs. Prices were checked on October 15 and 16, 2026.

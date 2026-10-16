@@ -50,7 +50,7 @@ Here are 11 options worth knowing, starting with the one already on your iPhone,
 | **ScreenZen** | Friction + streak sharing | Same OS-level route; no bypass-detection feature found on its listing | Core features | None currently | Friends who like gamified stats |
 | **Opal** | Solo blocking | Same OS-level route unless "Make Opal Foolproof" is set up with a partner's passcode; Buddies is visibility, not an alert | Basic blocking only | $19.99/mo (~$100/yr with the annual plan) | People who'll pay for polish |
 | **AppBlock** | Solo blocking, granular rules | Strict Mode blocks its own in-app toggle, not Apple's Settings route; Approval Access doesn't cover the OS-level path either | Core blocking | Premium ($4.99/mo or $29.99/yr) unlocks Strict Mode | Power users who want control |
-| **Freedom** | Cross-device blocking (Screen Time API on iOS, VPN for websites) | Same OS-level Screen Time route on iOS, unless a partner holds the passcode | Free plan: blocks apps and sites; no scheduling or Locked Mode | Premium: $3.33/mo billed yearly (7-day trial), $8.99/mo, or $99.50 lifetime | Multi-device solo blockers |
+| **Freedom** | Cross-device blocking (Apple's Screen Time controls on iOS, VPN for websites) | Same OS-level Screen Time route on iOS, unless a partner holds the passcode | Free plan: blocks apps and sites; no scheduling or Locked Mode | Premium: $3.33/mo billed yearly (7-day trial), $8.99/mo, or $99.50 lifetime | Multi-device solo blockers |
 | **Friend Controls** | Friend-managed locking | Same OS-level route works around friend approval; no bypass-detection feature found | Free to install; core locking | In-app subscriptions listed from $2.99/mo ($14.99/yr, $29.99 lifetime) | Testing a lighter partner-lock |
 | **BePresent** | Blocking with rewards and friend competition | You | Free tier | Pro from $24.99/yr | People who like game-style motivation |
 | **Jomo** | Scheduled blocking with mindful breaks | You | Free tier | Plus $29.99/yr, $99.99 lifetime | Simple scheduled blocking |
@@ -169,11 +169,11 @@ The tradeoff: AppBlock's free version is honest-system, not hard-enforced. You c
 
 **Price:** $3.33/month billed yearly (7-day free trial), $8.99/month, or $99.50 one-time for lifetime (listed as 50% off $199)
 **What's Free:** A free plan blocks apps, websites, or the whole internet on unlimited devices; scheduling, recurring sessions and Locked Mode are Premium
-**The Catch:** On iOS, Freedom blocks apps using Apple's own Screen Time API — the same mechanism (and the same OS-level bypass path) every solo Screen Time-based blocker shares
+**The Catch:** On iOS, Freedom blocks apps using Apple's own Screen Time controls — the same mechanism (and the same OS-level bypass path) every solo Screen Time-based blocker shares
 
 Freedom's strength is cross-device blocking — one schedule that blocks apps and websites across your phone, laptop, and tablet simultaneously. For people who lose focus by hopping from phone to browser, that's genuinely useful.
 
-But the free tier is thin and vaguely defined, and on iPhone, Freedom isn't doing anything Apple's Screen Time API doesn't already gate — the same "revoke access in Settings" bypass applies unless a partner holds the Lock Screen Time Settings passcode.
+But the free tier is thin and vaguely defined, and on iPhone, Freedom isn't doing anything Apple's Screen Time controls don't already gate — the same "revoke access in Settings" bypass applies unless a partner holds the Lock Screen Time Settings passcode.
 
 **Best for:** People who need blocking to follow them across a laptop and a phone, and are willing to pay for it.
 
@@ -253,7 +253,7 @@ So if your goal is to *actually change* your phone habits, free isn't the right 
 
 That's why LockPact works for free. It's not free as a gimmick. It's free because it doesn't need to charge you. The real enforcement mechanism is your partner.
 
-And that's why Opal charges money. Not because blocking is expensive to build. But because the app is trying to replace something that can't be replaced: another person's accountability.
+And that's why Opal charges money. Not because blocking is expensive to make. But because the app is trying to replace something that can't be replaced: another person's accountability.
 
 Pick the right tool for what you actually need. Not the cheapest one.
 
