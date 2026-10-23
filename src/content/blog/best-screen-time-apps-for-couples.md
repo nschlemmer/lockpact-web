@@ -2,7 +2,7 @@
 title: "Best Screen Time Apps for Couples (2026)"
 description: "An honest comparison of the actual apps built for couples managing screen time together — what's mutual, what's one-way, what it costs, and where LockPact fits."
 pubDate: 2026-07-24
-updatedDate: 2026-09-09
+updatedDate: 2026-10-23
 author: "LockPact"
 tags: ["couples", "comparison", "screen time apps", "roundup"]
 faq:
@@ -15,7 +15,7 @@ faq:
 - q: Can I use these apps if I'm not in a romantic relationship?
   a: Yes — and you should read that as the default, not an exception. LockPact, Jolt, and Habi all work the same way for roommates, close friends, or siblings as they do for romantic partners. "Couples" is just the term most people search when they're picturing a two-person accountability setup; the mechanics don't require a relationship label.
 - q: Does bypassing these apps just mean turning Screen Time off in Settings?
-  a: For any app built on Apple's Screen Time API, yes — the device owner can revoke access through Settings and Face ID in a few taps, and no third-party app can prevent that; it's a platform limit, not a bug in any one app. What varies is whether the app notices. LockPact detects the bypass and notifies your partner when it happens.
+  a: For any app built on Apple's Screen Time system, yes — the device owner can revoke access through Settings and Face ID in a few taps, and no third-party app can prevent that; it's a platform limit, not a bug in any one app. What varies is whether the app notices. LockPact detects the bypass and notifies your partner when it happens.
 disclosure: true
 ---
 

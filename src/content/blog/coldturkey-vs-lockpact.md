@@ -2,12 +2,12 @@
 title: "Cold Turkey vs. LockPact: Hard Blocking vs. Accountability"
 description: "Cold Turkey is the most aggressive app blocker available. LockPact uses social accountability instead. Here's how they compare and which fits your situation."
 pubDate: 2026-05-19
-updatedDate: 2026-09-09
+updatedDate: 2026-10-23
 author: "LockPact"
 tags: ["comparison", "Cold Turkey", "app blockers", "accountability"]
 faq:
 - q: Is Cold Turkey actually impossible to bypass?
-  a: On Mac and Windows in Frozen Turkey mode, it's extremely difficult — close to impossible without reformatting your drive. On iOS, Cold Turkey doesn't have equivalent functionality. No iOS blocker can be truly bypass-proof because Apple's Screen Time API always allows the device owner to regain access.
+  a: On Mac and Windows in Frozen Turkey mode, it's extremely difficult — close to impossible without reformatting your drive. On iOS, Cold Turkey doesn't have equivalent functionality. No iOS blocker can be truly bypass-proof because Apple's Screen Time system always allows the device owner to regain access.
 - q: Which app is better for quitting social media?
   a: Cold Turkey if you're doing it alone and want technical enforcement on a computer. LockPact if you have a partner and want social accountability, particularly for phone use outside of work hours.
 - q: Can I use Cold Turkey and LockPact together?

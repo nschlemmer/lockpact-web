@@ -2,7 +2,7 @@
 title: "ScreenZen vs. LockPact: Friction vs. Accountability"
 description: "ScreenZen's escalating friction vs. LockPact's mutual partner lock — full comparison, real-world example, and when ScreenZen is the better pick."
 pubDate: 2026-04-25
-updatedDate: 2026-09-09
+updatedDate: 2026-10-23
 author: "LockPact"
 tags: ["comparison", "ScreenZen", "accountability"]
 faq:
@@ -29,7 +29,7 @@ One uses friction. One uses accountability. They work best for different people.
 | **How It Works** | Delays & friction | Partner blocks & unlock |
 | **Blocking** | No (slows down, doesn't stop) | Yes (hard block) |
 | **Pause Before Opening** | Yes (escalating delays) | N/A (can't open at all) |
-| **Daily Open Limits** | Yes | No (not in MVP) |
+| **Daily Open Limits** | Yes | No |
 | **Social Sharing** | Yes (stats visibility) | No |
 | **Partner Feature** | Friends see your stats; v4.0+ adds an accountability partner for settings changes | Both people lock & unlock |
 | **Partner Control** | Settings-lock only — a partner approves changes to your ScreenZen config (v4.0+), not individual app opens | Full (active approval on every unlock) |

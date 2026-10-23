@@ -2,7 +2,7 @@
 title: "AppBlock vs. LockPact: Feature Comparison"
 description: "AppBlock is free with a paid Premium tier; LockPact is free. AppBlock's Approval Access is one-way and Premium-only — LockPact's mutual lock is neither."
 pubDate: 2026-04-29
-updatedDate: 2026-10-15
+updatedDate: 2026-10-23
 author: "LockPact"
 tags: ["comparison", "AppBlock", "app blockers"]
 faq:
@@ -31,7 +31,7 @@ But if you're looking for partner accountability, AppBlock's approach is differe
 | Feature | AppBlock | LockPact |
 |---------|----------|----------|
 | **App Blocking** | Yes, highly customizable | Yes, simple & direct |
-| **Schedule Blocking** | Yes (time-based rules) | No (not in MVP) |
+| **Schedule Blocking** | Yes (time-based rules) | Yes (recurring lock windows; when paired, your partner holds the key) |
 | **Location-Based Blocking** | Yes (geo-fencing) | No |
 | **Pomodoro Timer** | Yes (work/break cycles) | No |
 | **Website Blocking** | Yes | Locks websites you pick in Apple's picker (browser coverage isn't documented by Apple) |
@@ -89,7 +89,7 @@ AppBlock is comprehensive, but it has blind spots—especially for partner accou
 
 **You** should use AppBlock if:
 
-- You want sophisticated automation (schedules, location rules, Pomodoro).
+- You want sophisticated automation (location rules, Pomodoro timers, website blocking, more flexible schedules).
 - You have Android devices you want to sync with.
 - You're a parent setting rules for your kids.
 - You need website blocking (not just apps).
@@ -108,7 +108,7 @@ To be fair to AppBlock, there are real cases where it's the right call:
 
 **You're setting rules for a child, not a peer.** AppBlock's asymmetric structure is genuinely well-suited to a parent managing a kid's phone — a different relationship than two adults holding each other accountable.
 
-**You want automation more than accountability.** If the problem is "I forget to enforce my own rules," not "I need someone else in the loop," AppBlock's schedules, location rules, and Pomodoro timers solve that well.
+**You want automation more than accountability.** If the problem is "I forget to enforce my own rules," not "I need someone else in the loop," AppBlock's deeper automation (location rules, Pomodoro timers, website blocking, more flexible schedules) solves that well.
 
 If none of those apply — you're both on iPhone, you want two-way accountability instead of one-way approval, and you don't want a Premium bill for the privilege — the comparison tips toward LockPact.
 
@@ -116,7 +116,7 @@ If none of those apply — you're both on iPhone, you want two-way accountabilit
 
 ### Where LockPact fits
 
-If the reason you're reading this is the accountability-partner angle, not the scheduling or website blocking, LockPact is built for exactly that and only that: a free, mutual lock where you and your partner each hold the other's key, with real-time push notifications and bypass detection AppBlock's free tier doesn't have. If you also want Pomodoro timers, geofencing, and website blocking, keep AppBlock for those and use LockPact for the apps where partner accountability is the actual point.
+If the reason you're reading this is the accountability-partner angle, not the scheduling engine or website blocking, LockPact is built for exactly that: a free, mutual lock where you and your partner each hold the other's key, with real-time push notifications and bypass detection AppBlock's free tier doesn't have. If you also want Pomodoro timers, geofencing, website blocking, and deeper automation, keep AppBlock for those and use LockPact for the apps where partner accountability is the actual point.
 
 [Get LockPact on the App Store →](/go/b-appblock-vs-lockpact/)
 
@@ -124,7 +124,7 @@ If the reason you're reading this is the accountability-partner angle, not the s
 
 ## Download LockPact
 
-AppBlock is powerful. But if you want someone else holding the key—not algorithms, not schedules, but a real person who cares—[LockPact](/) is free.
+AppBlock is powerful. But if you want someone else holding the key—not algorithms, but a real person who cares—[LockPact](/) is free.
 
 **[Get LockPact on the App Store](/go/b-appblock-vs-lockpact/)**
 

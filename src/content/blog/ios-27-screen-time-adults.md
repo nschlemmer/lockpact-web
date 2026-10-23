@@ -3,6 +3,7 @@ title: "iOS 27 Screen Time: What Changed for Adults (and What Didn't)"
 description: "iOS 27 rebuilds Screen Time — but almost entirely for parents managing a child's device. Here's what actually shipped, and what's still unchanged if you use Screen Time on yourself."
 pubDate: 2026-09-09
 draft: true
+updatedDate: 2026-10-23
 author: "LockPact"
 tags: ["iOS 27", "Screen Time", "Apple"]
 faq:
@@ -11,7 +12,7 @@ faq:
 - q: Does iOS 27 remove the Ignore Limit button?
   a: 'Not for adults with a self-set passcode, based on everything verified so far. Ignore Limit still works the same way it has since iOS 26.4: it only goes away if someone other than you holds the Screen Time passcode.'
 - q: Do app blockers still work on iOS 27?
-  a: Nothing in iOS 27's announced changes touches the Screen Time API that third-party blockers rely on. LockPact's own behavior on iOS 27 hasn't been tested on a GA build yet — this will be confirmed once iOS 27 actually ships.
+  a: Nothing in iOS 27's announced changes touches the Screen Time system that third-party blockers rely on. LockPact's own behavior on iOS 27 hasn't been tested on a GA build yet — this will be confirmed once iOS 27 actually ships.
 ---
 
 **This post is a draft, written from beta-cycle sources ahead of iOS 27's public release.** Everything below is sourced from Apple's own WWDC 2026 announcement, the public beta, and press coverage current as of early September 2026 — not a GA (general availability) build. Anything that could change between beta and release is marked as such. This post will be re-verified and re-published against the actual shipping release notes once iOS 27 is out.
@@ -36,11 +37,11 @@ Every feature in that list assumes a parent on one side and a child's device on 
 
 **The Ignore Limit button, for a self-set passcode, is untouched.** iOS 26.4's rule still applies: Lock Screen Time Settings only removes your ability to override your own restrictions if someone *other than you* holds the passcode. Nothing in the iOS 27 beta changes that mechanic — Time Allowances and Schedules are parent-controlled settings on a separate account, not a new restriction layer for solo adult use.
 
-**No new third-party Screen Time API.** The two developer tools Apple has announced — PermissionKit and the Declared Age Range API — are about age verification and permission requests for third-party apps, not a new hook into blocking or unlocking behavior. Nothing confirmed so far suggests the underlying Screen Time API that app blockers (LockPact included) rely on has changed in a way that would break or alter existing bypass/restriction mechanics.
+**No new Screen Time access for third-party apps.** The two developer tools Apple has announced — PermissionKit and the Declared Age Range API — are about age verification and permission requests for third-party apps, not a new hook into blocking or unlocking behavior. Nothing confirmed so far suggests the underlying Screen Time system that app blockers (LockPact included) rely on has changed in a way that would break or alter existing bypass/restriction mechanics.
 
 ## Does this alter third-party Screen Time apps?
 
-Based on what's verified so far: no confirmed breaking changes to the Screen Time API surface that LockPact and similar apps depend on. That said, **LockPact's actual behavior on iOS 27 has not yet been tested on a GA build** — beta compatibility is not the same as a confirmed, tested release, and this post will not claim otherwise. Once iOS 27 ships and a device test is run, that status will be updated here, not assumed.
+Based on what's verified so far: no confirmed breaking changes to the Screen Time system that LockPact and similar apps depend on. That said, **LockPact's actual behavior on iOS 27 has not yet been tested on a GA build** — beta compatibility is not the same as a confirmed, tested release, and this post will not claim otherwise. Once iOS 27 ships and a device test is run, that status will be updated here, not assumed.
 
 ## The adult workaround, unchanged
 
