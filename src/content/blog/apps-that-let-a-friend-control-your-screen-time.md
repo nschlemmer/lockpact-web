@@ -2,7 +2,7 @@
 title: "Apps That Let a Friend Control Your Screen Time (2026)"
 description: "A real roundup of apps where a friend or partner — not just you — has to approve your screen time. What they actually do, what they cost, and how to pick."
 pubDate: 2026-07-24
-updatedDate: 2026-09-09
+updatedDate: 2026-10-23
 author: "LockPact"
 tags: ["comparison", "accountability", "screen time apps", "roundup"]
 # FAQPage JSON-LD source (BlogLayout.astro emits it when this is present). These answers
@@ -17,7 +17,7 @@ faq:
 - q: What's the difference between these apps and parental control apps?
   a: 'Parental control apps like Covenant Eyes or Bark are built for one person to monitor another — usually a parent and child — with little control back. These apps are peer-to-peer: you choose a partner or friend, and with LockPact, they''re locked by you in return.'
 - q: Does bypassing these apps just mean turning off Screen Time in Settings?
-  a: Yes — any app built on Apple's Screen Time API can be bypassed that way; it's a platform limit, not a bug in any one app. What differs is whether the app notices. LockPact detects the bypass and notifies your partner, making it visible instead of preventing it.
+  a: Yes — any app built on Apple's Screen Time system can be bypassed that way; it's a platform limit, not a bug in any one app. What differs is whether the app notices. LockPact detects the bypass and notifies your partner, making it visible instead of preventing it.
 - q: Which one should I actually pick?
   a: Want mutual accountability, free forever? LockPact. Want a wider friend circle over one dedicated partner? Friend Controls. Want a lightweight social nudge with no one gatekeeping you? FriendLock. Want just a solo blocker instead? See our Best Free App Blockers roundup.
 - q: Do I need my friend to have the same app installed?

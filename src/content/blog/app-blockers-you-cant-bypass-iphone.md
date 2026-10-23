@@ -2,12 +2,12 @@
 title: "App Blockers You Can't Bypass on iPhone — Ranked, Honestly"
 description: "No iPhone app blocker is truly unbypassable. Here's the real off-switch for Opal, one sec, ScreenZen, Brick, AppBlock, and Screen Time — ranked, free to read."
 pubDate: 2026-09-10
-updatedDate: 2026-09-10
+updatedDate: 2026-10-23
 author: "LockPact"
 tags: ["comparison", "app blockers", "bypass", "iOS"]
 faq:
 - q: Is there an app blocker that can't be bypassed on iPhone?
-  a: No — Apple's Screen Time API always lets the device owner regain access; it's how iOS is built. What varies is how much friction, delay, or social cost stands between you and the off-switch. LockPact's off-switch is a person, which changes what happens after, not whether bypass is technically possible.
+  a: No — Apple's Screen Time system always lets the device owner regain access; it's how iOS is built. What varies is how much friction, delay, or social cost stands between you and the off-switch. LockPact's off-switch is a person, which changes what happens after, not whether bypass is technically possible.
 - q: Can Screen Time be bypassed?
   a: Yes, instantly, if you set your own Screen Time passcode — Ask for More Time or a Settings toggle undoes it in seconds. iOS 26.4's Lock Screen Time Settings closes most of that gap, but only if someone other than you holds the code.
 - q: What happens when you bypass LockPact?
@@ -15,7 +15,7 @@ faq:
 disclosure: true
 ---
 
-Every "unbypassable" claim from an iOS app blocker is, technically, false — Apple's Screen Time API is built so the device owner can always regain access to their own phone. That's not a marketing failure, it's the platform. What actually differs between blockers is the *off-switch*: how it's triggered, how long it takes, and whether anyone besides you ever finds out. This is that comparison, done honestly, for Opal, one sec, ScreenZen, Brick, Cold Turkey, AppBlock's Strict Mode, and Screen Time itself — free to read, no signup. For a wider comparison across more apps, see [best screen time apps for iPhone](/blog/best-screen-time-apps/).
+Every "unbypassable" claim from an iOS app blocker is, technically, false — Apple's Screen Time system is built so the device owner can always regain access to their own phone. That's not a marketing failure, it's the platform. What actually differs between blockers is the *off-switch*: how it's triggered, how long it takes, and whether anyone besides you ever finds out. This is that comparison, done honestly, for Opal, one sec, ScreenZen, Brick, Cold Turkey, AppBlock's Strict Mode, and Screen Time itself — free to read, no signup. For a wider comparison across more apps, see [best screen time apps for iPhone](/blog/best-screen-time-apps/).
 
 ## The off-switch taxonomy
 
@@ -49,7 +49,7 @@ Notice what the "time to bypass" column doesn't capture: for every app except Br
 
 ## What iOS 26.4 changes for all of them
 
-Apple's iOS 26.4 update added **Lock Screen Time Settings** — a passcode, separate from your regular one, that gates both revoking an app's Screen Time access and deleting the app, but only if someone other than you sets it. [The full setup guide is here](/blog/lock-screen-time-settings-partner-passcode/). It closes the "seconds" bypass path in this table for Screen Time, ScreenZen, Opal, one sec, and AppBlock's Screen Time-adjacent route alike, provided a partner actually holds the code and a reported Face ID path (developer forum thread 821959 — unconfirmed, treat as a live risk to check) isn't reproducing on the device in question. It doesn't touch Brick, because Brick's lock was never a Screen Time API restriction to begin with, and it doesn't change LockPact's core mechanism, which already assumes the owner can technically bypass it and is built around detecting that instead of preventing it.
+Apple's iOS 26.4 update added **Lock Screen Time Settings** — a passcode, separate from your regular one, that gates both revoking an app's Screen Time access and deleting the app, but only if someone other than you sets it. [The full setup guide is here](/blog/lock-screen-time-settings-partner-passcode/). It closes the "seconds" bypass path in this table for Screen Time, ScreenZen, Opal, one sec, and AppBlock's Screen Time-adjacent route alike, provided a partner actually holds the code and a reported Face ID path (developer forum thread 821959 — unconfirmed, treat as a live risk to check) isn't reproducing on the device in question. It doesn't touch Brick, because Brick's lock was never a Screen Time system restriction to begin with, and it doesn't change LockPact's core mechanism, which already assumes the owner can technically bypass it and is built around detecting that instead of preventing it.
 
 ## The emergency problem
 

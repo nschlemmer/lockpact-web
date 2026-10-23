@@ -2,7 +2,7 @@
 title: How to Lock Instagram After a Time Limit on iPhone
 description: The three real ways to lock Instagram — after a time limit, during set hours, or so you can't override it yourself. Free, no subscription.
 pubDate: 2026-05-27
-updatedDate: '2026-10-16'
+updatedDate: 2026-10-23
 author: LockPact
 tags:
 - Instagram
@@ -41,7 +41,7 @@ Also not natively — Instagram has no concept of "off during these hours." Two 
 
 **iOS Screen Time Schedule (Downtime on iOS 26).** Set a Screen Time Schedule for the hours you want Instagram unavailable (e.g., 9pm–7am), and add Instagram to "Always Allowed" only if you want exceptions. Same rule as above: the Screen Time passcode has to belong to someone else, or Downtime is just a suggestion you can dismiss.
 
-**A LockPact window.** You and a partner start a lock together covering the block you want — typically an evening. Neither of you can end it unilaterally; your partner holds the unlock. It's not an automatic daily schedule you set once and forget (that's a different feature, not shipped yet) — you and your partner start each window together, which for a lot of couples and roommates is actually the point: it's a conversation, not a setting.
+**A LockPact window.** Set a recurring lock window once, typically an evening, and it starts and ends on its own. Paired, your partner holds the key: neither of you can end a shared window unilaterally. You can also start a one-off lock together whenever you like, which for a lot of couples and roommates is actually the point: it's a conversation, not a setting.
 
 ## Can I set a password so I can't override it myself?
 

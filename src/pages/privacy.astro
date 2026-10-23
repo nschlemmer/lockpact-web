@@ -11,7 +11,7 @@ import PageLayout from '../layouts/PageLayout.astro';
     <h1 class="text-3xl font-extrabold tracking-tight mb-8" style="color: var(--color-text-primary);">Privacy Policy</h1>
     <div class="prose max-w-none" style="color: var(--color-text-secondary);">
       <p><strong>Effective Date:</strong> April 7, 2026</p>
-      <p><strong>Last Updated:</strong> April 17, 2026</p>
+      <p><strong>Last Updated:</strong> October 23, 2026</p>
       <p><strong>Developer:</strong> Rotate LLC &middot; Indianapolis, IN</p>
       <p><strong>Contact:</strong> <a href="mailto:privacy@lockpact.app">privacy@lockpact.app</a></p>
 
@@ -25,18 +25,21 @@ import PageLayout from '../layouts/PageLayout.astro';
 
       <h3>Information You Provide</h3>
       <ul>
-        <li><strong>Sign in with Apple:</strong> Your Apple-provided unique app-scoped identifier, and optionally your first name and a relay email address if you choose to share them during sign-in. We do not receive your Apple ID password.</li>
+        <li><strong>Sign in with Apple:</strong> Only if you sign in (needed to pair with a partner, buy a Willpower Waiver, or save a schedule): your Apple-provided unique app-scoped identifier, and optionally your first name and a relay email address if you choose to share them during sign-in. We do not receive your Apple ID password.</li>
         <li><strong>Display name:</strong> A name you set in the app to identify yourself to your partner.</li>
       </ul>
 
       <h3>Information We Generate</h3>
       <ul>
+        <li><strong>Anonymous account:</strong> When you first open LockPact, it creates an account with a random user ID and no name or email. If you later sign in with Apple, you keep the same account and its data.</li>
         <li><strong>User ID:</strong> A unique identifier assigned to your account.</li>
         <li><strong>Partnership metadata:</strong> When you form a partnership — who is connected (by user ID), when the partnership started, and when it ended.</li>
         <li><strong>Lock session metadata:</strong> When locks start and end, unlock request events (sent, approved, denied, cancelled), and streak data (consecutive accountability days).</li>
         <li><strong>Unlock request text:</strong> If you include a reason with your unlock request, that text is stored so your partner can read it.</li>
         <li><strong>Bypass events:</strong> If our app detects that you navigated around a lock via iOS Settings, we record the timestamp and notify your partner.</li>
         <li><strong>FCM push tokens:</strong> Device tokens used to deliver unlock requests and bypass alerts to your partner's device.</li>
+        <li><strong>Schedules:</strong> The name you give a schedule, its days, start and end times, time zone, and term length, plus how many apps and categories it locks (never which ones). Your schedule runs from your phone, and a copy is stored on our servers so it can be restored after a reinstall and so we can send your phone a quiet notification when a window starts or ends. When you are paired, your schedules are stored on our servers and visible to your partner, and your partner is notified when you create or renew one.</li>
+        <li><strong>Partner message:</strong> A message of up to 60 characters you write for your partner's lock screen. It's stored with your partner's account and shown to them.</li>
       </ul>
 
       <h2>What We Do Not Collect</h2>
@@ -71,6 +74,7 @@ import PageLayout from '../layouts/PageLayout.astro';
       <ul>
         <li><strong>Active accounts:</strong> Retained as long as your account exists.</li>
         <li><strong>Dissolved partnerships:</strong> Partnership and lock history retained for 90 days after dissolution, then permanently deleted.</li>
+        <li><strong>Anonymous accounts:</strong> If you never sign in, your anonymous account is deleted automatically about 30 days after it's created, and the app starts a new one. Some lock records linked to the old account can stay on our servers after that; email <a href="mailto:privacy@lockpact.app">privacy@lockpact.app</a> and we'll remove them.</li>
         <li><strong>Account deletion:</strong> All your data is permanently deleted within 30 days of account deletion.</li>
         <li><strong>FCM tokens:</strong> Automatically refreshed by iOS; old tokens expire and are removed.</li>
       </ul>
@@ -78,7 +82,7 @@ import PageLayout from '../layouts/PageLayout.astro';
       <h2>Data Sharing</h2>
       <p>We share data only with:</p>
       <ul>
-        <li><strong>Your partner:</strong> Your display name, lock status, lock events, bypass events, and unlock request text are visible to your paired partner within the app.</li>
+        <li><strong>Your partner:</strong> Your display name, lock status, lock events, bypass events, unlock request text, schedules, and the message you write for their lock screen are visible to your paired partner within the app.</li>
         <li><strong>Google (Firebase):</strong> For authentication, database, and push notification infrastructure. Google acts as a data processor under our instructions.</li>
         <li><strong>AppLovin:</strong> For serving rewarded video ads. Subject to AppLovin's privacy policy.</li>
         <li><strong>Google AdMob:</strong> Fallback ad network. Collects device identifiers only.</li>

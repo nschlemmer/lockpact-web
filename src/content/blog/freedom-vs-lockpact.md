@@ -2,7 +2,7 @@
 title: "Freedom vs. LockPact: Which Screen Time App Fits You?"
 description: "Freedom blocks apps and websites across all your devices. LockPact uses partner accountability on iPhone. Different problems, different fix — how to choose."
 pubDate: 2026-05-02
-updatedDate: 2026-10-15
+updatedDate: 2026-10-23
 author: "LockPact"
 tags: ["comparison", "Freedom", "screen time apps", "cross-device blocker"]
 faq:
@@ -116,7 +116,7 @@ Freedom is the professional-grade tool. It's been solving this problem for 15 ye
 - **You've tried solo blockers and quit them.** If you've disabled Freedom, Opal, AppBlock, and three other apps, the issue probably isn't the blocker. It's that you, alone, can't enforce your own limits. Partner accountability might change that.
 - **You want mutual accountability, not one-way monitoring.** You don't want parental controls. You want your partner to have skin in the game too. If they lock their apps and ask you for unlock approval, the dynamic changes.
 - **You can't afford another subscription.** LockPact is free. Freedom costs money every year. If budget is tight, that's a real difference.
-- **You want simplicity.** LockPact has no schedules to configure, no geofencing, no complex rules. You pick apps, you lock, you ask your partner to unlock. That's it.
+- **You want simplicity.** LockPact has one kind of schedule, a recurring lock window, and no geofencing or complex rules. You pick apps, you lock, you ask your partner to unlock.
 
 ## Can They Work Together?
 

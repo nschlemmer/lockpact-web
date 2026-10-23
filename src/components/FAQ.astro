@@ -9,7 +9,7 @@ interface Props {
 const defaultItems = [
   {
     question: 'Can my partner see which apps I blocked?',
-    answer: "Your partner can see how many apps and categories you've blocked, but not the specific app names. Apple's Screen Time API uses opaque tokens \u2014 LockPact cannot access your app names or usage data.",
+    answer: "Your partner can see how many apps and categories you've blocked, but not the specific app names. Apple's Screen Time system uses opaque tokens \u2014 LockPact cannot access your app names or usage data.",
   },
   {
     question: 'What if someone tries to get around the lock?',
@@ -20,8 +20,16 @@ const defaultItems = [
     answer: "The core product is free \u2014 pairing, locking, bypass detection, unlock requests. You'll see a short video when you request an unlock (think of it as a moment to reconsider). You can remove that with a one-time $9.99 purchase. That's it. No subscription.",
   },
   {
+    question: 'Can LockPact lock apps on a schedule?',
+    answer: 'Yes. Set a recurring lock window once and it starts and ends on its own. On your own it works like Solo Lock on a timer; paired, your partner holds the key. Saving your first schedule asks you to sign in with Apple.',
+  },
+  {
+    question: 'Do I need an account to start?',
+    answer: 'No. Open the app and lock apps right away. Sign in with Apple only comes up when you pair with a partner, buy a Willpower Waiver, or save a schedule.',
+  },
+  {
     question: 'Do we both need iPhones?',
-    answer: "Yes \u2014 for now. LockPact uses Apple's Screen Time API, so both partners need an iPhone. iPad and other platforms are being explored.",
+    answer: "Yes \u2014 for now. LockPact uses Apple's Screen Time system, so both partners need an iPhone. iPad and other platforms are being explored.",
   },
   {
     question: "What if my partner doesn't respond to my unlock request?",
