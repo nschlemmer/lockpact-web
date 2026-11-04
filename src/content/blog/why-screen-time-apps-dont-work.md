@@ -2,7 +2,7 @@
 title: "Why Screen Time Apps Don't Work (And What Does)"
 description: "Most screen time apps fail because they treat a social problem as a technical one. Why solo blockers fail, and what actually works instead: accountability."
 pubDate: 2026-04-13
-updatedDate: 2026-10-15
+updatedDate: 2026-11-04
 author: "LockPact"
 tags: ["screen time", "accountability", "behavior change"]
 faq:
@@ -155,6 +155,20 @@ That works.
 
 ---
 
+## If You Set a Limit Anyway: Five Things That Help It Hold
+
+A limit you set yourself isn't pointless. It just needs a better design. Five things separate limits that hold from limits that drift:
+
+1. **Be specific.** "Use my phone less" can't succeed or fail. "Instagram and TikTok are blocked from 9pm to 7am" can.
+2. **Start smaller than feels necessary.** "No phone in the bedroom" is one rule in one place. Add the next one once it sticks, usually after a week or two.
+3. **Design for your worst moment.** The limit has to work at 11pm, tired, with your hand already reaching, not just when you're motivated. If it would be easy to get around tonight, it isn't built for that moment.
+4. **Add another person.** Tell someone, or let them hold the key. Breaking a limit only you know about costs private guilt. Breaking one a person knows about costs more.
+5. **Schedule a review.** Limits quietly expire. Put a date two weeks out to keep it, adjust it, or drop it.
+
+One well-designed limit with a person behind it beats ten rules you hold alone.
+
+---
+
 ## Where to Go From Here
 
 If you've tried solo blockers and quit, you already know they don't work for you. The problem isn't the app. It's the model.
@@ -176,7 +190,7 @@ But it works. Because accountability is what actually works.
 - **[Screen Time Not Working on iPhone? Here's the Actual Reason](/blog/apple-screen-time-doesnt-work/)** — Why the built-in tool fails, and what it's actually good for.
 - **[One Sec vs. LockPact: Friction vs. Accountability](/blog/onesec-vs-lockpact/)** — Another honest look at a friction-based tool versus a partner-held lock.
 - **[What Happened to the Moment App? Where It Went + 5 Alternatives](/blog/moment-app-review/)** — Why tracking alone (Moment's whole model) runs into the same present-bias problem this post covers.
-- **[Lock Screen Time Settings: Give Your Partner the Passcode](/blog/lock-screen-time-settings-partner-passcode/)** — The free iOS 26.4 setting that closes the "you know your own passcode" gap this post describes.
+- **[Screen Time Passcode: Set, Change, Reset (iOS 27 Guide)](/blog/screen-time-passcode/)** — How to hand the code to your partner, which closes the "you know your own passcode" gap this post describes.
 - **[App Blockers You Can't Bypass on iPhone — Ranked, Honestly](/blog/app-blockers-you-cant-bypass-iphone/)** — Every major blocker's actual off-switch, and why a person is a different category than a passcode or a timer.
 
 ---

@@ -3,7 +3,7 @@ title: "iOS 27 Screen Time: What Changed for Adults (and What Didn't)"
 description: "iOS 27 rebuilds Screen Time — but almost entirely for parents managing a child's device. Here's what actually shipped, and what's still unchanged if you use Screen Time on yourself."
 pubDate: 2026-09-09
 draft: true
-updatedDate: 2026-10-23
+updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["iOS 27", "Screen Time", "Apple"]
 faq:
@@ -47,7 +47,7 @@ Based on what's verified so far: no confirmed breaking changes to the Screen Tim
 
 If iOS 27 doesn't add anything for solo adult use, the fix is the same one that predates it: introduce a second person into your own Screen Time setup, the way Apple's design has always assumed a parent and child would be two separate people.
 
-- **A partner-held Screen Time passcode** — set up via [Lock Screen Time Settings](/blog/lock-screen-time-settings-partner-passcode/) (iOS 26.4+), with someone other than you holding the code.
+- **A partner-held Screen Time passcode** — set up via [Lock Screen Time Settings](/blog/screen-time-passcode/) (iOS 26.4+), with someone other than you holding the code.
 - **A partner-approved lock** — an app like LockPact, where your partner (not you) approves unlocking apps you've chosen to lock on your own phone, and any bypass gets reported automatically. [See how the major iOS blockers actually compare on bypass difficulty](/blog/app-blockers-you-cant-bypass-iphone/).
 
 Neither of these depends on anything iOS 27 changes or doesn't change — they work the same way today as they will after iOS 27 ships.

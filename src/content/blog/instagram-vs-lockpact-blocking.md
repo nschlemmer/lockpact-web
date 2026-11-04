@@ -82,6 +82,6 @@ Looking beyond Instagram? [Best Free App Blockers for iPhone (2026)](/blog/best-
 
 ---
 
-**Related reading:** [How to Actually Reduce Your TikTok Use](/blog/how-to-reduce-tiktok-use/) · [Social Media Detox: Does It Actually Work?](/blog/social-media-detox-does-it-work/) · [Can iPhone Focus Mode Block Apps?](/blog/do-not-disturb-modes-comparison/) · [Screen Time Not Working? Here's the Actual Reason](/blog/apple-screen-time-doesnt-work/) · [Lock Screen Time Settings: Give Your Partner the Passcode](/blog/lock-screen-time-settings-partner-passcode/)
+**Related reading:** [How to Actually Reduce Your TikTok Use](/blog/how-to-reduce-tiktok-use/) · [Social Media Detox: Does It Actually Work?](/blog/social-media-detox-does-it-work/) · [Can iPhone Focus Mode Block Apps?](/blog/do-not-disturb-modes-comparison/) · [Screen Time Not Working? Here's the Actual Reason](/blog/apple-screen-time-doesnt-work/) · [Screen Time Passcode: Set, Change, Reset (iOS 27 Guide)](/blog/screen-time-passcode/)
 
 [LockPact](/) lets your partner hold the evening lock. No tap-to-override. No in-app reminder you can dismiss. Just a commitment that holds. [Get it on the App Store](/go/b-instagram-vs-lockpact-blocking/).

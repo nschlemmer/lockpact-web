@@ -49,7 +49,7 @@ Notice what the "time to bypass" column doesn't capture: for every app except Br
 
 ## What iOS 26.4 changes for all of them
 
-Apple's iOS 26.4 update added **Lock Screen Time Settings** — a passcode, separate from your regular one, that gates both revoking an app's Screen Time access and deleting the app, but only if someone other than you sets it. [The full setup guide is here](/blog/lock-screen-time-settings-partner-passcode/). It closes the "seconds" bypass path in this table for Screen Time, ScreenZen, Opal, one sec, and AppBlock's Screen Time-adjacent route alike, provided a partner actually holds the code and a reported Face ID path (developer forum thread 821959 — unconfirmed, treat as a live risk to check) isn't reproducing on the device in question. It doesn't touch Brick, because Brick's lock was never a Screen Time system restriction to begin with, and it doesn't change LockPact's core mechanism, which already assumes the owner can technically bypass it and is built around detecting that instead of preventing it.
+Apple's iOS 26.4 update added **Lock Screen Time Settings** — a passcode, separate from your regular one, that gates both revoking an app's Screen Time access and deleting the app, but only if someone other than you sets it. [The full setup guide is here](/blog/screen-time-passcode/). It closes the "seconds" bypass path in this table for Screen Time, ScreenZen, Opal, one sec, and AppBlock's Screen Time-adjacent route alike, provided a partner actually holds the code and a reported Face ID path (developer forum thread 821959 — unconfirmed, treat as a live risk to check) isn't reproducing on the device in question. It doesn't touch Brick, because Brick's lock was never a Screen Time system restriction to begin with, and it doesn't change LockPact's core mechanism, which already assumes the owner can technically bypass it and is built around detecting that instead of preventing it.
 
 ## The emergency problem
 
@@ -71,4 +71,4 @@ Not verified on a physical device this session: whether the reported Face ID pat
 
 [LockPact](/) is free on the App Store — a mutual lock where the off-switch is a person, not a passcode you set yourself. [Get it here](/go/b-app-blockers-you-cant-bypass-iphone/).
 
-**Related reading:** [Lock Screen Time Settings: Give Your Partner the Passcode](/blog/lock-screen-time-settings-partner-passcode/) · [Best Free App Blockers for iPhone (2026)](/blog/best-free-app-blocker-iphone-2026/) · [Cold Turkey vs. LockPact](/blog/coldturkey-vs-lockpact/)
+**Related reading:** [Screen Time Passcode: Set, Change, Reset (iOS 27 Guide)](/blog/screen-time-passcode/) · [Best Free App Blockers for iPhone (2026)](/blog/best-free-app-blocker-iphone-2026/) · [Cold Turkey vs. LockPact](/blog/coldturkey-vs-lockpact/)

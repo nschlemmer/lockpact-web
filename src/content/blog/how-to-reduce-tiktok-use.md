@@ -17,7 +17,7 @@ faq:
 
 TikTok is the hardest social media app to reduce. Not because the content is uniquely compelling, but because the recommendation algorithm is specifically engineered to prevent you from stopping.
 
-Understanding why makes the solutions more obvious.
+Understanding why makes the solutions more obvious, and most of them work on Instagram too. [The best Instagram blockers for iPhone](/blog/best-instagram-blocker-iphone/) compares the tools for that one.
 
 ---
 

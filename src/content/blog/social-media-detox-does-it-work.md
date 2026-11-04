@@ -99,6 +99,6 @@ The detox is a diagnostic tool. What you build with the diagnosis determines whe
 
 A detox is a start, not a solution.
 
-**Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work/) · [Digital Minimalism: What Cal Newport Gets Right](/blog/digital-minimalism-review/) · [How to Set Phone Limits That Actually Stick](/blog/how-to-set-phone-limits-that-actually-stick/)
+**Related reading:** [Why Screen Time Apps Don't Work](/blog/why-screen-time-apps-dont-work/) · [Digital Minimalism: What Cal Newport Gets Right](/blog/digital-minimalism-review/)
 
 If you come out of yours wanting to actually change the structure — rather than reset and repeat the same cycle — [LockPact](/go/b-social-media-detox-does-it-work/) gives you and a partner a persistent accountability mechanism that works after the detox ends.

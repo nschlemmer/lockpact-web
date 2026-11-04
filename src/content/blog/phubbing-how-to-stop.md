@@ -2,7 +2,6 @@
 title: "Phubbing: What It Is and How to Actually Stop Doing It"
 description: "Phubbing — phone snubbing — is the thing you and your partner both do without noticing. Here's what it actually is, why it happens, and what stops it."
 pubDate: 2026-07-24
-updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["relationships", "phone use", "couples", "how-to"]
 faq:
@@ -66,7 +65,7 @@ This is the part people get wrong most often, and it's worth doing carefully bec
 
 "You're always on your phone" is an accusation dressed as an observation, and your partner will hear the accusation, not the observation. It puts them on the defensive, and the conversation becomes about whether "always" is fair instead of about what you actually need.
 
-Try naming the moment and the feeling instead of the general pattern: "When we're watching something together and you check your phone, I feel like I've lost you mid-scene, and I end up not wanting to bring things up anymore." That's specific, it's about a feeling rather than a verdict on their character, and it doesn't require them to defend their overall relationship with their phone — just to hear what one moment does to you. We go deeper on structuring this exact conversation in [My Partner Is Always on Their Phone: How to Actually Have the Conversation](/blog/how-to-have-the-phone-conversation/).
+Try naming the moment and the feeling instead of the general pattern: "When we're watching something together and you check your phone, I feel like I've lost you mid-scene, and I end up not wanting to bring things up anymore." That's specific, it's about a feeling rather than a verdict on their character, and it doesn't require them to defend their overall relationship with their phone — just to hear what one moment does to you. We go deeper on structuring this exact conversation in the "How to bring it up" section of [our screen time contract template for couples](/blog/couples-screen-time-contract-template/).
 
 ## Is phubbing normal, or is it a sign something's wrong?
 
@@ -82,4 +81,4 @@ That discomfort is the habit pushing back. It doesn't mean the change is wrong. 
 
 Individual willpower is the weakest lever here, for the same reason solo screen-time limits tend to fail: the person who's tempted to check their phone is also the person who decides whether the rule applies right now. "I won't check my phone at dinner" is easy to override at 7:42pm when you're actually at dinner and genuinely bored.
 
-What works better is making the boundary mutual and a little bit externally enforced — both people agree to the same window, and there's some friction (a partner who notices, a lock that requires asking) between wanting the phone and getting it. That's most of what [Couples and Phone Boundaries: A Field Guide](/blog/couples-and-phone-boundaries/) walks through in detail, and it's the same principle behind pairing up for a real trial — see [Best Screen Time Apps for Couples](/blog/best-screen-time-apps-for-couples/) if you want to see what a mutual, partner-held boundary actually looks like as a tool rather than just an agreement you both intend to keep.
+What works better is making the boundary mutual and a little bit externally enforced — both people agree to the same window, and there's some friction (a partner who notices, a lock that requires asking) between wanting the phone and getting it. That's most of what a written agreement covers, and it's the same principle behind pairing up for a real trial — see [Best Screen Time Apps for Couples](/blog/best-screen-time-apps-for-couples/) if you want to see what a mutual, partner-held boundary actually looks like as a tool rather than just an agreement you both intend to keep.

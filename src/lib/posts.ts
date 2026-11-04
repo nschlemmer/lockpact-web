@@ -16,17 +16,11 @@ const SHOW_ALL = import.meta.env.DEV || process.env.VERCEL_ENV === 'preview';
 export const isVisible = ({ data }: Pick<CollectionEntry<'blog'>, 'data'>): boolean =>
   SHOW_ALL || (!data.draft && data.pubDate.valueOf() <= Date.now());
 
-// Latest-activity sort (2026-09-09 — visible "Updated" dates + activity-based ordering,
-// docs/content-plan-60d-2026-08.md §4 "Dates" rule). A post's activity timestamp is the
-// later of updatedDate/pubDate — guarded against a mis-set updatedDate earlier than
-// pubDate (falls back to pubDate rather than letting a bad date sort a post backward).
-export const lastActivity = ({ data }: Pick<CollectionEntry<'blog'>, 'data'>): number => {
-  const pub = data.pubDate.valueOf();
-  const updated = data.updatedDate?.valueOf();
-  return updated !== undefined && updated > pub ? updated : pub;
-};
-
-export const byLatestActivity = (
+// Publish-date sort (2026-11-04): the blog list and homepage block show posts newest-first by
+// pubDate. `updatedDate` no longer affects ordering or card labels; it only feeds the sitemap
+// <lastmod>, JSON-LD dateModified and the "Updated" line on the post page itself (and is set
+// only when a post's content materially changes).
+export const byPubDate = (
   a: Pick<CollectionEntry<'blog'>, 'data'>,
   b: Pick<CollectionEntry<'blog'>, 'data'>
-): number => lastActivity(b) - lastActivity(a);
+): number => b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
