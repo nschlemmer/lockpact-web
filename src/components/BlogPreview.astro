@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 import BlogCard from './BlogCard.astro';
-import { isVisible, byLatestActivity } from '../lib/posts';
+import { isVisible, byPubDate } from '../lib/posts';
 
-const posts = (await getCollection('blog', isVisible)).sort(byLatestActivity);
+const posts = (await getCollection('blog', isVisible)).sort(byPubDate);
 ---
 
 <section class="scroll-fade-up max-w-[1200px] mx-auto px-6 section-sm" id="blog-section">
@@ -20,7 +20,6 @@ const posts = (await getCollection('blog', isVisible)).sort(byLatestActivity);
         description={post.data.description}
         slug={post.slug}
         pubDate={post.data.pubDate}
-        updatedDate={post.data.updatedDate}
       />
     ))}
   </div>
