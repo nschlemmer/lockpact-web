@@ -2,7 +2,6 @@
 title: "Long Distance Relationship Phone Habits: A Different Problem"
 description: "Long distance relationship phone habits aren't the same problem as co-located couples face. Here's how to navigate connection versus avoidance across distance."
 pubDate: 2026-05-17
-updatedDate: 2026-07-23
 author: "LockPact"
 tags: ["long distance", "relationships", "phone use", "couples", "screen time"]
 faq:
@@ -108,6 +107,6 @@ If you're also choosing apps for the other parts of the relationship, our list o
 
 Long-distance is hard. The phone doesn't have to make it harder.
 
-**Related reading:** [Couples and Phone Boundaries: A Field Guide](/blog/couples-and-phone-boundaries/) · [How to Talk to Your Partner About Their Phone Use](/blog/how-to-have-the-phone-conversation/) · [Phubbing: How to Stop](/blog/phubbing-how-to-stop/)
+**Related reading:** [Screen Time Contract Template for Couples](/blog/couples-screen-time-contract-template/) · [Phubbing: How to Stop](/blog/phubbing-how-to-stop/)
 
 [LockPact](/go/b-long-distance-relationship-phone-boundaries/) works across any distance — your partner holds your lock from wherever they are. The commitment travels. If you're still deciding on a tool, [our full comparison of the best free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/) is a good place to start.

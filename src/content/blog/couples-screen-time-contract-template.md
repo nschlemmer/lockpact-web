@@ -2,6 +2,7 @@
 title: "Screen Time Contract Template for Couples (Free, Copy-Paste)"
 description: "A free screen time contract template for adult couples — not the kids' version. Copy the full text below, fill in your own rules, and sign it together."
 pubDate: 2026-07-24
+updatedDate: 2026-11-04
 author: "LockPact"
 tags: ["couples", "template", "how-to", "screen time"]
 faq:
@@ -24,6 +25,12 @@ Search "screen time contract template" and almost everything that comes back is 
 A conversation about phone boundaries is easy to have and easy to forget. Three weeks later, neither of you remembers exactly what you agreed to, and the boundary quietly stops existing. A written agreement doesn't fix that by itself, but it does two things a conversation alone doesn't: it forces you to get specific (vague agreements are impossible to keep, because nobody agrees on what they meant), and it gives you something to point back to when memory gets fuzzy or motivation dips.
 
 None of this is enforceable in any legal sense, and it's not meant to be — think of it the way you'd think of a roommate agreement about dishes, not a legal contract. Its job is to make the boundary concrete enough that "keeping it" and "breaking it" both have clear meanings.
+
+## How to bring it up
+
+Don't open with "we need to talk about your phone." Start with yourself and ask for something small: "I've been missing feeling present with you in the evenings. Could we try something for two weeks? I'd want us both to do it, not just you." Then name one specific thing, like no phones for the first 30 minutes of dinner, and say you expect to slip sometimes. A mutual experiment is easy to say yes to. An accusation isn't.
+
+If they push back with "you're being controlling," the useful answer is that you're asking for a shared agreement about time you share, not for a say over their phone in general. The template below is what you fill in together once they're in.
 
 ## The template
 
@@ -105,7 +112,9 @@ That's the whole thing. It fits on one page, it's specific enough to actually fo
 
 ## A few notes on filling it out
 
-**Keep Section 1 short.** Two to four apps, not everything on your phone. A contract that tries to cover everything gets ignored within a week; one that targets the two or three apps that actually eat your time together gets followed. [How to Run a 7-Day Phone Pact](/blog/how-to-run-a-7-day-phone-pact/) has more detail on picking the right apps if you're not sure which ones matter most.
+**Keep Section 1 short.** Two to four apps, not everything on your phone. A contract that tries to cover everything gets ignored within a week; one that targets the two or three apps that actually eat your time together gets followed. If you'd like to test the idea before you sign anything, [try one week with a few locked apps](/blog/psychology-of-accountability-partners/#try-it-for-one-week).
+
+**Start with one boundary that's already contained.** If you're not sure what belongs in the contract, these four work because each has a clear start and end: no phones in the bedroom after 10pm; none for the first 30 minutes of dinner; no phones on one slow weekend morning until breakfast is done; or one app you both find hard to resist, locked from 8pm to 10pm, so you have to ask each other to open it. Put whichever you choose in Sections 1 and 2.
 
 **Be honest in Section 4.** The instinct is to skip the "what happens on a slip" section because it feels like planning for failure. Don't skip it — the couples who actually stick with agreements like this are the ones who decided in advance that a slip is a conversation, not a crisis. Deciding that ahead of time, when you're calm, is much easier than deciding it in the moment, when you're not.
 
@@ -121,4 +130,4 @@ The contract is the plan. The pact is what makes the plan hold on a bad night.
 
 ## Related reading
 
-If you want the reasoning behind why written, mutual agreements beat solo willpower in the first place, [Couples and Phone Boundaries: A Field Guide](/blog/couples-and-phone-boundaries/) covers the psychology and a handful of specific boundary examples beyond what's in this template. And if you're comparing tools that could actually enforce Section 3, [Best Screen Time Apps for Couples](/blog/best-screen-time-apps-for-couples/) breaks down the real options, including where LockPact does and doesn't fit — or, if you're setting this up with a friend rather than a romantic partner, [Apps That Let a Friend Control Your Screen Time (2026)](/blog/apps-that-let-a-friend-control-your-screen-time/) covers the same mutual-lock idea for that pairing.
+If you want the reasoning behind why written, mutual agreements beat solo willpower in the first place, [Screen Time Accountability Partners: Why They Work](/blog/psychology-of-accountability-partners/) covers the psychology. And if you're comparing tools that could actually enforce Section 3, [Best Screen Time Apps for Couples](/blog/best-screen-time-apps-for-couples/) breaks down the real options, including where LockPact does and doesn't fit — or, if you're setting this up with a friend rather than a romantic partner, [Apps That Let a Friend Control Your Screen Time (2026)](/blog/apps-that-let-a-friend-control-your-screen-time/) covers the same mutual-lock idea for that pairing.

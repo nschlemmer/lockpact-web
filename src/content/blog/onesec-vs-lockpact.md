@@ -2,7 +2,6 @@
 title: "one sec vs. LockPact: Friction vs. Accountability"
 description: "one sec uses friction (a deep breath delay) before opening apps. LockPact uses partner accountability. Compare both approaches and pick the right one."
 pubDate: 2026-05-02
-updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "one sec", "screen time apps", "accountability"]
 faq:

@@ -2,7 +2,7 @@
 title: "Apps That Let a Friend Control Your Screen Time (2026)"
 description: "A real roundup of apps where a friend or partner — not just you — has to approve your screen time. What they actually do, what they cost, and how to pick."
 pubDate: 2026-07-24
-updatedDate: 2026-10-23
+updatedDate: 2026-11-04
 author: "LockPact"
 tags: ["comparison", "accountability", "screen time apps", "roundup"]
 # FAQPage JSON-LD source (BlogLayout.astro emits it when this is present). These answers
@@ -51,7 +51,7 @@ The apps in this roundup take a different approach: they hand the override decis
 
 The mechanic varies app to app, but the shared idea is simple: when you want past your limit, a real person — not a setting — decides whether you get through.
 
-That changes the psychology in a way friction alone doesn't. It's not "am I strong enough to wait 10 seconds," it's "am I willing to ask my partner, at 11pm, why I need Instagram back." For a lot of people, the second question is the one that actually works. The lowest-tech version needs no app at all: [give your partner the Screen Time passcode](/blog/lock-screen-time-settings-partner-passcode/) so that they're the only one who can change it, and [how to change or hand off the Screen Time passcode](/blog/screen-time-passcode/) covers the basics. If your friend is far away, [apps for long-distance couples](/blog/long-distance-relationship-apps/) covers the rest of the stack, and [how to block websites on iPhone](/blog/how-to-block-websites-on-iphone/) covers sites.
+That changes the psychology in a way friction alone doesn't. It's not "am I strong enough to wait 10 seconds," it's "am I willing to ask my partner, at 11pm, why I need Instagram back." For a lot of people, the second question is the one that actually works. The lowest-tech version needs no app at all: [give your partner the Screen Time passcode](/blog/screen-time-passcode/) so that they're the only one who can change it. That guide covers the setup and the loopholes that still exist. If your friend is far away, [apps for long-distance couples](/blog/long-distance-relationship-apps/) covers the rest of the stack, and [how to block websites on iPhone](/blog/how-to-block-websites-on-iphone/) covers sites.
 
 Below are the apps we could verify are live, on iOS, and built around a friend or partner in the approval loop — plus where the popular "solo" tools fit for contrast.
 
@@ -117,6 +117,16 @@ Opal, one sec, and ScreenZen are excellent at what they do, but they're not in t
 
 Prices reflect each app's live App Store listing as of September 2026 and can change without notice — check the listing before you commit to a paid tier.
 
+## Friend, roommate or partner: who should hold the key?
+
+The app matters less than who you ask, because each choice changes what the "no" feels like.
+
+- **A partner** knows your habits and lives with the consequences, but phone policing can blur into control. Mutual works better than one-way: you each hold a key, so neither of you is the supervisor.
+- **A roommate** has lower emotional stakes and sees your habits as they happen, like the 2am notifications or the scrolling in the kitchen when you said you'd study. The awkwardness does the work. Asking another adult to unlock Instagram at 11pm is often enough to make you skip the ask.
+- **A close friend** is the most deliberate choice. You don't share a lease, so you're choosing to hold each other accountable. A direct ask works: "I'm on my phone too much. Will you help me if I help you?"
+
+Whoever you pick, start small: one app, one window (10pm to 7am is a common one), one or two weeks. If it helps, keep going. If it doesn't, you've lost nothing. Pick the person who will actually answer, and who will say no at 11pm.
+
 ## How to actually choose
 
-Start with who you have in mind, not which app has the most features. One dedicated partner who'll also let you lock their apps → LockPact. A friend group you'd rather spread the asking across → Friend Controls or Snitch's shared time pool. Someone you'd rather not put in a position to say no → FriendLock. A single buddy who's fine with an occasional approve/deny text-style prompt → PeerPause or Screen Time Buddy, with the gamification layer as a tiebreaker between those two. Comfortable with public exposure as the deterrent → Useless. No specific buddy in mind → SelfBlock's anonymous community mode. Want it free with zero IAP and an optional real veto instead of just a heads-up → Screen Freedom. All nine are real, live, and doing roughly what they claim — the differences that matter are who holds the power and what it costs to find out. And if you're setting this up for your own phone rather than a child's, [Screen Time for adults on iPhone](/blog/screen-time-for-adults-iphone/) explains why Apple's tool fails the person who set it up.
+Start with who you have in mind, not which app has the most features. One dedicated partner who'll also let you lock their apps → LockPact. A friend group you'd rather spread the asking across → Friend Controls or Snitch's shared time pool. Someone you'd rather not put in a position to say no → FriendLock. A single buddy who's fine with an occasional approve/deny text-style prompt → PeerPause or Screen Time Buddy, with the gamification layer as a tiebreaker between those two. Comfortable with public exposure as the deterrent → Useless. No specific buddy in mind → SelfBlock's anonymous community mode. Want it free with zero IAP and an optional real veto instead of just a heads-up → Screen Freedom. All nine are real, live, and doing roughly what they claim — the differences that matter are who holds the power and what it costs to find out. And if you're setting this up for your own phone rather than a child's, [the complete Screen Time guide for iOS 27](/blog/screen-time-iphone-guide/) explains why Apple's tool fails the person who set it up.

@@ -2,7 +2,7 @@
 title: "Friend Controls vs. LockPact: Which Approval App Fits?"
 description: "Friend Controls and LockPact both put a real person in charge of your screen time overrides — one is one-way, the other is mutual. The honest comparison."
 pubDate: 2026-07-24
-updatedDate: 2026-09-09
+updatedDate: 2026-10-15
 author: "LockPact"
 tags: ["comparison", "Friend Controls", "accountability"]
 faq:
@@ -17,7 +17,7 @@ disclosure: true
 
 Friend Controls and LockPact are the two apps closest to actually being in the same category: both replace a self-controlled screen time limit with a real person deciding whether you get more time. That's rare — most "screen time" apps are still just you versus a setting. (For the wider field, including a couple of apps that only sound like they belong here, see our roundup of [apps that let a friend control your screen time](/blog/apps-that-let-a-friend-control-your-screen-time/).)
 
-But "a friend is involved" is where the similarity ends. The two apps make fundamentally different bets about who that friend should be and what power they should have.
+But "a friend is involved" is where the similarity ends. The two apps make fundamentally different bets about who that friend should be and what power they should have. If you'd rather survey the field first, our ranking of [free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/) and the list of [blockers you can't bypass in seconds](/blog/app-blockers-you-cant-bypass-iphone/) cover the solo options.
 
 ## How Friend Controls actually works
 

@@ -2,7 +2,6 @@
 title: "Opal vs. one sec: The Actual Referee Comparison (2026)"
 description: "Opal and one sec are the two biggest names in solo screen time apps. Here's how their pricing, mechanics, and enforcement actually compare — verified this week."
 pubDate: 2026-07-24
-updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "Opal", "one sec", "screen time apps"]
 faq:

@@ -20,7 +20,7 @@ The phone stacking game rules are almost embarrassingly simple: everyone at the 
 
 It's a clever idea. It turns phone restraint into a game. It adds social stakes to something that usually has none. And for about forty-five minutes, it works.
 
-But there's a question nobody asks afterward: does the phone stacking game change anything once the meal is over?
+But there's a question nobody asks afterward: does the phone stacking game change anything once the meal is over? If you want a lock that outlasts the meal, here's [how to lock apps on iPhone](/blog/how-to-lock-apps-on-iphone/).
 
 ---
 
@@ -90,6 +90,6 @@ The first month is the experiment. You're not committing to a lifestyle. You're 
 
 Phone stacking is a start. If it showed you what's possible — an hour of real presence, an actual conversation, a meal you actually remember — the next step is making that the default instead of the exception.
 
-**Related reading:** [How to Run a 7-Day Phone Pact With Your Partner](/blog/how-to-run-a-7-day-phone-pact/) · [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners/) · [Couples and Phone Boundaries](/blog/couples-and-phone-boundaries/)
+**Related reading:** [The Psychology of Accountability Partners](/blog/psychology-of-accountability-partners/) · [Screen Time Contract Template for Couples](/blog/couples-screen-time-contract-template/)
 
 [LockPact](/go/b-phone-stacking-dinner-game/) lets you and a partner carry that principle into your everyday evenings. Not just dinner. Everywhere it matters. If you're weighing it against other options, [see how it compares to the rest of the free app blockers for iPhone](/blog/best-free-app-blocker-iphone-2026/).

@@ -24,7 +24,7 @@ disclosure: true
 ---
 AppBlock is the most feature-rich app blocker on iOS. If you want granular control—scheduled blocking, location-based rules, Pomodoro timers, Strict Mode, website blocking—AppBlock delivers. It's a solid solo tool. For the built-in alternatives, see [how to lock apps on iPhone](/blog/how-to-lock-apps-on-iphone/) and [how to block websites on iPhone](/blog/how-to-block-websites-on-iphone/).
 
-But if you're looking for partner accountability, AppBlock's approach is different from LockPact's. Both have partner features. Only one of them is designed for mutual commitment. (Weighing AppBlock against website-focused blockers instead? See [AppBlock vs. BlockSite](/blog/appblock-vs-blocksite/).)
+But if you're looking for partner accountability, AppBlock's approach is different from LockPact's. Both have partner features. Only one of them is designed for mutual commitment. (Weighing AppBlock against website-focused blockers instead? See [AppBlock vs. BlockSite](/blog/appblock-vs-blocksite/). Want a blocker that works across all your devices instead? See [Freedom vs. LockPact](/blog/freedom-vs-lockpact/).)
 
 ## Quick Comparison Table
 

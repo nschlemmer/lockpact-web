@@ -2,7 +2,7 @@
 title: "Screen Time Accountability Partners: Why They Work"
 description: "What makes a screen time accountability partner actually work, per behavioral research — and why solo willpower apps keep failing where partners succeed."
 pubDate: 2026-05-01
-updatedDate: 2026-09-09
+updatedDate: 2026-11-04
 author: "LockPact"
 tags: ["psychology", "accountability partner", "behavior change", "screen time"]
 faq:
@@ -110,9 +110,9 @@ If you're single, this doesn't work. If your partner doesn't want to participate
 
 But for couples, roommates, close friends, or family members trying to reclaim phone time together, mutual accountability changes the game. It's not because the lock is better. It's because **the incentive structure is different**.
 
-[The behavioral science behind why solo screen time apps fail](/blog/why-screen-time-apps-dont-work/) covers this principle in more depth. For tactical guidance on running a partner lock, see the [7-day phone pact guide](/blog/how-to-run-a-7-day-phone-pact/).
+[The behavioral science behind why solo screen time apps fail](/blog/why-screen-time-apps-dont-work/) covers this principle in more depth. To test it yourself, [try it for one week](#try-it-for-one-week).
 
-If your closest person for this is a friend rather than a partner, [the same mutual-lock structure works between best friends](/blog/best-friends-phone-pact-guide/) — the psychology doesn't care what the relationship label is, only that trust and consequence both exist. And if you're wondering whether the effect fades after the first few weeks, [it's the same mechanism behind why streaks work — and why they sometimes stop working](/blog/streaks-and-accountability-why-they-work/).
+If your closest person for this is a friend rather than a partner, [the same mutual-lock structure works between friends](/blog/apps-that-let-a-friend-control-your-screen-time/) — the psychology doesn't care what the relationship label is, only that trust and consequence both exist. And if you're wondering whether the effect fades after the first few weeks, [it's the same mechanism behind why streaks work — and why they sometimes stop working](/blog/streaks-and-accountability-why-they-work/).
 
 ---
 
@@ -139,6 +139,19 @@ The research suggests this framing is wrong. Phone overuse isn't a you problem. 
 When you're alone with a phone that's been engineered by geniuses to be irresistible, willpower loses. It's not a fair fight. But when you add another person into the equation — someone you respect, someone who's also struggling, someone you don't want to let down — the fight becomes winnable.
 
 It's not about being stronger. It's about changing the rules of the game.
+
+---
+
+## Try It for One Week
+
+If you want to test this before committing to anything long, run one week with a partner. Lock a few apps (not everything), agree on when you would ask for an unlock, and expect the first three days to be the hardest.
+
+- **Days 1-2:** Your hand reaches for the phone out of habit. When you want to ask for an unlock, text your partner first. That text is the point: the urge has to survive being said out loud.
+- **Day 3:** The dip. You're bored but not past it yet. Do something that takes presence while your brain recalibrates.
+- **Days 4-6:** You stop thinking about the apps for stretches at a time. Most people notice this in the middle of the week.
+- **Day 7:** Sit down together and ask one question: "What did you notice?" Then decide whether to run another week, pick different apps, or stop.
+
+You will probably want to bypass at some point, and Apple lets the device owner do it. LockPact tells your partner when it happens. Admit it, talk about why, and turn the lock back on. The bypass isn't the failure. Hiding it is.
 
 ---
 

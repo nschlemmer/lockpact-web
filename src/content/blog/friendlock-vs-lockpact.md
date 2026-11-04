@@ -2,7 +2,6 @@
 title: "FriendLock vs. LockPact: Selfie Rewards vs. Approval"
 description: "FriendLock and LockPact both put a friend in the picture, but only one actually gates your screen time on their approval. Here's what each app really does."
 pubDate: 2026-07-24
-updatedDate: 2026-09-09
 author: "LockPact"
 tags: ["comparison", "FriendLock", "accountability"]
 faq:

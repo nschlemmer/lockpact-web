@@ -23,7 +23,7 @@ If you're asking what happened to the Moment app, here's the honest answer: the 
 
 Before iOS had a native Screen Time feature, Moment was how people first discovered they were spending four hours a day on their phones. Then Apple built that exact feature into the OS itself, and the app that pioneered the category didn't survive what it inspired.
 
-Here's what actually happened, and what's worth knowing if you're looking for something like it today.
+Here's what actually happened, and what's worth knowing if you're looking for something like it today. For current options, our roundup of [the best screen time apps for iPhone](/blog/best-screen-time-apps/) compares them.
 
 ---
 

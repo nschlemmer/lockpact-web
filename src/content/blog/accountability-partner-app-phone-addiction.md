@@ -65,10 +65,10 @@ If what you actually want is a partner who's genuinely in the loop — not a fri
 
 ## How to find a partner if you don't have one
 
-The apps above assume you already have someone to pair with — a partner, roommate, or friend willing to hold your key. If you don't, that's the actual first step, and it's less awkward than it sounds. [Best friends make surprisingly effective accountability partners](/blog/best-friends-phone-pact-guide/) precisely because the ask is low-stakes: "want to lock each other's Instagram for a week and see what happens?" is an easy yes from someone who already likes you. If you're looking for a lower-commitment starting point, [running a 7-day phone pact](/blog/how-to-run-a-7-day-phone-pact/) is a fixed-length trial that doesn't require deciding upfront that this is forever.
+The apps above assume you already have someone to pair with — a partner, roommate, or friend willing to hold your key. If you don't, that's the actual first step, and it's less awkward than it sounds. [Best friends make surprisingly effective accountability partners](/blog/apps-that-let-a-friend-control-your-screen-time/) precisely because the ask is low-stakes: "want to lock each other's Instagram for a week and see what happens?" is an easy yes from someone who already likes you. If you're looking for a lower-commitment starting point, [running a one-week trial](/blog/psychology-of-accountability-partners/#try-it-for-one-week) is a fixed-length trial that doesn't require deciding upfront that this is forever.
 
 ---
 
 [LockPact](/) is a free, mutual lock — no leaderboard, no streak to maintain, just your partner holding your unlock and you holding theirs. [Get it on the App Store](/go/b-accountability-partner-app-phone-addiction/).
 
-**Related reading:** [Apps That Let a Friend Control Your Screen Time](/blog/apps-that-let-a-friend-control-your-screen-time/) · [App Blockers You Can't Bypass on iPhone](/blog/app-blockers-you-cant-bypass-iphone/) · [How to Run a 7-Day Phone Pact With Your Partner](/blog/how-to-run-a-7-day-phone-pact/)
+**Related reading:** [Apps That Let a Friend Control Your Screen Time](/blog/apps-that-let-a-friend-control-your-screen-time/) · [App Blockers You Can't Bypass on iPhone](/blog/app-blockers-you-cant-bypass-iphone/) · [Why Accountability Partners Work](/blog/psychology-of-accountability-partners/)
